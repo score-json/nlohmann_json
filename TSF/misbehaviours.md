@@ -5,6 +5,13 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Open issues
 
+### [#4996](https://github.com/nlohmann/json/issues/4996)
+- **Title:** Tests don't build with VS 2026
+- **State:** OPEN
+- **Created At:** 2025-11-14T16:26:05Z
+
+
+
 ### [#4974](https://github.com/nlohmann/json/issues/4974)
 - **Title:** [MSVC][build] JSON failed with error C2672: 'nlohmann::json_abi_v3_12_0::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,
 - **State:** OPEN
