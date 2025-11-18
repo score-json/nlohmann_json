@@ -48,11 +48,13 @@ jobs:
         with:
           python-version: '3.11.2'
 
-      # trudag version 2025.8.5
+      # trudag version v2025.10.22
       - name: Install trudag and dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y graphviz
+          pip install --upgrade pip
+          pip install PyYAML
           pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@v2025.10.22
 
       - name: Install tools
