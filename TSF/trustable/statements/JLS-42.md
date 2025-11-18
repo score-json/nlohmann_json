@@ -20,4 +20,4 @@ evidence:
       - "https://github.com/nlohmann/json/pulls"
 ---
 
-All manual pull requests to the nlohmann/json repository that introduce changes are expected to describe the rationale for the proposed change and to link to an existing issue, in accordance with the project’s contribution guidelines.
+All manual pull requests to the nlohmann/json repository that introduce non-trivial changes are expected to explain the rationale for the proposed change and to link to an existing issue, in accordance with the project's contribution guidelines.
