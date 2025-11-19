@@ -8,6 +8,9 @@ references:
   - type: project_website
     url: "https://github.com/nlohmann/json/releases"
     description: "Release notes summarising behavioural changes and documentation updates for each version"
+  - type: web_content
+    url: "https://json.nlohmann.me"
+    description: "Published documentation site for the nlohmann/json library"
 evidence:
   type: https_response_time
   configuration:
@@ -17,4 +20,4 @@ evidence:
       - "https://github.com/nlohmann/json/releases"
 ---
 
-For changes that affect the behaviour or public API of the nlohmann/json library, contributors manually update the user documentation and regenerate the documentation site.
+For changes that affect the behaviour or public API of the nlohmann/json library, contributors manually update the library documentation and regenerate the json.nlohmann.me documentation site.
