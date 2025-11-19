@@ -18,7 +18,7 @@ A `CPPTestReference` points to a specific C++ test-case or a nested section with
 
 The reference locates the requested `TEST_CASE` or `SECTION` by name and follows any nested sections indicated by semicolons in the order they appear. It assumes the conventional brace layout used in the `nlohmann/json` tests, where the opening brace follows immediately after the declaration line and the closing brace has matching indentation. The content returned for hashing is the section’s exact source text in UTF-8, and the documentation renders the section cleanly as a C++ code block with indentation normalized when appropriate.
 
-For the `CPPTestReference` the expected configuration is:
+For the `CPPTestReference` The expected configuration is::
 ```
 ---
 ...
@@ -36,7 +36,7 @@ A `JSONTestsuiteReference` bundles a selected C++ test section together with one
 
 The reference extends `CPPTestReference` by supplementing the identified C++ section with the content of the listed JSON files. It combines the test code and JSON data into a single payload for hashing, ensuring that the evidence reflects both the test harness and its inputs. In the documentation, each JSON file is shown either in full or replaced by a link if the file is very large, and the relevant C++ section is rendered below; an optional description appears above the content. If enabled, the reference filters lines in the displayed C++ section that mention other JSON files not included in the selection, while the underlying content still includes the full section text used for hashing.
 
-For the `JSONTestsuiteReference` the expected configuration is:
+For the `JSONTestsuiteReference` The expected configuration is::
 ```
 ---
 ...
@@ -205,7 +205,7 @@ TEST_CASE("my test case")
 
 and the structure regarding test-cases and (nested) sections of test-cases is extracted. 
 
-The expected configuration is 
+The expected configuration is: 
 
 ```
 ---
@@ -224,7 +224,7 @@ This reference queries Github Actions (`https://github.com/{self._owner}/{self._
 
 The reference constructs a URL that filters workflow runs by failure status, optionally restricting the query to a specific branch, and it extracts the number displayed at the top of the results table. It returns this number as the content used for hashing, and in the documentation it presents a short sentence indicating the count and, when applicable, the branch to which the count refers.
 
-The expected configuration is 
+The expected configuration is: 
 
 ```
 ---
@@ -243,7 +243,7 @@ An `ItemReference` documents inheritance of references from other items so that 
 
 The reference reads entries from the local trustable graph file and combines the signatures of the referenced items into its content, thereby tying the current item’s trustability to those items’ evidence. In the documentation, it prints a list of hyperlinks pointing to the target items, and any change in the referenced items’ evidence automatically propagates to the dependent item through this linkage. If any reference of any of the listed supported items changes, then its sha changes and the review-status of the item becomes false. After successful re-review, the review-status of the supported items is re-set to true, so that the new sha is stored in the `.dotstop.dot` file. This automatically sets the review-status of the supporting items, which inherit the references, to false, thereby triggering a re-review of these.
 
-The expected configuration is
+The expected configuration is:
 
 ```
 ---
@@ -265,7 +265,7 @@ An `IncludeListReference` extracts all `#include` lines from a specified source 
 
 The reference reads the target file and collects only those lines whose first non-whitespace characters form a `#include` directive, removing inline comments where necessary to present a clean list. It returns the list of includes as the content used for hashing, or a placeholder message when the file contains no includes, and it renders the includes as a C++ code block in the documentation with an optional `description` above the block.
 
-The expected configuration is 
+The expected configuration is: 
 
 ```
 ---
@@ -302,7 +302,7 @@ The available configuration dict values for check_artifact_names are:
 
 The `https_response_time` validator measures how quickly a list of websites responds and derives a score based on the responsiveness and the HTTP status code. The configuration specifies an acceptable response time threshold in seconds and a list of URLs to check. Any URL that responds in at least five times the acceptable threshold, or that returns a non-200 response code, receives an individual score of zero. The final score is calculated as the mean of all individual scores across the list of URLs, which encourages fast and reliable endpoints and flags unresponsive or failing sites.
 
-The expected configuration is
+The expected configuration is:
 ```    
 evidence:
     type: https_response_time    
@@ -318,7 +318,7 @@ evidence:
 
 The `check_test_results` validator analyzes the most recent unit test outcomes stored in a SQLite database generated by the ubuntu workflow and calculates a score that reflects the proportion of passed test cases among those that were executed. The `configuration` lists the test files of interest (by their base names without the “unit-” prefix or file extension) and optionally overrides the `database` file path and `table` name. For each specified test, the validator counts the passed and failed cases and ignores skipped cases to compute an individual pass ratio. The overall score is the mean of these ratios, which provides a balanced measure of recent test success across the selected test files.
 
-The expected configuration is
+The expected configuration is:
 
 ```
 evidence:
@@ -338,7 +338,7 @@ The test-files are called unit-FILE_NAME.cpp. In the configuration, FILE_NAME is
 
 The automatic validator `check_issues` is intended to evaluate the json-lists `raw_open_issues.json` and `raw_closed_issues.json` and compare with the list of known issues of nlohmann/json labelled as bug opened since the release of the version of nlohmann/json that is documented. The json lists are generated in the publish_documentation-Workflow, and not persistently stored.
 
-The expected configuration is given as follows:
+The expected configuration is: given as follows:
 
 ```
 evidence:
@@ -361,7 +361,7 @@ Otherwise, the score 1.0 is assigned.
 
 The `did_workflows_fail` validator checks the results of GitHub Actions runs for a repository, optionally filtered by event and branch, and produces a binary score indicating whether any runs failed. It constructs a query that lists workflow results matching failure status and then reads the number displayed at the top of the results table. If the number is zero, it returns a score of 1.0 to indicate no failures; otherwise, it returns 0.0. The configuration requires the repository owner and name and may include the branch and event, with “push” as the default event. It is important to enclose all configuration values in quotation marks to ensure the update helper processes them correctly.
 
-The expected configuration is
+The expected configuration is:
 
 ```
 evidence:
@@ -380,7 +380,7 @@ The coveralls_reporter validator queries the Coveralls API [coveralls](https://c
 
 Unless the version of `nlohmann/json` documented in this repository changes, it is expected that both coverage numbers remain constant.
 
-The expected configuration is
+The expected configuration is:
 
 ```
 evidence:
@@ -410,7 +410,7 @@ The combinator supports the following validator types:
 - `did_workflows_fail`
 - `coveralls_reporter`
 
-The expected configuration is as follows:
+The expected configuration is: as follows:
 
 ```
 evidence:
