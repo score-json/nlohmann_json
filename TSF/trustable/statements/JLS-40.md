@@ -17,4 +17,4 @@ evidence:
       - "https://github.com/nlohmann/json/security/policy"
 ---
 
-The manual process for reporting vulnerabilities in the nlohmann/json library is well defined and documented in the project’s security policy and vulnerability reporting template.
+The manual process for reporting vulnerabilities in the nlohmann/json library is well defined and documented in the project's security policy and vulnerability reporting template.
