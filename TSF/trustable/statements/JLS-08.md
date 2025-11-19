@@ -10,4 +10,4 @@ references:
       description: "Definition of Assumptions as part of the methodology"
 ---
 
-Each leaf node in the Trustable Graph that is not an Assumption-of-Use (AoU) is scored either based on SME review(s) alone or on a combination of SME review(s) and one or more automatic validators.
+Each leaf node in the Trustable Graph that is not an Assumption-of-Use (AoU) is scored either based on SME review(s) alone or on a combination of SME review(s) and an automatic validator.
