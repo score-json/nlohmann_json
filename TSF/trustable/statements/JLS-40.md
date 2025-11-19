@@ -17,4 +17,4 @@ evidence:
       - "https://github.com/nlohmann/json/security/policy"
 ---
 
-The manual activity of issuing a vulnerability or bug report for the nlohmann/json library follows a well-defined process documented in the project’s security advisory workflow.
+The manual process for reporting vulnerabilities in the nlohmann/json library is well defined and documented in the project’s security policy and vulnerability reporting template.
