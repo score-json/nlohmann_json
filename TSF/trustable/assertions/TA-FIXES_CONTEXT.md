@@ -39,9 +39,9 @@ As part of ongoing monitoring, the rate of incoming, resolved, and rejected issu
   on severity/relevance/impact
     - **Answer**: Provided in JLS-30, JLS-33 and AOU-29
 - List of XYZ component versions, showing where a newer version exists upstream
-    - **Answer**: Not relevant, as indicated in JLS-34
+    - **Answer**: Not relevant since nlohmann/json has no external components, as stated in JLS-34
 - List of component version updates since last release
-    - **Answer**: Not relevant, as indicated in JLS-34
+    - **Answer**: Not relevant as nlohmann/json has no external components, as stated in JLS-34
 - List of fixes applied to developed code since last release
     - **Answer**: Provided in JLS-29
 - List of fixes for developed code that are outstanding, not applied yet
