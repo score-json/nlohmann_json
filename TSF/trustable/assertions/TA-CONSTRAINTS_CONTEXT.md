@@ -1,0 +1,90 @@
+---
+level: 1.1
+normative: false
+---
+
+**Guidance**
+
+Constraints on reuse, reconfiguration, modification, and deployment are
+specified to enhance the trustability of outputs. To ensure clarity, boundaries
+on what the output cannot do - especially where common domain assumptions may
+not hold - must be explicitly documented. These constraints are distinct from
+misbehaviour mitigations; instead, they define the context within which the
+system is designed to operate, including all modes and environmental
+considerations. This upfront documentation clarifies intended use, highlights
+known limitations, and prevents misinterpretation.
+
+These constraints, categorised into explicit limitations and assumptions of use,
+guide both stakeholders and users (integrators, maintainers, operators, and
+end-users). They define the intended scope and provide a clear interface for how
+upstream and downstream systems can integrate, modify, install, reuse, or
+reconfigure to achieve the desired output. The documentation must also specify
+the contexts in which the integrity of existing Statements is preserved and
+whether reimplementation is required, considering device maintenance
+assumptions, including software updates and vulnerability mitigation.
+
+Crucially, these limitations are not unresolved defects from triage decisions
+but deliberate exclusions based on design choices. Each omission should be
+supported by a clear rationale (linked to relevant Expectations and analyses 
+with the appropriate architectural and abstraction levels) to ensure
+transparency for future scope expansion and to guide both upstream and
+downstream modifications.
+
+To remain effective in practice, constraints must consider user-friendliness in
+relation to associated Misbehaviours (TA-MISBEHAVIOURS) and AWIs
+(TA-INDICATORS):
+
+- Include mechanisms to prevent misuse (e.g., protecting runtime parameters from
+  corruption or unauthorized modification during both development and
+  operation), explicitly linking them to relevant Misbehaviours and their
+  analyses (as defined in TA-MISBEHAVIOURS).
+- Present constraint-related data with emphasis on availability, clarity, and
+  transparent communication of defined safe states, along with the mechanisms
+  that transition the system into those states, ensuring they are connected to
+  the relevant AWIs (as defined in TA-INDICATORS).
+
+Finally, the documentation must establish and promote a clear process for
+reporting bugs, issues, and requests.
+
+**Suggested evidence**
+
+- Installation manuals with worked examples
+  - **Answer**: 
+- Configuration manuals with worked examples
+  - **Answer**: 
+- Specification documentation with a clearly defined scope
+  - **Answer**: 
+- User guides detailing limitations in interfaces designed for expandability or
+  modularity
+  - **Answer**: 
+- Documented strategies used by external users to address constraints and
+  work with existing Statements
+  - **Answer**: 
+
+**Confidence scoring**
+
+The reliability of these constraints should be assessed based on the absence of
+contradictions and obvious pitfalls within the defined Statements.
+
+**Checklist**
+
+- Are the constraints grounded in realistic expectations, backed by real-world
+  examples?
+  - **Answer**: 
+- Do they effectively guide downstream consumers in expanding upon existing
+  Statements?
+  - **Answer**: 
+- Do they provide clear guidance for upstreams on reusing components with
+  well-defined claims?
+  - **Answer**: 
+- Are any Statements explicitly designated as not reusable or adaptable?
+  - **Answer**: 
+- Are there worked examples from downstream or upstream users demonstrating
+  these constraints in practice?
+  - **Answer**: 
+- Have there been any documented misunderstandings from users, and are these
+  visibly resolved?
+  - **Answer**: 
+- Do external users actively keep up with updates, and are they properly
+  notified of any changes?
+  - **Answer**: 
