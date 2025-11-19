@@ -14,12 +14,9 @@ Custom references are defined and implemented in `references.py`. A (custom) ref
 
 ## CPPTestReference
 
-The content of a `CPPTestReference` is the C++ source lines corresponding to a test-case or a section within a test-case in a specified unit test file. Nested sections are given in the name argument and are separated by semicolons. Section detection works by searching for a matching TEST_CASE("...") or SECTION("...") and then for nested SECTIONs in order. It assumes the section path is unique in the file.
+A `CPPTestReference` points to a specific C++ test-case or a nested section within a unit test file and includes the exact lines of code for that section in the reference content. The section path is specified using semicolons to denote nesting in the name field (for example, “TEST_CASE_NAME;SECTION_A;SECTION_B”), and the referenced text is presented as a C++ code block in the rendered documentation.
 
-Error handling:
-
-- Raises ValueError if the start line of the section cannot be found, if the opening brace is not where expected, or if no matching closing brace is found.
-- File I/O errors propagate if the file cannot be read.
+The reference locates the requested `TEST_CASE` or `SECTION` by name and follows any nested sections indicated by semicolons in the order they appear. It assumes the conventional brace layout used in the `nlohmann/json` tests, where the opening brace follows immediately after the declaration line and the closing brace has matching indentation. The content returned for hashing is the section’s exact source text in UTF-8, and the documentation renders the section cleanly as a C++ code block with indentation normalized when appropriate.
 
 For the `CPPTestReference` the expected configuration is:
 ```
@@ -35,10 +32,9 @@ references:
 
 ## JSONTestsuiteReference
 
-The `JSONTestsuiteReference` is a variant of the function reference, which is augmented by an external file containing test-data in the form of well- or ill-formed JSON candidate data. 
-A `JSONTestsuiteReference` is therefore given by the data of a `CPPTestReference` together with a list containing the paths to these external files.
-The external files are stored in a separate branch of the repository, and their text is loaded via call to github.
-The content of a `JSONTestsuiteReference` is given by the content of the underlying `CPPTestReference` together with the sum of the contents of the external test-suite files.
+A `JSONTestsuiteReference` bundles a selected C++ test section together with one or more external JSON test files and uses both as the reference content. It is designed for tests that read JSON samples from files, allowing the documentation to present the JSON data alongside the test code. The external JSON files are fetched from a known test-data branch and must be referenced by the selected C++ section.
+
+The reference extends `CPPTestReference` by supplementing the identified C++ section with the content of the listed JSON files. It combines the test code and JSON data into a single payload for hashing, ensuring that the evidence reflects both the test harness and its inputs. In the documentation, each JSON file is shown either in full or replaced by a link if the file is very large, and the relevant C++ section is rendered below; an optional description appears above the content. If enabled, the reference filters lines in the displayed C++ section that mention other JSON files not included in the selection, while the underlying content still includes the full section text used for hashing.les.
 
 For the `JSONTestsuiteReference` the expected configuration is:
 ```
@@ -59,7 +55,9 @@ references:
 
 ## FunctionReference
 
-The content of a FunctionReference is the source code (including all comments) of a single C++ member function defined inside a class body, extracted from a specified file in the repository. The exact start/end line numbers in the file are not part of the content; only the function’s code text is captured.
+A `FunctionReference` identifies and extracts the full source code of a single C++ member function that is defined inside a class in a given header file. The content includes all comments and spans from the function’s signature line through its closing brace. If multiple definitions with the same name exist inside the class, an overload index can be used to select the nth one from top to bottom.
+
+The reference uses a name in the format `ClassName::FunctionName` together with the file path to find the class and the matching function inside the class body. When an overload index is provided, it selects the nth function definition encountered within the class; if no index is given, the first definition is used. The content returned for hashing is the function’s exact source code, and the documentation renders it as a C++ code block with an optional description shown above. This reference is intended for inline method definitions within headers and does not cover out-of-class implementations.
 
 For the `FunctionReference` an example is:
 ```
@@ -73,16 +71,7 @@ references:
 ---
 ```
 
-Since functions may be overloaded, the optional `overload` parameter selects which implementation to capture. Overloads are counted by occurrences of  `FunctionName(` at the class’s top level, in order from top to bottom within the class body. If overload is not provided, the first occurrence (1) is used.
-
-Error handling:
-
-- If name is not of the form `ClassName::FunctionName`, a ValueError is raised.
-- If brace tracking fails while parsing the class (e.g., popping from an empty stack), a ValueError is raised with a “Fatal error” message.
-- If the requested overload cannot be found within the detected class, an error is raised.
-- If the file cannot be opened, Python’s file I/O errors propagate.
-
-Additionally, it is possible, but not mandatory, to give a description. The full example is:
+Additionally, it is possible, but not mandatory, to give a `description` and an `overload` parameter. The full example including all parameters is:
 ```
 ---
 ...
@@ -100,7 +89,7 @@ references:
 
 The content of a `WebReference` is its url string. This is suitable when the page is expected to change continuously (e.g., dashboards or status pages), but the type of content and its supportive role are considered sufficient if the URL is reachable. An example is `https://introspector.oss-fuzz.com/project-profile?project=json`, where the most recent fuzz-testing report for nlohmann/json is published. Additionally, an optional description can be provided.
 
-Recommendation: Whenever using the WebReference for a statement, it is recommended to create a corresponding http_response_time validator to automatically verify that the website is indeed available.
+The reference stores the URL string as its content and presents it directly in the report. If a description is provided, it appears beneath the URL to clarify the relevance of the link. This reference pairs well with availability validators (like `http_response_time`), which can confirm that the page is reachable without relying on the page’s changing text.
 
 For the `WebReference`, an example is:
 ```
@@ -126,7 +115,11 @@ references:
 
 ## WebContentReference
 
-The content of a `WebContentReference` is the actual fetched content of the URL. Use this for relatively static resources whose textual content itself matters (e.g., a file in a public repository). An example is a file located on a github repository, e.g.  `https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/.github/workflows/cifuzz.yml`
+A `WebContentReference` captures the fetched body of a URL as its content and is intended for relatively static resources where the actual text on the page matters for the documentation. The URL is rendered in the report, optionally followed by a description. An example is a file located on a github repository, e.g.  `https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/.github/workflows/cifuzz.yml`.
+
+The reference downloads the page content from the given URL and uses it directly for hashing so that the evidence reflects the text as it existed at the time of retrieval. In the documentation, the URL and optional description are shown, while the full downloaded text is included in the content used for trustability, which allows the reference to anchor the documentation to a specific, stable version of the page or file.
+
+
 
 A `WebContentReference` looks identical to a `WebReference` with `type: web_content` instead of `type: website`.
 
@@ -190,7 +183,11 @@ Both `description` and `changelog` are optional arguments.
 
 ## ListOfTestCases
 
-The content of a ListOfTestCases is a markdown report listing all unit tests and their nested sections extracted from the specified directories/files, together with recent execution environments (from a SQLite database). It is assumed that a unit-test is saved in a file with the name unit-xxx.cpp, and only those files are used to compile the list. 
+A `ListOfTestCases` reference produces a markdown overview of all unit tests and nested sections found in the provided directories and files and augments this structure with recent execution environments from a test-results database. This provides a concise map of the test suite together with information on where it has been executed successfully or with skips.
+
+The reference scans files matching the pattern unit-*.cpp to extract TEST_CASE and SECTION names and their nesting, and it formats the results as nested lists to mirror the test structure. It then queries the database of recent test runs to list the compiler and standard combinations that executed all tests without skipping, as well as those where some tests were skipped, and it incorporates these details into the same markdown report. The content returned for hashing is the complete markdown report, which the documentation also renders directly.
+
+
 Further, it is assumed that a unit-test-file is structured as
 
 ```
@@ -206,7 +203,9 @@ TEST_CASE("my test case")
 }
 ```
 
-and the structure regarding test-cases and (nested) sections of test-cases is extracted. The expected configuration is 
+and the structure regarding test-cases and (nested) sections of test-cases is extracted. 
+
+The expected configuration is 
 
 ```
 ---
@@ -221,10 +220,9 @@ references:
 
 ## workflow_failures
 
-This reference queries `https://github.com/{self._owner}/{self._repo}/actions?query=is%3Afailure+branch%3A{self._branch}` and collects the number of failed workflow runs as its content.
-Here, owner, repo and branch are the arguments given to the constructor of the reference.
-If no branch is specified, then all failures are collected, i.e. `https://github.com/{self._owner}/{self._repo}/actions?query=is%3Afailure` is queried.
-In case the website is un-reachable, or the github layout changes drastically so that the number of failed workflow runs does not exist at the expected location, an error is thrown.
+This reference queries Github Actions (`https://github.com/{self._owner}/{self._repo}/actions?query=is%3Afailure+branch%3A{self._branch}`) for failed workflow runs and records the number as content. This allows the documentation to include the current failure count as evidence without embedding the page itself.
+
+The reference constructs a URL that filters workflow runs by failure status, optionally restricting the query to a specific branch, and it extracts the number displayed at the top of the results table. It returns this number as the content used for hashing, and in the documentation it presents a short sentence indicating the count and, when applicable, the branch to which the count refers.
 
 The expected configuration is 
 
@@ -241,16 +239,11 @@ references:
 
 ## ItemReference
 
-Some references support every (directly or indirectly) supporting item of an item. 
-Instead of repeating these references in each supporting item, these references are listed in the supported item.
-The inheritance of the references is then clarified in the documentation by an `ItemReference`.
-In the final documentation in human-readable form, an ItemReference simply lists all items of which the references are inherited with hyperlinks.
+An `ItemReference` documents inheritance of references from other items so that shared evidence does not need to be repeated across multiple supporting items. In the rendered documentation, it lists links to the referenced items so readers can navigate to the source evidence.
 
-To detect the inheritance of references in the content of the supporting items, the content of an ItemReference is the combination of the sha's stored in the .dotstop.dot file of the listed supported items.
-If any reference of any of the listed supported items changes, then its sha changes and the review-status of the item becomes false.
-After successful re-review, the review-status of the supported items is re-set to true, so that the new sha is stored in the .dotstop.dot file.
-This automatically sets the review-status of the supporting items, which inherit the references, to false, thereby triggering a re-review of these.
-The expected configuration is as follows
+The reference reads entries from the local trustable graph file and combines the signatures of the referenced items into its content, thereby tying the current item’s trustability to those items’ evidence. In the documentation, it prints a list of hyperlinks pointing to the target items, and any change in the referenced items’ evidence automatically propagates to the dependent item through this linkage. If any reference of any of the listed supported items changes, then its sha changes and the review-status of the item becomes false. After successful re-review, the review-status of the supported items is re-set to true, so that the new sha is stored in the `.dotstop.dot` file. This automatically sets the review-status of the supporting items, which inherit the references, to false, thereby triggering a re-review of these.
+
+The expected configuration is
 
 ```
 ---
@@ -268,14 +261,11 @@ Here, the elements of the list `items` must be normative nodes of the trustable 
 
 ## IncludeListReference
 
-The content of an `IncludeListReference` is given by the list of `#include` lines extracted from a specified source/header file in the repository (for example `single_include/nlohmann/json.hpp`). This reference is useful to document which libraries a file depends on without embedding the full file content into the report.
+An `IncludeListReference` extracts all `#include` lines from a specified source or header file (e.g., single_include/nlohmann/json.hpp) and uses them as the content. It is useful for showing direct dependencies of a file without embedding its full text.
 
-Behaviour:
-- content: returns the concatenation of all lines that begin with `#include` in the target file as UTF-8 encoded bytes. If no includes are found, the content is `b"No includes found"`.
-- as_markdown: renders the found `#include` lines as a C++ code block (```cpp ... ```). If a `description` was provided when constructing the reference, the description is shown as an indented bullet above the code block.
-- If the referenced file does not exist or is not a regular file, accessing `content` raises a ReferenceError.
+The reference reads the target file and collects only those lines whose first non-whitespace characters form a `#include` directive, removing inline comments where necessary to present a clean list. It returns the list of includes as the content used for hashing, or a placeholder message when the file contains no includes, and it renders the includes as a C++ code block in the documentation with an optional `description` above the block.
 
-Usage example:
+The expected configuration is 
 
 ```
 ---
@@ -287,10 +277,6 @@ references:
   description: "List of direct includes of the amalgamated header"
 ---
 ```
-
-Notes:
-- `description` is optional.
-- The reference only extracts lines whose first non-whitespace characters are `#include`.
 
 # Validators
 
