@@ -155,7 +155,7 @@ As with WebReference, consider an https_response_time validator to check reachab
 Important clarifications:
 
 The system checks the `ChangeLog.md` within our own repository. It does not read or rely on external changelogs or any files in external repositories.
-Whenever `nlohmann/json` publishes a new release/patch and we integrate it into our repository, our `ChangeLog.md` will be updated accordingly (since we mirror upstream changes). Any change to this changelog will automatically set the review_status of all TimeVaryingWebReferences to unreviewed, meaning they are invalidated and must be re-reviewed.
+Whenever `nlohmann/json` publishes a new release/patch and we integrate it into our repository, our `ChangeLog.md` will be updated accordingly (since we mirror upstream changes). Any change to this changelog will automatically set the review_status of all statements with TimeVaryingWebReferences to unreviewed, meaning they are invalidated and must be re-reviewed.
 The changelog argument defaults to `ChangeLog.md`, which is the correct path to the changelog in this repo. You only need to specify the changelog argument if the file is moved or renamed.
 An example of the complete configuration for `TimeVaryingWebReference` (overriding the changelog path) is:
 
