@@ -280,7 +280,7 @@ references:
 
 # Validators
 
-Validators are extensions of trudag that assess evidence by computing floating-point scores from measurable data. These scores provide quantitative support for the trustability of items in the trustable graph and are combined with the items’ references and statements during hashing and reporting.
+Validators are extensions of trudag that assess evidence by computing floating-point scores from measurable data. These scores provide quantitative support for the trustability of items in the trustable graph and are combined with the items’ references and statements during hashing and reporting. The implementation of the validators can be found in validators.py.
 
 ## check_artifact_exists
 
