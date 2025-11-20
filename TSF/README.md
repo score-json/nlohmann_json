@@ -234,7 +234,7 @@ For documentation on how to actually perform a SME review, please refer to the f
 The automatic validators are intended to calculate a trustable score based on quantifiable data. 
 In particular the introduction of a validator changes the meaning of the (potential) SME scores associated to a statement.
 Therefore, the change or introduction of an automatic validator is most critical.
-In case the validator used in a statement has been changed, it is highly recommended to urge the original SME to re-review the statement and adapt their scores, or (at the very least) to enlist additional SME to judge the changed statement.
+In case the validator used in a statement has been changed, it is highly recommended to urge the original SME to re-review the statement and adapt their scores, or (at the very least) to enlist additional SMEs to judge the changed statement.
 After careful consideration the highly critical decision to remove some SME scores no longer reflecting the statement could be made. 
 
 ## References
