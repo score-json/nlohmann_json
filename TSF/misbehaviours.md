@@ -5,6 +5,13 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Open issues
 
+### [#5005](https://github.com/nlohmann/json/issues/5005)
+- **Title:** Serialization of double type data gets stuck
+- **State:** OPEN
+- **Created At:** 2025-11-20T09:28:12Z
+
+
+
 ### [#5002](https://github.com/nlohmann/json/issues/5002)
 - **Title:** VS2026 Insiders, C2678 With C++23 Modules
 - **State:** OPEN
