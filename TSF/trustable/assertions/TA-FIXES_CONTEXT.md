@@ -85,7 +85,7 @@ Each iteration, we should improve the algorithm based on measurements
 - How (and how often) do we check these lists for relevant bugs and known vulnerabilities?
   - **Answer**: Whenever we generate the documentation, the list is pulled. If there is an issue previously unrecorded, then the maintainer is encouraged by the change of the trustable score to check the relevance of the issue.
 - How confident can we be that the lists are honestly maintained?
-  - **Answer**: Very confident, since the authors of the issues in the list mainly comprises of independent downstream users.
+  - **Answer**: Very confident, since the authors of the issues in the list mainly comprise of independent downstream users.
 - Could some participants have incentives to manipulate information?
   - **Answer**: No such incentives have been identified.
 - How confident are we that the lists are comprehensive?
