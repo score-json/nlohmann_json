@@ -10,32 +10,33 @@ For each item of the trustable graph, the hash is calculated by trudag using:
 * for every of its references, the *content* of that reference
 * for every of its fallacies, the description and content of the corresponding reference
 
-Custom references are defined in `references.py`. A (custom) reference is used by adding an object into the list `references` in the header of the item file. The `type` corresponds to the classmethod `type` of a reference class of `references.py`, and the remaining object correspond to the arguments of the constructor.
+Custom references are defined and implemented in `references.py`. A (custom) reference is used by adding a corresponding entry into the references list in the header of an item file. The type of this entry corresponds to the `classmethod` type of a reference class in `references.py`, and the remaining fields must map to the constructor arguments of the reference class.
 
 ## CPPTestReference
 
-The content of a `CPPTestReference` is given by the lines of code corresponding to a test-case or a section of a test-case in a specified unit-test-file. The sections are identified in the value of "name", where the nested sections are separated by semicolons.
+A `CPPTestReference` points to a specific C++ test-case or a nested section within a unit test file and includes the exact lines of code for that section in the reference content. The section path is specified using semicolons to denote nesting in the name field (for example, “TEST_CASE_NAME;SECTION_A;SECTION_B”), and the referenced text is presented as a C++ code block in the rendered documentation.
 
-For the `CPPTestReference` the expected configuration is:
+The reference locates the requested `TEST_CASE` or `SECTION` by name and follows any nested sections indicated by semicolons in the order they appear. It assumes the conventional brace layout used in the `nlohmann/json` tests, where the opening brace follows immediately after the declaration line and the closing brace has matching indentation. The content returned for hashing is the section’s exact source text in UTF-8, and the documentation renders the section cleanly as a C++ code block with indentation normalized when appropriate.
+
+For the `CPPTestReference` The expected configuration is:
 ```
 ---
 ...
 
 references:
 - type: cpp_test
-  name: "compliance tests from json.org;expected failures"
+  name: "compliance tests from json.org;expected failures"  # Uses semicolon-separated section names to identify nested sections (e.g., "TEST_CASE_NAME;SECTION_A;SECTION_B")
   path: "tests/src/unit-testsuites.cpp"
 ---
 ```
 
 ## JSONTestsuiteReference
 
-The `JSONTestsuiteReference` is a variant of the function reference, which is augmented by an external file containing test-data in the form of well- or ill-formed JSON candidate data. 
-A `JSONTestsuiteReference` is therefore given by the data of a `CPPTestReference` together with a list containing the paths to these external files.
-The external files are stored in a separate branch of the repository, and their text is loaded via call to github.
-The content of a `JSONTestsuiteReference` is given by the content of the underlying `CPPTestReference` together with the sum of the contents of the external test-suite files.
+A `JSONTestsuiteReference` bundles a selected C++ test section together with one or more external JSON test files and uses both as the reference content. It is designed for tests that read JSON samples from files, allowing the documentation to present the JSON data alongside the test code. The external JSON files are fetched from a known test-data branch and must be referenced by the selected C++ section.
 
-For the `JSONTestsuiteReference` the expected configuration is:
+The reference extends `CPPTestReference` by supplementing the identified C++ section with the content of the listed JSON files. It combines the test code and JSON data into a single payload for hashing, ensuring that the evidence reflects both the test harness and its inputs. In the documentation, each JSON file is shown either in full or replaced by a link if the file is very large, and the relevant C++ section is rendered below; an optional description appears above the content. If enabled, the reference filters lines in the displayed C++ section that mention other JSON files not included in the selection, while the underlying content still includes the full section text used for hashing.
+
+For the `JSONTestsuiteReference` The expected configuration is:
 ```
 ---
 ...
@@ -44,17 +45,19 @@ references:
 - type: JSON_testsuite
   name: "compliance tests from json.org;expected failures"
   path: "tests/src/unit-testsuites.cpp"
-  test_suite_paths: 
+  test_suite_paths: # List of JSON file paths (strings) to load from the test data branch
     - "/json_tests/fail2.json"
     - "/json_tests/fail3.json"
   description: "invalid json"
-  remove_other_test_data_lines: False # optional, the default value is True 
+  remove_other_test_data_lines: False # optional, the default value is True; Removes all other test data lines in the test case or in a section of the test case, as given by the value of "name"
 ---
 ```
 
 ## FunctionReference
 
-The content of a `FunctionReference` is given by the code inclusive all comments of a C++ function within a class in a specified file in the repository. The specific position, i.e. start- and end-line, of the code within that file is not part of the content.  
+A `FunctionReference` identifies and extracts the full source code of a single C++ member function that is defined inside a class in a given header file. The content includes all comments and spans from the function’s signature line through its closing brace. If multiple definitions with the same name exist inside the class, an overload index can be used to select the nth one from top to bottom.
+
+The reference uses a name in the format `ClassName::FunctionName` together with the file path to find the class and the matching function inside the class body. When an overload index is provided, it selects the nth function definition encountered within the class; if no index is given, the first definition is used. The content returned for hashing is the function’s exact source code, and the documentation renders it as a C++ code block with an optional description shown above. This reference is intended for inline method definitions within headers and does not cover out-of-class implementations.
 
 For the `FunctionReference` an example is:
 ```
@@ -68,8 +71,7 @@ references:
 ---
 ```
 
-Since functions may be overloaded, a `FunctionReference` can be initialised with an optional overload-parameter. 
-The overload-parameter specifies which implementation of the function is referred to, i.e. if the overload-parameter for the function ``class::function()`` is set to _n_, then the _n_-th implementation when counting the occurrences from top to bottom of ``function()`` within the class ``class`` is used, if it exists; otherwise, an error is thrown. Additionally, it is possible, but not mandatory, to give a description. The full example is:
+Additionally, it is possible, but not mandatory, to provide a `description` and an `overload` parameter. The full example including all parameters is:
 ```
 ---
 ...
@@ -85,7 +87,9 @@ references:
 
 ## WebReference
 
-The content of a `WebReference` is its url. This reference is intended to be utilised in case that the content of the web-site is constantly changing (e.g. due to a clock being implemented somewhere on the site), but the reviewer is certain that the type of the content and it being supportive of the statement is fulfilled as long a the website is reachable. An example is `https://introspector.oss-fuzz.com/project-profile?project=json`, where the most recent fuzz-testing report for nlohmann/json is published.
+The content of a `WebReference` is its `url` string. This is suitable when the page is expected to change continuously (e.g., dashboards or status pages), but the type of content and its supportive role are considered sufficient if the URL is reachable. An example is `https://introspector.oss-fuzz.com/project-profile?project=json`, where the most recent fuzz-testing report for nlohmann/json is published. Additionally, an optional `description` can be provided.
+
+The reference stores the `url` string as its content and presents it directly in the report. If a description is provided, it appears beneath the URL to clarify the relevance of the link. This reference pairs well with availability validators (like `https_response_time`), which can confirm that the page is reachable without relying on the page’s changing text.
 
 For the `WebReference`, an example is:
 ```
@@ -97,7 +101,7 @@ references:
   url: "https://math.stackexchange.com/"
 ---
 ```
-An example of `WebReference` with non-empty description is
+An example of `WebReference` with non-empty description is:
 ```
 ---
 ...
@@ -111,11 +115,15 @@ references:
 
 ## WebContentReference
 
-The content of a `WebContentReference` is its content. This reference is intended to be utilised in case of *static* references, that should not vary in a short time-frame, and whose content is most important for the trustability of the statement. An example is a file located on a github repository, e.g.  `https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/.github/workflows/cifuzz.yml`
+A `WebContentReference` captures the fetched body of a URL as its content and is intended for relatively static resources where the actual text on the page matters for the documentation. The URL is rendered in the report, optionally followed by a description. An example is a file located on a github repository, e.g.  `https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/.github/workflows/cifuzz.yml`.
+
+The reference downloads the page content from the given URL and uses it directly for hashing so that the evidence reflects the text as it existed at the time of retrieval. In the documentation, the URL and optional description are shown, while the full downloaded text is included in the content used for trustability, which allows the reference to anchor the documentation to a specific, stable version of the page or file.
+
+
 
 A `WebContentReference` looks identical to a `WebReference` with `type: web_content` instead of `type: website`.
 
-For the `TimeVaryingWebReference`, examples of the possible configurations are:
+For the `WebContentReference`, examples of the possible configurations are:
 ```
 ---
 ...
@@ -140,11 +148,18 @@ in case of a custom description.
 
 ## TimeVaryingWebReference
 
-The content of a `TimeVaryingWebReference` is given by the content of a changelog, whose default value is `ChangeLog.md`, which mirrors the changelog of nlohmann/json. This reference is intended for websites whose content is constantly changing, so that a `WebContentReference` makes the item un-reviewable, but whose content at the time of an update influences the trustability. An example is `https://github.com/nlohmann/json/pulse/monthly`, which can be used to demonstrate that nlohmann/json is *up to the most recent version* under active development.
+Use this reference when the content of a site changes continuously, but the mere existence and reachability of the site is not sufficient to support the statement. In other words, use this reference if the site requires regular re-reviews. The content for hashing is the changelog file from this repository prefixed with the URL. For example, https://github.com/nlohmann/json/pulse/monthly can be used to demonstrate that `nlohmann/json` is up to the most recent version under active development. The content of a `TimeVaryingWebReference` is determined by a changelog file in this repository. By default, this is `ChangeLog.md`, which mirrors the upstream changelog of `nlohmann/json`. 
 
-An example of the complete configuration for `TimeVaryingWebReference` is
+As with WebReference, consider an https_response_time validator to check reachability of the URL if needed.
 
-```
+Important clarifications:
+
+The system checks the `ChangeLog.md` within our own repository. It does not read or rely on external changelogs or any files in external repositories.
+Whenever `nlohmann/json` publishes a new release/patch and we integrate it into our repository, our `ChangeLog.md` will be updated accordingly (since we mirror upstream changes). Any change to this changelog will automatically set the review_status of all statements with TimeVaryingWebReferences to unreviewed, meaning they are invalidated and must be re-reviewed.
+The changelog argument defaults to `ChangeLog.md`, which is the correct path to the changelog in this repo. You only need to specify the changelog argument if the file is moved or renamed.
+An example of the complete configuration for `TimeVaryingWebReference` (overriding the changelog path) is:
+
+
 ---
 ...
 references:
@@ -153,13 +168,26 @@ references:
   description: "Wiki article on the smooth Serre-Swan theorem"
   changelog: "ideas/graded/graded_Serre_Swan.tex"
 ---
-```
-where `description` and `changelog` are optional arguments.
+
+In the common case (using the default ChangeLog.md in this repository), you can omit the `changelog` argument:
+
+
+---
+...
+references:
+- type: project_website
+  url: "https://github.com/nlohmann/json/pulse/monthly"
+  description: "Development activity for nlohmann/json"
+---
+Both `description` and `changelog` are optional arguments.
 
 ## ListOfTestCases
 
-The content of a `ListOfTestCases` is given by the list of test-cases extracted from the unit-tests given in the files in the provided directories. 
-It is assumed that a unit-test is saved in a file with the name unit-xxx.cpp, and only those files are used to compile the list. 
+A `ListOfTestCases` reference produces a markdown overview of all unit tests and nested sections found in the provided directories and files and augments this structure with recent execution environments from a test-results database (currently "artifacts/MemoryEfficientTestResults.db"). This provides a concise map of the test suite together with information on where it has been executed successfully or with skips.
+
+The reference scans files matching the pattern `unit-*.cpp` to extract `TEST_CASE` and `SECTION` names and their nesting, and it formats the results as nested lists to mirror the test structure. It then queries the database of recent test runs to list the compiler and standard combinations that executed all tests without skipping, as well as those where some tests were skipped, and it incorporates these details into the same markdown report. The content returned for hashing is the complete markdown report, which the documentation also renders directly.
+
+
 Further, it is assumed that a unit-test-file is structured as
 
 ```
@@ -175,7 +203,9 @@ TEST_CASE("my test case")
 }
 ```
 
-and the structure regarding test-cases and (nested) sections of test-cases is extracted. The expected configuration is 
+and the structure regarding test-cases and (nested) sections of test-cases is extracted. 
+
+The expected configuration is: 
 
 ```
 ---
@@ -190,12 +220,11 @@ references:
 
 ## workflow_failures
 
-This reference queries `https://github.com/{self._owner}/{self._repo}/actions?query=is%3Afailure+branch%3A{self._branch}` and collects the number of failed workflow runs as its content.
-Here, owner, repo and branch are the arguments given to the constructor of the reference.
-If no branch is specified, then all failures are collected, i.e. `https://github.com/{self._owner}/{self._repo}/actions?query=is%3Afailure` is queried.
-In case the website is un-reachable, or the github layout changes drastically so that the number of failed workflow runs does not exist at the expected location, an error is thrown.
+This reference queries Github Actions (`https://github.com/{self._owner}/{self._repo}/actions?query=is%3Afailure+branch%3A{self._branch}`) for failed workflow runs and records the number as content. This allows the documentation to include the current failure count as evidence without embedding the page itself.
 
-The expected configuration is 
+The reference constructs a URL that filters workflow runs by failure status, optionally restricting the query to a specific branch, and it extracts the number displayed at the top of the results table. It returns this number as the content used for hashing, and in the documentation it presents a short sentence indicating the count and, when applicable, the branch to which the count refers.
+
+The expected configuration is: 
 
 ```
 ---
@@ -210,16 +239,11 @@ references:
 
 ## ItemReference
 
-Some references support every (directly or indirectly) supporting item of an item. 
-Instead of repeating these references in each supporting item, these references are listed in the supported item.
-The inheritance of the references is then clarified in the documentation by an `ItemReference`.
-In the final documentation in human-readable form, an ItemReference simply lists all items of which the references are inherited with hyperlinks.
+An `ItemReference` documents inheritance of references from other items so that shared evidence does not need to be repeated across multiple supporting items. In the rendered documentation, it lists links to the referenced items so readers can navigate to the source evidence.
 
-To detect the inheritance of references in the content of the supporting items, the content of an ItemReference is the combination of the sha's stored in the .dotstop.dot file of the listed supported items.
-If any reference of any of the listed supported items changes, then its sha changes and the review-status of the item becomes false.
-After successful re-review, the review-status of the supported items is re-set to true, so that the new sha is stored in the .dotstop.dot file.
-This automatically sets the review-status of the supporting items, which inherit the references, to false, thereby triggering a re-review of these.
-The expected configuration is as follows
+The reference reads entries from the local trustable graph file and combines the signatures of the referenced items into its content, thereby tying the current item’s trustability to those items’ evidence. In the documentation, it prints a list of hyperlinks pointing to the target items, and any change in the referenced items’ evidence automatically propagates to the dependent item through this linkage. If any reference of any of the listed supported items changes, then its sha changes and the review-status of the item becomes false. After successful re-review, the review-status of the supported items is re-set to true, so that the new sha is stored in the `.dotstop.dot` file. This automatically sets the review-status of the supporting items, which inherit the references, to false, thereby triggering a re-review of these.
+
+The expected configuration is:
 
 ```
 ---
@@ -237,14 +261,11 @@ Here, the elements of the list `items` must be normative nodes of the trustable 
 
 ## IncludeListReference
 
-The content of an `IncludeListReference` is given by the list of `#include` lines extracted from a specified source/header file in the repository (for example `single_include/nlohmann/json.hpp`). This reference is useful to document which libraries a file depends on without embedding the full file content into the report.
+An `IncludeListReference` extracts all `#include` lines from a specified source or header file (e.g., single_include/nlohmann/json.hpp) and uses them as the content. It is useful for showing direct dependencies of a file without embedding its full text.
 
-Behaviour:
-- content: returns the concatenation of all lines that begin with `#include` in the target file as UTF-8 encoded bytes. If no includes are found, the content is `b"No includes found"`.
-- as_markdown: renders the found `#include` lines as a C++ code block (```cpp ... ```). If a `description` was provided when constructing the reference, the description is shown as an indented bullet above the code block.
-- If the referenced file does not exist or is not a regular file, accessing `content` raises a ReferenceError.
+The reference reads the target file and collects only those lines whose first non-whitespace characters form a `#include` directive, removing inline comments where necessary to present a clean list. It returns the list of includes as the content used for hashing, or a placeholder message when the file contains no includes, and it renders the includes as a C++ code block in the documentation with an optional `description` above the block.
 
-Usage example:
+The expected configuration is: 
 
 ```
 ---
@@ -257,17 +278,13 @@ references:
 ---
 ```
 
-Notes:
-- `description` is optional.
-- The reference only extracts lines whose first non-whitespace characters are `#include`.
-
 # Validators
 
-Validators are extensions of trudag, used to validate any data that can be reduced to a floating point metric. The resulting scores are used as evidence for the trustability of items in the trustable graph.
+Validators are extensions of trudag that assess evidence by computing floating-point scores from measurable data. These scores provide quantitative support for the trustability of items in the trustable graph and are combined with the items’ references and statements during hashing and reporting. The implementation of the validators can be found in validators.py.
 
 ## check_artifact_exists
 
-The check_artifact_exists script validates the presence of artifacts from GitHub Actions workflows for the current SHA. The score is given based on the number of artifacts found vs the number of artifacts expected.
+The `check_artifact_exists` validator confirms whether the expected GitHub Actions artifacts exist for the current commit SHA and assigns a score based on how many of the requested artifacts were found relative to how many were expected. The configuration consists of keys that correspond to known artifact names (namely `check_amalgamation`, `codeql`, `dependency_review`, `labeler`, `test_trudag_extensions`, and `ubuntu`) and values that specify whether each artifact should be included as part of the evidence (“include”) or excluded from consideration (“exclude”). The validator interprets this mapping to determine the expected set and then compares it against the artifacts available for the current build to derive the score.
 
 The available configuration dict keys for check_artifact_names are:
   - `check_amalgamation`
@@ -281,11 +298,11 @@ The available configuration dict values for check_artifact_names are:
   - 'include'
   - 'exclude'
 
-These indicate whether a certain artifact should be included as evidence for a Trustable graph item.
-
 ## https_response_time
 
-The automatic validator https_response_time checks the responsiveness of a given website. The expected configuration is as in the example:
+The `https_response_time` validator measures how quickly a list of websites responds and derives a score based on the responsiveness and the HTTP status code. The configuration specifies an acceptable response time threshold in seconds and a list of URLs to check. Any URL that responds in at least five times the acceptable threshold, or that returns a non-200 response code, receives an individual score of zero. The final score is calculated as the mean of all individual scores across the list of URLs, which encourages fast and reliable endpoints and flags unresponsive or failing sites.
+
+The expected configuration is:
 ```    
 evidence:
     type: https_response_time    
@@ -296,16 +313,12 @@ evidence:
             - "https://github.com/nlohmann/json/graphs/commit-activity"
             - "https://github.com/nlohmann/json/forks?include=active&page=1&period=&sort_by=last_updated"
 ```
-A response time of at least the five-fold of the acceptable response time is deemed unacceptable and gives an individual score of zero.
-Likewise unacceptable is a response code other than `200`, which gives an individual score of zero.
-
-The total score is the mean of the individual scores.
 
 ## check_test_results
 
-The automatic validator `check_test_results` is intended to evaluate the database `MemoryEfficientTestResults.db` which is generated in the ubuntu-Workflow, and which contains the test-report of the most recent workflow run. This database is temporary, and, contrary to `TSF/MemoryEfficientTestResultData.db`, which is persistently stored on the branch `save_historical_data`, not persistently stored.
+The `check_test_results` validator analyzes the most recent unit test outcomes stored in a SQLite database generated by the ubuntu workflow and calculates a score that reflects the proportion of passed test cases among those that were executed. The `configuration` lists the test files of interest (by their base names without the “unit-” prefix or file extension) and optionally overrides the `database` file path and `table` name. For each specified test, the validator counts the passed and failed cases and ignores skipped cases to compute an individual pass ratio. The overall score is the mean of these ratios, which provides a balanced measure of recent test success across the selected test files.
 
-The expected configuration is given as follows:
+The expected configuration is:
 
 ```
 evidence:
@@ -320,8 +333,6 @@ evidence:
 ```
 
 The test-files are called unit-FILE_NAME.cpp. In the configuration, FILE_NAME is expected only, i.e. without the leading unit- and without the file-extension.
-
-For each test specified in test-files, the number of passed and failed test-cases is calculated, while the number of skipped test-cases is ignored. The score of each test is then the ratio of passed test-cases compared to all non-skipped test-cases; the total score is the mean of the individual scores.
 
 ## check_issues
 
@@ -348,10 +359,9 @@ Otherwise, the score 1.0 is assigned.
 
 ## did_workflows_fail
 
-The automatic validator `did_workflows_fail` queries the web-site `https://github.com/{owner}/{repo}/actions?query=event%3A{event}+is%3Afailure+branch%3A{branch}` and looks on the number of workflow run results which is printed at the head of the table.
-In case that this number is not zero, a score of 0.0 is returned, and 1.0 otherwise.
+The `did_workflows_fail` validator checks the results of GitHub Actions runs for a repository, optionally filtered by event and branch, and produces a binary score indicating whether any runs failed. It constructs a query that lists workflow results matching failure status and then reads the number displayed at the top of the results table. If the number is zero, it returns a score of 1.0 to indicate no failures; otherwise, it returns 0.0 with a warning. If the GitHub page cannot be reached or the number of failed runs cannot be parsed, the validator returns 0.0 with an error. The configuration requires the repository owner and name and may include the branch and event, with “push” as the default event. It is important to enclose all configuration values in quotation marks to ensure the update helper processes them correctly.
 
-The expected configuration is given as follows:
+The expected configuration is:
 
 ```
 evidence:
@@ -363,18 +373,14 @@ evidence:
         action: "push" # optional, default is push
 ```
 
-It is of utmost importance that the arguments come with quotation marks. Otherwise, the update helper does not work as intended.
 
 ## coveralls_reporter
 
-The automatic validator `coveralls_reporter` queries the [coveralls](https://coveralls.io/) api to get the line and branch coverages calculated by the service, which is running on the repository.
-Unless the version of `nlohmann/json` documented in this repository changes, it is expected that both coverage numbers remain constant.
-When initialising the reference, the current code coverage is given as a parameter, to which the fetched coverages are compared.
-If no branch is specified, then the most recently calculated coverage is fetched, so that it is generally recommended to specify a branch.
-Moreover, it is possible to specify the number of decimal digits, which is defaulted to three, when not specified.
-The validator returns a score of 1.0 if both fetched coverages rounded to the specified number of decimal digits coincide with the specified ones, and a score of 0.0 otherwise.
+The coveralls_reporter validator queries the Coveralls API [coveralls](https://coveralls.io/) for the current line and branch coverage figures and compares them with expected values specified in the configuration. It returns a score of 1.0 if both fetched coverage numbers, rounded to a configurable number of decimal digits, match the given expectations and returns 0.0 otherwise. The configuration includes the Coveralls project coordinates (owner, repo, and optionally branch), the expected coverage values, and the rounding precision, which defaults to three decimal digits. When no branch is provided, the validator uses the most recent coverage values, although specifying a branch is recommended for consistent comparisons.
 
-The expected configuration is the following:
+Unless the version of `nlohmann/json` documented in this repository changes, it is expected that both coverage numbers remain constant.
+
+The expected configuration is:
 
 ```
 evidence:
@@ -390,7 +396,9 @@ evidence:
 
 ## combinator
 
-The trudag tool does currently not support the use of multiple custom validators for one single TSF item. To work around this, the validator `combinator` is implemented as a meta-validator that executes multiple validators and combines their scores using a weighted average. This enables the validation of complex trustable items that require evidence from multiple sources or validation methods.
+The combinator validator serves as a meta-validator that enables the evaluation of complex items by running multiple validators and combining their scores into a single result using a weighted average. It accepts a list of validator configurations and optional weights, executes each validator independently, and then computes the weighted mean of their scores. If no weights are specified, all validators are treated equally. The validator supports a predefined set of underlying validator types and aggregates their exceptions and warnings in its output. All weights must be non-negative, and if the sum of weights is zero, the combinator returns a score of 0.0.
+
+The trudag tool does currently not support the use of multiple custom validators for one single TSF statement.
 
 The combinator accepts a list of validators, each with its own configuration and optional weight. Each validator is executed independently, and their scores are combined using the formula: `(score1 * weight1 + score2 * weight2 + ...) / (weight1 + weight2 + ...)`. If no weights are specified, all validators are treated with equal weight (weight = 1.0).
 
@@ -463,4 +471,4 @@ It is intended to store data only once per commit. If, for any reason, the same 
 
 ## pull
 
-This functionality parses the information stored in `TrustableScoring.db` into the format which is expected by trudag. In case that no data are found, the empty history is returned.
+This functionality parses the information stored in `TrustableScoring.db` into the format which is expected by trudag. In case that no data is found, the empty history is returned.
