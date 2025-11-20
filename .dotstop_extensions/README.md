@@ -18,7 +18,7 @@ A `CPPTestReference` points to a specific C++ test-case or a nested section with
 
 The reference locates the requested `TEST_CASE` or `SECTION` by name and follows any nested sections indicated by semicolons in the order they appear. It assumes the conventional brace layout used in the `nlohmann/json` tests, where the opening brace follows immediately after the declaration line and the closing brace has matching indentation. The content returned for hashing is the section’s exact source text in UTF-8, and the documentation renders the section cleanly as a C++ code block with indentation normalized when appropriate.
 
-For the `CPPTestReference` The expected configuration is::
+For the `CPPTestReference` The expected configuration is:
 ```
 ---
 ...
@@ -36,7 +36,7 @@ A `JSONTestsuiteReference` bundles a selected C++ test section together with one
 
 The reference extends `CPPTestReference` by supplementing the identified C++ section with the content of the listed JSON files. It combines the test code and JSON data into a single payload for hashing, ensuring that the evidence reflects both the test harness and its inputs. In the documentation, each JSON file is shown either in full or replaced by a link if the file is very large, and the relevant C++ section is rendered below; an optional description appears above the content. If enabled, the reference filters lines in the displayed C++ section that mention other JSON files not included in the selection, while the underlying content still includes the full section text used for hashing.
 
-For the `JSONTestsuiteReference` The expected configuration is::
+For the `JSONTestsuiteReference` The expected configuration is:
 ```
 ---
 ...
@@ -101,7 +101,7 @@ references:
   url: "https://math.stackexchange.com/"
 ---
 ```
-An example of `WebReference` with non-empty description is
+An example of `WebReference` with non-empty description is:
 ```
 ---
 ...
@@ -338,7 +338,7 @@ The test-files are called unit-FILE_NAME.cpp. In the configuration, FILE_NAME is
 
 The automatic validator `check_issues` is intended to evaluate the json-lists `raw_open_issues.json` and `raw_closed_issues.json` and compare with the list of known issues of nlohmann/json labelled as bug opened since the release of the version of nlohmann/json that is documented. The json lists are generated in the publish_documentation-Workflow, and not persistently stored.
 
-The expected configuration is: given as follows:
+The expected configuration is given as follows:
 
 ```
 evidence:
@@ -412,7 +412,7 @@ The combinator supports the following validator types:
 - `did_workflows_fail`
 - `coveralls_reporter`
 
-The expected configuration is: as follows:
+The expected configuration is as follows:
 
 ```
 evidence:
