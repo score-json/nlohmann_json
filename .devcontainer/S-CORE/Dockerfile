@@ -87,5 +87,5 @@ RUN groupadd --gid $USER_GID $USERNAME \
 USER $USERNAME
 
 # Install trudag using pipx
-RUN pipx install git+https://gitlab.com/CodethinkLabs/trustable/trustable@9957f12171cb898d83df5ae708fdba0a38fece2e && \
+RUN pipx install git+https://gitlab.com/CodethinkLabs/trustable/trustable@v2025.10.22 && \
     pipx ensurepath

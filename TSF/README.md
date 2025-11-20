@@ -49,11 +49,9 @@ To update either the version of nlohmann/json within S-CORE or TSF documentation
 
 ## Assumptions of use
 
-This description of an update process is based on the following structure of the repository WHICH IS NOT THE CASE YET.
-It is assumed that the repository possesses a default branch called ``main`` containing the most recent documented version of ``nlohmann/json`` together with its documentation.
-Additionally, there is a branch ``develop``, which is **not** intended to mirror the branch of ``nlohmann/json`` with the same name, but instead serves as an in-repository testing ground for changes to either the library or its documentation.
-The releases of the documented version are identified by tags on ``main``.
-Moreover, the branch protection rules for ``main`` are set as described in the description of the forking process in ``TSF/README.md`` (WIP).
+This description of the update process is based on the following structure of the repository.
+It is assumed that the repository has a default branch called ``main`` containing the most recent documented version of ``nlohmann/json`` together with its documentation.
+The releases of the documented nlohmann/json version are identified by release notes on ``main``.
 
 Note that there is **no automatic information** on the existence of a new release in the original ``nlohmann/json``; instead the possibility to update is detected **manually**.
 Note further that, due to the currently relatively limited use of nlohmann/json within S-CORE, there appears currently no inherent need to keep the version up to date.
@@ -62,7 +60,7 @@ Note further that, due to the currently relatively limited use of nlohmann/json 
 
 The releases of ``nlohmann/json`` are collected on the [Release site](https://github.com/nlohmann/json/releases) of the repository ``nlohmann/json``.
 Each release announcement is expected to contain the release date, SHA-256 values for json.hpp, include.zip and json.tar.xz, and a brief list containing bug fixes, improvements, further changes and deprecated functions.
-The new release is expected to be located within the branch **master**, from where the most recent version can be drawn.
+The new release is expected to be located within the branch **master** in nlohmann/json, from where the most recent version can be drawn.
 
 ## Update process of the S-CORE version
 
@@ -100,12 +98,11 @@ Moreover, some parts of the documentation must be adapted to the new version.
 
 * ``.github/workflows/parent-workflow.yml``
     To ensure a specific execution order for the individual github workflows, their execution is orchestrated by the parent-workflow.
-    To guarantee that this order is respected, it must be ensured that every other workflow except for ``docs-cleanup.yml``, ``scorecards.yml`` and ``stale.yml`` runs ``on workflow_call``, only.
-    For the three exceptions, it is recommended to keep the execution scheduled as currently the case.
+    To guarantee that this order is respected, it must be ensured that every workflow except for ``comment_check_amalgamation.yml``, ``docs-cleanup.yml``, ``parent-workflow.yml``, ``scorecards.yml`` and ``stale.yml`` runs ``on workflow_call``, only.
 
 * ``.github/workflows/ubuntu.yml``
     The ubuntu workflow orchestrates the parallel execution of various cmake targets with varying configurations running on the latest version of ubuntu.
-    The first adaptation is that every step, in which a junit-report is generated, generates an artifact.
+    The first TSF related adaptation of this workflow is that every step, in which a junit-report is generated, generates an artifact.
     It must be ensured, that these artifacts are still generated after the update.
     The second adaptation is that the test-results are captured, processed and persistently stored or stored in the ubuntu-artifact.
     Therefore, it must be ensured that the jobs ``publish_test_data_success``, ``publish_test_data_failure``, ``publish_test_data_cancellation`` and ``ubuntu_artifact`` are executed.
@@ -118,7 +115,7 @@ Moreover, some parts of the documentation must be adapted to the new version.
     Currently, this is done by removing it altogether, which we recommend to do so that no confusion as to why this workflow is not executed arises. 
 
 * ``.github/workflows/publish_documentation.yml``
-    This workflow is replaced with a completely customised version, which reflects the use of trudag and the integration into the Eclipse S-CORE organisation.
+    The original version of this workflow is replaced with a completely customised version, which reflects the use of trudag and the integration into the Eclipse S-CORE organisation.
     Therefore, it is recommended to not change this workflow. 
     In particular, the version of publish_documentation.yml in the original repository nlohmann/json must not replace the publish_documentation.yml of the present repository.
 
@@ -135,7 +132,7 @@ Moreover, some parts of the documentation must be adapted to the new version.
     In case that it is determined that these workflows should be deleted also in the documented copy of ``nlohmann/json``, then the validator ``check_artifact_exists`` and all its occurrences must be adapted accordingly.
 
 * ``ChangeLog.md``
-    It must be ensured that the changes of the update are properly described in the file ``ChangeLog.md``.
+    It must be ensured that the changes of the new release of nlohmann/json are properly described in the file ``ChangeLog.md``.
 
 
 ### Necessary adaptations
@@ -164,46 +161,43 @@ For the error-free execution is it necessary, however, to adhere to the naming s
     This script contains version and release date hard-coded. Both must be updated.
 
 
-### Recommended procedure VERY MUCH WIP 
+### Recommended procedure
 
-Based on the above observations, the following recommendations are derived.
+Based on the above observations, the following steps are recommended for each update to the library.
 
-1. Ensure that the content of the branch ``develop`` is identical to the branch ``main``.
-    Since it is intended to not change the library itself, in particular the folders ``include`` and ``single_include``, this should be possible by updating the documentation. 
-2. Merge branch master from the original nlohmann/json into ``develop``, e.g. ``git checkout -b json_version_X_XX_X && git merge --no-commit nlohmann/master``
-3. Confirm the deletion of cifuzz.yml, macos.yml and windows.yml.
-4. Resolve the potential merge conflict in publish-documentation.yml by rejecting the incoming changes.
-    Update the versions of the github actions, if necessary. 
-5. Resolve the potential merge conflicts in check_amalgamation.yml, codeql.yml, dependency_review.yml, labeler.yml, ``test_trudag_extensions.yml`` to ensure that the artifacts are generated, i.e. the jobs ``Generate XXX artifact`` and ``Upload XXX artifact`` are retained.
+1. Merge branch master from the original nlohmann/json into an external fork of the eclipse-score/inc_nlohmann_json repository, where steps 2-12 shall be performed.
+2. Confirm the deletion of cifuzz.yml, macos.yml and windows.yml.
+3. Resolve the potential merge conflict in publish-documentation.yml by rejecting the incoming changes.
+4. Update the versions of the github actions, if necessary. 
+5. Resolve the potential merge conflicts in check_amalgamation.yml, codeql.yml, dependency_review.yml, labeler.yml and test_trudag_extensions.yml to ensure that the artifacts are generated, i.e. the jobs ``Generate XXX artifact`` and ``Upload XXX artifact`` are retained.
 6. Resolve the potential merge conflict in ubuntu.yml following the above instructions.
 7. Resolve the potential merge conflicts in cmake/download_test_data.cmake and cmake/ci.cmake following the above instructions.
 8. Carefully examine the automatically merged changes. If no interference is to be expected, complete the merge.
 9. In case any additional workflow has been added, carefully examine and integrate into the parent-workflow or schedule appropriately.
 10. Adapt the documentation as described above.
-11. Generate the documentation locally and carefully investigate any change in the trustable score(s). 
+11. Generate the TSF report locally and carefully investigate any change in the trustable score(s). 
     If any relevant behaviour of the library changes, adapt the documentation. 
     Additionally, if any additional tests were added, or existing tests were changed, carefully investigate whether these warrant an amendment of the documentation.
-12. Merge into the ``main``.
-13. Create a new release under the tag FIXME
+12. Merge into the ``main`` branch of eclipse-score/inc_nlohmann_json.
+13. Create a new release tag in eclipse-score/inc_nlohmann_json, following semantic versioning.
 
 # Update concept for the TSF documentation
 
 ## Assumptions of use
 
 The documentation follows the Trustable Software Framework (TSF), which is documented [here](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html).
-Furthermore, the automatic compilation of the documentation and the tracking of changes to the core functionalities of the library uses _trudag_, which is developed by Codethink and located [here](https://gitlab.com/CodethinkLabs/trustable/trustable).
+Furthermore, the automatic generation of the TSF report and the tracking of changes to the core functionalities of the library uses _trudag_, which is developed by Codethink and located [here](https://gitlab.com/CodethinkLabs/trustable/trustable).
 
 
 ## Version of trudag
 
-The documentation is currently built using trudag version 2025.8.5.
-In case a major change of the trudag happens in the future, this might break some features of the documentation, or change some intended behaviours.
-Thus, it is recommended to not change the version of trudag.
-In case that it appears wise or necessary to change the version of trudag (e.g. when trudag is eventually certified), the following should be considered:
+The documentation is currently built using trudag version v2025.10.22
+In case of new releases of trudag in the future, it is recommended to carefully review the introduced changes and rigorously test it before merging it into eclipse-score/inc_nlohmann_json.
+The following should be considered:
 
-* How has the algorithm for the accumulation of the trustable score changed? Ideally, it does not change, otherwise the necessity for a new review arises.
-* How has the data store interface changed? Ideally, it has not changed, but historical data and the documentation indicate that a change of the data store interface happened at some time.
-* How has the the expected configuration for the items changed? It is known that this configuration changed (at least) once before. What does the potential change mean?
+* How has the algorithm for the accumulation of the trustable score changed? Ideally, it is not changed, otherwise the necessity for a new review arises.
+* How has the data store interface changed? Ideally, it is not changed, but if it does and the expected schema format changes, data_store.py needs to be updated accordingly.
+* How has the the expected configuration for the TSF items changed? It is known that this configuration changed (at least) once before. What does the potential change mean?
 * Do all custom references and validators as well as the data store interface work as before?
 * Has the algorithm for the hashing changed, or are there any changes to the trustable scores? If so, investigate carefully!
 
@@ -211,9 +205,8 @@ In case that it appears wise or necessary to change the version of trudag (e.g. 
 ## Subject-Matter-Expert-scores
 
 The intention with the SME scores is to find the _true_ trustable score by means of a heuristic law-of-large-numbers argument. 
-Therefore, it is very much welcome if contributors add their SME scores to statements for which they feel confident to do so.
+Therefore, it is very much welcome for contributors to add their SME scores to statements for which they feel confident to do so.
 While the committer may check SME scores for plausibility, it is recommended to not question SME scores as this interferes with the assumed independence of the SME!
-It is recommended that changes to SME scores are accumulated in the branch ``develop`` before the release of a new version of the documentation as to not clutter the release history.
 It is highly recommended to not delete SME scores under usual circumstances; most certainly, the SME scores should never be changed by anybody except the original SME.
 The following unusual circumstances can, after careful consideration, justify the removal or (much preferably!) the request for re-evaluation by the original SMEs:
 
@@ -225,15 +218,26 @@ The following unusual circumstances can, after careful consideration, justify th
     In the absence of a validator, the SME shall assess their confidence in the statement based on linked artifacts (references) and their own knowledge. 
     In the presence of a validator, the SME shall assess only their confidence in the validator as an accurate measure of the truth of the statement.
 
+Some important remarks regarding the process of performing an SME review include:
+
+* Assumptions-of-Use (AoU) items are not to be scored by an SME. These should at some point in time be converted to a regular statement by the integrator, but shall until then remain without SME scores, evidence or references. These automatically contribute with a score of 0 for the time being.
+* Any statement that has supporting statements (child nodes) shall not be scored by an SME. The scores for these shall only comprise of the automatic calculation of the mean of the scores of all linked child nodes.
+* The TSF report is only published for the default branch of a repository. In order to to see TSF documentation for a non-default branch, the reviewer can checkout the branch in a clone and locally generate the report by running the ``TSF/scripts/generate_documentation.sh`` script.
+* Any TSF item that has the ``normative`` parameter set to false shall not be scored by the SME. These are just informational and do not make a statement about the project. Note that the parameter itself shall not be set or changed by the SME, but is defined by the contributor who created the TSF item.
+
+For documentation on how to actually perform a SME review, please refer to the following:
+* https://codethinklabs.gitlab.io/trustable/trustable/trudag/usage.html#reviewing-items 
+* https://codethinklabs.gitlab.io/trustable/trustable/trudag/usage.html#sme-review
+
 ## Validators
 
 The automatic validators are intended to calculate a trustable score based on quantifiable data. 
 In particular the introduction of a validator changes the meaning of the (potential) SME scores associated to a statement.
 Therefore, the change or introduction of an automatic validator is most critical.
-It is highly recommended to urge the original SME to re-review the statement and adapt their scores, or (at the least) to enlist additional SME to judge the changed statement.
+In case the validator used in a statement has been changed, it is highly recommended to urge the original SME to re-review the statement and adapt their scores, or (at the very least) to enlist additional SMEs to judge the changed statement.
 After careful consideration the highly critical decision to remove some SME scores no longer reflecting the statement could be made. 
 
 ## References
 
-References should be treated as validators, i.e. any update of a reference should trigger a re-review by the SME.
+References should be treated in the same way as validators, i.e. any update of a reference should trigger a re-review by the SME.
 For references, however, the decision to remove a stale SME score is even more critical unless the reference reveals critical new information, which is highly unlikely, or the change of the reference is triggered by a significant change in the behaviour of the library, which heavily affected the statement.

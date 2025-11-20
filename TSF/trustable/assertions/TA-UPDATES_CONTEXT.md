@@ -41,7 +41,7 @@ Ultimately, the trustable controlled process is the only path to production for 
 **Evidence**
 
 - change management process and configuration artifacts
-  - **Answer**: 
+  - **Answer**: Provided in JLS-06, JLS-07, JLS-12, JLS-32, JLS-34 and JLS-35. 
 
 **Confidence scoring**
 
@@ -52,14 +52,14 @@ dependencies.
 **Checklist**
 
 - Where are the change and configuration management controls specified?
-  - **Answer**: 
+  - **Answer**: In the contribution guidelines and security policy. 
 - Are these controls enforced for all of components, tools, data, documentation and configurations?
-  - **Answer**: 
+  - **Answer**: Yes. Any proposed change is subject to the same change controls.
 - Are there any ways in which these controls can be subverted, and have we mitigated them?
-  - **Answer**: 
+  - **Answer**: No. The controls are enforced using branch protection rules and are mostly automated.
 - Does change control capture all potential regressions?
-  - **Answer**: 
+  - **Answer**: Yes. All changes are rigorously tested in a separate branch before being deployed to the master branch.
 - Is change control timely enough?
-  - **Answer**: 
+  - **Answer**: The change control is indeed timely enough, mainly due to the fact that the nlohmann/json library is open source and has many contributors.
 - Are all guidance and checks understandable and consistently followed?
-  - **Answer**: 
+  - **Answer**: Yes. The contribution guidelines and CI workflows are clear and well-documented, as well as automatically enforced.
