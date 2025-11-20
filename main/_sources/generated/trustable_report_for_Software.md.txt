@@ -53,6 +53,7 @@ This presents the compliance for the _Assumptions of Use_ (AOU) in tabular form.
 | [AOU-27](AOU.md#aou-27)  | The integrator shall ensure that the 'Release management' and 'Update concepts' in TSF/README.md are followed whenever any changes are done in eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [AOU-28](AOU.md#aou-28)  | The integrator shall ensure that the known open bugs of the nlohmann/json repository are regularly reviewed on their impact on the use of the documented version of nlohmann/json, as long as the nlohmann/json library is actively used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [AOU-29](AOU.md#aou-29)  | The integrator shall check the security tab in the GitHub UI on a regular basis, analyze and either fix or dismiss any outstanding CVEs. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [AOU-30](AOU.md#aou-30)  | The integrator shall review the answers to each of the TSF evidence lists in the TA_CONTEXT files (see e.g., TSF/trustable/assertions/TA-ANALYSIS_CONTEXT.md). For each point that has not already been fulfilled, the integrator shall evaluate it and provide the relevant evidence if possible. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 
 ## Compliance for JLEX 
 This presents the compliance for the _JSON-Library Expectations_ (JLEX) in tabular form.
@@ -324,6 +325,6 @@ This presents the compliance for _Well Formed JSON_ (WFJ) in tabular form.
 _Generated for: Software_
 
 * _Repository root: /home/runner/work/inc_nlohmann_json/inc_nlohmann_json_
-* _Commit SHA: 14e403a860cc6f8c49a62537fa11ba5fe6dae696_
-* _Commit date/time: 2025-11-19 13:45:36 UTC_
-* _Commit tag: 14e403a_
+* _Commit SHA: e13078aa7c3548c731c1a81ec6a59708498ebc8b_
+* _Commit date/time: 2025-11-20 10:55:40 UTC_
+* _Commit tag: e13078a_

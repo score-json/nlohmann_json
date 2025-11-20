@@ -35,7 +35,8 @@ _None_
 |date-time|TA-ANALYSIS|JLS-17|JLS-26|
 |-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |
 
 
 
@@ -167,7 +168,8 @@ _None_
 |date-time|TA-BEHAVIOURS|JLEX-01|JLEX-02|JLS-03|
 |-|-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -297,7 +299,8 @@ _None_
 |date-time|TA-CONFIDENCE|JLS-08|JLS-09|JLS-20|
 |-|-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -388,6 +391,7 @@ Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are 
 | [AOU-29](AOU.md#aou-29)  | The integrator shall check the security tab in the GitHub UI on a regular basis, analyze and either fix or dismiss any outstanding CVEs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [AOU-10](AOU.md#aou-10)  | The integrator shall, whenever possible, turn any remaining Assumptions-of-Use (AOU) items into statements and add suitable references and/or validators. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [AOU-11](AOU.md#aou-11)  | The integrator shall, whenever possible, replace outdated and/or provide additional references and validators that would further improve the trustability of a statement. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-30](AOU.md#aou-30)  | The integrator shall review the answers to each of the TSF evidence lists in the TA_CONTEXT files (see e.g., TSF/trustable/assertions/TA-ANALYSIS_CONTEXT.md). For each point that has not already been fulfilled, the integrator shall evaluate it and provide the relevant evidence if possible. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -405,10 +409,11 @@ _None_
 
 ![No Image](figs/TA-CONSTRAINTS.svg)
 
-|date-time|TA-CONSTRAINTS|AOU-04|AOU-05|AOU-06|AOU-07|AOU-14|AOU-16|AOU-20|AOU-21|AOU-01|AOU-02|AOU-03|AOU-08|AOU-09|AOU-15|AOU-17|AOU-18|AOU-19|AOU-22|AOU-23|AOU-24|AOU-25|AOU-26|AOU-27|AOU-28|AOU-29|AOU-10|AOU-11|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-|2025-11-19 13:45:36|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|date-time|TA-CONSTRAINTS|AOU-04|AOU-05|AOU-06|AOU-07|AOU-14|AOU-16|AOU-20|AOU-21|AOU-01|AOU-02|AOU-03|AOU-08|AOU-09|AOU-15|AOU-17|AOU-18|AOU-19|AOU-22|AOU-23|AOU-24|AOU-25|AOU-26|AOU-27|AOU-28|AOU-29|AOU-10|AOU-11|AOU-30|
+|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|2025-11-19 13:45:36|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |N/A|
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -538,7 +543,8 @@ _None_
 |date-time|TA-DATA|JLS-18|
 |-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |
 
 
 
@@ -647,7 +653,8 @@ _None_
 |date-time|TA-FIXES|JLS-05|JLS-04|JLS-11|JLS-30|JLS-29|JLS-28|JLS-33|
 |-|-|-|-|-|-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -721,37 +728,37 @@ Each iteration, we should improve the algorithm based on measurements
 **Checklist**
 
 - How many faults have we identified in XYZ?
-  - **Answer**: 
+  - **Answer**: None that are relevant for S-CORE's use case of the library.
 - How many unknown faults remain to be found, based on the number that have
   been processed so far?
-  - **Answer**: 
+  - **Answer**: It is unlikely that there are unknown faults relevant to S-CORE.
 - Is there any possibility that people could be motivated to manipulate the
   lists (e.g. bug bonus or pressure to close).
-  - **Answer**: 
+  - **Answer**: Unlikely, since the project is entirely open source.
 - How many faults may be unrecorded (or incorrectly closed, or downplayed)?
-  - **Answer**: 
+  - **Answer**: Few or none, considering the wide use of the nlohmann/json library.
 - How do we collect lists of bugs and known vulnerabilities from components?
-  - **Answer**: 
+  - **Answer**: We pull the list from the issues reported to nlohmann/json labelled as bug and are currently open or were opened since the last release. This list is then stored using GitHub, thereby enabling a traceability of the list.
 - How (and how often) do we check these lists for relevant bugs and known vulnerabilities?
-  - **Answer**: 
+  - **Answer**: Whenever we generate the documentation, the list is pulled. If there is an issue previously unrecorded, then the maintainer is encouraged by the change of the trustable score to check the relevance of the issue.
 - How confident can we be that the lists are honestly maintained?
-  - **Answer**: 
+  - **Answer**: Very confident, since the authors of the issues in the list mainly comprise of independent downstream users.
 - Could some participants have incentives to manipulate information?
-  - **Answer**: 
+  - **Answer**: No such incentives have been identified.
 - How confident are we that the lists are comprehensive?
-  - **Answer**: 
+  - **Answer**: Fairly confident, considering the wide use of the library and that downstream users are likely to report discovered bugs.
 - Could there be whole categories of bugs/vulnerabilities still undiscovered?
-  - **Answer**: 
+  - **Answer**: Unlikely, considering the wide use of the library and that downstream users are likely to report discovered bugs.
 - How effective is our triage/prioritisation?
-  - **Answer**: 
+  - **Answer**: There is no development of the json library within S-CORE, and therefore no triage/prioritisation. Any identified bugs/vulnerabilities are reported to nlohmann/json. Within nlohmann/json, no formal triage process has been identified. Nevertheless, reported bugs and vulnerabilities seem to be handled in a timely manner.
 - How many components have never been updated?
-  - **Answer**: 
+  - **Answer**: None, the nlohmann/json library consists of a single header file, which the only component. This component is up to date.
 - How confident are we that we could update them?
-  - **Answer**: 
+  - **Answer**: If a new version of the nlohmann/json library is released, we are very confident that we can update to that version.
 - How confident are we that outstanding fixes do not impact our Expectations?
-  - **Answer**: 
+  - **Answer**: No outstanding fixes that impact the Expectation have been identified.
 - How confident are we that outstanding fixes do not address Misbehaviours?
-  - **Answer**:
+  - **Answer**: Very confident, as no Misbehaviours have been identified.
 
 
 ---
@@ -789,7 +796,8 @@ _None_
 |date-time|TA-INDICATORS|
 |-|-|
 |2025-11-19 13:45:36|0.00 |
-|2025-11-19 14:45:21.165176|0.00 |
+|2025-11-20 10:55:40|0.00 |
+|2025-11-20 11:44:22.984139|0.00 |
 
 
 
@@ -933,7 +941,8 @@ _None_
 |date-time|TA-INPUTS|JLS-04|
 |-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |
 
 
 
@@ -1091,7 +1100,8 @@ _None_
 |date-time|TA-ITERATIONS|JLS-10|JLS-19|
 |-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |
 
 
 
@@ -1206,7 +1216,8 @@ _None_
 |date-time|TA-METHODOLOGIES|JLS-13|
 |-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |
 
 
 
@@ -1321,7 +1332,8 @@ _None_
 |date-time|TA-MISBEHAVIOURS|JLS-02|JLS-24|JLS-25|JLS-31|
 |-|-|-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1500,7 +1512,8 @@ _None_
 |date-time|TA-RELEASES|JLS-14|JLS-21|
 |-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |
 
 
 
@@ -1619,7 +1632,8 @@ _None_
 |date-time|TA-SUPPLY_CHAIN|JLS-23|
 |-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |
 
 
 
@@ -1726,7 +1740,8 @@ _None_
 |date-time|TA-TESTS|JLS-16|
 |-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |
 
 
 
@@ -1823,7 +1838,8 @@ _None_
 |date-time|TA-UPDATES|JLS-06|JLS-07|JLS-12|JLS-32|JLS-35|JLS-34|
 |-|-|-|-|-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1867,7 +1883,7 @@ Ultimately, the trustable controlled process is the only path to production for 
 **Evidence**
 
 - change management process and configuration artifacts
-  - **Answer**: 
+  - **Answer**: Provided in JLS-06, JLS-07, JLS-12, JLS-32, JLS-34 and JLS-35. 
 
 **Confidence scoring**
 
@@ -1878,17 +1894,17 @@ dependencies.
 **Checklist**
 
 - Where are the change and configuration management controls specified?
-  - **Answer**: 
+  - **Answer**: In the contribution guidelines and security policy. 
 - Are these controls enforced for all of components, tools, data, documentation and configurations?
-  - **Answer**: 
+  - **Answer**: Yes. Any proposed change is subject to the same change controls.
 - Are there any ways in which these controls can be subverted, and have we mitigated them?
-  - **Answer**: 
+  - **Answer**: No. The controls are enforced using branch protection rules and are mostly automated.
 - Does change control capture all potential regressions?
-  - **Answer**: 
+  - **Answer**: Yes. All changes are rigorously tested in a separate branch before being deployed to the master branch.
 - Is change control timely enough?
-  - **Answer**: 
+  - **Answer**: The change control is indeed timely enough, mainly due to the fact that the nlohmann/json library is open source and has many contributors.
 - Are all guidance and checks understandable and consistently followed?
-  - **Answer**:
+  - **Answer**: Yes. The contribution guidelines and CI workflows are clear and well-documented, as well as automatically enforced.
 
 
 ---
@@ -1929,7 +1945,8 @@ _None_
 |date-time|TA-VALIDATION|JLS-01|JLS-22|
 |-|-|-|-|
 |2025-11-19 13:45:36|0.00 |0.00 |0.00 |
-|2025-11-19 14:45:21.165176|0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |
+|2025-11-20 11:44:22.984139|0.00 |0.00 |0.00 |
 
 
 
