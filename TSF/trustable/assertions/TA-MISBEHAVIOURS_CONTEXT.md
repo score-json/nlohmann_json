@@ -93,7 +93,7 @@ established and reusable solutions.
 - List of Expectations for mitigations addressing identified Misbehaviours
   - **Answer**: 
 - Risk analysis
-  - **Answer**: 
+  - **Answer**: JLS-25 and JLS-31
 - Test analysis, including:
   - False negative tests
     - **Answer**: 
