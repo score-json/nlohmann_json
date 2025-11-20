@@ -93,7 +93,7 @@ Each iteration, we should improve the algorithm based on measurements
 - Could there be whole categories of bugs/vulnerabilities still undiscovered?
   - **Answer**: Unlikely, considering the wide use of the library and that downstream users are likely to report discovered bugs.
 - How effective is our triage/prioritisation?
-  - **Answer**: There is no development of the json library within S-CORE, and therefore no triage/prioritisation. Any identified bugs/vulnerabilities are reported to nlohmann/json.
+  - **Answer**: There is no development of the json library within S-CORE, and therefore no triage/prioritisation. Any identified bugs/vulnerabilities are reported to nlohmann/json. Within nlohmann/json, no formal triage process has been identified. Nevertheless, reported bugs and vulnerabilities seem to be handled in a timely manner.
 - How many components have never been updated?
   - **Answer**: None, the nlohmann/json library consists of a single header file, which the only component. This component is up to date.
 - How confident are we that we could update them?
