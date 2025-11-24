@@ -46,12 +46,12 @@ sufficient.
 **Evidence**
 
 - List of Expectations
-  - **Answer**: 
+  - **Answer**: # Currently in clarification with Codethink whether the list of expectations applies to nlohmann/json (the 3rd party lib) or to its usage within s-core (which could lead to different expectations)
 - Argument of sufficiency for break-down of expected behaviour for all 
   Expectations
-  - **Answer**: 
+  - **Answer**: # Not sure how to argument here. There is now way to prove that.
 - Validation and verification of expected behaviour
-  - **Answer**: 
+  - **Answer**: The validation and verification of expected behaviour is done via the evidence provided for all the (leaf) nodes below JLEX-01 and JLEX-02 in the trustable graph. 
 
 
 **Confidence scoring**
