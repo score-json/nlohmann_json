@@ -51,17 +51,17 @@ reporting bugs, issues, and requests.
 **Suggested evidence**
 
 - Installation manuals with worked examples
-  - **Answer**: 
+  - **Answer**: https://github.com/nlohmann/json?tab=readme-ov-file#integration
 - Configuration manuals with worked examples
-  - **Answer**: 
+  - **Answer**: https://github.com/nlohmann/json?tab=readme-ov-file#integration and https://github.com/nlohmann/json?tab=readme-ov-file#supported-compilers
 - Specification documentation with a clearly defined scope
-  - **Answer**: 
+  - **Answer**: https://github.com/nlohmann/json?tab=readme-ov-file#design-goals
 - User guides detailing limitations in interfaces designed for expandability or
   modularity
   - **Answer**: 
 - Documented strategies used by external users to address constraints and
   work with existing Statements
-  - **Answer**: 
+  - **Answer**: # All current AOUs here?
 
 **Confidence scoring**
 
