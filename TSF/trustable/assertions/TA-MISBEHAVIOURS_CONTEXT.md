@@ -113,28 +113,28 @@ considered against the list of Expectations.
 **Checklist**
 
 - How has the list of misbehaviours varied over time?
-  - **Answer**: 
+  - **Answer**: The list of misbehaviours for nlohmann/json (https://github.com/nlohmann/json/issues)is collected using github and its development is thereby understandable.
 - How confident can we be that this list is comprehensive?
-  - **Answer**: 
+  - **Answer**: Due to the collaborative nature of the open source community, we deem it quite unlikely, but not impossible, that there are any known misbehaviours which are not reported to the repository nlohmann/json.
 - How well do the misbehaviours map to the expectations?
-  - **Answer**: 
+  - **Answer**: # This is hard to answer since the misbehaviours change continuously, and it is not clear what "map" means in this context. Does it mean that the misbehaviours influence the fullfillment of the expectations? -> maybe ask codethink directly
 - Could some participants have incentives to manipulate information?
-  - **Answer**: 
+  - **Answer**:  We can not think of any incentive that any collaborateur could have to manipulate the information.
 - Could there be whole categories of misbehaviours still undiscovered?
-  - **Answer**: 
+  - **Answer**: Due to the wide use and long-standing development of the library it is quite unlikely that any major misbehaviors, in particular regarding the parsing and validating of JSON data in the sense of RFC-8259, is undiscovered. 
 - Can we identify misbehaviours that have been understood but not specified?
   - **Answer**: 
 - Can we identify some new misbehaviours, right now?
-  - **Answer**: 
+  - **Answer**: No, currently no new misbehaviours can be identified
 - Is every misbehaviour represented by at least one fault induction test?
-  - **Answer**: 
+  - **Answer**: Since there are no misbehaviours that concern the use within S-CORE, no.
 - Are fault inductions used to demonstrate that tests which usually pass can
   and do fail appropriately?
-  - **Answer**: 
+  - **Answer**: # Fault induction is an uncommon term in software engineering. I think they refer to fault injection, which means deliberately introducing faults to see how the software reacts. A type of fault injection is fuzz testing, which we currently do.
 - Are all the fault induction results actually collected?
-  - **Answer**: 
+  - **Answer**: The fuzz testing result are stored in TODO
 - Are the results evaluated?
-  - **Answer**: 
+  - **Answer**: # not sure about that
 - Do input analysis findings on verifiable tool or component claims and features
 identify additional misbehaviours or support existing mitigations?
-  - **Answer**: 
+  - **Answer**: Currently, there is no analysis which identifies additional misbehaviours. The only such analysis is indirectly via the analysis of the fuzz testing, which currently does not identify additional misbehaviours.
