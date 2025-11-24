@@ -8,7 +8,7 @@ normative: false
 Although it is practically impossible to specify all of the necessary behaviours
 and required properties for complex software, we must clearly specify the most
 important of these (e.g. where harm could result if given criteria are not met),
-and verify that these are correctly provided by nlohmann/json.
+and verify that these are correctly provided by the nlohmann/json library.
 
 **Guidance**
 
@@ -65,26 +65,26 @@ and that the resulting system and tests are validated by appropriate strategies.
 **Checklist**
 
 - How has the list of Expectations varied over time?
-  - **Answer**: 
+  - **Answer**: The list of expectations is taken from [here](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html), whose development can be retraced using git.
 - How confident can we be that this list is comprehensive?
-  - **Answer**: 
+  - **Answer**: The list of expectations has been collected amongst the stakeholders in S-CORE, so that we are very confident that the list is comprehensive. The expectation to serialize user data into JSON format.
 - Could some participants have incentives to manipulate information?
-  - **Answer**: 
+  - **Answer**: We can not imagine any reason.
 - Could there be whole categories of Expectations still undiscovered?
-  - **Answer**: 
+  - **Answer**: It is unlikely, but the parsing of CBOR could become relevant at some time.
 - Can we identify Expectations that have been understood but not specified?
-  - **Answer**: 
+  - **Answer**: There are currently now Expectations that have been understood but not specified.
 - Can we identify some new Expectations, right now?
-  - **Answer**: 
+  - **Answer**: No, we don't know of any new expectations we could identify right now.
 - How confident can we be that this list covers all critical requirements?
-  - **Answer**: 
+  - **Answer**: We can not think of any more critical requirement of a JSON parser in the sense of RFC8259 than to parse JSON data in the sense of RFC8259.
 - How comprehensive is the list of tests?
-  - **Answer**: 
+  - **Answer**: Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27.
 - Is every Expectation covered by at least one implemented test?
-  - **Answer**: 
+  - **Answer**: Yes, both of the expectations are covered by at least one implemented test.
 - Are there any Expectations where we believe more coverage would help?
-  - **Answer**: 
+  - **Answer**: No.
 - How do dependencies affect Expectations, and are their properties verifiable?
-  - **Answer**: 
+  - **Answer**: The library nlohmann/json does not have external dependencies, so that there are in particular none that affect Expectations.
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
-  - **Answer**: 
+  - **Answer**: Not that we know of.
