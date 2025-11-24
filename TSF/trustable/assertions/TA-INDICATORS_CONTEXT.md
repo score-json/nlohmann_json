@@ -3,6 +3,8 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 Not all deviations from Expected Behaviour can be associated with a specific
 condition. Therefore, we must have a strategy for managing deviations that
 arise from unknown system states, process vulnerabilities or configurations.

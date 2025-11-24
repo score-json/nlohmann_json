@@ -3,15 +3,17 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
-This assertion is satisfied if each iteration of XYZ is *repeatable*, with all
-required inputs controlled, and *reproducible* (covering both XYZ and the
+This assertion is satisfied if each iteration of nlohmann/json is *repeatable*, with all
+required inputs controlled, and *reproducible* (covering both nlohmann/json and the
 construction toolchain/environment, as described in TA-TESTS).
 
 This assertion can be most effectively satisfied in a Continuous Integration
 environment with mirrored projects (see TA-SUPPLY_CHAIN) and build servers
-without internet access. The aim is to show that all build tools, XYZ
+without internet access. The aim is to show that all build tools, nlohmann/json
 components, and dependencies are built from controlled inputs, that rebuilding
 produces the same binary fileset, and that builds can be repeated on any
 suitably configured server, with server differences shown not to affect
@@ -30,7 +32,7 @@ reproducibility.
 
 As a result, we gain increased confidence that the toolchain behaves correctly
 during version upgrades: unintended changes to the project are avoided, intended
-fixes produce the expected effects, and the constructed output of XYZ shows the
+fixes produce the expected effects, and the constructed output of nlohmann/json shows the
 correct behavioural changes, verified and validated with test results according
 to TT-RESULTS analysis.
 
