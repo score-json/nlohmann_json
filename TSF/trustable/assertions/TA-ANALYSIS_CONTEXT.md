@@ -3,10 +3,12 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
 This assertion is satisfied to the extent that test data, and data collected
-from monitoring of deployed versions of XYZ, has been analysed, and the results
+from monitoring of deployed versions of nlohmann/json, has been analysed, and the results
 used to inform the refinement of Expectations and risk analysis.
 
 The extent of the analysis is with sufficient precision to confirm that:

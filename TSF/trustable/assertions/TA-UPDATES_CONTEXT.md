@@ -3,9 +3,11 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
-This assertion requires control over all changes to XYZ, including configurations, components, tools, data, documentation, and dependency versions used to build, verify, and validate it.
+This assertion requires control over all changes to nlohmann/json, including configurations, components, tools, data, documentation, and dependency versions used to build, verify, and validate it.
 
 As part of change control, all automated checks must run and pass (e.g., tests, static analysis, lint checks) before accepting proposed changes.
 These checks must be configured against appropriate claims and coding guidelines.
@@ -41,25 +43,25 @@ Ultimately, the trustable controlled process is the only path to production for 
 **Evidence**
 
 - change management process and configuration artifacts
-  - **Answer**: Provided in JLS-06, JLS-07, JLS-12, JLS-32, JLS-34 and JLS-35. 
+  - **Answer**: Provided in JLS-06, JLS-07, JLS-12, JLS-32, JLS-34, JLS-35 and AOU-27. 
 
 **Confidence scoring**
 
 Confidence scoring for TA-UPDATES is based on confidence that we have
-control over the changes that we make to XYZ, including its configuration and
+control over the changes that we make to nlohmann/json, including its configuration and
 dependencies.
 
 **Checklist**
 
 - Where are the change and configuration management controls specified?
-  - **Answer**: In the contribution guidelines and security policy. 
+  - **Answer**: In the [contribution guidelines](https://github.com/nlohmann/json?tab=contributing-ov-file#readme) and [security policy](https://github.com/nlohmann/json?tab=security-ov-file#readme). 
 - Are these controls enforced for all of components, tools, data, documentation and configurations?
   - **Answer**: Yes. Any proposed change is subject to the same change controls.
 - Are there any ways in which these controls can be subverted, and have we mitigated them?
   - **Answer**: No. The controls are enforced using branch protection rules and are mostly automated.
 - Does change control capture all potential regressions?
-  - **Answer**: Yes. All changes are rigorously tested in a separate branch before being deployed to the master branch.
+  - **Answer**: Yes. All changes are tested in the branch '[develop](https://github.com/nlohmann/json/actions?query=branch%3Adevelop)' before being deployed to the master branch.
 - Is change control timely enough?
-  - **Answer**: The change control is indeed timely enough, mainly due to the fact that the nlohmann/json library is open source and has many contributors.
+  - **Answer**: The change control is indeed timely enough. Any [issues](https://github.com/nlohmann/json/issues) or [discussions](https://github.com/nlohmann/json/discussions) opened are addressed within a reasonable time frame.
 - Are all guidance and checks understandable and consistently followed?
-  - **Answer**: Yes. The contribution guidelines and CI workflows are clear and well-documented, as well as automatically enforced.
+  - **Answer**: Yes. The [contribution guideline](https://github.com/nlohmann/json?tab=contributing-ov-file#readme) is clear and well-documented, and checks are enforced through automatic [CI workflows](https://github.com/nlohmann/json/tree/develop/.github/workflows).

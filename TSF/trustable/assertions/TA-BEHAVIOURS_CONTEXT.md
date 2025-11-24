@@ -3,16 +3,18 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 Although it is practically impossible to specify all of the necessary behaviours
 and required properties for complex software, we must clearly specify the most
 important of these (e.g. where harm could result if given criteria are not met),
-and verify that these are correctly provided by XYZ.
+and verify that these are correctly provided by nlohmann/json.
 
 **Guidance**
 
 This assertion is satisfied to the extent that we have:
 
-- Determined which Behaviours are critical for consumers of XYZ and recorded
+- Determined which Behaviours are critical for consumers of nlohmann/json and recorded
   them as Expectations.
 - Verified these Behaviours are achieved.
 

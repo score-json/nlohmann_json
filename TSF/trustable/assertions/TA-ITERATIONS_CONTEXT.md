@@ -3,6 +3,8 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
 This assertion is best satisfied by checking generated documentation to confirm that:

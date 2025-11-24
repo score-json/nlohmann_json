@@ -3,25 +3,27 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
-Anything that can influence the output of the XYZ project is considered an input.
+Anything that can influence the output of the nlohmann/json project is considered an input.
 This includes:
 
 - Software components used to implement specified features and meet defined Expectations
 - Software tools, and their outputs, used for design, construction and verification
 - Infrastructure that supports development and release processes
 
-All inputs (components, tools, data) and their dependencies (recursively) used to build and verify XYZ releases must be identified and assessed, since they are untrusted by default.
+All inputs (components, tools, data) and their dependencies (recursively) used to build and verify nlohmann/json releases must be identified and assessed, since they are untrusted by default.
 
 Each input should be evaluated on verifiable merits, regardless of any claims it makes (including adherence to standards or guidance).
 Evaluation must include the project's defined Expectations to ensure that inputs meet requirements, and that risks are recorded and addressed appropriately.
 
-For components, we need to consider how their misbehaviour might impact achieving project XYZ's Expectations.
+For components, we need to consider how their misbehaviour might impact achieving project nlohmann/json's Expectations.
 Sources (e.g. bug databases, advisories) for known risks should be identified, their update frequency recorded, and tests defined for detecting them.
 These form the inputs to TA-FIXES.
 
-For the tools used to construct and verify XYZ, we need to consider how their misbehaviour could:
+For the tools used to construct and verify nlohmann/json, we need to consider how their misbehaviour could:
 
 - Introduce unintended changes
 - Fail to detect Misbehaviours during testing
@@ -45,7 +47,7 @@ As a result, for example, any binary inputs without reproducible build steps or 
 
 **Evidence**
 
-- List of components used to build XYZ, including:
+- List of components used to build nlohmann/json, including:
   - Whether content is provided as source or binary
     - **Answer**: 
 - Record of component assessments:
@@ -53,20 +55,20 @@ As a result, for example, any binary inputs without reproducible build steps or 
     - **Answer**: 
   - Date of assessments and identity of assessors
     - **Answer**: 
-  - Role of component in XYZ
+  - Role of component in nlohmann/json
     - **Answer**: 
   - Sources of bug and risk data
     - **Answer**: 
   - Potential misbehaviours and risks identified and assessed
     - **Answer**: 
-- List of tools used to build and verify XYZ
+- List of tools used to build and verify nlohmann/json
   - **Answer**: 
 - Record of tool assessments:
   - Originating project and tool version
     - **Answer**: 
   - Date of assessments and identity of assessors
     - **Answer**: 
-  - Role of the tool in XYZ releases
+  - Role of the tool in nlohmann/json releases
     - **Answer**: 
   - Potential misbehaviours and impacts
     - **Answer**: 
@@ -79,7 +81,7 @@ As a result, for example, any binary inputs without reproducible build steps or 
 
 Confidence scoring for TA-INPUTS is based on the set of components and tools
 identified, how many of (and how often) these have been assessed for their risk
-and impact for XYZ, and the sources of risk and issue data identified.
+and impact for nlohmann/json, and the sources of risk and issue data identified.
 
 **Checklist**
 

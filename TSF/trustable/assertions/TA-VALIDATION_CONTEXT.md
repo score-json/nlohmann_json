@@ -3,10 +3,12 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
 This assertion is satisfied when tests demonstrate that the features specified to meet project Expectations (TT-EXPECTATIONS) are present and function as intended.
-These tests run repeatedly in a controlled environment (TA-TESTs) on a defined schedule (e.g., daily, per change, or per candidate release of XYZ).
+These tests run repeatedly in a controlled environment (TA-TESTs) on a defined schedule (e.g., daily, per change, or per candidate release of nlohmann/json).
 
 Confidence grows when tests not only verify Expectations but also validate (continuously) that they meet stakeholder and user needs.
 Robust validation depends on three aspects:

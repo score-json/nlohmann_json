@@ -3,9 +3,11 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
-To satisfy this assertion, all manual processes used in the verification of XYZ must be documented, including the methodologies applied, the results for specific aspects and iterations, and evidence that these processes were reviewed against documented criteria.
+To satisfy this assertion, all manual processes used in the verification of nlohmann/json must be documented, including the methodologies applied, the results for specific aspects and iterations, and evidence that these processes were reviewed against documented criteria.
 
 Most analysis (e.g., data analysis for TA-ANALYSIS) should be automated to enable continuous feedback.
 However, the quality of any remaining manual processes (whether from first parties or external third parties) must be considered and how they are documented and reviewed.

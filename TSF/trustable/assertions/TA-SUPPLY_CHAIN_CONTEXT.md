@@ -3,12 +3,14 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 **Guidance**
 
 This assertion is satisfied to the extent that we have traced and captured
-source code for XYZ and all of its dependencies (including transitive
+source code for nlohmann/json and all of its dependencies (including transitive
 dependencies, all the way down), and for all of the tools used to construct
-XYZ from source, and have mirrored versions of these inputs under our control.
+nlohmann/json from source, and have mirrored versions of these inputs under our control.
 Any associated data and documentation dependencies must also be considered.
 
 'Mirrored' in this context means that we have a version of the upstream project
@@ -28,12 +30,12 @@ binaries present within the repositories of the components and tools used.
 
 **Evidence**
 
-- list of all XYZ components including
+- list of all nlohmann/json components including
   - URL of mirrored projects in controlled environment
     - **Answer**: 
   - URL of upstream projects
     - **Answer**: 
-- successful build of XYZ from source
+- successful build of nlohmann/json from source
   - without access to external source projects
     - **Answer**: 
   - without access to cached data

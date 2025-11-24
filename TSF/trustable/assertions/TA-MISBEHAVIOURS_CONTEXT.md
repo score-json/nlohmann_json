@@ -3,6 +3,8 @@ level: 1.1
 normative: false
 ---
 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
 The goal of TA-MISBEHAVIOURS is to force engineers to think critically about their work.
 This means understanding and mitigating as many of the situations that cause the
 software to deviate from Expected Behaviours as possible. This is not limited to
@@ -12,7 +14,7 @@ the contents of the final binary.
 
 This assertion is satisfied to the extent that we can:
 
-- Show we have identified all of the ways in which XYZ could deviate from its
+- Show we have identified all of the ways in which nlohmann/json could deviate from its
   Expected Behaviours.
 - Demonstrate that mitigations have been specified, verified and validated for
   all Misbehaviours.
@@ -57,11 +59,11 @@ Mitigations could be verified by:
 - Stress testing of assumptions of use. That is, confirming assumptions of use
   are actually consistent with the system and its Expected Behaviours by
   intentionally misinterpreting or liberally interpreting them in a test
-  environment. For example, we could consider testing XYZ on different pieces of
+  environment. For example, we could consider testing nlohmann/json on different pieces of
   hardware that satisfy its assumptions of use.
 
 Remember that a Misbehaviour is _anything_ that could lead to a deviation from
-Expected Behaviour. The specific technologies in and applications of XYZ should
+Expected Behaviour. The specific technologies in and applications of nlohmann/json should
 always be considered in addition to the guidance above.
 
 At the core, a faulty design is inherently difficult to mitigate. The first
