@@ -83,7 +83,7 @@ and that the resulting system and tests are validated by appropriate strategies.
 - Is every Expectation covered by at least one implemented test?
   - **Answer**: Yes, both of the expectations are covered by at least one implemented test.
 - Are there any Expectations where we believe more coverage would help?
-  - **Answer**: No.
+  - **Answer**: No, the coverage is already on a high level and no further gains are expected by further increasing the coverage.
 - How do dependencies affect Expectations, and are their properties verifiable?
   - **Answer**: The library nlohmann/json does not have external dependencies, so that there are in particular none that affect Expectations.
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
