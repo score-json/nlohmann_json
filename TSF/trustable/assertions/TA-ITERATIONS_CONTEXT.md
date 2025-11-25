@@ -63,7 +63,7 @@ Confidence scoring for TA-ITERATIONS based on
 
 - How much of the software is provided as binary only, expressed as a
   fraction of the BoM list?
-  - **Answer**: None.
+  - **Answer**: 0% is provided as binary only. The entire library consists of source code in the form of a single C++ header file.
 - How much is binary, expressed as a fraction of the total storage footprint?
   - **Answer**: None.
 - For binaries, what claims are being made and how confident are we in the
