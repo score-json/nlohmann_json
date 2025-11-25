@@ -49,10 +49,10 @@ As a result, for example, any binary inputs without reproducible build steps or 
 
 - List of components used to build nlohmann/json, including:
   - Whether content is provided as source or binary
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library consists of only source code in the form of a single header file, and has no binary artifacts (see JLS-47).
 - Record of component assessments:
   - Originating project and version
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34)
   - Date of assessments and identity of assessors
     - **Answer**: 
   - Role of component in nlohmann/json
