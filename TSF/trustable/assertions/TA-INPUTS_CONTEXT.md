@@ -62,7 +62,7 @@ As a result, for example, any binary inputs without reproducible build steps or 
   - Potential misbehaviours and risks identified and assessed
     - **Answer**: The nlohmann/json library has no external components (see JLS-34)
 - List of tools used to build and verify nlohmann/json
-  - **Answer**: Provided in JLS-48.
+  - **Answer**: Provided in JLS-48 and JLS-49.
 - Record of tool assessments:
   - Originating project and tool version
     - **Answer**: 
