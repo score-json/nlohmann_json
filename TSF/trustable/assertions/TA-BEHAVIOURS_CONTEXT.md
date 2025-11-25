@@ -48,7 +48,7 @@ sufficient.
 **Evidence**
 
 - List of Expectations
-  - **Answer**: 
+  - **Answer**: The expectations are provided via JLEX-01 and JLEX-02.
 - Argument of sufficiency for break-down of expected behaviour for all 
   Expectations
   - **Answer**: 
