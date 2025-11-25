@@ -65,10 +65,10 @@ Confidence scoring for TA-ITERATIONS based on
   fraction of the BoM list?
   - **Answer**: 0% is provided as binary only. The entire library consists of source code in the form of a single C++ header file.
 - How much is binary, expressed as a fraction of the total storage footprint?
-  - **Answer**: None.
+  - **Answer**: 0% is provided as binary. The entire library consists of source code in the form of a single C++ header file.
 - For binaries, what claims are being made and how confident are we in the
   people/organisations making the claims?
-  - **Answer**: There are no binaries.
+  - **Answer**: 0% is provided as binary. The entire library consists of source code in the form of a single C++ header file.
 - For third-party source code, what claims are we making, and how confident
   are we about these claims?
   - **Answer**: The nlohmann/json library has no external dependencies/accesses to third party source code, as stated in JLS-34.
