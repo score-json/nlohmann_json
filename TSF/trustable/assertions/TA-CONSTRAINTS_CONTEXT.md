@@ -72,10 +72,10 @@ contradictions and obvious pitfalls within the defined Statements.
 
 - Are the constraints grounded in realistic expectations, backed by real-world
   examples?
-  - **Answer**: 
+  - **Answer**: The constraints originate from S-CORE, the nlohmann/json library and the RFC-8259 standard. As these are all widely used, the constraints are grounded in realistic expectations.
 - Do they effectively guide downstream consumers in expanding upon existing
   Statements?
-  - **Answer**: 
+  - **Answer**: The existing set of AOUs provides effective guidance for consumers.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
   - **Answer**: 
@@ -89,4 +89,4 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: 
 - Do external users actively keep up with updates, and are they properly
   notified of any changes?
-  - **Answer**: 
+  - **Answer**: External users of the library are not necessarily automatically notified of an update, and are neither assumed nor required to keep up to date. If the external user forks the github repository, however, then github shows automatically whenever the upstream changes.
