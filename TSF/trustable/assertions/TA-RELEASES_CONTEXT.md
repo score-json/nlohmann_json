@@ -44,7 +44,7 @@ to TT-RESULTS analysis.
   - explanation and justification
     - **Answer**: There are no non-reproducible elements within this project (see JLS-46).
   - details of what is not reproducible
-    - **Answer**: There are no non-reproducible elements within this project.
+    - **Answer**: There are no non-reproducible elements within this project (see JLS-46).
 - evidence of configuration management for build instructions and infrastructure
   - **Answer**: Provided by JLS-10 and JLS-19.
 - evidence of repeatable builds
