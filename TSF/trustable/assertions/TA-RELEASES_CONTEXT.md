@@ -74,7 +74,7 @@ R / (R + N + B + M / (M + X))
 - Are our builds repeatable on a different server, or in a different context?
   - **Answer**: Since there is no "build" of the header-only library, yes.
 - How sure are we that our builds don't access the internet?
-  - **Answer**: # Currently thinking about a good answer to this question
+  - **Answer**: We are confident that our builds don't access the internet, since there is no "build" of the header-only library.
 - How many of our components are non-reproducible?
   - **Answer**:  All of our components are reproducable, since we only use a single component, the nlohmann/json library.
 - How confident are we that our reproducibility check is correct?
