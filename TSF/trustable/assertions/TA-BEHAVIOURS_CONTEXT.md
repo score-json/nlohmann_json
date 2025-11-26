@@ -67,13 +67,13 @@ and that the resulting system and tests are validated by appropriate strategies.
 - How has the list of Expectations varied over time?
   - **Answer**: The list of expectations is taken from [here](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html), whose development can be retraced using git.
 - How confident can we be that this list is comprehensive?
-  - **Answer**: The list of expectations has been collected amongst the stakeholders in S-CORE, so that we are very confident that the list is comprehensive. The expectation to serialize user data into JSON format.
+  - **Answer**: The list of expectations has been collected amongst the stakeholders in S-CORE, so that we are very confident that the list is comprehensive. The expectation is to serialize user data into JSON format.
 - Could some participants have incentives to manipulate information?
   - **Answer**: We can not imagine any reason.
 - Could there be whole categories of Expectations still undiscovered?
-  - **Answer**: It is unlikely, but the parsing of CBOR could become relevant at some time.
+  - **Answer**: It is currently unlikely, but the parsing of CBOR could become relevant at some time.
 - Can we identify Expectations that have been understood but not specified?
-  - **Answer**: There are currently now Expectations that have been understood but not specified.
+  - **Answer**: There are currently no Expectations that have been understood but not specified.
 - Can we identify some new Expectations, right now?
   - **Answer**: No, we don't know of any new expectations we could identify right now.
 - How confident can we be that this list covers all critical requirements?
