@@ -43,7 +43,7 @@ For releases, additional documentation should summarise all changes across the i
   - test results summary
     - **Answer**: Provided by JLS-10.
   - attestations
-    - **Answer**: There are currently no attestations provided by nlohmann/json.
+    - **Answer**: Provided by JLS-52.
 
 - list of components where source code is not available
   - risk analysis
