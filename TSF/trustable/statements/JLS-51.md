@@ -9,7 +9,7 @@ references:
           url: "https://github.com/eclipse-score/inc_nlohmann_json"
           description: "Start-page of the mirror of nlohmann/json within Eclipse S-CORE"
         - type: verbose_file
-          path: "./single_include/nlohmann/json.hpp"
+          path: ./single_include/nlohmann/json.hpp
           description: "Single include of the nlohmann/json library"
 ---
 
