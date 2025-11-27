@@ -76,15 +76,15 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: The existing set of AOUs provides effective guidance for consumers.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
-  - **Answer**: 
+  - **Answer**: # currently unclear how to interpret this question
 - Are any Statements explicitly designated as not reusable or adaptable?
-  - **Answer**: 
+  - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
   these constraints in practice?
   - **Answer**: 
 - Have there been any documented misunderstandings from users, and are these
   visibly resolved?
-  - **Answer**: 
+  - **Answer**: Yes, it is documented that the [brace initialisation](https://json.nlohmann.me/home/faq/) (cf. AOU-06) regularly leads to confusion, cf. [here](https://github.com/nlohmann/json/issues/4898).
 - Do external users actively keep up with updates, and are they properly
   notified of any changes?
   - **Answer**: External users of the library are not necessarily automatically notified of an update, and are neither assumed nor required to keep up to date. If the external user forks the github repository, however, then github shows automatically whenever the upstream changes.
