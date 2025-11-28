@@ -1,8 +1,7 @@
 ---
-level: '1.1'
+level: 1.1
 normative: true
+
 ---
 
-Both the test build and the test build environment of the nlohmann/json library are fully reproducible.
-
-NOTE: Currently not sure how to prove that reproducibility.
+Tests in nlohmann/json are configured to execute using specific containers and container versions to ensure consistency across runs.
