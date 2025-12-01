@@ -13,4 +13,4 @@ evidence:
                     - "https://github.com/nlohmann/json/blob/develop/.github/workflows/ubuntu.yml"
 ---
 
-Any Github Actions used in the testing process are pinned to specific SHA commits to ensure exact action behavior across runs.
+Any Github Actions used in the testing process are pinned to specific commit SHAs to ensure consistent action behavior across runs.
