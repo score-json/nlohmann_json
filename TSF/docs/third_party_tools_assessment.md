@@ -161,60 +161,83 @@ This file provides an assessment of all third-party tools used in the developmen
   - Functional tests and fuzzing remain the primary gate for correctness.
     
 ### Hedley
-- **Role**: Compiler-agnostic feature detection macros (included as source)
-- **Potential Misbehaviours**: Incorrect macro definitions could cause compilation failures or runtime issues
-- **Severity**: High - affects compilation on all platforms
-- **Detectability**: High - compilation failures, extensive CI testing
-- **Mitigation**: Included as source (auditable), tested in CI using various compilers
-
+- **Role**: Hedley is a third-party header that provides portability and feature-detection macros for different compilers and platforms. nlohmann/json ships a bundled copy in `include/nlohmann/thirdparty/hedley/hedley.hpp`, which is included from `json.hpp` and used to define macros for attributes, warning suppression, and compiler feature checks.  
+- **Potential Misbehaviours**: Wrong or incomplete Hedley macros can:
+  - assume compiler features or attributes that are not actually supported,
+  - trigger compilation errors or excessive warnings on some compilers,
+  - silently disable useful attributes or diagnostics, which may lead to performance issues or missed warnings.
+- **Severity**: High - Hedley is used throughout the headers and affects how the library is compiled on all platforms. Incorrect macros can break builds or cause subtle differences in behaviour across compilers.
+- **Detectability**: High - most problems show up as build failures or unusual warnings on specific compilers or platforms, and are likely to be caught by the project’s CI matrix.
+- **Mitigation**:
+  - A specific version of Hedley is used in the nlohman/json repository and is fully under version control and updates are done via pull requests and must pass all CI checks before being included in a release 
+  - The library is built and tested with multiple compilers (Clang, GCC, MSVC) and on multiple platforms in CI.
+ 
 ### lcov
-- **Role**: Coverage report generation from gcov data
-- **Potential Misbehaviours**: Could generate incorrect HTML reports, misrepresent coverage
-- **Severity**: Low - reporting tool only
-- **Detectability**: High - validated against Coveralls
-- **Mitigation**: Cross-validated with Coveralls, manual inspection of coverage data
+- **Role**: lcov is used in the nlohmann/json project as part of the coverage setup introduced together with the CMake-based build system (see ‘Added CMake and lcov’ in the project’s changelog and PR #6). It processes gcov output from the doctest-based unit tests to generate local HTML reports, which can be cross-checked against the coverage information published via Coveralls.
+- **Potential Misbehaviours**: lcov can misinterpret or partially ignore `gcov` data, so that some lines are shown as covered or uncovered incorrectly and generate incomplete or inconsistent HTML reports.
+- **Severity**: Low - lcov only reads coverage data and creates reports; it does not affect any code or the functionality of the lirary. 
+- **Detectability**: High - Inconsistencies can be detected by comparing lcov’s HTML output with the coverage data uploaded to Coveralls.
+- **Mitigation**: Mitigation through cross-validation with Coveralls and manual inspection of coverage data.
 
 ### libFuzzer
-- **Role**: LLVM's fuzzing tool for OSS-Fuzz integration
-- **Potential Misbehaviours**: Could miss edge cases, provide incomplete coverage
-- **Severity**: Medium - missed bugs could affect users
-- **Detectability**: Low - only detectable if bugs manifest
-- **Mitigation**: Complemented by AFL, OSS-Fuzz continuous fuzzing (24/7), extensive unit tests
+- **Role**: libFuzzer is LLVM’s fuzzing engine that runs inside the test binary and uses code-coverage feedback to generate new inputs. In nlohmann/json it is used as the fuzzing backend for the fuzz harnesses under `tests/src/` (e.g. `fuzzer-parse_json.cpp`), each implementing `LLVMFuzzerTestOneInput` and calling APIs such as `json::parse` and the `from_*` functions for CBOR, MessagePack, UBJSON, and BJData. The same libFuzzer-based targets are also built and run by Google OSS-Fuzz, which executes them continuously with sanitizers to find crashes and undefined behaviour.
+- **Potential Misbehaviours**: libFuzzer can only explore code that is reachable through the fuzz harness and within the time and resources it is given, so it can miss important edge cases or provide misleading coverage.
+- **Severity**: Medium - Bugs that are not found by libFuzzer (false negatives) can still reach users if they are not caught by other fuzzers, tests, or reviews.
+- **Detectability**: Low - Missed edge cases are they are typically discovered later through other fuzzers, unit and regression tests, or bug reports from users.
+- **Mitigation**:
+  - libFuzzer is used together with other fuzzing approaches (AFL, OSS-Fuzz,..).
+  - Crashes and sanitizer findings from fuzzing are treated as defects and, where applicable, fixed and accompanied by additional regression tests.
+  - High unit-test coverage.
 
 ### Material for MkDocs
-- **Role**: Documentation site styling and theming
+- **Role**: The third-party theme used by the mkdocs-based documentation of nlohmann/json. The documentation sources live under `docs/mkdocs` and are built with MkDocs to produce the public site at <https://json.nlohmann.me>. The theme controls the visual appearance, navigation, and layout of this site.
 - **Potential Misbehaviours**: Visual issues, broken layouts, accessibility problems
-- **Severity**: Low - documentation presentation only
-- **Detectability**: High - manual review of documentation site
-- **Mitigation**: Manual review of documentation site, multiple browser testing
+- **Severity**: Low - Problems in the theme can make the documentation harder to read or navigate, but they do not change the library sources.
+- **Detectability**: High - Visual or layout issues are usually easy to spot when viewing the documentation site during local builds or on the deployed site, and users can report any problems they encounter.
+- **Mitigation**:
+- - The documentation is built and viewed locally during development (following the documented Contributing Guidlines).
+  - The site can be checked in multiple browsers and on different devices to catch theme-related layout or responsiveness problems.
+  - The mkdocs and Material for MkDocs versions used in `docs/mkdocs` are pinned and updated via pull requests, which are reviewed and must pass CI before being merged.
 
 ### MkDocs
-- **Role**: Static site generator for documentation
-- **Potential Misbehaviours**: Could fail to generate documentation, broken links, formatting issues
-- **Severity**: Low - documentation only
-- **Detectability**: High - documentation site is regularly reviewed
-- **Mitigation**: Continuous documentation deployment, manual review, broken link checking
+- **Role**: MkDocs is the static site generator used to build the nlohmann/json documentation at <https://json.nlohmann.me>, using sources in `docs/mkdocs/docs` and the configuration in `docs/mkdocs/mkdocs.yml`. Maintainers build and preview the site locally with `make install_venv -C docs/mkdocs` and `make serve -C docs/mkdocs`, and the same MkDocs setup is also run in CI to build the documentation.
+- **Potential Misbehaviours**: MkDocs could fail to build the documentation (for example due to configuration or plugin issues), generate pages with broken links or missing sections, or render Markdown in a way that causes formatting or navigation problems.
+- **Severity**: Low - Even if the documentation is incomplete or incorrectly rendered, this only affects the documentation site. MkDocs does not modify the library sources.
+- **Detectability**: High - Build failures are immediately visible when running the MkDocs commands locally or in CI, and visual or navigation issues can be spotted when reviewing the rendered site.
+- **Mitigation**:
+  - The documentation is built and viewed locally during development, so maintainers can manually review the generated pages before changes are published.
+  - The MkDocs configuration and its dependencies (including the theme and plugins) are kept under version control in `docs/mkdocs`, and updates are applied via pull requests.
+  - Broken links or formatting problems reported by users can be fixed by updating the Markdown sources or the MkDocs configuration, with all changes tracked and reviewed like normal code changes.
 
 ### OSS-Fuzz
-- **Role**: Google's continuous fuzzing service
-- **Potential Misbehaviours**: Service downtime could miss new bugs, false positives could waste time
-- **Severity**: Medium - continuous monitoring is valuable
-- **Detectability**: Medium - supplemented by local fuzzing
-- **Mitigation**: Local fuzzing with AFL and libFuzzer, extensive unit tests, multiple testing approaches
+- **Role**: OSS-Fuzz is Google’s hosted service for continuous fuzzing of open-source projects. nlohmann/json is enrolled there as the `json` project, where OSS-Fuzz builds the repository together with its libFuzzer-based fuzz harnesses under `tests/src/` (e.g. `fuzzer-parse_json.cpp`, `fuzzer-parse_cbor.cpp`,..`) and runs the resulting fuzzers continuously with various sanitizer configurations against all supported parsers. The integration is documented in the project’s documentation/README, and several GitHub issues (e.g. #389, #409, #452, #577) show concrete bugs that were reported by OSS-Fuzz and then fixed in the library.
+- **Potential Misbehaviours**: OSS-Fuzz can experience service outages or build/configuration issues, meaning that fuzzing temporarily stops or some fuzz targets are not executed as expected. It can also report false positives, which may consume maintainer time, while still missing other edge cases that do not get reached by the current fuzz setup.
+- **Severity**: Medium - Continuous fuzzing from OSS-Fuzz is an important safety net for catching parser bugs and undefined behaviour over time. If it stops working or misses certain paths, bugs may remain undetected longer, but OSS-Fuzz itself never modifies the source code or the shipped `json.hpp`.
+- **Detectability**: Medium - problems with OSS-Fuzz (such as build failures or missing runs) are visible on the OSS-Fuzz project dashboards and through email notifications, but the absence of new reports does not guarantee the absence of bugs.
+- **Mitigation**:
+  - The same fuzz harnesses used by OSS-Fuzz can also be built and run locally (with libFuzzer or AFL).
+  - Fuzzing is complemented by extensive unit tests with high coverage, sanitizer builds, and manual review of critical parsing and binary-format code.
+  - Crashes and sanitizer findings reported by OSS-Fuzz are treated as defects and, where applicable, fixed and covered by regression tests.
+
 
 ### Probot
-- **Role**: GitHub bot for issue/PR automation
-- **Potential Misbehaviours**: Could incorrectly close issues, miss toxic comments, false positives
-- **Severity**: Low - process automation only, doesn't affect code
-- **Detectability**: High - visible in GitHub activity
-- **Mitigation**: Manual moderation, community feedback, configurable automation rules
+- **Role**: Probot is a framework for GitHub Apps that automate repository workflows. In the nlohmann/json repo it is configured via `.github/config.yml` to use apps such as Sentiment Bot and Request Info. These bots post automated comments on issues and pull requests, for example reminding users of the Code of Conduct or asking for more information. Their behaviour can be seen in GitHub issues where `@sentiment-bot` has commented.
+- **Potential Misbehaviours**: Probot-based apps can misclassify comments as toxic and respond inappropriately, repeatedly ask for more information on already well-described issues, or automatically label and close issues that are in fact valid. Such behaviour can confuse contributors or temporarily hide relevant discussions, but it only affects issue and PR handling on GitHub.
+- **Severity**: Low - Probot automation influences how issues and pull requests are managed, not how the library is built or executed.
+- **Detectability**: High - All Probot actions appear as comments, labels, or status changes in the GitHub UI, so misbehaviour is visible to maintainers and contributors.
+- **Mitigation**:
+- - The Probot configuration in `.github/config.yml` is under control and can be adjusted or reverted via pull requests if a bot behaves undesirably.
+  - Maintainers monitor issue and PR activity and can reopen, relabel, or manually respond to threads that were mishandled by automation.
+  - If a Probot app causes persistent problems, it can be disabled or its scope reduced without impacting the library code or release process.
 
 ### Valgrind
-- **Role**: Memory error detection (leaks, invalid access)
-- **Potential Misbehaviours**: Could miss memory errors (false negatives) or report false positives
-- **Severity**: High - memory errors are critical
-- **Detectability**: High - cross-validated with sanitizers
-- **Mitigation**: Multiple memory checking tools (ASAN), extensive test coverage, manual memory audits
+- **Role**: Valgrind is a runtime analysis tool used in nlohmann/json to run the test binaries under a memory checker in order to detect leaks and invalid memory accesses. According to the quality assurance documentation and the CMake setup, the test suite can be executed under Valgrind via the `JSON_Valgrind` CMake option, which configures CTest to run the tests with Valgrind and to treat reported memory errors as test failures (using options such as `--leak-check=full` and a non-zero `--error-exitcode`).
+- **Potential Misbehaviours**: Valgrind can miss some memory errors or report false positives. It also slows down execution significantly, so runs may use smaller inputs or be executed less frequently.
+- **Severity**: High - Memory errors, invalid accesses, or leaks are critical, and if Valgrind fails to reveal them and they are not caught by other tools, they can affect applications using nlohmann/json.
+- **Detectability**: High - Valgrind’s limitations are partly mitigated because the same test suite is also run with compiler sanitizers (e.g. AddressSanitizer).
+- **Mitigation**:
+  - Valgrind is used alongside compiler sanitizers, fuzzing (including OSS-Fuzz), and a high-coverage unit test suite.
+  - Memory related findings from Valgrind or sanitizers are treated as defects and, where appropriate, fixed and covered by regression tests.
 
 ## Assessment Methodology
 
