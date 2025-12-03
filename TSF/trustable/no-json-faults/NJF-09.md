@@ -8,19 +8,19 @@ references:
         - type: function_reference
           name: "parser::accept"
           path: "include/nlohmann/detail/input/parser.hpp"
-          description: "function, which implements the service to check for well-formed json"
+          description: "Function that implements the service to check for well-formed json."
         - type: function_reference
           name: "parser::sax_parse"
           path: "include/nlohmann/detail/input/parser.hpp"
-          description: "function, which is called by parser::accept"
+          description: "Function that is called by parser::accept."
         - type: function_reference
           name: "parser::sax_parse_internal"
           path: "include/nlohmann/detail/input/parser.hpp"
-          decscription: "function, which is called by parser::sax_parse"
+          decscription: "Function that is called by parser::sax_parse."
         - type: function_reference
           name: "lexer::scan"
           path: "include/nlohmann/detail/input/lexer.hpp"
-          description: "function, which is called by parser::sax_parse_internal to read input data"
+          description: "Function that is called by parser::sax_parse_internal to read input data."
         - type: JSON_testsuite
           name: "json.org examples;1.json"
           path: "tests/src/unit-testsuites.cpp"
