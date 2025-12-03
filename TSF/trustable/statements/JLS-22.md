@@ -4,7 +4,7 @@ normative: true
 references:
   - type: verbose_file
     path: "./.github/workflows/parent-workflow.yml"
-    description: "Parent GitHub workflow that is scheduled to run daily and triggers the ubuntu workflow."
+    description: "Parent GitHub workflow that is scheduled to run daily and triggers the Ubuntu workflow."
   - type: verbose_file
     path: "./.github/workflows/ubuntu.yml"
     description: "Ubuntu CI workflow that executes the nlohmann/json unit and integration tests in a controlled CI environment."

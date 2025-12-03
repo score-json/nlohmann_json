@@ -4,10 +4,10 @@ normative: true
 references:
         - type: project_website
           url: "https://github.com/nlohmann/json/releases/tag/v3.12.0"
-          description: "release notes for v3.12.0, listing bugs, CVEs and warnings which were either fixed or mitigated since last release"
+          description: "Release notes for v3.12.0, listing bugs, CVEs and warnings which were either fixed or mitigated since last release."
         - type: project_website
           url: "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
-          description: "OpenSSF Scorecard Report for nlohmann/json, where scores for 'Vulnerabilities', 'Pinned-Dependencies' and 'Dangerous-Workflow' support this statement."
+          description: "OpenSSF Scorecard report for the nlohmann/json library, where the scores for 'Vulnerabilities', 'Pinned-Dependencies' and 'Dangerous-Workflow' support this statement."
 evidence:
         type: https_response_time
         configuration:
