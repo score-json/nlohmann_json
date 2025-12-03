@@ -290,7 +290,7 @@ The nlohmann/json project employs a multi validation strategy with multiple redu
 
 ### Source and build configuration
 
-- [`cmake/test.cmake` – CTest and `JSON_Valgrind` configuration](https://github.com/nlohmann/json/blob/master/cmake/test.cmake)
+- [`cmake/test.cmake` - CTest and `JSON_Valgrind` configuration](https://github.com/nlohmann/json/blob/master/cmake/test.cmake)
 - [`CMakeLists.txt` (root) – CMake integration and test setup](https://github.com/nlohmann/json/blob/master/CMakeLists.txt)
 - [Ubuntu CI workflow `.github/workflows/ubuntu.yml` (Coveralls upload)](https://github.com/nlohmann/json/blob/master/.github/workflows/ubuntu.yml)
 - [Docs build configuration `docs/mkdocs/mkdocs.yml`](https://github.com/nlohmann/json/blob/master/docs/mkdocs/mkdocs.yml)
