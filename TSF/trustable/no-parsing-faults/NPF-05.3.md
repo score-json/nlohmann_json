@@ -22,7 +22,7 @@ references:
             - "/nst_json_testsuite2/test_parsing/y_array_with_leading_space.json"
             - "/nst_json_testsuite2/test_parsing/y_array_with_several_null.json"
             - "/nst_json_testsuite2/test_parsing/y_array_with_trailing_space.json"
-          description: "Tests whether several non-empty arrays are parsed without exception"
+          description: "Tests whether several non-empty arrays are parsed without exception."
 evidence:
   type: check_test_results
   configuration:
