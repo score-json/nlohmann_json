@@ -4,7 +4,7 @@ normative: true
 references:
         - type: project_website
           url: "https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS"
-          description: "CODEOWNERS file specifying that changes to any file requests @nlohmann for code review in case of a pull request"
+          description: "CODEOWNERS file specifying that changes to any file request @nlohmann for code review in case of a pull request."
 score:
     Erikhu1: 1.0
 ---

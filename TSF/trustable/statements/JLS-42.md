@@ -4,13 +4,13 @@ normative: true
 references:
   - type: project_website
     url: "https://github.com/nlohmann/json/blob/develop/.github/CONTRIBUTING.md#describe-your-changes"
-    description: "Contribution guidelines requiring manual pull requests to describe the rationale behind non-trivial changes"
+    description: "Contribution guidelines requiring manual pull requests to describe the rationale behind non-trivial changes."
   - type: project_website
     url: "https://github.com/nlohmann/json/blob/develop/.github/CONTRIBUTING.md#reference-an-existing-issue"
-    description: "Contribution guidelines requiring manual pull requests to link to an existing issue"
+    description: "Contribution guidelines requiring manual pull requests to link to an existing issue."
   - type: project_website
     url: "https://github.com/nlohmann/json/pulls"
-    description: "GitHub pull requests showing review discussions, approvals, and merge/close status"
+    description: "GitHub pull requests showing review discussions, approvals, and merge/close statuses."
 evidence:
   type: https_response_time
   configuration:
