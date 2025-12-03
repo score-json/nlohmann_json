@@ -746,7 +746,7 @@ TEST_CASE("regression tests 1")
         CHECK_THROWS_WITH_AS(ss >> j, "[json.exception.parse_error.101] parse error at line 1, column 1: attempting to parse an empty input; check that your input string or stream contains the expected JSON", json::parse_error&);
     }
 
-    SECTION("issue #367 - Behavior of operator>> should more closely resemble that of built-in overloads")
+    SECTION("issue #367 - behavior of operator>> should more closely resemble that of built-in overloads")
     {
         SECTION("(empty)")
         {
@@ -1308,7 +1308,7 @@ TEST_CASE("regression tests 1")
     }
 #endif
 
-    SECTION("issue #367 - behavior of operator>> should more closely resemble that of built-in overloads.")
+    SECTION("issue #367 - Behavior of operator>> should more closely resemble that of built-in overloads.")
     {
         SECTION("example 1")
         {
