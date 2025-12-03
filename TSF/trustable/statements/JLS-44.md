@@ -4,10 +4,10 @@ normative: true
 references: 
   - type: project_website
     url: "https://github.com/nlohmann/json/blob/develop/.github/ISSUE_TEMPLATE/bug.yaml"
-    description: "Bug report issue template for the nlohmann/json library"
+    description: "Bug report issue template for the nlohmann/json library."
   - type: project_website
     url: "https://github.com/nlohmann/json/blob/develop/.github/CONTRIBUTING.md#reporting-issues"
-    description: "Contribution guidelines describing how to report bugs and issues for the nlohmann/json library"
+    description: "Contribution guidelines describing how to report bugs and issues for the nlohmann/json library."
 evidence:
   type: https_response_time
   configuration:
