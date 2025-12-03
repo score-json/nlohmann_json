@@ -8,17 +8,15 @@ references:
         - type: web_content
           url: "https://developercertificate.org/"
           description: "The Developer Certificate of Origin in its original formulation."
-        - type: web_content
+        - type: project_website
           url: "https://github.com/nlohmann/json/discussions/4578"
           description: "Announcement by Niels Lohmann that as of January 1, 2025, the project will require DCO (https://developercertificate.org) for all merge requests."
 evidence:
         type: https_response_time
         configuration:
-                target_seconds: 2
-                urls:
-                    - "https://www.bestpractices.dev/en/projects/289?criteria_level=1#section_project_oversight"
-                    - "https://developercertificate.org/"
-                    - "https://github.com/nlohmann/json/discussions/4578"
+          target_seconds: 2
+          urls:
+          - "https://github.com/nlohmann/json/discussions/4578"
 ---
 
 Releases of the nlohmann/json library contain commit sign-offs.
