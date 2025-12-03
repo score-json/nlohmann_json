@@ -14,7 +14,7 @@ references:
         - type: function_reference
           name: "lexer::skip_whitespace"
           path: "include/nlohmann/detail/input/lexer.hpp"
-          description: "function, which skips admissible whitespace during reading"
+          description: "Function that skips admissible whitespace during reading."
 evidence:
   type: check_test_results
   configuration:

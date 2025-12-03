@@ -12,7 +12,7 @@ references:
           test_suite_paths:
             - "/nst_json_testsuite2/test_parsing/n_object_non_string_key.json"
             - "/nst_json_testsuite2/test_parsing/n_object_non_string_key_but_huge_number_instead.json"
-          description: "Checks that numbers as keys are rejected."
+          description: "Checks that using numbers as keys is rejected."
         - type: cpp_test
           name: "accept;names;numbers"
           path: "TSF/tests/unit-objects.cpp"

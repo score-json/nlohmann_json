@@ -17,7 +17,7 @@ references:
             - "/nst_json_testsuite2/test_parsing/n_number_hex_1_digit.json"
             - "/nst_json_testsuite2/test_parsing/n_number_hex_2_digits.json"
             - "/nst_json_testsuite2/test_parsing/n_number_hex_2_digits.json"
-          description: "Rejects Hexadecimals"
+          description: "Rejects Hexadecimals."
         - type: cpp_test
           name: "accept;bases"
           path: "TSF/tests/unit-numbers.cpp"

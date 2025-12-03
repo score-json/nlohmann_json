@@ -11,7 +11,7 @@ references:
           path: "tests/src/unit-testsuites.cpp"
           test_suite_paths:
             - "/nst_json_testsuite2/test_parsing/n_object_bad_value.json"
-          description: "Checks that the invalid literal \"truth\" as value is rejected."
+          description: "Checks that the invalid literal \"truth\" is rejected as value."
         - type: cpp_test
           name: "accept;member separator"
           path: "TSF/tests/unit-objects.cpp"

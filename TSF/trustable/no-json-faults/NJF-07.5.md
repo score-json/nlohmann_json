@@ -16,7 +16,7 @@ references:
           test_suite_paths:
             - "/nst_json_testsuite2/test_parsing/y_string_accepted_surrogate_pair.json"
             - "/nst_json_testsuite2/test_parsing/y_string_accepted_surrogate_pairs.json"
-          description: "Checks that single and multiple surrogates are accepted."
+          description: "Checks that both single and multiple surrogates are accepted."
         - type: cpp_test
           name: "Unicode;escaped utf-16 surrogates;well-formed"
           path: "TSF/tests/unit-strings.cpp"

@@ -23,7 +23,7 @@ references:
           path: "tests/src/unit-testsuites.cpp"
           test_suite_paths:
             - "/nst_json_testsuite2/test_parsing/i_object_key_lone_2nd_surrogate.json"
-          description: "Checks that string with invalid utf16 surrogate is rejected as name"
+          description: "Checks that strings with invalid UTF-16 surrogates are rejected as name."
         - type: cpp_test
           name: "accept;member separator"
           path: "TSF/tests/unit-objects.cpp"
