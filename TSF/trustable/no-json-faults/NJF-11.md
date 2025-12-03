@@ -8,7 +8,7 @@ references:
         - type: function_reference
           name: "lexer::skip_whitespace"
           path: "include/nlohmann/detail/input/lexer.hpp"
-          description: "function, which skips admissible whitespace during reading"
+          description: "Function that skips admissible whitespace during reading."
         - type: cpp_test
           name: "accept;whitespace"
           path: "TSF/tests/unit-literals.cpp"
