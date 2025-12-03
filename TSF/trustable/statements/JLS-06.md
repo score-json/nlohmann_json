@@ -4,7 +4,7 @@ normative: true
 references:
         - type: project_website
           url: "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
-          description: "OpenSSF Scorecard Report for nlohmann/json, where score for 'Code-Review' reflects this statement."
+          description: "OpenSSF Scorecard report for the nlohmann/json library, where the score for 'Code-Review' reflects this statement."
 evidence:
         type: https_response_time
         configuration:

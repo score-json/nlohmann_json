@@ -4,7 +4,7 @@ normative: true
 references:
         - type: project_website
           url: "https://github.com/nlohmann/json/community"
-          description: "List of defined community standards in nlohmann/json"
+          description: "List of defined community standards for the nlohmann/json repository."
 evidence:
         type: https_response_time
         configuration:
