@@ -37,7 +37,7 @@ Constant.
 
 !!! info "Precondition"
 
-    The array or object must not be empty. Calling `back` on an empty array or object yields undefined behavior.
+    The array or object must not be empty. Calling `back` on an empty array or object yields undefined behaviour.
 
 ## Examples
 

@@ -5,7 +5,7 @@ const_reverse_iterator crend() const noexcept;
 ```
 
 Returns an iterator to the reverse-end; that is, one before the first element. This element acts as a placeholder,
-attempting to access it results in undefined behavior.
+attempting to access it results in undefined behaviour.
 
 ![Illustration from cppreference.com](../../images/range-rbegin-rend.svg)
 

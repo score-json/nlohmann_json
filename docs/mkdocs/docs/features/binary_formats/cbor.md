@@ -66,7 +66,7 @@ see "binary" cells in the table above.
 
 !!! info "NaN/infinity handling"
 
-    If NaN or Infinity are stored inside a JSON number, they are serialized properly. This behavior differs from the normal JSON serialization which serializes NaN or Infinity to `null`.
+    If NaN or Infinity are stored inside a JSON number, they are serialized properly. This behaviour differs from the normal JSON serialization which serializes NaN or Infinity to `null`.
 
 !!! info "Unused CBOR types"
 

@@ -72,7 +72,7 @@ The library uses the following mapping from JSON values types to BJData types ac
 
 !!! info "NaN/infinity handling"
 
-    If NaN or Infinity are stored inside a JSON number, they are serialized properly. This behavior differs from the
+    If NaN or Infinity are stored inside a JSON number, they are serialized properly. This behaviour differs from the
     `dump()` function which serializes NaN or Infinity to `#!json null`.
 
 !!! info "Endianness"

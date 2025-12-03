@@ -34,4 +34,4 @@ score:
     Erikhu1: 1.0
 ---
 
-The service provided by the nlohmann/json library accepts comma as member separator.
+The service provided by the nlohmann/json library accepts the comma as member separator.

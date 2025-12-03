@@ -22,8 +22,8 @@ int main()
     std::cout << j_number_integer.front() << '\n';
     std::cout << j_number_float.front() << '\n';
     std::cout << j_object.front() << '\n';
-    //std::cout << j_object_empty.front() << '\n';  // undefined behavior
+    //std::cout << j_object_empty.front() << '\n';  // undefined behaviour
     std::cout << j_array.front() << '\n';
-    //std::cout << j_array_empty.front() << '\n';   // undefined behavior
+    //std::cout << j_array_empty.front() << '\n';   // undefined behaviour
     std::cout << j_string.front() << '\n';
 }

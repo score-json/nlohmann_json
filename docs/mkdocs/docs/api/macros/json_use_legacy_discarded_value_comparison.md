@@ -4,7 +4,7 @@
 #define JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON /* value */
 ```
 
-This macro enables the (incorrect) legacy comparison behavior of discarded JSON values. Possible values are `1` to
+This macro enables the (incorrect) legacy comparison behaviour of discarded JSON values. Possible values are `1` to
 enable or `0` to disable (default).
 
 When enabled, comparisons involving at least one discarded JSON value yield results as follows:
@@ -32,24 +32,24 @@ When the macro is not defined, the library will define it to its default value.
 
 ## Notes
 
-!!! warning "Inconsistent behavior in C++20 and beyond"
+!!! warning "Inconsistent behaviour in C++20 and beyond"
 
-    When targeting C++20 or above, enabling the legacy comparison behavior is _strongly_
+    When targeting C++20 or above, enabling the legacy comparison behaviour is _strongly_
     discouraged.
 
       - The 3-way comparison operator (`<=>`) will always give the correct result
         (`#!cpp std::partial_ordering::unordered`) regardless of the value of
         `JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON`.
-      - Overloads for the equality and relational operators emulate the legacy behavior.
+      - Overloads for the equality and relational operators emulate the legacy behaviour.
 
     Code outside your control may use either 3-way comparison or the equality and relational operators, resulting in
-    inconsistent and unpredictable behavior.
+    inconsistent and unpredictable behaviour.
 
     See [`operator<=>`](../basic_json/operator_spaceship.md) for more information on 3-way comparison.
 
 !!! warning "Deprecation"
 
-    The legacy comparison behavior is deprecated and may be removed in a future major version release.
+    The legacy comparison behaviour is deprecated and may be removed in a future major version release.
 
     New code should not depend on it and existing code should try to remove or rewrite expressions relying on it.
 
@@ -63,7 +63,7 @@ When the macro is not defined, the library will define it to its default value.
 
 ??? example
 
-    The code below switches on the legacy discarded value comparison behavior in the library.
+    The code below switches on the legacy discarded value comparison behaviour in the library.
 
     ```cpp
     #define JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON 1

@@ -126,9 +126,9 @@ std::map<
 >
 ```
 
-### Behavior
+### behaviour
 
-The choice of `object_t` influences the behavior of the JSON class. With the default type, objects have the following behavior:
+The choice of `object_t` influences the behaviour of the JSON class. With the default type, objects have the following behaviour:
 
 - When all names are unique, objects will be interoperable in the sense that all software implementations receiving that object will agree on the name-value mappings.
 - When the names within an object are not unique, it is unspecified which one of the values for a given key will be chosen. For instance, `#!json {"key": 2, "key": 1}` could be equal to either `#!json {"key": 1}` or `#!json {"key": 2}`.
@@ -137,7 +137,7 @@ The choice of `object_t` influences the behavior of the JSON class. With the def
 
 ### Key order
 
-The order name/value pairs are added to the object are *not* preserved by the library. Therefore, iterating an object may return name/value pairs in a different order than they were originally stored. In fact, keys will be traversed in alphabetical order as `std::map` with `std::less` is used by default. Please note this behavior conforms to [RFC 8259](https://tools.ietf.org/html/rfc8259), because any order implements the specified "unordered" nature of JSON objects.
+The order name/value pairs are added to the object are *not* preserved by the library. Therefore, iterating an object may return name/value pairs in a different order than they were originally stored. In fact, keys will be traversed in alphabetical order as `std::map` with `std::less` is used by default. Please note this behaviour conforms to [RFC 8259](https://tools.ietf.org/html/rfc8259), because any order implements the specified "unordered" nature of JSON objects.
 
 ### Limits
 
@@ -239,7 +239,7 @@ With the default values for *NumberIntegerType* (`std::int64_t`), the default va
 With the default values for *NumberUnsignedType* (`std::uint64_t`), the default value for `number_unsigned_t` is `std::uint64_t`.
 With the default values for *NumberFloatType* (`#!cpp double`), the default value for `number_float_t` is `#!cpp double`.
 
-### Default behavior
+### Default behaviour
 
 - The restrictions about leading zeros are not enforced in C++. Instead, leading zeros in integer literals lead to an interpretation as an octal number. Internally, the value will be stored as a decimal number. For instance, the C++ integer literal `#!c 010` will be serialized to `#!c 8`. During deserialization, leading zeros yield an error.
 - Not-a-number (NaN) values will be serialized to `#!json null`.

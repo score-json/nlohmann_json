@@ -169,13 +169,13 @@ violations will result in a failed build.
 
 !!! success "Requirement: Correctness"
 
-    The library is checked for memory correctness and absence of undefined behavior.
+    The library is checked for memory correctness and absence of undefined behaviour.
 
 - [x] The test suite is executed with enabled [runtime assertions](https://json.nlohmann.me/features/assertions/) to
-  check invariants and preconditions of functions to detect undefined behavior.
+  check invariants and preconditions of functions to detect undefined behaviour.
 - [x] The test suite is executed with [Valgrind](https://valgrind.org) (Memcheck) to detect memory leaks.
 - [x] The test suite is executed with [Sanitizers](https://github.com/google/sanitizers) (address sanitizer, undefined
-  behavior sanitizer, integer overflow detection, nullability violations).
+  behaviour sanitizer, integer overflow detection, nullability violations).
 
 ## Style check
 

@@ -2,7 +2,7 @@
 
 The [JSON standard](https://tools.ietf.org/html/rfc8259.html) defines objects as "an unordered collection of zero or more name/value pairs". As such, an implementation does not need to preserve any specific order of object keys.
 
-## Default behavior: sort keys
+## Default behaviour: sort keys
 
 The default type `nlohmann::json` uses a `std::map` to store JSON objects, and thus stores object keys **sorted alphabetically**.
 
@@ -35,7 +35,7 @@ The default type `nlohmann::json` uses a `std::map` to store JSON objects, and t
     }
     ```
 
-## Alternative behavior: preserve insertion order
+## Alternative behaviour: preserve insertion order
 
 If you do want to preserve the **insertion order**, you can try the type [`nlohmann::ordered_json`](https://github.com/nlohmann/json/issues/2179).
 

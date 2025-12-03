@@ -5,7 +5,7 @@ header. See also the [macro overview page](../../features/macros.md).
 
 ## Runtime assertions
 
-- [**JSON_ASSERT(x)**](json_assert.md) - control behavior of runtime assertions
+- [**JSON_ASSERT(x)**](json_assert.md) - control behaviour of runtime assertions
 
 ## Exceptions
 
@@ -43,7 +43,7 @@ header. See also the [macro overview page](../../features/macros.md).
 - [**JSON_DISABLE_ENUM_SERIALIZATION**](json_disable_enum_serialization.md) - switch off default serialization/deserialization functions for enums
 - [**JSON_USE_IMPLICIT_CONVERSIONS**](json_use_implicit_conversions.md) - control implicit conversions
 
-## Comparison behavior
+## Comparison behaviour
 
 - [**JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON**](json_use_legacy_discarded_value_comparison.md) -
   control comparison of discarded values

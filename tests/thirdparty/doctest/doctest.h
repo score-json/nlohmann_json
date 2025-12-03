@@ -242,7 +242,7 @@ DOCTEST_MSVC_SUPPRESS_WARNING(4623) // default constructor was implicitly define
     DOCTEST_MSVC_SUPPRESS_WARNING(4623) /* default constructor was implicitly deleted */           \
     DOCTEST_MSVC_SUPPRESS_WARNING(5039) /* pointer to pot. throwing function passed to extern C */ \
     DOCTEST_MSVC_SUPPRESS_WARNING(5045) /* Spectre mitigation for memory load */                   \
-    DOCTEST_MSVC_SUPPRESS_WARNING(5105) /* macro producing 'defined' has undefined behavior */     \
+    DOCTEST_MSVC_SUPPRESS_WARNING(5105) /* macro producing 'defined' has undefined behaviour */     \
     DOCTEST_MSVC_SUPPRESS_WARNING(4738) /* storing float result in memory, loss of performance */  \
     DOCTEST_MSVC_SUPPRESS_WARNING(5262) /* implicit fall-through */
 
@@ -6560,7 +6560,7 @@ namespace {
 
         if(type) {
             // integer
-            // TODO: change this to use std::stoi or something else! currently it uses undefined behavior - assumes '0' on failed parse...
+            // TODO: change this to use std::stoi or something else! currently it uses undefined behaviour - assumes '0' on failed parse...
             int theInt = std::atoi(parsedValue.c_str());
             if (theInt != 0) {
                 res = theInt; //!OCLINT parameter reassignment

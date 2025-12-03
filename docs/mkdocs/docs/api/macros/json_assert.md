@@ -23,7 +23,7 @@ Therefore, assertions can be switched off by defining `NDEBUG`.
 
 ## Notes
 
-- The library uses numerous assertions to guarantee invariants and to abort in case of otherwise undefined behavior
+- The library uses numerous assertions to guarantee invariants and to abort in case of otherwise undefined behaviour
   (e.g., when calling [operator[]](../basic_json/operator%5B%5D.md) with a missing object key on a `const` object). See
   page [runtime assertions](../../features/assertions.md) for more information.
 - Defining the macro to code that does not call `std::abort` may leave the library in an undefined state.
@@ -31,7 +31,7 @@ Therefore, assertions can be switched off by defining `NDEBUG`.
 
 ## Examples
 
-??? example "Example 1: default behavior"
+??? example "Example 1: default behaviour"
 
     The following code will trigger an assertion at runtime:
 
@@ -53,7 +53,7 @@ Therefore, assertions can be switched off by defining `NDEBUG`.
     Assertion failed: (m_value.object->find(key) != m_value.object->end()), function operator[], file json.hpp, line 2144.
     ```
 
-??? example "Example 2: user-defined behavior"
+??? example "Example 2: user-defined behaviour"
 
     The assertion reporting can be changed by defining `JSON_ASSERT(x)` differently.
 

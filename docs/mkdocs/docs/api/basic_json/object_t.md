@@ -54,10 +54,10 @@ std::map<
 
 See [`default_object_comparator_t`](default_object_comparator_t.md) for more information.
 
-#### Behavior
+#### behaviour
 
-The choice of `object_t` influences the behavior of the JSON class. With the default type, objects have the following
-behavior:
+The choice of `object_t` influences the behaviour of the JSON class. With the default type, objects have the following
+behaviour:
 
 - When all names are unique, objects will be interoperable in the sense that all software implementations receiving that
   object will agree on the name-value mappings.
@@ -89,7 +89,7 @@ Objects are stored as pointers in a `basic_json` type. That is, for any access t
 
 The order name/value pairs are added to the object are *not* preserved by the library. Therefore, iterating an object
 may return name/value pairs in a different order than they were originally stored. In fact, keys will be traversed in
-alphabetical order as `std::map` with `std::less` is used by default. Please note this behavior conforms to
+alphabetical order as `std::map` with `std::less` is used by default. Please note this behaviour conforms to
 [RFC 8259](https://tools.ietf.org/html/rfc8259), because any order implements the specified "unordered" nature of JSON
 objects.
 

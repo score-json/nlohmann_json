@@ -16,4 +16,4 @@ score:
     Erikhu1: 1.0
 ---
 
-The develop branch of nlohmann/json is protected, i.e. no direct commits are possible.
+The develop branch of nlohmann/json is protected, i.e., no direct commits are possible.

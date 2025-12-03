@@ -20,7 +20,7 @@
 
     yield different results (`#!json [true]` vs. `#!json true`)?
 
-This is a known issue, and -- even worse -- the behavior differs between GCC and Clang. The "culprit" for this is the library's constructor overloads for initializer lists to allow syntax like
+This is a known issue, and -- even worse -- the behaviour differs between GCC and Clang. The "culprit" for this is the library's constructor overloads for initializer lists to allow syntax like
 
 ```cpp
 json array = {1, 2, 3, 4};

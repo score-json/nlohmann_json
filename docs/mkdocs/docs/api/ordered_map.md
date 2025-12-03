@@ -60,7 +60,7 @@ std::equal_to<>     // since C++14
 
 ??? example
 
-    The example shows the different behavior of `std::map` and `nlohmann::ordered_map`.
+    The example shows the different behaviour of `std::map` and `nlohmann::ordered_map`.
      
     ```cpp
     --8<-- "examples/ordered_map.cpp"

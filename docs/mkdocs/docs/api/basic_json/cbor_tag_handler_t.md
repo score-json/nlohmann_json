@@ -24,7 +24,7 @@ store
 
 ??? example
 
-    The example below shows how the different values of the `cbor_tag_handler_t` influence the behavior of
+    The example below shows how the different values of the `cbor_tag_handler_t` influence the behaviour of
     [`from_cbor`](from_cbor.md) when reading a tagged byte string.
 
     ```cpp

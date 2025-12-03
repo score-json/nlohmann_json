@@ -3764,7 +3764,7 @@ class basic_json // NOLINT(cppcoreguidelines-special-member-functions,hicpp-spec
 
 #if JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON
     // all operators that are computed as an odd number of inverses of others
-    // need to be overloaded to emulate the legacy comparison behavior
+    // need to be overloaded to emulate the legacy comparison behaviour
 
     /// @brief comparison: less than or equal
     /// @sa https://json.nlohmann.me/api/basic_json/operator_le/
@@ -4825,7 +4825,7 @@ class basic_json // NOLINT(cppcoreguidelines-special-member-functions,hicpp-spec
                         const auto idx = json_pointer::template array_index<basic_json_t>(last_path);
                         if (JSON_HEDLEY_UNLIKELY(idx > parent.size()))
                         {
-                            // avoid undefined behavior
+                            // avoid undefined behaviour
                             JSON_THROW(out_of_range::create(401, detail::concat("array index ", std::to_string(idx), " is out of range"), &parent));
                         }
 

@@ -1,7 +1,7 @@
 # Runtime Assertions
 
-The code contains numerous debug assertions to ensure class invariants are valid or to detect undefined behavior.
-Whereas the former class invariants are nothing to be concerned with, the latter checks for undefined behavior are to
+The code contains numerous debug assertions to ensure class invariants are valid or to detect undefined behaviour.
+Whereas the former class invariants are nothing to be concerned with, the latter checks for undefined behaviour are to
 detect bugs in client code.
 
 ## Switch off runtime assertions
@@ -9,9 +9,9 @@ detect bugs in client code.
 Runtime assertions can be switched off by defining the preprocessor macro `NDEBUG` (see the
 [documentation of assert](https://en.cppreference.com/w/cpp/error/assert)) which is the default for release builds.
 
-## Change assertion behavior
+## Change assertion behaviour
 
-The behavior of runtime assertions can be changes by defining macro [`JSON_ASSERT(x)`](../api/macros/json_assert.md)
+The behaviour of runtime assertions can be changes by defining macro [`JSON_ASSERT(x)`](../api/macros/json_assert.md)
 before including the `json.hpp` header.
 
 ## Function with runtime assertions
@@ -19,7 +19,7 @@ before including the `json.hpp` header.
 ### Unchecked object access to a const value
 
 Function [`operator[]`](../api/basic_json/operator%5B%5D.md) implements unchecked access for objects. Whereas a missing
-key is added in the case of non-const objects, accessing a const object with a missing key is undefined behavior (think
+key is added in the case of non-const objects, accessing a const object with a missing key is undefined behaviour (think
 of a dereferenced null pointer) and yields a runtime assertion.
 
 If you are not sure whether an element in an object exists, use checked access with the
@@ -52,7 +52,7 @@ See also the documentation on [element access](element_access/index.md).
 ### Constructing from an uninitialized iterator range
 
 Constructing a JSON value from an iterator range (see [constructor](../api/basic_json/basic_json.md)) with an
-uninitialized iterator is undefined behavior and yields a runtime assertion.
+uninitialized iterator is undefined behaviour and yields a runtime assertion.
 
 ??? example "Example 2: Uninitialized iterator range"
 
@@ -79,7 +79,7 @@ uninitialized iterator is undefined behavior and yields a runtime assertion.
 ### Operations on uninitialized iterators
 
 Any operation on uninitialized iterators (i.e., iterators that are not associated with any JSON value) is undefined
-behavior and yields a runtime assertion.
+behaviour and yields a runtime assertion.
 
 ??? example "Example 3: Uninitialized iterator"
 
@@ -107,10 +107,10 @@ behavior and yields a runtime assertion.
 
 ### Reading from a null `FILE` or `char` pointer
 
-Reading from a null `#!cpp FILE` or `#!cpp char` pointer in C++ is undefined behavior.  Until version 3.12.0, this
+Reading from a null `#!cpp FILE` or `#!cpp char` pointer in C++ is undefined behaviour.  Until version 3.12.0, this
 library asserted that the pointer was not `nullptr` using a runtime assertion. If assertions were disabled, this would
-result in undefined behavior. Since version 3.12.0, this library checks for `nullptr` and throws a
-[`parse_error.101`](../home/exceptions.md#jsonexceptionparse_error101) to prevent the undefined behavior.
+result in undefined behaviour. Since version 3.12.0, this library checks for `nullptr` and throws a
+[`parse_error.101`](../home/exceptions.md#jsonexceptionparse_error101) to prevent the undefined behaviour.
 
 ??? example "Example 4: Reading from null pointer"
 
@@ -141,4 +141,4 @@ result in undefined behavior. Since version 3.12.0, this library checks for `nul
 
 ## See also
 
-- [JSON_ASSERT](../api/macros/json_assert.md) - control behavior of runtime assertions
+- [JSON_ASSERT](../api/macros/json_assert.md) - control behaviour of runtime assertions

@@ -33,12 +33,12 @@ Constant.
 
 ## Notes
 
-!!! danger "Undefined behavior"
+!!! danger "Undefined behaviour"
 
     The pointer becomes invalid if the underlying JSON object changes.
 
     Consider the following example code where the pointer `ptr` changes after the array is resized. As a result,
-    reading or writing to `ptr` after the array change would be undefined behavior. The address of the first array
+    reading or writing to `ptr` after the array change would be undefined behaviour. The address of the first array
     element changes, because the underlying `std::vector` is resized after adding a fifth element.
 
     ```cpp

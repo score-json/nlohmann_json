@@ -65,7 +65,7 @@ set(GCC_CXXFLAGS
     -Wanalyzer-tainted-offset
     -Wanalyzer-tainted-size
     -Wanalyzer-too-complex
-    -Wanalyzer-undefined-behavior-strtok
+    -Wanalyzer-undefined-behaviour-strtok
     -Wanalyzer-unsafe-call-within-signal-handler
     -Wanalyzer-use-after-free
     -Wanalyzer-use-of-pointer-in-stale-stack-frame

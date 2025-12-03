@@ -14,7 +14,7 @@ using nlohmann::json;
 
 TEST_CASE("iterators 1")
 {
-    SECTION("basic behavior")
+    SECTION("basic behaviour")
     {
         SECTION("uninitialized")
         {

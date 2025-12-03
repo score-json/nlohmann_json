@@ -4008,7 +4008,7 @@ All tests in this file were run in the following configurations:
 ### List of tests in file unit-iterators1.cpp
 
 * iterators 1
-    * basic behavior
+    * basic behaviour
         * uninitialized
         * boolean
             * json + begin/end
@@ -5944,7 +5944,7 @@ All tests in this file were run in the following configurations:
     * issue #360 - Loss of precision when serializing <double>
     * issue #366 - json::parse on failed stream gets stuck
     * issue #367 - calling stream at EOF
-    * issue #367 - behavior of operator>> should more closely resemble that of built-in overloads
+    * issue #367 - behaviour of operator>> should more closely resemble that of built-in overloads
         * (empty)
         * (whitespace)
         * one value
@@ -5967,7 +5967,7 @@ All tests in this file were run in the following configurations:
     * issue #454 - doubles are printed as integers
     * issue #464 - VS2017 implicit to std::string conversion fix
     * issue #465 - roundtrip error while parsing 1000000000000000010E5
-    * issue #473 - inconsistent behavior in conversion to array type
+    * issue #473 - inconsistent behaviour in conversion to array type
         * std::vector
         * std::list
         * std::forward_list
@@ -5983,7 +5983,7 @@ All tests in this file were run in the following configurations:
     * issue #702 - conversion from valarray<double> to json fails to build
         * original example
         * full example
-    * issue #367 - Behavior of operator>> should more closely resemble that of built-in overloads.
+    * issue #367 - behaviour of operator>> should more closely resemble that of built-in overloads.
         * example 1
     * issue #714 - throw std::ios_base::failure exception when failbit set to true
     * issue #805 - copy constructor is used with std::initializer_list constructor.

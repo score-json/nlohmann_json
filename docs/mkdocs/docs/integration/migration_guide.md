@@ -149,7 +149,7 @@ function to use instead.
           std::cout << j;
           ```
 
-- The legacy comparison behavior for discarded values is deprecated since 3.11.0. It is already disabled by default and
+- The legacy comparison behaviour for discarded values is deprecated since 3.11.0. It is already disabled by default and
   can still be enabled by defining
   [`JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON`](../api/macros/json_use_legacy_discarded_value_comparison.md) to `1`.
   

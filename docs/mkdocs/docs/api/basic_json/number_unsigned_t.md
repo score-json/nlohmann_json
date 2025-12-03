@@ -27,7 +27,7 @@ the type to use.
 With the default values for `NumberUnsignedType` (`std::uint64_t`), the default value for `number_unsigned_t` is
 `#!cpp std::uint64_t`.
 
-#### Default behavior
+#### Default behaviour
 
 - The restrictions about leading zeros are not enforced in C++. Instead, leading zeros in integer literals lead to an
   interpretation as an octal number. Internally, the value will be stored as a decimal number. For instance, the C++

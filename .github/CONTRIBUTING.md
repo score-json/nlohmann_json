@@ -185,7 +185,7 @@ Although these guidelines may seem restrictive, they are essential for maintaini
 
 Breaking changes may be introduced when they are guarded with a feature macro such as
 [`JSON_USE_IMPLICIT_CONVERSIONS`](https://json.nlohmann.me/api/macros/json_use_implicit_conversions/) which allows to
-selectively change the behavior of the library. In next steps, the current behavior can then be deprecated. Using
+selectively change the behaviour of the library. In next steps, the current behaviour can then be deprecated. Using
 feature macros then allows users to test their code against the library in the next major release.
 
 ### Break C++11 language conformance

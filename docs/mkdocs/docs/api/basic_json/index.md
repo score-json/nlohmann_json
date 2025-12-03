@@ -100,7 +100,7 @@ The class satisfies the following concept requirements:
 - [**value_t**](value_t.md) - the JSON type enumeration
 - [**json_pointer**](../json_pointer/index.md) - JSON Pointer implementation
 - [**json_serializer**](json_serializer.md) - type of the serializer to for conversions from/to JSON
-- [**error_handler_t**](error_handler_t.md) - type to choose behavior on decoding errors
+- [**error_handler_t**](error_handler_t.md) - type to choose behaviour on decoding errors
 - [**cbor_tag_handler_t**](cbor_tag_handler_t.md) - type to choose how to handle CBOR tags
 - **initializer_list_t** - type for initializer lists of `basic_json` values
 - [**input_format_t**](input_format_t.md) - type to choose the format to parse
