@@ -17,7 +17,7 @@ This file provides an assessment of all third-party tools used in the developmen
    As a result, it could incorrectly merge files (wrong order, missing or duplicated code), fail to include required headers, or corrupt the generated header in subtle ways.
   
    The script originates from an external project that is not under the direct control of the nlohmann/json maintainers and shows limited public maintenance activity.
-- **Severity**: High – Any undetected error in the amalgamated header would directly affect the library's functionality.
+- **Severity**: High - Any undetected error in the amalgamated header would directly affect the library's functionality.
 - **Detectability**: High – The generated `json.hpp` is stored in version control and built in CI, where it is compiled and run with the full unit test suite. This means that most structural or include-related problems show up as build or test failures, and more subtle issues are further reduced by the use of fuzz testing.
 - **Mitigation**:
   - The script is mirrored into the repository and thus fully auditable.
