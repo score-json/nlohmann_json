@@ -4,10 +4,10 @@ normative: true
 references:
         - type: project_website
           url: "https://github.com/nlohmann/json"
-          description: "Start-page of the original nlohmann/json project"
+          description: "Start page of the original nlohmann/json project."
         - type: project_website
           url: "https://github.com/eclipse-score/inc_nlohmann_json"
-          description: "Start-page of the mirror of nlohmann/json within Eclipse S-CORE"
+          description: "Start page of the mirror of nlohmann/json within Eclipse S-CORE."
 evidence:
         type: https_response_time
         configuration:

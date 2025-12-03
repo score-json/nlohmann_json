@@ -4,10 +4,10 @@ normative: true
 references:
   - type: project_website
     url: "https://github.com/nlohmann/json/discussions/categories/ideas"
-    description: "Feature request discussions showing that feature requests are actively investigated and answered"
+    description: "Feature request discussions showing that feature requests are actively investigated and answered."
   - type: project_website
     url: "https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS"
-    description: "Definition of responsible owners and reviewers for the nlohmann/json repository"
+    description: "Definition of responsible owners and reviewers for the nlohmann/json repository."
 evidence:
   type: https_response_time
   configuration:
