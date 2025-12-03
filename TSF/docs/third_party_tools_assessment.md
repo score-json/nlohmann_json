@@ -224,7 +224,7 @@ This file provides an assessment of all third-party tools used in the developmen
 - **Severity**: Low - Probot automation influences how issues and pull requests are managed, not how the library is built or executed.
 - **Detectability**: High - All Probot actions appear as comments, labels, or status changes in the GitHub UI, so misbehaviour is visible to maintainers and contributors.
 - **Mitigation**:
-- - The Probot configuration in `.github/config.yml` is under control and can be adjusted or reverted via pull requests if a bot behaves undesirably.
+  - The Probot configuration in `.github/config.yml` is under control and can be adjusted or reverted via pull requests if a bot behaves undesirably.
   - Maintainers monitor issue and PR activity and can reopen, relabel, or manually respond to threads that were mishandled by automation.
   - If a Probot app causes persistent problems, it can be disabled or its scope reduced without impacting the library code or release process.
 
