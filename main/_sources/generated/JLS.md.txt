@@ -44,14 +44,15 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
 ---
 
 ### JLS-02 | Reviewed: ⨯ | Score: 0.0 
-Fuzz testing is used in the original nlohmann/json repository (https://github.com/nlohmann/json) to uncover edge cases and failure modes throughout development. (https://github.com/nlohmann/json/blob/develop/tests/fuzzing.md)
+Fuzz testing is used in the nlohmann/json repository to uncover edge cases and failure modes throughout development.
 
 
 **Supported Requests:**
@@ -59,6 +60,7 @@ Fuzz testing is used in the original nlohmann/json repository (https://github.co
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -116,7 +118,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -161,7 +164,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -264,7 +268,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -364,7 +369,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -415,7 +421,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -466,7 +473,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -531,7 +539,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -582,14 +591,15 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
 ---
 
 ### JLS-10 | Reviewed: ⨯ | Score: 0.0 
-Every release of nlohmann/json includes source code, build instructions, tests and attestations. (TODO: Test result summary)
+Every release of the nlohmann/json library includes source code, build instructions, test code and test results summaries.
 
 
 **Supported Requests:**
@@ -597,6 +607,7 @@ Every release of nlohmann/json includes source code, build instructions, tests a
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -606,7 +617,13 @@ _None_
 
 **References:**
 
-_None_
+- `website: https://github.com/nlohmann/json/releases`
+
+
+`https://github.com/nlohmann/json/releases`
+	- List of nlohmann/json releases consisting of source code, build instructions, test code and test result summaries.
+
+
 
 
 
@@ -627,7 +644,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -678,7 +696,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -729,7 +748,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -794,7 +814,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -808,6 +829,7 @@ The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohm
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
+| [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 | [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
@@ -845,7 +867,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -8407,6 +8430,13 @@ All tests in this file were run in the following configurations:
 ````
 
 
+- `website: https://github.com/eclipse-score/inc_nlohmann_json/actions`
+
+
+`https://github.com/eclipse-score/inc_nlohmann_json/actions`
+	- Github actions page showing that eclipse-score/inc_nlohmann_json is using Github host environment.
+
+
 
 
 
@@ -8427,7 +8457,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -8472,7 +8503,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -9453,7 +9485,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -9468,6 +9501,7 @@ All library components, build dependencies, and build tools in the nlohmann/json
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9525,7 +9559,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -9945,52 +9980,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
-
-
-
----
-
-### JLS-21 | Reviewed: ⨯ | Score: 0.0 
-A score is calculated based on the number of mirrored and unmirrored things. (TODO)
-
-
-**Supported Requests:**
-
-| Item  | Summary  | Score  | Status  |
-| --- | --- | --- | --- |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-
-**Supporting Items:**
-
-_None_
-
-
-
-**References:**
-
-_None_
-
-
-
-**Fallacies:**
-
-_None_
-
-**Graph:**
-
-![No Image](figs/JLS-21.svg)
-
-|date-time|JLS-21|
-|-|-|
-|2025-11-19 13:45:36|0.00 |
-|2025-11-20 10:55:40|0.00 |
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11140,7 +11131,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11198,7 +11190,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11251,7 +11244,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -11309,7 +11303,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11358,7 +11353,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11403,7 +11399,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11454,7 +11451,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11512,7 +11510,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11570,7 +11569,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11621,7 +11621,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11672,7 +11673,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11723,7 +11725,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -11974,7 +11977,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12032,7 +12036,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12324,7 +12329,8 @@ _None_
 |-|-|
 |2025-11-25 14:22:48|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12377,7 +12383,60 @@ _None_
 |-|-|
 |2025-11-25 14:22:48|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
+
+
+
+---
+
+### JLS-38 | Reviewed: ⨯ | Score: 0.0 
+Every release of the nlohmann/json library shall provide configuration management for build instructions and infrastructure.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://json.nlohmann.me/integration/cmake/`
+
+
+`https://json.nlohmann.me/integration/cmake/`
+	- cmake build management documentation for nlohmann/json
+
+
+- `website: https://json.nlohmann.me/integration/package_managers/`
+
+
+`https://json.nlohmann.me/integration/package_managers/`
+	- package manager documentation for nlohmann/json
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-38.svg)
+
+|date-time|JLS-38|
+|-|-|
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12430,7 +12489,8 @@ _None_
 |-|-|
 |2025-11-25 14:22:48|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12476,7 +12536,8 @@ _None_
 |-|-|
 |2025-11-25 14:22:48|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12536,7 +12597,8 @@ _None_
 |-|-|
 |2025-11-25 14:22:48|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12589,7 +12651,8 @@ _None_
 |-|-|
 |2025-11-25 14:22:48|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -12642,5 +12705,543 @@ _None_
 |-|-|
 |2025-11-25 14:22:48|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
+
+
+
+---
+
+### JLS-51 | Reviewed: ⨯ | Score: 0.0 
+All source code of the nlohmann/json library is mirrored within eclipse-score/inc_nlohmann_json.
+
+
+**Supported Requests:**
+
+_None_
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json`
+
+
+`https://github.com/nlohmann/json`
+	- Start-page of the original nlohmann/json project
+
+
+- `website: https://github.com/eclipse-score/inc_nlohmann_json`
+
+
+`https://github.com/eclipse-score/inc_nlohmann_json`
+	- Start-page of the mirror of nlohmann/json within Eclipse S-CORE
+
+
+- `single_include/nlohmann/json.hpp`
+
+
+```text
+single_include/nlohmann/json.hpp
+```
+- Description: Single include of the nlohmann/json library
+
+
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-51.svg)
+
+|date-time|JLS-51|
+|-|-|
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
+
+
+
+---
+
+### JLS-52 | Reviewed: ⨯ | Score: 0.0 
+Releases of the nlohmann/json library contain a comprehensive set of attestations.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-63](JLS.md#jls-63)  | Releases of the nlohmann/json library contain commit sign-offs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-64](JLS.md#jls-64)  | Releases of the nlohmann/json library contain Github pull request approvals. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-65](JLS.md#jls-65)  | Releases of the nlohmann/json library contain continuous-integration test reports such as coverage reports, fuzzing reports & OpenSSF scorecard reports. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+
+
+**References:**
+
+_None_
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-52.svg)
+
+|date-time|JLS-52|JLS-63|JLS-64|JLS-65|
+|-|-|-|-|-|
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |
+
+
+
+---
+
+### JLS-53 | Reviewed: ⨯ | Score: 0.0 
+Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files.
+
+
+**Supported Requests:**
+
+_None_
+
+**Supporting Items:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-14](JLS.md#jls-14)  | The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
+
+
+
+**References:**
+
+_None_
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-53.svg)
+
+|date-time|JLS-53|JLS-14|
+|-|-|-|
+|2025-12-04 08:03:28|0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |
+
+
+
+---
+
+### JLS-61 | Reviewed: ⨯ | Score: 0.0 
+Any Github Actions used in the testing process are pinned to specific commit SHAs to ensure consistent action behavior across runs.
+
+
+**Supported Requests:**
+
+_None_
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/.github/workflows/ubuntu.yml`
+
+
+`https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/.github/workflows/ubuntu.yml`
+	- Ubuntu workflow of nlohmann/json release v3.12.0, containing specific commit SHAs for all Github Actions, in e.g., lines 24, 36, 118, etc.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-61.svg)
+
+|date-time|JLS-61|
+|-|-|
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
+
+
+
+---
+
+### JLS-62 | Reviewed: ⨯ | Score: 0.0 
+All tests except the ones which are excluded when using the flag "ctest -LE not_reproducible" are reproducible.
+
+
+**Supported Requests:**
+
+_None_
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md?plain=1#L1862`
+
+
+`https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md?plain=1#L1862`
+	- README file of the nlohmann/json repository stating that 'ctest -LE not_reproducible' excludes non-reproducible tests.
+
+
+- `website: https://github.com/nlohmann/json/issues/2324`
+
+
+`https://github.com/nlohmann/json/issues/2324`
+	- Issue in the nlohmann/json repository addressing tests that were non-reproducible.
+
+
+- `TSF/docs/non_reproducible_tests.md`
+
+
+````md
+# Non-Reproducible Tests in nlohmann/json
+
+## Overview
+
+The nlohmann/json test suite includes 8 CMake integration tests (comprising 10 individual test executions) that are labeled as `not_reproducible`. These tests verify different methods of consuming the library in CMake-based projects but create build artifacts with timestamps and cached state that prevent bit-for-bit reproducible builds.
+
+The non-reproducibility of all these tests is reasonable and justified.
+
+These can be identified and found by searching for "LABELS not_reproducible" in the project.
+
+## The 8 Non-Reproducible CMake Integration Tests
+
+### 1. cmake_import (2 tests)
+
+**Location:** `tests/cmake_import/`
+
+**Test Names:**
+- `cmake_import_configure`
+- `cmake_import_build`
+
+**What it tests:**
+Verifies that the library can be found and used via CMake's `find_package(nlohmann_json)` mechanism after installation. This simulates how end users would consume an installed version of the library.
+
+**Why non-reproducible:**
+- Requires `JSON_Install=ON` to generate CMake config files (`nlohmann_jsonConfig.cmake`)
+- Uses `find_package()` which searches for and reads installed CMake configuration files
+- Generates CMakeCache.txt with absolute paths and timestamps in the test build directory
+- Creates compiled executables (`with_namespace_target`, `without_namespace_target`) with timestamps
+- Multiple runs produce different timestamps on all generated artifacts
+
+---
+
+### 2. cmake_import_minver (2 tests)
+
+**Location:** `tests/cmake_import_minver/`
+
+**Test Names:**
+- `cmake_import_minver_configure`
+- `cmake_import_minver_build`
+
+**What it tests:**
+Similar to `cmake_import`, but specifically tests that CMake's version constraint mechanism works correctly with `find_package(nlohmann_json 3.2.0 REQUIRED)`. Ensures the library properly declares its version in the CMake config files.
+
+**Why non-reproducible:**
+- Same reasons as `cmake_import`
+- Additionally verifies version metadata in generated config files
+- Creates timestamped build artifacts and CMake cache files
+
+---
+
+### 3. cmake_add_subdirectory (2 tests)
+
+**Location:** `tests/cmake_add_subdirectory/`
+
+**Test Names:**
+- `cmake_add_subdirectory_configure`
+- `cmake_add_subdirectory_build`
+
+**What it tests:**
+Verifies that the library can be embedded directly into a CMake project using `add_subdirectory()`. This is the most common integration method for projects that vendor their dependencies.
+
+**Why non-reproducible:**
+- Runs a nested CMake configuration in an isolated test directory
+- Generates CMakeCache.txt with absolute source/binary paths and timestamps
+- Builds multiple executables (`with_namespace_target`, `without_namespace_target`, `without_exceptions`)
+- Each build creates object files, executables with embedded timestamps
+- Subsequent runs create new artifacts with different timestamps
+- CMake's incremental build cache persists between runs, causing different behavior
+
+---
+
+### 4. cmake_target_include_directories (2 tests)
+
+**Location:** `tests/cmake_target_include_directories/`
+
+**Test Names:**
+- `cmake_target_include_directories_configure`
+- `cmake_target_include_directories_build`
+
+**What it tests:**
+Verifies that the library headers can be used via direct `target_include_directories()` calls with both `PRIVATE` and `SYSTEM` variants. Also tests a specific regression from [discussion #2281](https://github.com/nlohmann/json/discussions/2281) regarding transitive include directories.
+
+**Why non-reproducible:**
+- Creates a full CMake build with libraries (Foo, Bar) and executables
+- Generates CMakeCache.txt with absolute paths to source includes
+- All compiled artifacts have timestamps
+- Static libraries and executables accumulate with different modification times on each run
+
+---
+
+## Assertions and Reproducibility
+
+Additionally, the nlohmann/json README notes that **assertions must be disabled** for fully reproducible builds (see [discussion #4494](https://github.com/nlohmann/json/discussions/4494)). This is because:
+
+- Assertions often use `__FILE__` which embeds absolute source paths
+- Different build machines have different paths
+- This embeds environment-specific information into binaries
+
+To ensure reproducible builds, compile with:
+```bash
+cmake -DCMAKE_BUILD_TYPE=Release  # Typically defines NDEBUG
+# or explicitly:
+cmake -DCMAKE_CXX_FLAGS="-DNDEBUG"
+```
+
+## Running Reproducible Tests Only
+
+To run only reproducible tests:
+```bash
+# Exclude non-reproducible tests
+ctest -LE not_reproducible
+
+# Exclude both non-reproducible and git-required tests
+ctest -LE "not_reproducible|git_required"
+```
+
+The project has a dedicated CI target that automatically excludes these tests:
+```bash
+cmake --build build --target ci_reproducible_tests
+```
+
+````
+- Description: Overview and description of 8 non-reproducible CMake integration tests.
+
+
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-62.svg)
+
+|date-time|JLS-62|
+|-|-|
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
+
+
+
+---
+
+### JLS-63 | Reviewed: ⨯ | Score: 0.0 
+Releases of the nlohmann/json library contain commit sign-offs.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-52](JLS.md#jls-52)  | Releases of the nlohmann/json library contain a comprehensive set of attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://www.bestpractices.dev/en/projects/289?criteria_level=1#section_project_oversight`
+
+
+`https://www.bestpractices.dev/en/projects/289?criteria_level=1#section_project_oversight`
+	- OpenSSF Best Practices Report for nlohmann/json, where within 'Project Oversight' it states that the Developer Certificate of Origin (DCO) is enforced via the DCO GitHub app (https://github.com/settings/installations/58991705) as of December 30, 2024.
+
+
+- `website: https://developercertificate.org/`
+
+
+`https://developercertificate.org/`
+	- The Developer Certificate of Origin in its original formulation.
+
+
+- `website: https://github.com/nlohmann/json/discussions/4578`
+
+
+`https://github.com/nlohmann/json/discussions/4578`
+	- Announcement by Niels Lohmann that as of January 1, 2025, the project will require DCO (https://developercertificate.org) for all merge requests.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-63.svg)
+
+|date-time|JLS-63|
+|-|-|
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
+
+
+
+---
+
+### JLS-64 | Reviewed: ⨯ | Score: 0.0 
+Releases of the nlohmann/json library contain Github pull request approvals.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-52](JLS.md#jls-52)  | Releases of the nlohmann/json library contain a comprehensive set of attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/discussions/5022`
+
+
+`https://github.com/nlohmann/json/discussions/5022`
+	- Clarification by @nlohmann that all PRs not created by @nlohmann will be reviewed by him, while not all of his PRs are reviewed in practice.
+
+
+- `website: https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+is%3Amerged`
+
+
+`https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+is%3Amerged`
+	- List of all merged Pull Requests of the nlohmann/json repository.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-64.svg)
+
+|date-time|JLS-64|
+|-|-|
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
+
+
+
+---
+
+### JLS-65 | Reviewed: ⨯ | Score: 0.0 
+Releases of the nlohmann/json library contain continuous-integration test reports such as coverage reports, fuzzing reports & OpenSSF scorecard reports.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-52](JLS.md#jls-52)  | Releases of the nlohmann/json library contain a comprehensive set of attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+
+
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for the nlohmann/json library.
+
+
+- `website: https://coveralls.io/github/nlohmann/json`
+
+
+`https://coveralls.io/github/nlohmann/json`
+	- Coverage Report for the nlohmann/json library.
+
+
+- `website: https://introspector.oss-fuzz.com/project-profile?project=json`
+
+
+`https://introspector.oss-fuzz.com/project-profile?project=json`
+	- Most recent report for fuzzing introspection of the nlohmann/json library with historical plots.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-65.svg)
+
+|date-time|JLS-65|
+|-|-|
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 

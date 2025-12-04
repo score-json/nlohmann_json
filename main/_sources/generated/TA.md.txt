@@ -41,7 +41,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |
 
 
 
@@ -182,7 +183,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -321,7 +323,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |N/A|
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -441,7 +444,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -579,7 +583,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |
 
 
 
@@ -696,7 +701,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -846,7 +852,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |
 |2025-11-26 12:04:09|0.00 |
 |2025-12-02 16:04:44|0.00 |
-|2025-12-02 17:00:16.609202|0.00 |
+|2025-12-04 08:03:28|0.00 |
+|2025-12-04 09:00:37.866061|0.00 |
 
 
 
@@ -998,7 +1005,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |
 
 
 
@@ -1136,8 +1144,9 @@ All constructed iterations of the nlohmann/json library include source code, bui
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLS-10](JLS.md#jls-10)  | Every release of nlohmann/json includes source code, build instructions, tests and attestations. (TODO: Test result summary) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-10](JLS.md#jls-10)  | Every release of the nlohmann/json library includes source code, build instructions, test code and test results summaries. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-19](JLS.md#jls-19)  | All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-52](JLS.md#jls-52)  | Releases of the nlohmann/json library contain a comprehensive set of attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -1155,16 +1164,17 @@ _None_
 
 ![No Image](figs/TA-ITERATIONS.svg)
 
-|date-time|TA-ITERATIONS|JLS-10|JLS-19|
-|-|-|-|-|
-|2025-11-19 13:45:36|0.00 |0.00 |0.00 |
-|2025-11-20 10:55:40|0.00 |0.00 |0.00 |
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |
+|date-time|TA-ITERATIONS|JLS-10|JLS-19|JLS-52|
+|-|-|-|-|-|
+|2025-11-19 13:45:36|0.00 |0.00 |0.00 |N/A|
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |N/A|
+|2025-11-24 08:25:25|0.00 |0.00 |0.00 |N/A|
+|2025-11-24 15:01:45|0.00 |0.00 |0.00 |N/A|
+|2025-11-25 14:22:48|0.00 |0.00 |0.00 |N/A|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |N/A|
+|2025-12-02 16:04:44|0.00 |0.00 |0.00 |N/A|
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1202,21 +1212,21 @@ For releases, additional documentation should summarise all changes across the i
 
 - list of components with source
   - source code
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - build instructions
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - test code
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - test results summary
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - attestations
-    - **Answer**: 
+    - **Answer**: Provided by JLS-52.
 
 - list of components where source code is not available
   - risk analysis
-    - **Answer**: 
+    - **Answer**: There are no components without source code within this project.
   - attestations
-    - **Answer**: 
+    - **Answer**: There are no components without source code within this project.
 
 **Confidence scoring**
 
@@ -1230,18 +1240,18 @@ Confidence scoring for TA-ITERATIONS based on
 
 - How much of the software is provided as binary only, expressed as a
   fraction of the BoM list?
-  - **Answer**: 
+  - **Answer**: 0% is provided as binary only. The entire library consists of source code in the form of a single C++ header file.
 - How much is binary, expressed as a fraction of the total storage footprint?
-  - **Answer**: 
+  - **Answer**: 0% is provided as binary. The entire library consists of source code in the form of a single C++ header file.
 - For binaries, what claims are being made and how confident are we in the
   people/organisations making the claims?
-  - **Answer**: 
+  - **Answer**: 0% is provided as binary. The entire library consists of source code in the form of a single C++ header file.
 - For third-party source code, what claims are we making, and how confident
   are we about these claims?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no external dependencies/accesses to third party source code, as stated in JLS-34.
 - For software developed by us, what claims are we making, and how confident
   are we about these claims?
-  - **Answer**:
+  - **Answer**: There is no software developed by us, as we just use the original nlohmann/json library within eclipse_score/inc_nlohmann_json. For the code developed in nlohmann/json, all claims and confidence are provided in the statements. See e.g., all the no-json-faults (NJF) items.
 
 
 ---
@@ -1293,7 +1303,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |N/A|N/A|N/A|N/A|N/A|N/A|
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1386,7 +1397,7 @@ Prohibited misbehaviours for the nlohmann/json library are identified, and mitig
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLS-02](JLS.md#jls-02)  | Fuzz testing is used in the original nlohmann/json repository (https://github.com/nlohmann/json) to uncover edge cases and failure modes throughout development. (https://github.com/nlohmann/json/blob/develop/tests/fuzzing.md) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-02](JLS.md#jls-02)  | Fuzz testing is used in the nlohmann/json repository to uncover edge cases and failure modes throughout development. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-25](JLS.md#jls-25)  | Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-31](JLS.md#jls-31)  | The nlohmann/json repository uses a static code analysis tool. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
@@ -1416,7 +1427,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1576,7 +1588,9 @@ Construction of releases for the nlohmann/json library is fully repeatable and t
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [JLS-14](JLS.md#jls-14)  | The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [JLS-21](JLS.md#jls-21)  | A score is calculated based on the number of mirrored and unmirrored things. (TODO) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-38](JLS.md#jls-38)  | Every release of the nlohmann/json library shall provide configuration management for build instructions and infrastructure. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-10](JLS.md#jls-10)  | Every release of the nlohmann/json library includes source code, build instructions, test code and test results summaries. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-19](JLS.md#jls-19)  | All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -1594,16 +1608,17 @@ _None_
 
 ![No Image](figs/TA-RELEASES.svg)
 
-|date-time|TA-RELEASES|JLS-14|JLS-21|
-|-|-|-|-|
-|2025-11-19 13:45:36|0.00 |0.00 |0.00 |
-|2025-11-20 10:55:40|0.00 |0.00 |0.00 |
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |
+|date-time|TA-RELEASES|JLS-14|JLS-38|JLS-10|JLS-19|
+|-|-|-|-|-|-|
+|2025-11-19 13:45:36|0.00 |0.00 |N/A|0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |N/A|0.00 |0.00 |
+|2025-11-24 08:25:25|0.00 |0.00 |N/A|0.00 |0.00 |
+|2025-11-24 15:01:45|0.00 |0.00 |N/A|0.00 |0.00 |
+|2025-11-25 14:22:48|0.00 |0.00 |N/A|0.00 |0.00 |
+|2025-11-26 12:04:09|0.00 |0.00 |N/A|0.00 |0.00 |
+|2025-12-02 16:04:44|0.00 |0.00 |N/A|0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1645,16 +1660,16 @@ to TT-RESULTS analysis.
 **Evidence**
 
 - list of reproducible SHAs
-  - **Answer**: 
+  - **Answer**: JLS-14 ensures that the SHA value of the nlohmann/json library used within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann (for the same version).
 - list of non-reproducible elements with:
   - explanation and justification
-    - **Answer**: 
+    - **Answer**: The only elements which are not reproducible are 8 CMake integration tests. The list of these, together with explanation and justification, is provided in TSF/docs/non_reproducible_tests.md.
   - details of what is not reproducible
-    - **Answer**: 
+    - **Answer**: The only elements which are not reproducible are 8 CMake integration tests. The list of these, together with explanation and justification, is provided in TSF/docs/non_reproducible_tests.md.
 - evidence of configuration management for build instructions and infrastructure
-  - **Answer**: 
+  - **Answer**: Provided by JLS-10 and JLS-19.
 - evidence of repeatable builds
-  - **Answer**: 
+  - **Answer**: Provided by JLS-53.
 
 **Confidence scoring**
 
@@ -1673,18 +1688,18 @@ R / (R + N + B + M / (M + X))
 
 - How confident are we that all components are taken from within our
   controlled environment?
-  - **Answer**: 
+  - **Answer**: We are very confident that all components are taken from within our controlled environment, as there are currently no external components used within the nlohmann/json library (as documented in JLS-34).
 - How confident are we that all of the tools we are using are also under our
   control?
-  - **Answer**: 
+  - **Answer**: All tools used by nlohmann/json are mirrored within our controlled environment eclipse-score/inc_nlohmann_json. Therefore, these tools are under full control of the Eclipse S-Core organisation.
 - Are our builds repeatable on a different server, or in a different context?
-  - **Answer**: 
+  - **Answer**: Since there is no "build" of the header-only library, yes.
 - How sure are we that our builds don't access the internet?
-  - **Answer**: 
+  - **Answer**: We are confident that our builds don't access the internet, since there is no "build" of the header-only library.
 - How many of our components are non-reproducible?
-  - **Answer**: 
+  - **Answer**:  All of our components are reproducible, since we only use a single component, the nlohmann/json library.
 - How confident are we that our reproducibility check is correct?
-  - **Answer**:
+  - **Answer**: We are very confident that our reproducibility check is correct.
 
 
 ---
@@ -1730,7 +1745,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |
 
 
 
@@ -1819,6 +1835,7 @@ All tests for the nlohmann/json library, and its build and test environments, ar
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [JLS-16](JLS.md#jls-16)  | A list of tests, which is extracted from the test execution, is provided, along with a list of test environments. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-02](JLS.md#jls-02)  | Fuzz testing is used in the nlohmann/json repository to uncover edge cases and failure modes throughout development. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -1836,16 +1853,17 @@ _None_
 
 ![No Image](figs/TA-TESTS.svg)
 
-|date-time|TA-TESTS|JLS-16|
-|-|-|-|
-|2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-20 10:55:40|0.00 |0.00 |
-|2025-11-24 08:25:25|0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |
+|date-time|TA-TESTS|JLS-16|JLS-02|
+|-|-|-|-|
+|2025-11-19 13:45:36|0.00 |0.00 |0.00 |
+|2025-11-20 10:55:40|0.00 |0.00 |0.00 |
+|2025-11-24 08:25:25|0.00 |0.00 |0.00 |
+|2025-11-24 15:01:45|0.00 |0.00 |0.00 |
+|2025-11-25 14:22:48|0.00 |0.00 |0.00 |
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
+|2025-12-02 16:04:44|0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |
 
 
 
@@ -1874,13 +1892,13 @@ TA-ITERATIONS.
 **Evidence**
 
 - Test build environment reproducibility
-  - **Answer**: 
+  - **Answer**: Provided by JLS-62.
 - Test build configuration
-  - **Answer**: 
+  - **Answer**: Provided by JLS-16.
 - Test build reproducibility
-  - **Answer**: 
+  - **Answer**: Provided by JLS-62.
 - Test environment configuration
-  - **Answer**: 
+  - **Answer**: Provided by JLS-16.
 
 **Confidence scoring**
 
@@ -1890,16 +1908,17 @@ tooling and their build environments are repeatable and reproducible.
 **CHECKLIST**
 
 - How confident are we that our test tooling and environment setups used for tests, fault inductions, and analyses are reproducible?
+  - **Answer**:  The test can be reproduced any time on any machine running the versions of the operating systems and compilers as provided, as described in AOU-14.
   - Are any exceptions identified, documented and justified?
-    - **Answer**: 
+    - **Answer**: To the best of our knowledge, there are no exceptions identified.
 - How confident are we that all test components are taken from within our controlled environment?
-  - **Answer**: 
+  - **Answer**: All tests are either self-contained or download test data from [within Eclipse S-CORE](https://github.com/eclipse-score/inc_nlohmann_json/tree/json_test_data_version_3_1_0_mirror).
 - How confident are we that all of the test environments we are using are also under our control?
-  - **Answer**: 
+  - **Answer**: Very confident, as the environments are standard docker images of ubuntu and standard versions of compilers that are executed in our CI pipeline.
 - Do we record all test environment components, including hardware and infrastructure used for exercising tests and processing input/output data?
-  - **Answer**: 
+  - **Answer**: No, since the tests are independent from hardware, there is no record of hardware or infrastructure.
 - How confident are we that all tests scenarios are repeatable?
-  - **Answer**:
+  - **Answer**: All test scenarios are repeated daily in the CI pipeline.
 
 
 ---
@@ -1950,7 +1969,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -2064,7 +2084,8 @@ _None_
 |2025-11-25 14:22:48|0.00 |0.00 |0.00 |
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |
 |2025-12-02 16:04:44|0.00 |0.00 |0.00 |
-|2025-12-02 17:00:16.609202|0.00 |0.00 |0.00 |
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |
+|2025-12-04 09:00:37.866061|0.00 |0.00 |0.00 |
 
 
 
