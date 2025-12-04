@@ -59,7 +59,7 @@ that may indicate problems in development, test, or production.
 **CHECKLIST**
 
 - What fraction of Expectations are covered by the test data?
-  - **Answer**: The two expectations are JLEX-01 and JLEX-02. Every statement supporting both of the expectations is ultimately supported by a test, except for WFJ-06. For WFJ-06 it is impossible to provide a direct tests, since this is a statement on infinitely many cases. Indirect tests are provided by the rejection of ill-formed json data.
+  - **Answer**: The two expectations are JLEX-01 and JLEX-02. Every statement supporting either of these expectations is ultimately supported by a test, except for WFJ-06. For WFJ-06 it is impossible to provide a direct tests, since this is a statement on infinitely many cases. Indirect tests are provided by the rejection of ill-formed json data.
 - What fraction of Misbehaviours are covered by the monitored indicator data?
   - **Answer**: Currently none, because there is no implemented monitoring of deployed instances yet. This is a future integrator responsibility (see AOU-09, AOU-18 and AOU-19).
 - How confident are we that the indicator data are accurate and timely?
@@ -67,7 +67,7 @@ that may indicate problems in development, test, or production.
 - How reliable is the monitoring process?
   - **Answer**: See the previous question.
 - How well does the production data correlate with our test data?
-  - **Answer**: Due to the general nature of the library, there are no production data.
+  - **Answer**: There are no production data.
 - Are we publishing our data analysis?
   - **Answer**: Analyses of test environments and reported misbehaviours are published in the TSF documentation (via list_of_test_environments.md and nlohmann_misbehaviours_comments.md), but there is currently no published analysis of production monitoring data.
 - Are we comparing and analysing production data vs test?
