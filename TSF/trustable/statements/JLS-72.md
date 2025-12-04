@@ -13,8 +13,8 @@ evidence:
   configuration:
     target_seconds: 2
     urls:
-      - "https://json.nlohmann.me/home/design_goals/"
-      - "https://json.nlohmann.me/api/basic_json/"
+        - "https://json.nlohmann.me/home/design_goals/"
+        - "https://json.nlohmann.me/api/basic_json/"
 ---
 
 The nlohmann/json project documents the intended scope and design trade-offs of the library and specifies the documented interface and behavior of its core JSON type via its API reference.

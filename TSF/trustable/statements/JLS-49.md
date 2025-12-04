@@ -17,11 +17,11 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-            - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md?plain=1#L1842"
-            - "https://github.com/nlohmann/json_test_data"
-            - "https://github.com/eclipse-score/inc_nlohmann_json/tree/json_test_data_version_3_1_0_mirror"
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md?plain=1#L1842"
+          - "https://github.com/nlohmann/json_test_data"
+          - "https://github.com/eclipse-score/inc_nlohmann_json/tree/json_test_data_version_3_1_0_mirror"
 score:
     Erikhu1: 1.0
 ---

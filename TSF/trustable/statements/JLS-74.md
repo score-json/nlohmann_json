@@ -13,8 +13,8 @@ evidence:
   configuration:
     target_seconds: 2
     urls:
-      - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-01"
-      - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-02"
+        - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-01"
+        - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-02"
 ---
 
 Each supporting statement for the Expectations includes references to the CI test evidence that exercises it. The suitability of the referenced tests as evidence for each statement is validated by SME reviewers as part of the scoring process.

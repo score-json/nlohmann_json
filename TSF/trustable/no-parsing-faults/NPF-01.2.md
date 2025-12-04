@@ -2,17 +2,17 @@
 level: 1.1
 normative: true
 references:
-        - type: item
-          items:
-            - JLEX-02
-        - type: cpp_test
-          name: "parse;UTF-8;multiple BOM"
-          path: "TSF/tests/unit-byte_order_mark.cpp"
+    - type: item
+      items:
+        - JLEX-02
+    - type: cpp_test
+      name: "parse;UTF-8;multiple BOM"
+      path: "TSF/tests/unit-byte_order_mark.cpp"
 evidence:
-  type: check_test_results
-  configuration:
-    tests: 
-        - byte_order_mark
+    type: check_test_results
+    configuration:
+      tests: 
+          - byte_order_mark
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

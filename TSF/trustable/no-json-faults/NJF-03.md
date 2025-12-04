@@ -25,11 +25,11 @@ references:
       path: "include/nlohmann/detail/input/lexer.hpp"
       description: "Function to verify whether a candidate literal coincides with its expected value; here called with literal_text = ['f','a','l','s','e']."
 evidence:
-  type: check_test_results
-  configuration:
-    tests: 
-        - class_parser_core
-        - testsuites
+    type: check_test_results
+    configuration:
+      tests: 
+          - class_parser_core
+          - testsuites
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

@@ -19,10 +19,10 @@ evidence:
   configuration:
     target_seconds: 2
     urls:
-      - "https://github.com/nlohmann/json"
-      - "https://github.com/eclipse-score/inc_nlohmann_json"
-      - "https://github.com/eclipse-score/inc_nlohmann_json/blob/main/single_include/nlohmann/json.hpp"
-      - "https://github.com/eclipse-score/inc_nlohmann_json/tree/main/include/nlohmann"
+        - "https://github.com/nlohmann/json"
+        - "https://github.com/eclipse-score/inc_nlohmann_json"
+        - "https://github.com/eclipse-score/inc_nlohmann_json/blob/main/single_include/nlohmann/json.hpp"
+        - "https://github.com/eclipse-score/inc_nlohmann_json/tree/main/include/nlohmann"
 ---
 
 All source code of the nlohmann/json library is mirrored within eclipse-score/inc_nlohmann_json.

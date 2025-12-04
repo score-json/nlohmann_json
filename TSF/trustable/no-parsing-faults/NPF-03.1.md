@@ -2,22 +2,22 @@
 level: 1.1
 normative: true
 references:
-        - type: item
-          items:
-            - JLEX-02
-            - NPF-03
-        - type: cpp_test
-          name: "parse;whitespace"
-          path: "TSF/tests/unit-strings.cpp"
-        - type: function_reference
-          name: "lexer::skip_whitespace"
-          path: "include/nlohmann/detail/input/lexer.hpp"
-          description: "Function that skips admissible whitespace during reading."
+    - type: item
+      items:
+        - JLEX-02
+        - NPF-03
+    - type: cpp_test
+      name: "parse;whitespace"
+      path: "TSF/tests/unit-strings.cpp"
+    - type: function_reference
+      name: "lexer::skip_whitespace"
+      path: "include/nlohmann/detail/input/lexer.hpp"
+      description: "Function that skips admissible whitespace during reading."
 evidence:
-  type: check_test_results
-  configuration:
-    tests: 
-        - strings
+    type: check_test_results
+    configuration:
+      tests: 
+          - strings
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

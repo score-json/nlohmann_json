@@ -8,9 +8,9 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-            - "https://otterdog.eclipse.org/projects/automotive.score/repos/inc_nlohmann_json#rulesets"
+      target_seconds: 2
+      urls:
+          - "https://otterdog.eclipse.org/projects/automotive.score/repos/inc_nlohmann_json#rulesets"
 ---
 
 The mirror of nlohmann/json is configured via infrastructure under direct control, and rejects history rewrites.

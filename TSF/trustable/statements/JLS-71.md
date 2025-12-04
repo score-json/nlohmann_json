@@ -11,10 +11,10 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-            - "https://json.nlohmann.me/features/macros/"
-            - "https://json.nlohmann.me/integration/cmake/"
+      target_seconds: 2
+      urls:
+          - "https://json.nlohmann.me/features/macros/"
+          - "https://json.nlohmann.me/integration/cmake/"
 ---
 
 The nlohmann/json library provides configuration manuals with worked examples.

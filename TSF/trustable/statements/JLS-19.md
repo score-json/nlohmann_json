@@ -2,18 +2,18 @@
 level: 1.1
 normative: true
 references:
-        - type: web_content
-          url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/CMakeLists.txt"
-          description: "CMake build manifest file of the nlohmann/json library."
-        - type: web_content
-          url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/BUILD.bazel"
-          description: "Bazel build manifest file of the nlohmann/json library."
-        - type: web_content
-          url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/meson.build"
-          description: "Meson build manifest file of the nlohmann/json library."
-        - type: web_content
-          url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/Package.swift"
-          description: "Swift Package Manager manifest file of the nlohmann/json library."
+    - type: web_content
+      url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/CMakeLists.txt"
+      description: "CMake build manifest file of the nlohmann/json library."
+    - type: web_content
+      url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/BUILD.bazel"
+      description: "Bazel build manifest file of the nlohmann/json library."
+    - type: web_content
+      url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/meson.build"
+      description: "Meson build manifest file of the nlohmann/json library."
+    - type: web_content
+      url: "https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/Package.swift"
+      description: "Swift Package Manager manifest file of the nlohmann/json library."
 score:
     Erikhu1: 1.0
 ---
