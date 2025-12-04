@@ -13,12 +13,6 @@ The trustable graph is the graphical representation of the argumentation.
 This image presents the full trustable graph, in which each item links to its entry in the documentation. Smaller scale representations of arguments, which are navigable among each other, can be found below. 
     
 
-.. image:: custom_JLS-53_graph.svg
-	:alt: Root of the trustable graph
-	:width: 6000px
-
-Trustable graph centered at JLS-53
-
 .. image:: custom_TRUSTABLE-SOFTWARE_graph.svg
 	:alt: Root of the trustable graph
 	:width: 6000px
@@ -366,3 +360,9 @@ Trustable graph centered at NJF-06.5
 	:width: 6000px
 
 Trustable graph centered at NJF-06.7
+
+.. image:: custom_JLS-53_graph.svg
+	:alt: Root of the trustable graph
+	:width: 6000px
+
+Trustable graph centered at JLS-53
