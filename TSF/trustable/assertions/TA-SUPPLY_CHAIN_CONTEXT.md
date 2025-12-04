@@ -37,15 +37,15 @@ binaries present within the repositories of the components and tools used.
     - **Answer**: Provided in JLS-23, JLS-49.
 - successful build of nlohmann/json from source
   - without access to external source projects
-    - **Answer**: 
+    - **Answer**: As a header-only library, the nlohmann/json library requires no compilation. For build of test suite, see JLS-49.
   - without access to cached data
-    - **Answer**: 
+    - **Answer**: The library and test suite build require no cached data. CMake configuration runs from scratch, generating all artifacts deterministically as shown in ubuntu.yml workflow clean builds.
 - update logs for mirrored projects
-  - **Answer**: 
+  - **Answer**: Updates of nlohmann/json are documented in release notes (see JLS-13). The update process of eclipse-score/inc_nlohmann_json is detailed in TSF/README.md "Update Concept" section.
 - mirrors reject history rewrites
-  - **Answer**: 
+  - **Answer**: Protected by GitHub branch protection rules. Force pushes are disabled on main branch. All changes require PR reviews. This prevents history rewrites (see JLS-66).
 - mirroring is configured via infrastructure under direct control
-  - **Answer**: 
+  - **Answer**: The eclipse-score/inc_nlohmann_json repository, which contains the mirrors, is configured by "Otterdog", which is under direct control by eclipse-score maintainers (see JLS-66).
 
 **Confidence scoring**
 
