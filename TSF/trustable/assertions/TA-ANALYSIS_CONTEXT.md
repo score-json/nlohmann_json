@@ -43,13 +43,13 @@ by confirming that test results remain unchanged when no changes are intended.
 **Evidence**
 
 - Analysis of test data, including thresholds in relation to appropriate statistical properties.
-  - **Answer**: 
+  - **Answer**: The analysis of test data is captured with JLS-17, but there is no explicit quantitative thresholds defined.
 - Analysis of failures
-  - **Answer**: 
+  - **Answer**: Provided by JLS-17 and JLS-26.
 - Analysis of spikes and trends
   - **Answer**: There is currently no time-series or trend analysis over test or monitoring data; failures and misbehaviours are handled case-by-case.
 - Validation of analysis methods used
-  - **Answer**: 
+  - **Answer**: There is no separate formal validation of the analysis methods.
 
 **Confidence scoring**
 
@@ -59,7 +59,7 @@ that may indicate problems in development, test, or production.
 **CHECKLIST**
 
 - What fraction of Expectations are covered by the test data?
-  - **Answer**: The two expectations are JLEX-01 and JLEX-02. Every statement supporting either of these expectations is ultimately supported by a test, except for WFJ-06. For WFJ-06 it is impossible to provide a direct tests, since this is a statement on infinitely many cases. Indirect tests are provided by the rejection of ill-formed json data.
+  - **Answer**: The two expectations are JLEX-01 and JLEX-02. Every statement supporting either of these expectations is ultimately supported by a test, except for WFJ-06. WFJ-06 specifies that `basic_json::accept` must accept exactly JSON values for all possible inputs. Since there are infinitely many possible inputs, this cannot be tested exhaustively. Indirect tests are provided by the rejection of ill-formed json data.
 - What fraction of Misbehaviours are covered by the monitored indicator data?
   - **Answer**: Currently none, because there is no implemented monitoring of deployed instances yet. This is a future integrator responsibility (see AOU-09, AOU-18 and AOU-19).
 - How confident are we that the indicator data are accurate and timely?
@@ -79,15 +79,15 @@ that may indicate problems in development, test, or production.
 - Do we have sensible/appropriate target failure rates?
   - **Answer**: No explicit numeric failure-rate targets are defined. The implicit target is that the CI test suite passes and known misbehaviours remain within an acceptable, manually monitored range.
 - Do we need to check the targets?
-  - **Answer**: For the unit and integration tests, no dedicated target exist. Since the fuzz testing runs and is investigated in the original nlohmann/json repository, there is no need to check the target.
+  - **Answer**: For unit and integration tests, there are no explicit failure rate targets. The implicit target is that the CI test suite passes on all supported environments, which is continuously checked by the CI workflows (see JLS-26). Since the fuzz testing runs and is investigated in the original nlohmann/json repository, there is no need to check the target.
 - Are we achieving the targets?
   - **Answer**: For the unit and integration tests, yes. The degree of target achievement for the fuzz-testing is evaluated within the original nlohmann/json repository.
 - Are all underlying assumptions and target conditions for the analysis specified?
-  - **Answer**: 
+  - **Answer**: For unit and integration tests, the underlying assumption and target condition is that no test is expected to fail, so there is no further analysis beyond checking that CI pipelines are green and investigating any failure.
 - Have the underlying assumptions been verified using known good data?
   - **Answer**:  Key assumptions and conditions for analysing test data and misbehaviours are documented in the TSF scripts and documentation (e.g. capture_test_data_memory_sensitive.py, generate_list_of_tests.py, generate_list_of_misbehaviours.py, and the supporting statements such as JLS-17 and JLS-26). However, a complete, consolidated specification of all analysis assumptions, in particular for monitoring-based indicators and explicit target failure rates, is not yet available.
 - Has the Misbehaviour identification process been verified using known bad data?
-  - **Answer**: Misbehaviours discovered via fuzzing and user-reported issues in nlohmann/json are captured and summarised in JLS-26, which implicitly validates parts of the identification process. There is, however, no automatic process for the identification of misbehaviours. 
+  - **Answer**: Known bad inputs come from bug labelled issues and fuzzing in the upstream nlohmann/json project. These misbehaviours are extracted and summarised by the TSF script referenced in JLS-17 (`generate_list_of_misbehaviours.py`, `nlohmann_misbehaviours_comments.md`). JLS-26 ensures that any CI failure caused by such bad cases is analysed and fixed.
 - Are results shown to be reproducible?
   - **Answer**: CI workflows use pinned containers and GitHub Actions to stabilise the environment, and a dedicated ci_reproducible_tests target exists to run a reproducible subset of tests, but not all tests are fully reproducible. See 
 
