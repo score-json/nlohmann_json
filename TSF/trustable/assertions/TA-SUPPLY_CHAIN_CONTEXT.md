@@ -43,7 +43,7 @@ binaries present within the repositories of the components and tools used.
 - update logs for mirrored projects
   - **Answer**: Updates of nlohmann/json are documented in release notes (see JLS-13). The update process of eclipse-score/inc_nlohmann_json is detailed in the "Update Concept" section of TSF/README.md.
 - mirrors reject history rewrites
-  - **Answer**: Protected by GitHub branch protection rules. Force pushes are disabled on main branch. All changes require PR reviews. This prevents history rewrites (see JLS-66).
+  - **Answer**: The eclipse-score/inc_nlohmann_json main branch is set up with a branch protection rule, which disallows force pushes and requires code reviews for all changes. The branch protection rule prevents history rewrites (see JLS-66).
 - mirroring is configured via infrastructure under direct control
   - **Answer**: The eclipse-score/inc_nlohmann_json repository, which contains the mirrors, is configured by "Otterdog", which is under direct control by eclipse-score maintainers (see JLS-66).
 
