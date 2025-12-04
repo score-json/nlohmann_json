@@ -8,9 +8,9 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls: 
-          - "https://github.com/nlohmann/json/releases"
+      target_seconds: 2
+      urls: 
+        - "https://github.com/nlohmann/json/releases"
 ---
 
 Every release of the nlohmann/json library includes source code, build instructions, test code and test results summaries.

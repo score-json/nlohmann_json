@@ -2,10 +2,10 @@
 level: 1.1
 normative: true
 references:
-        - type: function_reference
-          name: lexer::scan_literal
-          path: "include/nlohmann/detail/input/lexer.hpp"
-          description: "Function to scan a literal candidate, compare it to its expected value and return the corresponding C++ literal."
+    - type: function_reference
+      name: lexer::scan_literal
+      path: "include/nlohmann/detail/input/lexer.hpp"
+      description: "Function to scan a literal candidate, compare it to its expected value and return the corresponding C++ literal."
 ---
 
 The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259.

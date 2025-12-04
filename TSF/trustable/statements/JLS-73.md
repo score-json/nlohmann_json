@@ -14,11 +14,11 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-            - "https://json.nlohmann.me/features/arbitrary_types/"
-            - "https://json.nlohmann.me/features/namespace/"
-            - "https://json.nlohmann.me/integration/migration_guide/"
+      target_seconds: 2
+      urls:
+          - "https://json.nlohmann.me/features/arbitrary_types/"
+          - "https://json.nlohmann.me/features/namespace/"
+          - "https://json.nlohmann.me/integration/migration_guide/"
 ---
 
 The nlohmann/json documentation provides user-facing guidance for extensibility and modular integration, explicitly documenting limitations and constraints of extension interfaces.

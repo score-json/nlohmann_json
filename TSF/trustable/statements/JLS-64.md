@@ -11,10 +11,10 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-        - "https://github.com/nlohmann/json/discussions/5022"
-        - "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+is%3Amerged"
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json/discussions/5022"
+          - "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+is%3Amerged"
 ---
 
 Releases of the nlohmann/json library contain Github pull request approvals.

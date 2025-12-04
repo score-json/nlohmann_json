@@ -13,8 +13,8 @@ evidence:
   configuration:
     target_seconds: 2
     urls:
-      - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-01"
-      - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-02"
+        - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-01"
+        - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/JLEX.html#jlex-02"
 ---
 
 The expected behaviour of the expectations JLEX-01 and JLEX-02 is sufficiently broken-down.
