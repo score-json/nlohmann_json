@@ -48,12 +48,12 @@ sufficient.
 **Evidence**
 
 - List of Expectations
-  - **Answer**: The expectations are provided via JLEX-01 and JLEX-02.
+  - **Answer**: The Expectations are provided via JLEX-01 and JLEX-02.
 - Argument of sufficiency for break-down of expected behaviour for all 
   Expectations
-  - **Answer**: 
+  - **Answer**: # TODO: Not sure how to argument here. There is now way to prove that.
 - Validation and verification of expected behaviour
-  - **Answer**: 
+  - **Answer**: The validation and verification of expected behaviour is done via the evidence provided for all the statements below JLEX-01 and JLEX-02 in the trustable graph. 
 
 
 **Confidence scoring**
@@ -65,26 +65,26 @@ and that the resulting system and tests are validated by appropriate strategies.
 **Checklist**
 
 - How has the list of Expectations varied over time?
-  - **Answer**: The list of expectations is taken from [here](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html), whose development can be retraced using git.
+  - **Answer**: The list of Expectations is taken from [here](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html). The development can be retraced using git.
 - How confident can we be that this list is comprehensive?
-  - **Answer**: The list of expectations has been collected amongst the stakeholders in S-CORE, so that we are very confident that the list is comprehensive. The expectation is to serialize user data into JSON format.
+  - **Answer**: The list of Expectations has been collected amongst the stakeholders in S-CORE, so we are very confident that the list is comprehensive.
 - Could some participants have incentives to manipulate information?
-  - **Answer**: We can not imagine any reason.
+  - **Answer**: We cannot imagine any incentive to manipulate information.
 - Could there be whole categories of Expectations still undiscovered?
-  - **Answer**: It is currently unlikely, but the parsing of CBOR could become relevant at some time.
+  - **Answer**: It is currently unlikely that there are whole categories of Expectations still undiscovered.
 - Can we identify Expectations that have been understood but not specified?
   - **Answer**: There are currently no Expectations that have been understood but not specified.
 - Can we identify some new Expectations, right now?
-  - **Answer**: No, we don't know of any new expectations we could identify right now.
+  - **Answer**: Currently we cannot identify any new Expectations.
 - How confident can we be that this list covers all critical requirements?
-  - **Answer**: We can not think of any more critical requirement of a JSON parser in the sense of RFC8259 than to parse JSON data in the sense of RFC8259.
-- How comprehensive is the list of tests?
-  - **Answer**: Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27.
+  - **Answer**: We are very confident that this list covers all critical requirements.
+- How comprehensive is the list of tests? 
+  - **Answer**: Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27. Therefore, we deem the list of tests to be very comprehensive.
 - Is every Expectation covered by at least one implemented test?
-  - **Answer**: Yes, both of the expectations are covered by at least one implemented test.
+  - **Answer**: Yes, both of the Expectations are covered by at least one implemented test.
 - Are there any Expectations where we believe more coverage would help?
   - **Answer**: No, the coverage is already on a high level and no further gains are expected by further increasing the coverage.
 - How do dependencies affect Expectations, and are their properties verifiable?
-  - **Answer**: The library nlohmann/json does not have external dependencies, so that there are in particular none that affect Expectations.
+  - **Answer**: The nlohmann/json library does not have external dependencies, so that there are none that could possibly affect the Expectations.
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
   - **Answer**: Not that we know of.
