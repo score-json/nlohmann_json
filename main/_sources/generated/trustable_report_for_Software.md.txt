@@ -109,6 +109,10 @@ This presents the compliance for the _JSON-Library Statements_ (JLS) in tabular 
 | [JLS-42](JLS.md#jls-42)  | All manual pull requests to the nlohmann/json repository that introduce non-trivial changes are expected to explain the rationale for the proposed change and to link to an existing issue, in accordance with the project's contribution guidelines. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-43](JLS.md#jls-43)  | Feature requests for the nlohmann/json repository are raised in the project's GitHub discussions and are actively reviewed and answered by the maintainer. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-44](JLS.md#jls-44)  | The manual process for reporting bugs in the nlohmann/json library is well defined and documented in the project's contribution guidelines and bug report template. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-47](JLS.md#jls-47)  | The nlohmann/json library only consists of source code in the form of a single header file, and has no binary artifacts. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-48](JLS.md#jls-48)  | The nlohmann/json project transparently lists any third party tools used in building, testing and documenting the project. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-49](JLS.md#jls-49)  | The eclipse-score/inc_nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-50](JLS.md#jls-50)  | All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-51](JLS.md#jls-51)  | All source code of the nlohmann/json library is mirrored within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-52](JLS.md#jls-52)  | Releases of the nlohmann/json library contain a comprehensive set of attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
 | [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
@@ -117,6 +121,7 @@ This presents the compliance for the _JSON-Library Statements_ (JLS) in tabular 
 | [JLS-63](JLS.md#jls-63)  | Releases of the nlohmann/json library contain commit sign-offs. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-64](JLS.md#jls-64)  | Releases of the nlohmann/json library contain Github pull request approvals. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-65](JLS.md#jls-65)  | Releases of the nlohmann/json library contain continuous-integration test reports such as coverage reports, fuzzing reports & OpenSSF scorecard reports. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-66](JLS.md#jls-66)  | The mirror of nlohmann/json is configured via infrastructure under direct control, and rejects history rewrites. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 
 ## Compliance for NJF 
 This presents the compliance for the _No JSON Faults_ (NJF) in tabular form.
@@ -340,6 +345,6 @@ This presents the compliance for _Well Formed JSON_ (WFJ) in tabular form.
 _Generated for: Software_
 
 * _Repository root: /home/runner/work/inc_nlohmann_json/inc_nlohmann_json_
-* _Commit SHA: 37c1a07bff0939794f4ba7ef760f6f0dbaf1d17c_
-* _Commit date/time: 2025-12-04 15:06:30 UTC_
-* _Commit tag: 37c1a07_
+* _Commit SHA: 748b55a45195563925a98daadab9cc2b5cf27bb9_
+* _Commit date/time: 2025-12-05 10:27:57 UTC_
+* _Commit tag: 748b55a_

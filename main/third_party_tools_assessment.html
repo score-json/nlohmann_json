@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Assessment of Third-Party Tools Used in nlohmann/json &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="_static/css/score_design.css?v=d9fd870c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/modern.css?v=803738c0" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'third_party_tools_assessment';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://score-json.github.io/inc_nlohmann_json/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="3.12.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Eclipse S-CORE</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="concept.html">
+    Concept
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="report.html">
+    Report
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://projects.eclipse.org/projects/automotive.score">
+    Eclipse S-CORE Home-Page
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="concept.html">
+    Concept
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="report.html">
+    Report
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://projects.eclipse.org/projects/automotive.score">
+    Eclipse S-CORE Home-Page
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Assessment of Third-Party Tools Used in nlohmann/json</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="assessment-of-third-party-tools-used-in-nlohmann-json">
+<h1>Assessment of Third-Party Tools Used in nlohmann/json<a class="headerlink" href="#assessment-of-third-party-tools-used-in-nlohmann-json" title="Link to this heading">#</a></h1>
+<p>This file provides an assessment of all third-party tools used in the development, testing, and documentation of nlohmann/json version 3.12.0, as required by TA-INPUTS in the Trustable Software Framework (TSF).</p>
+<p><strong>Assessment Date</strong>: November 25, 2025<br />
+<strong>Assessors</strong>: &#64;erikhu1<br />
+<strong>Target nlohmann/json Version</strong>: v3.12.0</p>
+<section id="tool-assessment-summary">
+<h2>Tool Assessment Summary<a class="headerlink" href="#tool-assessment-summary" title="Link to this heading">#</a></h2>
+<section id="amalgamate-py">
+<h3>amalgamate.py<a class="headerlink" href="#amalgamate-py" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Role</strong>: Third-party Python script, mirrored into the nlohmann/json repository and is used to generate the single-header distribution file <code class="docutils literal notranslate"><span class="pre">json.hpp</span></code> from the modular source tree.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: The upstream README (https://github.com/edlund/amalgamate/blob/master/README.md) explicitly states that <code class="docutils literal notranslate"><span class="pre">amalgamate.py</span></code> is “quite dumb” and may produce “weird results” for non-trivial code. In particular, it only understands very simple <code class="docutils literal notranslate"><span class="pre">#include</span></code> directives and does not correctly handle:</p>
+<ul class="simple">
+<li><p>macro-based includes (e.g. <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">HEADER_PATH</span> <span class="pre">&quot;x.h&quot;</span></code> / <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">HEADER_PATH</span></code>),</p></li>
+<li><p>certain assumptions about file endings (missing final newline, backslash-escaped newline).</p></li>
+</ul>
+<p>As a result, it could incorrectly merge files (wrong order, missing or duplicated code), fail to include required headers, or corrupt the generated header in subtle ways.</p>
+<p>The script originates from an external project that is not under the direct control of the nlohmann/json maintainers and shows limited public maintenance activity.</p>
+</li>
+<li><p><strong>Severity</strong>: High - Any undetected error in the amalgamated header would directly affect the library’s functionality.</p></li>
+<li><p><strong>Detectability</strong>: High - The generated <code class="docutils literal notranslate"><span class="pre">json.hpp</span></code> is stored in version control and built in CI, where it is compiled and run with the full unit test suite. This means that most structural or include-related problems show up as build or test failures, and more subtle issues are further reduced by the use of fuzz testing.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul class="simple">
+<li><p>The script is mirrored into the repository and thus fully auditable.</p></li>
+<li><p>Compilation tests and unit tests are run on the amalgamated <code class="docutils literal notranslate"><span class="pre">json.hpp</span></code>.</p></li>
+<li><p>Changes to the mirrored script and to the generated <code class="docutils literal notranslate"><span class="pre">json.hpp</span></code> are manually reviewed before releases.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="american-fuzzy-lop-afl">
+<h3>American fuzzy lop (AFL)<a class="headerlink" href="#american-fuzzy-lop-afl" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Fuzz testing tool used to generate many random and mutated inputs for the library in order to find crashes and hangs.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: AFL can only explore the parts of the code that are reachable from the chosen fuzz targets and input seeds. It may miss important edge cases or code paths, so existing bugs can remain undiscovered. This can create a false sense of robustness.</p></li>
+<li><p><strong>Severity</strong>: Medium - bugs that are not found by AFL can still reach users, but AFL itself never changes the library code or the released header.</p></li>
+<li><p><strong>Detectability</strong>: Low - missed edge cases are usually only noticed later, for example through other tests, other fuzzers, or bug reports from users.</p></li>
+<li><p><strong>Mitigation</strong>: AFL is only one part of a broader testing strategy. It is complemented by:</p>
+<ul>
+<li><p>continuous fuzzing via OSS-Fuzz and libFuzzer,</p></li>
+<li><p>extensive unit tests with a 100% coverage target,</p></li>
+<li><p>dynamic analysis with tools such as Valgrind.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="appveyor">
+<h3>AppVeyor<a class="headerlink" href="#appveyor" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Continuous integration service used to build and test the library on Windows.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: AppVeyor itself can fail (e.g. service outages, misconfigured jobs, flaky Windows images), which can lead to:</p>
+<ul>
+<li><p>build failures that are unrelated to the code,</p></li>
+<li><p>tests not running or reporting wrong results,</p></li>
+<li><p>Windows-specific issues not being exercised properly.</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: Medium - if Windows CI is broken or misconfigured, Windows-specific problems might not be detected, but the source code and <code class="docutils literal notranslate"><span class="pre">json.hpp</span></code> are not modified by AppVeyor.</p></li>
+<li><p><strong>Detectability</strong>: High - CI results are visible for every commit and pull request, and unexpected failures or missing runs are noticed by maintainers. Suspicious results can be cross-checked with local Windows builds. Any misbehaviours can also be reported by the users.</p></li>
+<li><p><strong>Mitigation</strong>: Multiple CI platforms (GitHub Actions, Cirrus CI), cross-platform testing</p></li>
+</ul>
+</section>
+<section id="artistic-style">
+<h3>Artistic Style<a class="headerlink" href="#artistic-style" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>:  Tool used to automatically format and indent the C++ source code.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Artistic Style can change whitespace and line breaks in a way that makes the code harder to read. In unusual cases or with a wrong configuration, it could also reformat code so that the structure is broken (for example, by changing braces in a way that affects parsing).</p></li>
+<li><p><strong>Severity</strong>: Low - The tool is only used for formatting. if it ever breaks the code, the problem is detected by compilation or tests before a release.</p></li>
+<li><p><strong>Detectability</strong>: High - Formatting changes are visible in code review and any structural problems show up as compiler errors or test failures.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>After reformatting, the code is compiled and tested in CI.</p></li>
+<li><p>Non-trivial or suspicious formatting changes are checked manually during review.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="clang">
+<h3>Clang<a class="headerlink" href="#clang" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>:  One of the main compilers used to build and test the library. In CI it is also used with sanitizers such as AddressSanitizer and UndefinedBehaviorSanitizer. These sanitizers are special compiler modes that make the program crash with a clear error message when it does things like reading/writing invalid memory or relying on undefined behaviour, so such bugs are easier to find during testing.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Clang itself, or its sanitizers, can have bugs. This can lead to:</p>
+<ul>
+<li><p>wrong binary code being generated,</p></li>
+<li><p>some memory or undefined-behaviour problems not being detected,</p></li>
+<li><p>false reports that claim there is a problem when there is none.</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: High - If Clang or its sanitizers miss real issues, tests can still pass even though bugs are present. This reduces confidence in the test results.</p></li>
+<li><p><strong>Detectability</strong>: Medium - problems that only appear with one compiler are partly caught by:</p>
+<ul>
+<li><p>also building and testing with other compilers (e.g. GCC, MSVC) and</p></li>
+<li><p>bug reports from users who build with different toolchains.</p></li>
+</ul>
+</li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The library is built and tested with multiple compilers and versions in CI (Clang, GCC, MSVC).</p></li>
+<li><p>Static analysis tools (e.g. Coverity, cppcheck, Codacy) and dynamic tools (sanitizers, Valgrind) are used in addition to normal compilation and unit tests, which increases the chance of finding real issues even if one compiler or sanitizer misses them.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cmake">
+<h3>CMake<a class="headerlink" href="#cmake" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>:  Primary build system generator used to configure how the library’s internal targets are built on different platforms. CMake reads the project’s <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> files and generates platform-specific build files (e.g. Makefiles, Ninja files, Visual Studio projects) that control the compilation and linking of the unit test and optional helper tools (e.g. sanitizer), including the selection of compilers and the compiler flags used.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: CMake can be misconfigured or behave differently between versions, which can lead to:</p>
+<ul>
+<li><p>wrong or incomplete build configurations (e.g. tests not being built or run),</p></li>
+<li><p>missing or incorrectly detected dependencies and features,</p></li>
+<li><p>wrong compiler or linker flags (e.g. no debug info, missing warnings, wrong standard version).<br />
+In such cases, the code itself may be correct, but the way it is built and tested is not what the developers expect.</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: High - If CMake generates a wrong build configuration, all builds that rely on it can be affected</p></li>
+<li><p><strong>Detectability</strong>: High - most CMake-related problems show up as:</p>
+<ul>
+<li><p>build failures in CI or on user systems,</p></li>
+<li><p>obviously missing targets,</p></li>
+<li><p>inconsistent results between different platforms or compilers.<br />
+Such issues are usually noticed quickly when running builds on multiple systems.</p></li>
+</ul>
+</li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The root <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> in the nlohmann/json repository declares a minimum required CMake version (via <code class="docutils literal notranslate"><span class="pre">cmake_minimum_required(...)</span></code>), so too old or unsupported CMake versions are rejected at configure time rather than producing silently broken build files.</p></li>
+<li><p>The CMake-based build configuration is exercised in continuous integration on multiple platforms and compilers (Linux, macOS, Windows with Clang, GCC, and MSVC), as documented on the project’s “Quality assurance” page (https://json.nlohmann.me/community/quality_assurance/?utm_source=chatgpt.com#simple-integration).</p></li>
+<li><p>The same CMake setup is used to configure and build the internal unit tests (via <code class="docutils literal notranslate"><span class="pre">enable_testing()</span></code> / <code class="docutils literal notranslate"><span class="pre">add_subdirectory(test)</span></code> in <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>) and the small example/demo programs described in the documentation, so incorrect build options or missing dependencies usually cause test or example targets to fail.</p></li>
+<li><p>All changes to the CMake files are tracked in version control and go through pull-request review. They must pass the full CI matrix before being merged, which reduces the risk that a broken CMake configuration is used for a release.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="codacy">
+<h3>Codacy<a class="headerlink" href="#codacy" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Codacy is a hosted code quality and static analysis service that is connected to the nlohmann/json repository. It automatically analyzes new commits and pull requests with various C++ linters and rules, and then reports findings such as style issues, potential bugs, complexity problems, and code smells in a web dashboard and as comments on pull requests.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Codacy can:</p>
+<ul>
+<li><p>report false positives,</p></li>
+<li><p>miss real issues (false negatives),</p></li>
+<li><p>change its rules or analyzers over time, so that the same code can produce different warnings at different points in time even if the project itself has not changed.</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: Low - Codacy is purely informational. It does not modify any code.</p></li>
+<li><p><strong>Detectability</strong>: High - Codacy’s findings are visible alongside results from other tools (e.g. Coverity, cppcheck, compiler warnings), and discrepancies or obviously wrong reports are easy to spot during code review.</p></li>
+<li><p><strong>Mitigation</strong>: Multiple static analysis tools (Coverity, cppcheck, clang-tidy) and manual code review.</p></li>
+</ul>
+</section>
+<section id="coveralls">
+<h3>Coveralls<a class="headerlink" href="#coveralls" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Coveralls is a hosted service for code coverage measurement and reporting. In the nlohmann/json project, coverage data produced during the Ubuntu CI workflow is uploaded to Coveralls from the GitHub Actions workflow <code class="docutils literal notranslate"><span class="pre">.github/workflows/ubuntu.yml</span></code> using the <code class="docutils literal notranslate"><span class="pre">coverallsapp/github-action</span></code> step (“Publish report to Coveralls”). The resulting coverage information is shown on the project’s Coveralls page and is linked as a badge in the README.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Coveralls can:</p>
+<ul>
+<li><p>display incorrect coverage percentages or mark lines as covered/uncovered incorrectly,</p></li>
+<li><p>lose or mix up coverage history, which can make trends look better or worse than they are,</p></li>
+<li><p>be temporarily unavailable.</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: Medium - Misleading coverage information can cause important parts of the code to remain untested, even when the coverage dashboard looks “green”.</p></li>
+<li><p><strong>Detectability</strong>: Medium - Inconsistencies can be compared against local coverage runs.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>Coverage is also generated locally and in CI using <code class="docutils literal notranslate"><span class="pre">lcov</span></code> and viewed as HTML reports, so Coveralls results can be cross-checked against these local reports.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="coverity-scan">
+<h3>Coverity Scan<a class="headerlink" href="#coverity-scan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Coverity Scan is a hosted static analysis service that regularly analyzes the nlohmann/json code base for potential defects. The nlohmann/json repo has a dedicated Coverity Scan entry (linked via the “Coverity Scan Build Status” badge in <code class="docutils literal notranslate"><span class="pre">README.md</span></code>), where findings are listed and tracked in a web dashboard.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Could miss bugs (false negatives) or report non-issues (false positives)</p></li>
+<li><p><strong>Severity</strong>: Medium - Missed bugs or misinterpreted reports can affect the quality of the library.</p></li>
+<li><p><strong>Detectability</strong>: High - Coverity Scan findings are compared with results from other static analyzers (such as cppcheck and Codacy), compiler warnings, and the behaviour observed in tests and fuzzing.</p></li>
+<li><p><strong>Mitigation</strong>: Multiple static analyzers (cppcheck, clang-tidy, Codacy), extensive testing.</p></li>
+</ul>
+</section>
+<section id="cppcheck">
+<h3>cppcheck<a class="headerlink" href="#cppcheck" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Cppcheck is a static analysis tool for C++ that is used to scan the nlohmann/json library code base for potential problems such as null dereferences, uninitialized variables, dead code, or suspicious constructs.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: False positives could waste developer time, false negatives could miss bugs.</p></li>
+<li><p><strong>Severity</strong>: Medium - Missed issues (false negatives) can affect users if they are not caught by other tools or tests. However, its output is advisory, and problems only enter the code base if humans misinterpret or ignore the results.</p></li>
+<li><p><strong>Detectability</strong>: High - Cppcheck’s findings are viewed together with other static analyzers (such as Coverity and Codacy), compiler warnings from different compilers and the behaviour observed in unit tests and fuzzing.</p></li>
+<li><p><strong>Mitigation</strong>: Multiple static analysis tools (Coverity, clang-tidy), compiler warnings enabled, extensive unit tests.</p></li>
+</ul>
+</section>
+<section id="doctest">
+<h3>doctest<a class="headerlink" href="#doctest" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Doctest is the C++ open source unit testing framework used by nlohmann/json for its internal test suite. The project’s unit tests are implemented in source files under <code class="docutils literal notranslate"><span class="pre">tests/src/</span></code> (for example <code class="docutils literal notranslate"><span class="pre">tests/src/unit-*.cpp</span></code>), where test cases are written using doctest macros such as <code class="docutils literal notranslate"><span class="pre">TEST_CASE</span></code>, <code class="docutils literal notranslate"><span class="pre">CHECK</span></code>, and <code class="docutils literal notranslate"><span class="pre">REQUIRE</span></code>.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Doctest itself can have bugs or limitations. This can lead to situations of:</p>
+<ul>
+<li><p>false passes, for example if an assertion macro does not correctly detect a failing condition or if failures are swallowed by the framework,</p></li>
+<li><p>false failures, for example due to issues with test registration, command-line handling, or interaction with specific compilers and optimisation levels,</p></li>
+<li><p>some test cases are never discovered or executed (for example if certain <code class="docutils literal notranslate"><span class="pre">TEST_CASE</span></code> definitions are not registered correctly in some build configurations).</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: High - The doctest-based unit tests are a key mechanism for ensuring correctness of the library before changes are merged or releases are made. If doctest hides real failures or silently skips tests, bugs can remain undetected and be shipped to users.</p></li>
+<li><p><strong>Detectability</strong>: High - Framework problems are partly detectable because the same doctest-based test suite is compiled and executed with multiple compilers (such as Clang, GCC, and MSVC) and on different platforms, so framework or configuration issues often show up as differences between environments or as unexpected crashes in the test binaries.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The doctest-based tests are run in a broad CI matrix (different operating systems, compilers, and standard libraries), which helps reveal framework or configuration issues that only appear under certain toolchains.</p></li>
+<li><p>For critical functionality and previously fixed defects, test coverage is reinforced by additional checks such as fuzzing, sanitizer runs, and targeted manual tests.</p></li>
+<li><p>When a discrepancy is suspected, new test cases are added or existing ones are refined, improving both test coverage and the chance to notice framework-related issues.</p></li>
+<li><p>All changes to the tests or to the way doctest is integrated (e.g. via CMake) go through normal pull requests, are reviewed by maintainers, and must pass the full CI test matrix.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="github-changelog-generator">
+<h3>GitHub Changelog Generator<a class="headerlink" href="#github-changelog-generator" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: GitHub Changelog Generator is a tool that uses the GitHub API to collect issues, pull requests, and tags from the nlohmann/json repository and then generates a <code class="docutils literal notranslate"><span class="pre">ChangeLog.md</span></code> file from this information. It is used to create a human-readable list of changes for releases.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: The tool can miss entries, include wrong or misleading information or produce poorly formatted output (e.g. broken Markdown or duplicated entries).</p></li>
+<li><p><strong>Severity</strong>: Low - Even if the generated changelog is incomplete or inaccurate, this only affects documentation and release notes. It does not change the any code of the library or its functionality.</p></li>
+<li><p><strong>Detectability</strong>: High - Incorrect or missing entries, odd wording, or broken formatting in <code class="docutils literal notranslate"><span class="pre">ChangeLog.md</span></code> are usually easy to spot when maintainers review the file before a release. Users may also report inconsistencies if they notice them.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The generated <code class="docutils literal notranslate"><span class="pre">ChangeLog.md</span></code> is committed to version control and reviewed and edited manually by maintainers before a release.</p></li>
+<li><p>If the generator’s configuration leads to repeated problems (e.g. systematically missing certain types of issues), the configuration or the generation process can be adjusted, and older changelog entries can be corrected in the repository.</p></li>
+<li><p>Because the changelog is under version control, any mistakes can be fixed later, and the history of changes to <code class="docutils literal notranslate"><span class="pre">ChangeLog.md</span></code> is traceable.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="google-benchmark">
+<h3>Google Benchmark<a class="headerlink" href="#google-benchmark" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Google Benchmark is a C++ microbenchmarking framework used in nlohmann/json to implement standalone performance benchmarks for the library. The benchmark program in <code class="docutils literal notranslate"><span class="pre">tests/benchmarks/src/benchmarks.cpp</span></code> uses the Google Benchmark API to measure operations such as <code class="docutils literal notranslate"><span class="pre">json::parse</span></code>, <code class="docutils literal notranslate"><span class="pre">dump</span></code>, and conversions to binary formats (e.g. CBOR) on representative JSON files, so maintainers can track performance and detect regressions between versions.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>:  Google Benchmark can:</p>
+<ul>
+<li><p>produce noisy or misleading measurements if the environment is unstable (e.g. different CPUs, background load, power-saving modes),</p></li>
+<li><p>encourage microbenchmarks that are not representative of real-world usage, leading to optimizations that improve benchmark numbers but not actual user workloads,</p></li>
+<li><p>be misconfigured, which can bias results or exaggerate small differences.</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: Low - Incorrect or misleading benchmark results can waste time or lead to suboptimal performance decisions, but they do not affect the functional correctness or safety of the library.</p></li>
+<li><p><strong>Detectability</strong>: High - suspicious benchmark results can usually be identified by rerunning the benchmarks on the same and on different machines and by comparing results across compilers, optimization levels, and configurations.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>Performance changes suggested by Google Benchmark results are not accepted blindly, maintainers manually interpret the data and consider how realistic the benchmarked scenarios are for typical users.</p></li>
+<li><p>Functional tests and fuzzing remain the primary gate for correctness.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="hedley">
+<h3>Hedley<a class="headerlink" href="#hedley" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Hedley is a third-party header that provides portability and feature-detection macros for different compilers and platforms. nlohmann/json ships a bundled copy in <code class="docutils literal notranslate"><span class="pre">include/nlohmann/thirdparty/hedley/hedley.hpp</span></code>, which is included from <code class="docutils literal notranslate"><span class="pre">json.hpp</span></code> and used to define macros for attributes, warning suppression, and compiler feature checks.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Wrong or incomplete Hedley macros can:</p>
+<ul>
+<li><p>assume compiler features or attributes that are not actually supported,</p></li>
+<li><p>trigger compilation errors or excessive warnings on some compilers,</p></li>
+<li><p>silently disable useful attributes or diagnostics, which may lead to performance issues or missed warnings.</p></li>
+</ul>
+</li>
+<li><p><strong>Severity</strong>: High - Hedley is used throughout the headers and affects how the library is compiled on all platforms. Incorrect macros can break builds or cause subtle differences in behaviour across compilers.</p></li>
+<li><p><strong>Detectability</strong>: High - most problems show up as build failures or unusual warnings on specific compilers or platforms, and are likely to be caught by the project’s CI matrix.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>A specific version of Hedley is used in the nlohman/json repository and is fully under version control and updates are done via pull requests and must pass all CI checks before being included in a release</p></li>
+<li><p>The library is built and tested with multiple compilers (Clang, GCC, MSVC) and on multiple platforms in CI.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="lcov">
+<h3>lcov<a class="headerlink" href="#lcov" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: lcov is used in the nlohmann/json project as part of the coverage setup introduced together with the CMake-based build system (see ‘Added CMake and lcov’ in the project’s changelog and PR #6). It processes gcov output from the doctest-based unit tests to generate local HTML reports, which can be cross-checked against the coverage information published via Coveralls.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: lcov can misinterpret or partially ignore <code class="docutils literal notranslate"><span class="pre">gcov</span></code> data, so that some lines are shown as covered or uncovered incorrectly and generate incomplete or inconsistent HTML reports.</p></li>
+<li><p><strong>Severity</strong>: Low - lcov only reads coverage data and creates reports; it does not affect any code or the functionality of the lirary.</p></li>
+<li><p><strong>Detectability</strong>: High - Inconsistencies can be detected by comparing lcov’s HTML output with the coverage data uploaded to Coveralls.</p></li>
+<li><p><strong>Mitigation</strong>: Mitigation through cross-validation with Coveralls and manual inspection of coverage data.</p></li>
+</ul>
+</section>
+<section id="libfuzzer">
+<h3>libFuzzer<a class="headerlink" href="#libfuzzer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: libFuzzer is LLVM’s fuzzing engine that runs inside the test binary and uses code-coverage feedback to generate new inputs. In nlohmann/json it is used as the fuzzing backend for the fuzz harnesses under <code class="docutils literal notranslate"><span class="pre">tests/src/</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">fuzzer-parse_json.cpp</span></code>), each implementing <code class="docutils literal notranslate"><span class="pre">LLVMFuzzerTestOneInput</span></code> and calling APIs such as <code class="docutils literal notranslate"><span class="pre">json::parse</span></code> and the <code class="docutils literal notranslate"><span class="pre">from_*</span></code> functions for CBOR, MessagePack, UBJSON, and BJData. The same libFuzzer-based targets are also built and run by Google OSS-Fuzz, which executes them continuously with sanitizers to find crashes and undefined behaviour.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: libFuzzer can only explore code that is reachable through the fuzz harness and within the time and resources it is given, so it can miss important edge cases or provide misleading coverage.</p></li>
+<li><p><strong>Severity</strong>: Medium - Bugs that are not found by libFuzzer (false negatives) can still reach users if they are not caught by other fuzzers, tests, or reviews.</p></li>
+<li><p><strong>Detectability</strong>: Low - Missed edge cases are they are typically discovered later through other fuzzers, unit and regression tests, or bug reports from users.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>libFuzzer is used together with other fuzzing approaches (AFL, OSS-Fuzz,..).</p></li>
+<li><p>Crashes and sanitizer findings from fuzzing are treated as defects and, where applicable, fixed and accompanied by additional regression tests.</p></li>
+<li><p>High unit-test coverage.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="material-for-mkdocs">
+<h3>Material for MkDocs<a class="headerlink" href="#material-for-mkdocs" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: The third-party theme used by the mkdocs-based documentation of nlohmann/json. The documentation sources live under <code class="docutils literal notranslate"><span class="pre">docs/mkdocs</span></code> and are built with MkDocs to produce the public site at <a class="reference external" href="https://json.nlohmann.me">https://json.nlohmann.me</a>. The theme controls the visual appearance, navigation, and layout of this site.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Visual issues, broken layouts, accessibility problems</p></li>
+<li><p><strong>Severity</strong>: Low - Problems in the theme can make the documentation harder to read or navigate, but they do not change the library sources.</p></li>
+<li><p><strong>Detectability</strong>: High - Visual or layout issues are usually easy to spot when viewing the documentation site during local builds or on the deployed site, and users can report any problems they encounter.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The documentation is built and viewed locally during development (following the documented Contributing Guidlines).</p></li>
+<li><p>The site can be checked in multiple browsers and on different devices to catch theme-related layout or responsiveness problems.</p></li>
+<li><p>The mkdocs and Material for MkDocs versions used in <code class="docutils literal notranslate"><span class="pre">docs/mkdocs</span></code> are pinned and updated via pull requests, which are reviewed and must pass CI before being merged.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="mkdocs">
+<h3>MkDocs<a class="headerlink" href="#mkdocs" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: MkDocs is the static site generator used to build the nlohmann/json documentation at <a class="reference external" href="https://json.nlohmann.me">https://json.nlohmann.me</a>, using sources in <code class="docutils literal notranslate"><span class="pre">docs/mkdocs/docs</span></code> and the configuration in <code class="docutils literal notranslate"><span class="pre">docs/mkdocs/mkdocs.yml</span></code>. Maintainers build and preview the site locally with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install_venv</span> <span class="pre">-C</span> <span class="pre">docs/mkdocs</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">serve</span> <span class="pre">-C</span> <span class="pre">docs/mkdocs</span></code>, and the same MkDocs setup is also run in CI to build the documentation.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: MkDocs could fail to build the documentation (for example due to configuration or plugin issues), generate pages with broken links or missing sections, or render Markdown in a way that causes formatting or navigation problems.</p></li>
+<li><p><strong>Severity</strong>: Low - Even if the documentation is incomplete or incorrectly rendered, this only affects the documentation site. MkDocs does not modify the library sources.</p></li>
+<li><p><strong>Detectability</strong>: High - Build failures are immediately visible when running the MkDocs commands locally or in CI, and visual or navigation issues can be spotted when reviewing the rendered site.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The documentation is built and viewed locally during development, so maintainers can manually review the generated pages before changes are published.</p></li>
+<li><p>The MkDocs configuration and its dependencies (including the theme and plugins) are kept under version control in <code class="docutils literal notranslate"><span class="pre">docs/mkdocs</span></code>, and updates are applied via pull requests.</p></li>
+<li><p>Broken links or formatting problems reported by users can be fixed by updating the Markdown sources or the MkDocs configuration, with all changes tracked and reviewed like normal code changes.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="oss-fuzz">
+<h3>OSS-Fuzz<a class="headerlink" href="#oss-fuzz" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: OSS-Fuzz is Google’s hosted service for continuous fuzzing of open-source projects. nlohmann/json is enrolled there as the <code class="docutils literal notranslate"><span class="pre">json</span></code> project, where OSS-Fuzz builds the repository together with its libFuzzer-based fuzz harnesses under <code class="docutils literal notranslate"><span class="pre">tests/src/</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">fuzzer-parse_json.cpp</span></code>, <code class="docutils literal notranslate"><span class="pre">fuzzer-parse_cbor.cpp</span></code>,..`) and runs the resulting fuzzers continuously with various sanitizer configurations against all supported parsers. The integration is documented in the project’s documentation/README, and several GitHub issues (e.g. <a class="reference external" href="https://github.com/nlohmann/json/issues/389">#389</a>, <a class="reference external" href="https://github.com/nlohmann/json/issues/409">#409</a>, <a class="reference external" href="https://github.com/nlohmann/json/issues/452">#452</a>) show concrete bugs that were reported by OSS-Fuzz and then fixed in the library.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: OSS-Fuzz can experience service outages or build/configuration issues, meaning that fuzzing temporarily stops or some fuzz targets are not executed as expected. It can also report false positives, which may consume maintainer time, while still missing other edge cases that do not get reached by the current fuzz setup.</p></li>
+<li><p><strong>Severity</strong>: Medium - Continuous fuzzing from OSS-Fuzz is an important safety net for catching parser bugs and undefined behaviour over time. If it stops working or misses certain paths, bugs may remain undetected longer, but OSS-Fuzz itself never modifies the source code or the shipped <code class="docutils literal notranslate"><span class="pre">json.hpp</span></code>.</p></li>
+<li><p><strong>Detectability</strong>: Medium - problems with OSS-Fuzz (such as build failures or missing runs) are visible on the OSS-Fuzz project dashboards and through email notifications, but the absence of new reports does not guarantee the absence of bugs.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The same fuzz harnesses used by OSS-Fuzz can also be built and run locally (with libFuzzer or AFL).</p></li>
+<li><p>Fuzzing is complemented by extensive unit tests with high coverage, sanitizer builds, and manual review of critical parsing and binary-format code.</p></li>
+<li><p>Crashes and sanitizer findings reported by OSS-Fuzz are treated as defects and, where applicable, fixed and covered by regression tests.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="probot">
+<h3>Probot<a class="headerlink" href="#probot" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Probot is a framework for GitHub Apps that automate repository workflows. In the nlohmann/json repo it is configured via <code class="docutils literal notranslate"><span class="pre">.github/config.yml</span></code> to use apps such as Sentiment Bot and Request Info. These bots post automated comments on issues and pull requests, for example reminding users of the Code of Conduct or asking for more information. Their behaviour can be seen in GitHub issues where <code class="docutils literal notranslate"><span class="pre">&#64;sentiment-bot</span></code> has commented.</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Probot-based apps can misclassify comments as toxic and respond inappropriately, repeatedly ask for more information on already well-described issues, or automatically label and close issues that are in fact valid. Such behaviour can confuse contributors or temporarily hide relevant discussions, but it only affects issue and PR handling on GitHub.</p></li>
+<li><p><strong>Severity</strong>: Low - Probot automation influences how issues and pull requests are managed, not how the library is built or executed.</p></li>
+<li><p><strong>Detectability</strong>: High - All Probot actions appear as comments, labels, or status changes in the GitHub UI, so misbehaviour is visible to maintainers and contributors.</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>The Probot configuration in <code class="docutils literal notranslate"><span class="pre">.github/config.yml</span></code> is under control and can be adjusted or reverted via pull requests if a bot behaves undesirably.</p></li>
+<li><p>Maintainers monitor issue and PR activity and can reopen, relabel, or manually respond to threads that were mishandled by automation.</p></li>
+<li><p>If a Probot app causes persistent problems, it can be disabled or its scope reduced without impacting the library code or release process.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="valgrind">
+<h3>Valgrind<a class="headerlink" href="#valgrind" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Role</strong>: Valgrind is a runtime analysis tool used in nlohmann/json to run the test binaries under a memory checker in order to detect leaks and invalid memory accesses. According to the quality assurance documentation and the CMake setup, the test suite can be executed under Valgrind via the <code class="docutils literal notranslate"><span class="pre">JSON_Valgrind</span></code> CMake option, which configures CTest to run the tests with Valgrind and to treat reported memory errors as test failures (using options such as <code class="docutils literal notranslate"><span class="pre">--leak-check=full</span></code> and a non-zero <code class="docutils literal notranslate"><span class="pre">--error-exitcode</span></code>).</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Valgrind can miss some memory errors or report false positives. It also slows down execution significantly, so runs may use smaller inputs or be executed less frequently.</p></li>
+<li><p><strong>Severity</strong>: High - Memory errors, invalid accesses, or leaks are critical, and if Valgrind fails to reveal them and they are not caught by other tools, they can affect applications using nlohmann/json.</p></li>
+<li><p><strong>Detectability</strong>: High - Valgrind’s limitations are partly mitigated because the same test suite is also run with compiler sanitizers (e.g. AddressSanitizer).</p></li>
+<li><p><strong>Mitigation</strong>:</p>
+<ul>
+<li><p>Valgrind is used alongside compiler sanitizers, fuzzing (including OSS-Fuzz), and a high-coverage unit test suite.</p></li>
+<li><p>Memory related findings from Valgrind or sanitizers are treated as defects and, where appropriate, fixed and covered by regression tests.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="assessment-methodology">
+<h2>Assessment Methodology<a class="headerlink" href="#assessment-methodology" title="Link to this heading">#</a></h2>
+<p>Each tool was evaluated based on:</p>
+<ol class="arabic simple">
+<li><p><strong>Role in Release Process</strong>: How the tool contributes to building, testing, or documenting nlohmann/json</p></li>
+<li><p><strong>Potential Misbehaviours</strong>: Ways the tool could malfunction or produce incorrect results</p></li>
+<li><p><strong>Impact Assessment</strong>:</p>
+<ul class="simple">
+<li><p><strong>Severity</strong>: Impact on library correctness, safety, or usability (Low/Medium/High)</p></li>
+<li><p><strong>Detectability</strong>: Likelihood that misbehaviour would be caught by other tools or processes (Low/Medium/High)</p></li>
+</ul>
+</li>
+<li><p><strong>Mitigation Measures</strong>: Existing safeguards that reduce risk from tool misbehaviour</p></li>
+</ol>
+</section>
+<section id="risk-categorization">
+<h2>Risk Categorization<a class="headerlink" href="#risk-categorization" title="Link to this heading">#</a></h2>
+<p>The highest-severity tools are those that directly affect the build and test artefact, namely amalgamate.py, CMake, Hedley, Clang and doctest, while the fuzzing tools AFL, libFuzzer and OSS-Fuzz are assessed as medium severity with low detectability, and the documentation and automation tools (such as MkDocs, Material for MkDocs, GitHub Changelog Generator and Probot) are considered low severity because they do not influence the library’s behaviour.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Severity</p></th>
+<th class="head"><p>Detectability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>amalgamate.py</p></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>CMake</p></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>Hedley</p></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>doctest</p></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>Clang</p></td>
+<td><p>High</p></td>
+<td><p>Medium</p></td>
+</tr>
+<tr class="row-odd"><td><p>Coverity Scan</p></td>
+<td><p>Medium</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>cppcheck</p></td>
+<td><p>Medium</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>AppVeyor</p></td>
+<td><p>Medium</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>Coveralls</p></td>
+<td><p>Medium</p></td>
+<td><p>Medium</p></td>
+</tr>
+<tr class="row-odd"><td><p>AFL</p></td>
+<td><p>Medium</p></td>
+<td><p>Low</p></td>
+</tr>
+<tr class="row-even"><td><p>libFuzzer</p></td>
+<td><p>Medium</p></td>
+<td><p>Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>OSS-Fuzz</p></td>
+<td><p>Medium</p></td>
+<td><p>Low</p></td>
+</tr>
+<tr class="row-even"><td><p>MkDocs</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>Material for MkDocs</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub Changelog Generator</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>Probot</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>Google Benchmark</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>lcov</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-even"><td><p>Codacy</p></td>
+<td><p>Low</p></td>
+<td><p>High</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>The nlohmann/json project employs a multi validation strategy with multiple redundant tools for critical functions (testing, analysis, memory checking). High-severity tools are well-qualified through extensive CI testing, cross-validation, and manual review processes. The risk from tool misbehaviour is assessed as <strong>LOW</strong> due to comprehensive mitigation measures.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<section id="project-documentation">
+<h3>Project documentation<a class="headerlink" href="#project-documentation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/nlohmann/json/blob/v3.12.0/README.md#used-third-party-tools">nlohmann/json README - Used third-party tools</a></p></li>
+<li><p><a class="reference external" href="https://json.nlohmann.me/community/quality_assurance">nlohmann/json Quality Assurance</a></p></li>
+<li><p><a class="reference external" href="https://bestpractices.coreinfrastructure.org/projects/289">CII Best Practices Badge</a></p></li>
+<li><p><a class="reference external" href="https://scorecard.dev/viewer/?uri=github.com/nlohmann/json">OpenSSF Scorecard</a></p></li>
+<li><p><a class="reference external" href="https://json.nlohmann.me/home/design_goals/">Design goals: Testing, Valgrind, Clang Sanitizers, OSS-Fuzz</a></p></li>
+</ul>
+</section>
+<section id="source-and-build-configuration">
+<h3>Source and build configuration<a class="headerlink" href="#source-and-build-configuration" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/nlohmann/json/blob/master/cmake/test.cmake"><code class="docutils literal notranslate"><span class="pre">cmake/test.cmake</span></code> - CTest and <code class="docutils literal notranslate"><span class="pre">JSON_Valgrind</span></code> configuration</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json/blob/master/CMakeLists.txt"><code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> (root) - CMake integration and test setup</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json/blob/master/.github/workflows/ubuntu.yml">Ubuntu CI workflow <code class="docutils literal notranslate"><span class="pre">.github/workflows/ubuntu.yml</span></code> (Coveralls upload)</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json/blob/master/docs/mkdocs/mkdocs.yml">Docs build configuration <code class="docutils literal notranslate"><span class="pre">docs/mkdocs/mkdocs.yml</span></code></a></p></li>
+</ul>
+</section>
+<section id="fuzzing">
+<h3>Fuzzing<a class="headerlink" href="#fuzzing" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://introspector.oss-fuzz.com/project-profile?project=json">OSS-Fuzz project profile <code class="docutils literal notranslate"><span class="pre">json</span></code></a></p></li>
+<li><p><a class="reference external" href="https://github.com/google/oss-fuzz/tree/master/projects/json">OSS-Fuzz project config for nlohmann/json</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json/issues/389">Integer-overflow (OSS-Fuzz issue 267)</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json/issues/577">Heap-buffer-overflow / Stack-overflow reports</a></p></li>
+</ul>
+</section>
+<section id="static-analysis-coverage-external-services">
+<h3>Static analysis, coverage, external services<a class="headerlink" href="#static-analysis-coverage-external-services" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scan.coverity.com/projects/nlohmann-json">Coverity Scan project page for nlohmann/json</a></p></li>
+<li><p><a class="reference external" href="https://coveralls.io/github/nlohmann/json">Coveralls page for nlohmann/json</a></p></li>
+<li><p><a class="reference external" href="https://app.codacy.com/gh/nlohmann/json">Codacy project for nlohmann/json</a></p></li>
+<li><p><a class="reference external" href="https://github.com/linux-test-project/lcov">lcov project documentation</a></p></li>
+</ul>
+</section>
+<section id="tool-specific-external-documentation">
+<h3>Tool-specific external documentation<a class="headerlink" href="#tool-specific-external-documentation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/doctest/doctest">doctest documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/google/benchmark">Google Benchmark documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nemequ/hedley">Hedley documentation</a></p></li>
+<li><p><a class="reference external" href="https://llvm.org/docs/LibFuzzer.html">libFuzzer documentation</a></p></li>
+<li><p><a class="reference external" href="https://valgrind.org/docs/manual/manual.html">Valgrind documentation</a></p></li>
+<li><p><a class="reference external" href="https://www.mkdocs.org/">MkDocs documentation</a></p></li>
+<li><p><a class="reference external" href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/github-changelog-generator/github-changelog-generator">GitHub Changelog Generator</a></p></li>
+<li><p><a class="reference external" href="https://probot.github.io/">Probot framework</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-assessment-summary">Tool Assessment Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amalgamate-py">amalgamate.py</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#american-fuzzy-lop-afl">American fuzzy lop (AFL)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appveyor">AppVeyor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#artistic-style">Artistic Style</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clang">Clang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmake">CMake</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codacy">Codacy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coveralls">Coveralls</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coverity-scan">Coverity Scan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cppcheck">cppcheck</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doctest">doctest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-changelog-generator">GitHub Changelog Generator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-benchmark">Google Benchmark</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hedley">Hedley</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lcov">lcov</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libfuzzer">libFuzzer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#material-for-mkdocs">Material for MkDocs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdocs">MkDocs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oss-fuzz">OSS-Fuzz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probot">Probot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valgrind">Valgrind</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment-methodology">Assessment Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-categorization">Risk Categorization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-documentation">Project documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-and-build-configuration">Source and build configuration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fuzzing">Fuzzing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#static-analysis-coverage-external-services">Static analysis, coverage, external services</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-specific-external-documentation">Tool-specific external documentation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/score-json/inc_nlohmann_json/edit/main/docs/third_party_tools_assessment.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/third_party_tools_assessment.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

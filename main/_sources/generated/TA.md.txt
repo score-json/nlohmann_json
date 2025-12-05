@@ -44,7 +44,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |
 
 
 
@@ -188,7 +189,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -330,7 +332,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -453,7 +456,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -594,7 +598,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |
 
 
 
@@ -714,7 +719,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -867,7 +873,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |
 |2025-12-04 13:58:56|0.00 |
 |2025-12-04 15:06:30|0.00 |
-|2025-12-04 16:15:21.412402|0.00 |
+|2025-12-05 10:27:57|0.00 |
+|2025-12-05 11:14:37.495996|0.00 |
 
 
 
@@ -993,6 +1000,11 @@ All inputs to the nlohmann/json library are assessed, to identify potential risk
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-47](JLS.md#jls-47)  | The nlohmann/json library only consists of source code in the form of a single header file, and has no binary artifacts. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-34](JLS.md#jls-34)  | The nlohmann/json library has no external components or dependencies besides the C++ standard components. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
+| [JLS-48](JLS.md#jls-48)  | The nlohmann/json project transparently lists any third party tools used in building, testing and documenting the project. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-49](JLS.md#jls-49)  | The eclipse-score/inc_nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-50](JLS.md#jls-50)  | All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -1010,19 +1022,20 @@ _None_
 
 ![No Image](figs/TA-INPUTS.svg)
 
-|date-time|TA-INPUTS|JLS-04|
-|-|-|-|
-|2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-20 10:55:40|0.00 |0.00 |
-|2025-11-24 08:25:25|0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |
+|date-time|TA-INPUTS|JLS-04|JLS-47|JLS-34|JLS-48|JLS-49|JLS-50|
+|-|-|-|-|-|-|-|-|
+|2025-11-19 13:45:36|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-11-20 10:55:40|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-11-24 08:25:25|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-11-24 15:01:45|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-11-25 14:22:48|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-11-26 12:04:09|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-12-02 16:04:44|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-12-04 08:03:28|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-12-04 13:58:56|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-12-04 15:06:30|0.00 |0.00 |N/A|0.00 |N/A|N/A|N/A|
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1074,33 +1087,33 @@ As a result, for example, any binary inputs without reproducible build steps or 
 
 - List of components used to build nlohmann/json, including:
   - Whether content is provided as source or binary
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library consists of only source code in the form of a single header file, and has no binary artifacts (see JLS-47).
 - Record of component assessments:
   - Originating project and version
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Date of assessments and identity of assessors
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Role of component in nlohmann/json
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Sources of bug and risk data
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Potential misbehaviours and risks identified and assessed
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
 - List of tools used to build and verify nlohmann/json
-  - **Answer**: 
+  - **Answer**: Provided in JLS-48 and JLS-49.
 - Record of tool assessments:
   - Originating project and tool version
-    - **Answer**: 
+    - **Answer**: Provided in JLS-48 and JLS-50.
   - Date of assessments and identity of assessors
-    - **Answer**: 
+    - **Answer**: Provided in JLS-50.
   - Role of the tool in nlohmann/json releases
-    - **Answer**: 
+    - **Answer**: Provided in JLS-48 and JLS-50.
   - Potential misbehaviours and impacts
-    - **Answer**: 
+    - **Answer**: Provided in JLS-50.
   - Detectability and severity of impacts
-    - **Answer**: 
+    - **Answer**: Provided in JLS-50.
 - Tests or measures to address identified impacts
-  - **Answer**: 
+  - **Answer**: Provided in JLS-50.
 
 **Confidence scoring**
 
@@ -1111,37 +1124,37 @@ and impact for nlohmann/json, and the sources of risk and issue data identified.
 **Checklist**
 
 - Are there components that are not on the list?
-  - **Answer**: 
+  - **Answer**: No, the nlohmann/json library has no components besides the single hpp header file. 
 - Are there assessments for all components?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file. 
 - Has an assessment been done for the current version of the component?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file. 
 - Have sources of bug and/or vulnerability data been identified?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file. 
 - Have additional tests and/or Expectations been documented and linked to
   component assessment?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file.
 - Are component tests run when integrating new versions of components?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file.
 - Are there tools that are not on the list?
-  - **Answer**: 
+  - **Answer**: No tools have been identified which are not listed.
 - Are there impact assessments for all tools?
-  - **Answer**: 
+  - **Answer**: Yes, see JLS-50.
 - Have tools with high impact been qualified?
-  - **Answer**: 
+  - **Answer**: Yes, see JLS-50.
 - Were assessments or reviews done for the current tool versions?
-  - **Answer**: 
+  - **Answer**: Yes, see JLS-50.
 - Have additional tests and/or Expectations been documented and linked to
   tool assessments?
-  - **Answer**: 
+  - **Answer**: Yes, the CI-pipeline includes tests on some third party tools, see JLS-50.
 - Are tool tests run when integrating new versions of tools?
-  - **Answer**: 
+  - **Answer**: Yes, the tool tests are integrated into the CI-pipeline, see JLS-50.
 - Are tool and component tests included in release preparation?
-  - **Answer**: 
+  - **Answer**: The tool tests are integrated into the CI-pipeline, see JLS-50.
 - Can patches be applied, and then upstreamed for long-term maintenance?
-  - **Answer**: 
+  - **Answer**: Yes, if ever a misbehaviour is found and patched, then a pull-request to the original project repository can be opened to upstream the changes.
 - Do all dependencies comply with acceptable licensing terms?
-  - **Answer**:
+  - **Answer**: Yes, the library is licensed under MIT License.
 
 
 ---
@@ -1193,7 +1206,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1325,7 +1339,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1451,7 +1466,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1614,6 +1630,7 @@ Construction of releases for the nlohmann/json library is fully repeatable and t
 | [JLS-38](JLS.md#jls-38)  | Every release of the nlohmann/json library shall provide configuration management for build instructions and infrastructure. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-10](JLS.md#jls-10)  | Every release of the nlohmann/json library includes source code, build instructions, test code and test results summaries. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-19](JLS.md#jls-19)  | All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
+| [JLS-49](JLS.md#jls-49)  | The eclipse-score/inc_nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -1631,19 +1648,20 @@ _None_
 
 ![No Image](figs/TA-RELEASES.svg)
 
-|date-time|TA-RELEASES|JLS-14|JLS-38|JLS-10|JLS-19|
-|-|-|-|-|-|-|
-|2025-11-19 13:45:36|0.00 |0.00 |N/A|0.00 |0.00 |
-|2025-11-20 10:55:40|0.00 |0.00 |N/A|0.00 |0.00 |
-|2025-11-24 08:25:25|0.00 |0.00 |N/A|0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |N/A|0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |N/A|0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |N/A|0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |N/A|0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |
+|date-time|TA-RELEASES|JLS-14|JLS-38|JLS-10|JLS-19|JLS-49|
+|-|-|-|-|-|-|-|
+|2025-11-19 13:45:36|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-11-20 10:55:40|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-11-24 08:25:25|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-11-24 15:01:45|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-11-25 14:22:48|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-11-26 12:04:09|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-12-02 16:04:44|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |N/A|
+|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |N/A|
+|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |N/A|
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1744,6 +1762,10 @@ All sources and tools for the nlohmann/json library are mirrored in our controll
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [JLS-23](JLS.md#jls-23)  | The Eclipse S-CORE organization mirrors the nlohmann/json project in a github fork. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-49](JLS.md#jls-49)  | The eclipse-score/inc_nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-51](JLS.md#jls-51)  | All source code of the nlohmann/json library is mirrored within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-34](JLS.md#jls-34)  | The nlohmann/json library has no external components or dependencies besides the C++ standard components. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
+| [JLS-66](JLS.md#jls-66)  | The mirror of nlohmann/json is configured via infrastructure under direct control, and rejects history rewrites. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -1761,19 +1783,20 @@ _None_
 
 ![No Image](figs/TA-SUPPLY_CHAIN.svg)
 
-|date-time|TA-SUPPLY_CHAIN|JLS-23|
-|-|-|-|
-|2025-11-19 13:45:36|0.00 |0.00 |
-|2025-11-20 10:55:40|0.00 |0.00 |
-|2025-11-24 08:25:25|0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |
+|date-time|TA-SUPPLY_CHAIN|JLS-23|JLS-49|JLS-51|JLS-34|JLS-66|
+|-|-|-|-|-|-|-|
+|2025-11-19 13:45:36|0.00 |0.00 |N/A|N/A|0.00 |N/A|
+|2025-11-20 10:55:40|0.00 |0.00 |N/A|N/A|0.00 |N/A|
+|2025-11-24 08:25:25|0.00 |0.00 |N/A|N/A|0.00 |N/A|
+|2025-11-24 15:01:45|0.00 |0.00 |N/A|N/A|0.00 |N/A|
+|2025-11-25 14:22:48|0.00 |0.00 |N/A|N/A|0.00 |N/A|
+|2025-11-26 12:04:09|0.00 |0.00 |N/A|N/A|0.00 |N/A|
+|2025-12-02 16:04:44|0.00 |0.00 |N/A|N/A|0.00 |N/A|
+|2025-12-04 08:03:28|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-12-04 13:58:56|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-12-04 15:06:30|0.00 |0.00 |N/A|0.00 |0.00 |N/A|
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1808,20 +1831,20 @@ binaries present within the repositories of the components and tools used.
 
 - list of all nlohmann/json components including
   - URL of mirrored projects in controlled environment
-    - **Answer**: 
+    - **Answer**: Provided in JLS-23, JLS-49, and complemented by JLS-34. 
   - URL of upstream projects
-    - **Answer**: 
+    - **Answer**: Provided in JLS-23 and JLS-49.
 - successful build of nlohmann/json from source
   - without access to external source projects
-    - **Answer**: 
+    - **Answer**: As a header-only library, the nlohmann/json library requires no compilation. For the build of the test suite, see JLS-49.
   - without access to cached data
-    - **Answer**: 
+    - **Answer**: The library and test suite build require no cached data. CMake configuration runs from scratch, generating all artifacts deterministically as shown in ubuntu.yml workflow clean builds.
 - update logs for mirrored projects
-  - **Answer**: 
+  - **Answer**: Updates of nlohmann/json are documented in release notes (see JLS-13). The update process of eclipse-score/inc_nlohmann_json is detailed in the "Update Concept" section of TSF/README.md.
 - mirrors reject history rewrites
-  - **Answer**: 
+  - **Answer**: The eclipse-score/inc_nlohmann_json main branch is set up with a branch protection rule, which disallows force pushes and requires code reviews for all changes. The branch protection rule prevents history rewrites (see JLS-66).
 - mirroring is configured via infrastructure under direct control
-  - **Answer**: 
+  - **Answer**: The eclipse-score/inc_nlohmann_json repository, which contains the mirrors, is configured by "Otterdog", which is under direct control by eclipse-score maintainers (see JLS-66).
 
 **Confidence scoring**
 
@@ -1832,17 +1855,17 @@ compromised.
 **Checklist**
 
 - Could there be other components, missed from the list?
-  - **Answer**: 
+  - **Answer**: Yes. The build toolchain is not mirrored (e.g., compilers like GCC and Clang, build tools like Bazel, and CMake, etc). The potential risk of these being deleted or unavailable is however negligible and accepted.
 - Does the list include all toolchain components?
-  - **Answer**: 
+  - **Answer**: See answer above.
 - Does the toolchain include a bootstrap?
-  - **Answer**: 
+  - **Answer**: See answer above.
 - Could the content of a mirrored project be compromised by an upstream change?
-  - **Answer**: 
+  - **Answer**: No. Upstream changes are only introduced into the mirror through manually reviewed merge requests, and not automatically.
 - Are mirrored projects up to date with the upstream project?
-  - **Answer**: 
+  - **Answer**: Yes. As of 4/12/2025 both the nlohmann/json mirror and nlohmann/json_test_data mirror are up to date with the upstream projects.
 - Are mirrored projects based on the correct upstream?
-  - **Answer**:
+  - **Answer**: Yes.
 
 
 ---
@@ -1894,7 +1917,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -2003,7 +2027,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -2120,7 +2145,8 @@ _None_
 |2025-12-04 08:03:28|0.00 |0.00 |0.00 |
 |2025-12-04 13:58:56|0.00 |0.00 |0.00 |
 |2025-12-04 15:06:30|0.00 |0.00 |0.00 |
-|2025-12-04 16:15:21.412402|0.00 |0.00 |0.00 |
+|2025-12-05 10:27:57|0.00 |0.00 |0.00 |
+|2025-12-05 11:14:37.495996|0.00 |0.00 |0.00 |
 
 
 
