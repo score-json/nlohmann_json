@@ -83,7 +83,7 @@ that may indicate problems in development, test, or production.
 - Are we achieving the targets?
   - **Answer**: For the unit and integration tests, yes. The degree of target achievement for the fuzz-testing is evaluated within the original nlohmann/json repository.
 - Are all underlying assumptions and target conditions for the analysis specified?
-  - **Answer**: For unit and integration tests, the underlying assumption and target condition is that no test is expected to fail, so there is no further analysis beyond checking that CI pipelines are green and investigating any failure.
+  - **Answer**: For all tests, the underlying assumption and target condition is that they should cover all expectations, and that no test is expected to fail. Any failed tests are analyzed and reasonably justified or fixed.
 - Have the underlying assumptions been verified using known good data?
   - **Answer**:  Key assumptions and conditions for analysing test data and misbehaviours are documented in the TSF scripts and documentation (e.g. capture_test_data_memory_sensitive.py, generate_list_of_tests.py, generate_list_of_misbehaviours.py, and the supporting statements such as JLS-17 and JLS-26). However, a complete, consolidated specification of all analysis assumptions, in particular for monitoring-based indicators and explicit target failure rates, is not yet available.
 - Has the Misbehaviour identification process been verified using known bad data?
