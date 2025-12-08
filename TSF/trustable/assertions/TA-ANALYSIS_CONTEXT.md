@@ -85,7 +85,7 @@ that may indicate problems in development, test, or production.
 - Are all underlying assumptions and target conditions for the analysis specified?
   - **Answer**: For all tests, the underlying assumption and target condition is that they should cover all expectations, and that no test is expected to fail. Any failed tests are analyzed and reasonably justified or fixed.
 - Have the underlying assumptions been verified using known good data?
-  - **Answer**:  Key assumptions and conditions for analysing test data and misbehaviours are documented in the TSF scripts and documentation (e.g. capture_test_data_memory_sensitive.py, generate_list_of_tests.py, generate_list_of_misbehaviours.py, and the supporting statements such as JLS-17 and JLS-26). However, a complete, consolidated specification of all analysis assumptions, in particular for monitoring-based indicators and explicit target failure rates, is not yet available.
+  - **Answer**:  The input data which is used for the tests contain both known good data and known bad data (see https://github.com/nlohmann/json_test_data/tree/master/json_tests). As each expectation is mapped to a sub-set of tests, it is indeed verified that the underlying assumption is reasonably verified.
 - Has the Misbehaviour identification process been verified using known bad data?
   - **Answer**: Yes. The misbehaviour identification process has been exercised using known bad data (see https://github.com/nlohmann/json_test_data/tree/master/json_tests).
 - Are results shown to be reproducible?
