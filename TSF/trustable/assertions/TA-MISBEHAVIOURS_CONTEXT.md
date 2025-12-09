@@ -89,20 +89,20 @@ established and reusable solutions.
 **Suggested evidence**
 
 - List of identified Misbehaviours
-  - **Answer**: 
+  - **Answer**: See JLS-69.
 - List of Expectations for mitigations addressing identified Misbehaviours
-  - **Answer**: 
+  - **Answer**: TODO not sure here
 - Risk analysis
-  - **Answer**: JLS-25 and JLS-31
+  - **Answer**: TODO
 - Test analysis, including:
   - False negative tests
-    - **Answer**: 
+    - **Answer**: No false negative tests are currently performed.
   - Exception handling tests
-    - **Answer**: 
+    - **Answer**: No exception handling tests are currently performed.
   - Stress tests
-    - **Answer**: 
+    - **Answer**: Stress tests target system-level behavior under load, while nlohmann/json is a stateless JSON library. There is no long-lived state, connection pool, thread pool, queue or similar.
   - Soak tests
-    - **Answer**: 
+    - **Answer**: Soak tests are used to investigate long-running behaviour, not single operations like a JSON library. Soak tests are therefore not needed for the nlohmann/json library.
 
 **Confidence scoring**
 
