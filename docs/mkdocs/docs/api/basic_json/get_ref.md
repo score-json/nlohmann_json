@@ -38,7 +38,7 @@ Constant.
 
 ## Notes
 
-!!! danger "Undefined behavior"
+!!! danger "Undefined behaviour"
 
     The reference becomes invalid if the underlying JSON object changes.
 

@@ -27,7 +27,7 @@ to use.
 With the default values for `NumberIntegerType` (`std::int64_t`), the default value for `number_integer_t` is
 `#!cpp std::int64_t`.
 
-#### Default behavior
+#### Default behaviour
 
 - The restrictions about leading zeros are not enforced in C++. Instead, leading zeros in integer literals lead to an
   interpretation as an octal number. Internally, the value will be stored as a decimal number. For instance, the C++

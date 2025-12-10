@@ -24,7 +24,7 @@ ignore
 
 ??? example
 
-    The example below shows how the different values of the `error_handler_t` influence the behavior of
+    The example below shows how the different values of the `error_handler_t` influence the behaviour of
     [`dump`](dump.md) when reading serializing an invalid UTF-8 sequence.
 
     ```cpp

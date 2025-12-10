@@ -342,7 +342,7 @@ SHA-256: 63da6d1f22b2a7bb9e4ff7d6b255cf691a161ff49532dcc45d398a53e295835f (json.
 This release introduces three new features:
 
 - **BSON (Binary JSON)** is next to CBOR, MessagePack, and UBJSON the fourth binary (de)serialization format supported by the library.
-- **Adjustable error handlers for invalid Unicode** allows to specify the behavior when invalid byte sequences are serialized.
+- **Adjustable error handlers for invalid Unicode** allows to specify the behaviour when invalid byte sequences are serialized.
 - **Simplified enum/JSON mapping** with a macro in case the default mapping to integers is not desired.
 
 Furthermore, some effort has been invested in improving the **parse error messages**. Besides, a few bugs have been fixed. All changes are backward-compatible.
@@ -350,7 +350,7 @@ Furthermore, some effort has been invested in improving the **parse error messag
 ### :sparkles: New Features
 
 - The library can read and write a subset of **[BSON](http://bsonspec.org/) (Binary JSON)**. All data types known from JSON are supported, whereas other types more tied to MongoDB such as timestamps, object ids, or binary data are currently not implemented. See [the README](https://github.com/nlohmann/json#binary-formats-bson-cbor-messagepack-and-ubjson) for examples. #1244 #1320
-- The behavior when the library encounters an invalid Unicode sequence during serialization can now be controlled by defining one of three **Unicode error handlers**: (1) throw an exception (default behavior), (2) replace invalid sequences by the Unicode replacement character (U+FFFD), or (3) ignore/filter invalid sequences. See the [documentation of the `dump` function](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_a50ec80b02d0f3f51130d4abb5d1cfdc5.html#a50ec80b02d0f3f51130d4abb5d1cfdc5) for examples. #1198 #1314
+- The behaviour when the library encounters an invalid Unicode sequence during serialization can now be controlled by defining one of three **Unicode error handlers**: (1) throw an exception (default behaviour), (2) replace invalid sequences by the Unicode replacement character (U+FFFD), or (3) ignore/filter invalid sequences. See the [documentation of the `dump` function](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_a50ec80b02d0f3f51130d4abb5d1cfdc5.html#a50ec80b02d0f3f51130d4abb5d1cfdc5) for examples. #1198 #1314
 - To easily specify a user-defined **enum/JSON mapping**, a macro `NLOHMANN_JSON_SERIALIZE_ENUM` has been introduced. See the [README section](https://github.com/nlohmann/json#specializing-enum-conversion) for more information. #1208 #1323
 
 ### :bug: Bug Fixes
@@ -485,7 +485,7 @@ This release further fixes several bugs in the library. All changes are backward
 - added package managers: Spack (#1041) and CocoaPods (#1148)
 - fixed Meson include directory (#1142)
 - preprocessor macro `JSON_SKIP_UNSUPPORTED_COMPILER_CHECK` can skip the rejection of unsupported compilers - use at your own risk! (#1128)
-- preprocessor macro `JSON_INTERNAL_CATCH`/`JSON_INTERNAL_CATCH_USER` allows to control the behavior of exception handling inside the library (#1187)
+- preprocessor macro `JSON_INTERNAL_CATCH`/`JSON_INTERNAL_CATCH_USER` allows to control the behaviour of exception handling inside the library (#1187)
 - added note on `char` to JSON conversion
 - added note how to send security-related issue via encrypted email
 - removed dependency to `std::stringstream` (#1117)
@@ -561,7 +561,7 @@ This release fixes several bugs in the library. All changes are backward-compati
 
 - Fixed parsing of **CBOR strings with indefinite length** (#961). Earlier versions of this library misinterpreted the CBOR standard and rejected input with the `0x7F` start byte.
 - Fixed user-defined **conversion to vector type** (#924, #969). A wrong SFINAE check rejected code though a user-defined conversion was provided.
-- Fixed documentation of the parser behavior for **objects with duplicate keys** (#963). The exact behavior is not specified by [RFC 8259](https://tools.ietf.org/html/rfc8259) and the library now also provides no guarantee which object key is stored.
+- Fixed documentation of the parser behaviour for **objects with duplicate keys** (#963). The exact behaviour is not specified by [RFC 8259](https://tools.ietf.org/html/rfc8259) and the library now also provides no guarantee which object key is stored.
 - Added check to detect memory **overflow when parsing UBJSON containers** (#962). The optimized UBJSON format allowed for specifying an array with billions of `null` elements with a few bytes and the library did not check whether this size exceeded `max_size()`.
 
 ### :hammer: Further Changes
@@ -613,7 +613,7 @@ This release adds support for the [**UBJSON**](http://ubjson.org) format and [**
 
 - [Google Benchmark](https://github.com/google/benchmark) is now used for micro benchmarks (see `benchmarks` folder, #921).
 - The serialization (JSON and binary formats) now properly work with the libraries string template parameter, allowing for optimized string implementations to be used in constraint environments such as embedded software (#941, #950).
-- The exceptional behavior can now be overridden by defining macros `JSON_THROW_USER`, `JSON_TRY_USER`, and `JSON_CATCH_USER`, defining the behavior of `throw`, `try` and `catch`, respectively. This allows to switch off C++'s exception mechanism yet still execute user-defined code in case an error condition occurs (#938).
+- The exceptional behaviour can now be overridden by defining macros `JSON_THROW_USER`, `JSON_TRY_USER`, and `JSON_CATCH_USER`, defining the behaviour of `throw`, `try` and `catch`, respectively. This allows to switch off C++'s exception mechanism yet still execute user-defined code in case an error condition occurs (#938).
 - To facilitate the interplay with [flex](https://github.com/westes/flex) and [Bison](https://www.gnu.org/software/bison/), the library does not use the variable name `yytext` any more as it could clash with macro definitions (#933).
 - The library now defines `NLOHMANN_JSON_VERSION_MAJOR`, `NLOHMANN_JSON_VERSION_MINOR`, and `NLOHMANN_JSON_VERSION_PATCH` to allow for conditional compilation based on the included library version (#943, #948).
 - A compilation error with ICC has been fixed (#947).
@@ -910,7 +910,7 @@ This release fixes several security-relevant bugs in the MessagePack and CBOR pa
 ### Changes
 - :bug: Fixed a lot of **bugs in the CBOR and MesssagePack parsers**. These bugs occurred if invalid input was parsed and then could lead in buffer overflows. These bugs were found with Google's [OSS-Fuzz](https://github.com/google/oss-fuzz), see #405, #407, #408, #409, #411, and #412 for more information.
 - :construction_worker: We now also use the **[Doozer](https://doozer.io) continuous integration platform**.
-- :construction_worker: The complete test suite is now also run with **Clang's address sanitizer and undefined-behavior sanitizer**.
+- :construction_worker: The complete test suite is now also run with **Clang's address sanitizer and undefined-behaviour sanitizer**.
 - :white_check_mark: Overworked **fuzz testing**; CBOR and MessagePack implementations are now fuzz-tested. Furthermore, all fuzz tests now include a round trip which ensures created output can again be properly parsed and yields the same JSON value.
 - :memo: Clarified documentation of `find()` function to always return `end()` when called on non-object value types.
 - :hammer: Moved thirdparty test code to `test/thirdparty` directory.
@@ -1064,8 +1064,8 @@ This release fixes a bug in the stream parser (function `parse()` and the `<<`/`
 This release combines a lot of small fixes and improvements. The release is backwards compatible.
 
 ### Changes
-- The **parser/deserialization functions have been generalized** to process any contiguous sequence of 1-byte elements (e.g., `char`, `unsigned char`, `uint8_t`). This includes all kind of string representations (string literals, char arrays, `std::string`, `const char*`), contiguous containers (C-style arrays, `std::vector`, `std::array`, `std::valarray`, `std::initializer_list`). User-defined containers providing random-access iterator access via `std::begin` and `std::end` can be used as well. See the documentation ([1](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_ace63ac4eb1dd7251a259d32e397461a3.html#ace63ac4eb1dd7251a259d32e397461a3), [2](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_a90f05d55d9d0702c075cd281fd0d85ae.html#a90f05d55d9d0702c075cd281fd0d85ae), [3](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_aeffd70f622f8f2a51fd3d95af64b63a7.html#aeffd70f622f8f2a51fd3d95af64b63a7), [4](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_aa8dca2e91a6301c36890f844e64f0023.html#aa8dca2e91a6301c36890f844e64f0023)) for more information. Note that contiguous storage cannot be checked at compile time; if any of the parse functions are called with a noncompliant container, the behavior is undefined and will most likely yield segmentation violation. The preconditions are enforced by an assertion unless the library is compiled with preprocessor symbol `NDEBUG`.
-- As a general remark on **assertions**: The library uses assertions to preclude undefined behavior. A [prominent example](https://github.com/nlohmann/json/issues/289) for this is the `operator[]` for const JSON objects. The behavior of this const version of the operator is undefined if the given key does not exist in the JSON object, because unlike the non-const version, it cannot add a `null` value at the given key. Assertions can be switched of by defining the preprocessor symbol `NDEBUG`. See the [documentation of `assert`](http://en.cppreference.com/w/cpp/error/assert) for more information.
+- The **parser/deserialization functions have been generalized** to process any contiguous sequence of 1-byte elements (e.g., `char`, `unsigned char`, `uint8_t`). This includes all kind of string representations (string literals, char arrays, `std::string`, `const char*`), contiguous containers (C-style arrays, `std::vector`, `std::array`, `std::valarray`, `std::initializer_list`). User-defined containers providing random-access iterator access via `std::begin` and `std::end` can be used as well. See the documentation ([1](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_ace63ac4eb1dd7251a259d32e397461a3.html#ace63ac4eb1dd7251a259d32e397461a3), [2](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_a90f05d55d9d0702c075cd281fd0d85ae.html#a90f05d55d9d0702c075cd281fd0d85ae), [3](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_aeffd70f622f8f2a51fd3d95af64b63a7.html#aeffd70f622f8f2a51fd3d95af64b63a7), [4](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_aa8dca2e91a6301c36890f844e64f0023.html#aa8dca2e91a6301c36890f844e64f0023)) for more information. Note that contiguous storage cannot be checked at compile time; if any of the parse functions are called with a noncompliant container, the behaviour is undefined and will most likely yield segmentation violation. The preconditions are enforced by an assertion unless the library is compiled with preprocessor symbol `NDEBUG`.
+- As a general remark on **assertions**: The library uses assertions to preclude undefined behaviour. A [prominent example](https://github.com/nlohmann/json/issues/289) for this is the `operator[]` for const JSON objects. The behaviour of this const version of the operator is undefined if the given key does not exist in the JSON object, because unlike the non-const version, it cannot add a `null` value at the given key. Assertions can be switched of by defining the preprocessor symbol `NDEBUG`. See the [documentation of `assert`](http://en.cppreference.com/w/cpp/error/assert) for more information.
 - In the course of cleaning up the parser/deserialization functions, the constructor [`basic_json(std::istream&, const parser_callback_t)`](https://nlohmann.github.io/json/classnlohmann_1_1basic__json_a32350263eb105764844c5a85e156a255.html#a32350263eb105764844c5a85e156a255) has been **deprecated** and will be deleted with the next major release 3.0.0 to unify the interface of the library. Deserialization will be done by stream operators or by calling one of the `parse` functions. That is, calls like `json j(i);` for an input stream `i` need to be replaced by `json j = json::parse(i);`. Compilers will produce a deprecation warning if client code uses this function.
 - Minor improvements:
   - Improved the performance of the serialization by avoiding the re-creation of a locale object.
@@ -1186,7 +1186,7 @@ This release fixes several small bugs and adds functionality in a backwards-comp
 
 ### Changes
 - _Fixed_: **Floating-point numbers** are now serialized and deserialized properly such that rountripping works in more cases. [#185, #186, #190, #191, #194]
-- _Added_: The code now contains **assertions** to detect undefined behavior during development. As the standard function `assert` is used, the assertions can be switched off by defining the preprocessor symbol `NDEBUG` during compilation. [#168]
+- _Added_: The code now contains **assertions** to detect undefined behaviour during development. As the standard function `assert` is used, the assertions can be switched off by defining the preprocessor symbol `NDEBUG` during compilation. [#168]
 - _Added_: It is now possible to get a **reference** to the stored values via the newly added function `get_ref()`. [#128, #184]
 - _Fixed_: Access to object values via keys (**`operator[]`**) now works with all kind of string representations. [#171, #189]
 - _Fixed_: The code now compiles again with **Microsoft Visual Studio 2015**. [#144, #167, #188]

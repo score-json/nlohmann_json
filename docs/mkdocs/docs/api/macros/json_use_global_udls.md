@@ -19,7 +19,7 @@ When the macro is not defined, the library will define it to its default value.
 
 ## Notes
 
-!!! info "Future behavior change"
+!!! info "Future behaviour change"
 
     The user-defined string literals will be removed from the global namespace in the next major release of the library.
 
@@ -34,9 +34,9 @@ When the macro is not defined, the library will define it to its default value.
 
 ## Examples
 
-??? example "Example 1: Default behavior"
+??? example "Example 1: Default behaviour"
 
-    The code below shows the default behavior using the `_json` UDL.
+    The code below shows the default behaviour using the `_json` UDL.
     
     ```cpp
     #include <nlohmann/json.hpp>

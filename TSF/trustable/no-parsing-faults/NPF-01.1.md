@@ -2,21 +2,21 @@
 level: 1.1
 normative: true
 references:
-        - type: item
-          items:
-            - JLEX-02
-        - type: cpp_test
-          name: "Unicode (1/5);ignore byte-order-mark"
-          path: "tests/src/unit-unicode1.cpp"
-        - type: cpp_test
-          name: "deserialization;ignoring byte-order marks;BOM and content"
-          path: "tests/src/unit-deserialization.cpp"
+    - type: item
+      items:
+        - JLEX-02
+    - type: cpp_test
+      name: "Unicode (1/5);ignore byte-order-mark"
+      path: "tests/src/unit-unicode1.cpp"
+    - type: cpp_test
+      name: "deserialization;ignoring byte-order marks;BOM and content"
+      path: "tests/src/unit-deserialization.cpp"
 evidence:
-  type: check_test_results
-  configuration:
-    tests: 
-        - unicode1
-        - deserialization
+    type: check_test_results
+    configuration:
+      tests: 
+          - unicode1
+          - deserialization
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

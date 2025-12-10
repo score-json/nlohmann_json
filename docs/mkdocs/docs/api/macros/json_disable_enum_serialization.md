@@ -30,7 +30,7 @@ The default value is `0`.
 
 ## Examples
 
-??? example "Example 1: Disabled behavior"
+??? example "Example 1: Disabled behaviour"
 
     The code below forces the library **not** to create default serialization/deserialization functions `from_json` and `to_json`, meaning the code below
     **does not** compile.

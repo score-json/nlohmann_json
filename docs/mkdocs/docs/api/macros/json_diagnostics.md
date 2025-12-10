@@ -30,7 +30,7 @@ When the macro is not defined, the library will define it to its default value.
     symbol names. 
     
     This allows different parts of a codebase to use different versions or configurations of this library without
-    causing improper behavior.
+    causing improper behaviour.
     
     Where possible, it is still recommended that all code define this the same way for maximum interoperability.
 
@@ -42,7 +42,7 @@ When the macro is not defined, the library will define it to its default value.
 
 ## Examples
 
-??? example "Example 1: default behavior"
+??? example "Example 1: default behaviour"
 
     ```cpp
     --8<-- "examples/diagnostics_standard.cpp"

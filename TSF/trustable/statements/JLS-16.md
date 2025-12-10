@@ -4,7 +4,7 @@ normative: true
 references:
     - type: verbose_file
       path: "./TSF/docs/list_of_test_environments.md"
-      comment: "The list of all test-cases together with their execution environments"
+      comment: "The list of all test cases together with their execution environments."
     - type: website
       url: "https://github.com/eclipse-score/inc_nlohmann_json/actions"
       description: "Github actions page showing that eclipse-score/inc_nlohmann_json is using Github host environment."

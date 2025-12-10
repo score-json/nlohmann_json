@@ -163,7 +163,7 @@ Install CMake targets during install step. This option is `ON` by default if the
 
 ### `JSON_LegacyDiscardedValueComparison`
 
-Enable the (incorrect) legacy comparison behavior of discarded JSON values by defining macro [`JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON`](../api/macros/json_use_legacy_discarded_value_comparison.md). This option is `OFF` by default.
+Enable the (incorrect) legacy comparison behaviour of discarded JSON values by defining macro [`JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON`](../api/macros/json_use_legacy_discarded_value_comparison.md). This option is `OFF` by default.
 
 ### `JSON_MultipleHeaders`
 

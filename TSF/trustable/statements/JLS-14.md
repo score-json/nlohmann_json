@@ -4,7 +4,7 @@ normative: true
 references:
     - type: website
       url: "https://github.com/nlohmann/json/tree/v3.12.0"
-      description: "release site of nlohmann/json containing the sha values"
+      description: "Release site of the nlohmann/json library containing the SHA values."
 evidence:
     type: sha_checker
     configuration:

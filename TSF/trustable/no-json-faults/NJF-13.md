@@ -3,17 +3,17 @@ level: 1.1
 normative: true
 
 references:
-        - type: item
-          items:
-            - JLEX-01
-        - type: cpp_test
-          name: "compliance tests from json.org;expected passes"
-          path: "tests/src/unit-testsuites.cpp"
+      - type: item
+        items:
+          - JLEX-01
+      - type: cpp_test
+        name: "compliance tests from json.org;expected passes"
+        path: "tests/src/unit-testsuites.cpp"
 evidence:
-  type: check_test_results
-  configuration:
-    tests: 
-        - testsuites
+    type: check_test_results
+    configuration:
+      tests: 
+          - testsuites
 score:
     Jonas-Kirchhoff: 0.95
     Erikhu1: 0.95

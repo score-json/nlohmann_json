@@ -4,13 +4,13 @@ normative: true
 references: 
     - type: verbose_file
       path: ./.github/workflows/parent-workflow.yml
-      description: "github workflow running on push to main and triggering the workflow publish_documentation"
+      description: "Github workflow running on push to main and triggering the workflow publish_documentation."
     - type: verbose_file
       path: ./.github/workflows/publish_documentation.yml
-      description: "github workflow executing calculation and storage of trustable scores"
+      description: "Github workflow executing calculation and storage of trustable scores."
     - type: website
       url: "https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/TrustableScoring.db"
-      description: "the database containing the trustable scores"
+      description: "The database containing the trustable scores."
 evidence:
     type: https_response_time
     configuration:
@@ -21,4 +21,4 @@ score:
     Jonas-Kirchhoff: 1.0
 ---
 
-A github workflow of eclipse-score/inc_nlohmann_json saves the history of scores in the trustable graph to derive trends.
+A Github workflow of eclipse-score/inc_nlohmann_json saves the history of scores in the trustable graph to derive trends.

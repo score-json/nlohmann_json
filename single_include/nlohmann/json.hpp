@@ -3019,7 +3019,7 @@ Returns an ordering that is similar to Python:
 - discarded values are not comparable
 - binary is represented as a b"" string in python and directly comparable to a
   string; however, making a binary array directly comparable with a string would
-  be surprising behavior in a JSON file.
+  be surprising behaviour in a JSON file.
 
 @since version 1.0.0
 */
@@ -14482,7 +14482,7 @@ of @ref basic_json do not require complex case distinctions
 (no base class / custom base class used as customization point),
 @ref basic_json always has a base class.
 By default, this class is used because it is empty and thus has no effect
-on the behavior of @ref basic_json.
+on the behaviour of @ref basic_json.
 */
 struct json_default_base {};
 
@@ -23778,7 +23778,7 @@ class basic_json // NOLINT(cppcoreguidelines-special-member-functions,hicpp-spec
 
 #if JSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON
     // all operators that are computed as an odd number of inverses of others
-    // need to be overloaded to emulate the legacy comparison behavior
+    // need to be overloaded to emulate the legacy comparison behaviour
 
     /// @brief comparison: less than or equal
     /// @sa https://json.nlohmann.me/api/basic_json/operator_le/
@@ -24839,7 +24839,7 @@ class basic_json // NOLINT(cppcoreguidelines-special-member-functions,hicpp-spec
                         const auto idx = json_pointer::template array_index<basic_json_t>(last_path);
                         if (JSON_HEDLEY_UNLIKELY(idx > parent.size()))
                         {
-                            // avoid undefined behavior
+                            // avoid undefined behaviour
                             JSON_THROW(out_of_range::create(401, detail::concat("array index ", std::to_string(idx), " is out of range"), &parent));
                         }
 

@@ -82,7 +82,7 @@ that the passed index is the new maximal index. Intermediate values are filled w
     The type `#!cpp json` wraps all JSON value types. It would be impossible to remove
     [`operator[]`](../../api/basic_json/operator%5B%5D.md) for const objects. At the same time, inserting elements for
     non-const objects is really convenient as it avoids awkward `insert` calls. To this end, we decided to have an
-    inserting non-const behavior for both arrays and objects.
+    inserting non-const behaviour for both arrays and objects.
 
 !!! info
 
@@ -91,8 +91,8 @@ that the passed index is the new maximal index. Intermediate values are filled w
 
 !!! danger
 
-    - It is **undefined behavior** to access a const object with a non-existing key.
-    - It is **undefined behavior** to access a const array with an invalid index.
+    - It is **undefined behaviour** to access a const object with a non-existing key.
+    - It is **undefined behaviour** to access a const array with an invalid index.
     - In debug mode, an **assertion** will fire in both cases. You can disable assertions by defining the preprocessor
       symbol `#!cpp NDEBUG` or redefine the macro [`JSON_ASSERT(x)`](../macros.md#json_assertx). See the documentation
       on [runtime assertions](../assertions.md) for more information.
@@ -108,5 +108,5 @@ that the passed index is the new maximal index. Intermediate values are filled w
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | access to existing object key     | reference to existing value is returned                                                                                                              | const reference to existing value is returned                               |
 | access to valid array index       | reference to existing value is returned                                                                                                              | const reference to existing value is returned                               |
-| access to non-existing object key | reference to newly inserted `#!json null` value is returned                                                                                          | **undefined behavior**; [runtime assertion](../assertions.md) in debug mode |
-| access to invalid array index     | reference to newly inserted `#!json null` value is returned; any index between previous maximal index and passed index are filled with `#!json null` | **undefined behavior**; [runtime assertion](../assertions.md) in debug mode |
+| access to non-existing object key | reference to newly inserted `#!json null` value is returned                                                                                          | **undefined behaviour**; [runtime assertion](../assertions.md) in debug mode |
+| access to invalid array index     | reference to newly inserted `#!json null` value is returned; any index between previous maximal index and passed index are filled with `#!json null` | **undefined behaviour**; [runtime assertion](../assertions.md) in debug mode |

@@ -2,15 +2,27 @@
 level: 1.1
 normative: true
 references:
-  - type: verbose_file
-    path: "./.github/workflows/parent-workflow.yml"
-    description: "Parent GitHub workflow that is scheduled to run daily and triggers the ubuntu workflow."
-  - type: verbose_file
-    path: "./.github/workflows/ubuntu.yml"
-    description: "Ubuntu CI workflow that executes the nlohmann/json unit and integration tests in a controlled CI environment."
-  - type: file
-    path: "./TSF/scripts/capture_test_data_memory_sensitive.py"
-    description: "Captures results from each workflow run and appends them to the persistent test results database."
+    - type: verbose_file
+      path: ./.github/workflows/parent-workflow.yml
+      description: "Github workflow running daily and triggering the Ubuntu workflow."
+    - type: verbose_file
+      path: ./.github/workflows/ubuntu.yml
+      description: "Workflow, in which unit tests are executed with a myriad of test environments, and test results are captured."
+    - type: verbose_file
+      path: ./TSF/scripts/capture_test_data.py
+      description: "Script that collects the data produced by CTest in a database."
+    - type: website
+      url: "https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db"
+      description: "The database containing the test results."
+    - type: file
+      path: "./TSF/scripts/capture_test_data_memory_sensitive.py"
+      description: "Captures results from each workflow run and appends them to the persistent test results database."
+evidence:
+    type: https_response_time
+    configuration:
+        target: 2.0
+        urls:
+            - https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db
 score:
     Jonas-Kirchhoff: 1.0
 ---

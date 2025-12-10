@@ -17,7 +17,7 @@ Controls how exceptions are handled by the library.
    The macro is always followed by a scope.
 2. This macro overrides `#!cpp throw` calls inside the library. The argument is the exception to be thrown. Note that
    `JSON_THROW_USER` should leave the current scope (e.g., by throwing or aborting), as continuing after it may yield
-   undefined behavior.
+   undefined behaviour.
 3. This macro overrides `#!cpp try` calls inside the library. It has no arguments and is always followed by a scope.
 
 ## Parameters

@@ -87,7 +87,7 @@ number without loss of precision. If this is impossible (e.g., if the number is 
 [`json.exception.out_of_range.406`](../../home/exceptions.md#jsonexceptionout_of_range406) during parsing.
 - Floating-point numbers are rounded to the next number representable as `double`. For instance
 `#!c 3.141592653589793238462643383279` is stored as [`0x400921fb54442d18`](https://float.exposed/0x400921fb54442d18).
-This is the same behavior as the code `#!c double x = 3.141592653589793238462643383279;`.
+This is the same behaviour as the code `#!c double x = 3.141592653589793238462643383279;`.
 
 !!! success "Interoperability"
 
@@ -153,7 +153,7 @@ NaN (not-a-number) cannot be expressed with the number syntax described above an
 
 That is, there is no way to *parse* a NaN value. However, assignments can store NaN values in a JSON value.
 
-This library serializes NaN values  as `#!js null`. This corresponds to the behavior of JavaScript's
+This library serializes NaN values  as `#!js null`. This corresponds to the behaviour of JavaScript's
 [`JSON.stringify`](https://www.w3schools.com/js/js_json_stringify.asp) function.
 
 !!! example
@@ -230,7 +230,7 @@ Floating-point inside JSON values numbers are compared with `#!c json::number_fl
 ### Number conversion
 
 Just like the C++ language itself, the `get` family of functions allows conversions between unsigned and signed
-integers, and between integers and floating-point values to integers. This behavior may be surprising.
+integers, and between integers and floating-point values to integers. This behaviour may be surprising.
 
 !!! warning "Unconditional number conversions"
 

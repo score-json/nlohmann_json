@@ -17,7 +17,7 @@ By default, implicit conversions are enabled.
 
 ## Notes
 
-!!! info "Future behavior change"
+!!! info "Future behaviour change"
 
     Implicit conversions will be switched off by default in the next major release of the library.
 

@@ -23,7 +23,7 @@ Create a JSON pointer according to the syntax described in
 
 ??? example
 
-    The example shows the construction several valid JSON pointers as well as the exceptional behavior.
+    The example shows the construction several valid JSON pointers as well as the exceptional behaviour.
      
     ```cpp
     --8<-- "examples/json_pointer.cpp"

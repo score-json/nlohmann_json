@@ -47,7 +47,7 @@ Linear in the size of the JSON value.
     That is, implicit conversions can be switched off by defining
     [`JSON_USE_IMPLICIT_CONVERSIONS`](../macros/json_use_implicit_conversions.md) to `0`.
 
-!!! info "Future behavior change"
+!!! info "Future behaviour change"
 
     Implicit conversions will be switched off by default in the next major release of the library. That is,
     `JSON_EXPLICIT` will be set to `#!cpp explicit` by default.

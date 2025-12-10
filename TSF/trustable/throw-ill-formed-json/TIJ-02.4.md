@@ -2,17 +2,17 @@
 level: 1.1
 normative: true
 references:
-        - type: cpp_test
-          name: "parse;exponents;U+0425"
-          path: "TSF/tests/unit-numbers.cpp"
-        - type: cpp_test
-          name: "parse;exponents;U+0436"
-          path: "TSF/tests/unit-numbers.cpp"
+    - type: cpp_test
+      name: "parse;exponents;U+0425"
+      path: "TSF/tests/unit-numbers.cpp"
+    - type: cpp_test
+      name: "parse;exponents;U+0436"
+      path: "TSF/tests/unit-numbers.cpp"
 evidence:
-  type: check_test_results
-  configuration:
-    tests: 
-        - numbers
+    type: check_test_results
+    configuration:
+      tests: 
+          - numbers
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

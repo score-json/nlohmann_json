@@ -254,7 +254,7 @@ basic_json(basic_json&& other) noexcept;
           [runtime assertion](../../features/assertions.md).
         - Range `[first, last)` is valid. Usually, this precondition cannot be checked efficiently. Only certain edge
           cases are detected; see the description of the exceptions above. A violation of this precondition yields
-          undefined behavior.
+          undefined behaviour.
     
     !!! danger "Runtime assertion"
 

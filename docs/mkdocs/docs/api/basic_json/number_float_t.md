@@ -26,7 +26,7 @@ type to use.
 
 With the default values for `NumberFloatType` (`double`), the default value for `number_float_t` is `#!cpp double`.
 
-#### Default behavior
+#### Default behaviour
 
 - The restrictions about leading zeros are not enforced in C++. Instead, leading zeros in floating-point literals will
   be ignored. Internally, the value will be stored as a decimal number. For instance, the C++ floating-point literal

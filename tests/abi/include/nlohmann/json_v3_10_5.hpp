@@ -149,7 +149,7 @@ Returns an ordering that is similar to Python:
 - discarded values are not comparable
 - binary is represented as a b"" string in python and directly comparable to a
   string; however, making a binary array directly comparable with a string would
-  be surprising behavior in a JSON file.
+  be surprising behaviour in a JSON file.
 
 @since version 1.0.0
 */
@@ -21467,7 +21467,7 @@ class basic_json // NOLINT(cppcoreguidelines-special-member-functions,hicpp-spec
                         const auto idx = json_pointer::array_index(last_path);
                         if (JSON_HEDLEY_UNLIKELY(idx > parent.size()))
                         {
-                            // avoid undefined behavior
+                            // avoid undefined behaviour
                             JSON_THROW(out_of_range::create(401, "array index " + std::to_string(idx) + " is out of range", parent));
                         }
 

@@ -70,7 +70,7 @@ section to emulate the effect of the `NLOHMANN_JSON_NAMESPACE_NO_VERSION` macro.
 !!! danger "Use at your own risk"
 
     Disabling the namespace version component and mixing ABI-incompatible versions will result in crashes or incorrect
-    behavior. You have been warned!
+    behaviour. You have been warned!
 ## Disabling the inline namespace completely
 
 When interoperability with code using a pre-3.11.0 version of the library is required, users can, **at their own risk**
@@ -85,7 +85,7 @@ follows:
 
 !!! danger "Use at your own risk"
 
-    Overriding the namespace and mixing ABI-incompatible versions will result in crashes or incorrect behavior. You
+    Overriding the namespace and mixing ABI-incompatible versions will result in crashes or incorrect behaviour. You
     have been warned!
 
 ## Version history
