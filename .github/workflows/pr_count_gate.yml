@@ -6,9 +6,7 @@ on:
 jobs:
   pr_count_gate:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: read
+    
     steps:
       - name: Count open pull requests
         id: pr-count

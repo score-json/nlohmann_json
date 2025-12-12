@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   labeler:
@@ -71,11 +72,8 @@ jobs:
       artifact_id: "coverage_gate-${{ github.sha }}"
 
   pr_count_gate:
-      name: Run PR Count Gate Workflow
-      needs: [ubuntu]
-      uses: ./.github/workflows/pr_count_gate.yml
-      with:
-            artifact_id: "pr_count_gate-${{ github.sha }}"
+    name: Run PR Count Gate Workflow
+    uses: ./.github/workflows/pr_count_gate.yml
 
   dependency_review:
     name: Run dependency_review Workflow
