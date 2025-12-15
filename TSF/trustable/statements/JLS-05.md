@@ -42,6 +42,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    aschemmel-tech: 1.0
 ---
 
 The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently.

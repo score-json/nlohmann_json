@@ -16,6 +16,9 @@ evidence:
                     - "https://github.com/nlohmann/json/releases/tag/v3.12.0"
 score:
     Erikhu1: 0.7
+    aschemmel-tech: 0.8
 ---
 
 Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository.
+
+aschemmel-tech: evidences support bugs and CVE fixing, no mitigation actions are offered.

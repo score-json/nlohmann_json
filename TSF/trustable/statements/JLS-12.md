@@ -14,6 +14,9 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    aschemmel-tech: 1.0
 ---
 
 The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy.
+
+aschemmel-tech: all community standard are covered.
