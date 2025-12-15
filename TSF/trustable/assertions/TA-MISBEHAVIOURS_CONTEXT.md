@@ -91,9 +91,9 @@ established and reusable solutions.
 - List of identified Misbehaviours
   - **Answer**: See JLS-69.
 - List of Expectations for mitigations addressing identified Misbehaviours
-  - **Answer**: TODO not sure here
+  - **Answer**: No such list exists.
 - Risk analysis
-  - **Answer**: TODO
+  - **Answer**: No risk analysis has been performed.
 - Test analysis, including:
   - False negative tests
     - **Answer**: No false negative tests are currently performed.
@@ -117,24 +117,22 @@ considered against the list of Expectations.
 - How confident can we be that this list is comprehensive?
   - **Answer**: Due to the collaborative nature of the open source community, we deem it quite unlikely, but not impossible, that there are any known misbehaviours which are not reported to the nlohmann/json repository.
 - How well do the misbehaviours map to the expectations?
-  - **Answer**: # This is hard to answer since the misbehaviours change continuously, and it is not clear what "map" means in this context. Does it mean that the misbehaviours influence the fullfillment of the expectations? -> maybe ask codethink directly
+  - **Answer**: The identified misbehaviours do not necessarily all have a direct impact on the defined expectations. A mapping of any misbehaviour to the expectations has to be done on a case-by-case basis.
 - Could some participants have incentives to manipulate information?
   - **Answer**:  We can not think of any incentive that any collaborateur could have to manipulate the information.
 - Could there be whole categories of misbehaviours still undiscovered?
   - **Answer**: Due to the wide use and long-standing development of the library it is quite unlikely that any major misbehaviors, in particular regarding the parsing and validating of JSON data in the sense of RFC-8259, is undiscovered. 
 - Can we identify misbehaviours that have been understood but not specified?
-  - **Answer**: 
+  - **Answer**: We currently do not identify any misbehaviours that have been understood but not specified.
 - Can we identify some new misbehaviours, right now?
-  - **Answer**: No, currently no new misbehaviours can be identified
+  - **Answer**: No, currently no new misbehaviours can be identified.
 - Is every misbehaviour represented by at least one fault induction test?
   - **Answer**: Since there are no misbehaviours that concern the use within S-CORE, no.
-- Are fault inductions used to demonstrate that tests which usually pass can
-  and do fail appropriately?
-  - **Answer**: # Fault induction is an uncommon term in software engineering. I think they refer to fault injection, which means deliberately introducing faults to see how the software reacts. A type of fault injection is fuzz testing, which we currently do.
+- Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?
+  - **Answer**: A specific type of fault inductions, fuzz tests, are used.
 - Are all the fault induction results actually collected?
-  - **Answer**: The fuzz testing result are stored in TODO
+  - **Answer**: The fuzz testing result are stored.
 - Are the results evaluated?
-  - **Answer**: # not sure about that
-- Do input analysis findings on verifiable tool or component claims and features
-identify additional misbehaviours or support existing mitigations?
+  - **Answer**: TODO
+- Do input analysis findings on verifiable tool or component claims and features identify additional misbehaviours or support existing mitigations?
   - **Answer**: Currently, there is no analysis which identifies additional misbehaviours. The only such analysis is indirectly via the analysis of the fuzz testing, which currently does not identify additional misbehaviours.
