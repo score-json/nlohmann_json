@@ -51,17 +51,15 @@ reporting bugs, issues, and requests.
 **Suggested evidence**
 
 - Installation manuals with worked examples
-  - **Answer**: https://github.com/nlohmann/json?tab=readme-ov-file#integration
+  - **Answer**: See JLS-70.
 - Configuration manuals with worked examples
-  - **Answer**: https://github.com/nlohmann/json?tab=readme-ov-file#integration and https://github.com/nlohmann/json?tab=readme-ov-file#supported-compilers
+  - **Answer**: See JLS-71.
 - Specification documentation with a clearly defined scope
-  - **Answer**: https://github.com/nlohmann/json?tab=readme-ov-file#design-goals
-- User guides detailing limitations in interfaces designed for expandability or
-  modularity
-  - **Answer**: 
-- Documented strategies used by external users to address constraints and
-  work with existing Statements
-  - **Answer**: # All current AOUs here?
+  - **Answer**: See JLS-72.
+- User guides detailing limitations in interfaces designed for expandability or modularity
+  - **Answer**: #TODO
+- Documented strategies used by external users to address constraints and work with existing Statements
+  - **Answer**: see AOU-10 and AOU-11.
 
 **Confidence scoring**
 
@@ -78,12 +76,12 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: The existing set of AOUs provides effective guidance for consumers.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
-  - **Answer**: # currently unclear how to interpret this question
+  - **Answer**: # TODO
 - Are any Statements explicitly designated as not reusable or adaptable?
   - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
   these constraints in practice?
-  - **Answer**: 
+  - **Answer**: As the nlohmann/json library is widely used, its constraints (like the installation manual) are regurlarly read and applied and therefore demonstrated.
 - Have there been any documented misunderstandings from users, and are these
   visibly resolved?
   - **Answer**: Yes, it is documented that the [brace initialisation](https://json.nlohmann.me/home/faq/) (cf. AOU-06) regularly leads to confusion, cf. [here](https://github.com/nlohmann/json/issues/4898).
