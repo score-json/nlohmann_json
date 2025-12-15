@@ -57,7 +57,7 @@ set of AWIs is incorrect, or the tolerance is too lax.
 **Evidence**
 
 - Risk analyses
-  - **Answer**: 
+  - **Answer**: There is no dedicated TSF risk analysis focusing specifically on runtime behaviour of `eclipse-score/inc_nlohmann_json`.
 - List of advance warning indicators
   - **Answer**: The only two introduced AWIs are provided in JLS-54 and JLS-55.
 - List of Expectations for monitoring mechanisms
@@ -65,7 +65,7 @@ set of AWIs is incorrect, or the tolerance is too lax.
 - List of implemented monitoring mechanisms
   - **Answer**: There are no dedicated monitoring mechanisms for AWIs in the sense of continuous or in-field monitoring. The two AWIs (coverage and PR count) are evaluated only when CI workflows are executed and are used as quality gates at CI time, rather than as a separate, continuous monitoring system (see JLS-54 and JLS-55).
 - List of identified misbehaviours without advance warning indicators
-  - **Answer**: No specific misbehaviours have been identified.
+  - **Answer**: Provided by JLS-69.
 - List of advance warning indicators without implemented monitoring mechanisms
   - **Answer**: All currently defined AWIs (JLS-54 and JLS-55) are evaluated via CI runs, but there is no additional, dedicated monitoring mechanism beyond these CI executions.
 - Advance warning signal data as time series (see TA-DATA)
