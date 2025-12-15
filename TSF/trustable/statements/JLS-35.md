@@ -16,6 +16,9 @@ evidence:
                     - "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved"
 score:
     Erikhu1: 0.9
+    aschemmel-tech: 1.0
 ---
 
 Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline.
+
+aschemmel-tech: evidences support statement

@@ -14,7 +14,7 @@ import json
 import re
 import subprocess
 
-yaml: TypeAlias = str | int | float | list["yaml"] | dict[str, "yaml"]
+yaml: TypeAlias = str | int | float | bool | list["yaml"] | dict[str, "yaml"]
 
 def setup_environment_variables() -> dict[str, str]:
     """
