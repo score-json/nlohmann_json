@@ -113,7 +113,7 @@ This file provides an assessment of all third-party tools used in the developmen
 - **Potential Misbehaviours**: Could miss bugs (false negatives) or report non-issues (false positives)
 - **Severity**: Medium - Missed bugs or misinterpreted reports can affect the quality of the library.
 - **Detectability**: High - Coverity Scan findings are compared with results from other static analyzers (such as cppcheck and Codacy), compiler warnings, and the behaviour observed in tests and fuzzing. 
-- **Mitigation**: Multiple static analyzers (cppcheck, clang-tidy, Codacy), extensive testing.
+- **Mitigation**: Coverity Scan is used within S-CORE, where tool qualification evidence is maintained.
 
 ### cppcheck
 - **Role**: Cppcheck is a static analysis tool for C++ that is used to scan the nlohmann/json library code base for potential problems such as null dereferences, uninitialized variables, dead code, or suspicious constructs.
@@ -175,7 +175,7 @@ This file provides an assessment of all third-party tools used in the developmen
 - **Potential Misbehaviours**: lcov can misinterpret or partially ignore `gcov` data, so that some lines are shown as covered or uncovered incorrectly and generate incomplete or inconsistent HTML reports.
 - **Severity**: Low - lcov only reads coverage data and creates reports; it does not affect any code or the functionality of the lirary. 
 - **Detectability**: High - Inconsistencies can be detected by comparing lcov's HTML output with the coverage data uploaded to Coveralls.
-- **Mitigation**: Mitigation through cross-validation with Coveralls and manual inspection of coverage data.
+- **Mitigation**: lcov is used within S-CORE, where tool qualification evidence is maintained.
 
 ### libFuzzer
 - **Role**: libFuzzer is LLVM's fuzzing engine that runs inside the test binary and uses code-coverage feedback to generate new inputs. In nlohmann/json it is used as the fuzzing backend for the fuzz harnesses under `tests/src/` (e.g. `fuzzer-parse_json.cpp`), each implementing `LLVMFuzzerTestOneInput` and calling APIs such as `json::parse` and the `from_*` functions for CBOR, MessagePack, UBJSON, and BJData. The same libFuzzer-based targets are also built and run by Google OSS-Fuzz, which executes them continuously with sanitizers to find crashes and undefined behaviour.
