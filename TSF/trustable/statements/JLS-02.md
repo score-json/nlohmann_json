@@ -5,7 +5,7 @@ references:
         - type: website
           url: "https://introspector.oss-fuzz.com/project-profile?project=json"
           description: "most recent report for fuzzing introspection of nlohmann/json with historical plots"
-        - type: web_content
+        - type: website
           url: "https://storage.googleapis.com/oss-fuzz-introspector/json/inspector-report/20250824/fuzz_report.html"
           description: "persistent storage of fuzz-testing-report for nlohmann/json version 3.12.0 on 24.08.2025"
         - type: web_content
@@ -21,6 +21,7 @@ evidence:
                 urls:
                     - "https://introspector.oss-fuzz.com/project-profile?project=json"
                     - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
+                    - "https://storage.googleapis.com/oss-fuzz-introspector/json/inspector-report/20250824/fuzz_report.html"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
