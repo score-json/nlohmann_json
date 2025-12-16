@@ -1,0 +1,54 @@
+name: Coverage Gate
+
+on:
+  workflow_call:
+    inputs:
+      artifact_id:
+        description: "Unused, kept for consistency with parent"
+        required: true
+        type: string
+
+jobs:
+  coverage_gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download coverage HTML artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: code-coverage-report
+          path: coverage_html
+
+      - name: Debug list coverage files
+        run: |
+          echo "=== coverage_html contents ==="
+          ls -R coverage_html
+
+      - name: Enforce coverage threshold
+        run: |
+          THRESHOLD=99.19
+
+          echo "=== Extracting line coverage for 'Lines:' from index.html ==="
+
+          HEADER_BLOCK=$(grep -A1 'Lines:' coverage_html/index.html || true)
+          echo "$HEADER_BLOCK"
+
+          LINE_COV=$(echo "$HEADER_BLOCK" | grep -oE "[0-9]+(\.[0-9]+)?" | head -n1 || true)
+          echo "Extracted Line coverage: '${LINE_COV}'"
+
+          if [ -z "$LINE_COV" ]; then
+            echo "Could not extract line coverage for 'Lines:' from index.html"
+            exit 1
+          fi
+
+          COMPARE=$(awk -v cov="$LINE_COV" -v thr="$THRESHOLD" 'BEGIN { if (cov < thr) print "lt"; else print "ge"; }')
+
+          if [ "$COMPARE" = "lt" ]; then
+            echo "Coverage below threshold, failing job."
+            exit 1
+          fi
+
+          echo "Coverage is above threshold."
