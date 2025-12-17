@@ -53,13 +53,13 @@ reporting bugs, issues, and requests.
 - Installation manuals with worked examples
   - **Answer**: See JLS-70.
 - Configuration manuals with worked examples
-  - **Answer**: See JLS-71.
+  - **Answer**: See JLS-71. TODO adapt JLS-71 with sources for configuration.
 - Specification documentation with a clearly defined scope
-  - **Answer**: See JLS-72.
+  - **Answer**: See JLS-72. TODO check what a specification documentation actually is and whether this is covered by JLS-72 (the design goals reference)
 - User guides detailing limitations in interfaces designed for expandability or modularity
-  - **Answer**: #TODO
+  - **Answer**: #TODO answers. Expandability is not restricted, there is also no user guide about that.
 - Documented strategies used by external users to address constraints and work with existing Statements
-  - **Answer**: see AOU-10 and AOU-11.
+  - **Answer**: see AOU-10 and AOU-11. TODO search for possible additoinal AOUs to mention here.
 
 **Confidence scoring**
 
@@ -70,13 +70,13 @@ contradictions and obvious pitfalls within the defined Statements.
 
 - Are the constraints grounded in realistic expectations, backed by real-world
   examples?
-  - **Answer**: The constraints originate from S-CORE, the nlohmann/json library and the RFC-8259 standard. As these are all widely used, the constraints are grounded in realistic expectations.
+  - **Answer**: The constraints originate from S-CORE, the nlohmann/json library and the RFC-8259 standard. As these are all widely used, the constraints are grounded in realistic expectations. TODO think about what constraints are meant here
 - Do they effectively guide downstream consumers in expanding upon existing
   Statements?
   - **Answer**: The existing set of AOUs provides effective guidance for consumers.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
-  - **Answer**: # TODO
+  - **Answer**: # TODO not clear what an upstream is in our case
 - Are any Statements explicitly designated as not reusable or adaptable?
   - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
@@ -84,7 +84,7 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: As the nlohmann/json library is widely used, its constraints (like the installation manual) are regurlarly read and applied and therefore demonstrated.
 - Have there been any documented misunderstandings from users, and are these
   visibly resolved?
-  - **Answer**: Yes, it is documented that the [brace initialisation](https://json.nlohmann.me/home/faq/) (cf. AOU-06) regularly leads to confusion, cf. [here](https://github.com/nlohmann/json/issues/4898).
+  - **Answer**: Yes, it is documented that the [brace initialisation](https://json.nlohmann.me/home/faq/) (cf. AOU-06) regularly leads to confusion, cf. [here](https://github.com/nlohmann/json/issues/4898). TODO look for further misunderstandings
 - Do external users actively keep up with updates, and are they properly
   notified of any changes?
   - **Answer**: External users of the library are not necessarily automatically notified of an update, and are neither assumed nor required to keep up to date. If the external user forks the github repository, however, then github shows automatically whenever the upstream changes.

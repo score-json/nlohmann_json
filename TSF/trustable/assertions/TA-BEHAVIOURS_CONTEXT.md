@@ -51,9 +51,9 @@ sufficient.
   - **Answer**: The Expectations are provided via JLEX-01 and JLEX-02.
 - Argument of sufficiency for break-down of expected behaviour for all 
   Expectations
-  - **Answer**: # TODO: Not sure how to argument here. There is now way to prove that.
+  - **Answer**: TODO: Create a new statement JLS-56 about sufficiency of break-down and reference JLEX-01 and JLEX-02.
 - Validation and verification of expected behaviour
-  - **Answer**: The validation and verification of expected behaviour is done via the evidence provided for all the statements below JLEX-01 and JLEX-02 in the trustable graph. 
+  - **Answer**: The validation and verification of expected behaviour is done via the evidence provided for all the statements below JLEX-01 and JLEX-02 in the trustable graph. TODO reference JLS-03.
 
 
 **Confidence scoring**
@@ -71,20 +71,20 @@ and that the resulting system and tests are validated by appropriate strategies.
 - Could some participants have incentives to manipulate information?
   - **Answer**: We cannot imagine any incentive to manipulate information.
 - Could there be whole categories of Expectations still undiscovered?
-  - **Answer**: It is currently unlikely that there are whole categories of Expectations still undiscovered.
+  - **Answer**: It is currently unlikely that there are whole categories of Expectations still undiscovered. TODO mention SME reviews increase confidence
 - Can we identify Expectations that have been understood but not specified?
   - **Answer**: There are currently no Expectations that have been understood but not specified.
 - Can we identify some new Expectations, right now?
   - **Answer**: Currently we cannot identify any new Expectations.
 - How confident can we be that this list covers all critical requirements?
   - **Answer**: We are very confident that this list covers all critical requirements.
-- How comprehensive is the list of tests? 
+- How comprehensive is the list of tests?
   - **Answer**: Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27. Therefore, we deem the list of tests to be very comprehensive.
 - Is every Expectation covered by at least one implemented test?
   - **Answer**: Yes, both of the Expectations are covered by at least one implemented test.
 - Are there any Expectations where we believe more coverage would help?
   - **Answer**: No, the coverage is already on a high level and no further gains are expected by further increasing the coverage.
 - How do dependencies affect Expectations, and are their properties verifiable?
-  - **Answer**: The nlohmann/json library does not have external dependencies, so that there are none that could possibly affect the Expectations.
+  - **Answer**: The nlohmann/json library does not have external dependencies, so that there are none that could possibly affect the Expectations. TODO say that this doesnt apply to testing
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
-  - **Answer**: Not that we know of.
+  - **Answer**: TODO ask in libera chat or look through TA-Behaviours
