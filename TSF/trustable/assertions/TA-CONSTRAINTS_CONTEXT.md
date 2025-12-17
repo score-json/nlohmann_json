@@ -70,13 +70,13 @@ contradictions and obvious pitfalls within the defined Statements.
 
 - Are the constraints grounded in realistic expectations, backed by real-world
   examples?
-  - **Answer**: The constraints originate from S-CORE, the nlohmann/json library and the RFC-8259 standard. As these are all widely used, the constraints are grounded in realistic expectations. TODO think about what constraints are meant here
+  - **Answer**: The constraints originate from S-CORE, the nlohmann/json library and the RFC-8259 standard. As these are all widely used, the constraints are grounded in realistic expectations.
 - Do they effectively guide downstream consumers in expanding upon existing
   Statements?
   - **Answer**: The existing set of AOUs provides effective guidance for consumers.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
-  - **Answer**: # TODO not clear what an upstream is in our case
+  - **Answer**: 
 - Are any Statements explicitly designated as not reusable or adaptable?
   - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
