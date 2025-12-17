@@ -49,11 +49,10 @@ sufficient.
 
 - List of Expectations
   - **Answer**: The Expectations are provided via JLEX-01 and JLEX-02.
-- Argument of sufficiency for break-down of expected behaviour for all 
-  Expectations
-  - **Answer**: TODO: Create a new statement JLS-56 about sufficiency of break-down and reference JLEX-01 and JLEX-02.
+- Argument of sufficiency for break-down of expected behaviour for all Expectations
+  - **Answer**: See JLS-56.
 - Validation and verification of expected behaviour
-  - **Answer**: The validation and verification of expected behaviour is done via the evidence provided for all the statements below JLEX-01 and JLEX-02 in the trustable graph. TODO reference JLS-03.
+  - **Answer**: The validation and verification of expected behaviour is done via the evidence provided for all the statements below JLEX-01 and JLEX-02 in the trustable graph, in addition to JLS-03.
 
 
 **Confidence scoring**
@@ -71,7 +70,7 @@ and that the resulting system and tests are validated by appropriate strategies.
 - Could some participants have incentives to manipulate information?
   - **Answer**: We cannot imagine any incentive to manipulate information.
 - Could there be whole categories of Expectations still undiscovered?
-  - **Answer**: It is currently unlikely that there are whole categories of Expectations still undiscovered. TODO mention SME reviews increase confidence
+  - **Answer**: It is currently unlikely that there are whole categories of Expectations still undiscovered. 
 - Can we identify Expectations that have been understood but not specified?
   - **Answer**: There are currently no Expectations that have been understood but not specified.
 - Can we identify some new Expectations, right now?
@@ -85,6 +84,6 @@ and that the resulting system and tests are validated by appropriate strategies.
 - Are there any Expectations where we believe more coverage would help?
   - **Answer**: No, the coverage is already on a high level and no further gains are expected by further increasing the coverage.
 - How do dependencies affect Expectations, and are their properties verifiable?
-  - **Answer**: The nlohmann/json library does not have external dependencies, so that there are none that could possibly affect the Expectations. TODO say that this doesnt apply to testing
+  - **Answer**: The nlohmann/json library does not have any external dependencies apart from the testing pipeline, so there are no dependencies that could possibly affect the Expectations. 
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
-  - **Answer**: TODO ask in libera chat or look through TA-Behaviours
+  - **Answer**: For components, there is no input analysis as the nlohmann/json library has no external components (see JLS-34). For Tools, a tool assessment is provided via JLS-50. In addition, the only data provided to the nlohmann/json library is the input data when using the libraries' functionality.
