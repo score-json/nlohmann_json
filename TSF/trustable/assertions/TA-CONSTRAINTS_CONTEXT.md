@@ -57,9 +57,9 @@ reporting bugs, issues, and requests.
 - Specification documentation with a clearly defined scope
   - **Answer**: See JLS-72. TODO check what a specification documentation actually is and whether this is covered by JLS-72 (the design goals reference)
 - User guides detailing limitations in interfaces designed for expandability or modularity
-  - **Answer**: See JLS-73-
+  - **Answer**: See JLS-73.
 - Documented strategies used by external users to address constraints and work with existing Statements
-  - **Answer**: see AOU-10 and AOU-11. TODO search for possible additoinal AOUs to mention here.
+  - **Answer**: See AOU-10 and AOU-11.
 
 **Confidence scoring**
 
