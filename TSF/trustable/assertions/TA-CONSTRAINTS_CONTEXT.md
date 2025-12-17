@@ -53,7 +53,7 @@ reporting bugs, issues, and requests.
 - Installation manuals with worked examples
   - **Answer**: See JLS-70.
 - Configuration manuals with worked examples
-  - **Answer**: See JLS-71. TODO adapt JLS-71 with sources for configuration.
+  - **Answer**: See JLS-71.
 - Specification documentation with a clearly defined scope
   - **Answer**: See JLS-72. TODO check what a specification documentation actually is and whether this is covered by JLS-72 (the design goals reference)
 - User guides detailing limitations in interfaces designed for expandability or modularity
