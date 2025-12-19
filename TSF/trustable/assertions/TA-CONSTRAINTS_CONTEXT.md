@@ -81,10 +81,10 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
   these constraints in practice?
-  - **Answer**: As the nlohmann/json library is widely used, its constraints (like the installation manual) are regurlarly read and applied and therefore demonstrated.
+  - **Answer**: As the nlohmann/json library is widely used, its constraints (like the installation manual) are regularly read and applied and therefore demonstrated.
 - Have there been any documented misunderstandings from users, and are these
   visibly resolved?
   - **Answer**: Yes, several recurring misunderstandings are explicitly documented and addressed via upstream documentation and closed issues. For example, brace-initialization unexpectedly yielding arrays and differing across compilers is called out in the [FAQ](https://json.nlohmann.me/home/faq/) and referenced from issues  [here](https://github.com/nlohmann/json/issues/4898), and duplicate-key behavior is clarified in the release notes as unspecified by RFC 8259 (see [release notes](https://json.nlohmann.me/home/releases) and issue [#2667](https://github.com/nlohmann/json/discussions/2667)).
 - Do external users actively keep up with updates, and are they properly
   notified of any changes?
-  - **Answer**: External users of the library are not necessarily automatically notified of an update, and are neither assumed nor required to keep up to date. If the external user forks the github repository, however, then github shows automatically whenever the upstream changes.
+  - **Answer**: External users of the library are not necessarily automatically notified of an update, and are neither assumed nor required to keep up to date. If the external user forks the GitHub repository, however, then GitHub shows automatically whenever the upstream changes.
