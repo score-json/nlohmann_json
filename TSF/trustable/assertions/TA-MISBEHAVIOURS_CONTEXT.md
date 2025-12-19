@@ -99,7 +99,7 @@ established and reusable solutions.
     - **Answer**: Fault induction via fuzzing (see JLS-02) acts as a practical attempting to trigger failures and edge cases that normal functional tests might miss.
   - Exception handling tests
     - **Answer**: No exception handling tests are currently performed.
-  - Stress tests
+  - Stress tests.
     - **Answer**: Stress tests target system-level behavior under load, while nlohmann/json is a stateless JSON library. There is no long-lived state, connection pool, thread pool, queue or similar.
   - Soak tests
     - **Answer**: Soak tests are used to investigate long-running behaviour, not single operations like a JSON library. Soak tests are therefore not needed for the nlohmann/json library.
