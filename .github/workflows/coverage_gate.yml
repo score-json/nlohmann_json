@@ -57,9 +57,21 @@ jobs:
         if: always()
         run: |
           mkdir -p coverage_gate
-          echo "status=${{ job.status }}" > coverage_gate/result.txt
-          echo "sha=${{ github.sha }}" >> coverage_gate/result.txt
-          echo "run_id=${{ github.run_id }}" >> coverage_gate/result.txt
+
+          THRESHOLD=99.19
+
+          LINE_COV=""
+          if [ -f coverage_html/index.html ]; then
+            HEADER_BLOCK=$(grep -A1 'Lines:' coverage_html/index.html || true)
+            LINE_COV=$(echo "$HEADER_BLOCK" | grep -oE "[0-9]+(\.[0-9]+)?" | head -n1 || true)
+          fi
+
+          {
+            echo "status=${{ job.status }}"
+            echo "line_coverage=${LINE_COV}"
+            echo "threshold=${THRESHOLD}"
+          } > coverage_gate/result.txt
+
 
       - name: Upload coverage-gate artifact
         if: always()
