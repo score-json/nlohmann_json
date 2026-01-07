@@ -2,36 +2,59 @@ name: PR Count Gate
 
 on:
   workflow_call:
+    inputs:
+      artifact_id:
+        required: true
+        type: string
 
 jobs:
   pr_count_gate:
     runs-on: ubuntu-latest
 
     steps:
-            - name: Count open pull requests
-              id: pr-count
-              uses: actions/github-script@v7
-              with:
-                github-token: ${{ secrets.GITHUB_TOKEN }}
-                script: |
-                  const { owner, repo } = context.repo;
-                  const per_page = 100;
-                  let page = 1;
-                  let total = 0;
+      - name: Count open pull requests
+        id: pr-count
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const per_page = 100;
+            let page = 1;
+            let total = 0;
 
-                  while (true) {
-                    const { data } = await github.rest.pulls.list({
-                      owner,
-                      repo,
-                      state: 'open',
-                      per_page,
-                      page,
-                    });
-                    if (data.length === 0) break;
-                    total += data.length;
-                    if (data.length < per_page) break;
-                    page++;
-                  }
+            while (true) {
+              const { data } = await github.rest.pulls.list({
+                owner,
+                repo,
+                state: 'open',
+                base: 'main',
+                per_page,
+                page,
+              });
+              if (data.length === 0) break;
+              total += data.length;
+              if (data.length < per_page) break;
+              page++;
+            }
 
-                  core.info(`Open pull requests: ${total}`);
-                  core.setOutput('open_prs', total.toString());
+            core.info(`Open pull requests: ${total}`);
+            core.setOutput('open_prs', total.toString());
+
+      - name: Write PR count result
+        if: always()
+        run: |
+          mkdir -p pr_count_gate
+          echo "status=${{ job.status }}" > pr_count_gate/result.txt
+          echo "open_prs=${{ steps.pr-count.outputs.open_prs }}" >> pr_count_gate/result.txt
+          echo "sha=${{ github.sha }}" >> pr_count_gate/result.txt
+          echo "run_id=${{ github.run_id }}" >> pr_count_gate/result.txt
+
+
+      - name: Upload PR count gate artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact_id }}
+          path: pr_count_gate/result.txt
+

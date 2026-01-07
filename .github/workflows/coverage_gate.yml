@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       artifact_id:
-        description: "Unused, kept for consistency with parent"
+        description: "Artifact name for the coverage-gate result"
         required: true
         type: string
 
@@ -52,3 +52,18 @@ jobs:
           fi
 
           echo "Coverage is above threshold."
+
+      - name: Create coverage-gate result
+        if: always()
+        run: |
+          mkdir -p coverage_gate
+          echo "status=${{ job.status }}" > coverage_gate/result.txt
+          echo "sha=${{ github.sha }}" >> coverage_gate/result.txt
+          echo "run_id=${{ github.run_id }}" >> coverage_gate/result.txt
+
+      - name: Upload coverage-gate artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact_id }}
+          path: coverage_gate/result.txt

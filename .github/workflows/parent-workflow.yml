@@ -67,6 +67,8 @@ jobs:
   coverage_gate:
     name: Run Coverage Gate Workflow
     needs: [ubuntu]
+    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'main' 
+          || github.event_name == 'schedule' }}
     uses: ./.github/workflows/coverage_gate.yml
     with:
       artifact_id: "coverage_gate-${{ github.sha }}"
@@ -74,6 +76,8 @@ jobs:
   pr_count_gate:
     name: Run PR Count Gate Workflow
     uses: ./.github/workflows/pr_count_gate.yml
+    with:
+      artifact_id: "pr_count_gate-${{ github.sha }}"
 
   dependency_review:
     name: Run dependency_review Workflow
