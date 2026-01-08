@@ -70,7 +70,7 @@ contradictions and obvious pitfalls within the defined Statements.
 
 - Are the constraints grounded in realistic expectations, backed by real-world
   examples?
-  - **Answer**: The constraints originate from S-CORE, the nlohmann/json library and the RFC-8259 standard. As these are all widely used, the constraints are grounded in realistic expectations.
+  - **Answer**: The constraints are grounded in realistic expectations because they come from concrete AOUs covering practical integration duties (consistent dependencies and mirrored dependencies/tools for reproducible/offline builds (AOU-02/03/08/15), CI-tested toolchains (AOU-16), and release/update/security review processes (AOU-27/29)) and from nlohmann/json’s documented real-world pitfalls (exception handling/disablement (AOU-04/07), UTF-8-only input and invalid surrogates (AOU-05/21), brace-initialization ambiguity (AOU-06), and duplicate-key handling (AOU-20)). Upstream fuzz testing (JLS-02) further supports these constraints by exercising edge cases, increasing confidence without implying absolute certainty.
 - Do they effectively guide downstream consumers in expanding upon existing
   Statements?
   - **Answer**: No downstream consumers exist yet to validate this. However, the AOUs are structured with the intent to guide downstream consumers in extending existing Statements.
