@@ -41,15 +41,37 @@ jobs:
             core.info(`Open pull requests: ${total}`);
             core.setOutput('open_prs', total.toString());
 
+      - name: fail if too many open PRs
+        id: gate
+        shell: bash
+        run: |
+          MAX=15
+          OPEN="${{ steps.pr-count.outputs.open_prs }}"
+
+          echo "Open PRs: ${OPEN}"
+          echo "Max allowed: ${MAX}"
+
+          if ! [[ "$OPEN" =~ ^[0-9]+$ ]]; then
+            echo "ERROR: open_prs is not numeric: '$OPEN'"
+            exit 1
+          fi
+
+          if [ "$OPEN" -gt "$MAX" ]; then
+            echo "Gate failed: too many open PRs (${OPEN} > ${MAX})"
+            exit 1
+          fi
+
+          echo "Gate passed: (${OPEN} <= ${MAX})"
+
       - name: Write PR count result
         if: always()
         run: |
           mkdir -p pr_count_gate
           echo "status=${{ job.status }}" > pr_count_gate/pr_count_gate.txt
           echo "open_prs=${{ steps.pr-count.outputs.open_prs }}" >> pr_count_gate/pr_count_gate.txt
+          echo "max_open_prs=15" >> pr_count_gate/pr_count_gate.txt
           echo "sha=${{ github.sha }}" >> pr_count_gate/pr_count_gate.txt
           echo "run_id=${{ github.run_id }}" >> pr_count_gate/pr_count_gate.txt
-
 
       - name: Upload PR count gate artifact
         if: always()
@@ -57,4 +79,5 @@ jobs:
         with:
           name: ${{ inputs.artifact_id }}
           path: pr_count_gate/pr_count_gate.txt
+
 
