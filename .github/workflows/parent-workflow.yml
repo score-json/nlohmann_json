@@ -93,7 +93,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        target: [labeler, SME_review_checker, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
+        target: [labeler, SME_review_checker, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu, coverage_gate, pr_count_gate]
 
     steps:
       - name: Checkout code
@@ -126,7 +126,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        target: [labeler, test_trudag_extensions, codeql, ubuntu]
+        target: [labeler, test_trudag_extensions, codeql, ubuntu, coverage_gate, pr_count_gate]
 
     steps:
       - name: Checkout code
