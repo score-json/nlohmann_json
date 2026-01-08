@@ -55,7 +55,7 @@ reporting bugs, issues, and requests.
 - Configuration manuals with worked examples
   - **Answer**: See JLS-71.
 - Specification documentation with a clearly defined scope
-  - **Answer**: See JLS-72. TODO check what a specification documentation actually is and whether this is covered by JLS-72 (the design goals reference)
+  - **Answer**: See JLS-72.
 - User guides detailing limitations in interfaces designed for expandability or modularity
   - **Answer**: See JLS-73.
 - Documented strategies used by external users to address constraints and work with existing Statements
@@ -73,10 +73,10 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: The constraints originate from S-CORE, the nlohmann/json library and the RFC-8259 standard. As these are all widely used, the constraints are grounded in realistic expectations.
 - Do they effectively guide downstream consumers in expanding upon existing
   Statements?
-  - **Answer**: The existing set of AOUs provides effective guidance for consumers.
+  - **Answer**: No downstream consumers exist yet to validate this. However, the AOUs are structured with the intent to guide downstream consumers in extending existing Statements.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
-  - **Answer**: No downstream consumers exist yet to validate this. However, the AOUs are structured with the intent to guide downstream consumers in extending existing Statements.
+  - **Answer**: 
 - Are any Statements explicitly designated as not reusable or adaptable?
   - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
