@@ -76,7 +76,7 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: The existing set of AOUs provides effective guidance for consumers.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
-  - **Answer**: 
+  - **Answer**: No downstream consumers exist yet to validate this. However, the AOUs are structured with the intent to guide downstream consumers in extending existing Statements.
 - Are any Statements explicitly designated as not reusable or adaptable?
   - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
@@ -84,7 +84,7 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: As the nlohmann/json library is widely used, its constraints (like the installation manual) are regularly read and applied and therefore demonstrated.
 - Have there been any documented misunderstandings from users, and are these
   visibly resolved?
-  - **Answer**: Yes, several recurring misunderstandings are explicitly documented and addressed via upstream documentation and closed issues. For example, brace-initialization unexpectedly yielding arrays and differing across compilers is called out in the [FAQ](https://json.nlohmann.me/home/faq/) and referenced from issues  [here](https://github.com/nlohmann/json/issues/4898), and duplicate-key behavior is clarified in the release notes as unspecified by RFC 8259 (see [release notes](https://json.nlohmann.me/home/releases) and issue [#2667](https://github.com/nlohmann/json/discussions/2667)).
+  - **Answer**: Yes, some recurring misunderstandings are explicitly documented and addressed via upstream documentation and closed issues. For example, brace-initialization unexpectedly yielding arrays and differing across compilers is called out in the [FAQ](https://json.nlohmann.me/home/faq/) and referenced from issues  [here](https://github.com/nlohmann/json/issues/4898), and duplicate-key behavior is clarified in the release notes as unspecified by RFC-8259 (see [release notes](https://json.nlohmann.me/home/releases) and issue [#2667](https://github.com/nlohmann/json/discussions/2667)).
 - Do external users actively keep up with updates, and are they properly
   notified of any changes?
   - **Answer**: External users of the library are not necessarily automatically notified of an update, and are neither assumed nor required to keep up to date. If the external user forks the GitHub repository, however, then GitHub shows automatically whenever the upstream changes.
