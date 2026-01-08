@@ -70,7 +70,7 @@ jobs:
             echo "status=${{ job.status }}"
             echo "line_coverage=${LINE_COV}"
             echo "threshold=${THRESHOLD}"
-          } > coverage_gate/result.txt
+          } > coverage_gate/coverage_gate.txt
 
 
       - name: Upload coverage-gate artifact
@@ -78,4 +78,4 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ${{ inputs.artifact_id }}
-          path: coverage_gate/result.txt
+          path: coverage_gate/coverage_gate.txt

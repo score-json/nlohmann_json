@@ -45,10 +45,10 @@ jobs:
         if: always()
         run: |
           mkdir -p pr_count_gate
-          echo "status=${{ job.status }}" > pr_count_gate/result.txt
-          echo "open_prs=${{ steps.pr-count.outputs.open_prs }}" >> pr_count_gate/result.txt
-          echo "sha=${{ github.sha }}" >> pr_count_gate/result.txt
-          echo "run_id=${{ github.run_id }}" >> pr_count_gate/result.txt
+          echo "status=${{ job.status }}" > pr_count_gate/pr_count_gate.txt
+          echo "open_prs=${{ steps.pr-count.outputs.open_prs }}" >> pr_count_gate/pr_count_gate.txt
+          echo "sha=${{ github.sha }}" >> pr_count_gate/pr_count_gate.txt
+          echo "run_id=${{ github.run_id }}" >> pr_count_gate/pr_count_gate.txt
 
 
       - name: Upload PR count gate artifact
@@ -56,5 +56,5 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ${{ inputs.artifact_id }}
-          path: pr_count_gate/result.txt
+          path: pr_count_gate/pr_count_gate.txt
 
