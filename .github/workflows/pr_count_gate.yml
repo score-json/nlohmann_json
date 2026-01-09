@@ -51,11 +51,6 @@ jobs:
           echo "Open PRs: ${OPEN}"
           echo "Max allowed: ${MAX}"
 
-          if ! [[ "$OPEN" =~ ^[0-9]+$ ]]; then
-            echo "ERROR: open_prs is not numeric: '$OPEN'"
-            exit 1
-          fi
-
           if [ "$OPEN" -gt "$MAX" ]; then
             echo "Gate failed: too many open PRs (${OPEN} > ${MAX})"
             exit 1

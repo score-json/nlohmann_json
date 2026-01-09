@@ -96,7 +96,7 @@ established and reusable solutions.
   - **Answer**: No risk analysis has been performed.
 - Test analysis, including:
   - False negative tests
-    - **Answer**: Fault induction via fuzzing (see JLS-02) acts as a practical attempting to trigger failures and edge cases that normal functional tests might miss.
+    - **Answer**: Fault induction via fuzzing (see JLS-02) provides a practical approach to triggering failures and edge cases that normal functional tests might miss.
   - Exception handling tests
     - **Answer**: No exception handling tests are currently performed.
   - Stress tests.
