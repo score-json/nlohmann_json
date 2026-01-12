@@ -98,7 +98,7 @@ established and reusable solutions.
   - False negative tests
     - **Answer**: Fault induction via fuzzing (see JLS-02) provides a practical approach to triggering failures and edge cases that normal functional tests might miss.
   - Exception handling tests
-    - **Answer**: No exception handling tests are currently performed.
+    - **Answer**: The nlohmann/json library contains a set of exception handling tests, along with custom exception types, as described in JLS-24.
   - Stress tests.
     - **Answer**: Stress tests target system-level behavior under load, while nlohmann/json is a stateless JSON library. There is no long-lived state, connection pool, thread pool, queue or similar.
   - Soak tests
