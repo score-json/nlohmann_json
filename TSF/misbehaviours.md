@@ -5,6 +5,34 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Open issues
 
+### [#5048](https://github.com/nlohmann/json/issues/5048)
+- **Title:** function argument safety check silently optimized out in release build by clang
+- **State:** OPEN
+- **Created At:** 2026-01-07T22:27:57Z
+
+
+
+### [#5047](https://github.com/nlohmann/json/issues/5047)
+- **Title:** [C++23] Error in json::parse with std::ifstream
+- **State:** OPEN
+- **Created At:** 2026-01-07T07:43:37Z
+
+
+
+### [#5046](https://github.com/nlohmann/json/issues/5046)
+- **Title:** implicit conversion of return json to std::optional no longer implicit
+- **State:** OPEN
+- **Created At:** 2026-01-06T16:50:46Z
+
+
+
+### [#5036](https://github.com/nlohmann/json/issues/5036)
+- **Title:** get enum with default value
+- **State:** OPEN
+- **Created At:** 2025-12-20T07:06:56Z
+
+
+
 ### [#5023](https://github.com/nlohmann/json/issues/5023)
 - **Title:** std::map and std::unordered_map serialization broken for keys of type std::u16string
 - **State:** OPEN
@@ -54,14 +82,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 
-### [#4925](https://github.com/nlohmann/json/issues/4925)
-- **Title:** Assertion error when converting to and from BJdata
-- **State:** OPEN
-- **Created At:** 2025-09-19T18:41:56Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Optimized binary arrays have to be explicitly enabled when parsing from BJdata; otherwise an exception is thrown.
-
-
 ### [#4916](https://github.com/nlohmann/json/issues/4916)
 - **Title:** Constructing array from C++20 ranges view does not work
 - **State:** OPEN
@@ -78,14 +98,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Using json::from_ubjson() (cf. [here](https://json.nlohmann.me/api/basic_json/from_ubjson/)) on long nested inputs can lead to stack overflow.
 
 
-### [#4898](https://github.com/nlohmann/json/issues/4898)
-- **Title:** Different results on Linux vs Windows when using json["str"].push_back({json::object})
-- **State:** OPEN
-- **Created At:** 2025-08-20T19:19:24Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Brace initialisation yields array, cf. [here](https://json.nlohmann.me/home/faq/#brace-initialization-yields-arrays).
-
-
 ### [#4864](https://github.com/nlohmann/json/issues/4864)
 - **Title:** C++17 std::optional feature not enabled
 - **State:** OPEN
@@ -100,14 +112,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2025-06-09T14:01:42Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. This issue is observed under specific circumstances only; in particular, basic_json is not affected.
-
-
-### [#4810](https://github.com/nlohmann/json/issues/4810)
-- **Title:** Allocator Propagation Issues with std::pmr in nlohmann::json: Limitations
-- **State:** OPEN
-- **Created At:** 2025-06-05T10:27:20Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. nlohmann::json currently does not allow selecting a custom allocator.
 
 
 ### [#4714](https://github.com/nlohmann/json/issues/4714)
@@ -132,14 +136,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2023-05-23T19:27:59Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. This issue was observed in version 3.11.2; it is fixed in version 3.12.0.
-
-
-### [#3912](https://github.com/nlohmann/json/issues/3912)
-- **Title:** inconsistency with string/string_view lookups
-- **State:** OPEN
-- **Created At:** 2023-01-08T02:13:12Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. There is currently no way to query object keys via std::string_view; this issue still exists in version 3.12.0.
 
 
 ### [#3907](https://github.com/nlohmann/json/issues/3907)
@@ -264,12 +260,28 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Compatibility with CMake < 3.5 has been removed from CMake as of [CMake 4.0+](https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html)
 
 
+### [#4925](https://github.com/nlohmann/json/issues/4925)
+- **Title:** Assertion error when converting to and from BJdata
+- **State:** CLOSED
+- **Created At:** 2025-09-19T18:41:56Z
+
+- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Optimized binary arrays have to be explicitly enabled when parsing from BJdata; otherwise an exception is thrown.
+
+
 ### [#4903](https://github.com/nlohmann/json/issues/4903)
 - **Title:** LNK2005
 - **State:** CLOSED
 - **Created At:** 2025-08-24T08:50:37Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Defining the namespace "nlohmann" multiple times within the same project leads to an error.
+
+
+### [#4898](https://github.com/nlohmann/json/issues/4898)
+- **Title:** Different results on Linux vs Windows when using json["str"].push_back({json::object})
+- **State:** CLOSED
+- **Created At:** 2025-08-20T19:19:24Z
+
+- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Brace initialisation yields array, cf. [here](https://json.nlohmann.me/home/faq/#brace-initialization-yields-arrays).
 
 
 ### [#4892](https://github.com/nlohmann/json/issues/4892)
@@ -389,6 +401,14 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2025-06-06T10:41:15Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Only binary formats like CBOR or MessagePack allow writing and reading binary values; no misbehaviour.
+
+
+### [#4810](https://github.com/nlohmann/json/issues/4810)
+- **Title:** Allocator Propagation Issues with std::pmr in nlohmann::json: Limitations
+- **State:** CLOSED
+- **Created At:** 2025-06-05T10:27:20Z
+
+- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. nlohmann::json currently does not allow selecting a custom allocator.
 
 
 ### [#4804](https://github.com/nlohmann/json/issues/4804)
