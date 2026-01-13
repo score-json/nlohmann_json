@@ -65,7 +65,7 @@ set of AWIs is incorrect, or the tolerance is too lax.
 - List of implemented monitoring mechanisms
   - **Answer**: There are no dedicated monitoring mechanisms for AWIs in the sense of continuous or in-field monitoring. The two AWIs (coverage and PR count) are evaluated only when CI workflows are executed and are used as quality gates at CI time, rather than as a separate, continuous monitoring system (see JLS-54 and JLS-55).
 - List of identified misbehaviours without advance warning indicators
-  - **Answer**: Provided by JLS-69.
+  - **Answer**: Provided by JLS-11.
 - List of advance warning indicators without implemented monitoring mechanisms
   - **Answer**: All currently defined AWIs (JLS-54 and JLS-55) are evaluated via CI runs, but there is no additional, dedicated monitoring mechanism beyond these CI executions.
 - Advance warning signal data as time series (see TA-DATA)
