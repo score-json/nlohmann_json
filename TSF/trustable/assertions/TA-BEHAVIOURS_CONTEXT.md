@@ -68,7 +68,7 @@ and that the resulting system and tests are validated by appropriate strategies.
 - How confident can we be that this list is comprehensive?
   - **Answer**: The list of Expectations has been collected amongst the stakeholders in S-CORE, so we are very confident that the list is comprehensive.
 - Could some participants have incentives to manipulate information?
-  - **Answer**: We cannot imagine any incentive to manipulate information.
+  - **Answer**: We consider intentional manipulation of information about nlohmann/json to be very unlikely because the library is open source, has no direct revenue or certification attached to this documentation, and all stakeholders share a strong interest in correctness and robustness. Any misrepresentation of expectations or verification would quickly become counterproductive by increasing integration risk, maintenance cost, and reputational damage for the participants. In addition, the requirements, code and history are publicly visible and version-controlled, so inconsistencies can be detected and challenged by other S-CORE stakeholders or the wider community. While unintentional errors are always possible, we see no realistic positive incentive—and several strong negative incentives—for deliberately manipulating this information.
 - Could there be whole categories of Expectations still undiscovered?
   - **Answer**: It is currently unlikely that there are whole categories of Expectations still undiscovered. 
 - Can we identify Expectations that have been understood but not specified?
