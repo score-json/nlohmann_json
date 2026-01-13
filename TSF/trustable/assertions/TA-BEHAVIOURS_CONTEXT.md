@@ -74,7 +74,7 @@ and that the resulting system and tests are validated by appropriate strategies.
 - Can we identify Expectations that have been understood but not specified?
   - **Answer**: There are currently no Expectations that have been understood but not specified.
 - Can we identify some new Expectations, right now?
-  - **Answer**: Currently we cannot identify any new Expectations.
+  - **Answer**: We currently do not see further Expectations to be identified because the existing set was derived systematically from the S-CORE stakeholders.
 - How confident can we be that this list covers all critical requirements?
   - **Answer**: We are very confident that this list covers all critical requirements.
 - How comprehensive is the list of tests?
