@@ -121,7 +121,7 @@ considered against the list of Expectations.
 - Could some participants have incentives to manipulate information?
   - **Answer**:  We can not think of any incentive that any collaborateur could have to manipulate the information.
 - Could there be whole categories of misbehaviours still undiscovered?
-  - **Answer**: Due to the wide use and long-standing development of the library it is quite unlikely that any major misbehaviors, in particular regarding the parsing and validating of JSON data in the sense of RFC-8259, is undiscovered. 
+  - **Answer**: Due to the wide use and long-standing development of the library it is quite unlikely that any major misbehaviours, in particular regarding the parsing and validating of JSON data in the sense of RFC-8259, is undiscovered. 
 - Can we identify misbehaviours that have been understood but not specified?
   - **Answer**: We currently do not identify any misbehaviours that have been understood but not specified.
 - Can we identify some new misbehaviours, right now?
@@ -129,9 +129,9 @@ considered against the list of Expectations.
 - Is every misbehaviour represented by at least one fault induction test?
   - **Answer**: Since there are no misbehaviours that concern the use within S-CORE, no.
 - Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?
-  - **Answer**: A specific type of fault inductions, fuzz tests, are used.
+  - **Answer**: Yes. The project uses several forms of fault induction (malformed JSON, invalid API usage, simulated allocation failures, and fuzzing). Dedicated tests assert that these induced faults cause the library to fail in a well‑defined, expected way (e.g. by throwing specific exceptions). CI then confirms that these “failure‑expecting” tests keep behaving as specified. See JLS-76.
 - Are all the fault induction results actually collected?
-  - **Answer**: The fuzz testing result are stored.
+  - **Answer**: Partially. For Unit / regression tests: their results are only captured as normal test pass/fail status and CI logs; there is no separate, persistent database of all induced faults and outcomes in the repository. For Fuzz tests (OSS‑Fuzz): the fuzzing infrastructure stores crashing inputs, logs, and statistics on the OSS‑Fuzz side, not in the nlohmann/json repo itself. See JLS-76.
 - Are the results evaluated?
   - **Answer**: TODO
 - Do input analysis findings on verifiable tool or component claims and features identify additional misbehaviours or support existing mitigations?
