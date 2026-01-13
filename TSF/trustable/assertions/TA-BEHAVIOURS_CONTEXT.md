@@ -86,4 +86,4 @@ and that the resulting system and tests are validated by appropriate strategies.
 - How do dependencies affect Expectations, and are their properties verifiable?
   - **Answer**: The nlohmann/json library does not have any external dependencies apart from the testing pipeline, so there are no dependencies that could possibly affect the Expectations. 
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
-  - **Answer**: For components, there is no input analysis as the nlohmann/json library has no external components (see JLS-34). For Tools, a tool assessment is provided via JLS-50. In addition, the only data provided to the nlohmann/json library is the input data when using the libraries' functionality.
+  - **Answer**: For components, there is no input analysis as the nlohmann/json library has no external components (see JLS-34). For Tools, a tool assessment is provided via JLS-50. In addition, the only data provided to the nlohmann/json library is the input data when using the libraries' functionality, as well as the test data taken from [here](https://github.com/nlohmann/json_test_data).
