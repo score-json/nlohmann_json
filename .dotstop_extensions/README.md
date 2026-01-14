@@ -232,7 +232,7 @@ The expected configuration is:
 references:
 - type: workflow_failures
       owner: "eclipse-score"
-      repo: "inc_nlohmann_json"
+      repo: "nlohmann_json"
       branch: "json_version_3_12_0"
 ---
 ```
@@ -368,7 +368,7 @@ evidence:
     type: did_workflows_fail
     configuration:
         owner: "eclipse-score" # owner of the repository
-        repo: "inc_nlohmann_json" # name of the repository
+        repo: "nlohmann_json" # name of the repository
         branch: "json_version_3_12_0" # name of the branch
         action: "push" # optional, default is push
 ```

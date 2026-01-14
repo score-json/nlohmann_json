@@ -41,11 +41,11 @@ binaries present within the repositories of the components and tools used.
   - without access to cached data
     - **Answer**: The library and test suite build require no cached data. CMake configuration runs from scratch, generating all artifacts deterministically as shown in ubuntu.yml workflow clean builds.
 - update logs for mirrored projects
-  - **Answer**: Updates of nlohmann/json are documented in release notes (see JLS-13). The update process of eclipse-score/inc_nlohmann_json is detailed in the "Update Concept" section of TSF/README.md.
+  - **Answer**: Updates of nlohmann/json are documented in release notes (see JLS-13). The update process of eclipse-score/nlohmann_json is detailed in the "Update Concept" section of TSF/README.md.
 - mirrors reject history rewrites
-  - **Answer**: The eclipse-score/inc_nlohmann_json main branch is set up with a branch protection rule, which disallows force pushes and requires code reviews for all changes. The branch protection rule prevents history rewrites (see JLS-66).
+  - **Answer**: The eclipse-score/nlohmann_json main branch is set up with a branch protection rule, which disallows force pushes and requires code reviews for all changes. The branch protection rule prevents history rewrites (see JLS-66).
 - mirroring is configured via infrastructure under direct control
-  - **Answer**: The eclipse-score/inc_nlohmann_json repository, which contains the mirrors, is configured by "Otterdog", which is under direct control by eclipse-score maintainers (see JLS-66).
+  - **Answer**: The eclipse-score/nlohmann_json repository, which contains the mirrors, is configured by "Otterdog", which is under direct control by eclipse-score maintainers (see JLS-66).
 
 **Confidence scoring**
 

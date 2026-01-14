@@ -165,7 +165,7 @@ For the error-free execution is it necessary, however, to adhere to the naming s
 
 Based on the above observations, the following steps are recommended for each update to the library.
 
-1. Merge branch master from the original nlohmann/json into an external fork of the eclipse-score/inc_nlohmann_json repository, where steps 2-12 shall be performed.
+1. Merge branch master from the original nlohmann/json into an external fork of the eclipse-score/nlohmann_json repository, where steps 2-12 shall be performed.
 2. Confirm the deletion of cifuzz.yml, macos.yml and windows.yml.
 3. Resolve the potential merge conflict in publish-documentation.yml by rejecting the incoming changes.
 4. Update the versions of the github actions, if necessary. 
@@ -178,8 +178,8 @@ Based on the above observations, the following steps are recommended for each up
 11. Generate the TSF report locally and carefully investigate any change in the trustable score(s). 
     If any relevant behaviour of the library changes, adapt the documentation. 
     Additionally, if any additional tests were added, or existing tests were changed, carefully investigate whether these warrant an amendment of the documentation.
-12. Merge into the ``main`` branch of eclipse-score/inc_nlohmann_json.
-13. Create a new release tag in eclipse-score/inc_nlohmann_json, following semantic versioning.
+12. Merge into the ``main`` branch of eclipse-score/nlohmann_json.
+13. Create a new release tag in eclipse-score/nlohmann_json, following semantic versioning.
 
 # Update concept for the TSF documentation
 
@@ -192,7 +192,7 @@ Furthermore, the automatic generation of the TSF report and the tracking of chan
 ## Version of trudag
 
 The documentation is currently built using trudag version v2025.10.22
-In case of new releases of trudag in the future, it is recommended to carefully review the introduced changes and rigorously test it before merging it into eclipse-score/inc_nlohmann_json.
+In case of new releases of trudag in the future, it is recommended to carefully review the introduced changes and rigorously test it before merging it into eclipse-score/nlohmann_json.
 The following should be considered:
 
 * How has the algorithm for the accumulation of the trustable score changed? Ideally, it is not changed, otherwise the necessity for a new review arises.

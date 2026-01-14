@@ -47,7 +47,7 @@ by confirming that test results remain unchanged when no changes are intended.
 - Analysis of failures
   - **Answer**: Provided by JLS-26 and JLS-17.
 - Analysis of spikes and trends
-  - **Answer**: CI test failure rates for the upstream `nlohmann/json` repository and `eclipse-score/inc_nlohmann_json` are analysed using the time-series based GitHub Actions metrics views. This analysis is performed manually (see JLS-17). There is currently no fully automated, continuous analysis of failures.
+  - **Answer**: CI test failure rates for the upstream `nlohmann/json` repository and `eclipse-score/nlohmann_json` are analysed using the time-series based GitHub Actions metrics views. This analysis is performed manually (see JLS-17). There is currently no fully automated, continuous analysis of failures.
 - Validation of analysis methods used
   - **Answer**: There is no separate formal validation of the analysis methods.
 
