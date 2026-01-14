@@ -125,13 +125,13 @@ considered against the list of Expectations.
 - Can we identify misbehaviours that have been understood but not specified?
   - **Answer**: We currently do not identify any misbehaviours that have been understood but not specified.
 - Can we identify some new misbehaviours, right now?
-  - **Answer**: No, currently no new misbehaviours can be identified.
+  - **Answer**: No, currently no new misbehaviors can be identified.
 - Is every misbehaviour represented by at least one fault induction test?
   - **Answer**: Since there are no misbehaviours that concern the use within S-CORE, no.
 - Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?
   - **Answer**: Yes. The project uses several forms of fault induction (malformed JSON, invalid API usage, simulated allocation failures, and fuzzing). Dedicated tests assert that these induced faults cause the library to fail in a well‑defined, expected way (e.g. by throwing specific exceptions). CI then confirms that these “failure‑expecting” tests keep behaving as specified. See JLS-76.
 - Are all the fault induction results actually collected?
-  - **Answer**: Partially. For Unit / regression tests: their results are only captured as normal test pass/fail status and CI logs; there is no separate, persistent database of all induced faults and outcomes in the repository. For Fuzz tests (OSS‑Fuzz): the fuzzing infrastructure stores crashing inputs, logs, and statistics on the OSS‑Fuzz side, not in the nlohmann/json repo itself. See JLS-76.
+  - **Answer**: Partially. For Unit / regression tests: their results are only captured as normal test pass/fail status and CI logs; there is no separate, persistent database of all induced faults and outcomes in the repository. For Fuzz tests (OSS‑Fuzz): the fuzzing infrastructure stores crashing inputs, logs, and statistics on the OSS‑Fuzz side, not in the nlohmann/json repo itself. See JLS-76 for further information.
 - Are the results evaluated?
   - **Answer**: TODO
 - Do input analysis findings on verifiable tool or component claims and features identify additional misbehaviours or support existing mitigations?
