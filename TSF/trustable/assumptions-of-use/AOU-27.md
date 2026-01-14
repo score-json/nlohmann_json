@@ -3,4 +3,4 @@ level: 1.1
 normative: true
 ---
 
-The integrator shall ensure that the 'Release management' and 'Update concepts' in TSF/README.md are followed whenever any changes are done in eclipse-score/inc_nlohmann_json.
+The integrator shall ensure that the 'Release management' and 'Update concepts' in TSF/README.md are followed whenever any changes are done in eclipse-score/nlohmann_json.

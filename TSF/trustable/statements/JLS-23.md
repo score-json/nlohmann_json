@@ -6,7 +6,7 @@ references:
           url: "https://github.com/nlohmann/json"
           description: "Start-page of the original nlohmann/json project"
         - type: project_website
-          url: "https://github.com/eclipse-score/inc_nlohmann_json"
+          url: "https://github.com/eclipse-score/nlohmann_json"
           description: "Start-page of the mirror of nlohmann/json within Eclipse S-CORE"
 evidence:
         type: https_response_time
@@ -14,7 +14,7 @@ evidence:
                 target_seconds: 2
                 urls:
                     - "https://github.com/nlohmann/json"
-                    - "https://github.com/eclipse-score/inc_nlohmann_json"
+                    - "https://github.com/eclipse-score/nlohmann_json"
 score:
     mishu-dev: 1.0
 ---

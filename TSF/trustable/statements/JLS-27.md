@@ -5,7 +5,7 @@ evidence:
     type: coveralls_reporter
     configuration:
         owner: "eclipse-score"
-        repo: "inc_nlohmann_json"
+        repo: "nlohmann_json"
         branch: "main"
         line_coverage: 99.186
         branch_coverage: 93.865
