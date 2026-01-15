@@ -25,8 +25,8 @@ jobs:
     
     - name: Install dependencies
       run: |
-        pip install --require-hashes -r .github/requirements.txt
-        pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@cc6b72753e1202951d382f60ff08320f5a957c7b
+        pip install --require-hashes -r .devcontainer/S-CORE/requirements.txt
+        pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@83b4023d7e2bd2b984db2c81543266ce09a7cbf7
     
     - name: Run tests
       run: |

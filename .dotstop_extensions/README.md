@@ -394,61 +394,6 @@ evidence:
         digits: 3
 ```
 
-## combinator
-
-The combinator validator serves as a meta-validator that enables the evaluation of complex items by running multiple validators and combining their scores into a single result using a weighted average. It accepts a list of validator configurations and optional weights, executes each validator independently, and then computes the weighted mean of their scores. If no weights are specified, all validators are treated equally. The validator supports a predefined set of underlying validator types and aggregates their exceptions and warnings in its output. All weights must be non-negative, and if the sum of weights is zero, the combinator returns a score of 0.0.
-
-The trudag tool does currently not support the use of multiple custom validators for one single TSF statement.
-
-The combinator accepts a list of validators, each with its own configuration and optional weight. Each validator is executed independently, and their scores are combined using the formula: `(score1 * weight1 + score2 * weight2 + ...) / (weight1 + weight2 + ...)`. If no weights are specified, all validators are treated with equal weight (weight = 1.0).
-
-The combinator supports the following validator types:
-- `check_artifact_exists`
-- `https_response_time` 
-- `check_test_results`
-- `file_exists`
-- `sha_checker`
-- `check_issues`
-- `did_workflows_fail`
-- `coveralls_reporter`
-
-The expected configuration is as follows:
-
-```
-evidence:
-    type: combinator
-    configuration:
-        validators:
-            - type: "check_test_results"
-              weight: 2.0  # optional, defaults to 1.0
-              configuration:
-                  tests:
-                      - class_lexer
-                      - unicode1
-            - type: "https_response_time"
-              weight: 1.0  # optional, defaults to 1.0  
-              configuration:
-                  target_seconds: 2
-                  urls:
-                      - "https://github.com/nlohmann/json/issues"
-            - type: "coveralls_reporter"
-              weight: 1.5  # optional, defaults to 1.0
-              configuration:
-                  owner: "score-json"
-                  repo: "json"
-                  branch: "main"
-                  line_coverage: 99.186
-                  branch_coverage: 93.865
-                  digits: 3
-            - type: "did_workflows_fail"
-              configuration:
-                  owner: "eclipse-score"
-                  repo: "inc_nlohmann_json" 
-                  branch: "json_version_3_12_0"
-```
-
-All weights must be non-negative. If the sum of all weights is zero, the combinator returns a score of 0.0. The combinator aggregates all exceptions and warnings from the individual validators and returns them alongside the combined score.
-
 # Data store interface
 
 The data store interface utilises the built-in the `dump` functionality of trudag to store the trustable score, and to include the development of the trustable score over time into the report.

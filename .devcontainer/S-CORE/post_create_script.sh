@@ -5,4 +5,4 @@ source .venv/bin/activate
 
 # Install trustable
 pip install --require-hashes -r .devcontainer/S-CORE/requirements.txt
-pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@v2025.10.22
+pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@83b4023d7e2bd2b984db2c81543266ce09a7cbf7
