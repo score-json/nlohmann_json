@@ -66,3 +66,31 @@ use_repo(toolchains_qnx, "toolchains_qnx_ifs")
 use_repo(toolchains_qnx, "toolchains_qnx_qcc")
 
 bazel_dep(name = "score_bazel_platforms", version = "0.0.3")
+
+# GCC toolchain
+bazel_dep(name = "score_toolchains_gcc", version = "0.5", dev_dependency = True)
+
+gcc = use_extension("@score_toolchains_gcc//extentions:gcc.bzl", "gcc", dev_dependency = True)
+gcc.toolchain(
+    sha256 = "8fa85c2a93a6bef1cf866fa658495a2416dfeec692e4246063b791abf18da083",
+    strip_prefix = "x86_64-unknown-linux-gnu",
+    url = "https://github.com/eclipse-score/toolchains_gcc_packages/releases/download/v0.0.3/x86_64-unknown-linux-gnu_gcc12.tar.gz",
+)
+gcc.extra_features(
+    features = [
+        "minimal_warnings",
+        "treat_warnings_as_errors",
+    ],
+)
+gcc.warning_flags(
+    minimal_warnings = [
+        "-Wall",
+        "-Wno-error=deprecated-declarations",
+        "-Wno-error=narrowing",
+    ],
+    strict_warnings = [
+        "-Wextra",
+        "-Wpedantic",
+    ],
+)
+use_repo(gcc, "gcc_toolchain", "gcc_toolchain_gcc")

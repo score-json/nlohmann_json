@@ -8,6 +8,10 @@ test --test_output=errors
 common --registry=https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/
 common --registry=https://bcr.bazel.build
 
+# GCC Linux build configurations
+common:gcc_x86_64_linux --host_platform=@score_bazel_platforms//:x86_64-linux
+common:gcc_x86_64_linux --platforms=@score_bazel_platforms//:x86_64-linux
+common:gcc_x86_64_linux --extra_toolchains=@gcc_toolchain//:host_gcc_12
 
 # In order to build for QNX, you need:
 # * An account on qnx.com
