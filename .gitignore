@@ -52,7 +52,6 @@ bazel-*
 # User-specific Bazel configuration (contains credentials)
 MODULE.bazel.lock
 user.bazelrc
-qnx_license.lic
 /temp
 /TSF/temp
 
