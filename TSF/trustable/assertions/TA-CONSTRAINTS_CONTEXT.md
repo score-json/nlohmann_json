@@ -76,7 +76,7 @@ contradictions and obvious pitfalls within the defined Statements.
   - **Answer**: No downstream consumers exist yet to validate this. However, the AOUs are structured with the intent to guide downstream consumers in extending existing Statements.
 - Do they provide clear guidance for upstreams on reusing components with
   well-defined claims?
-  - **Answer**: 
+  - **Answer**:  Yes, to the extent that our constraints and AOUs explicitly state which behaviours and properties of nlohmann/json we rely on (e.g. UTF‑8 handling, exception behaviour, duplicate‑key handling, and integration/toolchain assumptions). This makes clear which claims must remain valid for our Statements to hold, and thus gives upstream maintainers concrete guidance on what changes would affect us and where they need to preserve compatibility or coordinate changes.
 - Are any Statements explicitly designated as not reusable or adaptable?
   - **Answer**: No, all statements could theoretically be adapted or reused.
 - Are there worked examples from downstream or upstream users demonstrating
