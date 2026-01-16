@@ -127,7 +127,7 @@ considered against the list of Expectations.
 - Can we identify some new misbehaviours, right now?
   - **Answer**: No, currently no new misbehaviors can be identified.
 - Is every misbehaviour represented by at least one fault induction test?
-  - **Answer**: Since there are no misbehaviours that concern the use within S-CORE, no.
+  - **Answer**: The expected behaviour of nlohmann/json is described by JLS-24 and its substatements in the trustable graph. For a random subset of 10 of these substatements (TIJ-01.1, TIJ-01.2, TIJ-05.1, TIJ-05.3, NPF-01.2, NPF-01.3, NPF-07.2, TIJ-02.4, TIJ-02.5, TIJ-02.2) we checked whether possible misbehaviours (like wrong inputs) are tested using fault induction tests. For all of these 10 substatements, at least one fault induction test is performed.
 - Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?
   - **Answer**: Yes. The project uses several forms of fault induction (malformed JSON, invalid API usage, simulated allocation failures, and fuzzing). Dedicated tests assert that these induced faults cause the library to fail in a well‑defined, expected way (e.g. by throwing specific exceptions). CI then confirms that these “failure‑expecting” tests keep behaving as specified. See JLS-76.
 - Are all the fault induction results actually collected?
