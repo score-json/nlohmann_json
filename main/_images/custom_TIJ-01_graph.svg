@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="365.5,-1263 117.5,-1263 117.5,-1180 365.5,-1180 365.5,-1263"/>
 <text text-anchor="middle" x="241.5" y="-1247.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="241.5" y="-1232.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;EXPECTATIONS -->
 <g id="node7" class="node">
 <title>TT&#45;EXPECTATIONS</title>
-<g id="a_node7"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-EXPECTATIONS_graph.svg" xlink:title="TT&#45;EXPECTATIONS: Documentation\nis provided within eclipse&#45;score/inc_nlohmann_json,\nspecifying what the nlohmann/json\nlibrary is expected to\ndo, and what it must\nnot do, and how this\nis verified. " target="_top">
+<g id="a_node7"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-EXPECTATIONS_graph.svg" xlink:title="TT&#45;EXPECTATIONS: Documentation\nis provided within eclipse&#45;score/inc_nlohmann_json,\nspecifying what the nlohmann/json\nlibrary is expected to\ndo, and what it must\nnot do, and how this\nis verified. " target="_top">
 <polygon fill="none" stroke="black" points="429,-1036 54,-1036 54,-923 429,-923 429,-1036"/>
 <text text-anchor="middle" x="241.5" y="-1020.8" font-family="Open Sans" font-size="14.00">TT&#45;EXPECTATIONS: Documentation</text>
 <text text-anchor="middle" x="241.5" y="-1005.8" font-family="Open Sans" font-size="14.00">is provided within eclipse&#45;score/inc_nlohmann_json,</text>
@@ -46,7 +46,7 @@
 <!-- JLS&#45;24 -->
 <g id="node2" class="node">
 <title>JLS&#45;24</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_JLS-24_graph.svg" xlink:title="JLS&#45;24: The nlohmann/json\nlibrary recognizes malformed\nJSON and returns an exception.\n" target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_JLS-24_graph.svg" xlink:title="JLS&#45;24: The nlohmann/json\nlibrary recognizes malformed\nJSON and returns an exception.\n" target="_top">
 <polygon fill="none" stroke="black" points="359,-522 124,-522 124,-469 359,-469 359,-522"/>
 <text text-anchor="middle" x="241.5" y="-506.8" font-family="Open Sans" font-size="14.00">JLS&#45;24: The nlohmann/json</text>
 <text text-anchor="middle" x="241.5" y="-491.8" font-family="Open Sans" font-size="14.00">library recognizes malformed</text>
@@ -57,7 +57,7 @@
 <!-- TIJ&#45;01 -->
 <g id="node4" class="node">
 <title>TIJ&#45;01</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TIJ-01_graph.svg" xlink:title="TIJ&#45;01: The parsing service\nprovided by the nlohmann/json\nlibrary throws an exception\non ill&#45;formed literal\nnames. " target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TIJ-01_graph.svg" xlink:title="TIJ&#45;01: The parsing service\nprovided by the nlohmann/json\nlibrary throws an exception\non ill&#45;formed literal\nnames. " target="_top">
 <polygon fill="none" stroke="black" points="358,-325 125,-325 125,-242 358,-242 358,-325"/>
 <text text-anchor="middle" x="241.5" y="-309.8" font-family="Open Sans" font-size="14.00">TIJ&#45;01: The parsing service</text>
 <text text-anchor="middle" x="241.5" y="-294.8" font-family="Open Sans" font-size="14.00">provided by the nlohmann/json</text>
@@ -76,7 +76,7 @@
 <!-- TA&#45;MISBEHAVIOURS -->
 <g id="node3" class="node">
 <title>TA&#45;MISBEHAVIOURS</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-MISBEHAVIOURS_graph.svg" xlink:title="TA&#45;MISBEHAVIOURS: Prohibited\nmisbehaviours for the\nnlohmann/json library\nare identified, and mitigations\nare specified, verified\nand validated based on\nanalysis. " target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-MISBEHAVIOURS_graph.svg" xlink:title="TA&#45;MISBEHAVIOURS: Prohibited\nmisbehaviours for the\nnlohmann/json library\nare identified, and mitigations\nare specified, verified\nand validated based on\nanalysis. " target="_top">
 <polygon fill="none" stroke="black" points="359.5,-779 123.5,-779 123.5,-666 359.5,-666 359.5,-779"/>
 <text text-anchor="middle" x="241.5" y="-763.8" font-family="Open Sans" font-size="14.00">TA&#45;MISBEHAVIOURS: Prohibited</text>
 <text text-anchor="middle" x="241.5" y="-748.8" font-family="Open Sans" font-size="14.00">misbehaviours for the</text>
@@ -97,7 +97,7 @@
 <!-- TIJ&#45;01.1 -->
 <g id="node5" class="node">
 <title>TIJ&#45;01.1</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/TIJ.html#tij-01.1" xlink:title="TIJ&#45;01.1: The service\nprovided by the nlohmann/json\nlibrary throws an exception\non capitalised literal\nnames. " target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/TIJ.html#tij-01.1" xlink:title="TIJ&#45;01.1: The service\nprovided by the nlohmann/json\nlibrary throws an exception\non capitalised literal\nnames. " target="_top">
 <polygon fill="none" stroke="black" points="233,-90.5 0,-90.5 0,-7.5 233,-7.5 233,-90.5"/>
 <text text-anchor="middle" x="116.5" y="-75.3" font-family="Open Sans" font-size="14.00">TIJ&#45;01.1: The service</text>
 <text text-anchor="middle" x="116.5" y="-60.3" font-family="Open Sans" font-size="14.00">provided by the nlohmann/json</text>
@@ -116,7 +116,7 @@
 <!-- TIJ&#45;01.2 -->
 <g id="node6" class="node">
 <title>TIJ&#45;01.2</title>
-<g id="a_node6"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/TIJ.html#tij-01.2" xlink:title="TIJ&#45;01.2: The service\nprovided by the nlohmann/json\nlibrary throws an exception\non any other than the\nthree literal names true,\nfalse, null. " target="_top">
+<g id="a_node6"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/TIJ.html#tij-01.2" xlink:title="TIJ&#45;01.2: The service\nprovided by the nlohmann/json\nlibrary throws an exception\non any other than the\nthree literal names true,\nfalse, null. " target="_top">
 <polygon fill="none" stroke="black" points="484,-98 251,-98 251,0 484,0 484,-98"/>
 <text text-anchor="middle" x="367.5" y="-82.8" font-family="Open Sans" font-size="14.00">TIJ&#45;01.2: The service</text>
 <text text-anchor="middle" x="367.5" y="-67.8" font-family="Open Sans" font-size="14.00">provided by the nlohmann/json</text>

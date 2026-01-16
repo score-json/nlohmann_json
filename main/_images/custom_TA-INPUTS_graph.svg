@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="822,-824 574,-824 574,-741 822,-741 822,-824"/>
 <text text-anchor="middle" x="698" y="-808.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="698" y="-793.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;PROVENANCE -->
 <g id="node9" class="node">
 <title>TT&#45;PROVENANCE</title>
-<g id="a_node9"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-PROVENANCE_graph.svg" xlink:title="TT&#45;PROVENANCE: All inputs\n(and attestations for\nclaims) for the nlohmann/json\nlibrary are provided\nwith known provenance.\n" target="_top">
+<g id="a_node9"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-PROVENANCE_graph.svg" xlink:title="TT&#45;PROVENANCE: All inputs\n(and attestations for\nclaims) for the nlohmann/json\nlibrary are provided\nwith known provenance.\n" target="_top">
 <polygon fill="none" stroke="black" points="810,-597 586,-597 586,-514 810,-514 810,-597"/>
 <text text-anchor="middle" x="698" y="-581.8" font-family="Open Sans" font-size="14.00">TT&#45;PROVENANCE: All inputs</text>
 <text text-anchor="middle" x="698" y="-566.8" font-family="Open Sans" font-size="14.00">(and attestations for</text>
@@ -44,7 +44,7 @@
 <!-- JLS&#45;04 -->
 <g id="node2" class="node">
 <title>JLS&#45;04</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-04" xlink:title="JLS&#45;04: External dependencies\nwithin nlohmann/json\nare checked for potential\nsecurity vulnerabilities\nwith each pull request\nto main. Merging is blocked\nuntil all warnings are\nresolved. " target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-04" xlink:title="JLS&#45;04: External dependencies\nwithin nlohmann/json\nare checked for potential\nsecurity vulnerabilities\nwith each pull request\nto main. Merging is blocked\nuntil all warnings are\nresolved. " target="_top">
 <polygon fill="none" stroke="black" points="228,-135.5 0,-135.5 0,-7.5 228,-7.5 228,-135.5"/>
 <text text-anchor="middle" x="114" y="-120.3" font-family="Open Sans" font-size="14.00">JLS&#45;04: External dependencies</text>
 <text text-anchor="middle" x="114" y="-105.3" font-family="Open Sans" font-size="14.00">within nlohmann/json</text>
@@ -60,7 +60,7 @@
 <!-- JLS&#45;34 -->
 <g id="node3" class="node">
 <title>JLS&#45;34</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-34" xlink:title="JLS&#45;34: The nlohmann/json\nlibrary has no external\ncomponents or dependencies\nbesides the C++ standard\ncomponents. " target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-34" xlink:title="JLS&#45;34: The nlohmann/json\nlibrary has no external\ncomponents or dependencies\nbesides the C++ standard\ncomponents. " target="_top">
 <polygon fill="none" stroke="black" points="468,-113 246,-113 246,-30 468,-30 468,-113"/>
 <text text-anchor="middle" x="357" y="-97.8" font-family="Open Sans" font-size="14.00">JLS&#45;34: The nlohmann/json</text>
 <text text-anchor="middle" x="357" y="-82.8" font-family="Open Sans" font-size="14.00">library has no external</text>
@@ -73,7 +73,7 @@
 <!-- JLS&#45;47 -->
 <g id="node4" class="node">
 <title>JLS&#45;47</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-47" xlink:title="JLS&#45;47: The nlohmann/json\nlibrary only consists\nof source code in the\nform of a single header\nfile, and has no binary\nartifacts. " target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-47" xlink:title="JLS&#45;47: The nlohmann/json\nlibrary only consists\nof source code in the\nform of a single header\nfile, and has no binary\nartifacts. " target="_top">
 <polygon fill="none" stroke="black" points="689.5,-120.5 486.5,-120.5 486.5,-22.5 689.5,-22.5 689.5,-120.5"/>
 <text text-anchor="middle" x="588" y="-105.3" font-family="Open Sans" font-size="14.00">JLS&#45;47: The nlohmann/json</text>
 <text text-anchor="middle" x="588" y="-90.3" font-family="Open Sans" font-size="14.00">library only consists</text>
@@ -87,7 +87,7 @@
 <!-- JLS&#45;48 -->
 <g id="node5" class="node">
 <title>JLS&#45;48</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-48" xlink:title="JLS&#45;48: The nlohmann/json\nproject transparently\nlists any third party\ntools used in building,\ntesting and documenting\nthe project. " target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-48" xlink:title="JLS&#45;48: The nlohmann/json\nproject transparently\nlists any third party\ntools used in building,\ntesting and documenting\nthe project. " target="_top">
 <polygon fill="none" stroke="black" points="910.5,-120.5 707.5,-120.5 707.5,-22.5 910.5,-22.5 910.5,-120.5"/>
 <text text-anchor="middle" x="809" y="-105.3" font-family="Open Sans" font-size="14.00">JLS&#45;48: The nlohmann/json</text>
 <text text-anchor="middle" x="809" y="-90.3" font-family="Open Sans" font-size="14.00">project transparently</text>
@@ -101,7 +101,7 @@
 <!-- JLS&#45;49 -->
 <g id="node6" class="node">
 <title>JLS&#45;49</title>
-<g id="a_node6"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-49" xlink:title="JLS&#45;49: The eclipse&#45;score/inc_nlohmann_json\nproject mirrors the external\nnlohmann/json_test_data\nrepository, containing\ntest data used by the\nunit tests in nlohmann/json,\nsuch that the test suite\ncan be executed without\ninternet connectivity.\n" target="_top">
+<g id="a_node6"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-49" xlink:title="JLS&#45;49: The eclipse&#45;score/inc_nlohmann_json\nproject mirrors the external\nnlohmann/json_test_data\nrepository, containing\ntest data used by the\nunit tests in nlohmann/json,\nsuch that the test suite\ncan be executed without\ninternet connectivity.\n" target="_top">
 <polygon fill="none" stroke="black" points="1255,-143 929,-143 929,0 1255,0 1255,-143"/>
 <text text-anchor="middle" x="1092" y="-127.8" font-family="Open Sans" font-size="14.00">JLS&#45;49: The eclipse&#45;score/inc_nlohmann_json</text>
 <text text-anchor="middle" x="1092" y="-112.8" font-family="Open Sans" font-size="14.00">project mirrors the external</text>
@@ -118,7 +118,7 @@
 <!-- JLS&#45;50 -->
 <g id="node7" class="node">
 <title>JLS&#45;50</title>
-<g id="a_node7"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-50" xlink:title="JLS&#45;50: All third party\ntools used in nlohmann/json\nfor building, testing\nand documenting the project\nare assessed within eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node7"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-50" xlink:title="JLS&#45;50: All third party\ntools used in nlohmann/json\nfor building, testing\nand documenting the project\nare assessed within eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="1662.5,-113 1273.5,-113 1273.5,-30 1662.5,-30 1662.5,-113"/>
 <text text-anchor="middle" x="1468" y="-97.8" font-family="Open Sans" font-size="14.00">JLS&#45;50: All third party</text>
 <text text-anchor="middle" x="1468" y="-82.8" font-family="Open Sans" font-size="14.00">tools used in nlohmann/json</text>
@@ -131,7 +131,7 @@
 <!-- TA&#45;INPUTS -->
 <g id="node8" class="node">
 <title>TA&#45;INPUTS</title>
-<g id="a_node8"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-INPUTS_graph.svg" xlink:title="TA&#45;INPUTS: All inputs\nto the nlohmann/json\nlibrary are assessed,\nto identify potential\nrisks and issues. " target="_top">
+<g id="a_node8"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-INPUTS_graph.svg" xlink:title="TA&#45;INPUTS: All inputs\nto the nlohmann/json\nlibrary are assessed,\nto identify potential\nrisks and issues. " target="_top">
 <polygon fill="none" stroke="black" points="780,-370 616,-370 616,-287 780,-287 780,-370"/>
 <text text-anchor="middle" x="698" y="-354.8" font-family="Open Sans" font-size="14.00">TA&#45;INPUTS: All inputs</text>
 <text text-anchor="middle" x="698" y="-339.8" font-family="Open Sans" font-size="14.00">to the nlohmann/json</text>

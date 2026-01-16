@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="1204,-854 956,-854 956,-771 1204,-771 1204,-854"/>
 <text text-anchor="middle" x="1080" y="-838.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="1080" y="-823.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;CHANGES -->
 <g id="node11" class="node">
 <title>TT&#45;CHANGES</title>
-<g id="a_node11"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-CHANGES_graph.svg" xlink:title="TT&#45;CHANGES: The nlohmann/json\nlibrary is actively maintained,\nwith regular updates\nto dependencies, and\nchanges are verified\nto prevent regressions.\n" target="_top">
+<g id="a_node11"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-CHANGES_graph.svg" xlink:title="TT&#45;CHANGES: The nlohmann/json\nlibrary is actively maintained,\nwith regular updates\nto dependencies, and\nchanges are verified\nto prevent regressions.\n" target="_top">
 <polygon fill="none" stroke="black" points="1204,-627 956,-627 956,-529 1204,-529 1204,-627"/>
 <text text-anchor="middle" x="1080" y="-611.8" font-family="Open Sans" font-size="14.00">TT&#45;CHANGES: The nlohmann/json</text>
 <text text-anchor="middle" x="1080" y="-596.8" font-family="Open Sans" font-size="14.00">library is actively maintained,</text>
@@ -45,7 +45,7 @@
 <!-- JLS&#45;04 -->
 <g id="node2" class="node">
 <title>JLS&#45;04</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-04" xlink:title="JLS&#45;04: External dependencies\nwithin nlohmann/json\nare checked for potential\nsecurity vulnerabilities\nwith each pull request\nto main. Merging is blocked\nuntil all warnings are\nresolved. " target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-04" xlink:title="JLS&#45;04: External dependencies\nwithin nlohmann/json\nare checked for potential\nsecurity vulnerabilities\nwith each pull request\nto main. Merging is blocked\nuntil all warnings are\nresolved. " target="_top">
 <polygon fill="none" stroke="black" points="228,-128 0,-128 0,0 228,0 228,-128"/>
 <text text-anchor="middle" x="114" y="-112.8" font-family="Open Sans" font-size="14.00">JLS&#45;04: External dependencies</text>
 <text text-anchor="middle" x="114" y="-97.8" font-family="Open Sans" font-size="14.00">within nlohmann/json</text>
@@ -61,7 +61,7 @@
 <!-- JLS&#45;05 -->
 <g id="node3" class="node">
 <title>JLS&#45;05</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-05" xlink:title="JLS&#45;05: The nlohmann/json\nlibrary is widely used\nand actively maintained;\nbugs and misbehaviours\nare tracked publicly\nand transparently. " target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-05" xlink:title="JLS&#45;05: The nlohmann/json\nlibrary is widely used\nand actively maintained;\nbugs and misbehaviours\nare tracked publicly\nand transparently. " target="_top">
 <polygon fill="none" stroke="black" points="449.5,-113 246.5,-113 246.5,-15 449.5,-15 449.5,-113"/>
 <text text-anchor="middle" x="348" y="-97.8" font-family="Open Sans" font-size="14.00">JLS&#45;05: The nlohmann/json</text>
 <text text-anchor="middle" x="348" y="-82.8" font-family="Open Sans" font-size="14.00">library is widely used</text>
@@ -75,7 +75,7 @@
 <!-- JLS&#45;11 -->
 <g id="node4" class="node">
 <title>JLS&#45;11</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-11" xlink:title="JLS&#45;11: Outstanding bugs\nor misbehaviours are\nanalyzed within eclipse&#45;score/inc_nlohmann_json\nto determine whether\nthey are relevant for\nS&#45;CORE&#39;s use cases of\nthe nlohmann/json library.\n" target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-11" xlink:title="JLS&#45;11: Outstanding bugs\nor misbehaviours are\nanalyzed within eclipse&#45;score/inc_nlohmann_json\nto determine whether\nthey are relevant for\nS&#45;CORE&#39;s use cases of\nthe nlohmann/json library.\n" target="_top">
 <polygon fill="none" stroke="black" points="823,-120.5 467,-120.5 467,-7.5 823,-7.5 823,-120.5"/>
 <text text-anchor="middle" x="645" y="-105.3" font-family="Open Sans" font-size="14.00">JLS&#45;11: Outstanding bugs</text>
 <text text-anchor="middle" x="645" y="-90.3" font-family="Open Sans" font-size="14.00">or misbehaviours are</text>
@@ -90,7 +90,7 @@
 <!-- JLS&#45;28 -->
 <g id="node5" class="node">
 <title>JLS&#45;28</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-28" xlink:title="JLS&#45;28: Outstanding bugs\nand misbehaviours are\ntriaged in the nlohmann/json\nrepository. " target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-28" xlink:title="JLS&#45;28: Outstanding bugs\nand misbehaviours are\ntriaged in the nlohmann/json\nrepository. " target="_top">
 <polygon fill="none" stroke="black" points="1059,-98 841,-98 841,-30 1059,-30 1059,-98"/>
 <text text-anchor="middle" x="950" y="-82.8" font-family="Open Sans" font-size="14.00">JLS&#45;28: Outstanding bugs</text>
 <text text-anchor="middle" x="950" y="-67.8" font-family="Open Sans" font-size="14.00">and misbehaviours are</text>
@@ -102,7 +102,7 @@
 <!-- JLS&#45;29 -->
 <g id="node6" class="node">
 <title>JLS&#45;29</title>
-<g id="a_node6"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-29" xlink:title="JLS&#45;29: Known bugs, misbehaviours\nand CVEs are analyzed\nand either fixed or mitigated\nin the nlohmann/json\nrepository. " target="_top">
+<g id="a_node6"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-29" xlink:title="JLS&#45;29: Known bugs, misbehaviours\nand CVEs are analyzed\nand either fixed or mitigated\nin the nlohmann/json\nrepository. " target="_top">
 <polygon fill="none" stroke="black" points="1343,-105.5 1077,-105.5 1077,-22.5 1343,-22.5 1343,-105.5"/>
 <text text-anchor="middle" x="1210" y="-90.3" font-family="Open Sans" font-size="14.00">JLS&#45;29: Known bugs, misbehaviours</text>
 <text text-anchor="middle" x="1210" y="-75.3" font-family="Open Sans" font-size="14.00">and CVEs are analyzed</text>
@@ -115,7 +115,7 @@
 <!-- JLS&#45;30 -->
 <g id="node7" class="node">
 <title>JLS&#45;30</title>
-<g id="a_node7"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-30" xlink:title="JLS&#45;30: Outstanding CVEs\nare analyzed within eclipse&#45;score/inc_nlohmann_json\nto determine whether\nthey can be dismissed,\nand/or are relevant for\nS&#45;CORE&#39;s use cases of\nthe nlohmann/json library.\n" target="_top">
+<g id="a_node7"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-30" xlink:title="JLS&#45;30: Outstanding CVEs\nare analyzed within eclipse&#45;score/inc_nlohmann_json\nto determine whether\nthey can be dismissed,\nand/or are relevant for\nS&#45;CORE&#39;s use cases of\nthe nlohmann/json library.\n" target="_top">
 <polygon fill="none" stroke="black" points="1744.5,-120.5 1361.5,-120.5 1361.5,-7.5 1744.5,-7.5 1744.5,-120.5"/>
 <text text-anchor="middle" x="1553" y="-105.3" font-family="Open Sans" font-size="14.00">JLS&#45;30: Outstanding CVEs</text>
 <text text-anchor="middle" x="1553" y="-90.3" font-family="Open Sans" font-size="14.00">are analyzed within eclipse&#45;score/inc_nlohmann_json</text>
@@ -130,7 +130,7 @@
 <!-- JLS&#45;33 -->
 <g id="node8" class="node">
 <title>JLS&#45;33</title>
-<g id="a_node8"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-33" xlink:title="JLS&#45;33: Outstanding CVEs\nare triaged in the nlohmann/json\nrepository. " target="_top">
+<g id="a_node8"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-33" xlink:title="JLS&#45;33: Outstanding CVEs\nare triaged in the nlohmann/json\nrepository. " target="_top">
 <polygon fill="none" stroke="black" points="2007,-90.5 1763,-90.5 1763,-37.5 2007,-37.5 2007,-90.5"/>
 <text text-anchor="middle" x="1885" y="-75.3" font-family="Open Sans" font-size="14.00">JLS&#45;33: Outstanding CVEs</text>
 <text text-anchor="middle" x="1885" y="-60.3" font-family="Open Sans" font-size="14.00">are triaged in the nlohmann/json</text>
@@ -141,7 +141,7 @@
 <!-- JLS&#45;57 -->
 <g id="node9" class="node">
 <title>JLS&#45;57</title>
-<g id="a_node9"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-57" xlink:title="JLS&#45;57: Outstanding bugs\nor misbehaviours of nlohmann/json\nare fetched and saved\nwithin eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node9"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-57" xlink:title="JLS&#45;57: Outstanding bugs\nor misbehaviours of nlohmann/json\nare fetched and saved\nwithin eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="2319,-98 2025,-98 2025,-30 2319,-30 2319,-98"/>
 <text text-anchor="middle" x="2172" y="-82.8" font-family="Open Sans" font-size="14.00">JLS&#45;57: Outstanding bugs</text>
 <text text-anchor="middle" x="2172" y="-67.8" font-family="Open Sans" font-size="14.00">or misbehaviours of nlohmann/json</text>
@@ -153,7 +153,7 @@
 <!-- TA&#45;FIXES -->
 <g id="node10" class="node">
 <title>TA&#45;FIXES</title>
-<g id="a_node10"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-FIXES_graph.svg" xlink:title="TA&#45;FIXES: In the nlohmann/json\nrepository, known bugs\nor misbehaviours are\nanalysed and triaged,\nand critical fixes or\nmitigations are implemented\nor applied. " target="_top">
+<g id="a_node10"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-FIXES_graph.svg" xlink:title="TA&#45;FIXES: In the nlohmann/json\nrepository, known bugs\nor misbehaviours are\nanalysed and triaged,\nand critical fixes or\nmitigations are implemented\nor applied. " target="_top">
 <polygon fill="none" stroke="black" points="1198,-385 962,-385 962,-272 1198,-272 1198,-385"/>
 <text text-anchor="middle" x="1080" y="-369.8" font-family="Open Sans" font-size="14.00">TA&#45;FIXES: In the nlohmann/json</text>
 <text text-anchor="middle" x="1080" y="-354.8" font-family="Open Sans" font-size="14.00">repository, known bugs</text>

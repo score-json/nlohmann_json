@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="4514,-869 4266,-869 4266,-786 4514,-786 4514,-869"/>
 <text text-anchor="middle" x="4390" y="-853.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="4390" y="-838.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;EXPECTATIONS -->
 <g id="node31" class="node">
 <title>TT&#45;EXPECTATIONS</title>
-<g id="a_node31"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-EXPECTATIONS_graph.svg" xlink:title="TT&#45;EXPECTATIONS: Documentation\nis provided within eclipse&#45;score/inc_nlohmann_json,\nspecifying what the nlohmann/json\nlibrary is expected to\ndo, and what it must\nnot do, and how this\nis verified. " target="_top">
+<g id="a_node31"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-EXPECTATIONS_graph.svg" xlink:title="TT&#45;EXPECTATIONS: Documentation\nis provided within eclipse&#45;score/inc_nlohmann_json,\nspecifying what the nlohmann/json\nlibrary is expected to\ndo, and what it must\nnot do, and how this\nis verified. " target="_top">
 <polygon fill="none" stroke="black" points="4577.5,-642 4202.5,-642 4202.5,-529 4577.5,-529 4577.5,-642"/>
 <text text-anchor="middle" x="4390" y="-626.8" font-family="Open Sans" font-size="14.00">TT&#45;EXPECTATIONS: Documentation</text>
 <text text-anchor="middle" x="4390" y="-611.8" font-family="Open Sans" font-size="14.00">is provided within eclipse&#45;score/inc_nlohmann_json,</text>
@@ -46,7 +46,7 @@
 <!-- AOU&#45;01 -->
 <g id="node2" class="node">
 <title>AOU&#45;01</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-01" xlink:title="AOU&#45;01: The integrator\nshall report problems\nwith eclipse&#45;score/inc_nlohmann_json&#39;s\nimplementation to the\nupstream nlohmann/json\nrepository whenever a\nproblem is detected.\n" target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-01" xlink:title="AOU&#45;01: The integrator\nshall report problems\nwith eclipse&#45;score/inc_nlohmann_json&#39;s\nimplementation to the\nupstream nlohmann/json\nrepository whenever a\nproblem is detected.\n" target="_top">
 <polygon fill="none" stroke="black" points="288,-143 0,-143 0,-30 288,-30 288,-143"/>
 <text text-anchor="middle" x="144" y="-127.8" font-family="Open Sans" font-size="14.00">AOU&#45;01: The integrator</text>
 <text text-anchor="middle" x="144" y="-112.8" font-family="Open Sans" font-size="14.00">shall report problems</text>
@@ -61,7 +61,7 @@
 <!-- AOU&#45;02 -->
 <g id="node3" class="node">
 <title>AOU&#45;02</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-02" xlink:title="AOU&#45;02: The integrator\nshall ensure that the\nbuild environment used\nfor eclipse&#45;score/inc_nlohmann_json\nis supplied with consistent\ndependencies in every\nintegrating system. " target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-02" xlink:title="AOU&#45;02: The integrator\nshall ensure that the\nbuild environment used\nfor eclipse&#45;score/inc_nlohmann_json\nis supplied with consistent\ndependencies in every\nintegrating system. " target="_top">
 <polygon fill="none" stroke="black" points="573.5,-143 306.5,-143 306.5,-30 573.5,-30 573.5,-143"/>
 <text text-anchor="middle" x="440" y="-127.8" font-family="Open Sans" font-size="14.00">AOU&#45;02: The integrator</text>
 <text text-anchor="middle" x="440" y="-112.8" font-family="Open Sans" font-size="14.00">shall ensure that the</text>
@@ -76,7 +76,7 @@
 <!-- AOU&#45;03 -->
 <g id="node4" class="node">
 <title>AOU&#45;03</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-03" xlink:title="AOU&#45;03: The integrator\nshall ensure that integrator&#45;controlled\nmirrors of the dependencies\nof the nlohmann/json\nrepository are persistently\nand accessibly stored\nas long as the nlohmann/json\nlibrary is used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-03" xlink:title="AOU&#45;03: The integrator\nshall ensure that integrator&#45;controlled\nmirrors of the dependencies\nof the nlohmann/json\nrepository are persistently\nand accessibly stored\nas long as the nlohmann/json\nlibrary is used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="870,-158 592,-158 592,-15 870,-15 870,-158"/>
 <text text-anchor="middle" x="731" y="-142.8" font-family="Open Sans" font-size="14.00">AOU&#45;03: The integrator</text>
 <text text-anchor="middle" x="731" y="-127.8" font-family="Open Sans" font-size="14.00">shall ensure that integrator&#45;controlled</text>
@@ -93,7 +93,7 @@
 <!-- AOU&#45;04 -->
 <g id="node5" class="node">
 <title>AOU&#45;04</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-04" xlink:title="AOU&#45;04: The integrator\nshall ensure that exceptions\nare properly handled\nor turned off in eclipse&#45;score/inc_nlohmann_json,\nwhenever eclipse&#45;score/inc_nlohmann_json&#39;s\nimplementation of nlohmann/json\nis used. " target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-04" xlink:title="AOU&#45;04: The integrator\nshall ensure that exceptions\nare properly handled\nor turned off in eclipse&#45;score/inc_nlohmann_json,\nwhenever eclipse&#45;score/inc_nlohmann_json&#39;s\nimplementation of nlohmann/json\nis used. " target="_top">
 <polygon fill="none" stroke="black" points="1244,-143 888,-143 888,-30 1244,-30 1244,-143"/>
 <text text-anchor="middle" x="1066" y="-127.8" font-family="Open Sans" font-size="14.00">AOU&#45;04: The integrator</text>
 <text text-anchor="middle" x="1066" y="-112.8" font-family="Open Sans" font-size="14.00">shall ensure that exceptions</text>
@@ -108,7 +108,7 @@
 <!-- AOU&#45;05 -->
 <g id="node6" class="node">
 <title>AOU&#45;05</title>
-<g id="a_node6"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-05" xlink:title="AOU&#45;05: The integrator\nshall ensure that in\neclipse&#45;score/inc_nlohmann_json,\ninput is encoded as UTF&#45;8\n(as required by RFC8259)\nand that in case other\nstring formats are used,\nthrown exceptions are\nproperly handled. " target="_top">
+<g id="a_node6"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-05" xlink:title="AOU&#45;05: The integrator\nshall ensure that in\neclipse&#45;score/inc_nlohmann_json,\ninput is encoded as UTF&#45;8\n(as required by RFC8259)\nand that in case other\nstring formats are used,\nthrown exceptions are\nproperly handled. " target="_top">
 <polygon fill="none" stroke="black" points="1510,-158 1262,-158 1262,-15 1510,-15 1510,-158"/>
 <text text-anchor="middle" x="1386" y="-142.8" font-family="Open Sans" font-size="14.00">AOU&#45;05: The integrator</text>
 <text text-anchor="middle" x="1386" y="-127.8" font-family="Open Sans" font-size="14.00">shall ensure that in</text>
@@ -125,7 +125,7 @@
 <!-- AOU&#45;06 -->
 <g id="node7" class="node">
 <title>AOU&#45;06</title>
-<g id="a_node7"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-06" xlink:title="AOU&#45;06: The integrator\nshall ensure that in\neclipse&#45;score/inc_nlohmann_json\nbrace initialization\n(e.g. json j{true};)\nis not used with the\ntypes basic_json, json,\nor ordered_json, unless\nan object or array is\ncreated. " target="_top">
+<g id="a_node7"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-06" xlink:title="AOU&#45;06: The integrator\nshall ensure that in\neclipse&#45;score/inc_nlohmann_json\nbrace initialization\n(e.g. json j{true};)\nis not used with the\ntypes basic_json, json,\nor ordered_json, unless\nan object or array is\ncreated. " target="_top">
 <polygon fill="none" stroke="black" points="1771.5,-165.5 1528.5,-165.5 1528.5,-7.5 1771.5,-7.5 1771.5,-165.5"/>
 <text text-anchor="middle" x="1650" y="-150.3" font-family="Open Sans" font-size="14.00">AOU&#45;06: The integrator</text>
 <text text-anchor="middle" x="1650" y="-135.3" font-family="Open Sans" font-size="14.00">shall ensure that in</text>
@@ -143,7 +143,7 @@
 <!-- AOU&#45;07 -->
 <g id="node8" class="node">
 <title>AOU&#45;07</title>
-<g id="a_node8"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-07" xlink:title="AOU&#45;07: The integrator\nshall ensure in eclipse&#45;score/inc_nlohmann_json\nthat exceptions, which\nare expected during parsing\nwith default parameters,\nare properly handled\nwhenever the input is\nno valid JSON. " target="_top">
+<g id="a_node8"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-07" xlink:title="AOU&#45;07: The integrator\nshall ensure in eclipse&#45;score/inc_nlohmann_json\nthat exceptions, which\nare expected during parsing\nwith default parameters,\nare properly handled\nwhenever the input is\nno valid JSON. " target="_top">
 <polygon fill="none" stroke="black" points="2138.5,-150.5 1789.5,-150.5 1789.5,-22.5 2138.5,-22.5 2138.5,-150.5"/>
 <text text-anchor="middle" x="1964" y="-135.3" font-family="Open Sans" font-size="14.00">AOU&#45;07: The integrator</text>
 <text text-anchor="middle" x="1964" y="-120.3" font-family="Open Sans" font-size="14.00">shall ensure in eclipse&#45;score/inc_nlohmann_json</text>
@@ -159,7 +159,7 @@
 <!-- AOU&#45;08 -->
 <g id="node9" class="node">
 <title>AOU&#45;08</title>
-<g id="a_node9"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-08" xlink:title="AOU&#45;08: The integrator\nshall ensure that all\nnecessary source files\nand built tools are mirrored\nin eclipse&#45;score/inc_nlohmann_json,\ne.g. using a built server\nwithout internet access,\nas long as nlohmann/json\nis actively used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node9"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-08" xlink:title="AOU&#45;08: The integrator\nshall ensure that all\nnecessary source files\nand built tools are mirrored\nin eclipse&#45;score/inc_nlohmann_json,\ne.g. using a built server\nwithout internet access,\nas long as nlohmann/json\nis actively used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="2421.5,-165.5 2156.5,-165.5 2156.5,-7.5 2421.5,-7.5 2421.5,-165.5"/>
 <text text-anchor="middle" x="2289" y="-150.3" font-family="Open Sans" font-size="14.00">AOU&#45;08: The integrator</text>
 <text text-anchor="middle" x="2289" y="-135.3" font-family="Open Sans" font-size="14.00">shall ensure that all</text>
@@ -177,7 +177,7 @@
 <!-- AOU&#45;09 -->
 <g id="node10" class="node">
 <title>AOU&#45;09</title>
-<g id="a_node10"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-09" xlink:title="AOU&#45;09: The integrator\nshall ensure inside eclipse&#45;score/inc_nlohmann_json\nthat advanced warning\nindicators for misbehaviours\nare identified, and monitoring\nmechanisms are specified,\nverified and validated\nbased on analysis. " target="_top">
+<g id="a_node10"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-09" xlink:title="AOU&#45;09: The integrator\nshall ensure inside eclipse&#45;score/inc_nlohmann_json\nthat advanced warning\nindicators for misbehaviours\nare identified, and monitoring\nmechanisms are specified,\nverified and validated\nbased on analysis. " target="_top">
 <polygon fill="none" stroke="black" points="2816.5,-150.5 2439.5,-150.5 2439.5,-22.5 2816.5,-22.5 2816.5,-150.5"/>
 <text text-anchor="middle" x="2628" y="-135.3" font-family="Open Sans" font-size="14.00">AOU&#45;09: The integrator</text>
 <text text-anchor="middle" x="2628" y="-120.3" font-family="Open Sans" font-size="14.00">shall ensure inside eclipse&#45;score/inc_nlohmann_json</text>
@@ -193,7 +193,7 @@
 <!-- AOU&#45;10 -->
 <g id="node11" class="node">
 <title>AOU&#45;10</title>
-<g id="a_node11"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-10" xlink:title="AOU&#45;10: The integrator\nshall, whenever possible,\nturn any remaining Assumptions&#45;of&#45;Use\n(AOU) items into statements\nand add suitable references\nand/or validators. " target="_top">
+<g id="a_node11"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-10" xlink:title="AOU&#45;10: The integrator\nshall, whenever possible,\nturn any remaining Assumptions&#45;of&#45;Use\n(AOU) items into statements\nand add suitable references\nand/or validators. " target="_top">
 <polygon fill="none" stroke="black" points="3127.5,-135.5 2834.5,-135.5 2834.5,-37.5 3127.5,-37.5 3127.5,-135.5"/>
 <text text-anchor="middle" x="2981" y="-120.3" font-family="Open Sans" font-size="14.00">AOU&#45;10: The integrator</text>
 <text text-anchor="middle" x="2981" y="-105.3" font-family="Open Sans" font-size="14.00">shall, whenever possible,</text>
@@ -207,7 +207,7 @@
 <!-- AOU&#45;11 -->
 <g id="node12" class="node">
 <title>AOU&#45;11</title>
-<g id="a_node12"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-11" xlink:title="AOU&#45;11: The integrator\nshall, whenever possible,\nreplace outdated and/or\nprovide additional references\nand validators that would\nfurther improve the trustability\nof a statement. " target="_top">
+<g id="a_node12"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-11" xlink:title="AOU&#45;11: The integrator\nshall, whenever possible,\nreplace outdated and/or\nprovide additional references\nand validators that would\nfurther improve the trustability\nof a statement. " target="_top">
 <polygon fill="none" stroke="black" points="3378.5,-143 3145.5,-143 3145.5,-30 3378.5,-30 3378.5,-143"/>
 <text text-anchor="middle" x="3262" y="-127.8" font-family="Open Sans" font-size="14.00">AOU&#45;11: The integrator</text>
 <text text-anchor="middle" x="3262" y="-112.8" font-family="Open Sans" font-size="14.00">shall, whenever possible,</text>
@@ -222,7 +222,7 @@
 <!-- AOU&#45;14 -->
 <g id="node13" class="node">
 <title>AOU&#45;14</title>
-<g id="a_node13"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-14" xlink:title="AOU&#45;14: The integrator\nshall ensure that the\neclipse&#45;score/inc_nlohmann_json\nis built with tools from\nthe provided matrix specification,\nwhenever nlohmann/json\nis used within eclipse&#45;score/inc_nlohmann_json.\n(not yet provided) " target="_top">
+<g id="a_node13"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-14" xlink:title="AOU&#45;14: The integrator\nshall ensure that the\neclipse&#45;score/inc_nlohmann_json\nis built with tools from\nthe provided matrix specification,\nwhenever nlohmann/json\nis used within eclipse&#45;score/inc_nlohmann_json.\n(not yet provided) " target="_top">
 <polygon fill="none" stroke="black" points="3745,-150.5 3397,-150.5 3397,-22.5 3745,-22.5 3745,-150.5"/>
 <text text-anchor="middle" x="3571" y="-135.3" font-family="Open Sans" font-size="14.00">AOU&#45;14: The integrator</text>
 <text text-anchor="middle" x="3571" y="-120.3" font-family="Open Sans" font-size="14.00">shall ensure that the</text>
@@ -238,7 +238,7 @@
 <!-- AOU&#45;15 -->
 <g id="node14" class="node">
 <title>AOU&#45;15</title>
-<g id="a_node14"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-15" xlink:title="AOU&#45;15: The integrator\nshall maintain mirrors\nfor all code and tools\nutilized in testing as\nlong as nlohmann/json\nis actively used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node14"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-15" xlink:title="AOU&#45;15: The integrator\nshall maintain mirrors\nfor all code and tools\nutilized in testing as\nlong as nlohmann/json\nis actively used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="4011,-143 3763,-143 3763,-30 4011,-30 4011,-143"/>
 <text text-anchor="middle" x="3887" y="-127.8" font-family="Open Sans" font-size="14.00">AOU&#45;15: The integrator</text>
 <text text-anchor="middle" x="3887" y="-112.8" font-family="Open Sans" font-size="14.00">shall maintain mirrors</text>
@@ -253,7 +253,7 @@
 <!-- AOU&#45;16 -->
 <g id="node15" class="node">
 <title>AOU&#45;16</title>
-<g id="a_node15"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-16" xlink:title="AOU&#45;16: The integrator\nshall use C++ versions\nand compilers that are\ntested in the CI pipeline,\nwhenever nlohmann/json\nis used within eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node15"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-16" xlink:title="AOU&#45;16: The integrator\nshall use C++ versions\nand compilers that are\ntested in the CI pipeline,\nwhenever nlohmann/json\nis used within eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="4377,-135.5 4029,-135.5 4029,-37.5 4377,-37.5 4377,-135.5"/>
 <text text-anchor="middle" x="4203" y="-120.3" font-family="Open Sans" font-size="14.00">AOU&#45;16: The integrator</text>
 <text text-anchor="middle" x="4203" y="-105.3" font-family="Open Sans" font-size="14.00">shall use C++ versions</text>
@@ -267,7 +267,7 @@
 <!-- AOU&#45;17 -->
 <g id="node16" class="node">
 <title>AOU&#45;17</title>
-<g id="a_node16"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-17" xlink:title="AOU&#45;17: The integrator\nshall identify misbehaviours\nfor the nlohmann/json\nlibrary, define appropriate\nmitigations, and ensure\nthat these mitigations\nare thoroughly validated,\nwhenever using eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node16"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-17" xlink:title="AOU&#45;17: The integrator\nshall identify misbehaviours\nfor the nlohmann/json\nlibrary, define appropriate\nmitigations, and ensure\nthat these mitigations\nare thoroughly validated,\nwhenever using eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="4758.5,-150.5 4395.5,-150.5 4395.5,-22.5 4758.5,-22.5 4758.5,-150.5"/>
 <text text-anchor="middle" x="4577" y="-135.3" font-family="Open Sans" font-size="14.00">AOU&#45;17: The integrator</text>
 <text text-anchor="middle" x="4577" y="-120.3" font-family="Open Sans" font-size="14.00">shall identify misbehaviours</text>
@@ -283,7 +283,7 @@
 <!-- AOU&#45;18 -->
 <g id="node17" class="node">
 <title>AOU&#45;18</title>
-<g id="a_node17"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-18" xlink:title="AOU&#45;18: The integrator\nshall ensure that monitoring\ndata from deployed software\nis accurately captured,\nsecurely stored, and\nwell&#45;documented for analysis\nwithin eclipse&#45;score/inc_nlohmann_json,\nas long as the nlohmann/json\nlibrary is actively used\nwithin eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node17"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-18" xlink:title="AOU&#45;18: The integrator\nshall ensure that monitoring\ndata from deployed software\nis accurately captured,\nsecurely stored, and\nwell&#45;documented for analysis\nwithin eclipse&#45;score/inc_nlohmann_json,\nas long as the nlohmann/json\nlibrary is actively used\nwithin eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="5071,-165.5 4777,-165.5 4777,-7.5 5071,-7.5 5071,-165.5"/>
 <text text-anchor="middle" x="4924" y="-150.3" font-family="Open Sans" font-size="14.00">AOU&#45;18: The integrator</text>
 <text text-anchor="middle" x="4924" y="-135.3" font-family="Open Sans" font-size="14.00">shall ensure that monitoring</text>
@@ -301,7 +301,7 @@
 <!-- AOU&#45;19 -->
 <g id="node18" class="node">
 <title>AOU&#45;19</title>
-<g id="a_node18"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-19" xlink:title="AOU&#45;19: The integrator\nshall analyze monitoring\ndata systematically to\ndetect trends and identify\nissues, &#160;as long as the\nnlohmann/json library\nis actively used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node18"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-19" xlink:title="AOU&#45;19: The integrator\nshall analyze monitoring\ndata systematically to\ndetect trends and identify\nissues, &#160;as long as the\nnlohmann/json library\nis actively used within\neclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="5337,-150.5 5089,-150.5 5089,-22.5 5337,-22.5 5337,-150.5"/>
 <text text-anchor="middle" x="5213" y="-135.3" font-family="Open Sans" font-size="14.00">AOU&#45;19: The integrator</text>
 <text text-anchor="middle" x="5213" y="-120.3" font-family="Open Sans" font-size="14.00">shall analyze monitoring</text>
@@ -317,7 +317,7 @@
 <!-- AOU&#45;20 -->
 <g id="node19" class="node">
 <title>AOU&#45;20</title>
-<g id="a_node19"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-20" xlink:title="AOU&#45;20: The integrator\nshall ensure that the\nkeys within an object\nare unique, whenever\nan object is to be parsed\nby eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node19"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-20" xlink:title="AOU&#45;20: The integrator\nshall ensure that the\nkeys within an object\nare unique, whenever\nan object is to be parsed\nby eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="5624.5,-135.5 5355.5,-135.5 5355.5,-37.5 5624.5,-37.5 5624.5,-135.5"/>
 <text text-anchor="middle" x="5490" y="-120.3" font-family="Open Sans" font-size="14.00">AOU&#45;20: The integrator</text>
 <text text-anchor="middle" x="5490" y="-105.3" font-family="Open Sans" font-size="14.00">shall ensure that the</text>
@@ -331,7 +331,7 @@
 <!-- AOU&#45;21 -->
 <g id="node20" class="node">
 <title>AOU&#45;21</title>
-<g id="a_node20"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-21" xlink:title="AOU&#45;21: The integrator\nshall ensure that a string\ndoes not contain escaped\nunpaired utf&#45;16 surrogate\ncharacters, and that\nexceptions are properly\nhandled in eclipse&#45;score/inc_nlohmann_json,\nwhenever a string is\nto be parsed. " target="_top">
+<g id="a_node20"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-21" xlink:title="AOU&#45;21: The integrator\nshall ensure that a string\ndoes not contain escaped\nunpaired utf&#45;16 surrogate\ncharacters, and that\nexceptions are properly\nhandled in eclipse&#45;score/inc_nlohmann_json,\nwhenever a string is\nto be parsed. " target="_top">
 <polygon fill="none" stroke="black" points="5969,-158 5643,-158 5643,-15 5969,-15 5969,-158"/>
 <text text-anchor="middle" x="5806" y="-142.8" font-family="Open Sans" font-size="14.00">AOU&#45;21: The integrator</text>
 <text text-anchor="middle" x="5806" y="-127.8" font-family="Open Sans" font-size="14.00">shall ensure that a string</text>
@@ -348,7 +348,7 @@
 <!-- AOU&#45;22 -->
 <g id="node21" class="node">
 <title>AOU&#45;22</title>
-<g id="a_node21"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-22" xlink:title="AOU&#45;22: The integrator\nshall ensure that numbers\nare written in base 10,\nand that exceptions and\nmisbehaviours in case\nthat any other base is\nused are properly handled\nand mitigated within\neclipse&#45;score/inc_nlohmann_json,\nwhenever a number is\nparsed. " target="_top">
+<g id="a_node21"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-22" xlink:title="AOU&#45;22: The integrator\nshall ensure that numbers\nare written in base 10,\nand that exceptions and\nmisbehaviours in case\nthat any other base is\nused are properly handled\nand mitigated within\neclipse&#45;score/inc_nlohmann_json,\nwhenever a number is\nparsed. " target="_top">
 <polygon fill="none" stroke="black" points="6235,-173 5987,-173 5987,0 6235,0 6235,-173"/>
 <text text-anchor="middle" x="6111" y="-157.8" font-family="Open Sans" font-size="14.00">AOU&#45;22: The integrator</text>
 <text text-anchor="middle" x="6111" y="-142.8" font-family="Open Sans" font-size="14.00">shall ensure that numbers</text>
@@ -367,7 +367,7 @@
 <!-- AOU&#45;23 -->
 <g id="node22" class="node">
 <title>AOU&#45;23</title>
-<g id="a_node22"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-23" xlink:title="AOU&#45;23: The integrator\nshall ensure that data\nare complete and error&#45;free,\nwhenever they are transmitted\nto eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node22"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-23" xlink:title="AOU&#45;23: The integrator\nshall ensure that data\nare complete and error&#45;free,\nwhenever they are transmitted\nto eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="6519,-128 6253,-128 6253,-45 6519,-45 6519,-128"/>
 <text text-anchor="middle" x="6386" y="-112.8" font-family="Open Sans" font-size="14.00">AOU&#45;23: The integrator</text>
 <text text-anchor="middle" x="6386" y="-97.8" font-family="Open Sans" font-size="14.00">shall ensure that data</text>
@@ -380,7 +380,7 @@
 <!-- AOU&#45;24 -->
 <g id="node23" class="node">
 <title>AOU&#45;24</title>
-<g id="a_node23"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-24" xlink:title="AOU&#45;24: The integrator\nshall ensure that the\ndata do not change during\nreading, whenever transmitted\nto eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node23"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-24" xlink:title="AOU&#45;24: The integrator\nshall ensure that the\ndata do not change during\nreading, whenever transmitted\nto eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="6803,-128 6537,-128 6537,-45 6803,-45 6803,-128"/>
 <text text-anchor="middle" x="6670" y="-112.8" font-family="Open Sans" font-size="14.00">AOU&#45;24: The integrator</text>
 <text text-anchor="middle" x="6670" y="-97.8" font-family="Open Sans" font-size="14.00">shall ensure that the</text>
@@ -393,7 +393,7 @@
 <!-- AOU&#45;25 -->
 <g id="node24" class="node">
 <title>AOU&#45;25</title>
-<g id="a_node24"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-25" xlink:title="AOU&#45;25: The integrator\nshall convince themselves\nthat the behaviour of\nthe used C++ standard\nlibrary is known, verified\nand validated. " target="_top">
+<g id="a_node24"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-25" xlink:title="AOU&#45;25: The integrator\nshall convince themselves\nthat the behaviour of\nthe used C++ standard\nlibrary is known, verified\nand validated. " target="_top">
 <polygon fill="none" stroke="black" points="7020.5,-135.5 6821.5,-135.5 6821.5,-37.5 7020.5,-37.5 7020.5,-135.5"/>
 <text text-anchor="middle" x="6921" y="-120.3" font-family="Open Sans" font-size="14.00">AOU&#45;25: The integrator</text>
 <text text-anchor="middle" x="6921" y="-105.3" font-family="Open Sans" font-size="14.00">shall convince themselves</text>
@@ -407,7 +407,7 @@
 <!-- AOU&#45;26 -->
 <g id="node25" class="node">
 <title>AOU&#45;26</title>
-<g id="a_node25"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-26" xlink:title="AOU&#45;26: The integrator\nshall convince themselves\nthat the misbehaviours\nof the C++ standard library\nand mitigations are known,\nverified and validated.\n" target="_top">
+<g id="a_node25"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-26" xlink:title="AOU&#45;26: The integrator\nshall convince themselves\nthat the misbehaviours\nof the C++ standard library\nand mitigations are known,\nverified and validated.\n" target="_top">
 <polygon fill="none" stroke="black" points="7249.5,-135.5 7038.5,-135.5 7038.5,-37.5 7249.5,-37.5 7249.5,-135.5"/>
 <text text-anchor="middle" x="7144" y="-120.3" font-family="Open Sans" font-size="14.00">AOU&#45;26: The integrator</text>
 <text text-anchor="middle" x="7144" y="-105.3" font-family="Open Sans" font-size="14.00">shall convince themselves</text>
@@ -421,7 +421,7 @@
 <!-- AOU&#45;27 -->
 <g id="node26" class="node">
 <title>AOU&#45;27</title>
-<g id="a_node26"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-27" xlink:title="AOU&#45;27: The integrator\nshall ensure that the\n&#39;Release management&#39;\nand &#39;Update concepts&#39;\nin TSF/README.md are\nfollowed whenever any\nchanges are done in eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node26"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-27" xlink:title="AOU&#45;27: The integrator\nshall ensure that the\n&#39;Release management&#39;\nand &#39;Update concepts&#39;\nin TSF/README.md are\nfollowed whenever any\nchanges are done in eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="7660.5,-143 7267.5,-143 7267.5,-30 7660.5,-30 7660.5,-143"/>
 <text text-anchor="middle" x="7464" y="-127.8" font-family="Open Sans" font-size="14.00">AOU&#45;27: The integrator</text>
 <text text-anchor="middle" x="7464" y="-112.8" font-family="Open Sans" font-size="14.00">shall ensure that the</text>
@@ -436,7 +436,7 @@
 <!-- AOU&#45;28 -->
 <g id="node27" class="node">
 <title>AOU&#45;28</title>
-<g id="a_node27"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-28" xlink:title="AOU&#45;28: The integrator\nshall ensure that the\nknown open bugs of the\nnlohmann/json repository\nare regularly reviewed\non their impact on the\nuse of the documented\nversion of nlohmann/json,\nas long as the nlohmann/json\nlibrary is actively used\nwithin eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node27"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-28" xlink:title="AOU&#45;28: The integrator\nshall ensure that the\nknown open bugs of the\nnlohmann/json repository\nare regularly reviewed\non their impact on the\nuse of the documented\nversion of nlohmann/json,\nas long as the nlohmann/json\nlibrary is actively used\nwithin eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="7973,-173 7679,-173 7679,0 7973,0 7973,-173"/>
 <text text-anchor="middle" x="7826" y="-157.8" font-family="Open Sans" font-size="14.00">AOU&#45;28: The integrator</text>
 <text text-anchor="middle" x="7826" y="-142.8" font-family="Open Sans" font-size="14.00">shall ensure that the</text>
@@ -455,7 +455,7 @@
 <!-- AOU&#45;29 -->
 <g id="node28" class="node">
 <title>AOU&#45;29</title>
-<g id="a_node28"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-29" xlink:title="AOU&#45;29: The integrator\nshall check the security\ntab in the GitHub UI\non a regular basis, analyze\nand either fix or dismiss\nany outstanding CVEs.\n" target="_top">
+<g id="a_node28"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-29" xlink:title="AOU&#45;29: The integrator\nshall check the security\ntab in the GitHub UI\non a regular basis, analyze\nand either fix or dismiss\nany outstanding CVEs.\n" target="_top">
 <polygon fill="none" stroke="black" points="8194.5,-135.5 7991.5,-135.5 7991.5,-37.5 8194.5,-37.5 8194.5,-135.5"/>
 <text text-anchor="middle" x="8093" y="-120.3" font-family="Open Sans" font-size="14.00">AOU&#45;29: The integrator</text>
 <text text-anchor="middle" x="8093" y="-105.3" font-family="Open Sans" font-size="14.00">shall check the security</text>
@@ -469,7 +469,7 @@
 <!-- AOU&#45;30 -->
 <g id="node29" class="node">
 <title>AOU&#45;30</title>
-<g id="a_node29"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/AOU.html#aou-30" xlink:title="AOU&#45;30: The integrator\nshall review the answers\nto each of the TSF evidence\nlists in the TA_CONTEXT\nfiles (see e.g., TSF/trustable/assertions/TA&#45;ANALYSIS_CONTEXT.md).\nFor each point that has\nnot already been fulfilled,\nthe integrator shall\nevaluate it and provide\nthe relevant evidence\nif possible. " target="_top">
+<g id="a_node29"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/AOU.html#aou-30" xlink:title="AOU&#45;30: The integrator\nshall review the answers\nto each of the TSF evidence\nlists in the TA_CONTEXT\nfiles (see e.g., TSF/trustable/assertions/TA&#45;ANALYSIS_CONTEXT.md).\nFor each point that has\nnot already been fulfilled,\nthe integrator shall\nevaluate it and provide\nthe relevant evidence\nif possible. " target="_top">
 <polygon fill="none" stroke="black" points="8699.5,-173 8212.5,-173 8212.5,0 8699.5,0 8699.5,-173"/>
 <text text-anchor="middle" x="8456" y="-157.8" font-family="Open Sans" font-size="14.00">AOU&#45;30: The integrator</text>
 <text text-anchor="middle" x="8456" y="-142.8" font-family="Open Sans" font-size="14.00">shall review the answers</text>
@@ -488,7 +488,7 @@
 <!-- TA&#45;CONSTRAINTS -->
 <g id="node30" class="node">
 <title>TA&#45;CONSTRAINTS</title>
-<g id="a_node30"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-CONSTRAINTS_graph.svg" xlink:title="TA&#45;CONSTRAINTS: Constraints\non adaptation and deployment\nof eclipse&#45;score/inc_nlohmann_json\nare specified. " target="_top">
+<g id="a_node30"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-CONSTRAINTS_graph.svg" xlink:title="TA&#45;CONSTRAINTS: Constraints\non adaptation and deployment\nof eclipse&#45;score/inc_nlohmann_json\nare specified. " target="_top">
 <polygon fill="none" stroke="black" points="4520.5,-385 4259.5,-385 4259.5,-317 4520.5,-317 4520.5,-385"/>
 <text text-anchor="middle" x="4390" y="-369.8" font-family="Open Sans" font-size="14.00">TA&#45;CONSTRAINTS: Constraints</text>
 <text text-anchor="middle" x="4390" y="-354.8" font-family="Open Sans" font-size="14.00">on adaptation and deployment</text>

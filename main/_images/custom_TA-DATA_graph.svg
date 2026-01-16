@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="482.5,-854 234.5,-854 234.5,-771 482.5,-771 482.5,-854"/>
 <text text-anchor="middle" x="358.5" y="-838.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="358.5" y="-823.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;RESULTS -->
 <g id="node5" class="node">
 <title>TT&#45;RESULTS</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-RESULTS_graph.svg" xlink:title="TT&#45;RESULTS: Evidence\nis provided within eclipse&#45;score/inc_nlohmann_json\nto demonstrate that the\nnlohmann/json library\ndoes what it is supposed\nto do, and does not do\nwhat it must not do.\n" target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-RESULTS_graph.svg" xlink:title="TT&#45;RESULTS: Evidence\nis provided within eclipse&#45;score/inc_nlohmann_json\nto demonstrate that the\nnlohmann/json library\ndoes what it is supposed\nto do, and does not do\nwhat it must not do.\n" target="_top">
 <polygon fill="none" stroke="black" points="544,-627 173,-627 173,-514 544,-514 544,-627"/>
 <text text-anchor="middle" x="358.5" y="-611.8" font-family="Open Sans" font-size="14.00">TT&#45;RESULTS: Evidence</text>
 <text text-anchor="middle" x="358.5" y="-596.8" font-family="Open Sans" font-size="14.00">is provided within eclipse&#45;score/inc_nlohmann_json</text>
@@ -46,7 +46,7 @@
 <!-- JLS&#45;18 -->
 <g id="node2" class="node">
 <title>JLS&#45;18</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-18" xlink:title="JLS&#45;18: Results from\nautomated tests for eclipse&#45;score/inc_nlohmann_json\nare automatically collected\nfrom CI&#45;generated JUnit\nreports into a persistent\ntest results database\ntogether with metadata\nabout the executed tests\nand workflows. " target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-18" xlink:title="JLS&#45;18: Results from\nautomated tests for eclipse&#45;score/inc_nlohmann_json\nare automatically collected\nfrom CI&#45;generated JUnit\nreports into a persistent\ntest results database\ntogether with metadata\nabout the executed tests\nand workflows. " target="_top">
 <polygon fill="none" stroke="black" points="385,-143 0,-143 0,0 385,0 385,-143"/>
 <text text-anchor="middle" x="192.5" y="-127.8" font-family="Open Sans" font-size="14.00">JLS&#45;18: Results from</text>
 <text text-anchor="middle" x="192.5" y="-112.8" font-family="Open Sans" font-size="14.00">automated tests for eclipse&#45;score/inc_nlohmann_json</text>
@@ -63,7 +63,7 @@
 <!-- JLS&#45;45 -->
 <g id="node3" class="node">
 <title>JLS&#45;45</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-45" xlink:title="JLS&#45;45: The storage location,\nretention limits, and\nintended use of captured\ntest result data for\neclipse&#45;score/inc_nlohmann_json\nare documented so that\nthe scope and reproducibility\nof the available test\ndata can be understood.\n" target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-45" xlink:title="JLS&#45;45: The storage location,\nretention limits, and\nintended use of captured\ntest result data for\neclipse&#45;score/inc_nlohmann_json\nare documented so that\nthe scope and reproducibility\nof the available test\ndata can be understood.\n" target="_top">
 <polygon fill="none" stroke="black" points="646,-143 403,-143 403,0 646,0 646,-143"/>
 <text text-anchor="middle" x="524.5" y="-127.8" font-family="Open Sans" font-size="14.00">JLS&#45;45: The storage location,</text>
 <text text-anchor="middle" x="524.5" y="-112.8" font-family="Open Sans" font-size="14.00">retention limits, and</text>
@@ -80,7 +80,7 @@
 <!-- TA&#45;DATA -->
 <g id="node4" class="node">
 <title>TA&#45;DATA</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-DATA_graph.svg" xlink:title="TA&#45;DATA: Data in eclipse&#45;score/inc_nlohmann_json\nis collected from tests,\nand from monitoring of\ndeployed software, according\nto specified objectives.\n" target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-DATA_graph.svg" xlink:title="TA&#45;DATA: Data in eclipse&#45;score/inc_nlohmann_json\nis collected from tests,\nand from monitoring of\ndeployed software, according\nto specified objectives.\n" target="_top">
 <polygon fill="none" stroke="black" points="540,-370 177,-370 177,-287 540,-287 540,-370"/>
 <text text-anchor="middle" x="358.5" y="-354.8" font-family="Open Sans" font-size="14.00">TA&#45;DATA: Data in eclipse&#45;score/inc_nlohmann_json</text>
 <text text-anchor="middle" x="358.5" y="-339.8" font-family="Open Sans" font-size="14.00">is collected from tests,</text>

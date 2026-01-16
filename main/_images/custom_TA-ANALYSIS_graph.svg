@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="370.5,-854 122.5,-854 122.5,-771 370.5,-771 370.5,-854"/>
 <text text-anchor="middle" x="246.5" y="-838.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="246.5" y="-823.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;RESULTS -->
 <g id="node5" class="node">
 <title>TT&#45;RESULTS</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-RESULTS_graph.svg" xlink:title="TT&#45;RESULTS: Evidence\nis provided within eclipse&#45;score/inc_nlohmann_json\nto demonstrate that the\nnlohmann/json library\ndoes what it is supposed\nto do, and does not do\nwhat it must not do.\n" target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-RESULTS_graph.svg" xlink:title="TT&#45;RESULTS: Evidence\nis provided within eclipse&#45;score/inc_nlohmann_json\nto demonstrate that the\nnlohmann/json library\ndoes what it is supposed\nto do, and does not do\nwhat it must not do.\n" target="_top">
 <polygon fill="none" stroke="black" points="432,-627 61,-627 61,-514 432,-514 432,-627"/>
 <text text-anchor="middle" x="246.5" y="-611.8" font-family="Open Sans" font-size="14.00">TT&#45;RESULTS: Evidence</text>
 <text text-anchor="middle" x="246.5" y="-596.8" font-family="Open Sans" font-size="14.00">is provided within eclipse&#45;score/inc_nlohmann_json</text>
@@ -46,7 +46,7 @@
 <!-- JLS&#45;17 -->
 <g id="node2" class="node">
 <title>JLS&#45;17</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-17" xlink:title="JLS&#45;17: Failure rates\nof CI tests are analysed\nfor both the upstream\nnlohmann/json and the\neclipse&#45;score/inc_nlohmann_json\nrepositories, and any\nhigh failure rates are\nreasonably justified.\n" target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-17" xlink:title="JLS&#45;17: Failure rates\nof CI tests are analysed\nfor both the upstream\nnlohmann/json and the\neclipse&#45;score/inc_nlohmann_json\nrepositories, and any\nhigh failure rates are\nreasonably justified.\n" target="_top">
 <polygon fill="none" stroke="black" points="243,-128 0,-128 0,0 243,0 243,-128"/>
 <text text-anchor="middle" x="121.5" y="-112.8" font-family="Open Sans" font-size="14.00">JLS&#45;17: Failure rates</text>
 <text text-anchor="middle" x="121.5" y="-97.8" font-family="Open Sans" font-size="14.00">of CI tests are analysed</text>
@@ -62,7 +62,7 @@
 <!-- JLS&#45;26 -->
 <g id="node3" class="node">
 <title>JLS&#45;26</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-26" xlink:title="JLS&#45;26: Any failed CI\npipeline executions in\nthe master branch of\nthe nlohmann/json repository\nare analyzed and fixed.\n" target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-26" xlink:title="JLS&#45;26: Any failed CI\npipeline executions in\nthe master branch of\nthe nlohmann/json repository\nare analyzed and fixed.\n" target="_top">
 <polygon fill="none" stroke="black" points="482,-105.5 261,-105.5 261,-22.5 482,-22.5 482,-105.5"/>
 <text text-anchor="middle" x="371.5" y="-90.3" font-family="Open Sans" font-size="14.00">JLS&#45;26: Any failed CI</text>
 <text text-anchor="middle" x="371.5" y="-75.3" font-family="Open Sans" font-size="14.00">pipeline executions in</text>
@@ -75,7 +75,7 @@
 <!-- TA&#45;ANALYSIS -->
 <g id="node4" class="node">
 <title>TA&#45;ANALYSIS</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-ANALYSIS_graph.svg" xlink:title="TA&#45;ANALYSIS: Collected\ndata from tests and monitoring\nof deployed software\nin eclipse&#45;score/inc_nlohmann_json\nis analysed according\nto specified objectives.\n" target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-ANALYSIS_graph.svg" xlink:title="TA&#45;ANALYSIS: Collected\ndata from tests and monitoring\nof deployed software\nin eclipse&#45;score/inc_nlohmann_json\nis analysed according\nto specified objectives.\n" target="_top">
 <polygon fill="none" stroke="black" points="376.5,-370 116.5,-370 116.5,-272 376.5,-272 376.5,-370"/>
 <text text-anchor="middle" x="246.5" y="-354.8" font-family="Open Sans" font-size="14.00">TA&#45;ANALYSIS: Collected</text>
 <text text-anchor="middle" x="246.5" y="-339.8" font-family="Open Sans" font-size="14.00">data from tests and monitoring</text>

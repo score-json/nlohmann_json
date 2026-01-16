@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="631.5,-809 383.5,-809 383.5,-726 631.5,-726 631.5,-809"/>
 <text text-anchor="middle" x="507.5" y="-793.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="507.5" y="-778.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;CONFIDENCE -->
 <g id="node7" class="node">
 <title>TT&#45;CONFIDENCE</title>
-<g id="a_node7"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-CONFIDENCE_graph.svg" xlink:title="TT&#45;CONFIDENCE: Confidence\nin the nlohmann/json\nlibrary is achieved by\nmeasuring and analysing\nbehaviour and evidence\nover time within eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
+<g id="a_node7"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-CONFIDENCE_graph.svg" xlink:title="TT&#45;CONFIDENCE: Confidence\nin the nlohmann/json\nlibrary is achieved by\nmeasuring and analysing\nbehaviour and evidence\nover time within eclipse&#45;score/inc_nlohmann_json.\n" target="_top">
 <polygon fill="none" stroke="black" points="690,-582 325,-582 325,-484 690,-484 690,-582"/>
 <text text-anchor="middle" x="507.5" y="-566.8" font-family="Open Sans" font-size="14.00">TT&#45;CONFIDENCE: Confidence</text>
 <text text-anchor="middle" x="507.5" y="-551.8" font-family="Open Sans" font-size="14.00">in the nlohmann/json</text>
@@ -45,7 +45,7 @@
 <!-- JLS&#45;08 -->
 <g id="node2" class="node">
 <title>JLS&#45;08</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-08" xlink:title="JLS&#45;08: Each leaf node\nin the Trustable Graph\nthat is not an Assumption&#45;of&#45;Use\n(AoU) is scored either\nbased on SME review(s)\nalone or on a combination\nof SME review(s) and\nan automatic validator.\n" target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-08" xlink:title="JLS&#45;08: Each leaf node\nin the Trustable Graph\nthat is not an Assumption&#45;of&#45;Use\n(AoU) is scored either\nbased on SME review(s)\nalone or on a combination\nof SME review(s) and\nan automatic validator.\n" target="_top">
 <polygon fill="none" stroke="black" points="245,-128 0,-128 0,0 245,0 245,-128"/>
 <text text-anchor="middle" x="122.5" y="-112.8" font-family="Open Sans" font-size="14.00">JLS&#45;08: Each leaf node</text>
 <text text-anchor="middle" x="122.5" y="-97.8" font-family="Open Sans" font-size="14.00">in the Trustable Graph</text>
@@ -61,7 +61,7 @@
 <!-- JLS&#45;09 -->
 <g id="node3" class="node">
 <title>JLS&#45;09</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-09" xlink:title="JLS&#45;09: Scores within\nthe TSF documentation\nare reasonably, systematically\nand repeatably accumulated.\n" target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-09" xlink:title="JLS&#45;09: Scores within\nthe TSF documentation\nare reasonably, systematically\nand repeatably accumulated.\n" target="_top">
 <polygon fill="none" stroke="black" points="490,-98 263,-98 263,-30 490,-30 490,-98"/>
 <text text-anchor="middle" x="376.5" y="-82.8" font-family="Open Sans" font-size="14.00">JLS&#45;09: Scores within</text>
 <text text-anchor="middle" x="376.5" y="-67.8" font-family="Open Sans" font-size="14.00">the TSF documentation</text>
@@ -73,7 +73,7 @@
 <!-- JLS&#45;20 -->
 <g id="node4" class="node">
 <title>JLS&#45;20</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-20" xlink:title="JLS&#45;20: A github workflow\nof eclipse&#45;score/inc_nlohmann_json\nsaves the history of\nscores in the trustable\ngraph to derive trends.\n" target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-20" xlink:title="JLS&#45;20: A github workflow\nof eclipse&#45;score/inc_nlohmann_json\nsaves the history of\nscores in the trustable\ngraph to derive trends.\n" target="_top">
 <polygon fill="none" stroke="black" points="769,-105.5 508,-105.5 508,-22.5 769,-22.5 769,-105.5"/>
 <text text-anchor="middle" x="638.5" y="-90.3" font-family="Open Sans" font-size="14.00">JLS&#45;20: A github workflow</text>
 <text text-anchor="middle" x="638.5" y="-75.3" font-family="Open Sans" font-size="14.00">of eclipse&#45;score/inc_nlohmann_json</text>
@@ -86,7 +86,7 @@
 <!-- JLS&#45;37 -->
 <g id="node5" class="node">
 <title>JLS&#45;37</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-37" xlink:title="JLS&#45;37: High&#45;level statements\nare decomposed into smaller,\nrecursive statements.\n" target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-37" xlink:title="JLS&#45;37: High&#45;level statements\nare decomposed into smaller,\nrecursive statements.\n" target="_top">
 <polygon fill="none" stroke="black" points="1009.5,-90.5 787.5,-90.5 787.5,-37.5 1009.5,-37.5 1009.5,-90.5"/>
 <text text-anchor="middle" x="898.5" y="-75.3" font-family="Open Sans" font-size="14.00">JLS&#45;37: High&#45;level statements</text>
 <text text-anchor="middle" x="898.5" y="-60.3" font-family="Open Sans" font-size="14.00">are decomposed into smaller,</text>
@@ -97,7 +97,7 @@
 <!-- TA&#45;CONFIDENCE -->
 <g id="node6" class="node">
 <title>TA&#45;CONFIDENCE</title>
-<g id="a_node6"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-CONFIDENCE_graph.svg" xlink:title="TA&#45;CONFIDENCE: Confidence\nin the nlohmann/json\nlibrary is measured based\non results of analysis.\n" target="_top">
+<g id="a_node6"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-CONFIDENCE_graph.svg" xlink:title="TA&#45;CONFIDENCE: Confidence\nin the nlohmann/json\nlibrary is measured based\non results of analysis.\n" target="_top">
 <polygon fill="none" stroke="black" points="616.5,-340 398.5,-340 398.5,-272 616.5,-272 616.5,-340"/>
 <text text-anchor="middle" x="507.5" y="-324.8" font-family="Open Sans" font-size="14.00">TA&#45;CONFIDENCE: Confidence</text>
 <text text-anchor="middle" x="507.5" y="-309.8" font-family="Open Sans" font-size="14.00">in the nlohmann/json</text>

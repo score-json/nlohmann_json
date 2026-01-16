@@ -12,7 +12,7 @@
 <!-- TRUSTABLE&#45;SOFTWARE -->
 <g id="node1" class="node">
 <title>TRUSTABLE&#45;SOFTWARE</title>
-<g id="a_node1"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
+<g id="a_node1"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TRUSTABLE-SOFTWARE_graph.svg" xlink:title="TRUSTABLE&#45;SOFTWARE: This\nrelease of JSON&#45;Library\nalso referred in the\ndocumentation as nlohmann/json\nlibrary is Trustable.\n" target="_top">
 <polygon fill="none" stroke="black" points="390,-869 142,-869 142,-786 390,-786 390,-869"/>
 <text text-anchor="middle" x="266" y="-853.8" font-family="Open Sans" font-size="14.00">TRUSTABLE&#45;SOFTWARE: This</text>
 <text text-anchor="middle" x="266" y="-838.8" font-family="Open Sans" font-size="14.00">release of JSON&#45;Library</text>
@@ -25,7 +25,7 @@
 <!-- TT&#45;RESULTS -->
 <g id="node5" class="node">
 <title>TT&#45;RESULTS</title>
-<g id="a_node5"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TT-RESULTS_graph.svg" xlink:title="TT&#45;RESULTS: Evidence\nis provided within eclipse&#45;score/inc_nlohmann_json\nto demonstrate that the\nnlohmann/json library\ndoes what it is supposed\nto do, and does not do\nwhat it must not do.\n" target="_top">
+<g id="a_node5"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TT-RESULTS_graph.svg" xlink:title="TT&#45;RESULTS: Evidence\nis provided within eclipse&#45;score/inc_nlohmann_json\nto demonstrate that the\nnlohmann/json library\ndoes what it is supposed\nto do, and does not do\nwhat it must not do.\n" target="_top">
 <polygon fill="none" stroke="black" points="451.5,-642 80.5,-642 80.5,-529 451.5,-529 451.5,-642"/>
 <text text-anchor="middle" x="266" y="-626.8" font-family="Open Sans" font-size="14.00">TT&#45;RESULTS: Evidence</text>
 <text text-anchor="middle" x="266" y="-611.8" font-family="Open Sans" font-size="14.00">is provided within eclipse&#45;score/inc_nlohmann_json</text>
@@ -46,7 +46,7 @@
 <!-- JLS&#45;01 -->
 <g id="node2" class="node">
 <title>JLS&#45;01</title>
-<g id="a_node2"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-01" xlink:title="JLS&#45;01: The CI pipeline\nin the upstream nlohmann/json\nrepository executes the\nunit and integration\ntest suites on each pull\nrequest (opened, reopened,\nsynchronized). " target="_top">
+<g id="a_node2"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-01" xlink:title="JLS&#45;01: The CI pipeline\nin the upstream nlohmann/json\nrepository executes the\nunit and integration\ntest suites on each pull\nrequest (opened, reopened,\nsynchronized). " target="_top">
 <polygon fill="none" stroke="black" points="234,-128 0,-128 0,-15 234,-15 234,-128"/>
 <text text-anchor="middle" x="117" y="-112.8" font-family="Open Sans" font-size="14.00">JLS&#45;01: The CI pipeline</text>
 <text text-anchor="middle" x="117" y="-97.8" font-family="Open Sans" font-size="14.00">in the upstream nlohmann/json</text>
@@ -61,7 +61,7 @@
 <!-- JLS&#45;22 -->
 <g id="node3" class="node">
 <title>JLS&#45;22</title>
-<g id="a_node3"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/generated/JLS.html#jls-22" xlink:title="JLS&#45;22: A scheduled GitHub\nworkflow in eclipse&#45;score/inc_nlohmann_json\ntriggers the nlohmann/json\nunit and integration\ntest at least once per\nday and records their\noutcomes as time&#45;stamped\nentries in the persistent\ntest results database.\n" target="_top">
+<g id="a_node3"><a xlink:href="https://score-json.github.io/nlohmann_json/main/generated/JLS.html#jls-22" xlink:title="JLS&#45;22: A scheduled GitHub\nworkflow in eclipse&#45;score/inc_nlohmann_json\ntriggers the nlohmann/json\nunit and integration\ntest at least once per\nday and records their\noutcomes as time&#45;stamped\nentries in the persistent\ntest results database.\n" target="_top">
 <polygon fill="none" stroke="black" points="579.5,-143 252.5,-143 252.5,0 579.5,0 579.5,-143"/>
 <text text-anchor="middle" x="416" y="-127.8" font-family="Open Sans" font-size="14.00">JLS&#45;22: A scheduled GitHub</text>
 <text text-anchor="middle" x="416" y="-112.8" font-family="Open Sans" font-size="14.00">workflow in eclipse&#45;score/inc_nlohmann_json</text>
@@ -78,7 +78,7 @@
 <!-- TA&#45;VALIDATION -->
 <g id="node4" class="node">
 <title>TA&#45;VALIDATION</title>
-<g id="a_node4"><a xlink:href="https://score-json.github.io/inc_nlohmann_json/main/_images/custom_TA-VALIDATION_graph.svg" xlink:title="TA&#45;VALIDATION: All specified\ntests are executed repeatedly,\nunder defined conditions\nin controlled environments,\naccording to specified\nobjectives. " target="_top">
+<g id="a_node4"><a xlink:href="https://score-json.github.io/nlohmann_json/main/_images/custom_TA-VALIDATION_graph.svg" xlink:title="TA&#45;VALIDATION: All specified\ntests are executed repeatedly,\nunder defined conditions\nin controlled environments,\naccording to specified\nobjectives. " target="_top">
 <polygon fill="none" stroke="black" points="379.5,-385 152.5,-385 152.5,-287 379.5,-287 379.5,-385"/>
 <text text-anchor="middle" x="266" y="-369.8" font-family="Open Sans" font-size="14.00">TA&#45;VALIDATION: All specified</text>
 <text text-anchor="middle" x="266" y="-354.8" font-family="Open Sans" font-size="14.00">tests are executed repeatedly,</text>
