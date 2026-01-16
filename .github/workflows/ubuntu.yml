@@ -424,7 +424,7 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -v TSF/MemoryEfficientTestResultData.db)
+          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -vE '^TSF/MemoryEfficientTestResultData_.*\.db$')
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
@@ -573,7 +573,7 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -v TSF/MemoryEfficientTestResultData.db)
+          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -vE '^TSF/MemoryEfficientTestResultData_.*\.db$')
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
@@ -722,7 +722,7 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -v TSF/MemoryEfficientTestResultData.db)
+          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -vE '^TSF/MemoryEfficientTestResultData_.*\.db$')
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
