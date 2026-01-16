@@ -144,7 +144,9 @@ if __name__ == "__main__":
     # Step 1: store metadata of workflow run persistently
 
     # initiate connection to database
-    connector = sqlite3.connect("TSF/MemoryEfficientTestResultData.db")
+    persist_db = os.environ.get("TSF_PERSIST_DB", "TSF/MemoryEfficientTestResultData.db")
+    connector = sqlite3.connect(persist_db)
+
     connector.execute("PRAGMA foreign_keys = ON")
 
     # load expected tables
