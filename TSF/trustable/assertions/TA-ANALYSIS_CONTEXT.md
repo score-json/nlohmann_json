@@ -61,9 +61,9 @@ that may indicate problems in development, test, or production.
 - What fraction of Expectations are covered by the test data?
   - **Answer**: The two expectations are JLEX-01 and JLEX-02. Every statement supporting either of these expectations is ultimately supported by a test, except for WFJ-06. WFJ-06 specifies that `basic_json::accept` must accept exactly JSON values for all possible inputs. Since there are infinitely many possible inputs, this cannot be tested exhaustively. Indirect tests are provided by the rejection of ill-formed json data. This traceability is established by requiring each supporting statement under JLEX-01/02 to reference the relevant CI test(s), and the suitability of the referenced tests as evidence is validated during SME review as part of the scoring process (see JLS-74).
 - What fraction of Misbehaviours are covered by the monitored indicator data?
-  - **Answer**: Currently none, because there is no implemented monitoring of deployed instances yet. This is a future integrator responsibility (see AOU-09, AOU-18 and AOU-19).
+  - **Answer**: Currently there is no indicators implemented, that focus on runtime behavior. The only indicators implemented are a coverage gate and PR count gate that are both part of the CI. The data therefore is available via the GitHub actions history.
 - How confident are we that the indicator data are accurate and timely?
-  - **Answer**: No indicator data is collected (see the previous question).
+  - **Answer**: See the previous question. Since we just implemented a coverage gate and PR count gate as general indicators, that data is produced automatically by the CI and therefore is generated consistently for every run. We are confident that the values are timely, as they are updated on each CI execution, and accurate to the extent that GitHub Actions reflects the executed workflows and their recorded outputs. 
 - How reliable is the monitoring process?
   - **Answer**: See the previous question.
 - How well does the production data correlate with our test data?

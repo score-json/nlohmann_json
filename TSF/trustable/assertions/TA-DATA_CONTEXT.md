@@ -44,19 +44,19 @@ monitored deployments.
 **Checklist**
 
 - Is all test data stored with long-term accessibility?
-  - **Answer**: No. Test results are collected into a persistent database as part of the CI workflows, which is done as a proof of concept. Due to GitHub storage constraints, the storage of this database is currently limited.
+  - **Answer**: Yes, the test results are collected into a persistent database as part of the CI workflows and pushed to the save_historical_data branch. To avoid hitting GitHub file size limits, the persistent database is automatically rotated into date-stamped files, while older files remain available for long-term access. 
 - Is all monitoring data stored with long-term accessibility?
-  - **Answer**: No. Dedicated monitoring data from deployed software is not collected yet. But it is expected to be implemented by the integrator (see AOU-09, AOU-18 and AOU-19).
+  - **Answer**: Monitoring data is currently collected via the CI and stored with long-term accessibility in the persistent CI data store on the save_historical_data branch. However, there is still no dedicated monitoring for runtime behaviour (and related aspects), so this part of monitoring data is not collected yet.
 - Are extensible data models implemented?
   - **Answer**: Test-result data is stored in a SQLite database with separate tables for workflow runs and individual test results (see JLS-18). This schema can be extended with additional fields or tables if needed.
 - Is sensitive data handled correctly (broadcasted, stored, discarded, or anonymised) with appropriate encryption and redundancy?
   - **Answer**: This is not explicitly applicable. The captured test data does not include personal or sensitive data.
 - Are proper backup mechanisms in place?
-  - **Answer**: No explicit project-level backup mechanism is defined for the test results database beyond GitHub’s own infrastructure.
+  - **Answer**: NNo explicit project-level backup mechanism is defined beyond GitHub’s own infrastructure. The persistent test/scoring databases are stored and versioned on the save_historical_data branch, which provides history and recoverability via Git, but there is no separate off-platform backup process in place.
 - Are storage and backup limits tested?
-  - **Answer**: The `capture_test_data_memory_sensitive.py` script enforces size limits for the persistent database and fails the workflow if they are exceeded. There is no backup mechanism.
+  - **Answer**: Storage limits are addressed in CI by checking the size of the persistent databases and rotating to a new date-stamped database file once a threshold is reached, to avoid hitting GitHub file size limits. There is no separate backup mechanism beyond GitHub/Git history.
 - Are all data changes traceable?
-  - **Answer**:  Yes, for test data. Updates to `TSF/data_storage/MemoryEfficientTestResultData*.db` are performed by CI workflows and committed to the `save_historical_data` branch, so Git history records each change.
+  - **Answer**:  Yes, for both test and scoring data. Updates to the persistent databases (e.g. TSF/persistent/MemoryEfficientTestResultData_*.db and TSF/persistent/TrustableScoring_*.db) are performed by CI workflows and committed to the save_historical_data branch, so Git history records each change.
 - Are concurrent changes correctly managed and resolved?
   - **Answer**: Largely yes for test data. The ubuntu workflow uses a concurrency group that cancels in-progress runs for the same reference, so typically only one job updates the persistent database at a time and remaining conflicts would surface as failed pushes and require manual resolution.
 - Is data accessible only to intended parties?
