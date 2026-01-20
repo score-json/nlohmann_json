@@ -1,3 +1,18 @@
+# Failure Rate Analysis for `nlohmann/json` and `eclipse-score/inc_nlohmann_json` CI Workflows
+
+## Introduction
+
+GitHub’s “failure rate” counts all non‑successful job runs (including cancelled jobs and infrastructure/tooling problems), so it should not be interpreted as a direct measure of regressions in the JSON libraries. Throughout this analysis we distinguish between:
+
+- **Test‑result failures/regressions:** unit or integration test failures that indicate a behavioural issue in the library.
+- **CI/environment/infrastructure failures:** runner, tooling or network issues (e.g., coverage publishing, label synchronization) that do not reflect problems in the JSON code.
+
+## Methodology
+
+For jobs with non‑zero failure rates we inspected the logs of failed workflow runs to determine whether failures originated from failing unit/integration tests (test‑result failures/regressions) or from CI/environment/tooling steps (CI/environment/infrastructure failures). Only the former are treated as behaviour‑related evidence.
+
+---
+
 # Failure rate analysis for nlohmann/json Ubuntu CI
 
 ## Scope and data source
@@ -6,20 +21,6 @@
 - **Workflow:** `.github/workflows/ubuntu.yml`
 - **Date range:** 2025-01-11 – 2025-04-11  (3 months before the release date of the version v3.12.0)
 - **Filter:** `workflow_file_name: ubuntu.yml`
-
-GitHub’s “failure rate” counts all non-successful job runs, including cancelled
-jobs (e.g. quickly closed PRs) and infrastructure/tooling problems, not only
-true regressions in the JSON library.
-
-In this document we distinguish between:
-- (a) **test-result failures/regressions** (unit/integration tests failing), and
-- (b) **CI/environment/infrastructure failures** (runner/tooling/network issues, publishing steps, label synchronization, etc.).
-
-**Methodology note:** For the jobs with non-zero failure rates discussed below,
-we inspected logs of failed workflow runs to determine whether failures
-originated from failing unit/integration tests (test-result failures/regressions)
-or from CI/environment/tooling steps. Only the former is treated as
-behaviour-related evidence.
 
 ## Jobs with the highest reported failure rates
 
@@ -78,21 +79,6 @@ For the selected three-month window before the v3.12.0 release, the Ubuntu CI fo
 - **Workflow:** `Parent Workflow` (top-level CI workflow)
 - **Date range:** last 90 days from 08.12.2025
 - **Filter:** `workflow_file_name: parent-workflow.yml`
-
-
-GitHub’s “failure rate” counts all non-successful job runs, including cancelled
-jobs (e.g. quickly closed PRs) and infrastructure/tooling problems, not only
-true regressions in the JSON library.
-
-In this document we distinguish between:
-- (a) **test-result failures/regressions** (unit/integration tests failing), and
-- (b) **CI/environment/infrastructure failures** (runner/tooling/network issues, publishing steps, label synchronization, etc.).
-
-**Methodology note:** For the jobs with non-zero failure rates discussed below,
-we inspected logs of failed workflow runs to determine whether failures
-originated from failing unit/integration tests (test-result failures/regressions)
-or from CI/environment/tooling steps. Only the former is treated as
-behaviour-related evidence.
 
 ## Jobs with the highest reported failure rates
 
