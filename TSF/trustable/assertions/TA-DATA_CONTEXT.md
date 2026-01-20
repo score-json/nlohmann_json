@@ -56,7 +56,7 @@ monitored deployments.
 - Are storage and backup limits tested?
   - **Answer**: Storage limits are addressed in CI by checking the size of the persistent databases and rotating to a new date-stamped database file once a threshold is reached, to avoid hitting GitHub file size limits. There is no separate backup mechanism beyond GitHub/Git history.
 - Are all data changes traceable?
-  - **Answer**:  Yes, for both test and scoring data. Updates to the persistent databases (e.g. TSF/persistent/MemoryEfficientTestResultData_*.db and TSF/persistent/TrustableScoring_*.db) are performed by CI workflows and committed to the save_historical_data branch, so Git history records each change.
+  - **Answer**:  Yes, for both test and scoring data. Updates to the persistent databases (e.g. TSF/data_storage/MemoryEfficientTestResultData_*.db and TSF/data_storage/TrustableScoring_*.db) are performed by CI workflows and committed to the save_historical_data branch, so Git history records each change.
 - Are concurrent changes correctly managed and resolved?
   - **Answer**: Largely yes for test data. The ubuntu workflow uses a concurrency group that cancels in-progress runs for the same reference, so typically only one job updates the persistent database at a time and remaining conflicts would surface as failed pushes and require manual resolution.
 - Is data accessible only to intended parties?
