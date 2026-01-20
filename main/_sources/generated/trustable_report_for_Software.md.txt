@@ -116,7 +116,7 @@ This presents the compliance for the _JSON-Library Statements_ (JLS) in tabular 
 | [JLS-50](JLS.md#jls-50)  | All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-51](JLS.md#jls-51)  | All source code of the nlohmann/json library is mirrored within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-52](JLS.md#jls-52)  | Releases of the nlohmann/json library contain a comprehensive set of attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
-| [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
 | [JLS-57](JLS.md#jls-57)  | Outstanding bugs or misbehaviours of nlohmann/json are fetched and saved within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-58](JLS.md#jls-58)  | Github hosted runners are used as the test environment for eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
 | [JLS-61](JLS.md#jls-61)  | Any Github Actions used in the testing process are pinned to specific commit SHAs to ensure consistent action behavior across runs. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
@@ -348,6 +348,6 @@ This presents the compliance for _Well Formed JSON_ (WFJ) in tabular form.
 _Generated for: Software_
 
 * _Repository root: /home/runner/work/nlohmann_json/nlohmann_json_
-* _Commit SHA: ca899f081ebfb32f4d137692bf3fa9ac7312aac4_
-* _Commit date/time: 2026-01-16 13:40:32 UTC_
-* _Commit tag: ca899f0_
+* _Commit SHA: 941c9ffe5a258dd85b46cd08aa52fbf1885e813e_
+* _Commit date/time: 2026-01-20 09:05:12 UTC_
+* _Commit tag: 941c9ff_
