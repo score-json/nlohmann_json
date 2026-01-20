@@ -27,4 +27,4 @@ score:
     Erikhu1: 0.9
 ---
 
-The nlohmann/json repository uses static code analysis tools and sanitizer.
+The nlohmann/json repository uses static code analysis tools and sanitizers.
