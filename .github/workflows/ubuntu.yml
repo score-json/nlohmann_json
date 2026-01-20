@@ -430,6 +430,12 @@ jobs:
       - name: Commit and Push persistent data
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
+          set -euo pipefail
+
+          if [ -z "${TSF_PERSIST_DB:-}" ]; then
+            echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
+            exit 1
+          fi
           git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
@@ -579,6 +585,12 @@ jobs:
       - name: Commit and Push persistent data
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
+          set -euo pipefail
+
+          if [ -z "${TSF_PERSIST_DB:-}" ]; then
+            echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
+            exit 1
+          fi
           git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
@@ -728,6 +740,13 @@ jobs:
       - name: Commit and Push persistent data
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
+          set -euo pipefail
+
+          if [ -z "${TSF_PERSIST_DB:-}" ]; then
+            echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
+            exit 1
+          fi
+          
           git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data

@@ -198,7 +198,15 @@ jobs:
 
       - name: Store persistent data
         run: |
+          set -euo pipefail
+
+          if [ -z "${TSF_SCORING_DB:-}" ]; then
+            echo "::error::TSF_SCORING_DB is not set. Did 'Select persistent scoring DB' run successfully?"
+            exit 1
+          fi
+
           echo "[info] Committing scoring DB: $TSF_SCORING_DB"
+
           git add "$TSF_SCORING_DB"
           git commit -m "Append data storage" || echo "Historical data already up to date."
           git push origin save_historical_data
