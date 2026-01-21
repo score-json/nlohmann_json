@@ -3,7 +3,12 @@ from datetime import datetime
 import os
 
 # global variable -- path to persistent data storage
-persistent_storage = os.getenv("TSF_SCORING_DB", "TSF/TrustableScoring.db")
+persistent_storage = os.environ.get("TSF_SCORING_DB")
+if not persistent_storage:
+    raise RuntimeError(
+        "TSF_SCORING_DB is not set.\n"
+        "This script requires the path to the persistent SQLite database.\n"
+    )
 
 def data_store_pull() -> list[dict]:
     data = get_my_data()
