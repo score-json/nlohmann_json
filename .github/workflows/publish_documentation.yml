@@ -153,6 +153,7 @@ jobs:
             sqlite3 "$latest" "PRAGMA user_version = 1;"
             echo "[info] No existing scoring DB -> created: $latest"
             echo "TSF_SCORING_DB=${latest}" >> "$GITHUB_ENV"
+            echo "db_path=$latest" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -179,19 +180,23 @@ jobs:
 
           echo "TSF_SCORING_DB=${latest}" >> "$GITHUB_ENV"
           echo "[info] Using scoring DB: $latest"
+          echo "db_path=$latest" >> "$GITHUB_OUTPUT"
 
 
       - name: Generate trudag report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TSF_SCORING_DB: ${{ steps.select_db.outputs.db_path }}
         run: |
-          echo "[debug] TSF_SCORING_DB=$TSF_SCORING_DB"
+          set -euo pipefail
+          echo "[verify] TSF_SCORING_DB='$TSF_SCORING_DB'"
           test -n "$TSF_SCORING_DB"
-          test -f "$TSF_SCORING_DB" || (echo "::error::DB file missing"; ls -lah TSF/data_storage; exit 1)
+          test -f "$TSF_SCORING_DB"
+          sqlite3 "$TSF_SCORING_DB" "PRAGMA user_version;" >/dev/null
           REPO_FULL="${{ github.repository }}"
           REPO_NAME="${REPO_FULL#*/}"
           OWNER_NAME="${REPO_FULL%%/*}" 
           TSF/scripts/generate_report.sh "https://${OWNER_NAME}.github.io/${REPO_NAME}/main"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout data storage branch
         run: |
