@@ -8,7 +8,7 @@ normative: false
 Although it is practically impossible to specify all of the necessary behaviours
 and required properties for complex software, we must clearly specify the most
 important of these (e.g. where harm could result if given criteria are not met),
-and verify that these are correctly provided by nlohmann/json.
+and verify that these are correctly provided by the nlohmann/json library.
 
 **Guidance**
 
@@ -48,12 +48,11 @@ sufficient.
 **Evidence**
 
 - List of Expectations
-  - **Answer**: 
-- Argument of sufficiency for break-down of expected behaviour for all 
-  Expectations
-  - **Answer**: 
+  - **Answer**: The Expectations are provided via JLEX-01 and JLEX-02.
+- Argument of sufficiency for break-down of expected behaviour for all Expectations
+  - **Answer**: See JLS-56.
 - Validation and verification of expected behaviour
-  - **Answer**: 
+  - **Answer**: The validation and verification of expected behaviour is done via the evidence provided for all the statements below JLEX-01 and JLEX-02 in the trustable graph, in addition to JLS-03.
 
 
 **Confidence scoring**
@@ -65,26 +64,26 @@ and that the resulting system and tests are validated by appropriate strategies.
 **Checklist**
 
 - How has the list of Expectations varied over time?
-  - **Answer**: 
+  - **Answer**: The list of Expectations is taken from [here](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html). The development can be retraced using git.
 - How confident can we be that this list is comprehensive?
-  - **Answer**: 
+  - **Answer**: The list of Expectations has been collected amongst the stakeholders in S-CORE, so we are very confident that the list is comprehensive.
 - Could some participants have incentives to manipulate information?
-  - **Answer**: 
+  - **Answer**: We consider intentional manipulation of information about nlohmann/json to be very unlikely because the library is open source, has no direct revenue or certification attached to this documentation, and all stakeholders share a strong interest in correctness and robustness. Any misrepresentation of expectations or verification would quickly become counterproductive by increasing integration risk, maintenance cost, and reputational damage for the participants. In addition, the requirements, code and history are publicly visible and version-controlled, so inconsistencies can be detected and challenged by other S-CORE stakeholders or the wider community. While unintentional errors are always possible, we see no realistic positive incentive—and several strong negative incentives—for deliberately manipulating this information.
 - Could there be whole categories of Expectations still undiscovered?
-  - **Answer**: 
+  - **Answer**: Yes, it is always possible that whole categories of Expectations remain undiscovered, especially for a widely used and versatile library like nlohmann/json. However, this risk is mitigated by deriving Expectations from actual use cases, stakeholder input, and known integration contexts within S-CORE, and by revisiting them as new uses emerge. The requirements and their evolution are tracked in version control, so newly identified categories can be added transparently. We therefore acknowledge the possibility of missing categories, but consider the current set to be appropriate and proportionate for the identified scope and applications.
 - Can we identify Expectations that have been understood but not specified?
-  - **Answer**: 
+  - **Answer**: There are currently no Expectations that have been understood but not specified.
 - Can we identify some new Expectations, right now?
-  - **Answer**: 
+  - **Answer**: We currently do not see further Expectations to be identified because the existing set was derived systematically from the S-CORE stakeholders.
 - How confident can we be that this list covers all critical requirements?
-  - **Answer**: 
+  - **Answer**: We are very confident that this list covers all critical requirements.
 - How comprehensive is the list of tests?
-  - **Answer**: 
+  - **Answer**: Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27. Therefore, we deem the list of tests to be very comprehensive.
 - Is every Expectation covered by at least one implemented test?
-  - **Answer**: 
+  - **Answer**: Yes, both of the Expectations are covered by at least one implemented test.
 - Are there any Expectations where we believe more coverage would help?
-  - **Answer**: 
+  - **Answer**: No, the coverage is already on a high level and no further gains are expected by further increasing the coverage.
 - How do dependencies affect Expectations, and are their properties verifiable?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library does not have any external dependencies apart from the testing pipeline, so there are no dependencies that could possibly affect the Expectations. 
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
-  - **Answer**: 
+  - **Answer**: For components, there is no input analysis as the nlohmann/json library has no external components (see JLS-34). For Tools, a tool assessment is provided via JLS-50. In addition, the only data provided to the nlohmann/json library is the input data when using the libraries' functionality, as well as the test data taken from [here](https://github.com/nlohmann/json_test_data). For data, the json_test_data repository is an aggregation of widely used, independently curated JSON test suites (Big List of Naughty Strings, JSONTestSuite, JSON Patch tests, benchmark suites, etc.), each explicitly designed to cover malformed inputs, edge cases, and realistic JSON usage. We rely on the documented scope and intent of these suites, together with the high measured code coverage (JLS-27), to conclude that they exercise the behaviours captured in our Expectations (JLEX-01, JLEX-02), and we do not perform a separate, manual “input analysis” of every file in the corpus. In that sense, there are no additional local input‑analysis findings beyond the upstream characterisation of these corpora that would currently motivate changing or extending our Expectations.

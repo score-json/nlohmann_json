@@ -36,16 +36,19 @@ class CPPTestReference(BaseReference):
     section declaration, and the closing brace `}` must have the same indentation 
     as the opening brace. This is the case for the tests from nlohmann_json.
     """
-    def __init__(self, name: str, path: str) -> None:
+    def __init__(self, name: str, path: str, description: str = "") -> None:
         """
         Initialize CPPTestReference.
         
         Args:
-            name: Section name, use colon-separated for nested sections (e.g., "testcase1:section1:section2")
+            name: Section name, use colon-separated for nested sections
+                  (e.g., "testcase1:section1:section2")
             path: Relative path from project root to the file
+            description: Optional human-readable description of the test section
         """
         self._name = name
         self._path = Path(path)
+        self._description = description
 
     @classmethod
     def type(cls) -> str:
@@ -167,12 +170,15 @@ class CPPTestReference(BaseReference):
     def as_markdown(self, filepath: None | str = None) -> str:
         content = self.content.decode('utf-8')
         content = self.remove_leading_whitespace_preserve_indentation(content)
-        return format_cpp_code_as_markdown(content)
+        md = format_cpp_code_as_markdown(content)
+
+        if self._description:
+            return f"Description: {self._description}\n\n{md}"
+        return md
 
     def __str__(self) -> str:
         # this is used as a title in the trudag report
         return f"cpp-test: [{self._name}]\n({self._path})"
-
 
 class JSONTestsuiteReference(CPPTestReference):
     """

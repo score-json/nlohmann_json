@@ -8,13 +8,15 @@ references:
 evidence:
   type: "check_artifact_exists"
   configuration:
-    check_amalgamation: exclude
-    codeql: exclude
-    dependency_review: include
-    labeler: exclude
-    publish_documentation: exclude
-    test_trudag_extensions: exclude
-    ubuntu: exclude
+      ubuntu: exclude
+      coverage_gate: exclude
+      codeql: exclude
+      labeler: exclude
+      test_trudag_extensions: exclude
+      dependency_review: include
+      check_amalgamation: exclude
+      publish_documentation: exclude
+      pr_count_gate: exclude
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
