@@ -46,7 +46,7 @@ results for all expected tests (both pass / fail and performance).
 - Is the selection of tests correct?
   - **Answer**: The upstream nlohmann/json test suite plus the additional TSF-related tests cover the expected behaviours captured in the Expectations (JLEX-01, JLEX-02).
 - Are the tests executed enough times?
-  - **Answer**: Yes, tests run on each pull request and push via the CI workflows (JLS-01) and additionally on a daily schedule in inc_nlohmann_json (JLS-22).
+  - **Answer**: Yes, tests run on each pull request and push via the CI workflows (JLS-01) and additionally on a daily schedule in nlohmann_json (JLS-22).
 - How confident are we that all test results are being captured?
   - **Answer**: For the CI workflows that write to the persistent test-results database we are reasonably confident, since capture is automated by the TSF scripts (JLS-18, JLS-45).
 - Can we look at any individual test result, and establish what it relates to?

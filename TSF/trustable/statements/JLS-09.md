@@ -3,7 +3,7 @@ level: 1.1
 normative: true
 references:
     - type: web_content
-      url: "https://eclipse-score.github.io/inc_nlohmann_json/main/concept.html"
+      url: "https://eclipse-score.github.io/nlohmann_json/main/concept.html"
       description: "Description of the algorithm on how scores are accumulated."
 ---
 

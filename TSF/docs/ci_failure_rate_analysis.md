@@ -60,11 +60,11 @@ In this period, `ci_test_clang` ran 25 times and failed 3 times (12%). All failu
 For the selected three-month window before the v3.12.0 release, the Ubuntu CI for `nlohmann/json` shows a small set of jobs with noticeably higher failure rates, but in all cases these can be traced back to intentional CI/tooling work or strict analysis settings, not to undetected misbehaviour of the library itself. All of these high failure rates occurred on PR branches, were visible to developers, and were resolved before merging, while the majority of other jobs (including `ci_test_gcc`, `ci_test_standards_*` and most compiler-matrix entries) remain at or near 0 %. Taken together, this indicates a stable CI system that reacts as intended to real issues and configuration changes, with no evidence of systematic, unexplained spikes in test failures for the Ubuntu workflow.
 
 
-# Failure rate analysis for eclipse-score/inc_nlohmann_json Parent-Workflow/Ubuntu CI
+# Failure rate analysis for eclipse-score/nlohmann_json Parent-Workflow/Ubuntu CI
 
 ## Scope and data source
 
-- **Repository:** `eclipse-score/inc_nlohmann_json`
+- **Repository:** `eclipse-score/nlohmann_json`
 - **Workflow:** `Parent Workflow` (top-level CI workflow)
 - **Date range:** last 90 days from 08.12.2025
 - **Filter:** `workflow_file_name: parent-workflow.yml`
@@ -84,7 +84,7 @@ From the Jobs table (sorted by Failure rate):
 | `Run Labeler Workflow / clone_missing_labels`         | **3%**       | ≈ 6 s         |      38  |
 
 All other Parent-Workflow jobs in the last 90 days report a failure rate of
-**0 %** over 38 runs each. The remaining data can be found on the GitHub [insights page](https://github.com/eclipse-score/inc_nlohmann_json/actions/metrics/performance?dateRangeType=DATE_RANGE_TYPE_LAST_90_DAYS&sort=failureRate&tab=jobs&filters=workflow_file_name%3Aparent-workflow.yml).
+**0 %** over 38 runs each. The remaining data can be found on the GitHub [insights page](https://github.com/eclipse-score/nlohmann_json/actions/metrics/performance?dateRangeType=DATE_RANGE_TYPE_LAST_90_DAYS&sort=failureRate&tab=jobs&filters=workflow_file_name%3Aparent-workflow.yml).
 
 ## Interpretation of the higher failure rates
 
@@ -108,6 +108,6 @@ Taken together, a period of there months show that all test-related
 jobs in the Parent Workflow have 0 % failures, while the few non-zero
 failure rates are confined to meta-jobs that handle publishing of historical
 test data and label synchronization. This indicates a stable CI setup for
-`inc_nlohmann_json`, with the only reported failures occurring in
+`nlohmann_json`, with the only reported failures occurring in
 infrastructure-side integration steps rather than in the core test pipeline.
 

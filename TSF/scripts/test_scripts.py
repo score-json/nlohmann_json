@@ -37,7 +37,7 @@ def ET_Element_test():
 def ET_Element_nontest():
     content = """
         <testcase name="download_test_data" classname="download_test_data" time="9.25104" status="run">
-		<system-out>[1/1] Downloading test data from https://github.com/eclipse-score/inc_nlohmann_json (branch: json_test_data_version_3_1_0_mirror)
+		<system-out>[1/1] Downloading test data from https://github.com/eclipse-score/nlohmann_json (branch: json_test_data_version_3_1_0_mirror)
 </system-out>
 	</testcase>
         """

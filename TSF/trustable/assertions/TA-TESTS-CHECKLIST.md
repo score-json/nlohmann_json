@@ -10,7 +10,7 @@
 
 * How confident are we that all test components are taken from within our controlled environment?
 
-    **Answer**:  All tests are either self-contained or download test data from [within Eclipse S-CORE](https://github.com/eclipse-score/inc_nlohmann_json/tree/json_test_data_version_3_1_0_mirror).
+    **Answer**:  All tests are either self-contained or download test data from [within Eclipse S-CORE](https://github.com/eclipse-score/nlohmann_json/tree/json_test_data_version_3_1_0_mirror).
 
 * How confident are we that all of the test environments we are using are also under our control? 
 

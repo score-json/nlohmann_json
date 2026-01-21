@@ -74,5 +74,5 @@ Confidence scoring for TA-ITERATIONS based on
   - **Answer**: The nlohmann/json library has no external dependencies/accesses to third party source code, as stated in JLS-34.
 - For software developed by us, what claims are we making, and how confident
   are we about these claims?
-  - **Answer**: There is no software developed by us, as we just use the original nlohmann/json library within eclipse_score/inc_nlohmann_json. For the code developed in nlohmann/json, all claims and confidence are provided in the statements. See e.g., all the no-json-faults (NJF) items.
+  - **Answer**: There is no software developed by us, as we just use the original nlohmann/json library within eclipse_score/nlohmann_json. For the code developed in nlohmann/json, all claims and confidence are provided in the statements. See e.g., all the no-json-faults (NJF) items.
 

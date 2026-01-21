@@ -16,4 +16,4 @@ evidence:
             - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md#used-third-party-tools"
 ---
 
-All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/inc_nlohmann_json.
+All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/nlohmann_json.

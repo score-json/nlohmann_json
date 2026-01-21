@@ -46,7 +46,7 @@ tooling and their build environments are repeatable and reproducible.
   - Are any exceptions identified, documented and justified?
     - **Answer**: To the best of our knowledge, there are no exceptions identified.
 - How confident are we that all test components are taken from within our controlled environment?
-  - **Answer**: All tests are either self-contained or download test data from [within Eclipse S-CORE](https://github.com/eclipse-score/inc_nlohmann_json/tree/json_test_data_version_3_1_0_mirror).
+  - **Answer**: All tests are either self-contained or download test data from [within Eclipse S-CORE](https://github.com/eclipse-score/nlohmann_json/tree/json_test_data_version_3_1_0_mirror).
 - How confident are we that all of the test environments we are using are also under our control?
   - **Answer**: Very confident, as the environments are standard docker images of ubuntu and standard versions of compilers that are executed in our CI pipeline.
 - Do we record all test environment components, including hardware and infrastructure used for exercising tests and processing input/output data?
