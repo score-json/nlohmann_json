@@ -200,7 +200,7 @@ jobs:
 
       - name: Checkout data storage branch
         run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**'
+          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/TrustableScoring.db'
           git checkout save_historical_data
           git pull
 

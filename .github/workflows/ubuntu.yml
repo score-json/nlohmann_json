@@ -424,7 +424,7 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**'
+          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
@@ -579,7 +579,7 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**'
+          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
@@ -734,7 +734,7 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**'
+          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
