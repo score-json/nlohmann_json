@@ -318,65 +318,42 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
       - name: Download all workflow artifacts
         uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
         with:
           path: my_artifacts
 
-      - name: Get current branch name
-        id: get_branch
-        env:
-          GITHUB_EVENT_NAME: ${{ github.event_name }}
-          PR_BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
-          GITHUB_REF_SAFE: ${{ github.ref }}
-        run: |
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # Use the branch from the pull request safely via environment variable
-            current_branch="$PR_BRANCH_NAME"
-          else
-            # Remove the "refs/heads/" prefix from GITHUB_REF safely
-            current_branch="${GITHUB_REF_SAFE#refs/heads/}"
-          fi
- 
-          # Write the branch name to $GITHUB_ENV securely
-          echo "branch_name=${current_branch}" >> "$GITHUB_ENV"
-
       - name: Fetch data storage branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch --all
-          git checkout save_historical_data && git pull || git checkout -b save_historical_data
       
       - name: Select persistent DB (rotate if near GitHub limit)
         shell: bash
         run: |
           set -euo pipefail
 
-          # Ensure sqlite3 is available
           if ! command -v sqlite3 >/dev/null 2>&1; then
-            echo "[info] sqlite3 not found -> installing"
             sudo apt-get update
             sudo apt-get install -y sqlite3
           fi
 
           DB_DIR="TSF/data_storage"
           DB_PREFIX="MemoryEfficientTestResultData"
-          LIMIT_BYTES=$((90 * 1024 * 1024))  # rotate at 90 MB
+          LIMIT_BYTES=$((90 * 1024 * 1024))
           today=$(date -u +%F)
 
-          echo "[info] Event: ${GITHUB_EVENT_NAME:-}, Ref: ${GITHUB_REF_NAME:-}, SHA: ${GITHUB_SHA:-}"
           echo "[info] Storage branch: origin/save_historical_data"
           echo "[info] Rotation threshold: ${LIMIT_BYTES} bytes (~90 MB)"
           echo "[info] Today (UTC): ${today}"
 
-          # Find newest DB in storage branch (ISO dates sort correctly)
           candidates="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
             | grep -E "^${DB_DIR}/${DB_PREFIX}_[0-9]{4}-[0-9]{2}-[0-9]{2}(_[0-9]{3})?\.db$" \
             | sort || true)"
 
           latest="$(printf "%s\n" "${candidates}" | tail -n 1 || true)"
-
           mkdir -p "$DB_DIR"
 
           if [ -z "${latest}" ]; then
@@ -388,12 +365,11 @@ jobs:
           fi
 
           echo "[info] Latest DB in storage: ${latest}"
-          git checkout save_historical_data -- "$latest"
+          git checkout origin/save_historical_data -- "$latest"
 
           size="$(stat -c%s "$latest")"
           echo "[info] Latest DB size: ${size} bytes"
 
-          # Rotate if size too large
           if [ "$size" -ge "$LIMIT_BYTES" ]; then
             base="${DB_DIR}/${DB_PREFIX}_${today}.db"
             new="$base"
@@ -416,19 +392,13 @@ jobs:
           echo "TSF_PERSIST_DB=${latest}" >> "$GITHUB_ENV"
           echo "[info] Using persistent DB: ${latest}"
 
-
       - name: append test data
         run: |
           python3 TSF/scripts/capture_test_data_memory_sensitive.py successful
       
-      - name: Checkout data storage branch
+      - name: Commit and push persistent DB (no stash)
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
-        run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
-          git checkout save_historical_data
-
-      - name: Commit and Push persistent data
-        if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
+        shell: bash
         run: |
           set -euo pipefail
 
@@ -436,29 +406,52 @@ jobs:
             echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
             exit 1
           fi
+
+          # Backup updated DB out of the repo
+          DB_BACKUP="${RUNNER_TEMP}/$(basename "$TSF_PERSIST_DB")"
+          cp "$TSF_PERSIST_DB" "$DB_BACKUP"
+
+          # Clean workspace to allow branch switch reliably
+          git reset --hard
+          git clean -fd
+
+          # Ensure storage branch exists locally (create from remote if present)
+          if git show-ref --verify --quiet refs/remotes/origin/save_historical_data; then
+            git checkout -B save_historical_data origin/save_historical_data
+          else
+            git checkout --orphan save_historical_data
+            git rm -rf . || true
+            git commit --allow-empty -m "Initialize storage branch"
+            git push origin save_historical_data
+          fi
+
+          mkdir -p "$(dirname "$TSF_PERSIST_DB")"
+          cp "$DB_BACKUP" "$TSF_PERSIST_DB"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
       
-      - name: Recover stash
-        if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
+      - name: Collect test report
+        shell: bash
         run: |
-          # Handle fork PRs by staying on current working branch instead of switching
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # For PRs, we're already on the right branch/commit
-            git stash apply
-          else
-            # For push events, switch back to the working branch
-            git checkout $branch_name
-            git stash apply
-          fi
-      
-      - name: Move test report
-        run: |
-          mkdir test_report
-          mv MemoryEfficientTestResults.db test_report/MemoryEfficientTestResults.db
+          set -euo pipefail
+          mkdir -p test_report
 
-      - name: Upload test report 
+          # Preferred: snapshot DB written to RUNNER_TEMP by the python script
+          if [ -f "${RUNNER_TEMP}/MemoryEfficientTestResults.db" ]; then
+            cp "${RUNNER_TEMP}/MemoryEfficientTestResults.db" test_report/MemoryEfficientTestResults.db
+          # Fallback (in case script still writes into repo)
+          elif [ -f "MemoryEfficientTestResults.db" ]; then
+            cp "MemoryEfficientTestResults.db" test_report/MemoryEfficientTestResults.db
+          else
+            echo "No test-results DB found."
+          fi
+
+      - name: Upload test report
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: publish_data_artifact
@@ -474,65 +467,42 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
       - name: Download all workflow artifacts
         uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
         with:
           path: my_artifacts
 
-      - name: Get current branch name
-        id: get_branch
-        env:
-          GITHUB_EVENT_NAME: ${{ github.event_name }}
-          PR_BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
-          GITHUB_REF_SAFE: ${{ github.ref }}
-        run: |
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # Use the branch from the pull request safely via environment variable
-            current_branch="$PR_BRANCH_NAME"
-          else
-            # Remove the "refs/heads/" prefix from GITHUB_REF safely
-            current_branch="${GITHUB_REF_SAFE#refs/heads/}"
-          fi
- 
-          # Write the branch name to $GITHUB_ENV securely
-          echo "branch_name=${current_branch}" >> "$GITHUB_ENV"
-
       - name: Fetch data storage branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch --all
-          git checkout save_historical_data && git pull || git checkout -b save_historical_data
       
       - name: Select persistent DB (rotate if near GitHub limit)
         shell: bash
         run: |
           set -euo pipefail
 
-          # Ensure sqlite3 is available
           if ! command -v sqlite3 >/dev/null 2>&1; then
-            echo "[info] sqlite3 not found -> installing"
             sudo apt-get update
             sudo apt-get install -y sqlite3
           fi
 
           DB_DIR="TSF/data_storage"
           DB_PREFIX="MemoryEfficientTestResultData"
-          LIMIT_BYTES=$((90 * 1024 * 1024))  # rotate at 90 MB
+          LIMIT_BYTES=$((90 * 1024 * 1024))
           today=$(date -u +%F)
 
-          echo "[info] Event: ${GITHUB_EVENT_NAME:-}, Ref: ${GITHUB_REF_NAME:-}, SHA: ${GITHUB_SHA:-}"
           echo "[info] Storage branch: origin/save_historical_data"
           echo "[info] Rotation threshold: ${LIMIT_BYTES} bytes (~90 MB)"
           echo "[info] Today (UTC): ${today}"
 
-          # Find newest DB in storage branch (ISO dates sort correctly)
           candidates="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
             | grep -E "^${DB_DIR}/${DB_PREFIX}_[0-9]{4}-[0-9]{2}-[0-9]{2}(_[0-9]{3})?\.db$" \
             | sort || true)"
 
           latest="$(printf "%s\n" "${candidates}" | tail -n 1 || true)"
-
           mkdir -p "$DB_DIR"
 
           if [ -z "${latest}" ]; then
@@ -544,12 +514,11 @@ jobs:
           fi
 
           echo "[info] Latest DB in storage: ${latest}"
-          git checkout save_historical_data -- "$latest"
+          git checkout origin/save_historical_data -- "$latest"
 
           size="$(stat -c%s "$latest")"
           echo "[info] Latest DB size: ${size} bytes"
 
-          # Rotate if size too large
           if [ "$size" -ge "$LIMIT_BYTES" ]; then
             base="${DB_DIR}/${DB_PREFIX}_${today}.db"
             new="$base"
@@ -574,16 +543,11 @@ jobs:
 
       - name: append test data
         run: |
-          python3 TSF/scripts/capture_test_data_memory_sensitive.py failed
+          python3 TSF/scripts/capture_test_data_memory_sensitive.py successful
       
-      - name: Checkout data storage branch
+      - name: Commit and push persistent DB (no stash)
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
-        run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
-          git checkout save_historical_data
-
-      - name: Commit and Push persistent data
-        if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
+        shell: bash
         run: |
           set -euo pipefail
 
@@ -591,29 +555,52 @@ jobs:
             echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
             exit 1
           fi
+
+          # Backup updated DB out of the repo
+          DB_BACKUP="${RUNNER_TEMP}/$(basename "$TSF_PERSIST_DB")"
+          cp "$TSF_PERSIST_DB" "$DB_BACKUP"
+
+          # Clean workspace to allow branch switch reliably
+          git reset --hard
+          git clean -fd
+
+          # Ensure storage branch exists locally (create from remote if present)
+          if git show-ref --verify --quiet refs/remotes/origin/save_historical_data; then
+            git checkout -B save_historical_data origin/save_historical_data
+          else
+            git checkout --orphan save_historical_data
+            git rm -rf . || true
+            git commit --allow-empty -m "Initialize storage branch"
+            git push origin save_historical_data
+          fi
+
+          mkdir -p "$(dirname "$TSF_PERSIST_DB")"
+          cp "$DB_BACKUP" "$TSF_PERSIST_DB"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
       
-      - name: Recover stash
-        if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
+      - name: Collect test report
+        shell: bash
         run: |
-          # Handle fork PRs by staying on current working branch instead of switching
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # For PRs, we're already on the right branch/commit
-            git stash apply
-          else
-            # For push events, switch back to the working branch
-            git checkout $branch_name
-            git stash apply
-          fi
-      
-      - name: Move test report
-        run: |
-          mkdir test_report
-          mv MemoryEfficientTestResults.db test_report/MemoryEfficientTestResults.db
+          set -euo pipefail
+          mkdir -p test_report
 
-      - name: Upload test report 
+          # Preferred: snapshot DB written to RUNNER_TEMP by the python script
+          if [ -f "${RUNNER_TEMP}/MemoryEfficientTestResults.db" ]; then
+            cp "${RUNNER_TEMP}/MemoryEfficientTestResults.db" test_report/MemoryEfficientTestResults.db
+          # Fallback (in case script still writes into repo)
+          elif [ -f "MemoryEfficientTestResults.db" ]; then
+            cp "MemoryEfficientTestResults.db" test_report/MemoryEfficientTestResults.db
+          else
+            echo "No test-results DB found."
+          fi
+
+      - name: Upload test report
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: publish_data_artifact
@@ -634,60 +621,34 @@ jobs:
         with:
           path: my_artifacts
 
-      - name: Get current branch name
-        id: get_branch
-        env:
-          GITHUB_EVENT_NAME: ${{ github.event_name }}
-          PR_BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
-          GITHUB_REF_SAFE: ${{ github.ref }}
-        run: |
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # Use the branch from the pull request safely via environment variable
-            current_branch="$PR_BRANCH_NAME"
-          else
-            # Remove the "refs/heads/" prefix from GITHUB_REF safely
-            current_branch="${GITHUB_REF_SAFE#refs/heads/}"
-          fi
- 
-          # Write the branch name to $GITHUB_ENV securely
-          echo "branch_name=${current_branch}" >> "$GITHUB_ENV"
-
       - name: Fetch data storage branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch --all
-          git checkout save_historical_data && git pull || git checkout -b save_historical_data
       
       - name: Select persistent DB (rotate if near GitHub limit)
         shell: bash
         run: |
           set -euo pipefail
 
-          # Ensure sqlite3 is available
           if ! command -v sqlite3 >/dev/null 2>&1; then
-            echo "[info] sqlite3 not found -> installing"
             sudo apt-get update
             sudo apt-get install -y sqlite3
           fi
 
           DB_DIR="TSF/data_storage"
           DB_PREFIX="MemoryEfficientTestResultData"
-          LIMIT_BYTES=$((90 * 1024 * 1024))  # rotate at 90 MB
+          LIMIT_BYTES=$((90 * 1024 * 1024))
           today=$(date -u +%F)
 
-          echo "[info] Event: ${GITHUB_EVENT_NAME:-}, Ref: ${GITHUB_REF_NAME:-}, SHA: ${GITHUB_SHA:-}"
           echo "[info] Storage branch: origin/save_historical_data"
           echo "[info] Rotation threshold: ${LIMIT_BYTES} bytes (~90 MB)"
           echo "[info] Today (UTC): ${today}"
 
-          # Find newest DB in storage branch (ISO dates sort correctly)
           candidates="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
             | grep -E "^${DB_DIR}/${DB_PREFIX}_[0-9]{4}-[0-9]{2}-[0-9]{2}(_[0-9]{3})?\.db$" \
             | sort || true)"
 
           latest="$(printf "%s\n" "${candidates}" | tail -n 1 || true)"
-
           mkdir -p "$DB_DIR"
 
           if [ -z "${latest}" ]; then
@@ -699,12 +660,11 @@ jobs:
           fi
 
           echo "[info] Latest DB in storage: ${latest}"
-          git checkout save_historical_data -- "$latest"
+          git checkout origin/save_historical_data -- "$latest"
 
           size="$(stat -c%s "$latest")"
           echo "[info] Latest DB size: ${size} bytes"
 
-          # Rotate if size too large
           if [ "$size" -ge "$LIMIT_BYTES" ]; then
             base="${DB_DIR}/${DB_PREFIX}_${today}.db"
             new="$base"
@@ -729,16 +689,11 @@ jobs:
 
       - name: append test data
         run: |
-          python3 TSF/scripts/capture_test_data_memory_sensitive.py cancelled
+          python3 TSF/scripts/capture_test_data_memory_sensitive.py successful
       
-      - name: Checkout data storage branch
+      - name: Commit and push persistent DB (no stash)
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
-        run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
-          git checkout save_historical_data
-
-      - name: Commit and Push persistent data
-        if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
+        shell: bash
         run: |
           set -euo pipefail
 
@@ -746,30 +701,52 @@ jobs:
             echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
             exit 1
           fi
-          
+
+          # Backup updated DB out of the repo
+          DB_BACKUP="${RUNNER_TEMP}/$(basename "$TSF_PERSIST_DB")"
+          cp "$TSF_PERSIST_DB" "$DB_BACKUP"
+
+          # Clean workspace to allow branch switch reliably
+          git reset --hard
+          git clean -fd
+
+          # Ensure storage branch exists locally (create from remote if present)
+          if git show-ref --verify --quiet refs/remotes/origin/save_historical_data; then
+            git checkout -B save_historical_data origin/save_historical_data
+          else
+            git checkout --orphan save_historical_data
+            git rm -rf . || true
+            git commit --allow-empty -m "Initialize storage branch"
+            git push origin save_historical_data
+          fi
+
+          mkdir -p "$(dirname "$TSF_PERSIST_DB")"
+          cp "$DB_BACKUP" "$TSF_PERSIST_DB"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
       
-      - name: Recover stash
-        if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
+      - name: Collect test report
+        shell: bash
         run: |
-          # Handle fork PRs by staying on current working branch instead of switching
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # For PRs, we're already on the right branch/commit
-            git stash apply
-          else
-            # For push events, switch back to the working branch
-            git checkout $branch_name
-            git stash apply
-          fi
-      
-      - name: Move test report
-        run: |
-          mkdir test_report
-          mv MemoryEfficientTestResults.db test_report/MemoryEfficientTestResults.db
+          set -euo pipefail
+          mkdir -p test_report
 
-      - name: Upload test report 
+          # Preferred: snapshot DB written to RUNNER_TEMP by the python script
+          if [ -f "${RUNNER_TEMP}/MemoryEfficientTestResults.db" ]; then
+            cp "${RUNNER_TEMP}/MemoryEfficientTestResults.db" test_report/MemoryEfficientTestResults.db
+          # Fallback (in case script still writes into repo)
+          elif [ -f "MemoryEfficientTestResults.db" ]; then
+            cp "MemoryEfficientTestResults.db" test_report/MemoryEfficientTestResults.db
+          else
+            echo "No test-results DB found."
+          fi
+
+      - name: Upload test report
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: publish_data_artifact
