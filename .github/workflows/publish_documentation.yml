@@ -1,13 +1,6 @@
 # *******************************************************************************
 # Copyright (c) 2025 Contributors to the Eclipse Foundation
 #
-# See the NOTICE file(s) distributed with this work for additional
-# information regarding copyright ownership.
-#
-# This program and the accompanying materials are made available under the
-# terms of the Apache License Version 2.0 which is available at
-# https://www.apache.org/licenses/LICENSE-2.0
-#
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
@@ -36,6 +29,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
 
       - name: Load ubuntu-artifact
         uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
@@ -59,93 +54,53 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y jq
-          sudo apt install gh -y
+          sudo apt-get install -y jq gh sqlite3
 
       - name: Authenticate with GitHub CLI
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
-      - name: Get current branch name
-        id: get_branch
-        env:
-          GITHUB_EVENT_NAME: ${{ github.event_name }}
-          PR_BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
-          GITHUB_REF_SAFE: ${{ github.ref }}
+      - name: Fetch remotes
         run: |
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # Use the branch from the pull request safely via environment variable
-            current_branch="$PR_BRANCH_NAME"
-          else
-            # Remove the "refs/heads/" prefix from GITHUB_REF safely
-            current_branch="${GITHUB_REF_SAFE#refs/heads/}"
-          fi
- 
-          # Write the branch name to $GITHUB_ENV securely
-          echo "branch_name=${current_branch}" >> "$GITHUB_ENV"
+          git fetch --all --prune
 
-      - name: Fetch data storage branch
+      - name: Fetch open/closed issues from nlohmann/json and generate misbehaviours.md
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch --all
-          git checkout save_historical_data && git pull || git checkout -b save_historical_data
+          set -euo pipefail
 
-      - name: Fetch open issues labelled as bug from nlohmann/json
-        id: fetch_issues
-        run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-
-          # Define variables
-          REPO="nlohmann/json" # Target repository
+          REPO="nlohmann/json"
           OUTPUT_FILE="TSF/misbehaviours.md"
 
-          # Check if the target repository is reachable
           if ! gh repo view "$REPO" --json name -q .name; then
             echo "Could not reach the target repository ($REPO). Aborting workflow."
             exit 1
           fi
 
-          # Fetch open issues from the nlohmann/json repository
           gh issue list --repo "$REPO" --state open --limit 10000 --json number,title,state,createdAt,url,labels > raw_open_issues.json
-
-          # Fetch closed issues from the nlohmann/json repository
           gh issue list --repo "$REPO" --state closed --limit 10000 --json number,title,state,createdAt,url,labels > raw_closed_issues.json
 
-          # print the list of misbehaviours
-          python3 TSF/scripts/generate_list_of_misbehaviours.py > $OUTPUT_FILE
+          python3 TSF/scripts/generate_list_of_misbehaviours.py > "$OUTPUT_FILE"
 
-          # Push misbehaviours file to save_historical_data branch
-          git add TSF/misbehaviours.md
-          git commit -m "Updated issues list" || echo "No changes to commit"
-          git push origin save_historical_data && git pull
-      
       - name: Select persistent scoring DB (rotate if near GitHub limit)
         id: select_db
         shell: bash
         run: |
           set -euo pipefail
 
-          # Ensure sqlite3 is available
-          if ! command -v sqlite3 >/dev/null 2>&1; then
-            echo "[info] sqlite3 not found -> installing"
-            sudo apt-get update
-            sudo apt-get install -y sqlite3
-          fi
-
           DB_DIR="TSF/data_storage"
           DB_PREFIX="TrustableScoring"
           LIMIT_BYTES=$((90 * 1024 * 1024))  # 90 MiB
           today=$(date -u +%F)
 
+          echo "[info] Storage branch: origin/save_historical_data"
           echo "[info] Rotation threshold: ${LIMIT_BYTES} bytes"
           echo "[info] Today (UTC): ${today}"
 
-          # newest dated DB in storage branch
-          latest="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
+          candidates="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
             | grep -E "^${DB_DIR}/${DB_PREFIX}_[0-9]{4}-[0-9]{2}-[0-9]{2}(_[0-9]{3})?\.db$" \
-            | sort | tail -n 1 || true)"
+            | sort || true)"
 
+          latest="$(printf "%s\n" "${candidates}" | tail -n 1 || true)"
           mkdir -p "$DB_DIR"
 
           if [ -z "${latest}" ]; then
@@ -153,11 +108,13 @@ jobs:
             sqlite3 "$latest" "PRAGMA user_version = 1;"
             echo "[info] No existing scoring DB -> created: $latest"
             echo "TSF_SCORING_DB=${latest}" >> "$GITHUB_ENV"
-            echo "db_path=$latest" >> "$GITHUB_OUTPUT"
+            echo "db_path=${latest}" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          git checkout save_historical_data -- "$latest"
+          echo "[info] Latest DB in storage: ${latest}"
+          git checkout origin/save_historical_data -- "$latest"
+
           size=$(stat -c%s "$latest")
           echo "[info] Current scoring DB: $latest (${size} bytes)"
 
@@ -179,50 +136,27 @@ jobs:
           fi
 
           echo "TSF_SCORING_DB=${latest}" >> "$GITHUB_ENV"
+          echo "db_path=${latest}" >> "$GITHUB_OUTPUT"
           echo "[info] Using scoring DB: $latest"
-          echo "db_path=$latest" >> "$GITHUB_OUTPUT"
-
 
       - name: Generate trudag report
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TSF_SCORING_DB: ${{ steps.select_db.outputs.db_path }}
+        shell: bash
         run: |
           set -euo pipefail
+
           echo "[verify] TSF_SCORING_DB='$TSF_SCORING_DB'"
           test -n "$TSF_SCORING_DB"
           test -f "$TSF_SCORING_DB"
           sqlite3 "$TSF_SCORING_DB" "PRAGMA user_version;" >/dev/null
+
           REPO_FULL="${{ github.repository }}"
           REPO_NAME="${REPO_FULL#*/}"
-          OWNER_NAME="${REPO_FULL%%/*}" 
+          OWNER_NAME="${REPO_FULL%%/*}"
+
           TSF/scripts/generate_report.sh "https://${OWNER_NAME}.github.io/${REPO_NAME}/main"
-
-      - name: Checkout data storage branch
-        run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/TrustableScoring.db'
-          git checkout save_historical_data
-          git pull
-
-      - name: Store persistent data
-        run: |
-          set -euo pipefail
-
-          if [ -z "${TSF_SCORING_DB:-}" ]; then
-            echo "::error::TSF_SCORING_DB is not set. Did 'Select persistent scoring DB' run successfully?"
-            exit 1
-          fi
-
-          echo "[info] Committing scoring DB: $TSF_SCORING_DB"
-
-          git add "$TSF_SCORING_DB"
-          git commit -m "Append data storage" || echo "Historical data already up to date."
-          git push origin save_historical_data
-
-      - name: Recover stash
-        run: |
-          git checkout $branch_name
-          git stash apply
 
       - name: Upload trudag artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -230,18 +164,58 @@ jobs:
           name: trudag-report-${{ github.sha }}
           path: TSF/docs/generated/
           if-no-files-found: error
-          
+
+      - name: Commit & push DB + misbehaviours to save_historical_data (no stash)
+        if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ -z "${TSF_SCORING_DB:-}" ]; then
+            echo "::error::TSF_SCORING_DB is not set."
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Backup files out of the workspace before cleaning / switching branches
+          DB_BACKUP="${RUNNER_TEMP}/$(basename "$TSF_SCORING_DB")"
+          MIS_BACKUP="${RUNNER_TEMP}/misbehaviours.md"
+          cp "$TSF_SCORING_DB" "$DB_BACKUP"
+          cp "TSF/misbehaviours.md" "$MIS_BACKUP"
+
+          # Clean workspace so branch switch never fails
+          git reset --hard
+          git clean -fd
+
+          # Checkout storage branch (create if missing)
+          if git show-ref --verify --quiet refs/remotes/origin/save_historical_data; then
+            git checkout -B save_historical_data origin/save_historical_data
+          else
+            git checkout --orphan save_historical_data
+            git rm -rf . || true
+            git commit --allow-empty -m "Initialize storage branch"
+            git push origin save_historical_data
+          fi
+
+          mkdir -p "$(dirname "$TSF_SCORING_DB")"
+          mkdir -p TSF
+          cp "$DB_BACKUP" "$TSF_SCORING_DB"
+          cp "$MIS_BACKUP" "TSF/misbehaviours.md"
+
+          git add "$TSF_SCORING_DB" TSF/misbehaviours.md
+          git commit -m "Update scoring DB + misbehaviours" || echo "No changes to commit"
+          git push origin save_historical_data
+
   build-docs:
     needs: run-trudag
-    # the eclipse-score/cicd-workflow docs.yml is adjusted to download the trudag report artifact before building the documentation
     uses: ./.github/workflows/docs.yml
     permissions:
       contents: write
       pages: write
       pull-requests: write
       id-token: write
-
     with:
-      # the bazel-target depends on your repo specific docs_targets configuration (e.g. "suffix")Add commentMore actions
       bazel-target: "//:docs -- --github_user=${{ github.repository_owner }} --github_repo=${{ github.event.repository.name }}"
       retention-days: 3
