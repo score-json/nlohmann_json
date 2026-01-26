@@ -3,7 +3,12 @@ from datetime import datetime
 import os
 
 # global variable -- path to persistent data storage
-persistent_storage = "TSF/TrustableScoring.db"
+persistent_storage = os.environ.get("TSF_SCORING_DB")
+if not persistent_storage:
+    raise RuntimeError(
+        "TSF_SCORING_DB is not set.\n"
+        "This script requires the path to the persistent SQLite database.\n"
+    )
 
 def data_store_pull() -> list[dict]:
     data = get_my_data()
@@ -32,15 +37,16 @@ def get_my_data() -> list[dict]:
         command = f"SELECT * FROM scores WHERE date=={info[0]}"
         cursor.execute(command)
         scores = cursor.fetchall()
-        date = datetime.fromtimestamp(info[0])
-        date_as_string = date.strftime("%a %b %d %H:%M:%S %Y")
+        # Return unix timestamp directly for trudag v2025.09.16+ compatibility
+        # (older versions expected formatted string, newer versions expect int)
+        date_timestamp = info[0]
         if len(info) == 6:
             branch_name = ""
         else:
             branch_name = info[6] if info[6]!=None else ""
         commit = {"Repository root": info[1],
                   "Commit SHA": info[2],
-                  "Commit date/time": date_as_string, 
+                  "Commit date/time": date_timestamp, 
                   "Commit tag": info[3],
                   "CI job id": info[4],
                   "Schema version": info[5],
@@ -71,11 +77,15 @@ def push_my_data(data: list[dict]):
     # extract data from data
     info = data[0].get("info")
     scores = data[0].get("scores")
-    # Currently, the commit date is stored as string.
-    # Since the local timezone is used and for comparison, 
-    # it would be better to have it as a unix-timestamp.
-    datum_string = info.get("Commit date/time")
-    datum = int(datetime.strptime(datum_string, "%a %b %d %H:%M:%S %Y").timestamp())
+    # Starting with trudag v2025.09.16, the commit date is already a unix timestamp (int).
+    # For backward compatibility, handle both string and int formats.
+    datum_value = info.get("Commit date/time")
+    if isinstance(datum_value, str):
+        # Old format: string date, convert to timestamp
+        datum = int(datetime.strptime(datum_value, "%a %b %d %H:%M:%S %Y").timestamp())
+    else:
+        # New format: already a unix timestamp
+        datum = datum_value
     # check if current commit coincides with existing commit
     cursor.execute("SELECT MAX(date) AS recent_commit FROM commit_info")
     if datum == cursor.fetchone()[0]:
