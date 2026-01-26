@@ -5,6 +5,13 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Open issues
 
+### [#5060](https://github.com/nlohmann/json/issues/5060)
+- **Title:** Segfault on x86_64 Android with Chromium libc++ in serializer::~serializer()
+- **State:** OPEN
+- **Created At:** 2026-01-24T10:41:51Z
+
+
+
 ### [#5048](https://github.com/nlohmann/json/issues/5048)
 - **Title:** function argument safety check silently optimized out in release build by clang
 - **State:** OPEN
