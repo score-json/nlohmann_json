@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Failure rate analysis for nlohmann/json Ubuntu CI &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
+    <title>Failure Rate Analysis for nlohmann/json and eclipse-score/inc_nlohmann_json CI Workflows &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
   
   
   
@@ -408,7 +408,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Failure rate analysis for nlohmann/json Ubuntu CI</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Failure Rate Analysis for <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> and <code class="docutils literal notranslate"><span class="pre">eclipse-score/inc_nlohmann_json</span></code> CI Workflows</span></li>
   </ul>
 </nav>
 </div>
@@ -425,7 +425,23 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="failure-rate-analysis-for-nlohmann-json-ubuntu-ci">
+  <section id="failure-rate-analysis-for-nlohmann-json-and-eclipse-score-inc-nlohmann-json-ci-workflows">
+<h1>Failure Rate Analysis for <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> and <code class="docutils literal notranslate"><span class="pre">eclipse-score/inc_nlohmann_json</span></code> CI Workflows<a class="headerlink" href="#failure-rate-analysis-for-nlohmann-json-and-eclipse-score-inc-nlohmann-json-ci-workflows" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>GitHub’s “failure rate” counts all non‑successful job runs (including cancelled jobs and infrastructure/tooling problems), so it should not be interpreted as a direct measure of regressions in the JSON libraries. Throughout this analysis we distinguish between:</p>
+<ul class="simple">
+<li><p><strong>Test‑result failures/regressions:</strong> unit or integration test failures that indicate a behavioural issue in the library.</p></li>
+<li><p><strong>CI/environment/infrastructure failures:</strong> runner, tooling or network issues (e.g., coverage publishing, label synchronization) that do not reflect problems in the JSON code.</p></li>
+</ul>
+</section>
+<section id="methodology">
+<h2>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">#</a></h2>
+<p>For jobs with non‑zero failure rates we inspected the logs of failed workflow runs to determine whether failures originated from failing unit/integration tests (test‑result failures/regressions) or from CI/environment/tooling steps (CI/environment/infrastructure failures). Only the former are treated as behaviour‑related evidence.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="failure-rate-analysis-for-nlohmann-json-ubuntu-ci">
 <h1>Failure rate analysis for nlohmann/json Ubuntu CI<a class="headerlink" href="#failure-rate-analysis-for-nlohmann-json-ubuntu-ci" title="Link to this heading">#</a></h1>
 <section id="scope-and-data-source">
 <h2>Scope and data source<a class="headerlink" href="#scope-and-data-source" title="Link to this heading">#</a></h2>
@@ -435,9 +451,6 @@
 <li><p><strong>Date range:</strong> 2025-01-11 – 2025-04-11  (3 months before the release date of the version v3.12.0)</p></li>
 <li><p><strong>Filter:</strong> <code class="docutils literal notranslate"><span class="pre">workflow_file_name:</span> <span class="pre">ubuntu.yml</span></code></p></li>
 </ul>
-<p>GitHub’s “failure rate” counts all non-successful job runs, including cancelled
-jobs (e.g. quickly closed PRs) and infrastructure/tooling problems, not only
-true regressions in the JSON library.</p>
 </section>
 <section id="jobs-with-the-highest-reported-failure-rates">
 <h2>Jobs with the highest reported failure rates<a class="headerlink" href="#jobs-with-the-highest-reported-failure-rates" title="Link to this heading">#</a></h2>
@@ -542,9 +555,6 @@ The remaining data can be found on the GitHub <a class="reference external" href
 <li><p><strong>Date range:</strong> last 90 days from 08.12.2025</p></li>
 <li><p><strong>Filter:</strong> <code class="docutils literal notranslate"><span class="pre">workflow_file_name:</span> <span class="pre">parent-workflow.yml</span></code></p></li>
 </ul>
-<p>GitHub’s “failure rate” counts all non-successful job runs, including cancelled
-jobs (e.g. quickly closed PRs) and infrastructure/tooling problems, not only
-true regressions in the JSON library.</p>
 </section>
 <section id="id2">
 <h2>Jobs with the highest reported failure rates<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
@@ -578,7 +588,7 @@ true regressions in the JSON library.</p>
 <h2>Interpretation of the higher failure rates<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>The job <code class="docutils literal notranslate"><span class="pre">publish_test_data_success</span></code> is the final step of the Ubuntu child
 workflow that publishes the persistent test-result database
-(<code class="docutils literal notranslate"><span class="pre">TSF/MemoryEfficientTestResultData.db</span></code>) back to the <code class="docutils literal notranslate"><span class="pre">save_historical_data</span></code>
+(<code class="docutils literal notranslate"><span class="pre">TSF/data_storage/MemoryEfficientTestResultData*.db</span></code>) back to the <code class="docutils literal notranslate"><span class="pre">save_historical_data</span></code>
 branch. The observed 5.26 % failure rate corresponds to 2 failed runs out of
 38, and these failures are limited to this publishing step (e.g. git push /
 branch / permission issues) rather than to the execution of the tests
@@ -588,6 +598,8 @@ synchronizes GitHub issue/PR labels for this repository with the organisation
 defaults. Its 2.63 % failure rate corresponds to 1 failed run out of 38,
 and is related to repository/label management rather than to building or
 testing the JSON library.</p>
+<p>No high failure rates in this period were caused by failing unit/integration tests. All
+observed high failure rates were confined to publishing or repository-management steps.</p>
 </section>
 <section id="id4">
 <h2>Conclusion<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
@@ -629,7 +641,12 @@ infrastructure-side integration steps rather than in the core test pipeline.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Failure rate analysis for nlohmann/json Ubuntu CI</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Failure Rate Analysis for <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> and <code class="docutils literal notranslate"><span class="pre">eclipse-score/inc_nlohmann_json</span></code> CI Workflows</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-rate-analysis-for-nlohmann-json-ubuntu-ci">Failure rate analysis for nlohmann/json Ubuntu CI</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-and-data-source">Scope and data source</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jobs-with-the-highest-reported-failure-rates">Jobs with the highest reported failure rates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-higher-failure-rates">Interpretation of the higher failure rates</a><ul class="nav section-nav flex-column">

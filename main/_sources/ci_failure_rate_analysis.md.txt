@@ -1,3 +1,18 @@
+# Failure Rate Analysis for `nlohmann/json` and `eclipse-score/inc_nlohmann_json` CI Workflows
+
+## Introduction
+
+GitHub’s “failure rate” counts all non‑successful job runs (including cancelled jobs and infrastructure/tooling problems), so it should not be interpreted as a direct measure of regressions in the JSON libraries. Throughout this analysis we distinguish between:
+
+- **Test‑result failures/regressions:** unit or integration test failures that indicate a behavioural issue in the library.
+- **CI/environment/infrastructure failures:** runner, tooling or network issues (e.g., coverage publishing, label synchronization) that do not reflect problems in the JSON code.
+
+## Methodology
+
+For jobs with non‑zero failure rates we inspected the logs of failed workflow runs to determine whether failures originated from failing unit/integration tests (test‑result failures/regressions) or from CI/environment/tooling steps (CI/environment/infrastructure failures). Only the former are treated as behaviour‑related evidence.
+
+---
+
 # Failure rate analysis for nlohmann/json Ubuntu CI
 
 ## Scope and data source
@@ -6,10 +21,6 @@
 - **Workflow:** `.github/workflows/ubuntu.yml`
 - **Date range:** 2025-01-11 – 2025-04-11  (3 months before the release date of the version v3.12.0)
 - **Filter:** `workflow_file_name: ubuntu.yml`
-
-GitHub’s “failure rate” counts all non-successful job runs, including cancelled
-jobs (e.g. quickly closed PRs) and infrastructure/tooling problems, not only
-true regressions in the JSON library.
 
 ## Jobs with the highest reported failure rates
 
@@ -69,11 +80,6 @@ For the selected three-month window before the v3.12.0 release, the Ubuntu CI fo
 - **Date range:** last 90 days from 08.12.2025
 - **Filter:** `workflow_file_name: parent-workflow.yml`
 
-
-GitHub’s “failure rate” counts all non-successful job runs, including cancelled
-jobs (e.g. quickly closed PRs) and infrastructure/tooling problems, not only
-true regressions in the JSON library.
-
 ## Jobs with the highest reported failure rates
 
 From the Jobs table (sorted by Failure rate):
@@ -90,7 +96,7 @@ All other Parent-Workflow jobs in the last 90 days report a failure rate of
 
 The job `publish_test_data_success` is the final step of the Ubuntu child
 workflow that publishes the persistent test-result database
-(`TSF/MemoryEfficientTestResultData.db`) back to the `save_historical_data`
+(`TSF/data_storage/MemoryEfficientTestResultData*.db`) back to the `save_historical_data`
 branch. The observed 5.26 % failure rate corresponds to 2 failed runs out of
 38, and these failures are limited to this publishing step (e.g. git push /
 branch / permission issues) rather than to the execution of the tests
@@ -102,6 +108,9 @@ defaults. Its 2.63 % failure rate corresponds to 1 failed run out of 38,
 and is related to repository/label management rather than to building or
 testing the JSON library.
 
+No high failure rates in this period were caused by failing unit/integration tests. All
+observed high failure rates were confined to publishing or repository-management steps.
+
 ## Conclusion
 
 Taken together, a period of there months show that all test-related
@@ -110,4 +119,3 @@ failure rates are confined to meta-jobs that handle publishing of historical
 test data and label synchronization. This indicates a stable CI setup for
 `inc_nlohmann_json`, with the only reported failures occurring in
 infrastructure-side integration steps rather than in the core test pipeline.
-

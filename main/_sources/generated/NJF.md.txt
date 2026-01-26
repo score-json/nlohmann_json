@@ -1,13 +1,13 @@
 
 ### NJF-01 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the literal name null. 
+The service accepts the literal name null. 
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-01](WFJ.md#wfj-01)  | The service provided by the nlohmann/json library checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-01](WFJ.md#wfj-01)  | The service checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -149,40 +149,23 @@ _None_
 
 |date-time|NJF-01|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-02 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the literal name true.
+The service accepts the literal name true.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-01](WFJ.md#wfj-01)  | The service provided by the nlohmann/json library checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-01](WFJ.md#wfj-01)  | The service checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -427,40 +410,23 @@ _None_
 
 |date-time|NJF-02|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-03 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the literal name false.
+The service accepts the literal name false.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-01](WFJ.md#wfj-01)  | The service provided by the nlohmann/json library checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-01](WFJ.md#wfj-01)  | The service checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -602,40 +568,23 @@ _None_
 
 |date-time|NJF-03|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-04 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept any other literal name.
+The service does not accept any other literal name.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-01](WFJ.md#wfj-01)  | The service provided by the nlohmann/json library checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-01](WFJ.md#wfj-01)  | The service checks the well-formedness of the literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1821,53 +1770,36 @@ _None_
 
 |date-time|NJF-04|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5.
+The service accepts and rejects arrays according to RFC8259 §5.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-04](WFJ.md#wfj-04)  | The service provided by the nlohmann/json library checks the well-formedness of array. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-04](WFJ.md#wfj-04)  | The service checks the well-formedness of array. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05.1](NJF.md#njf-05.1)  | The service provided by the nlohmann/json library accepts the empty array. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.2](NJF.md#njf-05.2)  | The service provided by the nlohmann/json library accepts the non-empty arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.3](NJF.md#njf-05.3)  | If every value candidate of a properly bounded array is accepted as singleton, then the service provided by the nlohmann/json library accepts the array. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.4](NJF.md#njf-05.4)  | The service provided by the nlohmann/json library does not accept any improperly bounded arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.5](NJF.md#njf-05.5)  | The service provided by the nlohmann/json library does not accept arrays with improper values. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.6](NJF.md#njf-05.6)  | The service provided by the nlohmann/json library accepts nested arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.7](NJF.md#njf-05.7)  | The service provided by the nlohmann/json library does only accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.6.0](NJF.md#njf-05.6.0)  | The acceptance of nested arrays by the service provided by the nlohmann/json library does not depend on the depth of nesting. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.1](NJF.md#njf-05.1)  | The service accepts the empty array. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.2](NJF.md#njf-05.2)  | The service accepts the non-empty arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.3](NJF.md#njf-05.3)  | If every value candidate of a properly bounded array is accepted as singleton, then the service accepts the array. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.4](NJF.md#njf-05.4)  | The service does not accept any improperly bounded arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.5](NJF.md#njf-05.5)  | The service does not accept arrays with improper values. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.6](NJF.md#njf-05.6)  | The service accepts nested arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.7](NJF.md#njf-05.7)  | The service does only accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-05.6.0](NJF.md#njf-05.6.0)  | The acceptance of nested arrays does not depend on the depth of nesting. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -1887,40 +1819,23 @@ _None_
 
 |date-time|NJF-05|NJF-05.1|NJF-05.2|NJF-05.3|NJF-05.4|NJF-05.5|NJF-05.6|NJF-05.7|NJF-05.6.0|
 |-|-|-|-|-|-|-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-05.1 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the empty array.
+The service accepts the empty array.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2071,40 +1986,23 @@ _None_
 
 |date-time|NJF-05.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the non-empty arrays.
+The service accepts the non-empty arrays.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2421,40 +2319,23 @@ _None_
 
 |date-time|NJF-05.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05.3 | Reviewed: ⨯ | Score: 0.0 
-If every value candidate of a properly bounded array is accepted as singleton, then the service provided by the nlohmann/json library accepts the array.
+If every value candidate of a properly bounded array is accepted as singleton, then the service accepts the array.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2742,40 +2623,23 @@ _None_
 
 |date-time|NJF-05.3|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05.4 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept any improperly bounded arrays.
+The service does not accept any improperly bounded arrays.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3256,40 +3120,23 @@ _None_
 
 |date-time|NJF-05.4|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05.5 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept arrays with improper values.
+The service does not accept arrays with improper values.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3436,45 +3283,23 @@ _None_
 
 |date-time|NJF-05.5|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
-
-
----
-
-An improper value is either an empty value within a non-empty array or an inadmissible token according to RFC8259.
 
 
 ---
 
 ### NJF-05.6 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts nested arrays.
+The service accepts nested arrays.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3576,40 +3401,23 @@ _None_
 
 |date-time|NJF-05.6|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05.6.0 | Reviewed: ⨯ | Score: 0.0 
-The acceptance of nested arrays by the service provided by the nlohmann/json library does not depend on the depth of nesting.
+The acceptance of nested arrays does not depend on the depth of nesting.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3676,47 +3484,30 @@ _None_
 
 |date-time|NJF-05.6.0|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05.7 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does only accept comma as value separator.
+The service does only accept comma as value separator.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service accepts and rejects arrays according to RFC8259 §5. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05.7.1](NJF.md#njf-05.7.1)  | The service provided by the nlohmann/json library does accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-05.7.2](NJF.md#njf-05.7.2)  | The service provided by the nlohmann/json library does not accept any other value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.7.1](NJF.md#njf-05.7.1)  | The service does accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.7.2](NJF.md#njf-05.7.2)  | The service does not accept any other value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -3736,40 +3527,23 @@ _None_
 
 |date-time|NJF-05.7|NJF-05.7.1|NJF-05.7.2|
 |-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-05.7.1 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept comma as value separator.
+The service does accept comma as value separator.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05.7](NJF.md#njf-05.7)  | The service provided by the nlohmann/json library does only accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.7](NJF.md#njf-05.7)  | The service does only accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3889,40 +3663,23 @@ _None_
 
 |date-time|NJF-05.7.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-05.7.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept any other value separator.
+The service does not accept any other value separator.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05.7](NJF.md#njf-05.7)  | The service provided by the nlohmann/json library does only accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-05.7](NJF.md#njf-05.7)  | The service does only accept comma as value separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3992,53 +3749,36 @@ _None_
 
 |date-time|NJF-05.7.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4.
+The service accepts and rejects objects according to RFC8259 §4.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-05](WFJ.md#wfj-05)  | The service provided by the nlohmann/json library checks the well-formedness of objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-05](WFJ.md#wfj-05)  | The service checks the well-formedness of objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.1](NJF.md#njf-06.1)  | The service provided by the nlohmann/json library accepts the empty object. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.2](NJF.md#njf-06.2)  | The service provided by the nlohmann/json library does not accept improperly bounded objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.3](NJF.md#njf-06.3)  | The service provided by the nlohmann/json library accepts the non-empty objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object provided to the eclipse-score/inc_nlohmann_json have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.5](NJF.md#njf-06.5)  | The service provided by the nlohmann/json library does not accept objects with improper members. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.6](NJF.md#njf-06.6)  | The service provided by the nlohmann/json library accepts the nested objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.7](NJF.md#njf-06.7)  | The service provided by the nlohmann/json library does only accept comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.6.0](NJF.md#njf-06.6.0)  | The acceptance of nested objects inside the nlohmann/json library does not depend on the depth of nesting. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.1](NJF.md#njf-06.1)  | The service accepts the empty object. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.2](NJF.md#njf-06.2)  | The service does not accept improperly bounded objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.3](NJF.md#njf-06.3)  | The service accepts the non-empty objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.5](NJF.md#njf-06.5)  | The service does not accept objects with improper members. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.6](NJF.md#njf-06.6)  | The service accept the nested objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.7](NJF.md#njf-06.7)  | The service does only accept comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.6.0](NJF.md#njf-06.6.0)  | The acceptance of nested objects does not depend on the depth of nesting. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -4058,40 +3798,23 @@ _None_
 
 |date-time|NJF-06|NJF-06.1|NJF-06.2|NJF-06.3|NJF-06.4|NJF-06.5|NJF-06.6|NJF-06.7|NJF-06.6.0|
 |-|-|-|-|-|-|-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-06.1 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the empty object.
+The service accepts the empty object.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4171,40 +3894,23 @@ _None_
 
 |date-time|NJF-06.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept improperly bounded objects.
+The service does not accept improperly bounded objects.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4318,40 +4024,23 @@ _None_
 
 |date-time|NJF-06.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.3 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the non-empty objects.
+The service accepts the non-empty objects.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4443,48 +4132,31 @@ _None_
 
 |date-time|NJF-06.3|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.4 | Reviewed: ⨯ | Score: 0.0 
-The admissible members of an object provided to the eclipse-score/inc_nlohmann_json have the form name : value.
+The admissible members of an object have the form name : value.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.4.1](NJF.md#njf-06.4.1)  | If the service provided by the nlohmann/json library recognises the name candidate as string, then it accepts the name candidate. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.4.2](NJF.md#njf-06.4.2)  | The service provided by the nlohmann/json library does not accept any other token as name. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.4.3](NJF.md#njf-06.4.3)  | If the service provided by the nlohmann/json library accepts the value-candidate as a singleton, then the value-candidate is accepted. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.4.1](NJF.md#njf-06.4.1)  | If the service recognises the name candidate as string, then it accepts the name candidate. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.4.2](NJF.md#njf-06.4.2)  | The service does not accept any other token as name. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.4.3](NJF.md#njf-06.4.3)  | If the service accepts the value-candidate as a singleton, then the value-candidate is accepted. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -4984,40 +4656,23 @@ _None_
 
 |date-time|NJF-06.4|NJF-06.4.1|NJF-06.4.2|NJF-06.4.3|
 |-|-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-06.4.1 | Reviewed: ⨯ | Score: 0.0 
-If the service provided by the nlohmann/json library recognises the name candidate as string, then it accepts the name candidate.
+If the service recognises the name candidate as string, then it accepts the name candidate.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object provided to the eclipse-score/inc_nlohmann_json have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5316,40 +4971,23 @@ _None_
 
 |date-time|NJF-06.4.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.4.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept any other token as name.
+The service does not accept any other token as name.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object provided to the eclipse-score/inc_nlohmann_json have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5514,40 +5152,23 @@ _None_
 
 |date-time|NJF-06.4.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.4.3 | Reviewed: ⨯ | Score: 0.0 
-If the service provided by the nlohmann/json library accepts the value-candidate as a singleton, then the value-candidate is accepted.
+If the service accepts the value-candidate as a singleton, then the value-candidate is accepted.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object provided to the eclipse-score/inc_nlohmann_json have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object have the form name : value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5764,47 +5385,30 @@ _None_
 
 |date-time|NJF-06.4.3|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.5 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept objects with improper members.
+The service does not accept objects with improper members.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.5.1](NJF.md#njf-06.5.1)  | If the service provided by the nlohmann/json library does not accept any name candidate as singleton, then the service does not accept the object candidate. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.5.2](NJF.md#njf-06.5.2)  | If the service provided by the nlohmann/json library does not accept any value candidate as singleton, then the service does not accept the object candidate. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.5.1](NJF.md#njf-06.5.1)  | If the service does not accept any name candidate as singleton, then the service does not accept the object candidate. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.5.2](NJF.md#njf-06.5.2)  | If the service does not accept any value candidate as singleton, then the service does not accept the object candidate. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -5875,40 +5479,23 @@ _None_
 
 |date-time|NJF-06.5|NJF-06.5.1|NJF-06.5.2|
 |-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-06.5.1 | Reviewed: ⨯ | Score: 0.0 
-If the service provided by the nlohmann/json library does not accept any name candidate as singleton, then the service does not accept the object candidate.
+If the service does not accept any name candidate as singleton, then the service does not accept the object candidate.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.5](NJF.md#njf-06.5)  | The service provided by the nlohmann/json library does not accept objects with improper members. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.5](NJF.md#njf-06.5)  | The service does not accept objects with improper members. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -6107,40 +5694,23 @@ _None_
 
 |date-time|NJF-06.5.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.5.2 | Reviewed: ⨯ | Score: 0.0 
-If the service provided by the nlohmann/json library does not accept any value candidate as singleton, then the service does not accept the object candidate.
+If the service does not accept any value candidate as singleton, then the service does not accept the object candidate.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.5](NJF.md#njf-06.5)  | The service provided by the nlohmann/json library does not accept objects with improper members. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.5](NJF.md#njf-06.5)  | The service does not accept objects with improper members. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -6232,47 +5802,23 @@ _None_
 
 |date-time|NJF-06.5.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
-
-
----
-
-An improper name is either not a string (i.e. any other token, or empty), or a string-candidate which does not fulfil the requirements of RFC8259.
-
-An improper value is either empty or an inadmissible token according to RFC8259.
 
 
 ---
 
 ### NJF-06.6 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts the nested objects.
+The service accept the nested objects.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -6489,40 +6035,23 @@ _None_
 
 |date-time|NJF-06.6|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.6.0 | Reviewed: ⨯ | Score: 0.0 
-The acceptance of nested objects inside the nlohmann/json library does not depend on the depth of nesting.
+The acceptance of nested objects does not depend on the depth of nesting.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -6739,47 +6268,30 @@ _None_
 
 |date-time|NJF-06.6.0|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.7 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does only accept comma as member separator.
+The service does only accept comma as member separator.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service accepts and rejects objects according to RFC8259 §4. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.7.1](NJF.md#njf-06.7.1)  | The service provided by the nlohmann/json library accepts comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-06.7.2](NJF.md#njf-06.7.2)  | The service provided by the nlohmann/json library does not accept any other member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.7.1](NJF.md#njf-06.7.1)  | The service accepts comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.7.2](NJF.md#njf-06.7.2)  | The service does not accept any other member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -6799,40 +6311,23 @@ _None_
 
 |date-time|NJF-06.7|NJF-06.7.1|NJF-06.7.2|
 |-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-06.7.1 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts comma as member separator.
+The service accepts comma as member separator.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.7](NJF.md#njf-06.7)  | The service provided by the nlohmann/json library does only accept comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.7](NJF.md#njf-06.7)  | The service does only accept comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -7129,40 +6624,23 @@ _None_
 
 |date-time|NJF-06.7.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-06.7.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept any other member separator.
+The service does not accept any other member separator.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06.7](NJF.md#njf-06.7)  | The service provided by the nlohmann/json library does only accept comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-06.7](NJF.md#njf-06.7)  | The service does only accept comma as member separator. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -7356,54 +6834,37 @@ _None_
 
 |date-time|NJF-06.7.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7.
+The service accepts and rejects strings according to RFC8259 §7.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-02](WFJ.md#wfj-02)  | The service provided by the nlohmann/json library checks the well-formedness of strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-02](WFJ.md#wfj-02)  | The service checks the well-formedness of strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07.1](NJF.md#njf-07.1)  | The service provided by the nlohmann/json library does accept empty strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.2](NJF.md#njf-07.2)  | The service provided by the nlohmann/json library does not accept the improperly bounded strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.3](NJF.md#njf-07.3)  | The service provided by the nlohmann/json library does not accept unescaped control characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.4](NJF.md#njf-07.4)  | The service provided by the nlohmann/json library does accept escaped control characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.5](NJF.md#njf-07.5)  | The service provided by the nlohmann/json library accepts UTF-16 surrogate pairs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.7](NJF.md#njf-07.7)  | The service provided by the nlohmann/json library does not accept escaped invalid characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.6](NJF.md#njf-07.6)  | The service provided by the nlohmann/json library does accept non-empty strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.8](NJF.md#njf-07.8)  | The service provided by the nlohmann/json library does not accept single unpaired utf-16 surrogates. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-07.9](NJF.md#njf-07.9)  | The service provided by the nlohmann/json library does not accept unescaped UTF-16 surrogate pairs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.1](NJF.md#njf-07.1)  | The service does accept empty string. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.2](NJF.md#njf-07.2)  | The service does not accept the improperly bounded strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.3](NJF.md#njf-07.3)  | The service does not accept unescaped control characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.4](NJF.md#njf-07.4)  | The service does accept the escaped control characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.5](NJF.md#njf-07.5)  | The service accepts UTF-16 surrogate pairs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.7](NJF.md#njf-07.7)  | The service does not accept escaped invalid characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.6](NJF.md#njf-07.6)  | The service does accept the non-empty strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.8](NJF.md#njf-07.8)  | The service does not accept single unpaired utf-16 surrogates. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07.9](NJF.md#njf-07.9)  | The service does not accept unescaped UTF-16 surrogate pairs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -8019,40 +7480,23 @@ _None_
 
 |date-time|NJF-07|NJF-07.1|NJF-07.2|NJF-07.3|NJF-07.4|NJF-07.5|NJF-07.7|NJF-07.6|NJF-07.8|NJF-07.9|
 |-|-|-|-|-|-|-|-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-07.1 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept empty strings.
+The service does accept empty string.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -8210,40 +7654,23 @@ _None_
 
 |date-time|NJF-07.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept the improperly bounded strings.
+The service does not accept the improperly bounded strings.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -8825,40 +8252,23 @@ _None_
 
 |date-time|NJF-07.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.3 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept unescaped control characters.
+The service does not accept unescaped control characters.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -8943,40 +8353,23 @@ _None_
 
 |date-time|NJF-07.3|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.4 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept escaped control characters.
+The service does accept the escaped control characters.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9293,40 +8686,23 @@ _None_
 
 |date-time|NJF-07.4|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.5 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts UTF-16 surrogate pairs.
+The service accepts UTF-16 surrogate pairs.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9482,40 +8858,23 @@ _None_
 
 |date-time|NJF-07.5|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.6 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept non-empty strings.
+The service does accept the non-empty strings.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10059,40 +9418,23 @@ _None_
 
 |date-time|NJF-07.6|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.7 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept escaped invalid characters.
+The service does not accept escaped invalid characters.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10385,40 +9727,23 @@ _None_
 
 |date-time|NJF-07.7|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.8 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept single unpaired utf-16 surrogates.
+The service does not accept single unpaired utf-16 surrogates.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10483,40 +9808,23 @@ _None_
 
 |date-time|NJF-07.8|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-07.9 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept unescaped UTF-16 surrogate pairs.
+The service does not accept unescaped UTF-16 surrogate pairs.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10583,54 +9891,37 @@ _None_
 
 |date-time|NJF-07.9|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6.
+The service accepts numbers according to RFC8259 §6.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-03](WFJ.md#wfj-03)  | The service provided by the nlohmann/json library checks the well-formedness of numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-03](WFJ.md#wfj-03)  | The service checks the well-formedness of numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08.1](NJF.md#njf-08.1)  | The service provided by the nlohmann/json library does accept integers within the limits of 64-bit double. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.2](NJF.md#njf-08.2)  | The service provided by the nlohmann/json library does accept integers according to IEEE 754 binary64. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.3](NJF.md#njf-08.3)  | The service provided by the nlohmann/json library does not accept NaN and infinity. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.4](NJF.md#njf-08.4)  | The service provided by the nlohmann/json library does accept e or E for numbers with exponent within the bounds of double. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.5](NJF.md#njf-08.5)  | The service provided by the nlohmann/json library does not accept u0415 and u0436 (cyrillic e and E) as exponent signs in numbers with exponent. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.6](NJF.md#njf-08.6)  | The service provided by the nlohmann/json library does not accept invalid syntax for numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.7](NJF.md#njf-08.7)  | The service provided by the nlohmann/json library does accept decimal points in numbers within the bounds of double. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.8](NJF.md#njf-08.8)  | The service provided by the nlohmann/json library does not accept leading zeroes. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-08.9](NJF.md#njf-08.9)  | The service provided by the nlohmann/json library does not accept any other digit symbol than 0-9. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.1](NJF.md#njf-08.1)  | The service does accept integers within the limits of 64-bit double. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.2](NJF.md#njf-08.2)  | The service does accept integers according to IEEE 754 binary64. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.3](NJF.md#njf-08.3)  | The service does not accept NaN, infinity. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.4](NJF.md#njf-08.4)  | The service does accept e or E for numbers with exponent within the bounds of double. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.5](NJF.md#njf-08.5)  | The service does not accept u0415 and u0436 (cyrillic e and E) as exponent signs in numbers with exponent. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.6](NJF.md#njf-08.6)  | The service does not accept invalid syntax for numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.7](NJF.md#njf-08.7)  | The service does accept decimal points in numbers within the bounds of double. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.8](NJF.md#njf-08.8)  | The service does not accept leading zeroes. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08.9](NJF.md#njf-08.9)  | The service does not accept any other digit symbol than 0-9. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -10987,40 +10278,23 @@ _None_
 
 |date-time|NJF-08|NJF-08.1|NJF-08.2|NJF-08.3|NJF-08.4|NJF-08.5|NJF-08.6|NJF-08.7|NJF-08.8|NJF-08.9|
 |-|-|-|-|-|-|-|-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-08.1 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept integers within the limits of 64-bit double.
+The service does accept integers within the limits of 64-bit double.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11130,40 +10404,23 @@ _None_
 
 |date-time|NJF-08.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept integers according to IEEE 754 binary64.
+The service does accept integers according to IEEE 754 binary64.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11215,40 +10472,23 @@ _None_
 
 |date-time|NJF-08.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.3 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept NaN and infinity.
+The service does not accept NaN, infinity.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11655,40 +10895,23 @@ _None_
 
 |date-time|NJF-08.3|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.4 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept e or E for numbers with exponent within the bounds of double.
+The service does accept e or E for numbers with exponent within the bounds of double.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11863,40 +11086,23 @@ _None_
 
 |date-time|NJF-08.4|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.5 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept u0415 and u0436 (cyrillic e and E) as exponent signs in numbers with exponent.
+The service does not accept u0415 and u0436 (cyrillic e and E) as exponent signs in numbers with exponent.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11960,40 +11166,23 @@ _None_
 
 |date-time|NJF-08.5|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.6 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept invalid syntax for numbers.
+The service does not accept invalid syntax for numbers.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12718,40 +11907,23 @@ _None_
 
 |date-time|NJF-08.6|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.7 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does accept decimal points in numbers within the bounds of double.
+The service does accept decimal points in numbers within the bounds of double.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12808,40 +11980,23 @@ _None_
 
 |date-time|NJF-08.7|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.8 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept leading zeroes.
+The service does not accept leading zeroes.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12979,40 +12134,23 @@ _None_
 
 |date-time|NJF-08.8|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-08.9 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept any other digit symbol than 0-9.
+The service does not accept any other digit symbol than 0-9.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13223,50 +12361,33 @@ _None_
 
 |date-time|NJF-08.9|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-12 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library decodes UTF-8 data.
+The service decodes UTF-8 data.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-07](WFJ.md#wfj-07)  | The service provided by the nlohmann/json library checks that JSON is only serialized using UTF-8. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-07](WFJ.md#wfj-07)  | The service checks that JSON is only serialized using UTF-8. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-12.1](NJF.md#njf-12.1)  | The service provided by the nlohmann/json library rejects malformed UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-12.2](NJF.md#njf-12.2)  | The service provided by the nlohmann/json library rejects "overlong sequences". | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-12.3](NJF.md#njf-12.3)  | The service provided by the nlohmann/json library rejects single escaped and unescaped, and paired unescaped utf-16 surrogates. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-12.5](NJF.md#njf-12.5)  | The service provided by the nlohmann/json library accepts Non-Characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-12.6](NJF.md#njf-12.6)  | The service provided by the nlohmann/json library accepts well-formed UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12.1](NJF.md#njf-12.1)  | The service rejects malformed UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12.2](NJF.md#njf-12.2)  | The service rejects "overlong sequences". | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12.3](NJF.md#njf-12.3)  | The service rejects single escaped and unescaped, and paired unescaped utf-16 surrogates. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12.5](NJF.md#njf-12.5)  | The service accepts Non-Characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12.6](NJF.md#njf-12.6)  | The service accepts well-formed UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -13286,40 +12407,23 @@ _None_
 
 |date-time|NJF-12|NJF-12.1|NJF-12.2|NJF-12.3|NJF-12.5|NJF-12.6|
 |-|-|-|-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-12.1 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library rejects malformed UTF-8 data.
+The service rejects malformed UTF-8 data.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12](NJF.md#njf-12)  | The service decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13447,40 +12551,23 @@ _None_
 
 |date-time|NJF-12.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-12.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library rejects "overlong sequences".
+The service rejects "overlong sequences".
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12](NJF.md#njf-12)  | The service decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13571,40 +12658,23 @@ _None_
 
 |date-time|NJF-12.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-12.3 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library rejects single escaped and unescaped, and paired unescaped utf-16 surrogates.
+The service rejects single escaped and unescaped, and paired unescaped utf-16 surrogates.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12](NJF.md#njf-12)  | The service decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13708,40 +12778,23 @@ _None_
 
 |date-time|NJF-12.3|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-12.5 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts Non-Characters.
+The service accepts Non-Characters.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12](NJF.md#njf-12)  | The service decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13869,40 +12922,23 @@ _None_
 
 |date-time|NJF-12.5|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-12.6 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts well-formed UTF-8 data.
+The service accepts well-formed UTF-8 data.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-12](NJF.md#njf-12)  | The service decodes UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13966,40 +13002,23 @@ _None_
 
 |date-time|NJF-12.6|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-13 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts JSON data consisting of combinations of the data types.
+The service accepts JSON data consisting of combinations of the data types.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-05](WFJ.md#wfj-05)  | The service provided by the nlohmann/json library checks the well-formedness of objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-05](WFJ.md#wfj-05)  | The service checks the well-formedness of objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14052,50 +13071,33 @@ _None_
 
 |date-time|NJF-13|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-14 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only.
+The service accepts a single complete UTF-8 byte order mark at the beginning of the input only.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-08](WFJ.md#wfj-08)  | The service provided by the nlohmann/json library ignores byte order marks. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [WFJ-08](WFJ.md#wfj-08)  | The service ignores byte order marks. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-14.1](NJF.md#njf-14.1)  | If the service provided by the nlohmann/json library accepts an input containing no BOM, then it accepts a single UTF-8 byte order mark followed by that input. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-14.2](NJF.md#njf-14.2)  | The service provided by the nlohmann/json library does not accept multiple UTF-8 byte order marks. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-14.3](NJF.md#njf-14.3)  | The service provided by the nlohmann/json library does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-14.4](NJF.md#njf-14.4)  | The service provided by the nlohmann/json library does not accept UTF-16 and UTF-32 byte order marks instead of the UTF-8 byte order mark. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NJF-14.5](NJF.md#njf-14.5)  | The service provided by the nlohmann/json library does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14.1](NJF.md#njf-14.1)  | If the service accepts an input containing no BOM, then it accepts a single UTF-8 byte order mark followed by that input. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14.2](NJF.md#njf-14.2)  | The service does not accept multiple UTF-8 byte order marks. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14.3](NJF.md#njf-14.3)  | The service does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14.4](NJF.md#njf-14.4)  | The service does not accept UTF-16 and UTF-32 byte order marks instead of the UTF-8 byte order mark. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14.5](NJF.md#njf-14.5)  | The service does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -14115,40 +13117,23 @@ _None_
 
 |date-time|NJF-14|NJF-14.1|NJF-14.2|NJF-14.3|NJF-14.4|NJF-14.5|
 |-|-|-|-|-|-|-|
-|2025-11-24 08:25:25|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-24 15:01:45|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-25 14:22:48|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-02 16:04:44|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 08:03:28|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 13:58:56|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-04 15:06:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-05 10:27:57|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-08 18:23:43|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 09:53:22|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-09 13:01:47|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-15 17:02:30|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-16 13:49:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-12-17 06:02:26|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-12 15:46:31|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-13 13:45:16|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-16 13:40:32|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:05:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-01-20 09:53:26.883787|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 09:54:49|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:00|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-01-26 16:27:43.843266|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
 ### NJF-14.1 | Reviewed: ⨯ | Score: 0.0 
-If the service provided by the nlohmann/json library accepts an input containing no BOM, then it accepts a single UTF-8 byte order mark followed by that input.
+If the service accepts an input containing no BOM, then it accepts a single UTF-8 byte order mark followed by that input.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14](NJF.md#njf-14)  | The service accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14196,40 +13181,23 @@ _None_
 
 |date-time|NJF-14.1|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-14.2 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept multiple UTF-8 byte order marks.
+The service does not accept multiple UTF-8 byte order marks.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14](NJF.md#njf-14)  | The service accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14275,40 +13243,23 @@ _None_
 
 |date-time|NJF-14.2|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-14.3 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input.
+The service does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14](NJF.md#njf-14)  | The service accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14783,40 +13734,23 @@ _None_
 
 |date-time|NJF-14.3|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-14.4 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept UTF-16 and UTF-32 byte order marks instead of the UTF-8 byte order mark.
+The service does not accept UTF-16 and UTF-32 byte order marks instead of the UTF-8 byte order mark.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14](NJF.md#njf-14)  | The service accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14861,40 +13795,23 @@ _None_
 
 |date-time|NJF-14.4|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
 
 
 ---
 
 ### NJF-14.5 | Reviewed: ⨯ | Score: 0.0 
-The service provided by the nlohmann/json library does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input.
+The service does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NJF-14](NJF.md#njf-14)  | The service accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14944,24 +13861,7 @@ _None_
 
 |date-time|NJF-14.5|
 |-|-|
-|2025-11-24 08:25:25|0.00 |
-|2025-11-24 15:01:45|0.00 |
-|2025-11-25 14:22:48|0.00 |
-|2025-11-26 12:04:09|0.00 |
-|2025-12-02 16:04:44|0.00 |
-|2025-12-04 08:03:28|0.00 |
-|2025-12-04 13:58:56|0.00 |
-|2025-12-04 15:06:30|0.00 |
-|2025-12-05 10:27:57|0.00 |
-|2025-12-08 18:23:43|0.00 |
-|2025-12-09 09:53:22|0.00 |
-|2025-12-09 13:01:47|0.00 |
-|2025-12-15 17:02:30|0.00 |
-|2025-12-16 13:49:18|0.00 |
-|2025-12-17 06:02:26|0.00 |
-|2026-01-12 15:46:31|0.00 |
-|2026-01-13 13:45:16|0.00 |
-|2026-01-16 13:40:32|0.00 |
-|2026-01-20 09:05:12|0.00 |
-|2026-01-20 09:53:26.883787|0.00 |
+|2026-01-26 09:54:49|0.00 |
+|2026-01-26 16:27:00|0.00 |
+|2026-01-26 16:27:43.843266|0.00 |
 
