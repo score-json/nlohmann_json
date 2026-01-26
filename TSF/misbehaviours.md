@@ -19,13 +19,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 
-### [#5047](https://github.com/nlohmann/json/issues/5047)
-- **Title:** [C++23] Error in json::parse with std::ifstream
-- **State:** OPEN
-- **Created At:** 2026-01-07T07:43:37Z
-
-
-
 ### [#5036](https://github.com/nlohmann/json/issues/5036)
 - **Title:** get enum with default value
 - **State:** OPEN
@@ -244,6 +237,13 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 ## Closed Issues (since version 3.12.0)
+
+### [#5047](https://github.com/nlohmann/json/issues/5047)
+- **Title:** [C++23] Error in json::parse with std::ifstream
+- **State:** CLOSED
+- **Created At:** 2026-01-07T07:43:37Z
+
+
 
 ### [#5046](https://github.com/nlohmann/json/issues/5046)
 - **Title:** implicit conversion of return json to std::optional no longer implicit
