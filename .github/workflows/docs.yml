@@ -86,7 +86,7 @@ jobs:
 
       - name: Build documentation
         env:
-          USE_BAZEL_VERSION: 8.5.1
+          USE_BAZEL_VERSION: 8.3.0
         run: |
           bazel run ${{ inputs.bazel-target }}
           tar -cf github-pages.tar _build
