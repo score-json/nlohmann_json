@@ -39,16 +39,15 @@ This document follows the RAFIA STPA procedure at the level of intent and output
 
 Concretely, the procedure steps map to this document as follows:
 
-- **Step 1 (Define scope)**: section **1** (System Description, integration context, AOUs).
-- **Step 2 (Define purpose: Losses, Hazards, SLC)**: sections **2–3** (Losses and Hazards), plus constraints in section **7**.
-- **Step 3 (Describe control structure)**: section **4**, including compact **Elements** and **Interactions** tables (schema-aligned) and explicit control loops (Step 6).
-- **Step 4 (Identify UCAs)**: section **5**, with UCAs for both functional parsing/validation and process governance.
-- **Step 5 (Devise controller constraints / CFC)**: section **7** (constraints table includes CFC-type constraints mapped to TSF statements).
-- **Step 6 (Identify control loops and sequences)**: section **4.3** (Control-Loops and step references).
-- **Step 7 (Identify causal scenarios)**: section **6**.
-- **Step 8 (Devise causal scenario constraints / CSC)**: section **7** (scenario-related constraints captured as CSC).
-- **Step 9 (Specify misbehaviours and expectations)**: section **8**.
-- **Step 10 (Review STPA results)**: section **10** (review/update loop and future work).
+- **Step 1 Define scope**
+- **Step 2 Define Losses**
+- **Step 3 Define Hazards**
+- **Step 3 Describe control structure**
+- **Step 4 Identify UCAs**
+- **Step 5 Identify causal scenarios**
+- **Step 8 Mapping to TSF**
+- **Step 9 Specify misbehaviours**
+- **Step 10 Conclusion**
 
 ---
 
