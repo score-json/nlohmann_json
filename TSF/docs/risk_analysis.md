@@ -176,7 +176,7 @@ This control structure is intentionally minimal and models two control loops:
 - **CL1 (Functional validation/parsing)**: S-CORE calls `accept`/`parse` and reacts to Boolean results and exceptions.
 - **CL2 (Governance)**: periodic upstream issue/CVE review and update decisions, because **H7** is in scope (anchored by `AOU-27..29`).
 
-### 4.1 Elements (schema-aligned)
+### 4.1 Elements 
 
 | Element Id | Element | Role | Responsibility (short) |
 |---|---|---|---|
@@ -215,7 +215,7 @@ Using the control structure, we identify **Unsafe Control Actions (UCA\*)**:
 
 A UCA is an interaction between a controller and a controlled process that can lead to a hazard. For this library-centric control structure, UCAs correspond to “incorrect accept/parse outcome” and “incorrect error signalling”.
 
-### 5.1 UCAs (compact, schema-aligned)
+### 5.1 UCAs
 
 | UCA Id | Interaction | Unsafe control action (summary) | Hazards | Constraint(s) |
 |---|---|---|---|---|---|
@@ -229,7 +229,7 @@ A UCA is an interaction between a controller and a controlled process that can l
 | UCA8 | I5 (triage/update) | Update/mitigation is applied too late | H7 | C11 |
 | UCA9 | I5 (triage/update) | Update is applied without adequate regression evaluation | H7 | C11 |
 
-### 5.3 CA-Analysis (brief)
+### 5.2 CA-Analysis 
 
 | CA-Analysis Id | Linked UCA(s) | Why unsafe |
 |---|---|---|
@@ -242,7 +242,7 @@ A UCA is an interaction between a controller and a controlled process that can l
 
 ---
 
-## 6. Scenarios (schema-aligned)
+## 6. Scenarios 
 
 The STPA schema records causal analysis results in a Scenarios table that links each causal scenario to a control-loop step (here: **CL1** functional parsing/validation and **CL2** governance), and to the resulting UCA and/or Hazards.
 
@@ -279,7 +279,7 @@ CS Type legend (informal, used here as a compact tag):
 
 In RAFIA/STPA, constraints are “statements that must be true” to avoid a hazard, UCA, or causal scenario \[[RAFIA: Risk Analysis](https://codethinklabs.gitlab.io/trustable/trustable/extensions/rafia/risk-analysis.html)\]. In TSF terms, these constraints are captured as (or mapped onto existing) **Items**, and are supported by **Evidence**. 
 
-### 7.1 Constraints (schema-aligned)
+### 7.1 Constraints
 
 | Constraint Id | Description | Constraint Type | Link to Constraint(s) | Link to Hazard(s) | Links to UCA | Links to CS | Links to TSF |
 |---|---|---|---|---|---|---|---|
@@ -297,9 +297,7 @@ In RAFIA/STPA, constraints are “statements that must be true” to avoid a haz
 
 ---
 
-## 8. Misbehaviours and Expectations
-
-### 8.1 Misbehaviours (Prohibited Behaviours)
+## 8. Misbehaviours 
 
 In TSF terms, misbehaviours are **anything that can cause a deviation from Expected Behaviour** (`TA-MISBEHAVIOURS_CONTEXT.md`). In this analysis we derive them in two complementary ways:
 
