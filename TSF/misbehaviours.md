@@ -5,62 +5,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Open issues
 
-### [#5060](https://github.com/nlohmann/json/issues/5060)
-- **Title:** Segfault on x86_64 Android with Chromium libc++ in serializer::~serializer()
-- **State:** OPEN
-- **Created At:** 2026-01-24T10:41:51Z
-
-
-
-### [#5048](https://github.com/nlohmann/json/issues/5048)
-- **Title:** function argument safety check silently optimized out in release build by clang
-- **State:** OPEN
-- **Created At:** 2026-01-07T22:27:57Z
-
-
-
-### [#5036](https://github.com/nlohmann/json/issues/5036)
-- **Title:** get enum with default value
-- **State:** OPEN
-- **Created At:** 2025-12-20T07:06:56Z
-
-
-
-### [#5023](https://github.com/nlohmann/json/issues/5023)
-- **Title:** std::map and std::unordered_map serialization broken for keys of type std::u16string
-- **State:** OPEN
-- **Created At:** 2025-12-03T12:02:24Z
-
-
-
-### [#5012](https://github.com/nlohmann/json/issues/5012)
-- **Title:** error_handler_t::ignore documentation is incorrect
-- **State:** OPEN
-- **Created At:** 2025-11-24T14:21:24Z
-
-
-
-### [#5005](https://github.com/nlohmann/json/issues/5005)
-- **Title:** Serialization of double type data gets stuck
-- **State:** OPEN
-- **Created At:** 2025-11-20T09:28:12Z
-
-
-
-### [#5002](https://github.com/nlohmann/json/issues/5002)
-- **Title:** VS2026 Insiders, C2678 With C++23 Modules
-- **State:** OPEN
-- **Created At:** 2025-11-18T20:45:50Z
-
-
-
-### [#4996](https://github.com/nlohmann/json/issues/4996)
-- **Title:** Tests don't build with VS 2026
-- **State:** OPEN
-- **Created At:** 2025-11-14T16:26:05Z
-
-
-
 ### [#4974](https://github.com/nlohmann/json/issues/4974)
 - **Title:** [MSVC][build] JSON failed with error C2672: 'nlohmann::json_abi_v3_12_0::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,
 - **State:** OPEN
@@ -237,27 +181,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 ## Closed Issues (since version 3.12.0)
-
-### [#5047](https://github.com/nlohmann/json/issues/5047)
-- **Title:** [C++23] Error in json::parse with std::ifstream
-- **State:** CLOSED
-- **Created At:** 2026-01-07T07:43:37Z
-
-
-
-### [#5046](https://github.com/nlohmann/json/issues/5046)
-- **Title:** implicit conversion of return json to std::optional no longer implicit
-- **State:** CLOSED
-- **Created At:** 2026-01-06T16:50:46Z
-
-
-
-### [#5013](https://github.com/nlohmann/json/issues/5013)
-- **Title:** An object is used after it's moved
-- **State:** CLOSED
-- **Created At:** 2025-11-24T15:32:02Z
-
-
 
 ### [#4946](https://github.com/nlohmann/json/issues/4946)
 - **Title:** Failure with cmake 4.1
