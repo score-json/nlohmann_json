@@ -1,6 +1,6 @@
 module(
     name = "score_nlohmann_json",
-    version = "0.0.0"
+    version = "0.0.0",
     compatibility_level = 1,
 )
 
