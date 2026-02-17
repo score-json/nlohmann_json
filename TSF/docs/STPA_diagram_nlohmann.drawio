@@ -1,0 +1,174 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+  <diagram name="Page-1" id="OszLtixQWJcHMC9hrUJH">
+    <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-63" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="120" y="60" width="780" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-33" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="70" width="440" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-5" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="280" y="319" width="390" height="111" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-5">
+          <mxGeometry y="4.625" width="390" height="111" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-14" value="&lt;b&gt;E2) nlohmann/json service&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-5">
+          <mxGeometry x="30" y="50.99691666666667" width="120" height="37.00000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-15" value="&lt;b&gt;E4) Dependency state&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-5">
+          <mxGeometry x="225" y="51.69166666666667" width="120" height="37.00000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-7" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="280" y="120" width="390" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-7">
+          <mxGeometry width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-8" value="&lt;b&gt;E1) S-CORE JSON caller&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-7">
+          <mxGeometry x="30" y="46.66666666666666" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-66" value="" style="rounded=1;whiteSpace=wrap;html=1;gradientColor=default;fillColor=none;dashed=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-7">
+          <mxGeometry x="20" y="20" width="140" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-13" value="&lt;b&gt;E3) Integration governance process&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-7">
+          <mxGeometry x="225" y="46.66666666666666" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-67" value="CL1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-7">
+          <mxGeometry x="60" y="16.669999999999987" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-6" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Controller&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-7">
+          <mxGeometry x="160" width="60" height="29.67" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-20" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="zooJp1nnjUoEMfIvDq-D-14" target="zooJp1nnjUoEMfIvDq-D-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="400" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-21" value="I2) Result; I4) Error message" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="18" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zooJp1nnjUoEMfIvDq-D-13" target="zooJp1nnjUoEMfIvDq-D-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="236.6666666666668" as="sourcePoint" />
+            <mxPoint x="540" y="347.67" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-30" value="I5) Triage/update decision" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-31" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="zooJp1nnjUoEMfIvDq-D-15" target="zooJp1nnjUoEMfIvDq-D-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="360" as="sourcePoint" />
+            <mxPoint x="712" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-32" value="I6) Status/impact signals" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-34" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;System: Ecplise S-CORE nlohmann/json&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="79" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=1 2;" edge="1" parent="1" source="zooJp1nnjUoEMfIvDq-D-36" target="zooJp1nnjUoEMfIvDq-D-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-40" value="JSON text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zooJp1nnjUoEMfIvDq-D-39">
+          <mxGeometry x="-0.0105" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-36" value="Untrusted JSON input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="200" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-37" value="S-CORE application / downstream logic" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="120" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;dashPattern=1 2;" edge="1" parent="1" source="zooJp1nnjUoEMfIvDq-D-38" target="zooJp1nnjUoEMfIvDq-D-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-49" value="Advisories/issues/CVEs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zooJp1nnjUoEMfIvDq-D-46">
+          <mxGeometry x="-0.0263" y="2" relative="1" as="geometry">
+            <mxPoint x="1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-38" value="Upstream ecosystem (advisories/issues/CVEs)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=1 2;" edge="1" parent="1" source="zooJp1nnjUoEMfIvDq-D-8" target="zooJp1nnjUoEMfIvDq-D-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="180" />
+              <mxPoint x="600" y="180" />
+              <mxPoint x="600" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-44" value="Parsed value/&lt;div&gt;accept decision/&lt;div&gt;error outcome&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zooJp1nnjUoEMfIvDq-D-41">
+          <mxGeometry x="0.5622" y="3" relative="1" as="geometry">
+            <mxPoint x="11" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="zooJp1nnjUoEMfIvDq-D-8" target="zooJp1nnjUoEMfIvDq-D-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330.03215686274507" y="236.66666666666666" as="sourcePoint" />
+            <mxPoint x="330" y="380.16666666666663" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-17" value="I1) Validate; I3) Parse request" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-52" value="Interactions" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="340" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-53" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;Control Action" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-52">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-60" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="zooJp1nnjUoEMfIvDq-D-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="74.5" as="sourcePoint" />
+            <mxPoint x="30" y="74.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-61" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="zooJp1nnjUoEMfIvDq-D-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="44.5" as="sourcePoint" />
+            <mxPoint x="30" y="44.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-54" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;Feedback" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-52">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-55" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;Boundary/Other &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Interaction" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="zooJp1nnjUoEMfIvDq-D-52">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-58" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 2;strokeWidth=2;rounded=0;" edge="1" parent="zooJp1nnjUoEMfIvDq-D-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="104.5" as="sourcePoint" />
+            <mxPoint x="30" y="104.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-68" value="" style="rounded=1;whiteSpace=wrap;html=1;gradientColor=default;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="140" width="140" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-69" value="CL2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="136.67" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zooJp1nnjUoEMfIvDq-D-4" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Controlled Processes&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="406" y="333.33" width="150" height="18.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
