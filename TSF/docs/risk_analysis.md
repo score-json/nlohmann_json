@@ -49,6 +49,8 @@ Concretely, the procedure steps map to this document as follows:
 
 ## 1. Scope and System Context
 
+The system boundary, environment, and boundary-crossing interactions assumed for this scope are summarised in the control structure diagram in Section 4.0.
+
 ### 1.1 Software Under Analysis
 
 The software under analysis is the **header-only C++ JSON library `nlohmann/json` (v3.12.0)**, with:
@@ -170,6 +172,12 @@ This control structure is intentionally minimal and models two control loops:
 
 - **CL1 (Functional validation/parsing)**: S-CORE calls `accept`/`parse` and reacts to Boolean results and exceptions.
 - **CL2 (Governance)**: periodic upstream issue/CVE review and update decisions, because **H7** is in scope (anchored by `AOU-27..29`).
+
+### 4.0 Control structure diagram (scope + interactions)
+
+![STPA control structure and scope boundary](STPA_diagram_nlohmann.png)
+
+This diagram is used both to define the **scope of analysis** (system boundary and environment) and to describe the **control structure** (elements and interactions). Control actions are shown as solid arrows, feedback as dashed arrows, and boundary/other interactions as a distinct dashed style (see legend). The diagram is a functional abstraction (not a physical or executable model) and does not assume that control actions or feedback are always delivered as intended.
 
 ### 4.1 Elements 
 
