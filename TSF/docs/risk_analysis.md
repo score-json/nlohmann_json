@@ -33,23 +33,11 @@ This document follows the RAFIA STPA procedure at the level of intent and output
 - STPA procedure: \[[RAFIA STPA Procedure](https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/stpa/procedure.html)\]
 - STPA workbook schema (tables/columns): \[[STPA results schema](https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/stpa/schema.html)\]
 
-Concretely, the procedure steps map to this document as follows:
-
-- **Step 1 Define scope**
-- **Step 2 Define Losses**
-- **Step 3 Define Hazards**
-- **Step 3 Describe control structure**
-- **Step 4 Identify UCAs**
-- **Step 5 Identify causal scenarios**
-- **Step 8 Mapping to TSF**
-- **Step 9 Specify misbehaviours**
-- **Step 10 Conclusion**
-
 ---
 
 ## 1. Scope and System Context
 
-The system boundary, environment, and boundary-crossing interactions assumed for this scope are summarised in the control structure diagram in Section 4.0.
+The system boundary, environment, and boundary-crossing interactions assumed for this scope are summarised in the control structure diagram in Section 3.0.
 
 ### 1.1 Software Under Analysis
 
@@ -120,7 +108,9 @@ These AOU statements are treated as **controller/environment constraints** in th
 
 ---
 
-## 2. Losses (Unacceptable Outcomes)
+## 2. Purpose of the analysis
+
+### 2.1 Losses (Unacceptable Outcomes)
 
 Although `nlohmann/json` is a library, its misbehaviour can contribute to unacceptable outcomes in S-CORE applications.
 
@@ -148,7 +138,7 @@ The loss set (L1–L6) is intentionally small and orthogonal:
 
 ---
 
-## 3. Hazards (System-Level Conditions)
+### 2.2 Hazards (System-Level Conditions)
 
 Using the Losses, we define **Hazards (H\*)** at S-CORE level:
 
@@ -166,20 +156,40 @@ Hazards are not “root causes” and not “bugs”; they are **system-level co
 
 ---
 
-## 4. Control Structure
+### 2.3 System-level Constraints
 
-This control structure is intentionally minimal and models two control loops:
+In RAFIA/STPA, constraints are “statements that must be true” to avoid a hazard, UCA, or causal scenario \[[RAFIA: Risk Analysis](https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/rafia/risk-analysis.html)\]. In TSF terms, these constraints are captured as (or mapped onto existing) **Items**, and are supported by **Evidence**.
+
+| Constraint Id | Description | Constraint Type | Link to Constraint(s) | Link to Hazard(s) | Links to UCA | Links to CS | Links to TSF |
+|---|---|---|---|---|---|---|---|
+| C1 | `basic_json::accept` correctly distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | CFC |  | H1; H2 | UCA1; UCA2 | CS1.1; CS1.2 | JLEX-01 |
+| C2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly (exception) under the defined scope/integration context. | CFC |  | H2; H3; H4; H5 | UCA3; UCA4; UCA5 | CS1.3; CS1.4; CS1.5; CS2.2 | JLEX-02 |
+| C3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled. | CFC |  | H1; H5 | UCA3 | CS1.1 | JLS-24 |
+| C4 | Parsing/validation completes within acceptable resource/time bounds for the integration context, or the integration specifies explicit budgets/limits. | SLC |  | H4; H6 |  |  |  |
+| C5 | A safe dependency state is maintained such that known relevant upstream issues/CVEs do not remain present beyond acceptable limits. | SLC |  | H7 |  |  | JLS-11; AOU-27; AOU-28; AOU-29 |
+| C6 | All feedback channels at the integration boundary (validation results and exceptions/error signalling) are handled and interpreted correctly. | CSC |  | H4; H5 | UCA5 | CS1.5; CS4.1; CS4.2 | AOU-04; AOU-07 |
+| C7 | Input encoding satisfies RFC 8259 (UTF-8) or violations are handled explicitly at the boundary. | CSC |  | H4; H5 |  | CS4.3 | AOU-05 |
+| C8 | Object keys are unique when objects are parsed (or ambiguity is mitigated at integration level). | CSC |  | H5 |  | CS4.4 | AOU-20 |
+| C9 | Numbers are base-10 as required by JSON, or non-decimal representations are handled/mitigated. | CSC |  | H4; H5 |  | CS4.5 | AOU-22 |
+| C10 | Data is complete and error-free at the component boundary (or boundary corruption is detected/handled). | CSC |  | H5 |  | CS4.6 | AOU-23 |
+| C11 | Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency. | CSC | C5 | H7 | UCA6; UCA7; UCA8; UCA9 | CS3.1; CS3.2; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
+
+---
+
+## 3. Control structure
+
+Here, a control structure is defined, which is intentionally minimal and models two control loops:
 
 - **CL1 (Functional validation/parsing)**: S-CORE calls `accept`/`parse` and reacts to Boolean results and exceptions.
 - **CL2 (Governance)**: periodic upstream issue/CVE review and update decisions, because **H7** is in scope (anchored by `AOU-27..29`).
 
-### 4.0 Control structure diagram (scope + interactions)
+### 3.0 Control structure diagram (scope + interactions)
 
 ![STPA control structure and scope boundary](STPA_diagram_nlohmann.png)
 
 This diagram is used both to define the **scope of analysis** (system boundary and environment) and to describe the **control structure** (elements and interactions). Control actions are shown as solid arrows, feedback as dashed arrows, and boundary/other interactions as a distinct dashed style (see legend). The diagram is a functional abstraction (not a physical or executable model) and does not assume that control actions or feedback are always delivered as intended.
 
-### 4.1 Elements 
+### 3.1 Elements 
 
 | Element Id | Element | Role | Responsibility (short) |
 |---|---|---|---|
@@ -188,7 +198,7 @@ This diagram is used both to define the **scope of analysis** (system boundary a
 | E3 | Integration governance process | Controller | Reviews upstream issues/CVEs; decides mitigation/update |
 | E4 | Dependency state | Controlled Process | Current version + known upstream issues/CVEs affecting it |
 
-### 4.2 Interactions (control actions and feedback)
+### 3.2 Interactions (control actions and feedback)
 
 | Interaction Id | Kind | Provider → Receiver | Meaning (short) |
 |---|---|---|---|
@@ -199,7 +209,7 @@ This diagram is used both to define the **scope of analysis** (system boundary a
 | I5 | CA | E3 → E4 | Perform upstream triage/update decision |
 | I6 | FB | E4 → E3 | Provide upstream status/impact signals |
 
-### 4.3 Control loops and step references (used by Scenarios)
+### 3.3 Control loops and step references (used by Scenarios)
 
 | Loop | CL ref | Step meaning | Interaction(s) |
 |---|---|---|---|
@@ -212,13 +222,13 @@ This diagram is used both to define the **scope of analysis** (system boundary a
 
 ---
 
-## 5. Unsafe Control Actions (UCAs)
+## 4. Unsafe Control Actions
 
 Using the control structure, we identify **Unsafe Control Actions (UCA\*)**:
 
 A UCA is an interaction between a controller and a controlled process that can lead to a hazard. For this library-centric control structure, UCAs correspond to “incorrect accept/parse outcome” and “incorrect error signalling”.
 
-### 5.1 UCAs
+### 4.1 UCAs
 
 | UCA Id | Interaction | Unsafe control action (summary) | Hazards | Constraint(s) |
 |---|---|---|---|---|---|
@@ -232,7 +242,7 @@ A UCA is an interaction between a controller and a controlled process that can l
 | UCA8 | I5 (triage/update) | Update/mitigation is applied too late | H7 | C11 |
 | UCA9 | I5 (triage/update) | Update is applied without adequate regression evaluation | H7 | C11 |
 
-### 5.2 CA-Analysis 
+### 4.2 CA-Analysis 
 
 | CA-Analysis Id | Linked UCA(s) | Why unsafe |
 |---|---|---|
@@ -245,7 +255,15 @@ A UCA is an interaction between a controller and a controlled process that can l
 
 ---
 
-## 6. Scenarios 
+## 5. Controller (Functional) Constraints
+
+
+
+## 6. Control Loops and Sequences
+
+
+
+## 7. Causal Scenarios
 
 The STPA schema records causal analysis results in a Scenarios table that links each causal scenario to a control-loop step (here: **CL1** functional parsing/validation and **CL2** governance), and to the resulting UCA and/or Hazards.
 
@@ -278,29 +296,11 @@ CS Type legend (informal, used here as a compact tag):
 
 ---
 
-## 7. Mapping to TSF Items
+## 8. Causal Scenario Constraints
 
-In RAFIA/STPA, constraints are “statements that must be true” to avoid a hazard, UCA, or causal scenario \[[RAFIA: Risk Analysis](https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/rafia/risk-analysis.html)\]. In TSF terms, these constraints are captured as (or mapped onto existing) **Items**, and are supported by **Evidence**. 
+## 9. Misbehaviours and Expectations 
 
-### 7.1 Constraints
-
-| Constraint Id | Description | Constraint Type | Link to Constraint(s) | Link to Hazard(s) | Links to UCA | Links to CS | Links to TSF |
-|---|---|---|---|---|---|---|---|
-| C1 | `basic_json::accept` correctly distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | CFC |  | H1; H2 | UCA1; UCA2 | CS1.1; CS1.2 | JLEX-01 |
-| C2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly (exception) under the defined scope/integration context. | CFC |  | H2; H3; H4; H5 | UCA3; UCA4; UCA5 | CS1.3; CS1.4; CS1.5; CS2.2 | JLEX-02 |
-| C3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled. | CFC |  | H1; H5 | UCA3 | CS1.1 | JLS-24 |
-| C4 | Parsing/validation completes within acceptable resource/time bounds for the integration context, or the integration specifies explicit budgets/limits. | SLC |  | H4; H6 |  |  |  |
-| C5 | A safe dependency state is maintained such that known relevant upstream issues/CVEs do not remain present beyond acceptable limits. | SLC |  | H7 |  |  | JLS-11; AOU-27; AOU-28; AOU-29 |
-| C6 | All feedback channels at the integration boundary (validation results and exceptions/error signalling) are handled and interpreted correctly. | CSC |  | H4; H5 | UCA5 | CS1.5; CS4.1; CS4.2 | AOU-04; AOU-07 |
-| C7 | Input encoding satisfies RFC 8259 (UTF-8) or violations are handled explicitly at the boundary. | CSC |  | H4; H5 |  | CS4.3 | AOU-05 |
-| C8 | Object keys are unique when objects are parsed (or ambiguity is mitigated at integration level). | CSC |  | H5 |  | CS4.4 | AOU-20 |
-| C9 | Numbers are base-10 as required by JSON, or non-decimal representations are handled/mitigated. | CSC |  | H4; H5 |  | CS4.5 | AOU-22 |
-| C10 | Data is complete and error-free at the component boundary (or boundary corruption is detected/handled). | CSC |  | H5 |  | CS4.6 | AOU-23 |
-| C11 | Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency. | CSC | C5 | H7 | UCA6; UCA7; UCA8; UCA9 | CS3.1; CS3.2; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
-
----
-
-## 8. Misbehaviours 
+### 9.1 Misbehaviours
 
 In TSF terms, misbehaviours are **anything that can cause a deviation from Expected Behaviour** (`TA-MISBEHAVIOURS_CONTEXT.md`). In this analysis we derive them in two complementary ways:
 
@@ -321,7 +321,7 @@ Relative to `JLEX-01` and `JLEX-02`, the following **Misbehaviours (M\*)** are p
 
 ---
 
-## 9. Risk Evaluation
+### 9.2 Risk Evaluation
 
 In line with RAFIA, risk evaluation considers:
 
@@ -344,3 +344,4 @@ Qualitative evaluation:
 | M7 | Medium–High | Medium | Medium–High | Medium–High | Resource-exhaustion is a common parser threat on untrusted inputs; this TSF tree does not specify concrete resource budgets, so deployment context must define them if availability/deadlines are critical. |
 
 
+## 10. Review STPA results
