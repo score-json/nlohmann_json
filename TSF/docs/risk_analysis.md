@@ -222,13 +222,69 @@ This diagram is used both to define the **scope of analysis** (system boundary a
 
 ---
 
-## 4. Unsafe Control Actions
+## 4. Unsafe Control Actions (UCAs)
 
 Using the control structure, we identify **Unsafe Control Actions (UCA\*)**:
 
 A UCA is an interaction between a controller and a controlled process that can lead to a hazard. For this library-centric control structure, UCAs correspond to “incorrect accept/parse outcome” and “incorrect error signalling”.
 
-### 4.1 UCAs
+Per the RAFIA STPA procedure, the normative Step 4 record is the **CA-Analysis** table (UCAType × context × control action), from which the **UCA** table is derived.
+
+### 4.1 UCA-Contexts
+
+| Context Id | Unsafe Context | Notes |
+|---|---|---|
+| UCX1 | WHEN `accept` is used as a gating signal for whether untrusted input is treated as JSON (and the caller acts on that decision) | Covers both acceptance of ill-formed input and rejection of well-formed input as system-level unsafe outcomes. |
+| UCX2 | WHEN `parse` is used to parse untrusted input and the parsed value is used for subsequent decisions or execution paths | Focus is on correctness of the parsed representation relative to the input text. |
+| UCX3 | WHEN `parse` is expected to fail safely and predictably for invalid input and to complete within practical constraints for valid input | Includes exception signalling, hang/non-termination, and ambiguity at the boundary. |
+| UCX4 | WHEN new upstream issues/advisories apply to the deployed dependency state and governance is responsible for triage and timely mitigations/updates | Includes decision quality, timeliness, and required evaluation steps. |
+
+### 4.2 CA-Analysis
+
+The RAFIA STPA procedure requires a CA-Analysis table keyed by control actions (here: **I1**, **I3**, **I5**) and including a full set of rows for each defined **UCAType** (NP, PR, ML, MM, DS, DL, TE, TL, SO) for each applicable **UCA Context**.
+
+| CA Analysis ID | CA Id | UCA Type | UCA Context | Analysis Result | Hazard(s) | Justification |
+|---|---|---|---|---|---|---|
+| CAA-I1-UCX1-NP | I1 | NP | UCX1 | Safe |  | Not calling `accept` does not introduce a new hazard in this control structure: `parse` remains the authoritative validation/parse step and is analysed separately (I3). |
+| CAA-I1-UCX1-PR-UCA1 | I1 | PR | UCX1 | UCA | H1; H5 | If `accept` returns `true` for ill-formed JSON, S-CORE may treat ill-formed input as valid and proceed (UCA1). |
+| CAA-I1-UCX1-PR-UCA2 | I1 | PR | UCX1 | UCA | H2 | If `accept` returns `false` for well-formed JSON, S-CORE may reject valid input that should be accepted (UCA2). |
+| CAA-I1-UCX1-ML | I1 | ML | UCX1 | N/A |  | Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL. |
+| CAA-I1-UCX1-MM | I1 | MM | UCX1 | N/A |  | Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL. |
+| CAA-I1-UCX1-DS | I1 | DS | UCX1 | N/A |  | Duration (too short) is not meaningful for this discrete call; any timing-related unsafe outcome is captured under TE/TL. |
+| CAA-I1-UCX1-DL | I1 | DL | UCX1 | N/A |  | Duration (too long) is captured as “too late” (TL) for this discrete call outcome at the boundary. |
+| CAA-I1-UCX1-TE | I1 | TE | UCX1 | N/A |  | “Too early” does not apply: `accept` is invoked explicitly by the caller, and there is no earlier unsafe timing context defined for UCX1. |
+| CAA-I1-UCX1-TL | I1 | TL | UCX1 | Safe |  | If `accept` is slow, the system-level effect is availability impact rather than an unsafe acceptance decision; availability for valid input is analysed under I3 timing/termination (UCA4) in UCX3. |
+| CAA-I1-UCX1-SO | I1 | SO | UCX1 | N/A |  | Sequence/order does not apply to this single, synchronous call in isolation. Concurrency/order hazards are analysed at the `parse` boundary where practical impact is observed (UCX3). |
+| CAA-I3-UCX2-NP | I3 | NP | UCX2 | Safe |  | If `parse` is not invoked then no parsed value is produced and this specific hazard mechanism (semantic mismatch) cannot occur. |
+| CAA-I3-UCX2-PR | I3 | PR | UCX2 | UCA | H3; H5 | If `parse` returns a value inconsistent with the input text then the system may act on an incorrect representation (UCA3). |
+| CAA-I3-UCX2-ML | I3 | ML | UCX2 | N/A |  | Magnitude categories do not apply to this abstraction of `parse` as a discrete call; unsafe outcomes are captured under PR/TL. |
+| CAA-I3-UCX2-MM | I3 | MM | UCX2 | N/A |  | Magnitude categories do not apply to this abstraction of `parse` as a discrete call; unsafe outcomes are captured under PR/TL. |
+| CAA-I3-UCX2-DS | I3 | DS | UCX2 | N/A |  | Duration (too short) is not meaningful for this discrete call; incorrect early termination would manifest as an error/exception covered under UCX3. |
+| CAA-I3-UCX2-DL | I3 | DL | UCX2 | N/A |  | Duration (too long) is captured as “too late” (TL) for completion within practical constraints. |
+| CAA-I3-UCX2-TE | I3 | TE | UCX2 | N/A |  | “Too early” does not apply: `parse` is invoked explicitly by the caller in response to system needs. |
+| CAA-I3-UCX2-TL | I3 | TL | UCX2 | Safe |  | Timing issues for `parse` are analysed in UCX3 because the safety-relevant mechanism is failure to complete or signal errors safely, not early/late correctness mismatch. |
+| CAA-I3-UCX2-SO | I3 | SO | UCX2 | N/A |  | Sequence/order is not applicable to a single `parse` call in isolation; ordering-related problems are treated as boundary error-handling/concurrency in UCX3. |
+| CAA-I3-UCX3-NP | I3 | NP | UCX3 | Safe |  | If `parse` is not invoked, the error-signalling and termination issues in UCX3 do not arise for this interaction. |
+| CAA-I3-UCX3-PR | I3 | PR | UCX3 | UCA | H4; H5 | If errors are signalled ambiguously (or in a way the caller can misinterpret), boundary handling can fail (UCA5). |
+| CAA-I3-UCX3-ML | I3 | ML | UCX3 | N/A |  | Magnitude is not meaningful for this discrete call abstraction. |
+| CAA-I3-UCX3-MM | I3 | MM | UCX3 | N/A |  | Magnitude is not meaningful for this discrete call abstraction. |
+| CAA-I3-UCX3-DS | I3 | DS | UCX3 | N/A |  | Duration (too short) is not meaningful for error signalling; premature termination manifests as exception/failed parse which is already covered by PR/Safe outcomes. |
+| CAA-I3-UCX3-DL | I3 | DL | UCX3 | Safe |  | “Too long” is treated as “too late” (TL) for this discrete call in this analysis; the unsafe outcome is recorded under TL (UCA4). |
+| CAA-I3-UCX3-TE | I3 | TE | UCX3 | N/A |  | “Too early” does not apply for this synchronous call abstraction. |
+| CAA-I3-UCX3-TL | I3 | TL | UCX3 | UCA | H2; H4 | “Too late” completion (effectively non-termination or excessive delay) makes the interaction unsafe under practical constraints (UCA4). |
+| CAA-I3-UCX3-SO | I3 | SO | UCX3 | Safe |  | The library call is synchronous; sequence/order issues primarily arise in the caller’s concurrency model. This analysis assumes the caller does not treat results from one thread/context as belonging to another; otherwise additional UCAs and hazards should be added. |
+| CAA-I5-UCX4-NP | I5 | NP | UCX4 | UCA | H7 | Not performing required triage/review can leave known issues unmitigated (UCA6). |
+| CAA-I5-UCX4-PR | I5 | PR | UCX4 | UCA | H7 | Performing triage but dismissing an applicable advisory/issue is unsafe (UCA7). |
+| CAA-I5-UCX4-ML | I5 | ML | UCX4 | N/A |  | Magnitude is not meaningful for this governance decision in this abstraction. |
+| CAA-I5-UCX4-MM | I5 | MM | UCX4 | N/A |  | Magnitude is not meaningful for this governance decision in this abstraction. |
+| CAA-I5-UCX4-DS | I5 | DS | UCX4 | N/A |  | Duration (too short) is not meaningful for this discrete decision abstraction; relevant issues are captured under TL/SO. |
+| CAA-I5-UCX4-DL | I5 | DL | UCX4 | N/A |  | Duration (too long) is captured as timing too late (TL) for decision/mitigation application. |
+| CAA-I5-UCX4-TE | I5 | TE | UCX4 | N/A |  | “Too early” is not applicable in this abstraction. |
+| CAA-I5-UCX4-TL | I5 | TL | UCX4 | UCA | H7 | Applying an update/mitigation too late can leave known issues in place beyond acceptable limits (UCA8). |
+| CAA-I5-UCX4-SO | I5 | SO | UCX4 | UCA | H7 | Applying an update/mitigation without adequate regression evaluation is an out-of-sequence governance action (UCA9). |
+
+
+### 4.3 UCAs
 
 | UCA Id | Interaction | Unsafe control action (summary) | Hazards | Constraint(s) |
 |---|---|---|---|---|---|
@@ -241,17 +297,6 @@ A UCA is an interaction between a controller and a controlled process that can l
 | UCA7 | I5 (triage/update) | Relevant advisory/issue is incorrectly dismissed | H7 | C11 |
 | UCA8 | I5 (triage/update) | Update/mitigation is applied too late | H7 | C11 |
 | UCA9 | I5 (triage/update) | Update is applied without adequate regression evaluation | H7 | C11 |
-
-### 4.2 CA-Analysis 
-
-| CA-Analysis Id | Linked UCA(s) | Why unsafe |
-|---|---|---|
-| CAA1 | UCA1 | Enables S-CORE to treat ill-formed JSON as valid, creating acceptance/misinterpretation hazards. |
-| CAA2 | UCA2 | Causes false rejection of valid JSON, impacting availability or correctness at system level. |
-| CAA3 | UCA3 | Introduces semantic mismatch between text and parsed representation, driving incorrect downstream decisions. |
-| CAA4 | UCA4; UCA5 | Abnormal termination/unclear feedback breaks the error-handling control loop and can cause unhandled failures. |
-| CAA5 | UCA6; UCA7; UCA8 | Missed/mis-handled triage leaves known upstream issues present beyond acceptable limits. |
-| CAA6 | UCA9 | Unsafe update practices can introduce regressions that re-enable hazards H1–H6. |
 
 ---
 
