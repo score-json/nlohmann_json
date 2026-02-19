@@ -302,6 +302,29 @@ The RAFIA STPA procedure requires a CA-Analysis table keyed by control actions (
 
 ## 5. Controller (Functional) Constraints
 
+This step records the **Controller (Functional) Constraints (CFC)** derived from the UCA results.
+
+In this analysis, the term “controller constraint” is interpreted at the same abstraction level as the control structure in Section 3:
+
+- For the **functional parsing loop (CL1)**, the constraints that prevent UCAs are largely expressed as **functional constraints on the `nlohmann/json` service behaviour** (C1–C3), because the UCAs in Section 4 are framed as “unsafe outcome of the `accept`/`parse` control action”.
+- For **boundary handling** (error and feedback handling) and **governance**, the constraints are captured as **CSC** items (C6, C11) anchored by existing AOU/JLS statements; they still prevent the associated UCAs, but they are treated as scenario/integration constraints rather than library-functional properties.
+
+### 5.1 CFC constraints derived from UCAs
+
+| Linked UCA(s) | CFC constraint(s) | Why this prevents/avoids the UCA (short) | Links to TSF |
+|---|---|---|---|
+| UCA1; UCA2 | C1 | Prevents incorrect acceptance/rejection outcomes for `accept` within the defined scope. | JLEX-01 |
+| UCA3; UCA4 | C2 | Prevents incorrect parsing outcome or unclear failure signalling for `parse` within the defined scope. | JLEX-02 |
+| UCA3 | C3 | Prevents “silent success” on ill-formed input by requiring clear failure signalling. | JLS-24 |
+
+### 5.2 UCA-to-constraint coverage note (non-CFC constraints)
+
+The following UCAs are prevented/mitigated by constraints that are recorded as **CSC** in Section 2.3 because they are primarily **integration/process constraints**:
+
+| UCA | Constraint(s) | Rationale (short) | TSF anchor |
+|---|---|---|---|
+| UCA5 | C6 | Prevents misinterpretation of feedback/error signalling at the boundary by requiring correct handling of results/exceptions. | AOU-04; AOU-07 |
+| UCA6; UCA7; UCA8; UCA9 | C11 (and C5 as parent SLC) | Prevents governance control-loop failures by requiring triage/review/update workflow and safe dependency state management. | AOU-27; AOU-28; AOU-29; JLS-11 |
 
 
 ## 6. Control Loops and Sequences
