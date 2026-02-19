@@ -329,7 +329,27 @@ The following UCAs are prevented/mitigated by constraints that are recorded as *
 
 ## 6. Control Loops and Sequences
 
+This step makes the control loops explicit and records the expected sequence of interactions for each loop.
 
+### 6.1 Control Loops
+
+| Loop Id | Control Loop Description | Controlled process | Linked SLC(s) | Notes |
+|---|---|---|---|---|
+| CL1 | Functional validation/parsing feedback loop between S-CORE caller and `nlohmann/json` service. | E2 | C4 | CL1 contributes to hazards H1–H6; the explicit SLC link captured here is the availability/resource aspect (C4). Functional correctness constraints are recorded as CFC (C1–C3). |
+| CL2 | Governance feedback loop to maintain a safe dependency state through upstream triage and updates. | E4 | C5 | CL2 exists because upstream drift/advisories are explicitly in scope (H7) and anchored by AOU-27..29. |
+
+### 6.2 CL-Sequences (loop steps)
+
+The CL reference identifiers below match the CL refs already used in Section 3.3 and the Scenarios table.
+
+| CL-Sequence Id | Loop | Step | Interaction Id | Provider process model or state | Provider logic | Expected receiver behaviour |
+|---|---|---:|---|---|---|---|
+| CL1-1 | CL1 | 1 | I1 | E1 model: input text is received and is intended to be JSON in the defined scope. | E1 calls `basic_json::accept` for the input as a discrete API call. | E2 validates syntax and completes the call, producing an accept/reject outcome. |
+| CL1-2 | CL1 | 2 | I2 | E2 state: parsing/validation result for the given input and parameters. | E2 returns the Boolean result as the function return value. | E1 interprets `true/false` correctly and uses it to decide whether to proceed (or to reject the input). |
+| CL1-3 | CL1 | 3 | I3 | E1 model: input is intended to be well-formed JSON for parsing, under the stated AOUs/constraints. | E1 calls `basic_json::parse` for the input as a discrete API call. | E2 parses and either produces a value or signals failure (exception) as defined for the integration context. |
+| CL1-4 | CL1 | 4 | I4 | E2 state: parsed value (success) or error state (failure). | E2 returns a value or throws; this is the feedback channel for the parsing action. | E1 handles return/exception correctly and does not misinterpret ambiguous outcomes (C6). |
+| CL2-1 | CL2 | 1 | I5 | E3 model: belief about current dependency state and whether upstream issues/advisories apply. | E3 performs the periodic triage/update decision process (review and decision). | E4 changes state (updated/mitigated) or remains unchanged with an explicit, reviewed rationale. |
+| CL2-2 | CL2 | 2 | I6 | E4 state: current dependency version and known upstream issue/advisory status. | E4 provides status/impact signals via the available tracking mechanisms used by the governance process. | E3 updates its model of dependency risk and schedules/executes mitigation/update actions as required. |
 
 ## 7. Causal Scenarios
 
