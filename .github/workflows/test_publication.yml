@@ -48,21 +48,44 @@ jobs:
         with:
           python-version: '3.11.2'
 
-      # trudag version 2025.8.5
+      # trudag version v2025.10.22
       - name: Install trudag and dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y graphviz
-          pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@9957f12171cb898d83df5ae708fdba0a38fece2e
+          pip install --require-hashes -r .devcontainer/S-CORE/requirements.txt
+          pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@83b4023d7e2bd2b984db2c81543266ce09a7cbf7
+
+      - name: Prepare scoring DB (test)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if ! command -v sqlite3 >/dev/null 2>&1; then
+            echo "[info] sqlite3 not found -> installing"
+            sudo apt-get update
+            sudo apt-get install -y sqlite3
+          fi
+
+          mkdir -p TSF/data_storage
+          DB="TSF/data_storage/TrustableScoring_test.db"
+          sqlite3 "$DB" "PRAGMA user_version = 1;"
+          echo "TSF_SCORING_DB=$DB" >> "$GITHUB_ENV"
 
       - name: Generate trudag report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TSF_SCORING_DB: ${{ env.TSF_SCORING_DB }}
         run: |
+          set -euo pipefail
+
+          echo "[verify] TSF_SCORING_DB='$TSF_SCORING_DB'"
+          test -n "$TSF_SCORING_DB"
+          test -f "$TSF_SCORING_DB"
           REPO_FULL="${{ github.repository }}"
           REPO_NAME="${REPO_FULL#*/}"
           OWNER_NAME="${REPO_FULL%%/*}" 
           TSF/scripts/generate_report.sh "https://${OWNER_NAME}.github.io/${REPO_NAME}/main"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install tools
         run: |

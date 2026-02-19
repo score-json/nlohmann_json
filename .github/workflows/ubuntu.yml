@@ -346,26 +346,76 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch --all
-          git checkout save_historical_data && git pull || git checkout -b save_historical_data
+          git fetch origin save_historical_data:save_historical_data || true
       
-      - name: Load persistent data
+      - name: Select persistent DB (rotate if near GitHub limit)
+        shell: bash
         run: |
-          if ! git ls-tree --name-only origin/save_historical_data TSF/MemoryEfficientTestResultData.db | grep TSF/MemoryEfficientTestResultData.db; then
-            touch TSF/MemoryEfficientTestResultData.db
-            git add TSF/MemoryEfficientTestResultData.db
-            git commit -m "Create persistent storage"
-            git push origin save_historical_data
+          set -euo pipefail
+
+          # Ensure sqlite3 is available
+          if ! command -v sqlite3 >/dev/null 2>&1; then
+            echo "[info] sqlite3 not found -> installing"
+            sudo apt-get update
+            sudo apt-get install -y sqlite3
           fi
-          # Handle fork PRs by staying on current working branch instead of switching
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # For PRs, we're already on the right commit from actions/checkout
-            # Just get the file from save_historical_data branch
-            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+
+          DB_DIR="TSF/data_storage"
+          DB_PREFIX="MemoryEfficientTestResultData"
+          LIMIT_BYTES=$((90 * 1024 * 1024))  # rotate at 90 MB
+          today=$(date -u +%F)
+
+          echo "[info] Event: ${GITHUB_EVENT_NAME:-}, Ref: ${GITHUB_REF_NAME:-}, SHA: ${GITHUB_SHA:-}"
+          echo "[info] Storage branch: origin/save_historical_data"
+          echo "[info] Rotation threshold: ${LIMIT_BYTES} bytes (~90 MB)"
+          echo "[info] Today (UTC): ${today}"
+
+          # Find newest DB in storage branch (ISO dates sort correctly)
+          candidates="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
+            | grep -E "^${DB_DIR}/${DB_PREFIX}_[0-9]{4}-[0-9]{2}-[0-9]{2}(_[0-9]{3})?\.db$" \
+            | sort || true)"
+
+          latest="$(printf "%s\n" "${candidates}" | tail -n 1 || true)"
+
+          mkdir -p "$DB_DIR"
+
+          if [ -z "${latest}" ]; then
+            new="${DB_DIR}/${DB_PREFIX}_${today}.db"
+            sqlite3 "$new" "PRAGMA user_version = 1;"
+            echo "TSF_PERSIST_DB=${new}" >> "$GITHUB_ENV"
+            echo "[info] No existing DB found -> created initial DB: ${new}"
+            exit 0
+          fi
+
+          echo "[info] Latest DB in storage: ${latest}"
+          git checkout save_historical_data -- "$latest"
+
+          size="$(stat -c%s "$latest")"
+          echo "[info] Latest DB size: ${size} bytes"
+
+          # Rotate if size too large
+          if [ "$size" -ge "$LIMIT_BYTES" ]; then
+            base="${DB_DIR}/${DB_PREFIX}_${today}.db"
+            new="$base"
+
+            if [ -e "$new" ]; then
+              i=1
+              while [ -e "${DB_DIR}/${DB_PREFIX}_${today}_$(printf '%03d' "$i").db" ]; do
+                i=$((i+1))
+              done
+              new="${DB_DIR}/${DB_PREFIX}_${today}_$(printf '%03d' "$i").db"
+            fi
+
+            sqlite3 "$new" "PRAGMA user_version = 1;"
+            latest="$new"
+            echo "[info] Rotation triggered -> new DB: ${latest}"
           else
-            # For push events, switch to the branch and get the file
-            git checkout $branch_name
-            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+            echo "[info] Rotation not needed."
           fi
+
+          echo "TSF_PERSIST_DB=${latest}" >> "$GITHUB_ENV"
+          echo "[info] Using persistent DB: ${latest}"
+
 
       - name: append test data
         run: |
@@ -374,13 +424,19 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -v TSF/MemoryEfficientTestResultData.db)
+          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git add TSF/MemoryEfficientTestResultData.db
+          set -euo pipefail
+
+          if [ -z "${TSF_PERSIST_DB:-}" ]; then
+            echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
+            exit 1
+          fi
+          git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
       
@@ -446,26 +502,75 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch --all
-          git checkout save_historical_data && git pull || git checkout -b save_historical_data
+          git fetch origin save_historical_data:save_historical_data || true
       
-      - name: Load persistent data
+      - name: Select persistent DB (rotate if near GitHub limit)
+        shell: bash
         run: |
-          if ! git ls-tree --name-only origin/save_historical_data TSF/MemoryEfficientTestResultData.db | grep TSF/MemoryEfficientTestResultData.db; then
-            touch TSF/MemoryEfficientTestResultData.db
-            git add TSF/MemoryEfficientTestResultData.db
-            git commit -m "Create persistent storage"
-            git push origin save_historical_data
+          set -euo pipefail
+
+          # Ensure sqlite3 is available
+          if ! command -v sqlite3 >/dev/null 2>&1; then
+            echo "[info] sqlite3 not found -> installing"
+            sudo apt-get update
+            sudo apt-get install -y sqlite3
           fi
-          # Handle fork PRs by staying on current working branch instead of switching
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # For PRs, we're already on the right commit from actions/checkout
-            # Just get the file from save_historical_data branch
-            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+
+          DB_DIR="TSF/data_storage"
+          DB_PREFIX="MemoryEfficientTestResultData"
+          LIMIT_BYTES=$((90 * 1024 * 1024))  # rotate at 90 MB
+          today=$(date -u +%F)
+
+          echo "[info] Event: ${GITHUB_EVENT_NAME:-}, Ref: ${GITHUB_REF_NAME:-}, SHA: ${GITHUB_SHA:-}"
+          echo "[info] Storage branch: origin/save_historical_data"
+          echo "[info] Rotation threshold: ${LIMIT_BYTES} bytes (~90 MB)"
+          echo "[info] Today (UTC): ${today}"
+
+          # Find newest DB in storage branch (ISO dates sort correctly)
+          candidates="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
+            | grep -E "^${DB_DIR}/${DB_PREFIX}_[0-9]{4}-[0-9]{2}-[0-9]{2}(_[0-9]{3})?\.db$" \
+            | sort || true)"
+
+          latest="$(printf "%s\n" "${candidates}" | tail -n 1 || true)"
+
+          mkdir -p "$DB_DIR"
+
+          if [ -z "${latest}" ]; then
+            new="${DB_DIR}/${DB_PREFIX}_${today}.db"
+            sqlite3 "$new" "PRAGMA user_version = 1;"
+            echo "TSF_PERSIST_DB=${new}" >> "$GITHUB_ENV"
+            echo "[info] No existing DB found -> created initial DB: ${new}"
+            exit 0
+          fi
+
+          echo "[info] Latest DB in storage: ${latest}"
+          git checkout save_historical_data -- "$latest"
+
+          size="$(stat -c%s "$latest")"
+          echo "[info] Latest DB size: ${size} bytes"
+
+          # Rotate if size too large
+          if [ "$size" -ge "$LIMIT_BYTES" ]; then
+            base="${DB_DIR}/${DB_PREFIX}_${today}.db"
+            new="$base"
+
+            if [ -e "$new" ]; then
+              i=1
+              while [ -e "${DB_DIR}/${DB_PREFIX}_${today}_$(printf '%03d' "$i").db" ]; do
+                i=$((i+1))
+              done
+              new="${DB_DIR}/${DB_PREFIX}_${today}_$(printf '%03d' "$i").db"
+            fi
+
+            sqlite3 "$new" "PRAGMA user_version = 1;"
+            latest="$new"
+            echo "[info] Rotation triggered -> new DB: ${latest}"
           else
-            # For push events, switch to the branch and get the file
-            git checkout $branch_name
-            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+            echo "[info] Rotation not needed."
           fi
+
+          echo "TSF_PERSIST_DB=${latest}" >> "$GITHUB_ENV"
+          echo "[info] Using persistent DB: ${latest}"
 
       - name: append test data
         run: |
@@ -474,13 +579,19 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -v TSF/MemoryEfficientTestResultData.db)
+          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git add TSF/MemoryEfficientTestResultData.db
+          set -euo pipefail
+
+          if [ -z "${TSF_PERSIST_DB:-}" ]; then
+            echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
+            exit 1
+          fi
+          git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
       
@@ -546,26 +657,75 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch --all
-          git checkout save_historical_data && git pull || git checkout -b save_historical_data
+          git fetch origin save_historical_data:save_historical_data || true
       
-      - name: Load persistent data
+      - name: Select persistent DB (rotate if near GitHub limit)
+        shell: bash
         run: |
-          if ! git ls-tree --name-only origin/save_historical_data TSF/MemoryEfficientTestResultData.db | grep TSF/MemoryEfficientTestResultData.db; then
-            touch TSF/MemoryEfficientTestResultData.db
-            git add TSF/MemoryEfficientTestResultData.db
-            git commit -m "Create persistent storage"
-            git push origin save_historical_data
+          set -euo pipefail
+
+          # Ensure sqlite3 is available
+          if ! command -v sqlite3 >/dev/null 2>&1; then
+            echo "[info] sqlite3 not found -> installing"
+            sudo apt-get update
+            sudo apt-get install -y sqlite3
           fi
-          # Handle fork PRs by staying on current working branch instead of switching
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            # For PRs, we're already on the right commit from actions/checkout
-            # Just get the file from save_historical_data branch
-            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+
+          DB_DIR="TSF/data_storage"
+          DB_PREFIX="MemoryEfficientTestResultData"
+          LIMIT_BYTES=$((90 * 1024 * 1024))  # rotate at 90 MB
+          today=$(date -u +%F)
+
+          echo "[info] Event: ${GITHUB_EVENT_NAME:-}, Ref: ${GITHUB_REF_NAME:-}, SHA: ${GITHUB_SHA:-}"
+          echo "[info] Storage branch: origin/save_historical_data"
+          echo "[info] Rotation threshold: ${LIMIT_BYTES} bytes (~90 MB)"
+          echo "[info] Today (UTC): ${today}"
+
+          # Find newest DB in storage branch (ISO dates sort correctly)
+          candidates="$(git ls-tree -r --name-only origin/save_historical_data "$DB_DIR" \
+            | grep -E "^${DB_DIR}/${DB_PREFIX}_[0-9]{4}-[0-9]{2}-[0-9]{2}(_[0-9]{3})?\.db$" \
+            | sort || true)"
+
+          latest="$(printf "%s\n" "${candidates}" | tail -n 1 || true)"
+
+          mkdir -p "$DB_DIR"
+
+          if [ -z "${latest}" ]; then
+            new="${DB_DIR}/${DB_PREFIX}_${today}.db"
+            sqlite3 "$new" "PRAGMA user_version = 1;"
+            echo "TSF_PERSIST_DB=${new}" >> "$GITHUB_ENV"
+            echo "[info] No existing DB found -> created initial DB: ${new}"
+            exit 0
+          fi
+
+          echo "[info] Latest DB in storage: ${latest}"
+          git checkout save_historical_data -- "$latest"
+
+          size="$(stat -c%s "$latest")"
+          echo "[info] Latest DB size: ${size} bytes"
+
+          # Rotate if size too large
+          if [ "$size" -ge "$LIMIT_BYTES" ]; then
+            base="${DB_DIR}/${DB_PREFIX}_${today}.db"
+            new="$base"
+
+            if [ -e "$new" ]; then
+              i=1
+              while [ -e "${DB_DIR}/${DB_PREFIX}_${today}_$(printf '%03d' "$i").db" ]; do
+                i=$((i+1))
+              done
+              new="${DB_DIR}/${DB_PREFIX}_${today}_$(printf '%03d' "$i").db"
+            fi
+
+            sqlite3 "$new" "PRAGMA user_version = 1;"
+            latest="$new"
+            echo "[info] Rotation triggered -> new DB: ${latest}"
           else
-            # For push events, switch to the branch and get the file
-            git checkout $branch_name
-            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+            echo "[info] Rotation not needed."
           fi
+
+          echo "TSF_PERSIST_DB=${latest}" >> "$GITHUB_ENV"
+          echo "[info] Using persistent DB: ${latest}"
 
       - name: append test data
         run: |
@@ -574,13 +734,20 @@ jobs:
       - name: Checkout data storage branch
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git stash push --include-untracked -- $(git status --porcelain | awk '{print $2}' | grep -v TSF/MemoryEfficientTestResultData.db)
+          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/MemoryEfficientTestResultData.db'
           git checkout save_historical_data
 
       - name: Commit and Push persistent data
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git add TSF/MemoryEfficientTestResultData.db
+          set -euo pipefail
+
+          if [ -z "${TSF_PERSIST_DB:-}" ]; then
+            echo "::error::TSF_PERSIST_DB is not set. Did 'Select persistent DB' run successfully?"
+            exit 1
+          fi
+          
+          git add "$TSF_PERSIST_DB"
           git commit -m "Save test data" || echo "No test data to be saved"
           git push origin save_historical_data
       
