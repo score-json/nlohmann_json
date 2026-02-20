@@ -457,3 +457,29 @@ Qualitative evaluation:
 
 
 ## 10. Review STPA results
+
+This section records the minimal review findings for this analysis iteration, in line with the RAFIA STPA procedure.
+
+### 10.1 Analyst review
+
+- **Step 1 (Scope)**: System context and boundary assumptions are recorded in Section 1 and summarised in the control structure diagram (Section 3.0).
+- **Step 2 (Purpose)**: Losses (L1–L6), Hazards (H1–H7), and constraints (C1–C11) are recorded and linked.
+- **Step 3 (Control structure)**: Elements (E1–E4), interactions (I1–I6), and a diagram are present; control loops are explicitly identified as CL1/CL2.
+- **Step 4 (UCAs)**: UCAs (UCA1–UCA9) are recorded and linked to hazards and constraints; CA-Analysis is summarised as CAA1–CAA6.
+- **Step 5 (Controller constraints)**: CFC constraints are identified (C1–C3) and mapped to UCAs; boundary/governance constraints are captured as CSC (C6, C11) and are explicitly documented as such in Section 5.2.
+- **Step 6 (Loops/sequences)**: CL1/CL2 and their step sequences are recorded in Section 6.
+- **Step 7 (Scenarios)**: A set of representative causal scenarios (CS1.1–CS4.6) is recorded and linked to UCAs/hazards and constraints.
+- **Step 8 (Scenario constraints)**: Constraints addressing each scenario are consolidated and justified in Section 8.
+- **Step 9 (Misbehaviours/Expectations)**: Misbehaviours (M1–M7) are recorded and linked to hazards; risk evaluation is provided.
+
+### 10.2 Independent review records
+
+The RAFIA STPA procedure expects independent review findings to be documented. The following table provides a place to record them.
+
+*A review of both an independent STPA practicioner and independent subject matter expert (SME) still has to be conducted.*
+
+| Review type | Reviewer | Date | Findings (summary) | Resulting actions |
+|---|---|---|---|---|
+| Analyst | Thomas Clausnitzer | 20.02.2026 | All steps of the RAFIA STPA procedure were followerd. Correct traceability between L/H/C/UCA/CS/M is explicit using IDs. | Prepare for independent review |
+| Independent STPA practitioner |  |  |  |  |
+| Independent subject matter expert (SME) |  |  |  |  |
