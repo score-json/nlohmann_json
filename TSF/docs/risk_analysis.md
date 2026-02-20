@@ -386,6 +386,30 @@ CS Type legend (informal, used here as a compact tag):
 
 ## 8. Causal Scenario Constraints
 
+This step records the constraints that prevent, avoid, or mitigate the causal scenarios listed in Section 7.
+
+In this document, the scenario table already links each scenario to one or more constraints (column “Constraint Id”). This section consolidates those links and provides the minimal “why this addresses the scenario” rationale in one place.
+
+### 8.1 Scenario-to-constraint mapping (consolidated)
+
+| Scenario Id | Constraint(s) | Constraint type(s) | Why this addresses the scenario (short) | TSF link(s) |
+|---|---|---|---|---|
+| CS1.1; CS1.2 | C1 | CFC | Prevents incorrect `accept` outcomes, which are the scenario condition leading to UCA1/UCA2 and hazards H1/H2/H5. | JLEX-01 |
+| CS1.3 | C2 | CFC | Prevents inconsistent parse results, addressing the scenario condition leading to UCA3 and hazards H3/H5. | JLEX-02 |
+| CS1.4; CS2.2 | C2; C4 | CFC; SLC | C2 addresses functional correctness/error signalling; C4 addresses the time/resource bounds aspect that makes “throws/hangs under practical constraints” hazardous. | JLEX-02 |
+| CS1.5; CS4.1; CS4.2 | C6 | CSC | Prevents boundary mis-handling of results/exceptions and supports a correct feedback path interpretation. | AOU-04; AOU-07 |
+| CS2.1 | C4 | SLC | Requires explicit budgets/limits or acceptable bounds to prevent resource exhaustion from becoming a system-level availability hazard (H6). |  |
+| CS3.1; CS3.2; CS3.3 | C11 (and C5) | CSC; SLC | Prevents governance-loop failures (missed triage, misclassification, late updates, update without adequate evaluation) that keep known issues present or reintroduce hazards via regressions. | AOU-27; AOU-28; AOU-29; JLS-11 |
+| CS4.3 | C7 | CSC | Prevents encoding precondition violations (UTF-8/RFC 8259) from becoming parsing/handling hazards at the boundary. | AOU-05 |
+| CS4.4 | C8 | CSC | Prevents ambiguity from duplicate object keys by constraining the integration expectation and handling. | AOU-20 |
+| CS4.5 | C9 | CSC | Prevents non-decimal number representations from becoming a parsing/handling hazard in the integration context. | AOU-22 |
+| CS4.6 | C10 | CSC | Prevents boundary corruption/incompleteness from silently affecting parsing outcomes and downstream behaviour. | AOU-23 |
+
+### 8.2 Notes on constraint types
+
+- Constraints C7–C11 are explicitly recorded as **CSC** because they reflect conditions and responsibilities at the **integration boundary and governance loop**, anchored by existing AOU/JLS statements.
+- Constraints C1–C3 are recorded as **CFC** because they define the functional criteria that must be satisfied to avoid the core UCAs around `accept`/`parse` outcomes in CL1.
+
 ## 9. Misbehaviours and Expectations 
 
 ### 9.1 Misbehaviours
