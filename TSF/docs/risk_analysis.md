@@ -162,17 +162,17 @@ In RAFIA/STPA, constraints are “statements that must be true” to avoid a haz
 
 | Constraint Id | Description | Constraint Type | Link to Constraint(s) | Link to Hazard(s) | Links to UCA | Links to CS | Links to TSF |
 |---|---|---|---|---|---|---|---|
-| C1 | `basic_json::accept` correctly distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | CFC |  | H1; H2 | UCA1; UCA2 | CS1.1; CS1.2 | JLEX-01 |
-| C2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly (exception) under the defined scope/integration context. | CFC |  | H2; H3; H4; H5 | UCA3; UCA4; UCA5 | CS1.3; CS1.4; CS1.5; CS2.2 | JLEX-02 |
-| C3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled. | CFC |  | H1; H5 | UCA3 | CS1.1 | JLS-24 |
+| C1 | `basic_json::accept` correctly distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | CFC |  | H1; H2 | UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B | CS1.1; CS1.2 | JLEX-01 |
+| C2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly (exception) under the defined scope/integration context. | CFC |  | H2; H3; H4; H5 | UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3 | CS1.3; CS1.4; CS1.5; CS2.2 | JLEX-02 |
+| C3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled. | CFC |  | H1; H5 | UCA-I3-PR-UCX2 | CS1.1 | JLS-24 |
 | C4 | Parsing/validation completes within acceptable resource/time bounds for the integration context, or the integration specifies explicit budgets/limits. | SLC |  | H4; H6 |  |  |  |
 | C5 | A safe dependency state is maintained such that known relevant upstream issues/CVEs do not remain present beyond acceptable limits. | SLC |  | H7 |  |  | JLS-11; AOU-27; AOU-28; AOU-29 |
-| C6 | All feedback channels at the integration boundary (validation results and exceptions/error signalling) are handled and interpreted correctly. | CSC |  | H4; H5 | UCA5 | CS1.5; CS4.1; CS4.2 | AOU-04; AOU-07 |
+| C6 | All feedback channels at the integration boundary (validation results and exceptions/error signalling) are handled and interpreted correctly. | CSC |  | H4; H5 | UCA-I3-PR-UCX3 | CS1.5; CS4.1; CS4.2 | AOU-04; AOU-07 |
 | C7 | Input encoding satisfies RFC 8259 (UTF-8) or violations are handled explicitly at the boundary. | CSC |  | H4; H5 |  | CS4.3 | AOU-05 |
 | C8 | Object keys are unique when objects are parsed (or ambiguity is mitigated at integration level). | CSC |  | H5 |  | CS4.4 | AOU-20 |
 | C9 | Numbers are base-10 as required by JSON, or non-decimal representations are handled/mitigated. | CSC |  | H4; H5 |  | CS4.5 | AOU-22 |
 | C10 | Data is complete and error-free at the component boundary (or boundary corruption is detected/handled). | CSC |  | H5 |  | CS4.6 | AOU-23 |
-| C11 | Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency. | CSC | C5 | H7 | UCA6; UCA7; UCA8; UCA9 | CS3.1; CS3.2; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
+| C11 | Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency. | CSC | C5 | H7 | UCA-I5-NP-UCX4; UCA-I5-PR-UCX4; UCA-I5-TL-UCX4; UCA-I5-SO-UCX4 | CS3.1; CS3.2; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
 
 ---
 
@@ -191,23 +191,23 @@ This diagram is used both to define the **scope of analysis** (system boundary a
 
 ### 3.1 Elements 
 
-| Element Id | Element | Role | Responsibility (short) |
-|---|---|---|---|
-| E1 | S-CORE JSON caller | Controller | Calls `accept`/`parse`, interprets results, handles errors |
-| E2 | `nlohmann/json` service | Controlled Process | Validates/parses input and returns Boolean/value or throws |
-| E3 | Integration governance process | Controller | Reviews upstream issues/CVEs; decides mitigation/update |
-| E4 | Dependency state | Controlled Process | Current version + known upstream issues/CVEs affecting it |
+| Element Id | Element name | Responsibilities | Roles | Notes |
+|---|---|---|---|---|
+| E1 | S-CORE JSON caller | Calls `accept`/`parse`, interprets results, handles errors | Controller |  |
+| E2 | `nlohmann/json` service | Validates/parses input, returns Boolean/value or throws | Controlled Process |  |
+| E3 | Integration governance process | Reviews upstream issues/CVEs, decides mitigation/update | Controller |  |
+| E4 | Dependency state | Tracks current version, reflects known upstream issues/CVEs affecting it | Controlled Process |  |
 
 ### 3.2 Interactions (control actions and feedback)
 
-| Interaction Id | Kind | Provider → Receiver | Meaning (short) |
-|---|---|---|---|
-| I1 | CA | E1 → E2 | Call `basic_json::accept` on input text |
-| I2 | FB | E2 → E1 | Return Boolean `accept` result |
-| I3 | CA | E1 → E2 | Call `basic_json::parse` on input text |
-| I4 | FB | E2 → E1 | Return parsed value or throw exception |
-| I5 | CA | E3 → E4 | Perform upstream triage/update decision |
-| I6 | FB | E4 → E3 | Provide upstream status/impact signals |
+| Interaction Id | Diagram Label | Interaction description | Type | Provider Id | Receiver Id | Category | Notes |
+|---|---|---|---|---|---|---|---|
+| I1 | I1 | Call `basic_json::accept` on input text | C | E1 | E2 | D |  |
+| I2 | I2 | Return Boolean `accept` result | F | E2 | E1 | D |  |
+| I3 | I3 | Call `basic_json::parse` on input text | C | E1 | E2 | D |  |
+| I4 | I4 | Return parsed value or throw exception | F | E2 | E1 | D |  |
+| I5 | I5 | Perform upstream triage/update decision | C | E3 | E4 | D |  |
+| I6 | I6 | Provide upstream status/impact signals | F | E4 | E3 | D |  |
 
 ### 3.3 Control loops and step references (used by Scenarios)
 
@@ -245,58 +245,58 @@ The RAFIA STPA procedure requires a CA-Analysis table keyed by control actions (
 
 | CA Analysis ID | CA Id | UCA Type | UCA Context | Analysis Result | Hazard(s) | Justification |
 |---|---|---|---|---|---|---|
-| CAA-I1-UCX1-NP | I1 | NP | UCX1 | Safe |  | Not calling `accept` does not introduce a new hazard in this control structure: `parse` remains the authoritative validation/parse step and is analysed separately (I3). |
-| CAA-I1-UCX1-PR-UCA1 | I1 | PR | UCX1 | UCA | H1; H5 | If `accept` returns `true` for ill-formed JSON, S-CORE may treat ill-formed input as valid and proceed (UCA1). |
-| CAA-I1-UCX1-PR-UCA2 | I1 | PR | UCX1 | UCA | H2 | If `accept` returns `false` for well-formed JSON, S-CORE may reject valid input that should be accepted (UCA2). |
-| CAA-I1-UCX1-ML | I1 | ML | UCX1 | N/A |  | Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL. |
-| CAA-I1-UCX1-MM | I1 | MM | UCX1 | N/A |  | Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL. |
-| CAA-I1-UCX1-DS | I1 | DS | UCX1 | N/A |  | Duration (too short) is not meaningful for this discrete call; any timing-related unsafe outcome is captured under TE/TL. |
-| CAA-I1-UCX1-DL | I1 | DL | UCX1 | N/A |  | Duration (too long) is captured as “too late” (TL) for this discrete call outcome at the boundary. |
-| CAA-I1-UCX1-TE | I1 | TE | UCX1 | N/A |  | “Too early” does not apply: `accept` is invoked explicitly by the caller, and there is no earlier unsafe timing context defined for UCX1. |
-| CAA-I1-UCX1-TL | I1 | TL | UCX1 | Safe |  | If `accept` is slow, the system-level effect is availability impact rather than an unsafe acceptance decision; availability for valid input is analysed under I3 timing/termination (UCA4) in UCX3. |
-| CAA-I1-UCX1-SO | I1 | SO | UCX1 | N/A |  | Sequence/order does not apply to this single, synchronous call in isolation. Concurrency/order hazards are analysed at the `parse` boundary where practical impact is observed (UCX3). |
-| CAA-I3-UCX2-NP | I3 | NP | UCX2 | Safe |  | If `parse` is not invoked then no parsed value is produced and this specific hazard mechanism (semantic mismatch) cannot occur. |
-| CAA-I3-UCX2-PR | I3 | PR | UCX2 | UCA | H3; H5 | If `parse` returns a value inconsistent with the input text then the system may act on an incorrect representation (UCA3). |
-| CAA-I3-UCX2-ML | I3 | ML | UCX2 | N/A |  | Magnitude categories do not apply to this abstraction of `parse` as a discrete call; unsafe outcomes are captured under PR/TL. |
-| CAA-I3-UCX2-MM | I3 | MM | UCX2 | N/A |  | Magnitude categories do not apply to this abstraction of `parse` as a discrete call; unsafe outcomes are captured under PR/TL. |
-| CAA-I3-UCX2-DS | I3 | DS | UCX2 | N/A |  | Duration (too short) is not meaningful for this discrete call; incorrect early termination would manifest as an error/exception covered under UCX3. |
-| CAA-I3-UCX2-DL | I3 | DL | UCX2 | N/A |  | Duration (too long) is captured as “too late” (TL) for completion within practical constraints. |
-| CAA-I3-UCX2-TE | I3 | TE | UCX2 | N/A |  | “Too early” does not apply: `parse` is invoked explicitly by the caller in response to system needs. |
-| CAA-I3-UCX2-TL | I3 | TL | UCX2 | Safe |  | Timing issues for `parse` are analysed in UCX3 because the safety-relevant mechanism is failure to complete or signal errors safely, not early/late correctness mismatch. |
-| CAA-I3-UCX2-SO | I3 | SO | UCX2 | N/A |  | Sequence/order is not applicable to a single `parse` call in isolation; ordering-related problems are treated as boundary error-handling/concurrency in UCX3. |
-| CAA-I3-UCX3-NP | I3 | NP | UCX3 | Safe |  | If `parse` is not invoked, the error-signalling and termination issues in UCX3 do not arise for this interaction. |
-| CAA-I3-UCX3-PR | I3 | PR | UCX3 | UCA | H4; H5 | If errors are signalled ambiguously (or in a way the caller can misinterpret), boundary handling can fail (UCA5). |
-| CAA-I3-UCX3-ML | I3 | ML | UCX3 | N/A |  | Magnitude is not meaningful for this discrete call abstraction. |
-| CAA-I3-UCX3-MM | I3 | MM | UCX3 | N/A |  | Magnitude is not meaningful for this discrete call abstraction. |
-| CAA-I3-UCX3-DS | I3 | DS | UCX3 | N/A |  | Duration (too short) is not meaningful for error signalling; premature termination manifests as exception/failed parse which is already covered by PR/Safe outcomes. |
-| CAA-I3-UCX3-DL | I3 | DL | UCX3 | Safe |  | “Too long” is treated as “too late” (TL) for this discrete call in this analysis; the unsafe outcome is recorded under TL (UCA4). |
-| CAA-I3-UCX3-TE | I3 | TE | UCX3 | N/A |  | “Too early” does not apply for this synchronous call abstraction. |
-| CAA-I3-UCX3-TL | I3 | TL | UCX3 | UCA | H2; H4 | “Too late” completion (effectively non-termination or excessive delay) makes the interaction unsafe under practical constraints (UCA4). |
-| CAA-I3-UCX3-SO | I3 | SO | UCX3 | Safe |  | The library call is synchronous; sequence/order issues primarily arise in the caller’s concurrency model. This analysis assumes the caller does not treat results from one thread/context as belonging to another; otherwise additional UCAs and hazards should be added. |
-| CAA-I5-UCX4-NP | I5 | NP | UCX4 | UCA | H7 | Not performing required triage/review can leave known issues unmitigated (UCA6). |
-| CAA-I5-UCX4-PR | I5 | PR | UCX4 | UCA | H7 | Performing triage but dismissing an applicable advisory/issue is unsafe (UCA7). |
-| CAA-I5-UCX4-ML | I5 | ML | UCX4 | N/A |  | Magnitude is not meaningful for this governance decision in this abstraction. |
-| CAA-I5-UCX4-MM | I5 | MM | UCX4 | N/A |  | Magnitude is not meaningful for this governance decision in this abstraction. |
-| CAA-I5-UCX4-DS | I5 | DS | UCX4 | N/A |  | Duration (too short) is not meaningful for this discrete decision abstraction; relevant issues are captured under TL/SO. |
-| CAA-I5-UCX4-DL | I5 | DL | UCX4 | N/A |  | Duration (too long) is captured as timing too late (TL) for decision/mitigation application. |
-| CAA-I5-UCX4-TE | I5 | TE | UCX4 | N/A |  | “Too early” is not applicable in this abstraction. |
-| CAA-I5-UCX4-TL | I5 | TL | UCX4 | UCA | H7 | Applying an update/mitigation too late can leave known issues in place beyond acceptable limits (UCA8). |
-| CAA-I5-UCX4-SO | I5 | SO | UCX4 | UCA | H7 | Applying an update/mitigation without adequate regression evaluation is an out-of-sequence governance action (UCA9). |
+| CAA-I1-NP-UCX1 | I1 | NP | UCX1 | Safe |  | Not calling `accept` does not introduce a new hazard in this control structure: `parse` remains the authoritative validation/parse step and is analysed separately (I3). |
+| CAA-I1-PR-UCX1-A | I1 | PR | UCX1 | UCA | H1; H5 | If `accept` returns `true` for ill-formed JSON, S-CORE may treat ill-formed input as valid and proceed (UCA-I1-PR-UCX1-A). |
+| CAA-I1-PR-UCX1-B | I1 | PR | UCX1 | UCA | H2 | If `accept` returns `false` for well-formed JSON, S-CORE may reject valid input that should be accepted (UCA-I1-PR-UCX1-B). |
+| CAA-I1-ML-UCX1 | I1 | ML | UCX1 | N/A |  | Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL. |
+| CAA-I1-MM-UCX1 | I1 | MM | UCX1 | N/A |  | Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL. |
+| CAA-I1-DS-UCX1 | I1 | DS | UCX1 | N/A |  | Duration (too short) is not meaningful for this discrete call; any timing-related unsafe outcome is captured under TE/TL. |
+| CAA-I1-DL-UCX1 | I1 | DL | UCX1 | N/A |  | Duration (too long) is captured as “too late” (TL) for this discrete call outcome at the boundary. |
+| CAA-I1-TE-UCX1 | I1 | TE | UCX1 | N/A |  | “Too early” does not apply: `accept` is invoked explicitly by the caller, and there is no earlier unsafe timing context defined for UCX1. |
+| CAA-I1-TL-UCX1 | I1 | TL | UCX1 | Safe |  | If `accept` is slow, the system-level effect is availability impact rather than an unsafe acceptance decision; availability for valid input is analysed under I3 timing/termination (UCA-I3-TL-UCX3) in UCX3. |
+| CAA-I1-SO-UCX1 | I1 | SO | UCX1 | N/A |  | Sequence/order does not apply to this single, synchronous call in isolation. Concurrency/order hazards are analysed at the `parse` boundary where practical impact is observed (UCX3). |
+| CAA-I3-NP-UCX2 | I3 | NP | UCX2 | Safe |  | If `parse` is not invoked then no parsed value is produced and this specific hazard mechanism (semantic mismatch) cannot occur. |
+| CAA-I3-PR-UCX2 | I3 | PR | UCX2 | UCA | H3; H5 | If `parse` returns a value inconsistent with the input text then the system may act on an incorrect representation (UCA-I3-PR-UCX2). |
+| CAA-I3-ML-UCX2 | I3 | ML | UCX2 | N/A |  | Magnitude categories do not apply to this abstraction of `parse` as a discrete call; unsafe outcomes are captured under PR/TL. |
+| CAA-I3-MM-UCX2 | I3 | MM | UCX2 | N/A |  | Magnitude categories do not apply to this abstraction of `parse` as a discrete call; unsafe outcomes are captured under PR/TL. |
+| CAA-I3-DS-UCX2 | I3 | DS | UCX2 | N/A |  | Duration (too short) is not meaningful for this discrete call; incorrect early termination would manifest as an error/exception covered under UCX3. |
+| CAA-I3-DL-UCX2 | I3 | DL | UCX2 | N/A |  | Duration (too long) is captured as “too late” (TL) for completion within practical constraints. |
+| CAA-I3-TE-UCX2 | I3 | TE | UCX2 | N/A |  | “Too early” does not apply: `parse` is invoked explicitly by the caller in response to system needs. |
+| CAA-I3-TL-UCX2 | I3 | TL | UCX2 | Safe |  | Timing issues for `parse` are analysed in UCX3 because the safety-relevant mechanism is failure to complete or signal errors safely, not early/late correctness mismatch. |
+| CAA-I3-SO-UCX2 | I3 | SO | UCX2 | N/A |  | Sequence/order is not applicable to a single `parse` call in isolation; ordering-related problems are treated as boundary error-handling/concurrency in UCX3. |
+| CAA-I3-NP-UCX3 | I3 | NP | UCX3 | Safe |  | If `parse` is not invoked, the error-signalling and termination issues in UCX3 do not arise for this interaction. |
+| CAA-I3-PR-UCX3 | I3 | PR | UCX3 | UCA | H4; H5 | If errors are signalled ambiguously (or in a way the caller can misinterpret), boundary handling can fail (UCA-I3-PR-UCX3). |
+| CAA-I3-ML-UCX3 | I3 | ML | UCX3 | N/A |  | Magnitude is not meaningful for this discrete call abstraction. |
+| CAA-I3-MM-UCX3 | I3 | MM | UCX3 | N/A |  | Magnitude is not meaningful for this discrete call abstraction. |
+| CAA-I3-DS-UCX3 | I3 | DS | UCX3 | N/A |  | Duration (too short) is not meaningful for error signalling; premature termination manifests as exception/failed parse which is already covered by PR/Safe outcomes. |
+| CAA-I3-DL-UCX3 | I3 | DL | UCX3 | Safe |  | “Too long” is treated as “too late” (TL) for this discrete call in this analysis; the unsafe outcome is recorded under TL (UCA-I3-TL-UCX3). |
+| CAA-I3-TE-UCX3 | I3 | TE | UCX3 | N/A |  | “Too early” does not apply for this synchronous call abstraction. |
+| CAA-I3-TL-UCX3 | I3 | TL | UCX3 | UCA | H2; H4 | “Too late” completion (effectively non-termination or excessive delay) makes the interaction unsafe under practical constraints (UCA-I3-TL-UCX3). |
+| CAA-I3-SO-UCX3 | I3 | SO | UCX3 | Safe |  | The library call is synchronous; sequence/order issues primarily arise in the caller’s concurrency model. This analysis assumes the caller does not treat results from one thread/context as belonging to another; otherwise additional UCAs and hazards should be added. |
+| CAA-I5-NP-UCX4 | I5 | NP | UCX4 | UCA | H7 | Not performing required triage/review can leave known issues unmitigated (UCA-I5-NP-UCX4). |
+| CAA-I5-PR-UCX4 | I5 | PR | UCX4 | UCA | H7 | Performing triage but dismissing an applicable advisory/issue is unsafe (UCA-I5-PR-UCX4). |
+| CAA-I5-ML-UCX4 | I5 | ML | UCX4 | N/A |  | Magnitude is not meaningful for this governance decision in this abstraction. |
+| CAA-I5-MM-UCX4 | I5 | MM | UCX4 | N/A |  | Magnitude is not meaningful for this governance decision in this abstraction. |
+| CAA-I5-DS-UCX4 | I5 | DS | UCX4 | N/A |  | Duration (too short) is not meaningful for this discrete decision abstraction; relevant issues are captured under TL/SO. |
+| CAA-I5-DL-UCX4 | I5 | DL | UCX4 | N/A |  | Duration (too long) is captured as timing too late (TL) for decision/mitigation application. |
+| CAA-I5-TE-UCX4 | I5 | TE | UCX4 | N/A |  | “Too early” is not applicable in this abstraction. |
+| CAA-I5-TL-UCX4 | I5 | TL | UCX4 | UCA | H7 | Applying an update/mitigation too late can leave known issues in place beyond acceptable limits (UCA-I5-TL-UCX4). |
+| CAA-I5-SO-UCX4 | I5 | SO | UCX4 | UCA | H7 | Applying an update/mitigation without adequate regression evaluation is an out-of-sequence governance action (UCA-I5-SO-UCX4). |
 
 
 ### 4.3 UCAs
 
-| UCA Id | Interaction | Unsafe control action (summary) | Hazards | Constraint(s) |
-|---|---|---|---|---|---|
-| UCA1 | I1 (`accept`) | `accept` returns `true` for ill-formed JSON | H1; H5 | C1 |
-| UCA2 | I1 (`accept`) | `accept` returns `false` for well-formed JSON | H2 | C1 |
-| UCA3 | I3 (`parse`) | `parse` returns a value inconsistent with the JSON text | H3; H5 | C2 |
-| UCA4 | I3 (`parse`)  | `parse` throws or hangs for valid JSON under practical constraints | H2; H4 | C2; C4 |
-| UCA5 | I3 (`parse`)  | Errors are signalled ambiguously, enabling misinterpretation | H4; H5 | C6 |
-| UCA6 | I5 (triage/update) | Required upstream review/triage is not performed | H7 | C11 |
-| UCA7 | I5 (triage/update) | Relevant advisory/issue is incorrectly dismissed | H7 | C11 |
-| UCA8 | I5 (triage/update) | Update/mitigation is applied too late | H7 | C11 |
-| UCA9 | I5 (triage/update) | Update is applied without adequate regression evaluation | H7 | C11 |
+| UCA Id | CA | UCA Type | UCA Context | UCA Definition | UCA Description | Constraint Id |
+|---|---|---|---|---|---|---|
+| UCA-I1-PR-UCX1-A | I1 | PR | UCX1 | `accept` returns `true` for ill-formed JSON when it must reject it. | `accept` returns `true` for ill-formed JSON. | C1 |
+| UCA-I1-PR-UCX1-B | I1 | PR | UCX1 | `accept` returns `false` for well-formed JSON when it must accept it. | `accept` returns `false` for well-formed JSON. | C1 |
+| UCA-I3-PR-UCX2 | I3 | PR | UCX2 | `parse` returns a value inconsistent with the JSON text when it must be semantically equivalent. | `parse` returns a value inconsistent with the JSON text. | C2 |
+| UCA-I3-TL-UCX3 | I3 | TL | UCX3 | `parse` completes too late / does not complete for valid JSON under practical constraints when it must complete in time. | `parse` throws or hangs for valid JSON under practical constraints. | C2; C4 |
+| UCA-I3-PR-UCX3 | I3 | PR | UCX3 | `parse` signals failure ambiguously when it must signal failure clearly and predictably. | Errors are signalled ambiguously, enabling misinterpretation. | C6 |
+| UCA-I5-NP-UCX4 | I5 | NP | UCX4 | Governance does not perform required triage/review when it must be performed. | Required upstream review/triage is not performed. | C11 |
+| UCA-I5-PR-UCX4 | I5 | PR | UCX4 | Governance performs triage but dismisses an applicable issue/advisory when it must be acted upon. | Relevant advisory/issue is incorrectly dismissed. | C11 |
+| UCA-I5-TL-UCX4 | I5 | TL | UCX4 | Governance applies an update/mitigation too late when it must be applied in time. | Update/mitigation is applied too late. | C11 |
+| UCA-I5-SO-UCX4 | I5 | SO | UCX4 | Governance applies an update/mitigation out of sequence (without adequate regression evaluation) when it must be evaluated first. | Update is applied without adequate regression evaluation. | C11 |
 
 ---
 
@@ -311,15 +311,15 @@ In this analysis, the term “controller constraint” is interpreted at the sam
 
 ### 5.1 CFC constraints derived from UCAs
 
-| Linked UCA(s) | CFC constraint(s) | Why this prevents/avoids the UCA (short) | Links to TSF |
-|---|---|---|---|
-| UCA1; UCA2 | C1 | Prevents incorrect acceptance/rejection outcomes for `accept` within the defined scope. | JLEX-01 |
-| UCA3; UCA4 | C2 | Prevents incorrect parsing outcome or unclear failure signalling for `parse` within the defined scope. | JLEX-02 |
-| UCA3 | C3 | Prevents “silent success” on ill-formed input by requiring clear failure signalling. | JLS-24 |
+The CFC constraints derived from UCAs are recorded as Constraints (C1–C3) in Section 2.3 and are linked from the UCA table in Section 4.3:
+
+- `C1` (TSF: `JLEX-01`) constrains `accept` outcomes to prevent `UCA-I1-PR-UCX1-A` and `UCA-I1-PR-UCX1-B`.
+- `C2` (TSF: `JLEX-02`) constrains `parse` outcomes and failure signalling to prevent `UCA-I3-PR-UCX2` and contribute to preventing `UCA-I3-TL-UCX3`.
+- `C3` (TSF: `JLS-24`) prevents silent misleading values for ill-formed JSON (supports preventing `UCA-I3-PR-UCX2`).
 
 ### 5.2 UCA-to-constraint coverage note (non-CFC constraints)
 
-The following UCAs are prevented/mitigated by constraints that are recorded as **CSC** in Section 2.3 because they are primarily **integration/process constraints**:
+The remaining UCAs are prevented/mitigated by constraints that are recorded as **CSC** (and parent SLC) in Section 2.3 because they are primarily **integration/process constraints**:
 
 | UCA | Constraint(s) | Rationale (short) | TSF anchor |
 |---|---|---|---|
@@ -333,10 +333,10 @@ This step makes the control loops explicit and records the expected sequence of 
 
 ### 6.1 Control Loops
 
-| Loop Id | Control Loop Description | Controlled process | Linked SLC(s) | Notes |
-|---|---|---|---|---|
-| CL1 | Functional validation/parsing feedback loop between S-CORE caller and `nlohmann/json` service. | E2 | C4 | CL1 contributes to hazards H1–H6; the explicit SLC link captured here is the availability/resource aspect (C4). Functional correctness constraints are recorded as CFC (C1–C3). |
-| CL2 | Governance feedback loop to maintain a safe dependency state through upstream triage and updates. | E4 | C5 | CL2 exists because upstream drift/advisories are explicitly in scope (H7) and anchored by AOU-27..29. |
+| Loop Id | Control Loop Description | Controlled Process | Linked SLC(s) |
+|---|---|---|---|
+| CL1 | Functional validation/parsing feedback loop between S-CORE caller and `nlohmann/json` service. | E2 | C4 |
+| CL2 | Governance feedback loop to maintain a safe dependency state through upstream triage and updates. | E4 | C5 |
 
 ### 6.2 CL-Sequences (loop steps)
 
@@ -363,24 +363,24 @@ CS Type legend (informal, used here as a compact tag):
 - **CS4-I**: input/environment condition (assumption/constraint violation)
 - **CS4-D**: design/platform interaction (boundary-risk factors)
 
-| Scenario Id | CL ref | CS Type | Scenario (compact) | Analysis result | Links to UCA | Links to hazard(s) | Constraint Id | Notes |
-|---|---|---|---|---|---|---|---|---|
-| CS1.1 | CL1-1 (`accept`) | CS4-P | Service accepts ill-formed JSON | Both | UCA1 | H1; H5 | C1 | Evidence (`TIJ-*`, `WFJ-*`, `NJF-*`, `NPF-*`) reduces likelihood. |
-| CS1.2 | CL1-1 (`accept`) | CS4-P | Service rejects well-formed JSON | Both | UCA2 | H2 | C1 | Positive evidence via `WFJ-*` and `PJD-*`. |
-| CS1.3 | CL1-3 (`parse`) | CS4-P | Parsing produces inconsistent value | Both | UCA3 | H3; H5 | C2 | Coverage via `PJD-*`, `NPF-*`. |
-| CS1.4 | CL1-3 (`parse`) | CS4-P | Parsing throws/hangs under practical constraints | Both | UCA4 | H2; H4 | C2; C4 | Availability is primarily constrained by SLC (C4). |
-| CS1.5 | CL1-4 (result/exception handling) | CS1-M | Integrator mis-handles result/exception channel | Both | UCA5 | H4; H5 | C6 | Integration/process scenario (AOU-driven). |
-| CS2.1 | CL1-3 (`parse`) | CS4-P | Extreme inputs exhaust resources | Hazard |  | H6 | C4 | Tree does not define explicit size/depth limits; integration may need budgets. |
-| CS2.2 | CL1-3 (`parse`) | CS4-D | Platform effects contribute to hangs | Both | UCA4 | H4 | C4 | Boundary-risk; mitigated by CI/analysis evidence. |
-| CS3.1 | CL2-1 (triage/update) | CS1-A | Update introduces regression not caught by evidence | Hazard |  | H1; H2; H3; H4; H5; H6 | C11 | Managed by change control and regression expectations. |
-| CS3.2 | CL2-1 (triage/update) | CS1-M | Relevant issue/advisory is misclassified | Both | UCA7 | H7 | C11 | See `JLS-11` and `TSF/docs/nlohmann_misbehaviours_comments.md`. |
-| CS3.3 | CL2-1 (triage/update) | CS1-A | CI/config drift reduces test effectiveness | Hazard |  | H1; H2; H3; H4; H5; H6 | C11 | Partially covered by `TA-INPUTS`/`TA-SUPPLY_CHAIN`. |
-| CS4.1 | CL1-2 (`accept` feedback) | CS1-M | Caller ignores `accept` feedback | Hazard |  | H1; H5 | C6 | Integration misuse; mitigated by correct feedback handling (C6). |
-| CS4.2 | CL1-4 (result/exception handling) | CS1-A | Exceptions are left uncaught | Hazard |  | H4 | C6 | Integration error-handling constraint. |
-| CS4.3 | CL1-1 (input) | CS4-I | Input encoding violates RFC 8259 assumptions | Hazard |  | H4; H5 | C7 | Anchored by `AOU-05`. |
-| CS4.4 | CL1-3 (`parse`) | CS4-I | Duplicate keys introduce ambiguity | Hazard |  | H5 | C8 | Anchored by `AOU-20`. |
-| CS4.5 | CL1-3 (`parse`) | CS4-I | Non-decimal numbers are introduced | Hazard |  | H4; H5 | C9 | Anchored by `AOU-22`. |
-| CS4.6 | CL1-1 (input) | CS4-I | Data is incomplete/corrupted at boundary | Hazard |  | H5 | C10 | Anchored by `AOU-23`. |
+| Scenario Id | Seq Ref | CS Type | Causal Scenario Prompt | Analysis Result | Causal Scenario Definition | Links to UCA | Links to Hazard(s) | Constraint Id | Notes |
+|---|---|---|---|---|---|---|---|---|---|
+| CS1.1 | CL1-1 | CS4-P | How could `accept` lead to unsafe acceptance? | Both | Service accepts ill-formed JSON. | UCA-I1-PR-UCX1-A | H1; H5 | C1 | Evidence (`TIJ-*`, `WFJ-*`, `NJF-*`, `NPF-*`) reduces likelihood. |
+| CS1.2 | CL1-1 | CS4-P | How could `accept` lead to unsafe rejection? | Both | Service rejects well-formed JSON. | UCA-I1-PR-UCX1-B | H2 | C1 | Positive evidence via `WFJ-*` and `PJD-*`. |
+| CS1.3 | CL1-3 | CS4-P | How could `parse` produce an unsafe value? | Both | Parsing produces an inconsistent value. | UCA-I3-PR-UCX2 | H3; H5 | C2 | Coverage via `PJD-*`, `NPF-*`. |
+| CS1.4 | CL1-3 | CS4-P | How could `parse` become unsafe due to timing/termination? | Both | Parsing throws/hangs under practical constraints. | UCA-I3-TL-UCX3 | H2; H4 | C2; C4 | Availability is primarily constrained by SLC (C4). |
+| CS1.5 | CL1-4 | CS1-M | How could feedback/exception handling become unsafe? | Both | Integrator mis-handles result/exception channel. | UCA-I3-PR-UCX3 | H4; H5 | C6 | Integration/process scenario (AOU-driven). |
+| CS2.1 | CL1-3 | CS4-P | How could extreme input characteristics cause an availability hazard? | Hazard | Extreme inputs exhaust resources. |  | H6 | C4 | Tree does not define explicit size/depth limits; integration may need budgets. |
+| CS2.2 | CL1-3 | CS4-D | How could the platform/boundary contribute to non-termination? | Both | Platform effects contribute to hangs. | UCA-I3-TL-UCX3 | H4 | C4 | Boundary-risk; mitigated by CI/analysis evidence. |
+| CS3.1 | CL2-1 | CS1-A | How could a governance update introduce hazards? | Hazard | Update introduces regression not caught by evidence. |  | H1; H2; H3; H4; H5; H6 | C11 | Managed by change control and regression expectations. |
+| CS3.2 | CL2-1 | CS1-M | How could governance misclassify an applicable issue? | Both | Relevant issue/advisory is misclassified. | UCA-I5-PR-UCX4 | H7 | C11 | See `JLS-11` and `TSF/docs/nlohmann_misbehaviours_comments.md`. |
+| CS3.3 | CL2-1 | CS1-A | How could CI/config drift undermine evidence effectiveness? | Hazard | CI/config drift reduces test effectiveness. |  | H1; H2; H3; H4; H5; H6 | C11 | Partially covered by `TA-INPUTS`/`TA-SUPPLY_CHAIN`. |
+| CS4.1 | CL1-2 | CS1-M | How could the controller misinterpret/ignore feedback? | Hazard | Caller ignores `accept` feedback. |  | H1; H5 | C6 | Integration misuse; mitigated by correct feedback handling (C6). |
+| CS4.2 | CL1-4 | CS1-A | How could exception handling become unsafe? | Hazard | Exceptions are left uncaught. |  | H4 | C6 | Integration error-handling constraint. |
+| CS4.3 | CL1-1 | CS4-I | How could encoding assumptions be violated? | Hazard | Input encoding violates RFC 8259 assumptions. |  | H4; H5 | C7 | Anchored by `AOU-05`. |
+| CS4.4 | CL1-3 | CS4-I | How could input ambiguity affect parsing/handling? | Hazard | Duplicate keys introduce ambiguity. |  | H5 | C8 | Anchored by `AOU-20`. |
+| CS4.5 | CL1-3 | CS4-I | How could non-domain numeric forms affect parsing/handling? | Hazard | Non-decimal numbers are introduced. |  | H4; H5 | C9 | Anchored by `AOU-22`. |
+| CS4.6 | CL1-1 | CS4-I | How could boundary corruption affect parsing outcomes? | Hazard | Data is incomplete/corrupted at boundary. |  | H5 | C10 | Anchored by `AOU-23`. |
 
 ---
 
@@ -390,7 +390,7 @@ This step records the constraints that prevent, avoid, or mitigate the causal sc
 
 In this document, the scenario table already links each scenario to one or more constraints (column “Constraint Id”). This section consolidates those links and provides the minimal “why this addresses the scenario” rationale in one place.
 
-### 8.1 Scenario-to-constraint mapping (consolidated)
+### 8.1 Scenario-to-constraint mapping
 
 | Scenario Id | Constraint(s) | Constraint type(s) | Why this addresses the scenario (short) | TSF link(s) |
 |---|---|---|---|---|
@@ -435,7 +435,7 @@ Relative to `JLEX-01` and `JLEX-02`, the following **Misbehaviours (M\*)** are p
 
 ### 9.2 Expectations
 
-In RAFIA/STPA Step 9, expectations are recorded as explicit, change-controlled statements about the SUA where it is responsible for preventing or mitigating a risk (Hazard, UCA, Causal Scenario) or Misbehaviour. In this repository, the key SUA expectations already exist as TSF Expectations (`JLEX-01`, `JLEX-02`). The table below records the concrete expectations used by this analysis and links them to the STPA artifacts.
+Here, expectations are recorded as explicit, change-controlled statements about the SUA where it is responsible for preventing or mitigating a risk (Hazard, UCA, Causal Scenario) or Misbehaviour. The key SUA expectations already exist as TSF Expectations (`JLEX-01`, `JLEX-02`) and are used as a basis for the STPA exception analysis. The table below records the concrete expectations used by this analysis and links them to the STPA artifacts.
 
 | Expectation Id | Expectation text | Links to constraint(s) | Links to UCA(s) / CS | Links to TSF |
 |---|---|---|---|---|
@@ -447,7 +447,7 @@ In RAFIA/STPA Step 9, expectations are recorded as explicit, change-controlled s
 
 ### 9.3 Assumptions
 
-Assumptions record conditions for integrators and other system elements (outside the SUA) that are responsible for preventing or mitigating a risk or misbehaviour. For this repository, these assumptions are already recorded under change control as TSF Assumptions of Use (`AOU-*`). The table below lists the assumptions that are directly referenced by this analysis and links them to the STPA artifacts.
+Assumptions record conditions for integrators and other system elements (outside the SUA) that are responsible for preventing or mitigating a risk or misbehaviour. Again, assumptions are aready covered under TSF as Assumptions of Use (`AOU-*`). The table below lists the assumptions that are directly referenced by this analysis and links them to the STPA artifacts.
 
 | Assumption (TSF) | Assumption summary (informal) | Links to constraint(s) | Links to CS | Notes |
 |---|---|---|---|---|
@@ -463,19 +463,17 @@ Assumptions record conditions for integrators and other system elements (outside
 
 ---
 
-### 9.4 Risk Evaluation (RAFIA risk analysis)
+### 9.4 Risk Evaluation 
 
-Risk evaluation is not a distinct STPA Step 9 review-criteria output, but it is part of the RAFIA risk analysis objectives (severity/likelihood/exposure-based prioritisation). It is recorded here for completeness of the overall RAFIA risk analysis.
+While not being an essential part of STPA risk analysis, a basic risk evaluation is employed as a distinct step here to follow RAFIA risk analysis objectives. 
 
-In line with RAFIA, risk evaluation considers:
+In this step risk evaluation considers:
 
 - **Severity (S)**: impact in typical S-CORE deployments if the misbehaviour occurs,
 - **Likelihood (L)**: plausibility given the existing test and analysis evidence,
 - **Exposure (E)**: how often S-CORE relies on the behaviour in normal operation.
 
-This repository does not provide quantitative field data, so we use a **qualitative** assessment that is consistent with the TSF evidence model: likelihood is judged primarily from test/analysis coverage, process controls, and (where applicable) CI-based indicators (`JLS-54`, `JLS-55`). The purpose of the table below is therefore *prioritisation and transparency* (“why do we think this is acceptable?”), not a precise probabilistic safety case.
-
-Qualitative evaluation:
+As justification we use a **qualitative** assessment that is consistent with the TSF evidence model: likelihood is judged primarily from test/analysis coverage, process controls, and (where applicable) CI-based indicators (`JLS-54`, `JLS-55`). The purpose of the table below is therefore *prioritisation and transparency* (“why do we think this is acceptable?”), not a precise probabilistic safety case.
 
 | Misbehaviour | S | L | E | Risk Category | Justification |
 |--------------|---|---|---|---------------|--------------|
@@ -497,7 +495,7 @@ This section records the minimal review findings for this analysis iteration, in
 - **Step 1 (Scope)**: System context and boundary assumptions are recorded in Section 1 and summarised in the control structure diagram (Section 3.0).
 - **Step 2 (Purpose)**: Losses (L1–L6), Hazards (H1–H7), and constraints (C1–C11) are recorded and linked.
 - **Step 3 (Control structure)**: Elements (E1–E4), interactions (I1–I6), and a diagram are present; control loops are explicitly identified as CL1/CL2.
-- **Step 4 (UCAs)**: UCAs (UCA1–UCA9) are recorded and linked to hazards and constraints; CA-Analysis is summarised as CAA1–CAA6.
+- **Step 4 (UCAs)**: UCAs are recorded and linked to hazards and constraints, using combined IDs (e.g. `UCA-I1-PR-UCX1-A`, `UCA-I3-TL-UCX3`, `UCA-I5-SO-UCX4`). CA-Analysis results are recorded in Section 4.2.
 - **Step 5 (Controller constraints)**: CFC constraints are identified (C1–C3) and mapped to UCAs; boundary/governance constraints are captured as CSC (C6, C11) and are explicitly documented as such in Section 5.2.
 - **Step 6 (Loops/sequences)**: CL1/CL2 and their step sequences are recorded in Section 6.
 - **Step 7 (Scenarios)**: A set of representative causal scenarios (CS1.1–CS4.6) is recorded and linked to UCAs/hazards and constraints.
@@ -512,6 +510,6 @@ The RAFIA STPA procedure expects independent review findings to be documented. T
 
 | Review type | Reviewer | Date | Findings (summary) | Resulting actions |
 |---|---|---|---|---|
-| Analyst | Thomas Clausnitzer | 20.02.2026 | All steps of the RAFIA STPA procedure were followerd. Correct traceability between L/H/C/UCA/CS/M is explicit using IDs. | Prepare for independent review |
+| Analyst | Thomas Clausnitzer | 20.02.2026 | All steps of the RAFIA STPA procedure were followed. Correct traceability between L/H/C/UCA/CS/M is explicit using IDs. | Prepare for independent review |
 | Independent STPA practitioner |  |  |  |  |
 | Independent subject matter expert (SME) |  |  |  |  |
