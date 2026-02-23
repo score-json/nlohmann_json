@@ -421,19 +421,51 @@ In TSF terms, misbehaviours are **anything that can cause a deviation from Expec
 
 Relative to `JLEX-01` and `JLEX-02`, the following **Misbehaviours (M\*)** are prohibited:
 
-| Misbehaviour Id | Misbehaviour description | Link to hazard(s) |
-|---|---|---|
-| M1  | Library accepts syntactically ill-formed JSON as well-formed (violation of JLEX-01). | H1; H5 |
-| M2  | Library rejects syntactically well-formed JSON that should be accepted (violation of JLEX-01). | H2 |
-| M3  | Library produces a parsed `basic_json` value that is not semantically equivalent to the input JSON text (violation of JLEX-02). | H3; H5 |
-| M4  | Library hangs or throws for RFC 8259-compliant JSON under practical integration conditions (violation of JLEX-01/02 intent). | H2; H4 |
-| M5  | Library behaviour contradicts any specific evidence statement in `WFJ-*`, `TIJ-*`, `NJF-*`, `NPF-*`, or `PJD-*`. | H1; H2; H3; H4; H5 |
-| M6  | Integrator/process misbehaviour: upstream bugs/security advisories are not reviewed and known vulnerabilities are not triaged/handled. | H7 |
-| M7  | Integrator/environment misbehaviour: untrusted inputs are processed without adequate resource budgets/limits appropriate for the deployment context, enabling resource-exhaustion/DoS. | H6 |
+| Misbehaviour Id | Misbehaviour description | Link to hazard(s) | Links to UCA(s) | Links to CS |
+|---|---|---|---|---|
+| M1  | Library accepts syntactically ill-formed JSON as well-formed (violation of JLEX-01). | H1; H5 | UCA1 | CS1.1 |
+| M2  | Library rejects syntactically well-formed JSON that should be accepted (violation of JLEX-01). | H2 | UCA2 | CS1.2 |
+| M3  | Library produces a parsed `basic_json` value that is not semantically equivalent to the input JSON text (violation of JLEX-02). | H3; H5 | UCA3 | CS1.3 |
+| M4  | Library hangs or throws for RFC 8259-compliant JSON under practical integration conditions (violation of JLEX-01/02 intent). | H2; H4 | UCA4 | CS1.4; CS2.2 |
+| M5  | Library behaviour contradicts any specific evidence statement in `WFJ-*`, `TIJ-*`, `NJF-*`, `NPF-*`, or `PJD-*`. | H1; H2; H3; H4; H5 | UCA1; UCA2; UCA3; UCA4; UCA5 | CS1.1; CS1.2; CS1.3; CS1.4; CS1.5 |
+| M6  | Integrator/process misbehaviour: upstream bugs/security advisories are not reviewed and known vulnerabilities are not triaged/handled. | H7 | UCA6; UCA7; UCA8; UCA9 | CS3.1; CS3.2; CS3.3 |
+| M7  | Integrator/environment misbehaviour: untrusted inputs are processed without adequate resource budgets/limits appropriate for the deployment context, enabling resource-exhaustion/DoS. | H6 | N/A (Hazard-only) | CS2.1 |
 
 ---
 
-### 9.2 Risk Evaluation
+### 9.2 Expectations
+
+In RAFIA/STPA Step 9, expectations are recorded as explicit, change-controlled statements about the SUA where it is responsible for preventing or mitigating a risk (Hazard, UCA, Causal Scenario) or Misbehaviour. In this repository, the key SUA expectations already exist as TSF Expectations (`JLEX-01`, `JLEX-02`). The table below records the concrete expectations used by this analysis and links them to the STPA artifacts.
+
+| Expectation Id | Expectation text | Links to constraint(s) | Links to UCA(s) / CS | Links to TSF |
+|---|---|---|---|---|
+| EXP1 | `basic_json::accept` distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | C1 | UCA1; UCA2 / CS1.1; CS1.2 | JLEX-01 |
+| EXP2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly under the defined scope/integration context (e.g., via exceptions when enabled, or via a discarded value / non-exception failure signalling mode when exceptions are disabled). | C2 | UCA3; UCA4; UCA5 / CS1.3; CS1.4; CS1.5; CS2.2 | JLEX-02; JLS-24 |
+| EXP3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled under the defined integration context. | C3 | UCA3 / CS1.1 | JLS-24 |
+
+---
+
+### 9.3 Assumptions
+
+Assumptions record conditions for integrators and other system elements (outside the SUA) that are responsible for preventing or mitigating a risk or misbehaviour. For this repository, these assumptions are already recorded under change control as TSF Assumptions of Use (`AOU-*`). The table below lists the assumptions that are directly referenced by this analysis and links them to the STPA artifacts.
+
+| Assumption (TSF) | Assumption summary (informal) | Links to constraint(s) | Links to CS | Notes |
+|---|---|---|---|---|
+| AOU-04 | Exceptions are properly handled or turned off by the integrator when using the library. | C6 | CS1.5; CS4.2 | Applies to exception-based failure signalling in CL1. |
+| AOU-07 | Expected parsing errors for invalid JSON (default parameters) are detected and handled properly by the integrator. | C6 | CS1.5; CS4.1; CS4.2 | Prevents misinterpretation/ignoring of failure outcomes. |
+| AOU-05 | Input is UTF-8 (RFC 8259), or violations are handled explicitly at the boundary. | C7 | CS4.3 | Boundary crossing assumption for input encoding. |
+| AOU-20 | Object keys are unique whenever an object is parsed (or ambiguity is mitigated). | C8 | CS4.4 | Integration responsibility for ambiguous inputs. |
+| AOU-22 | Numbers are base-10 as required by JSON (or non-decimal forms are handled/mitigated). | C9 | CS4.5 | Integration responsibility for non-domain inputs. |
+| AOU-23 | Data is complete and error-free whenever transmitted to the component (or corruption is detected/handled). | C10 | CS4.6 | Boundary assumption about transport/storage integrity. |
+| AOU-27 | Release management/update concepts in `TSF/README.md` are followed when changes are done. | C11 | CS3.1; CS3.3 | Governance loop assumption. |
+| AOU-28 | Known open bugs in upstream `nlohmann/json` are regularly reviewed for impact. | C11 | CS3.2 | Governance loop assumption. |
+| AOU-29 | The GitHub security tab is checked regularly and outstanding CVEs are analysed and fixed/dismissed. | C11 | CS3.2 | Governance loop assumption. |
+
+---
+
+### 9.4 Risk Evaluation (RAFIA risk analysis)
+
+Risk evaluation is not a distinct STPA Step 9 review-criteria output, but it is part of the RAFIA risk analysis objectives (severity/likelihood/exposure-based prioritisation). It is recorded here for completeness of the overall RAFIA risk analysis.
 
 In line with RAFIA, risk evaluation considers:
 
@@ -447,13 +479,13 @@ Qualitative evaluation:
 
 | Misbehaviour | S | L | E | Risk Category | Justification |
 |--------------|---|---|---|---------------|--------------|
-| M1 | High | Very low | High | Medium–High | Would fundamentally break input validation; extensive WFJ/TIJ/NJF/NPF testing mitigates likelihood. |
-| M2 | Medium | Very low | Medium | Low–Medium | Mainly availability/robustness impact; no such issues observed in the tested domain. |
-| M3 | High | Very low | Medium–High | Medium–High | Data corruption is serious; however, PJD/NPF evidence and regression tests reduce likelihood. |
-| M4 | Medium | Very low | Medium–High | Medium | Hangs/crashes can be disruptive; CI robustness evidence reduces likelihood, and AOUs require explicit exception handling where exceptions are expected. |
+| M1 | High | Very low | High | Medium–High | Would fundamentally break input validation. Extensive WFJ/TIJ/NJF/NPF testing mitigates likelihood. |
+| M2 | Medium | Very low | Medium | Low–Medium | Mainly availability/robustness impact. No such issues observed in the tested domain. |
+| M3 | High | Very low | Medium–High | Medium–High | Data corruption is serious. However, PJD/NPF evidence and regression tests reduce likelihood. |
+| M4 | Medium | Very low | Medium–High | Medium | Hangs/crashes can be disruptive. CI robustness evidence reduces likelihood, and AOUs require explicit exception handling where exceptions are expected. |
 | M5 | Varies | Very low | Varies | Low–Medium | Any contradiction to specific statements is expected to be detected by the mapped test evidence (CI test runs). CI gates (e.g. coverage/PR-count) help prevent coverage and process degradation, but they are not themselves semantic checks. |
-| M6 | High | Low–Medium | Medium–High | Medium–High | Severity is high if a known issue is exploitable; likelihood depends on the effectiveness of the review/triage cadence required by `AOU-28`/`AOU-29`. |
-| M7 | Medium–High | Medium | Medium–High | Medium–High | Resource-exhaustion is a common parser threat on untrusted inputs; this TSF tree does not specify concrete resource budgets, so deployment context must define them if availability/deadlines are critical. |
+| M6 | High | Low–Medium | Medium–High | Medium–High | Severity is high if a known issue is exploitable. Likelihood depends on the effectiveness of the review/triage cadence required by `AOU-28`/`AOU-29`. |
+| M7 | Medium–High | Medium | Medium–High | Medium–High | Resource-exhaustion is a common parser threat on untrusted inputs. This TSF tree does not specify concrete resource budgets, so deployment context must define them if availability/deadlines are critical. |
 
 
 ## 10. Review STPA results
@@ -470,7 +502,7 @@ This section records the minimal review findings for this analysis iteration, in
 - **Step 6 (Loops/sequences)**: CL1/CL2 and their step sequences are recorded in Section 6.
 - **Step 7 (Scenarios)**: A set of representative causal scenarios (CS1.1–CS4.6) is recorded and linked to UCAs/hazards and constraints.
 - **Step 8 (Scenario constraints)**: Constraints addressing each scenario are consolidated and justified in Section 8.
-- **Step 9 (Misbehaviours/Expectations)**: Misbehaviours (M1–M7) are recorded and linked to hazards; risk evaluation is provided.
+- **Step 9 (Misbehaviours/Expectations)**: Misbehaviours (M1–M7) are recorded and linked to hazards, UCAs, and scenarios; expectations and assumptions are recorded and linked to constraints and scenarios. A qualitative risk evaluation is provided as part of the overall RAFIA risk analysis.
 
 ### 10.2 Independent review records
 
