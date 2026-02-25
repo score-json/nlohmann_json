@@ -173,6 +173,11 @@ In RAFIA/STPA, constraints are “statements that must be true” to avoid a haz
 | C9 | Numbers are base-10 as required by JSON, or non-decimal representations are handled/mitigated. | CSC |  | H4; H5 |  | CS4.5 | AOU-22 |
 | C10 | Data is complete and error-free at the component boundary (or boundary corruption is detected/handled). | CSC |  | H5 |  | CS4.6 | AOU-23 |
 | C11 | Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency. | CSC | C5 | H7 | UCA-I5-NP-UCX4; UCA-I5-PR-UCX4; UCA-I5-TL-UCX4; UCA-I5-SO-UCX4 | CS3.1; CS3.2; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
+| C12 | `basic_json::parse` provides an unambiguous and integration-consistent failure indication for invalid JSON in the defined scope. | CFC | C6 | H4; H5 | UCA-I3-PR-UCX3 | CS1.5; CS4.1; CS4.2 | JLEX-02; JLS-24 |
+| C13 | Integration governance performs required upstream triage/review for the deployed dependency state. | CFC | C11 | H7 | UCA-I5-NP-UCX4 | CS3.1; CS3.2; CS3.3 | AOU-28; AOU-29; JLS-11 |
+| C14 | Integration governance correctly classifies applicability/impact of upstream advisories/issues for the deployed dependency state. | CFC | C11 | H7 | UCA-I5-PR-UCX4 | CS3.2 | AOU-28; AOU-29; JLS-11 |
+| C15 | Integration governance applies required mitigations/updates in time such that known relevant issues do not remain present beyond acceptable limits. | CFC | C11 | H7 | UCA-I5-TL-UCX4 | CS3.1; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
+| C16 | Integration governance completes required regression evaluation before applying updates/mitigations. | CFC | C11 | H7 | UCA-I5-SO-UCX4 | CS3.1 | AOU-27; JLS-11 |
 
 ---
 
@@ -292,11 +297,11 @@ The RAFIA STPA procedure requires a CA-Analysis table keyed by control actions (
 | UCA-I1-PR-UCX1-B | I1 | PR | UCX1 | `accept` returns `false` for well-formed JSON when it must accept it. | `accept` returns `false` for well-formed JSON. | C1 |
 | UCA-I3-PR-UCX2 | I3 | PR | UCX2 | `parse` returns a value inconsistent with the JSON text when it must be semantically equivalent. | `parse` returns a value inconsistent with the JSON text. | C2 |
 | UCA-I3-TL-UCX3 | I3 | TL | UCX3 | `parse` completes too late / does not complete for valid JSON under practical constraints when it must complete in time. | `parse` throws or hangs for valid JSON under practical constraints. | C2; C4 |
-| UCA-I3-PR-UCX3 | I3 | PR | UCX3 | `parse` signals failure ambiguously when it must signal failure clearly and predictably. | Errors are signalled ambiguously, enabling misinterpretation. | C6 |
-| UCA-I5-NP-UCX4 | I5 | NP | UCX4 | Governance does not perform required triage/review when it must be performed. | Required upstream review/triage is not performed. | C11 |
-| UCA-I5-PR-UCX4 | I5 | PR | UCX4 | Governance performs triage but dismisses an applicable issue/advisory when it must be acted upon. | Relevant advisory/issue is incorrectly dismissed. | C11 |
-| UCA-I5-TL-UCX4 | I5 | TL | UCX4 | Governance applies an update/mitigation too late when it must be applied in time. | Update/mitigation is applied too late. | C11 |
-| UCA-I5-SO-UCX4 | I5 | SO | UCX4 | Governance applies an update/mitigation out of sequence (without adequate regression evaluation) when it must be evaluated first. | Update is applied without adequate regression evaluation. | C11 |
+| UCA-I3-PR-UCX3 | I3 | PR | UCX3 | `parse` signals failure ambiguously when it must signal failure clearly and predictably. | Errors are signalled ambiguously, enabling misinterpretation. | C12; C6 |
+| UCA-I5-NP-UCX4 | I5 | NP | UCX4 | Governance does not perform required triage/review when it must be performed. | Required upstream review/triage is not performed. | C13 |
+| UCA-I5-PR-UCX4 | I5 | PR | UCX4 | Governance performs triage but dismisses an applicable issue/advisory when it must be acted upon. | Relevant advisory/issue is incorrectly dismissed. | C14 |
+| UCA-I5-TL-UCX4 | I5 | TL | UCX4 | Governance applies an update/mitigation too late when it must be applied in time. | Update/mitigation is applied too late. | C15 |
+| UCA-I5-SO-UCX4 | I5 | SO | UCX4 | Governance applies an update/mitigation out of sequence (without adequate regression evaluation) when it must be evaluated first. | Update is applied without adequate regression evaluation. | C16 |
 
 ---
 
@@ -306,25 +311,25 @@ This step records the **Controller (Functional) Constraints (CFC)** derived from
 
 In this analysis, the term “controller constraint” is interpreted at the same abstraction level as the control structure in Section 3:
 
-- For the **functional parsing loop (CL1)**, the constraints that prevent UCAs are largely expressed as **functional constraints on the `nlohmann/json` service behaviour** (C1–C3), because the UCAs in Section 4 are framed as “unsafe outcome of the `accept`/`parse` control action”.
-- For **boundary handling** (error and feedback handling) and **governance**, the constraints are captured as **CSC** items (C6, C11) anchored by existing AOU/JLS statements; they still prevent the associated UCAs, but they are treated as scenario/integration constraints rather than library-functional properties.
+- For the **functional parsing loop (CL1)**, the constraints that prevent UCAs are largely expressed as **functional constraints on the `nlohmann/json` service behaviour** (C1–C3, C12), because the UCAs in Section 4 are framed as “unsafe outcome of the `accept`/`parse` control action”.
+- For **boundary handling** (error and feedback handling) and **governance**, the constraints include **CSC** items (C6, C11) anchored by existing AOU/JLS statements, and **CFC** items (C13–C16) that constrain the governance control action (I5).
 
 ### 5.1 CFC constraints derived from UCAs
 
-The CFC constraints derived from UCAs are recorded as Constraints (C1–C3) in Section 2.3 and are linked from the UCA table in Section 4.3:
+The CFC constraints derived from UCAs are recorded as Constraints in Section 2.3 and are linked from the UCA table in Section 4.3:
 
 - `C1` (TSF: `JLEX-01`) constrains `accept` outcomes to prevent `UCA-I1-PR-UCX1-A` and `UCA-I1-PR-UCX1-B`.
 - `C2` (TSF: `JLEX-02`) constrains `parse` outcomes and failure signalling to prevent `UCA-I3-PR-UCX2` and contribute to preventing `UCA-I3-TL-UCX3`.
 - `C3` (TSF: `JLS-24`) prevents silent misleading values for ill-formed JSON (supports preventing `UCA-I3-PR-UCX2`).
+- `C12` (TSF: `JLEX-02`; `JLS-24`) constrains `parse` failure signalling to prevent `UCA-I3-PR-UCX3`.
+- `C13`–`C16` constrain the governance control action (I5) to prevent `UCA-I5-*` outcomes in UCX4.
 
 ### 5.2 UCA-to-constraint coverage note (non-CFC constraints)
 
-The remaining UCAs are prevented/mitigated by constraints that are recorded as **CSC** (and parent SLC) in Section 2.3 because they are primarily **integration/process constraints**:
+In addition to the CFC constraints above, this analysis records constraints that are primarily **integration/process constraints** as **CSC** (and parent SLC) in Section 2.3:
 
-| UCA | Constraint(s) | Rationale (short) | TSF anchor |
-|---|---|---|---|
-| UCA5 | C6 | Prevents misinterpretation of feedback/error signalling at the boundary by requiring correct handling of results/exceptions. | AOU-04; AOU-07 |
-| UCA6; UCA7; UCA8; UCA9 | C11 (and C5 as parent SLC) | Prevents governance control-loop failures by requiring triage/review/update workflow and safe dependency state management. | AOU-27; AOU-28; AOU-29; JLS-11 |
+- `C6` (CSC, TSF: `AOU-04`; `AOU-07`) constrains boundary handling of results/exceptions and complements `C12` for `UCA-I3-PR-UCX3`.
+- `C11` (CSC, parent SLC: `C5`, TSF: `AOU-27`; `AOU-28`; `AOU-29`; `JLS-11`) constrains governance workflow and complements `C13`–`C16` for `UCA-I5-*`.
 
 
 ## 6. Control Loops and Sequences
@@ -408,7 +413,7 @@ In this document, the scenario table already links each scenario to one or more 
 ### 8.2 Notes on constraint types
 
 - Constraints C7–C11 are explicitly recorded as **CSC** because they reflect conditions and responsibilities at the **integration boundary and governance loop**, anchored by existing AOU/JLS statements.
-- Constraints C1–C3 are recorded as **CFC** because they define the functional criteria that must be satisfied to avoid the core UCAs around `accept`/`parse` outcomes in CL1.
+- Constraints C1–C3 and C12–C16 are recorded as **CFC** because they define functional criteria that must be satisfied to avoid the UCAs around `accept`/`parse` outcomes (CL1) and governance outcomes (CL2).
 
 ## 9. Misbehaviours and Expectations 
 
@@ -496,7 +501,7 @@ This section records the minimal review findings for this analysis iteration, in
 - **Step 2 (Purpose)**: Losses (L1–L6), Hazards (H1–H7), and constraints (C1–C11) are recorded and linked.
 - **Step 3 (Control structure)**: Elements (E1–E4), interactions (I1–I6), and a diagram are present; control loops are explicitly identified as CL1/CL2.
 - **Step 4 (UCAs)**: UCAs are recorded and linked to hazards and constraints, using combined IDs (e.g. `UCA-I1-PR-UCX1-A`, `UCA-I3-TL-UCX3`, `UCA-I5-SO-UCX4`). CA-Analysis results are recorded in Section 4.2.
-- **Step 5 (Controller constraints)**: CFC constraints are identified (C1–C3) and mapped to UCAs; boundary/governance constraints are captured as CSC (C6, C11) and are explicitly documented as such in Section 5.2.
+- **Step 5 (Controller constraints)**: CFC constraints are identified (C1–C3, C12–C16) and mapped to UCAs; integration/governance constraints are also captured as CSC (C6, C11).
 - **Step 6 (Loops/sequences)**: CL1/CL2 and their step sequences are recorded in Section 6.
 - **Step 7 (Scenarios)**: A set of representative causal scenarios (CS1.1–CS4.6) is recorded and linked to UCAs/hazards and constraints.
 - **Step 8 (Scenario constraints)**: Constraints addressing each scenario are consolidated and justified in Section 8.
