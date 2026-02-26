@@ -162,22 +162,22 @@ In RAFIA/STPA, constraints are “statements that must be true” to avoid a haz
 
 | Constraint Id | Description | Constraint Type | Link to Constraint(s) | Link to Hazard(s) | Links to UCA | Links to CS | Links to TSF |
 |---|---|---|---|---|---|---|---|
-| C1 | `basic_json::accept` correctly distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | CFC |  | H1; H2 | UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B | CS1.1; CS1.2 | JLEX-01 |
-| C2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly (exception) under the defined scope/integration context. | CFC |  | H2; H3; H4; H5 | UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3 | CS1.3; CS1.4; CS1.5; CS2.2 | JLEX-02 |
-| C3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled. | CFC |  | H1; H5 | UCA-I3-PR-UCX2 | CS1.1 | JLS-24 |
-| C4 | Parsing/validation completes within acceptable resource/time bounds for the integration context, or the integration specifies explicit budgets/limits. | SLC |  | H4; H6 |  |  |  |
+| C1 | `basic_json::accept` correctly distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | CFC |  | H1; H2 | UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B | CL1-1-CS4-P; CL1-1-CS4-O | JLEX-01 |
+| C2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly (exception) under the defined scope/integration context. | CFC |  | H2; H3; H4; H5 | UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3 | CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D | JLEX-02 |
+| C3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled. | CFC |  | H1; H5 | UCA-I3-PR-UCX2 | CL1-3-CS4-P | JLS-24 |
+| C4 | Parsing/validation completes within acceptable resource/time bounds for the integration context, or the integration specifies explicit budgets/limits. | SLC |  | H4; H6 |  | CL1-3-CS3-A; CL1-3-CS4-I; CL1-3-CS4-D | AOU-31 |
 | C5 | A safe dependency state is maintained such that known relevant upstream issues/CVEs do not remain present beyond acceptable limits. | SLC |  | H7 |  |  | JLS-11; AOU-27; AOU-28; AOU-29 |
-| C6 | All feedback channels at the integration boundary (validation results and exceptions/error signalling) are handled and interpreted correctly. | CSC |  | H4; H5 | UCA-I3-PR-UCX3 | CS1.5; CS4.1; CS4.2 | AOU-04; AOU-07 |
-| C7 | Input encoding satisfies RFC 8259 (UTF-8) or violations are handled explicitly at the boundary. | CSC |  | H4; H5 |  | CS4.3 | AOU-05 |
-| C8 | Object keys are unique when objects are parsed (or ambiguity is mitigated at integration level). | CSC |  | H5 |  | CS4.4 | AOU-20 |
-| C9 | Numbers are base-10 as required by JSON, or non-decimal representations are handled/mitigated. | CSC |  | H4; H5 |  | CS4.5 | AOU-22 |
-| C10 | Data is complete and error-free at the component boundary (or boundary corruption is detected/handled). | CSC |  | H5 |  | CS4.6 | AOU-23 |
-| C11 | Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency. | CSC | C5 | H7 | UCA-I5-NP-UCX4; UCA-I5-PR-UCX4; UCA-I5-TL-UCX4; UCA-I5-SO-UCX4 | CS3.1; CS3.2; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
-| C12 | `basic_json::parse` provides an unambiguous and integration-consistent failure indication for invalid JSON in the defined scope. | CFC | C6 | H4; H5 | UCA-I3-PR-UCX3 | CS1.5; CS4.1; CS4.2 | JLEX-02; JLS-24 |
-| C13 | Integration governance performs required upstream triage/review for the deployed dependency state. | CFC | C11 | H7 | UCA-I5-NP-UCX4 | CS3.1; CS3.2; CS3.3 | AOU-28; AOU-29; JLS-11 |
-| C14 | Integration governance correctly classifies applicability/impact of upstream advisories/issues for the deployed dependency state. | CFC | C11 | H7 | UCA-I5-PR-UCX4 | CS3.2 | AOU-28; AOU-29; JLS-11 |
-| C15 | Integration governance applies required mitigations/updates in time such that known relevant issues do not remain present beyond acceptable limits. | CFC | C11 | H7 | UCA-I5-TL-UCX4 | CS3.1; CS3.3 | AOU-27; AOU-28; AOU-29; JLS-11 |
-| C16 | Integration governance completes required regression evaluation before applying updates/mitigations. | CFC | C11 | H7 | UCA-I5-SO-UCX4 | CS3.1 | AOU-27; JLS-11 |
+| C6 | All feedback channels at the integration boundary (validation results and exceptions/error signalling) are handled and interpreted correctly. | CSC |  | H4; H5 | UCA-I3-PR-UCX3 | CL1-2-CS2-F; CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P | AOU-04; AOU-07 |
+| C7 | Input encoding satisfies RFC 8259 (UTF-8) or violations are handled explicitly at the boundary. | CSC |  | H4; H5 |  | CL1-1-CS4-I | AOU-05 |
+| C8 | Object keys are unique when objects are parsed (or ambiguity is mitigated at integration level). | CSC |  | H5 |  | CL1-3-CS4-I | AOU-20 |
+| C9 | Numbers are base-10 as required by JSON, or non-decimal representations are handled/mitigated. | CSC |  | H4; H5 |  | CL1-3-CS4-I | AOU-22 |
+| C10 | Data is complete and error-free at the component boundary (or boundary corruption is detected/handled). | CSC |  | H5 |  | CL1-1-CS4-D | AOU-23 |
+| C11 | Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency. | CSC | C5 | H7 | UCA-I5-NP-UCX4; UCA-I5-PR-UCX4; UCA-I5-TL-UCX4; UCA-I5-SO-UCX4 | CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P | AOU-27; AOU-28; AOU-29; JLS-11 |
+| C12 | `basic_json::parse` provides an unambiguous and integration-consistent failure indication for invalid JSON in the defined scope. | CFC | C6 | H4; H5 | UCA-I3-PR-UCX3 | CL1-2-CS2-F; CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P | JLEX-02; JLS-24 |
+| C13 | Integration governance performs required upstream triage/review for the deployed dependency state. | CFC | C11 | H7 | UCA-I5-NP-UCX4 | CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P | AOU-28; AOU-29; JLS-11 |
+| C14 | Integration governance correctly classifies applicability/impact of upstream advisories/issues for the deployed dependency state. | CFC | C11 | H7 | UCA-I5-PR-UCX4 | CL2-1-CS1-M | AOU-28; AOU-29; JLS-11 |
+| C15 | Integration governance applies required mitigations/updates in time such that known relevant issues do not remain present beyond acceptable limits. | CFC | C11 | H7 | UCA-I5-TL-UCX4 | CL2-1-CS1-A; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P | AOU-27; AOU-28; AOU-29; JLS-11 |
+| C16 | Integration governance completes required regression evaluation before applying updates/mitigations. | CFC | C11 | H7 | UCA-I5-SO-UCX4 | CL2-1-CS1-A | AOU-27; JLS-11 |
 
 ---
 
@@ -360,32 +360,102 @@ The CL reference identifiers below match the CL refs already used in Section 3.3
 
 The STPA schema records causal analysis results in a Scenarios table that links each causal scenario to a control-loop step (here: **CL1** functional parsing/validation and **CL2** governance), and to the resulting UCA and/or Hazards.
 
-CS Type legend (informal, used here as a compact tag):
+CS Type values use the TSF schema category `CSType` (15 values: `CS1-*`, `CS2-*`, `CS3-*`, `CS4-*`). Analysis Result values use the TSF schema category `CSResult` (`UCA`, `Hazard`, `Both`, `OOS`, `SAF`, `N/A`, `TBD`).
 
-- **CS4-P**: controlled-process contribution (service behaviour)
-- **CS1-M**: controller/operator misuse or misinterpretation at the boundary
-- **CS1-A**: action/process-related contribution (e.g. governance/update practice)
-- **CS4-I**: input/environment condition (assumption/constraint violation)
-- **CS4-D**: design/platform interaction (boundary-risk factors)
+Each CL-Sequence step has a complete 15-type set of scenario rows, types that do not apply to that step are explicitly recorded as `N/A`.
 
 | Scenario Id | Seq Ref | CS Type | Causal Scenario Prompt | Analysis Result | Causal Scenario Definition | Links to UCA | Links to Hazard(s) | Constraint Id | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| CS1.1 | CL1-1 | CS4-P | How could `accept` lead to unsafe acceptance? | Both | Service accepts ill-formed JSON. | UCA-I1-PR-UCX1-A | H1; H5 | C1 | Evidence (`TIJ-*`, `WFJ-*`, `NJF-*`, `NPF-*`) reduces likelihood. |
-| CS1.2 | CL1-1 | CS4-P | How could `accept` lead to unsafe rejection? | Both | Service rejects well-formed JSON. | UCA-I1-PR-UCX1-B | H2 | C1 | Positive evidence via `WFJ-*` and `PJD-*`. |
-| CS1.3 | CL1-3 | CS4-P | How could `parse` produce an unsafe value? | Both | Parsing produces an inconsistent value. | UCA-I3-PR-UCX2 | H3; H5 | C2 | Coverage via `PJD-*`, `NPF-*`. |
-| CS1.4 | CL1-3 | CS4-P | How could `parse` become unsafe due to timing/termination? | Both | Parsing throws/hangs under practical constraints. | UCA-I3-TL-UCX3 | H2; H4 | C2; C4 | Availability is primarily constrained by SLC (C4). |
-| CS1.5 | CL1-4 | CS1-M | How could feedback/exception handling become unsafe? | Both | Integrator mis-handles result/exception channel. | UCA-I3-PR-UCX3 | H4; H5 | C6 | Integration/process scenario (AOU-driven). |
-| CS2.1 | CL1-3 | CS4-P | How could extreme input characteristics cause an availability hazard? | Hazard | Extreme inputs exhaust resources. |  | H6 | C4 | Tree does not define explicit size/depth limits; integration may need budgets. |
-| CS2.2 | CL1-3 | CS4-D | How could the platform/boundary contribute to non-termination? | Both | Platform effects contribute to hangs. | UCA-I3-TL-UCX3 | H4 | C4 | Boundary-risk; mitigated by CI/analysis evidence. |
-| CS3.1 | CL2-1 | CS1-A | How could a governance update introduce hazards? | Hazard | Update introduces regression not caught by evidence. |  | H1; H2; H3; H4; H5; H6 | C11 | Managed by change control and regression expectations. |
-| CS3.2 | CL2-1 | CS1-M | How could governance misclassify an applicable issue? | Both | Relevant issue/advisory is misclassified. | UCA-I5-PR-UCX4 | H7 | C11 | See `JLS-11` and `TSF/docs/nlohmann_misbehaviours_comments.md`. |
-| CS3.3 | CL2-1 | CS1-A | How could CI/config drift undermine evidence effectiveness? | Hazard | CI/config drift reduces test effectiveness. |  | H1; H2; H3; H4; H5; H6 | C11 | Partially covered by `TA-INPUTS`/`TA-SUPPLY_CHAIN`. |
-| CS4.1 | CL1-2 | CS1-M | How could the controller misinterpret/ignore feedback? | Hazard | Caller ignores `accept` feedback. |  | H1; H5 | C6 | Integration misuse; mitigated by correct feedback handling (C6). |
-| CS4.2 | CL1-4 | CS1-A | How could exception handling become unsafe? | Hazard | Exceptions are left uncaught. |  | H4 | C6 | Integration error-handling constraint. |
-| CS4.3 | CL1-1 | CS4-I | How could encoding assumptions be violated? | Hazard | Input encoding violates RFC 8259 assumptions. |  | H4; H5 | C7 | Anchored by `AOU-05`. |
-| CS4.4 | CL1-3 | CS4-I | How could input ambiguity affect parsing/handling? | Hazard | Duplicate keys introduce ambiguity. |  | H5 | C8 | Anchored by `AOU-20`. |
-| CS4.5 | CL1-3 | CS4-I | How could non-domain numeric forms affect parsing/handling? | Hazard | Non-decimal numbers are introduced. |  | H4; H5 | C9 | Anchored by `AOU-22`. |
-| CS4.6 | CL1-1 | CS4-I | How could boundary corruption affect parsing outcomes? | Hazard | Data is incomplete/corrupted at boundary. |  | H5 | C10 | Anchored by `AOU-23`. |
+| CL1-1-CS1-C | CL1-1 | CS1-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS1-A | CL1-1 | CS1-A | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS1-I | CL1-1 | CS1-I | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS1-M | CL1-1 | CS1-M | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS1-D | CL1-1 | CS1-D | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS2-F | CL1-1 | CS2-F | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS2-P | CL1-1 | CS2-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS2-U | CL1-1 | CS2-U | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS3-A | CL1-1 | CS3-A | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS3-P | CL1-1 | CS3-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS4-P | CL1-1 | CS4-P | How could `accept` lead to unsafe acceptance? | Both | Service accepts ill-formed JSON. | UCA-I1-PR-UCX1-A | H1; H5 | C1 | Evidence (`TIJ-*`, `WFJ-*`, `NJF-*`, `NPF-*`) reduces likelihood. |
+| CL1-1-CS4-C | CL1-1 | CS4-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-1-CS4-I | CL1-1 | CS4-I | How could encoding assumptions be violated? | Hazard | Input encoding violates RFC 8259 assumptions. |  | H4; H5 | C7 | Anchored by `AOU-05`. |
+| CL1-1-CS4-O | CL1-1 | CS4-O | How could `accept` lead to unsafe rejection? | Both | Service rejects well-formed JSON. | UCA-I1-PR-UCX1-B | H2 | C1 | Positive evidence via `WFJ-*` and `PJD-*`. |
+| CL1-1-CS4-D | CL1-1 | CS4-D | How could boundary corruption affect parsing outcomes? | Hazard | Data is incomplete/corrupted at boundary. |  | H5 | C10 | Anchored by `AOU-23`. |
+| CL1-2-CS1-C | CL1-2 | CS1-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS1-A | CL1-2 | CS1-A | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS1-I | CL1-2 | CS1-I | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS1-M | CL1-2 | CS1-M | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS1-D | CL1-2 | CS1-D | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS2-F | CL1-2 | CS2-F | How could `accept` feedback become unsafe? | Hazard | Caller ignores/misinterprets the `true/false` outcome and proceeds incorrectly. |  | H1; H5 | C6 | Integration misuse; mitigated by correct feedback handling (C6). |
+| CL1-2-CS2-P | CL1-2 | CS2-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS2-U | CL1-2 | CS2-U | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS3-A | CL1-2 | CS3-A | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS3-P | CL1-2 | CS3-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS4-P | CL1-2 | CS4-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS4-C | CL1-2 | CS4-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS4-I | CL1-2 | CS4-I | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS4-O | CL1-2 | CS4-O | N/A | N/A | N/A |  |  |  |  |
+| CL1-2-CS4-D | CL1-2 | CS4-D | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS1-C | CL1-3 | CS1-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS1-A | CL1-3 | CS1-A | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS1-I | CL1-3 | CS1-I | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS1-M | CL1-3 | CS1-M | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS1-D | CL1-3 | CS1-D | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS2-F | CL1-3 | CS2-F | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS2-P | CL1-3 | CS2-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS2-U | CL1-3 | CS2-U | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS3-A | CL1-3 | CS3-A | How could `parse` become unsafe due to timing/termination? | Both | Parsing throws/hangs under practical constraints. | UCA-I3-TL-UCX3 | H2; H4 | C2; C4 | Availability is primarily constrained by SLC (C4). |
+| CL1-3-CS3-P | CL1-3 | CS3-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS4-P | CL1-3 | CS4-P | How could `parse` produce an unsafe value? | Both | Parsing produces an inconsistent value. | UCA-I3-PR-UCX2 | H3; H5 | C2 | Coverage via `PJD-*`, `NPF-*`. |
+| CL1-3-CS4-C | CL1-3 | CS4-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS4-I | CL1-3 | CS4-I | How could process-input conditions make parsing unsafe? | Hazard | Extreme size/depth, duplicate keys, or non-domain numeric forms violate integration assumptions and can cause resource exhaustion, ambiguity, or error-handling hazards. |  | H4; H5; H6 | C4; C8; C9 | Consolidates AOU-driven input preconditions (e.g. `AOU-20`, `AOU-22`) and deployment budgets (C4). |
+| CL1-3-CS4-O | CL1-3 | CS4-O | N/A | N/A | N/A |  |  |  |  |
+| CL1-3-CS4-D | CL1-3 | CS4-D | How could the platform/boundary contribute to non-termination? | Both | Platform effects contribute to hangs. | UCA-I3-TL-UCX3 | H4 | C4 | Boundary-risk; mitigated by CI/analysis evidence. |
+| CL1-4-CS1-C | CL1-4 | CS1-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS1-A | CL1-4 | CS1-A | How could exception handling become unsafe? | Hazard | Exceptions are left uncaught. |  | H4 | C6 | Integration error-handling constraint. |
+| CL1-4-CS1-I | CL1-4 | CS1-I | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS1-M | CL1-4 | CS1-M | How could feedback/exception handling become unsafe? | Both | Integrator mis-handles result/exception channel. | UCA-I3-PR-UCX3 | H4; H5 | C6 | Integration/process scenario (AOU-driven). |
+| CL1-4-CS1-D | CL1-4 | CS1-D | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS2-F | CL1-4 | CS2-F | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS2-P | CL1-4 | CS2-P | How could the feedback path become unsafe? | Hazard | Failure signalling is altered or lost at a boundary (e.g. exception translation/disablement), so the caller does not reliably receive/interpret parse failure feedback. |  | H4; H5 | C6; C12 | Boundary-path aspect of `AOU-04`/`AOU-07`. |
+| CL1-4-CS2-U | CL1-4 | CS2-U | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS3-A | CL1-4 | CS3-A | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS3-P | CL1-4 | CS3-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS4-P | CL1-4 | CS4-P | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS4-C | CL1-4 | CS4-C | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS4-I | CL1-4 | CS4-I | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS4-O | CL1-4 | CS4-O | N/A | N/A | N/A |  |  |  |  |
+| CL1-4-CS4-D | CL1-4 | CS4-D | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS1-C | CL2-1 | CS1-C | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS1-A | CL2-1 | CS1-A | How could a governance update introduce hazards? | Hazard | Update introduces regression not caught by evidence. |  | H1; H2; H3; H4; H5; H6 | C11 | Managed by change control and regression expectations. |
+| CL2-1-CS1-I | CL2-1 | CS1-I | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS1-M | CL2-1 | CS1-M | How could governance misclassify an applicable issue? | Both | Relevant issue/advisory is misclassified. | UCA-I5-PR-UCX4 | H7 | C11 | See `JLS-11` and `TSF/docs/nlohmann_misbehaviours_comments.md`. |
+| CL2-1-CS1-D | CL2-1 | CS1-D | How could CI/config drift undermine evidence effectiveness? | Hazard | CI/config drift reduces test effectiveness. |  | H1; H2; H3; H4; H5; H6 | C11 | Partially covered by `TA-INPUTS`/`TA-SUPPLY_CHAIN`. |
+| CL2-1-CS2-F | CL2-1 | CS2-F | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS2-P | CL2-1 | CS2-P | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS2-U | CL2-1 | CS2-U | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS3-A | CL2-1 | CS3-A | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS3-P | CL2-1 | CS3-P | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS4-P | CL2-1 | CS4-P | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS4-C | CL2-1 | CS4-C | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS4-I | CL2-1 | CS4-I | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS4-O | CL2-1 | CS4-O | N/A | N/A | N/A |  |  |  |  |
+| CL2-1-CS4-D | CL2-1 | CS4-D | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS1-C | CL2-2 | CS1-C | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS1-A | CL2-2 | CS1-A | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS1-I | CL2-2 | CS1-I | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS1-M | CL2-2 | CS1-M | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS1-D | CL2-2 | CS1-D | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS2-F | CL2-2 | CS2-F | How could dependency-status feedback become unsafe? | Hazard | Dependency status/advisory signals are incomplete, delayed, or incorrect, leading to missed/late mitigation. |  | H7 | C11 | E.g. incomplete issue triage inputs; stale status views; missed advisory notification. |
+| CL2-2-CS2-P | CL2-2 | CS2-P | How could the governance feedback path become unsafe? | Hazard | Advisory/issue signals are not delivered/observed (e.g. notification/configuration gaps), so the controller does not receive the feedback needed to trigger mitigation. |  | H7 | C11 | Feedback-path variant of the same governance risk. |
+| CL2-2-CS2-U | CL2-2 | CS2-U | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS3-A | CL2-2 | CS3-A | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS3-P | CL2-2 | CS3-P | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS4-P | CL2-2 | CS4-P | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS4-C | CL2-2 | CS4-C | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS4-I | CL2-2 | CS4-I | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS4-O | CL2-2 | CS4-O | N/A | N/A | N/A |  |  |  |  |
+| CL2-2-CS4-D | CL2-2 | CS4-D | N/A | N/A | N/A |  |  |  |  |
 
 ---
 
@@ -399,16 +469,15 @@ In this document, the scenario table already links each scenario to one or more 
 
 | Scenario Id | Constraint(s) | Constraint type(s) | Why this addresses the scenario (short) | TSF link(s) |
 |---|---|---|---|---|
-| CS1.1; CS1.2 | C1 | CFC | Prevents incorrect `accept` outcomes, which are the scenario condition leading to UCA1/UCA2 and hazards H1/H2/H5. | JLEX-01 |
-| CS1.3 | C2 | CFC | Prevents inconsistent parse results, addressing the scenario condition leading to UCA3 and hazards H3/H5. | JLEX-02 |
-| CS1.4; CS2.2 | C2; C4 | CFC; SLC | C2 addresses functional correctness/error signalling; C4 addresses the time/resource bounds aspect that makes “throws/hangs under practical constraints” hazardous. | JLEX-02 |
-| CS1.5; CS4.1; CS4.2 | C6 | CSC | Prevents boundary mis-handling of results/exceptions and supports a correct feedback path interpretation. | AOU-04; AOU-07 |
-| CS2.1 | C4 | SLC | Requires explicit budgets/limits or acceptable bounds to prevent resource exhaustion from becoming a system-level availability hazard (H6). |  |
-| CS3.1; CS3.2; CS3.3 | C11 (and C5) | CSC; SLC | Prevents governance-loop failures (missed triage, misclassification, late updates, update without adequate evaluation) that keep known issues present or reintroduce hazards via regressions. | AOU-27; AOU-28; AOU-29; JLS-11 |
-| CS4.3 | C7 | CSC | Prevents encoding precondition violations (UTF-8/RFC 8259) from becoming parsing/handling hazards at the boundary. | AOU-05 |
-| CS4.4 | C8 | CSC | Prevents ambiguity from duplicate object keys by constraining the integration expectation and handling. | AOU-20 |
-| CS4.5 | C9 | CSC | Prevents non-decimal number representations from becoming a parsing/handling hazard in the integration context. | AOU-22 |
-| CS4.6 | C10 | CSC | Prevents boundary corruption/incompleteness from silently affecting parsing outcomes and downstream behaviour. | AOU-23 |
+| CL1-1-CS4-P; CL1-1-CS4-O | C1 | CFC | Prevents incorrect `accept` outcomes, which are the scenario condition leading to unsafe accept/reject decisions and hazards H1/H2/H5. | JLEX-01 |
+| CL1-3-CS4-P | C2 | CFC | Prevents inconsistent/incorrect parse results, addressing the scenario condition leading to UCA and hazards H3/H5. | JLEX-02 |
+| CL1-3-CS3-A; CL1-3-CS4-D | C2; C4 | CFC; SLC | C2 addresses functional correctness/error signalling; C4 addresses the time/resource bounds aspect that makes non-termination hazardous. | JLEX-02 |
+| CL1-2-CS2-F; CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P | C6 (and C12) | CSC; CFC | Prevents boundary mis-handling of results/exceptions and supports a correct feedback path interpretation; C12 complements with unambiguous failure signalling expectations. | AOU-04; AOU-07 |
+| CL1-3-CS4-I | C4; C8; C9 | SLC; CSC; CSC | Constrains input budgets and AOU-driven input conditions (duplicate keys, numeric forms) to prevent input-driven hazards (availability/ambiguity). | AOU-20; AOU-22 |
+| CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D | C11 (and C5) | CSC; SLC | Prevents governance-loop failures (missed triage, misclassification, late updates, update without adequate evaluation) that keep known issues present or reintroduce hazards via regressions. | AOU-27; AOU-28; AOU-29; JLS-11 |
+| CL2-2-CS2-F; CL2-2-CS2-P | C11 (and C5) | CSC; SLC | Prevents unsafe/missing dependency-status feedback (data and path) from causing missed/late mitigation actions in the governance loop. | AOU-28; AOU-29; JLS-11 |
+| CL1-1-CS4-I | C7 | CSC | Prevents encoding precondition violations (UTF-8/RFC 8259) from becoming parsing/handling hazards at the boundary. | AOU-05 |
+| CL1-1-CS4-D | C10 | CSC | Prevents boundary corruption/incompleteness from silently affecting parsing outcomes and downstream behaviour. | AOU-23 |
 
 ### 8.2 Notes on constraint types
 
@@ -428,13 +497,13 @@ Relative to `JLEX-01` and `JLEX-02`, the following **Misbehaviours (M\*)** are p
 
 | Misbehaviour Id | Misbehaviour description | Link to hazard(s) | Links to UCA(s) | Links to CS |
 |---|---|---|---|---|
-| M1  | Library accepts syntactically ill-formed JSON as well-formed (violation of JLEX-01). | H1; H5 | UCA1 | CS1.1 |
-| M2  | Library rejects syntactically well-formed JSON that should be accepted (violation of JLEX-01). | H2 | UCA2 | CS1.2 |
-| M3  | Library produces a parsed `basic_json` value that is not semantically equivalent to the input JSON text (violation of JLEX-02). | H3; H5 | UCA3 | CS1.3 |
-| M4  | Library hangs or throws for RFC 8259-compliant JSON under practical integration conditions (violation of JLEX-01/02 intent). | H2; H4 | UCA4 | CS1.4; CS2.2 |
-| M5  | Library behaviour contradicts any specific evidence statement in `WFJ-*`, `TIJ-*`, `NJF-*`, `NPF-*`, or `PJD-*`. | H1; H2; H3; H4; H5 | UCA1; UCA2; UCA3; UCA4; UCA5 | CS1.1; CS1.2; CS1.3; CS1.4; CS1.5 |
-| M6  | Integrator/process misbehaviour: upstream bugs/security advisories are not reviewed and known vulnerabilities are not triaged/handled. | H7 | UCA6; UCA7; UCA8; UCA9 | CS3.1; CS3.2; CS3.3 |
-| M7  | Integrator/environment misbehaviour: untrusted inputs are processed without adequate resource budgets/limits appropriate for the deployment context, enabling resource-exhaustion/DoS. | H6 | N/A (Hazard-only) | CS2.1 |
+| M1  | Library accepts syntactically ill-formed JSON as well-formed (violation of JLEX-01). | H1; H5 | UCA1 | CL1-1-CS4-P |
+| M2  | Library rejects syntactically well-formed JSON that should be accepted (violation of JLEX-01). | H2 | UCA2 | CL1-1-CS4-O |
+| M3  | Library produces a parsed `basic_json` value that is not semantically equivalent to the input JSON text (violation of JLEX-02). | H3; H5 | UCA3 | CL1-3-CS4-P |
+| M4  | Library hangs or throws for RFC 8259-compliant JSON under practical integration conditions (violation of JLEX-01/02 intent). | H2; H4 | UCA4 | CL1-3-CS3-A; CL1-3-CS4-D |
+| M5  | Library behaviour contradicts any specific evidence statement in `WFJ-*`, `TIJ-*`, `NJF-*`, `NPF-*`, or `PJD-*`. | H1; H2; H3; H4; H5 | UCA1; UCA2; UCA3; UCA4; UCA5 | CL1-1-CS4-P; CL1-1-CS4-O; CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D |
+| M6  | Integrator/process misbehaviour: upstream bugs/security advisories are not reviewed and known vulnerabilities are not triaged/handled. | H7 | UCA6; UCA7; UCA8; UCA9 | CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P |
+| M7  | Integrator/environment misbehaviour: untrusted inputs are processed without adequate resource budgets/limits appropriate for the deployment context, enabling resource-exhaustion/DoS. | H6 | N/A (Hazard-only) | CL1-3-CS4-I |
 
 ---
 
@@ -444,9 +513,9 @@ Here, expectations are recorded as explicit, change-controlled statements about 
 
 | Expectation Id | Expectation text | Links to constraint(s) | Links to UCA(s) / CS | Links to TSF |
 |---|---|---|---|---|
-| EXP1 | `basic_json::accept` distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | C1 | UCA1; UCA2 / CS1.1; CS1.2 | JLEX-01 |
-| EXP2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly under the defined scope/integration context (e.g., via exceptions when enabled, or via a discarded value / non-exception failure signalling mode when exceptions are disabled). | C2 | UCA3; UCA4; UCA5 / CS1.3; CS1.4; CS1.5; CS2.2 | JLEX-02; JLS-24 |
-| EXP3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled under the defined integration context. | C3 | UCA3 / CS1.1 | JLS-24 |
+| EXP1 | `basic_json::accept` distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | C1 | UCA1; UCA2 / CL1-1-CS4-P; CL1-1-CS4-O | JLEX-01 |
+| EXP2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly under the defined scope/integration context (e.g., via exceptions when enabled, or via a discarded value / non-exception failure signalling mode when exceptions are disabled). | C2 | UCA3; UCA4; UCA5 / CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D; CL1-4-CS1-M; CL1-4-CS2-P | JLEX-02; JLS-24 |
+| EXP3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled under the defined integration context. | C3 | UCA3 / CL1-3-CS4-P | JLS-24 |
 
 ---
 
@@ -456,15 +525,15 @@ Assumptions record conditions for integrators and other system elements (outside
 
 | Assumption (TSF) | Assumption summary (informal) | Links to constraint(s) | Links to CS | Notes |
 |---|---|---|---|---|
-| AOU-04 | Exceptions are properly handled or turned off by the integrator when using the library. | C6 | CS1.5; CS4.2 | Applies to exception-based failure signalling in CL1. |
-| AOU-07 | Expected parsing errors for invalid JSON (default parameters) are detected and handled properly by the integrator. | C6 | CS1.5; CS4.1; CS4.2 | Prevents misinterpretation/ignoring of failure outcomes. |
-| AOU-05 | Input is UTF-8 (RFC 8259), or violations are handled explicitly at the boundary. | C7 | CS4.3 | Boundary crossing assumption for input encoding. |
-| AOU-20 | Object keys are unique whenever an object is parsed (or ambiguity is mitigated). | C8 | CS4.4 | Integration responsibility for ambiguous inputs. |
-| AOU-22 | Numbers are base-10 as required by JSON (or non-decimal forms are handled/mitigated). | C9 | CS4.5 | Integration responsibility for non-domain inputs. |
-| AOU-23 | Data is complete and error-free whenever transmitted to the component (or corruption is detected/handled). | C10 | CS4.6 | Boundary assumption about transport/storage integrity. |
-| AOU-27 | Release management/update concepts in `TSF/README.md` are followed when changes are done. | C11 | CS3.1; CS3.3 | Governance loop assumption. |
-| AOU-28 | Known open bugs in upstream `nlohmann/json` are regularly reviewed for impact. | C11 | CS3.2 | Governance loop assumption. |
-| AOU-29 | The GitHub security tab is checked regularly and outstanding CVEs are analysed and fixed/dismissed. | C11 | CS3.2 | Governance loop assumption. |
+| AOU-04 | Exceptions are properly handled or turned off by the integrator when using the library. | C6 | CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P | Applies to exception-based failure signalling in CL1. |
+| AOU-07 | Expected parsing errors for invalid JSON (default parameters) are detected and handled properly by the integrator. | C6 | CL1-2-CS2-F; CL1-4-CS1-M; CL1-4-CS2-P | Prevents misinterpretation/ignoring of failure outcomes. |
+| AOU-05 | Input is UTF-8 (RFC 8259), or violations are handled explicitly at the boundary. | C7 | CL1-1-CS4-I | Boundary crossing assumption for input encoding. |
+| AOU-20 | Object keys are unique whenever an object is parsed (or ambiguity is mitigated). | C8 | CL1-3-CS4-I | Integration responsibility for ambiguous inputs. |
+| AOU-22 | Numbers are base-10 as required by JSON (or non-decimal forms are handled/mitigated). | C9 | CL1-3-CS4-I | Integration responsibility for non-domain inputs. |
+| AOU-23 | Data is complete and error-free whenever transmitted to the component (or corruption is detected/handled). | C10 | CL1-1-CS4-D | Boundary assumption about transport/storage integrity. |
+| AOU-27 | Release management/update concepts in `TSF/README.md` are followed when changes are done. | C11 | CL2-1-CS1-A; CL2-1-CS1-D | Governance loop assumption. |
+| AOU-28 | Known open bugs in upstream `nlohmann/json` are regularly reviewed for impact. | C11 | CL2-1-CS1-M; CL2-2-CS2-F; CL2-2-CS2-P | Governance loop assumption. |
+| AOU-29 | The GitHub security tab is checked regularly and outstanding CVEs are analysed and fixed/dismissed. | C11 | CL2-1-CS1-M; CL2-2-CS2-F; CL2-2-CS2-P | Governance loop assumption. |
 
 ---
 
@@ -488,7 +557,7 @@ As justification we use a **qualitative** assessment that is consistent with the
 | M4 | Medium | Very low | Medium–High | Medium | Hangs/crashes can be disruptive. CI robustness evidence reduces likelihood, and AOUs require explicit exception handling where exceptions are expected. |
 | M5 | Varies | Very low | Varies | Low–Medium | Any contradiction to specific statements is expected to be detected by the mapped test evidence (CI test runs). CI gates (e.g. coverage/PR-count) help prevent coverage and process degradation, but they are not themselves semantic checks. |
 | M6 | High | Low–Medium | Medium–High | Medium–High | Severity is high if a known issue is exploitable. Likelihood depends on the effectiveness of the review/triage cadence required by `AOU-28`/`AOU-29`. |
-| M7 | Medium–High | Medium | Medium–High | Medium–High | Resource-exhaustion is a common parser threat on untrusted inputs. This TSF tree does not specify concrete resource budgets, so deployment context must define them if availability/deadlines are critical. |
+| M7 | Medium–High | Medium | Medium–High | Medium–High | Resource-exhaustion is a common parser threat on untrusted inputs. This TSF tree does not specify concrete resource budgets, so deployment context must define them if availability/deadlines are critical (see `AOU-31`). |
 
 
 ## 10. Review STPA results
@@ -503,7 +572,7 @@ This section records the minimal review findings for this analysis iteration, in
 - **Step 4 (UCAs)**: UCAs are recorded and linked to hazards and constraints, using combined IDs (e.g. `UCA-I1-PR-UCX1-A`, `UCA-I3-TL-UCX3`, `UCA-I5-SO-UCX4`). CA-Analysis results are recorded in Section 4.2.
 - **Step 5 (Controller constraints)**: CFC constraints are identified (C1–C3, C12–C16) and mapped to UCAs; integration/governance constraints are also captured as CSC (C6, C11).
 - **Step 6 (Loops/sequences)**: CL1/CL2 and their step sequences are recorded in Section 6.
-- **Step 7 (Scenarios)**: A set of representative causal scenarios (CS1.1–CS4.6) is recorded and linked to UCAs/hazards and constraints.
+- **Step 7 (Scenarios)**: A set of representative causal scenarios (Scenario Id format `CLx-y-CSType`, e.g. `CL1-1-CS4-P`, `CL1-3-CS3-A`, `CL2-1-CS1-M`) is recorded and linked to UCAs/hazards and constraints.
 - **Step 8 (Scenario constraints)**: Constraints addressing each scenario are consolidated and justified in Section 8.
 - **Step 9 (Misbehaviours/Expectations)**: Misbehaviours (M1–M7) are recorded and linked to hazards, UCAs, and scenarios; expectations and assumptions are recorded and linked to constraints and scenarios. A qualitative risk evaluation is provided as part of the overall RAFIA risk analysis.
 
