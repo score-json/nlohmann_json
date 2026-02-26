@@ -79,7 +79,7 @@ Because this is a *library component*, we express risks at the S-CORE system lev
 
 The nodes:
 
-- `TA-CONSTRAINTS` → `AOU-01..AOU-30`
+- `TA-CONSTRAINTS` → `AOU-01..AOU-31`
 - `TA-INPUTS` → `JLS-04`, `JLS-34`, `JLS-47`, `JLS-48`, `JLS-49`, `JLS-50`
 
 capture key **Assumptions of Use (AOU-*)** and **constraints** for integration, including:
@@ -521,7 +521,7 @@ Here, expectations are recorded as explicit, change-controlled statements about 
 
 ### 9.3 Assumptions
 
-Assumptions record conditions for integrators and other system elements (outside the SUA) that are responsible for preventing or mitigating a risk or misbehaviour. Again, assumptions are aready covered under TSF as Assumptions of Use (`AOU-*`). The table below lists the assumptions that are directly referenced by this analysis and links them to the STPA artifacts.
+Assumptions record conditions for integrators and other system elements (outside the SUA) that are responsible for preventing or mitigating a risk or misbehaviour. Again, assumptions are already covered under TSF as Assumptions of Use (`AOU-*`). The table below lists the assumptions that are directly referenced by this analysis and links them to the STPA artifacts.
 
 | Assumption (TSF) | Assumption summary (informal) | Links to constraint(s) | Links to CS | Notes |
 |---|---|---|---|---|
@@ -567,7 +567,7 @@ This section records the minimal review findings for this analysis iteration, in
 ### 10.1 Analyst review
 
 - **Step 1 (Scope)**: System context and boundary assumptions are recorded in Section 1 and summarised in the control structure diagram (Section 3.0).
-- **Step 2 (Purpose)**: Losses (L1–L6), Hazards (H1–H7), and constraints (C1–C11) are recorded and linked.
+- **Step 2 (Purpose)**: Losses (L1–L6), Hazards (H1–H7), and constraints (C1–C16) are recorded and linked.
 - **Step 3 (Control structure)**: Elements (E1–E4), interactions (I1–I6), and a diagram are present; control loops are explicitly identified as CL1/CL2.
 - **Step 4 (UCAs)**: UCAs are recorded and linked to hazards and constraints, using combined IDs (e.g. `UCA-I1-PR-UCX1-A`, `UCA-I3-TL-UCX3`, `UCA-I5-SO-UCX4`). CA-Analysis results are recorded in Section 4.2.
 - **Step 5 (Controller constraints)**: CFC constraints are identified (C1–C3, C12–C16) and mapped to UCAs; integration/governance constraints are also captured as CSC (C6, C11).
@@ -580,7 +580,7 @@ This section records the minimal review findings for this analysis iteration, in
 
 The RAFIA STPA procedure expects independent review findings to be documented. The following table provides a place to record them.
 
-*A review of both an independent STPA practicioner and independent subject matter expert (SME) still has to be conducted.*
+*A review of both an independent STPA practitioner and independent subject matter expert (SME) still has to be conducted.*
 
 | Review type | Reviewer | Date | Findings (summary) | Resulting actions |
 |---|---|---|---|---|
