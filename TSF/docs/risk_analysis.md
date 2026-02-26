@@ -497,12 +497,12 @@ Relative to `JLEX-01` and `JLEX-02`, the following **Misbehaviours (M\*)** are p
 
 | Misbehaviour Id | Misbehaviour description | Link to hazard(s) | Links to UCA(s) | Links to CS |
 |---|---|---|---|---|
-| M1  | Library accepts syntactically ill-formed JSON as well-formed (violation of JLEX-01). | H1; H5 | UCA1 | CL1-1-CS4-P |
-| M2  | Library rejects syntactically well-formed JSON that should be accepted (violation of JLEX-01). | H2 | UCA2 | CL1-1-CS4-O |
-| M3  | Library produces a parsed `basic_json` value that is not semantically equivalent to the input JSON text (violation of JLEX-02). | H3; H5 | UCA3 | CL1-3-CS4-P |
-| M4  | Library hangs or throws for RFC 8259-compliant JSON under practical integration conditions (violation of JLEX-01/02 intent). | H2; H4 | UCA4 | CL1-3-CS3-A; CL1-3-CS4-D |
-| M5  | Library behaviour contradicts any specific evidence statement in `WFJ-*`, `TIJ-*`, `NJF-*`, `NPF-*`, or `PJD-*`. | H1; H2; H3; H4; H5 | UCA1; UCA2; UCA3; UCA4; UCA5 | CL1-1-CS4-P; CL1-1-CS4-O; CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D |
-| M6  | Integrator/process misbehaviour: upstream bugs/security advisories are not reviewed and known vulnerabilities are not triaged/handled. | H7 | UCA6; UCA7; UCA8; UCA9 | CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P |
+| M1  | Library accepts syntactically ill-formed JSON as well-formed (violation of JLEX-01). | H1; H5 | UCA-I1-PR-UCX1-A | CL1-1-CS4-P |
+| M2  | Library rejects syntactically well-formed JSON that should be accepted (violation of JLEX-01). | H2 | UCA-I1-PR-UCX1-B | CL1-1-CS4-O |
+| M3  | Library produces a parsed `basic_json` value that is not semantically equivalent to the input JSON text (violation of JLEX-02). | H3; H5 | UCA-I3-PR-UCX2 | CL1-3-CS4-P |
+| M4  | Library hangs or throws for RFC 8259-compliant JSON under practical integration conditions (violation of JLEX-01/02 intent). | H2; H4 | UCA-I3-TL-UCX3 | CL1-3-CS3-A; CL1-3-CS4-D |
+| M5  | Library behaviour contradicts any specific evidence statement in `WFJ-*`, `TIJ-*`, `NJF-*`, `NPF-*`, or `PJD-*`. | H1; H2; H3; H4; H5 | UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B; UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3 | CL1-1-CS4-P; CL1-1-CS4-O; CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D |
+| M6  | Integrator/process misbehaviour: upstream bugs/security advisories are not reviewed and known vulnerabilities are not triaged/handled. | H7 | UCA-I5-NP-UCX4; UCA-I5-PR-UCX4; UCA-I5-TL-UCX4; UCA-I5-SO-UCX4 | CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P |
 | M7  | Integrator/environment misbehaviour: untrusted inputs are processed without adequate resource budgets/limits appropriate for the deployment context, enabling resource-exhaustion/DoS. | H6 | N/A (Hazard-only) | CL1-3-CS4-I |
 
 ---
@@ -513,9 +513,9 @@ Here, expectations are recorded as explicit, change-controlled statements about 
 
 | Expectation Id | Expectation text | Links to constraint(s) | Links to UCA(s) / CS | Links to TSF |
 |---|---|---|---|---|
-| EXP1 | `basic_json::accept` distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | C1 | UCA1; UCA2 / CL1-1-CS4-P; CL1-1-CS4-O | JLEX-01 |
-| EXP2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly under the defined scope/integration context (e.g., via exceptions when enabled, or via a discarded value / non-exception failure signalling mode when exceptions are disabled). | C2 | UCA3; UCA4; UCA5 / CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D; CL1-4-CS1-M; CL1-4-CS2-P | JLEX-02; JLS-24 |
-| EXP3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled under the defined integration context. | C3 | UCA3 / CL1-3-CS4-P | JLS-24 |
+| EXP1 | `basic_json::accept` distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context. | C1 | UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B / CL1-1-CS4-P; CL1-1-CS4-O | JLEX-01 |
+| EXP2 | `basic_json::parse` returns a correct representation for well-formed JSON or signals failure clearly under the defined scope/integration context (e.g., via exceptions when enabled, or via a discarded value / non-exception failure signalling mode when exceptions are disabled). | C2 | UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3 / CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D; CL1-4-CS1-M; CL1-4-CS2-P | JLEX-02; JLS-24 |
+| EXP3 | For ill-formed JSON, parsing does not silently produce a misleading `basic_json` value; failure is signalled under the defined integration context. | C3 | UCA-I3-PR-UCX2 / CL1-3-CS4-P | JLS-24 |
 
 ---
 
