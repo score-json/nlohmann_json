@@ -41,7 +41,7 @@ The system boundary, environment, and boundary-crossing interactions assumed for
 
 ### 1.1 Software Under Analysis
 
-The software under analysis is the **header-only C++ JSON library `nlohmann/json` (v3.12.0)**, with:
+The software under analysis (SUA) is the **header-only C++ JSON library `nlohmann/json` (v3.12.0)**, with:
 
 - **Implementation**
   - primary include `include/nlohmann/json.hpp` (and internal headers under `include/nlohmann/detail/**`)
@@ -152,7 +152,7 @@ Hazards are not “root causes” and not “bugs”; they are **system-level co
 | H4 | S-CORE encounters unhandled exceptions or hangs during JSON parsing/validation operations. | L4 |  |
 | H5 | S-CORE misinterprets parser outcomes due to ambiguous or undocumented behaviour of the library. | L1; L2; L3; L5 |  |
 | H6 | S-CORE experiences resource exhaustion (CPU/memory/time) while processing JSON inputs, impacting availability or deadlines. | L4 |  |
-| H7 | Upstream vulnerabilities or relevant open bugs are not tracked/triaged, so known issues remain present in the integrated component. | L6; L4 |  |
+| H7 | Upstream vulnerabilities or relevant open bugs are not tracked/triaged, so known issues remain present in the integrated component. | L6; L4; L3 | L3 under assumption that upstream triage is audit/contract/regulatory required|
 
 ---
 
@@ -276,7 +276,7 @@ The RAFIA STPA procedure requires a CA-Analysis table keyed by control actions (
 | CAA-I3-DS-UCX3 | I3 | DS | UCX3 | N/A |  | Duration (too short) is not meaningful for error signalling; premature termination manifests as exception/failed parse which is already covered by PR/Safe outcomes. |
 | CAA-I3-DL-UCX3 | I3 | DL | UCX3 | Safe |  | “Too long” is treated as “too late” (TL) for this discrete call in this analysis; the unsafe outcome is recorded under TL (UCA-I3-TL-UCX3). |
 | CAA-I3-TE-UCX3 | I3 | TE | UCX3 | N/A |  | “Too early” does not apply for this synchronous call abstraction. |
-| CAA-I3-TL-UCX3 | I3 | TL | UCX3 | UCA | H2; H4 | “Too late” completion (effectively non-termination or excessive delay) makes the interaction unsafe under practical constraints (UCA-I3-TL-UCX3). |
+| CAA-I3-TL-UCX3 | I3 | TL | UCX3 | UCA | H4| “Too late” completion (effectively non-termination or excessive delay) makes the interaction unsafe under practical constraints (UCA-I3-TL-UCX3). |
 | CAA-I3-SO-UCX3 | I3 | SO | UCX3 | Safe |  | The library call is synchronous; sequence/order issues primarily arise in the caller’s concurrency model. This analysis assumes the caller does not treat results from one thread/context as belonging to another; otherwise additional UCAs and hazards should be added. |
 | CAA-I5-NP-UCX4 | I5 | NP | UCX4 | UCA | H7 | Not performing required triage/review can leave known issues unmitigated (UCA-I5-NP-UCX4). |
 | CAA-I5-PR-UCX4 | I5 | PR | UCX4 | UCA | H7 | Performing triage but dismissing an applicable advisory/issue is unsafe (UCA-I5-PR-UCX4). |
@@ -296,7 +296,7 @@ The RAFIA STPA procedure requires a CA-Analysis table keyed by control actions (
 | UCA-I1-PR-UCX1-A | I1 | PR | UCX1 | `accept` returns `true` for ill-formed JSON when it must reject it. | `accept` returns `true` for ill-formed JSON. | C1 |
 | UCA-I1-PR-UCX1-B | I1 | PR | UCX1 | `accept` returns `false` for well-formed JSON when it must accept it. | `accept` returns `false` for well-formed JSON. | C1 |
 | UCA-I3-PR-UCX2 | I3 | PR | UCX2 | `parse` returns a value inconsistent with the JSON text when it must be semantically equivalent. | `parse` returns a value inconsistent with the JSON text. | C2 |
-| UCA-I3-TL-UCX3 | I3 | TL | UCX3 | `parse` completes too late / does not complete for valid JSON under practical constraints when it must complete in time. | `parse` throws or hangs for valid JSON under practical constraints. | C2; C4 |
+| UCA-I3-TL-UCX3 | I3 | TL | UCX3 | `parse` completes too late for valid JSON under practical constraints when it must complete in time. | `parse` hangs for valid JSON under practical constraints. | C2; C4 |
 | UCA-I3-PR-UCX3 | I3 | PR | UCX3 | `parse` signals failure ambiguously when it must signal failure clearly and predictably. | Errors are signalled ambiguously, enabling misinterpretation. | C12; C6 |
 | UCA-I5-NP-UCX4 | I5 | NP | UCX4 | Governance does not perform required triage/review when it must be performed. | Required upstream review/triage is not performed. | C13 |
 | UCA-I5-PR-UCX4 | I5 | PR | UCX4 | Governance performs triage but dismisses an applicable issue/advisory when it must be acted upon. | Relevant advisory/issue is incorrectly dismissed. | C14 |
