@@ -1,0 +1,81 @@
+name: Coverage Gate
+
+on:
+  workflow_call:
+    inputs:
+      artifact_id:
+        description: "Artifact name for the coverage-gate result"
+        required: true
+        type: string
+
+jobs:
+  coverage_gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Download coverage HTML artifact
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
+        with:
+          name: code-coverage-report
+          path: coverage_html
+
+      - name: Debug list coverage files
+        run: |
+          echo "=== coverage_html contents ==="
+          ls -R coverage_html
+
+      - name: Enforce coverage threshold
+        run: |
+          THRESHOLD=99.19
+
+          echo "=== Extracting line coverage for 'Lines:' from index.html ==="
+
+          HEADER_BLOCK=$(grep -A1 'Lines:' coverage_html/index.html || true)
+          echo "$HEADER_BLOCK"
+
+          LINE_COV=$(echo "$HEADER_BLOCK" | grep -oE "[0-9]+(\.[0-9]+)?" | head -n1 || true)
+          echo "Extracted Line coverage: '${LINE_COV}'"
+
+          if [ -z "$LINE_COV" ]; then
+            echo "Could not extract line coverage for 'Lines:' from index.html"
+            exit 1
+          fi
+
+          COMPARE=$(awk -v cov="$LINE_COV" -v thr="$THRESHOLD" 'BEGIN { if (cov < thr) print "lt"; else print "ge"; }')
+
+          if [ "$COMPARE" = "lt" ]; then
+            echo "Coverage below threshold, failing job."
+            exit 1
+          fi
+
+          echo "Coverage is above threshold."
+
+      - name: Create coverage-gate result
+        if: always()
+        run: |
+          mkdir -p coverage_gate
+
+          THRESHOLD=99.19
+
+          LINE_COV=""
+          if [ -f coverage_html/index.html ]; then
+            HEADER_BLOCK=$(grep -A1 'Lines:' coverage_html/index.html || true)
+            LINE_COV=$(echo "$HEADER_BLOCK" | grep -oE "[0-9]+(\.[0-9]+)?" | head -n1 || true)
+          fi
+
+          {
+            echo "status=${{ job.status }}"
+            echo "line_coverage=${LINE_COV}"
+            echo "threshold=${THRESHOLD}"
+          } > coverage_gate/coverage_gate.txt
+
+
+      - name: Upload coverage-gate artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ${{ inputs.artifact_id }}
+          path: coverage_gate/coverage_gate.txt
