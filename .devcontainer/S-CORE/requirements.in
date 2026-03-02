@@ -9,3 +9,4 @@ pip-tools==7.5.2
 colorama>=0.4
 exceptiongroup>=1
 tomli>=1a
+
