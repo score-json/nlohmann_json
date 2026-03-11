@@ -105,7 +105,7 @@ jobs:
           result="${{ needs[matrix.target].result }}"
           echo "${{ matrix.target }} workflow result: $result"
 
-          if [[ "$result" != "success" ]]; then
+          if [[ "$result" != "success" && "$result" != "skipped" ]]; then
             echo "❌ ${{ matrix.target }} workflow failed! Exiting..."
             exit 1
           fi
