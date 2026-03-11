@@ -189,6 +189,8 @@ jobs:
           TSF_SCORING_DB: ${{ steps.select_db.outputs.db_path }}
         run: |
           set -euo pipefail
+          git checkout "$branch_name"
+          git checkout save_historical_data -- "$TSF_SCORING_DB" TSF/misbehaviours.md
           echo "[verify] TSF_SCORING_DB='$TSF_SCORING_DB'"
           test -n "$TSF_SCORING_DB"
           test -f "$TSF_SCORING_DB"
@@ -200,9 +202,13 @@ jobs:
 
       - name: Checkout data storage branch
         run: |
-          git stash push --include-untracked -- . ':(exclude)TSF/data_storage' ':(exclude)TSF/data_storage/**' ':(exclude)TSF/TrustableScoring.db'
+          set -euo pipefail
+          temp_db="$RUNNER_TEMP/$(basename "$TSF_SCORING_DB").working"
+          cp "$TSF_SCORING_DB" "$temp_db"
+          git stash push --include-untracked -- .
           git checkout save_historical_data
           git pull
+          cp "$temp_db" "$TSF_SCORING_DB"
 
       - name: Store persistent data
         run: |
@@ -221,7 +227,8 @@ jobs:
 
       - name: Recover stash
         run: |
-          git checkout $branch_name
+          set -euo pipefail
+          git checkout "$branch_name"
           git stash apply
 
       - name: Upload trudag artifact
