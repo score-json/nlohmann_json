@@ -78,11 +78,11 @@ and that the resulting system and tests are validated by appropriate strategies.
 - How confident can we be that this list covers all critical requirements?
   - **Answer**: We are very confident that this list covers all critical requirements.
 - How comprehensive is the list of tests?
-  - **Answer**: Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27. Therefore, we deem the list of tests to be very comprehensive.
+  - **Answer**:  Currently, branch coverage is 93.865% and line coverage is 99.186% (JLS-27). Deviation from 100% branch coverage is expected for this kind of template-heavy library due to known factors such as tooling artifacts, defensive/unreachable paths (e.g., LCOV-excluded branches), and configuration-dependent code paths. Coverage is continuously monitored in CI and reviewed in pull requests and maintainers have documented concrete coverage-artifact cases (e.g., https://github.com/nlohmann/json/pull/4595). In addition to raw percentages, we use statement-level traceability from Expectations JLEX-01/02 to concrete CI tests (JLS-74). Therefore, we deem the test set very comprehensive for the intended scope.
 - Is every Expectation covered by at least one implemented test?
   - **Answer**: Yes, both of the Expectations are covered by at least one implemented test.
 - Are there any Expectations where we believe more coverage would help?
-  - **Answer**: No, the coverage is already on a high level and no further gains are expected by further increasing the coverage.
+  - **Answer**: No additional top-level Expectation is currently missing. Extra tests would mainly increase confidence for already identified boundary cases (especially around WFJ-06), rather than reveal a gap in the Expectation set.
 - How do dependencies affect Expectations, and are their properties verifiable?
   - **Answer**: The nlohmann/json library does not have any external dependencies apart from the testing pipeline, so there are no dependencies that could possibly affect the Expectations. 
 - Are input analysis findings from components, tools, and data considered in relation to Expectations?
