@@ -1,0 +1,3138 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Risk Analysis for nlohmann/json 3.12.0 within eclipse-score/nlohmann_json &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="_static/css/score_design.css?v=d9fd870c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/modern.css?v=803738c0" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'risk_analysis';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://score-json.github.io/nlohmann_json/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="3.12.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Eclipse S-CORE</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="concept.html">
+    Concept
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="report.html">
+    Report
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://projects.eclipse.org/projects/automotive.score">
+    Eclipse S-CORE Home-Page
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="concept.html">
+    Concept
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="report.html">
+    Report
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://projects.eclipse.org/projects/automotive.score">
+    Eclipse S-CORE Home-Page
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Risk Analysis for nlohmann/json 3.12.0 within eclipse-score/nlohmann_json</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="risk-analysis-for-nlohmann-json-3-12-0-within-eclipse-score-nlohmann-json">
+<h1>Risk Analysis for nlohmann/json 3.12.0 within eclipse-score/nlohmann_json<a class="headerlink" href="#risk-analysis-for-nlohmann-json-3-12-0-within-eclipse-score-nlohmann-json" title="Link to this heading">#</a></h1>
+<p>This document provides a <strong>risk analysis</strong> for the <strong>eclipse-score/nlohmann_json</strong> repository following the risk analysis approach of the Trustable Software Framework (TSF) [<a class="reference external" href="https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/rafia/risk-analysis.html">RAFIA: Risk Analysis</a>].</p>
+</section>
+<section id="methodology-rafia-stpa-what-is-being-done-and-why">
+<h1>0. Methodology (RAFIA / STPA) – What is being done and why<a class="headerlink" href="#methodology-rafia-stpa-what-is-being-done-and-why" title="Link to this heading">#</a></h1>
+<p>Risk Analysis objectives (summarised from the Codethink guidance) are:</p>
+<ul class="simple">
+<li><p><strong>Hazard analysis</strong></p>
+<ul>
+<li><p>Describe a <em>system/subsystem</em> that incorporates the software.</p></li>
+<li><p>Identify <em>Losses</em> (unacceptable outcomes) and <em>Hazards</em> (system-level conditions leading to losses).</p></li>
+<li><p>Specify a <em>control structure</em> (controllers, controlled processes, control actions, feedback).</p></li>
+<li><p>Identify <em>Unsafe Control Actions (UCAs)</em> that may result in hazards.</p></li>
+<li><p>Identify <em>Causal Scenarios</em> that can lead to UCAs or hazards.</p></li>
+<li><p>Devise <em>Constraints</em> that must hold to avoid hazards/UCAs/scenarios.</p></li>
+</ul>
+</li>
+<li><p><strong>Traceability</strong></p>
+<ul>
+<li><p>Map analysis outcomes into the TSF model of Statements: <em>Expectations</em>, <em>Assertions</em>, <em>Evidence</em>.</p></li>
+<li><p>Maintain forward/backward links so that changes to any statement trigger re-evaluation of related analysis links.</p></li>
+</ul>
+</li>
+<li><p><strong>Risk evaluation</strong></p>
+<ul>
+<li><p>Evaluate relative importance of hazards/misbehaviours using at least <strong>severity</strong> and <strong>likelihood</strong>, and optionally <strong>controllability</strong> and <strong>exposure/demand</strong>, to support prioritisation and cost/benefit decisions [<a class="reference external" href="https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/rafia/risk-analysis.html">RAFIA: Risk Analysis</a>].</p></li>
+</ul>
+</li>
+</ul>
+<section id="how-this-is-instantiated-for-this-repository">
+<h2>How this is instantiated for this repository<a class="headerlink" href="#how-this-is-instantiated-for-this-repository" title="Link to this heading">#</a></h2>
+<p>This repository already contains a rich TSF statement graph that captures:</p>
+<ul class="simple">
+<li><p>the <strong>expected behaviours</strong> (<code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code>, <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>) and their supporting evidence (<code class="docutils literal notranslate"><span class="pre">WFJ-*</span></code>, <code class="docutils literal notranslate"><span class="pre">PJD-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NJF-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NPF-*</span></code>, <code class="docutils literal notranslate"><span class="pre">TIJ-*</span></code>), and</p></li>
+<li><p>the process expectations around tests, fixes, inputs, constraints, and analysis (<code class="docutils literal notranslate"><span class="pre">TA-TESTS</span></code>, <code class="docutils literal notranslate"><span class="pre">TA-FIXES</span></code>, <code class="docutils literal notranslate"><span class="pre">TA-INPUTS</span></code>, <code class="docutils literal notranslate"><span class="pre">TA-CONSTRAINTS</span></code>, <code class="docutils literal notranslate"><span class="pre">TA-ANALYSIS</span></code>, …).</p></li>
+</ul>
+</section>
+<section id="stpa-procedure-and-schema-conformance">
+<h2>STPA procedure and schema conformance<a class="headerlink" href="#stpa-procedure-and-schema-conformance" title="Link to this heading">#</a></h2>
+<p>This document follows the RAFIA STPA procedure at the level of intent and outputs (Losses → Hazards → Control Structure → UCAs → Scenarios → Constraints → Misbehaviours), as described in the TSF extensions:</p>
+<ul class="simple">
+<li><p>STPA procedure: [<a class="reference external" href="https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/stpa/procedure.html">RAFIA STPA Procedure</a>]</p></li>
+<li><p>STPA workbook schema (tables/columns): [<a class="reference external" href="https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/stpa/schema.html">STPA results schema</a>]</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="scope-and-system-context">
+<h1>1. Scope and System Context<a class="headerlink" href="#scope-and-system-context" title="Link to this heading">#</a></h1>
+<p>The system boundary, environment, and boundary-crossing interactions assumed for this scope are summarised in the control structure diagram in Section 3.0.</p>
+<section id="software-under-analysis">
+<h2>1.1 Software Under Analysis<a class="headerlink" href="#software-under-analysis" title="Link to this heading">#</a></h2>
+<p>The software under analysis (SUA) is the <strong>header-only C++ JSON library <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> (v3.12.0)</strong>, with:</p>
+<ul class="simple">
+<li><p><strong>Implementation</strong></p>
+<ul>
+<li><p>primary include <code class="docutils literal notranslate"><span class="pre">include/nlohmann/json.hpp</span></code> (and internal headers under <code class="docutils literal notranslate"><span class="pre">include/nlohmann/detail/**</span></code>)</p></li>
+<li><p>optional amalgamated single-include header <code class="docutils literal notranslate"><span class="pre">single_include/nlohmann/json.hpp</span></code></p></li>
+<li><p>C++11, no external code dependencies</p></li>
+</ul>
+</li>
+<li><p><strong>Purpose</strong></p>
+<ul>
+<li><p>provide JSON parsing and validation per <strong>RFC 8259</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Evidence</strong></p>
+<ul>
+<li><p>captured extensively in <code class="docutils literal notranslate"><span class="pre">WFJ-*</span></code>, <code class="docutils literal notranslate"><span class="pre">TIJ-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NJF-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NPF-*</span></code>, and <code class="docutils literal notranslate"><span class="pre">PJD-*</span></code> statements, which are connected in the trustable graph to the expectations <code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code> and <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>In practical terms, this means the “safety envelope” of the component is defined by the combination of:</p>
+<ul class="simple">
+<li><p>the semantic scope of RFC 8259 JSON (what inputs are considered valid JSON), and</p></li>
+<li><p>the repository’s explicit expectations (<code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code>, <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>) and their evidence families.</p></li>
+</ul>
+</section>
+<section id="integration-context-as-documented-by-tsf-expectations">
+<h2>1.2 Integration Context (as documented by TSF expectations)<a class="headerlink" href="#integration-context-as-documented-by-tsf-expectations" title="Link to this heading">#</a></h2>
+<p>This repository’s TSF Expectations explicitly scope the intended integration context to:</p>
+<ul class="simple">
+<li><p>JSON validation (<code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code>, referencing the S-CORE JSON Validation requirement), and</p></li>
+<li><p>JSON deserialization (<code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>, referencing the S-CORE JSON Deserialization requirement).</p></li>
+</ul>
+<p>In the remainder of this document, “S-CORE” is used as a <strong>target-system / integrator label</strong> for expressing system-level Losses and Hazards in the STPA sense. This repository itself documents the <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> component and its TSF statement graph.</p>
+<p>The TSF graph shows this as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TT-EXPECTATIONS</span></code> → <code class="docutils literal notranslate"><span class="pre">TA-BEHAVIOURS</span></code> → <code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code>, <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TA-INPUTS</span></code> → multiple <code class="docutils literal notranslate"><span class="pre">JLS-*</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">JLS-34</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-48</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-49</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-50</span></code>), describing properties of inputs, dependencies and environment.</p></li>
+</ul>
+<p>The library <strong>does not control hardware directly</strong>. Misbehaviours affect S-CORE only <strong>via incorrect JSON validation or parsing</strong>, influencing higher-level functions.</p>
+<p>Because this is a <em>library component</em>, we express risks at the S-CORE system level (e.g., “S-CORE accepts ill-formed JSON”), and we treat the library as a contributing factor through its API behaviour and error signalling. This matches the RAFIA/STPA guidance to analyse the software in the context of a system/subsystem, rather than as an isolated artifact [<a class="reference external" href="https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/rafia/risk-analysis.html">RAFIA: Risk Analysis</a>].</p>
+</section>
+<section id="assumptions-of-use-and-constraints">
+<h2>1.3 Assumptions of Use and Constraints<a class="headerlink" href="#assumptions-of-use-and-constraints" title="Link to this heading">#</a></h2>
+<p>The nodes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TA-CONSTRAINTS</span></code> → <code class="docutils literal notranslate"><span class="pre">AOU-01..AOU-31</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TA-INPUTS</span></code> → <code class="docutils literal notranslate"><span class="pre">JLS-04</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-34</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-47</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-48</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-49</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-50</span></code></p></li>
+</ul>
+<p>capture key <strong>Assumptions of Use (AOU-*)</strong> and <strong>constraints</strong> for integration, including:</p>
+<ul class="simple">
+<li><p>S-CORE code must check <code class="docutils literal notranslate"><span class="pre">accept</span></code>/<code class="docutils literal notranslate"><span class="pre">parse</span></code> results and handle exceptions correctly.</p></li>
+<li><p>Input encoding and error signalling are managed at the integration boundary (notably UTF-8 input per <code class="docutils literal notranslate"><span class="pre">AOU-05</span></code>, and proper exception handling per <code class="docutils literal notranslate"><span class="pre">AOU-04</span></code> and <code class="docutils literal notranslate"><span class="pre">AOU-07</span></code>).</p></li>
+<li><p>This analysis assumes integrators do not depend on unspecified or undocumented behaviours.</p></li>
+</ul>
+<p>This Risk Analysis is valid under these assumptions and constraints.</p>
+<section id="aou-statements-directly-relevant-to-this-analysis-normative">
+<h3>AOU statements directly relevant to this analysis (normative)<a class="headerlink" href="#aou-statements-directly-relevant-to-this-analysis-normative" title="Link to this heading">#</a></h3>
+<p>The following Assumptions of Use are explicitly stated in this TSF tree and are directly relevant to risk analysis of JSON parsing/validation:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-04</span></code></strong>: the integrator shall ensure that exceptions are properly handled or turned off when using the library.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-05</span></code></strong>: the integrator shall ensure input is UTF-8 (RFC 8259) and handle exceptions for other string formats.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-07</span></code></strong>: expected parsing errors for invalid JSON (default parameters) shall be detected and handled properly.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-20</span></code></strong>: keys within an object shall be unique whenever an object is parsed.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-22</span></code></strong>: numbers shall be written in base 10; exceptions/misbehaviours for other bases shall be handled/mitigated.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-23</span></code></strong>: data shall be complete and error-free whenever transmitted to the component.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-27</span></code></strong>: release management / update concepts in <code class="docutils literal notranslate"><span class="pre">TSF/README.md</span></code> shall be followed when changes are done.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-28</span></code></strong>: known open bugs in upstream <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> shall be regularly reviewed for impact.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">AOU-29</span></code></strong>: the GitHub security tab shall be checked regularly and outstanding CVEs analysed and fixed/dismissed.</p></li>
+</ul>
+<p>These AOU statements are treated as <strong>controller/environment constraints</strong> in the sense that they constrain how the integrator/environment must behave so that the component can be used safely for the intended scope.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="purpose-of-the-analysis">
+<h1>2. Purpose of the analysis<a class="headerlink" href="#purpose-of-the-analysis" title="Link to this heading">#</a></h1>
+<section id="losses-unacceptable-outcomes">
+<h2>2.1 Losses (Unacceptable Outcomes)<a class="headerlink" href="#losses-unacceptable-outcomes" title="Link to this heading">#</a></h2>
+<p>Although <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> is a library, its misbehaviour can contribute to unacceptable outcomes in S-CORE applications.</p>
+<p>To stay consistent with RAFIA, we define losses as <strong>unacceptable outcomes for stakeholders</strong>, not as “bugs”. For a parsing/validation library, the primary stakeholder impact is through <em>incorrect decisions, corrupted configuration/data, or loss of availability</em> in the integrating system. Losses are deliberately phrased at S-CORE level, because S-CORE is the system that ultimately experiences the unacceptable outcome.</p>
+</section>
+<section id="rationale-for-the-chosen-losses">
+<h2>Rationale for the chosen losses<a class="headerlink" href="#rationale-for-the-chosen-losses" title="Link to this heading">#</a></h2>
+<p>The loss set (L1–L6) is intentionally small and orthogonal:</p>
+<ul class="simple">
+<li><p><strong>Correctness / decision impact</strong> (L1) covers downstream consequences when S-CORE acts on a parsed value that is wrong for the intended meaning.</p></li>
+<li><p><strong>Input acceptance / rejection integrity</strong> (L2) captures the baseline that syntactically ill-formed inputs must be rejected (i.e., not treated as valid JSON).</p></li>
+<li><p><strong>Compliance exposure</strong> (L3) is included because this component is commonly integrated into regulated or contract-driven systems, where correct JSON handling can be part of auditability and traceability obligations</p></li>
+<li><p><strong>Availability</strong> (L4) is included because parsing and validation failures can become denial-of-service vectors or cause systemic instability.</p></li>
+<li><p><strong>Silent data corruption</strong> (L5) captures a distinct failure mode from availability: the system continues operating but with undetected corruption (e.g., configuration or logs), which can be more dangerous than explicit failure.</p></li>
+<li><p><strong>Security / trust compromise</strong> (L6) is included because this component may process untrusted input, and exploitable parser weaknesses or unpatched known vulnerabilities (e.g., CVEs) can lead to compromise in an integrating system even when functional behaviour is otherwise well specified.</p></li>
+</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Loss Id</p></th>
+<th class="head"><p>Loss description</p></th>
+<th class="head"><p>Loss category</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>L1</p></td>
+<td><p>Safety-relevant or correctness-critical S-CORE decisions are based on incorrectly parsed JSON data.</p></td>
+<td><p>Safety</p></td>
+</tr>
+<tr class="row-odd"><td><p>L2</p></td>
+<td><p>S-CORE fails to reject syntactically ill-formed JSON inputs that must be rejected.</p></td>
+<td><p>User</p></td>
+</tr>
+<tr class="row-even"><td><p>L3</p></td>
+<td><p>S-CORE violates contractual, regulatory, or audit requirements that depend on correct JSON validation/parsing (e.g., configuration integrity, trustworthy logs).</p></td>
+<td><p>Commercial</p></td>
+</tr>
+<tr class="row-odd"><td><p>L4</p></td>
+<td><p>S-CORE services become unavailable or unstable due to parser exceptions, crashes or hangs.</p></td>
+<td><p>User</p></td>
+</tr>
+<tr class="row-even"><td><p>L5</p></td>
+<td><p>Integrity of JSON-based logs or configuration data is compromised by silently incorrect parsing.</p></td>
+<td><p>Commercial</p></td>
+</tr>
+<tr class="row-odd"><td><p>L6</p></td>
+<td><p>Security compromise due to exploitation of parsing/processing weaknesses or unpatched known vulnerabilities.</p></td>
+<td><p>Security</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="hazards-system-level-conditions">
+<h2>2.2 Hazards (System-Level Conditions)<a class="headerlink" href="#hazards-system-level-conditions" title="Link to this heading">#</a></h2>
+<p>Using the Losses, we define <strong>Hazards (H*)</strong> at S-CORE level:</p>
+<p>Hazards are not “root causes” and not “bugs”; they are <strong>system-level conditions</strong> that can lead to losses if they occur. Here, hazards are defined as conditions about <em>what S-CORE accepts, rejects, produces, or fails to handle</em>, because those are the conditions that create stakeholder-relevant losses.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Hazard Id</p></th>
+<th class="head"><p>Hazard description</p></th>
+<th class="head"><p>Link to loss(es)</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>H1</p></td>
+<td><p>S-CORE accepts JSON inputs that are not syntactically well-formed per RFC 8259.</p></td>
+<td><p>L1; L2; L3; L5</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>H2</p></td>
+<td><p>S-CORE rejects syntactically well-formed JSON inputs that should be accepted in the defined domain.</p></td>
+<td><p>L1; L4</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>H3</p></td>
+<td><p>S-CORE obtains a parsed representation that is semantically inconsistent with the original JSON text.</p></td>
+<td><p>L1; L3; L5</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>H4</p></td>
+<td><p>S-CORE encounters unhandled exceptions or hangs during JSON parsing/validation operations.</p></td>
+<td><p>L4</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>H5</p></td>
+<td><p>S-CORE misinterprets parser outcomes due to ambiguous or undocumented behaviour of the library.</p></td>
+<td><p>L1; L2; L3; L5</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>H6</p></td>
+<td><p>S-CORE experiences resource exhaustion (CPU/memory/time) while processing JSON inputs, impacting availability or deadlines.</p></td>
+<td><p>L4</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>H7</p></td>
+<td><p>Upstream vulnerabilities or relevant open bugs are not tracked/triaged, so known issues remain present in the integrated component.</p></td>
+<td><p>L6; L4; L3</p></td>
+<td><p>L3 under assumption that upstream triage is audit/contract/regulatory required</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="system-level-constraints">
+<h2>2.3 System-level Constraints<a class="headerlink" href="#system-level-constraints" title="Link to this heading">#</a></h2>
+<p>In RAFIA/STPA, constraints are “statements that must be true” to avoid a hazard, UCA, or causal scenario [<a class="reference external" href="https://pages.eclipse.dev/eclipse/tsf/tsf/extensions/rafia/risk-analysis.html">RAFIA: Risk Analysis</a>]. In TSF terms, these constraints are captured as (or mapped onto existing) <strong>Items</strong>, and are supported by <strong>Evidence</strong>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Constraint Id</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Constraint Type</p></th>
+<th class="head"><p>Link to Constraint(s)</p></th>
+<th class="head"><p>Link to Hazard(s)</p></th>
+<th class="head"><p>Links to UCA</p></th>
+<th class="head"><p>Links to CS</p></th>
+<th class="head"><p>Links to TSF</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>C1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">basic_json::accept</span></code> correctly distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context.</p></td>
+<td><p>CFC</p></td>
+<td><p></p></td>
+<td><p>H1; H2</p></td>
+<td><p>UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B</p></td>
+<td><p>CL1-1-CS4-P; CL1-1-CS4-O</p></td>
+<td><p>JLEX-01</p></td>
+</tr>
+<tr class="row-odd"><td><p>C2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">basic_json::parse</span></code> returns a correct representation for well-formed JSON or signals failure clearly (exception) under the defined scope/integration context.</p></td>
+<td><p>CFC</p></td>
+<td><p></p></td>
+<td><p>H2; H3; H4; H5</p></td>
+<td><p>UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3</p></td>
+<td><p>CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D</p></td>
+<td><p>JLEX-02</p></td>
+</tr>
+<tr class="row-even"><td><p>C3</p></td>
+<td><p>For ill-formed JSON, parsing does not silently produce a misleading <code class="docutils literal notranslate"><span class="pre">basic_json</span></code> value; failure is signalled.</p></td>
+<td><p>CFC</p></td>
+<td><p></p></td>
+<td><p>H1; H5</p></td>
+<td><p>UCA-I3-PR-UCX2</p></td>
+<td><p>CL1-3-CS4-P</p></td>
+<td><p>JLS-24</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4</p></td>
+<td><p>Parsing/validation completes within acceptable resource/time bounds for the integration context, or the integration specifies explicit budgets/limits.</p></td>
+<td><p>SLC</p></td>
+<td><p></p></td>
+<td><p>H4; H6</p></td>
+<td><p></p></td>
+<td><p>CL1-3-CS3-A; CL1-3-CS4-I; CL1-3-CS4-D</p></td>
+<td><p>AOU-31</p></td>
+</tr>
+<tr class="row-even"><td><p>C5</p></td>
+<td><p>A safe dependency state is maintained such that known relevant upstream issues/CVEs do not remain present beyond acceptable limits.</p></td>
+<td><p>SLC</p></td>
+<td><p></p></td>
+<td><p>H7</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>JLS-11; AOU-27; AOU-28; AOU-29</p></td>
+</tr>
+<tr class="row-odd"><td><p>C6</p></td>
+<td><p>All feedback channels at the integration boundary (validation results and exceptions/error signalling) are handled and interpreted correctly.</p></td>
+<td><p>CSC</p></td>
+<td><p></p></td>
+<td><p>H4; H5</p></td>
+<td><p>UCA-I3-PR-UCX3</p></td>
+<td><p>CL1-2-CS2-F; CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P</p></td>
+<td><p>AOU-04; AOU-07</p></td>
+</tr>
+<tr class="row-even"><td><p>C7</p></td>
+<td><p>Input encoding satisfies RFC 8259 (UTF-8) or violations are handled explicitly at the boundary.</p></td>
+<td><p>CSC</p></td>
+<td><p></p></td>
+<td><p>H4; H5</p></td>
+<td><p></p></td>
+<td><p>CL1-1-CS4-I</p></td>
+<td><p>AOU-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>C8</p></td>
+<td><p>Object keys are unique when objects are parsed (or ambiguity is mitigated at integration level).</p></td>
+<td><p>CSC</p></td>
+<td><p></p></td>
+<td><p>H5</p></td>
+<td><p></p></td>
+<td><p>CL1-3-CS4-I</p></td>
+<td><p>AOU-20</p></td>
+</tr>
+<tr class="row-even"><td><p>C9</p></td>
+<td><p>Numbers are base-10 as required by JSON, or non-decimal representations are handled/mitigated.</p></td>
+<td><p>CSC</p></td>
+<td><p></p></td>
+<td><p>H4; H5</p></td>
+<td><p></p></td>
+<td><p>CL1-3-CS4-I</p></td>
+<td><p>AOU-22</p></td>
+</tr>
+<tr class="row-odd"><td><p>C10</p></td>
+<td><p>Data is complete and error-free at the component boundary (or boundary corruption is detected/handled).</p></td>
+<td><p>CSC</p></td>
+<td><p></p></td>
+<td><p>H5</p></td>
+<td><p></p></td>
+<td><p>CL1-1-CS4-D</p></td>
+<td><p>AOU-23</p></td>
+</tr>
+<tr class="row-even"><td><p>C11</p></td>
+<td><p>Governance workflow detects/triages/mitigates upstream drift and advisories for the integrated dependency.</p></td>
+<td><p>CSC</p></td>
+<td><p>C5</p></td>
+<td><p>H7</p></td>
+<td><p>UCA-I5-NP-UCX4; UCA-I5-PR-UCX4; UCA-I5-TL-UCX4; UCA-I5-SO-UCX4</p></td>
+<td><p>CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P</p></td>
+<td><p>AOU-27; AOU-28; AOU-29; JLS-11</p></td>
+</tr>
+<tr class="row-odd"><td><p>C12</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">basic_json::parse</span></code> provides an unambiguous and integration-consistent failure indication for invalid JSON in the defined scope.</p></td>
+<td><p>CFC</p></td>
+<td><p>C6</p></td>
+<td><p>H4; H5</p></td>
+<td><p>UCA-I3-PR-UCX3</p></td>
+<td><p>CL1-2-CS2-F; CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P</p></td>
+<td><p>JLEX-02; JLS-24</p></td>
+</tr>
+<tr class="row-even"><td><p>C13</p></td>
+<td><p>Integration governance performs required upstream triage/review for the deployed dependency state.</p></td>
+<td><p>CFC</p></td>
+<td><p>C11</p></td>
+<td><p>H7</p></td>
+<td><p>UCA-I5-NP-UCX4</p></td>
+<td><p>CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P</p></td>
+<td><p>AOU-28; AOU-29; JLS-11</p></td>
+</tr>
+<tr class="row-odd"><td><p>C14</p></td>
+<td><p>Integration governance correctly classifies applicability/impact of upstream advisories/issues for the deployed dependency state.</p></td>
+<td><p>CFC</p></td>
+<td><p>C11</p></td>
+<td><p>H7</p></td>
+<td><p>UCA-I5-PR-UCX4</p></td>
+<td><p>CL2-1-CS1-M</p></td>
+<td><p>AOU-28; AOU-29; JLS-11</p></td>
+</tr>
+<tr class="row-even"><td><p>C15</p></td>
+<td><p>Integration governance applies required mitigations/updates in time such that known relevant issues do not remain present beyond acceptable limits.</p></td>
+<td><p>CFC</p></td>
+<td><p>C11</p></td>
+<td><p>H7</p></td>
+<td><p>UCA-I5-TL-UCX4</p></td>
+<td><p>CL2-1-CS1-A; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P</p></td>
+<td><p>AOU-27; AOU-28; AOU-29; JLS-11</p></td>
+</tr>
+<tr class="row-odd"><td><p>C16</p></td>
+<td><p>Integration governance completes required regression evaluation before applying updates/mitigations.</p></td>
+<td><p>CFC</p></td>
+<td><p>C11</p></td>
+<td><p>H7</p></td>
+<td><p>UCA-I5-SO-UCX4</p></td>
+<td><p>CL2-1-CS1-A</p></td>
+<td><p>AOU-27; JLS-11</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="control-structure">
+<h1>3. Control structure<a class="headerlink" href="#control-structure" title="Link to this heading">#</a></h1>
+<p>Here, a control structure is defined, which is intentionally minimal and models two control loops:</p>
+<ul class="simple">
+<li><p><strong>CL1 (Functional validation/parsing)</strong>: S-CORE calls <code class="docutils literal notranslate"><span class="pre">accept</span></code>/<code class="docutils literal notranslate"><span class="pre">parse</span></code> and reacts to Boolean results and exceptions.</p></li>
+<li><p><strong>CL2 (Governance)</strong>: periodic upstream issue/CVE review and update decisions, because <strong>H7</strong> is in scope (anchored by <code class="docutils literal notranslate"><span class="pre">AOU-27..29</span></code>).</p></li>
+</ul>
+<section id="control-structure-diagram-scope-interactions">
+<h2>3.0 Control structure diagram (scope + interactions)<a class="headerlink" href="#control-structure-diagram-scope-interactions" title="Link to this heading">#</a></h2>
+<p><img alt="STPA control structure and scope boundary" src="_images/STPA_diagram_nlohmann.png" /></p>
+<p>This diagram is used both to define the <strong>scope of analysis</strong> (system boundary and environment) and to describe the <strong>control structure</strong> (elements and interactions). Control actions are shown as solid arrows, feedback as dashed arrows, and boundary/other interactions as a distinct dashed style (see legend). The diagram is a functional abstraction (not a physical or executable model) and does not assume that control actions or feedback are always delivered as intended.</p>
+</section>
+<section id="elements">
+<h2>3.1 Elements<a class="headerlink" href="#elements" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Element Id</p></th>
+<th class="head"><p>Element name</p></th>
+<th class="head"><p>Responsibilities</p></th>
+<th class="head"><p>Roles</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>E1</p></td>
+<td><p>S-CORE JSON caller</p></td>
+<td><p>Calls <code class="docutils literal notranslate"><span class="pre">accept</span></code>/<code class="docutils literal notranslate"><span class="pre">parse</span></code>, interprets results, handles errors</p></td>
+<td><p>Controller</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>E2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> service</p></td>
+<td><p>Validates/parses input, returns Boolean/value or throws</p></td>
+<td><p>Controlled Process</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>E3</p></td>
+<td><p>Integration governance process</p></td>
+<td><p>Reviews upstream issues/CVEs, decides mitigation/update</p></td>
+<td><p>Controller</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>E4</p></td>
+<td><p>Dependency state</p></td>
+<td><p>Tracks current version, reflects known upstream issues/CVEs affecting it</p></td>
+<td><p>Controlled Process</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="interactions-control-actions-and-feedback">
+<h2>3.2 Interactions (control actions and feedback)<a class="headerlink" href="#interactions-control-actions-and-feedback" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Interaction Id</p></th>
+<th class="head"><p>Diagram Label</p></th>
+<th class="head"><p>Interaction description</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Provider Id</p></th>
+<th class="head"><p>Receiver Id</p></th>
+<th class="head"><p>Category</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>I1</p></td>
+<td><p>I1</p></td>
+<td><p>Call <code class="docutils literal notranslate"><span class="pre">basic_json::accept</span></code> on input text</p></td>
+<td><p>C</p></td>
+<td><p>E1</p></td>
+<td><p>E2</p></td>
+<td><p>D</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>I2</p></td>
+<td><p>I2</p></td>
+<td><p>Return Boolean <code class="docutils literal notranslate"><span class="pre">accept</span></code> result</p></td>
+<td><p>F</p></td>
+<td><p>E2</p></td>
+<td><p>E1</p></td>
+<td><p>D</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>I3</p></td>
+<td><p>I3</p></td>
+<td><p>Call <code class="docutils literal notranslate"><span class="pre">basic_json::parse</span></code> on input text</p></td>
+<td><p>C</p></td>
+<td><p>E1</p></td>
+<td><p>E2</p></td>
+<td><p>D</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>I4</p></td>
+<td><p>I4</p></td>
+<td><p>Return parsed value or throw exception</p></td>
+<td><p>F</p></td>
+<td><p>E2</p></td>
+<td><p>E1</p></td>
+<td><p>D</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>I5</p></td>
+<td><p>I5</p></td>
+<td><p>Perform upstream triage/update decision</p></td>
+<td><p>C</p></td>
+<td><p>E3</p></td>
+<td><p>E4</p></td>
+<td><p>D</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>I6</p></td>
+<td><p>I6</p></td>
+<td><p>Provide upstream status/impact signals</p></td>
+<td><p>F</p></td>
+<td><p>E4</p></td>
+<td><p>E3</p></td>
+<td><p>D</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="control-loops-and-step-references-used-by-scenarios">
+<h2>3.3 Control loops and step references (used by Scenarios)<a class="headerlink" href="#control-loops-and-step-references-used-by-scenarios" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Loop</p></th>
+<th class="head"><p>CL ref</p></th>
+<th class="head"><p>Step meaning</p></th>
+<th class="head"><p>Interaction(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CL1</p></td>
+<td><p>CL1-1</p></td>
+<td><p>Validation action (<code class="docutils literal notranslate"><span class="pre">accept</span></code>)</p></td>
+<td><p>I1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1</p></td>
+<td><p>CL1-2</p></td>
+<td><p>Validation feedback</p></td>
+<td><p>I2</p></td>
+</tr>
+<tr class="row-even"><td><p>CL1</p></td>
+<td><p>CL1-3</p></td>
+<td><p>Parsing action (<code class="docutils literal notranslate"><span class="pre">parse</span></code>)</p></td>
+<td><p>I3</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1</p></td>
+<td><p>CL1-4</p></td>
+<td><p>Parsing feedback + handling at boundary</p></td>
+<td><p>I4</p></td>
+</tr>
+<tr class="row-even"><td><p>CL2</p></td>
+<td><p>CL2-1</p></td>
+<td><p>Governance action (triage/update decision)</p></td>
+<td><p>I5</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2</p></td>
+<td><p>CL2-2</p></td>
+<td><p>Governance feedback (status/impact signals)</p></td>
+<td><p>I6</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="unsafe-control-actions-ucas">
+<h1>4. Unsafe Control Actions (UCAs)<a class="headerlink" href="#unsafe-control-actions-ucas" title="Link to this heading">#</a></h1>
+<p>Using the control structure, we identify <strong>Unsafe Control Actions (UCA*)</strong>:</p>
+<p>A UCA is an interaction between a controller and a controlled process that can lead to a hazard. For this library-centric control structure, UCAs correspond to “incorrect accept/parse outcome” and “incorrect error signalling”.</p>
+<p>Per the RAFIA STPA procedure, the normative Step 4 record is the <strong>CA-Analysis</strong> table (UCAType × context × control action), from which the <strong>UCA</strong> table is derived.</p>
+<section id="uca-contexts">
+<h2>4.1 UCA-Contexts<a class="headerlink" href="#uca-contexts" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Context Id</p></th>
+<th class="head"><p>Unsafe Context</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UCX1</p></td>
+<td><p>WHEN <code class="docutils literal notranslate"><span class="pre">accept</span></code> is used as a gating signal for whether untrusted input is treated as JSON (and the caller acts on that decision)</p></td>
+<td><p>Covers both acceptance of ill-formed input and rejection of well-formed input as system-level unsafe outcomes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>UCX2</p></td>
+<td><p>WHEN <code class="docutils literal notranslate"><span class="pre">parse</span></code> is used to parse untrusted input and the parsed value is used for subsequent decisions or execution paths</p></td>
+<td><p>Focus is on correctness of the parsed representation relative to the input text.</p></td>
+</tr>
+<tr class="row-even"><td><p>UCX3</p></td>
+<td><p>WHEN <code class="docutils literal notranslate"><span class="pre">parse</span></code> is expected to fail safely and predictably for invalid input and to complete within practical constraints for valid input</p></td>
+<td><p>Includes exception signalling, hang/non-termination, and ambiguity at the boundary.</p></td>
+</tr>
+<tr class="row-odd"><td><p>UCX4</p></td>
+<td><p>WHEN new upstream issues/advisories apply to the deployed dependency state and governance is responsible for triage and timely mitigations/updates</p></td>
+<td><p>Includes decision quality, timeliness, and required evaluation steps.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="ca-analysis">
+<h2>4.2 CA-Analysis<a class="headerlink" href="#ca-analysis" title="Link to this heading">#</a></h2>
+<p>The RAFIA STPA procedure requires a CA-Analysis table keyed by control actions (here: <strong>I1</strong>, <strong>I3</strong>, <strong>I5</strong>) and including a full set of rows for each defined <strong>UCAType</strong> (NP, PR, ML, MM, DS, DL, TE, TL, SO) for each applicable <strong>UCA Context</strong>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>CA Analysis ID</p></th>
+<th class="head"><p>CA Id</p></th>
+<th class="head"><p>UCA Type</p></th>
+<th class="head"><p>UCA Context</p></th>
+<th class="head"><p>Analysis Result</p></th>
+<th class="head"><p>Hazard(s)</p></th>
+<th class="head"><p>Justification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CAA-I1-NP-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>NP</p></td>
+<td><p>UCX1</p></td>
+<td><p>Safe</p></td>
+<td><p></p></td>
+<td><p>Not calling <code class="docutils literal notranslate"><span class="pre">accept</span></code> does not introduce a new hazard in this control structure: <code class="docutils literal notranslate"><span class="pre">parse</span></code> remains the authoritative validation/parse step and is analysed separately (I3).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I1-PR-UCX1-A</p></td>
+<td><p>I1</p></td>
+<td><p>PR</p></td>
+<td><p>UCX1</p></td>
+<td><p>UCA</p></td>
+<td><p>H1; H5</p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">accept</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> for ill-formed JSON, S-CORE may treat ill-formed input as valid and proceed (UCA-I1-PR-UCX1-A).</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I1-PR-UCX1-B</p></td>
+<td><p>I1</p></td>
+<td><p>PR</p></td>
+<td><p>UCX1</p></td>
+<td><p>UCA</p></td>
+<td><p>H2</p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">accept</span></code> returns <code class="docutils literal notranslate"><span class="pre">false</span></code> for well-formed JSON, S-CORE may reject valid input that should be accepted (UCA-I1-PR-UCX1-B).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I1-ML-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>ML</p></td>
+<td><p>UCX1</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I1-MM-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>MM</p></td>
+<td><p>UCX1</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude of a control action does not apply to a discrete function call in this abstraction; unsafe outcomes are covered under PR/TL.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I1-DS-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>DS</p></td>
+<td><p>UCX1</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Duration (too short) is not meaningful for this discrete call; any timing-related unsafe outcome is captured under TE/TL.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I1-DL-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>DL</p></td>
+<td><p>UCX1</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Duration (too long) is captured as “too late” (TL) for this discrete call outcome at the boundary.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I1-TE-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>TE</p></td>
+<td><p>UCX1</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>“Too early” does not apply: <code class="docutils literal notranslate"><span class="pre">accept</span></code> is invoked explicitly by the caller, and there is no earlier unsafe timing context defined for UCX1.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I1-TL-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>TL</p></td>
+<td><p>UCX1</p></td>
+<td><p>Safe</p></td>
+<td><p></p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">accept</span></code> is slow, the system-level effect is availability impact rather than an unsafe acceptance decision; availability for valid input is analysed under I3 timing/termination (UCA-I3-TL-UCX3) in UCX3.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I1-SO-UCX1</p></td>
+<td><p>I1</p></td>
+<td><p>SO</p></td>
+<td><p>UCX1</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Sequence/order does not apply to this single, synchronous call in isolation. Concurrency/order hazards are analysed at the <code class="docutils literal notranslate"><span class="pre">parse</span></code> boundary where practical impact is observed (UCX3).</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-NP-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>NP</p></td>
+<td><p>UCX2</p></td>
+<td><p>Safe</p></td>
+<td><p></p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">parse</span></code> is not invoked then no parsed value is produced and this specific hazard mechanism (semantic mismatch) cannot occur.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-PR-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>PR</p></td>
+<td><p>UCX2</p></td>
+<td><p>UCA</p></td>
+<td><p>H3; H5</p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">parse</span></code> returns a value inconsistent with the input text then the system may act on an incorrect representation (UCA-I3-PR-UCX2).</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-ML-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>ML</p></td>
+<td><p>UCX2</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude categories do not apply to this abstraction of <code class="docutils literal notranslate"><span class="pre">parse</span></code> as a discrete call; unsafe outcomes are captured under PR/TL.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-MM-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>MM</p></td>
+<td><p>UCX2</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude categories do not apply to this abstraction of <code class="docutils literal notranslate"><span class="pre">parse</span></code> as a discrete call; unsafe outcomes are captured under PR/TL.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-DS-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>DS</p></td>
+<td><p>UCX2</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Duration (too short) is not meaningful for this discrete call; incorrect early termination would manifest as an error/exception covered under UCX3.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-DL-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>DL</p></td>
+<td><p>UCX2</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Duration (too long) is captured as “too late” (TL) for completion within practical constraints.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-TE-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>TE</p></td>
+<td><p>UCX2</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>“Too early” does not apply: <code class="docutils literal notranslate"><span class="pre">parse</span></code> is invoked explicitly by the caller in response to system needs.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-TL-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>TL</p></td>
+<td><p>UCX2</p></td>
+<td><p>Safe</p></td>
+<td><p></p></td>
+<td><p>Timing issues for <code class="docutils literal notranslate"><span class="pre">parse</span></code> are analysed in UCX3 because the safety-relevant mechanism is failure to complete or signal errors safely, not early/late correctness mismatch.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-SO-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>SO</p></td>
+<td><p>UCX2</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Sequence/order is not applicable to a single <code class="docutils literal notranslate"><span class="pre">parse</span></code> call in isolation; ordering-related problems are treated as boundary error-handling/concurrency in UCX3.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-NP-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>NP</p></td>
+<td><p>UCX3</p></td>
+<td><p>Safe</p></td>
+<td><p></p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">parse</span></code> is not invoked, the error-signalling and termination issues in UCX3 do not arise for this interaction.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-PR-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>PR</p></td>
+<td><p>UCX3</p></td>
+<td><p>UCA</p></td>
+<td><p>H4; H5</p></td>
+<td><p>If errors are signalled ambiguously (or in a way the caller can misinterpret), boundary handling can fail (UCA-I3-PR-UCX3).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-ML-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>ML</p></td>
+<td><p>UCX3</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude is not meaningful for this discrete call abstraction.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-MM-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>MM</p></td>
+<td><p>UCX3</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude is not meaningful for this discrete call abstraction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-DS-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>DS</p></td>
+<td><p>UCX3</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Duration (too short) is not meaningful for error signalling; premature termination manifests as exception/failed parse which is already covered by PR/Safe outcomes.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-DL-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>DL</p></td>
+<td><p>UCX3</p></td>
+<td><p>Safe</p></td>
+<td><p></p></td>
+<td><p>“Too long” is treated as “too late” (TL) for this discrete call in this analysis; the unsafe outcome is recorded under TL (UCA-I3-TL-UCX3).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-TE-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>TE</p></td>
+<td><p>UCX3</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>“Too early” does not apply for this synchronous call abstraction.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I3-TL-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>TL</p></td>
+<td><p>UCX3</p></td>
+<td><p>UCA</p></td>
+<td><p>H4</p></td>
+<td><p>“Too late” completion (effectively non-termination or excessive delay) makes the interaction unsafe under practical constraints (UCA-I3-TL-UCX3).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I3-SO-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>SO</p></td>
+<td><p>UCX3</p></td>
+<td><p>Safe</p></td>
+<td><p></p></td>
+<td><p>The library call is synchronous; sequence/order issues primarily arise in the caller’s concurrency model. This analysis assumes the caller does not treat results from one thread/context as belonging to another; otherwise additional UCAs and hazards should be added.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I5-NP-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>NP</p></td>
+<td><p>UCX4</p></td>
+<td><p>UCA</p></td>
+<td><p>H7</p></td>
+<td><p>Not performing required triage/review can leave known issues unmitigated (UCA-I5-NP-UCX4).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I5-PR-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>PR</p></td>
+<td><p>UCX4</p></td>
+<td><p>UCA</p></td>
+<td><p>H7</p></td>
+<td><p>Performing triage but dismissing an applicable advisory/issue is unsafe (UCA-I5-PR-UCX4).</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I5-ML-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>ML</p></td>
+<td><p>UCX4</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude is not meaningful for this governance decision in this abstraction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I5-MM-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>MM</p></td>
+<td><p>UCX4</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Magnitude is not meaningful for this governance decision in this abstraction.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I5-DS-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>DS</p></td>
+<td><p>UCX4</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Duration (too short) is not meaningful for this discrete decision abstraction; relevant issues are captured under TL/SO.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I5-DL-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>DL</p></td>
+<td><p>UCX4</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>Duration (too long) is captured as timing too late (TL) for decision/mitigation application.</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I5-TE-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>TE</p></td>
+<td><p>UCX4</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p>“Too early” is not applicable in this abstraction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAA-I5-TL-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>TL</p></td>
+<td><p>UCX4</p></td>
+<td><p>UCA</p></td>
+<td><p>H7</p></td>
+<td><p>Applying an update/mitigation too late can leave known issues in place beyond acceptable limits (UCA-I5-TL-UCX4).</p></td>
+</tr>
+<tr class="row-even"><td><p>CAA-I5-SO-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>SO</p></td>
+<td><p>UCX4</p></td>
+<td><p>UCA</p></td>
+<td><p>H7</p></td>
+<td><p>Applying an update/mitigation without adequate regression evaluation is an out-of-sequence governance action (UCA-I5-SO-UCX4).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="ucas">
+<h2>4.3 UCAs<a class="headerlink" href="#ucas" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>UCA Id</p></th>
+<th class="head"><p>CA</p></th>
+<th class="head"><p>UCA Type</p></th>
+<th class="head"><p>UCA Context</p></th>
+<th class="head"><p>UCA Definition</p></th>
+<th class="head"><p>UCA Description</p></th>
+<th class="head"><p>Constraint Id</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UCA-I1-PR-UCX1-A</p></td>
+<td><p>I1</p></td>
+<td><p>PR</p></td>
+<td><p>UCX1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">accept</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> for ill-formed JSON when it must reject it.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">accept</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> for ill-formed JSON.</p></td>
+<td><p>C1</p></td>
+</tr>
+<tr class="row-odd"><td><p>UCA-I1-PR-UCX1-B</p></td>
+<td><p>I1</p></td>
+<td><p>PR</p></td>
+<td><p>UCX1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">accept</span></code> returns <code class="docutils literal notranslate"><span class="pre">false</span></code> for well-formed JSON when it must accept it.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">accept</span></code> returns <code class="docutils literal notranslate"><span class="pre">false</span></code> for well-formed JSON.</p></td>
+<td><p>C1</p></td>
+</tr>
+<tr class="row-even"><td><p>UCA-I3-PR-UCX2</p></td>
+<td><p>I3</p></td>
+<td><p>PR</p></td>
+<td><p>UCX2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">parse</span></code> returns a value inconsistent with the JSON text when it must be semantically equivalent.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">parse</span></code> returns a value inconsistent with the JSON text.</p></td>
+<td><p>C2</p></td>
+</tr>
+<tr class="row-odd"><td><p>UCA-I3-TL-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>TL</p></td>
+<td><p>UCX3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">parse</span></code> completes too late for valid JSON under practical constraints when it must complete in time.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">parse</span></code> hangs for valid JSON under practical constraints.</p></td>
+<td><p>C2; C4</p></td>
+</tr>
+<tr class="row-even"><td><p>UCA-I3-PR-UCX3</p></td>
+<td><p>I3</p></td>
+<td><p>PR</p></td>
+<td><p>UCX3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">parse</span></code> signals failure ambiguously when it must signal failure clearly and predictably.</p></td>
+<td><p>Errors are signalled ambiguously, enabling misinterpretation.</p></td>
+<td><p>C12; C6</p></td>
+</tr>
+<tr class="row-odd"><td><p>UCA-I5-NP-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>NP</p></td>
+<td><p>UCX4</p></td>
+<td><p>Governance does not perform required triage/review when it must be performed.</p></td>
+<td><p>Required upstream review/triage is not performed.</p></td>
+<td><p>C13</p></td>
+</tr>
+<tr class="row-even"><td><p>UCA-I5-PR-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>PR</p></td>
+<td><p>UCX4</p></td>
+<td><p>Governance performs triage but dismisses an applicable issue/advisory when it must be acted upon.</p></td>
+<td><p>Relevant advisory/issue is incorrectly dismissed.</p></td>
+<td><p>C14</p></td>
+</tr>
+<tr class="row-odd"><td><p>UCA-I5-TL-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>TL</p></td>
+<td><p>UCX4</p></td>
+<td><p>Governance applies an update/mitigation too late when it must be applied in time.</p></td>
+<td><p>Update/mitigation is applied too late.</p></td>
+<td><p>C15</p></td>
+</tr>
+<tr class="row-even"><td><p>UCA-I5-SO-UCX4</p></td>
+<td><p>I5</p></td>
+<td><p>SO</p></td>
+<td><p>UCX4</p></td>
+<td><p>Governance applies an update/mitigation out of sequence (without adequate regression evaluation) when it must be evaluated first.</p></td>
+<td><p>Update is applied without adequate regression evaluation.</p></td>
+<td><p>C16</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="controller-functional-constraints">
+<h1>5. Controller (Functional) Constraints<a class="headerlink" href="#controller-functional-constraints" title="Link to this heading">#</a></h1>
+<p>This step records the <strong>Controller (Functional) Constraints (CFC)</strong> derived from the UCA results.</p>
+<p>In this analysis, the term “controller constraint” is interpreted at the same abstraction level as the control structure in Section 3:</p>
+<ul class="simple">
+<li><p>For the <strong>functional parsing loop (CL1)</strong>, the constraints that prevent UCAs are largely expressed as <strong>functional constraints on the <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> service behaviour</strong> (C1–C3, C12), because the UCAs in Section 4 are framed as “unsafe outcome of the <code class="docutils literal notranslate"><span class="pre">accept</span></code>/<code class="docutils literal notranslate"><span class="pre">parse</span></code> control action”.</p></li>
+<li><p>For <strong>boundary handling</strong> (error and feedback handling) and <strong>governance</strong>, the constraints include <strong>CSC</strong> items (C6, C11) anchored by existing AOU/JLS statements, and <strong>CFC</strong> items (C13–C16) that constrain the governance control action (I5).</p></li>
+</ul>
+<section id="cfc-constraints-derived-from-ucas">
+<h2>5.1 CFC constraints derived from UCAs<a class="headerlink" href="#cfc-constraints-derived-from-ucas" title="Link to this heading">#</a></h2>
+<p>The CFC constraints derived from UCAs are recorded as Constraints in Section 2.3 and are linked from the UCA table in Section 4.3:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C1</span></code> (TSF: <code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code>) constrains <code class="docutils literal notranslate"><span class="pre">accept</span></code> outcomes to prevent <code class="docutils literal notranslate"><span class="pre">UCA-I1-PR-UCX1-A</span></code> and <code class="docutils literal notranslate"><span class="pre">UCA-I1-PR-UCX1-B</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C2</span></code> (TSF: <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>) constrains <code class="docutils literal notranslate"><span class="pre">parse</span></code> outcomes and failure signalling to prevent <code class="docutils literal notranslate"><span class="pre">UCA-I3-PR-UCX2</span></code> and contribute to preventing <code class="docutils literal notranslate"><span class="pre">UCA-I3-TL-UCX3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C3</span></code> (TSF: <code class="docutils literal notranslate"><span class="pre">JLS-24</span></code>) prevents silent misleading values for ill-formed JSON (supports preventing <code class="docutils literal notranslate"><span class="pre">UCA-I3-PR-UCX2</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C12</span></code> (TSF: <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>; <code class="docutils literal notranslate"><span class="pre">JLS-24</span></code>) constrains <code class="docutils literal notranslate"><span class="pre">parse</span></code> failure signalling to prevent <code class="docutils literal notranslate"><span class="pre">UCA-I3-PR-UCX3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C13</span></code>–<code class="docutils literal notranslate"><span class="pre">C16</span></code> constrain the governance control action (I5) to prevent <code class="docutils literal notranslate"><span class="pre">UCA-I5-*</span></code> outcomes in UCX4.</p></li>
+</ul>
+</section>
+<section id="uca-to-constraint-coverage-note-non-cfc-constraints">
+<h2>5.2 UCA-to-constraint coverage note (non-CFC constraints)<a class="headerlink" href="#uca-to-constraint-coverage-note-non-cfc-constraints" title="Link to this heading">#</a></h2>
+<p>In addition to the CFC constraints above, this analysis records constraints that are primarily <strong>integration/process constraints</strong> as <strong>CSC</strong> (and parent SLC) in Section 2.3:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C6</span></code> (CSC, TSF: <code class="docutils literal notranslate"><span class="pre">AOU-04</span></code>; <code class="docutils literal notranslate"><span class="pre">AOU-07</span></code>) constrains boundary handling of results/exceptions and complements <code class="docutils literal notranslate"><span class="pre">C12</span></code> for <code class="docutils literal notranslate"><span class="pre">UCA-I3-PR-UCX3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C11</span></code> (CSC, parent SLC: <code class="docutils literal notranslate"><span class="pre">C5</span></code>, TSF: <code class="docutils literal notranslate"><span class="pre">AOU-27</span></code>; <code class="docutils literal notranslate"><span class="pre">AOU-28</span></code>; <code class="docutils literal notranslate"><span class="pre">AOU-29</span></code>; <code class="docutils literal notranslate"><span class="pre">JLS-11</span></code>) constrains governance workflow and complements <code class="docutils literal notranslate"><span class="pre">C13</span></code>–<code class="docutils literal notranslate"><span class="pre">C16</span></code> for <code class="docutils literal notranslate"><span class="pre">UCA-I5-*</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="control-loops-and-sequences">
+<h1>6. Control Loops and Sequences<a class="headerlink" href="#control-loops-and-sequences" title="Link to this heading">#</a></h1>
+<p>This step makes the control loops explicit and records the expected sequence of interactions for each loop.</p>
+<section id="control-loops">
+<h2>6.1 Control Loops<a class="headerlink" href="#control-loops" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Loop Id</p></th>
+<th class="head"><p>Control Loop Description</p></th>
+<th class="head"><p>Controlled Process</p></th>
+<th class="head"><p>Linked SLC(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CL1</p></td>
+<td><p>Functional validation/parsing feedback loop between S-CORE caller and <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> service.</p></td>
+<td><p>E2</p></td>
+<td><p>C4</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2</p></td>
+<td><p>Governance feedback loop to maintain a safe dependency state through upstream triage and updates.</p></td>
+<td><p>E4</p></td>
+<td><p>C5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="cl-sequences-loop-steps">
+<h2>6.2 CL-Sequences (loop steps)<a class="headerlink" href="#cl-sequences-loop-steps" title="Link to this heading">#</a></h2>
+<p>The CL reference identifiers below match the CL refs already used in Section 3.3 and the Scenarios table.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>CL-Sequence Id</p></th>
+<th class="head"><p>Loop</p></th>
+<th class="head text-right"><p>Step</p></th>
+<th class="head"><p>Interaction Id</p></th>
+<th class="head"><p>Provider process model or state</p></th>
+<th class="head"><p>Provider logic</p></th>
+<th class="head"><p>Expected receiver behaviour</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CL1-1</p></td>
+<td><p>CL1</p></td>
+<td class="text-right"><p>1</p></td>
+<td><p>I1</p></td>
+<td><p>E1 model: input text is received and is intended to be JSON in the defined scope.</p></td>
+<td><p>E1 calls <code class="docutils literal notranslate"><span class="pre">basic_json::accept</span></code> for the input as a discrete API call.</p></td>
+<td><p>E2 validates syntax and completes the call, producing an accept/reject outcome.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2</p></td>
+<td><p>CL1</p></td>
+<td class="text-right"><p>2</p></td>
+<td><p>I2</p></td>
+<td><p>E2 state: parsing/validation result for the given input and parameters.</p></td>
+<td><p>E2 returns the Boolean result as the function return value.</p></td>
+<td><p>E1 interprets <code class="docutils literal notranslate"><span class="pre">true/false</span></code> correctly and uses it to decide whether to proceed (or to reject the input).</p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3</p></td>
+<td><p>CL1</p></td>
+<td class="text-right"><p>3</p></td>
+<td><p>I3</p></td>
+<td><p>E1 model: input is intended to be well-formed JSON for parsing, under the stated AOUs/constraints.</p></td>
+<td><p>E1 calls <code class="docutils literal notranslate"><span class="pre">basic_json::parse</span></code> for the input as a discrete API call.</p></td>
+<td><p>E2 parses and either produces a value or signals failure (error value) as defined for the integration context.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4</p></td>
+<td><p>CL1</p></td>
+<td class="text-right"><p>4</p></td>
+<td><p>I4</p></td>
+<td><p>E2 state: parsed value (success) or error state (failure).</p></td>
+<td><p>E2 returns a value or signals an error; this is the feedback channel for the parsing action.</p></td>
+<td><p>E1 handles return/error message correctly and does not misinterpret ambiguous outcomes (C6).</p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1</p></td>
+<td><p>CL2</p></td>
+<td class="text-right"><p>1</p></td>
+<td><p>I5</p></td>
+<td><p>E3 model: belief about current dependency state and whether upstream issues/advisories apply.</p></td>
+<td><p>E3 performs the periodic triage/update decision process (review and decision).</p></td>
+<td><p>E4 changes state (updated/mitigated) or remains unchanged with an explicit, reviewed rationale.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2</p></td>
+<td><p>CL2</p></td>
+<td class="text-right"><p>2</p></td>
+<td><p>I6</p></td>
+<td><p>E4 state: current dependency version and known upstream issue/advisory status.</p></td>
+<td><p>E4 provides status/impact signals via the available tracking mechanisms used by the governance process.</p></td>
+<td><p>E3 updates its model of dependency risk and schedules/executes mitigation/update actions as required.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="causal-scenarios">
+<h1>7. Causal Scenarios<a class="headerlink" href="#causal-scenarios" title="Link to this heading">#</a></h1>
+<p>The STPA schema records causal analysis results in a Scenarios table that links each causal scenario to a control-loop step (here: <strong>CL1</strong> functional parsing/validation and <strong>CL2</strong> governance), and to the resulting UCA and/or Hazards.</p>
+<p>CS Type values use the TSF schema category <code class="docutils literal notranslate"><span class="pre">CSType</span></code> (15 values: <code class="docutils literal notranslate"><span class="pre">CS1-*</span></code>, <code class="docutils literal notranslate"><span class="pre">CS2-*</span></code>, <code class="docutils literal notranslate"><span class="pre">CS3-*</span></code>, <code class="docutils literal notranslate"><span class="pre">CS4-*</span></code>). Analysis Result values use the TSF schema category <code class="docutils literal notranslate"><span class="pre">CSResult</span></code> (<code class="docutils literal notranslate"><span class="pre">UCA</span></code>, <code class="docutils literal notranslate"><span class="pre">Hazard</span></code>, <code class="docutils literal notranslate"><span class="pre">Both</span></code>, <code class="docutils literal notranslate"><span class="pre">OOS</span></code>, <code class="docutils literal notranslate"><span class="pre">SAF</span></code>, <code class="docutils literal notranslate"><span class="pre">N/A</span></code>, <code class="docutils literal notranslate"><span class="pre">TBD</span></code>).</p>
+<p>Each CL-Sequence step has a complete 15-type set of scenario rows, types that do not apply to that step are explicitly recorded as <code class="docutils literal notranslate"><span class="pre">N/A</span></code>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scenario Id</p></th>
+<th class="head"><p>Seq Ref</p></th>
+<th class="head"><p>CS Type</p></th>
+<th class="head"><p>Causal Scenario Prompt</p></th>
+<th class="head"><p>Analysis Result</p></th>
+<th class="head"><p>Causal Scenario Definition</p></th>
+<th class="head"><p>Links to UCA</p></th>
+<th class="head"><p>Links to Hazard(s)</p></th>
+<th class="head"><p>Constraint Id</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CL1-1-CS1-C</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS1-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS1-A</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS1-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS1-I</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS1-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS1-M</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS1-M</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS1-D</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS1-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS2-F</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS2-F</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS2-P</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS2-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS2-U</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS2-U</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS3-A</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS3-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS3-P</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS3-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS4-P</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS4-P</p></td>
+<td><p>How could <code class="docutils literal notranslate"><span class="pre">accept</span></code> lead to unsafe acceptance?</p></td>
+<td><p>Both</p></td>
+<td><p>Service accepts ill-formed JSON.</p></td>
+<td><p>UCA-I1-PR-UCX1-A</p></td>
+<td><p>H1; H5</p></td>
+<td><p>C1</p></td>
+<td><p>Evidence (<code class="docutils literal notranslate"><span class="pre">TIJ-*</span></code>, <code class="docutils literal notranslate"><span class="pre">WFJ-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NJF-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NPF-*</span></code>) reduces likelihood.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS4-C</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS4-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS4-I</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS4-I</p></td>
+<td><p>How could encoding assumptions be violated?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Input encoding violates RFC 8259 assumptions.</p></td>
+<td><p></p></td>
+<td><p>H4; H5</p></td>
+<td><p>C7</p></td>
+<td><p>Anchored by <code class="docutils literal notranslate"><span class="pre">AOU-05</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS4-O</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS4-O</p></td>
+<td><p>How could <code class="docutils literal notranslate"><span class="pre">accept</span></code> lead to unsafe rejection?</p></td>
+<td><p>Both</p></td>
+<td><p>Service rejects well-formed JSON.</p></td>
+<td><p>UCA-I1-PR-UCX1-B</p></td>
+<td><p>H2</p></td>
+<td><p>C1</p></td>
+<td><p>Positive evidence via <code class="docutils literal notranslate"><span class="pre">WFJ-*</span></code> and <code class="docutils literal notranslate"><span class="pre">PJD-*</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS4-D</p></td>
+<td><p>CL1-1</p></td>
+<td><p>CS4-D</p></td>
+<td><p>How could boundary corruption affect parsing outcomes?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Data is incomplete/corrupted at boundary.</p></td>
+<td><p></p></td>
+<td><p>H5</p></td>
+<td><p>C10</p></td>
+<td><p>Anchored by <code class="docutils literal notranslate"><span class="pre">AOU-23</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS1-C</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS1-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-2-CS1-A</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS1-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS1-I</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS1-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-2-CS1-M</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS1-M</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS1-D</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS1-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-2-CS2-F</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS2-F</p></td>
+<td><p>How could <code class="docutils literal notranslate"><span class="pre">accept</span></code> feedback become unsafe?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Caller ignores/misinterprets the <code class="docutils literal notranslate"><span class="pre">true/false</span></code> outcome and proceeds incorrectly.</p></td>
+<td><p></p></td>
+<td><p>H1; H5</p></td>
+<td><p>C6</p></td>
+<td><p>Integration misuse; mitigated by correct feedback handling (C6).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS2-P</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS2-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-2-CS2-U</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS2-U</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS3-A</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS3-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-2-CS3-P</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS3-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS4-P</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS4-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-2-CS4-C</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS4-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS4-I</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS4-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-2-CS4-O</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS4-O</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS4-D</p></td>
+<td><p>CL1-2</p></td>
+<td><p>CS4-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS1-C</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS1-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS1-A</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS1-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS1-I</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS1-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS1-M</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS1-M</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS1-D</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS1-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS2-F</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS2-F</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS2-P</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS2-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS2-U</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS2-U</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS3-A</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS3-A</p></td>
+<td><p>How could <code class="docutils literal notranslate"><span class="pre">parse</span></code> become unsafe due to timing/termination?</p></td>
+<td><p>Both</p></td>
+<td><p>Parsing throws/hangs under practical constraints.</p></td>
+<td><p>UCA-I3-TL-UCX3</p></td>
+<td><p>H2; H4</p></td>
+<td><p>C2; C4</p></td>
+<td><p>Availability is primarily constrained by SLC (C4).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS3-P</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS3-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS4-P</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS4-P</p></td>
+<td><p>How could <code class="docutils literal notranslate"><span class="pre">parse</span></code> produce an unsafe value?</p></td>
+<td><p>Both</p></td>
+<td><p>Parsing produces an inconsistent value.</p></td>
+<td><p>UCA-I3-PR-UCX2</p></td>
+<td><p>H3; H5</p></td>
+<td><p>C2</p></td>
+<td><p>Coverage via <code class="docutils literal notranslate"><span class="pre">PJD-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NPF-*</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS4-C</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS4-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS4-I</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS4-I</p></td>
+<td><p>How could process-input conditions make parsing unsafe?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Extreme size/depth, duplicate keys, or non-domain numeric forms violate integration assumptions and can cause resource exhaustion, ambiguity, or error-handling hazards.</p></td>
+<td><p></p></td>
+<td><p>H4; H5; H6</p></td>
+<td><p>C4; C8; C9</p></td>
+<td><p>Consolidates AOU-driven input preconditions (e.g. <code class="docutils literal notranslate"><span class="pre">AOU-20</span></code>, <code class="docutils literal notranslate"><span class="pre">AOU-22</span></code>) and deployment budgets (C4).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS4-O</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS4-O</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS4-D</p></td>
+<td><p>CL1-3</p></td>
+<td><p>CS4-D</p></td>
+<td><p>How could the platform/boundary contribute to non-termination?</p></td>
+<td><p>Both</p></td>
+<td><p>Platform effects contribute to hangs.</p></td>
+<td><p>UCA-I3-TL-UCX3</p></td>
+<td><p>H4</p></td>
+<td><p>C4</p></td>
+<td><p>Boundary-risk; mitigated by CI/analysis evidence.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS1-C</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS1-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-4-CS1-A</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS1-A</p></td>
+<td><p>How could exception handling become unsafe?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Exceptions are left uncaught.</p></td>
+<td><p></p></td>
+<td><p>H4</p></td>
+<td><p>C6</p></td>
+<td><p>Integration error-handling constraint.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS1-I</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS1-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-4-CS1-M</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS1-M</p></td>
+<td><p>How could feedback/exception handling become unsafe?</p></td>
+<td><p>Both</p></td>
+<td><p>Integrator mis-handles result/exception channel.</p></td>
+<td><p>UCA-I3-PR-UCX3</p></td>
+<td><p>H4; H5</p></td>
+<td><p>C6</p></td>
+<td><p>Integration/process scenario (AOU-driven).</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS1-D</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS1-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-4-CS2-F</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS2-F</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS2-P</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS2-P</p></td>
+<td><p>How could the feedback path become unsafe?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Failure signalling is altered or lost at a boundary (e.g. exception translation/disablement), so the caller does not reliably receive/interpret parse failure feedback.</p></td>
+<td><p></p></td>
+<td><p>H4; H5</p></td>
+<td><p>C6; C12</p></td>
+<td><p>Boundary-path aspect of <code class="docutils literal notranslate"><span class="pre">AOU-04</span></code>/<code class="docutils literal notranslate"><span class="pre">AOU-07</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-4-CS2-U</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS2-U</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS3-A</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS3-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-4-CS3-P</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS3-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS4-P</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS4-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-4-CS4-C</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS4-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS4-I</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS4-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-4-CS4-O</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS4-O</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-4-CS4-D</p></td>
+<td><p>CL1-4</p></td>
+<td><p>CS4-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS1-C</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS1-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS1-A</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS1-A</p></td>
+<td><p>How could a governance update introduce hazards?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Update introduces regression not caught by evidence.</p></td>
+<td><p></p></td>
+<td><p>H1; H2; H3; H4; H5; H6</p></td>
+<td><p>C11</p></td>
+<td><p>Managed by change control and regression expectations.</p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS1-I</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS1-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS1-M</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS1-M</p></td>
+<td><p>How could governance misclassify an applicable issue?</p></td>
+<td><p>Both</p></td>
+<td><p>Relevant issue/advisory is misclassified.</p></td>
+<td><p>UCA-I5-PR-UCX4</p></td>
+<td><p>H7</p></td>
+<td><p>C11</p></td>
+<td><p>See <code class="docutils literal notranslate"><span class="pre">JLS-11</span></code> and <code class="docutils literal notranslate"><span class="pre">TSF/docs/nlohmann_misbehaviours_comments.md</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS1-D</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS1-D</p></td>
+<td><p>How could CI/config drift undermine evidence effectiveness?</p></td>
+<td><p>Hazard</p></td>
+<td><p>CI/config drift reduces test effectiveness.</p></td>
+<td><p></p></td>
+<td><p>H1; H2; H3; H4; H5; H6</p></td>
+<td><p>C11</p></td>
+<td><p>Partially covered by <code class="docutils literal notranslate"><span class="pre">TA-INPUTS</span></code>/<code class="docutils literal notranslate"><span class="pre">TA-SUPPLY_CHAIN</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS2-F</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS2-F</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS2-P</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS2-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS2-U</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS2-U</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS3-A</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS3-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS3-P</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS3-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS4-P</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS4-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS4-C</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS4-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS4-I</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS4-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS4-O</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS4-O</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-1-CS4-D</p></td>
+<td><p>CL2-1</p></td>
+<td><p>CS4-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS1-C</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS1-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS1-A</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS1-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS1-I</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS1-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS1-M</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS1-M</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS1-D</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS1-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS2-F</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS2-F</p></td>
+<td><p>How could dependency-status feedback become unsafe?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Dependency status/advisory signals are incomplete, delayed, or incorrect, leading to missed/late mitigation.</p></td>
+<td><p></p></td>
+<td><p>H7</p></td>
+<td><p>C11</p></td>
+<td><p>E.g. incomplete issue triage inputs; stale status views; missed advisory notification.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS2-P</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS2-P</p></td>
+<td><p>How could the governance feedback path become unsafe?</p></td>
+<td><p>Hazard</p></td>
+<td><p>Advisory/issue signals are not delivered/observed (e.g. notification/configuration gaps), so the controller does not receive the feedback needed to trigger mitigation.</p></td>
+<td><p></p></td>
+<td><p>H7</p></td>
+<td><p>C11</p></td>
+<td><p>Feedback-path variant of the same governance risk.</p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS2-U</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS2-U</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS3-A</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS3-A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS3-P</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS3-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS4-P</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS4-P</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS4-C</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS4-C</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS4-I</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS4-I</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS4-O</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS4-O</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-2-CS4-D</p></td>
+<td><p>CL2-2</p></td>
+<td><p>CS4-D</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="causal-scenario-constraints">
+<h1>8. Causal Scenario Constraints<a class="headerlink" href="#causal-scenario-constraints" title="Link to this heading">#</a></h1>
+<p>This step records the constraints that prevent, avoid, or mitigate the causal scenarios listed in Section 7.</p>
+<p>In this document, the scenario table already links each scenario to one or more constraints (column “Constraint Id”). This section consolidates those links and provides the minimal “why this addresses the scenario” rationale in one place.</p>
+<section id="scenario-to-constraint-mapping">
+<h2>8.1 Scenario-to-constraint mapping<a class="headerlink" href="#scenario-to-constraint-mapping" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scenario Id</p></th>
+<th class="head"><p>Constraint(s)</p></th>
+<th class="head"><p>Constraint type(s)</p></th>
+<th class="head"><p>Why this addresses the scenario (short)</p></th>
+<th class="head"><p>TSF link(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CL1-1-CS4-P; CL1-1-CS4-O</p></td>
+<td><p>C1</p></td>
+<td><p>CFC</p></td>
+<td><p>Prevents incorrect <code class="docutils literal notranslate"><span class="pre">accept</span></code> outcomes, which are the scenario condition leading to unsafe accept/reject decisions and hazards H1/H2/H5.</p></td>
+<td><p>JLEX-01</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-3-CS4-P</p></td>
+<td><p>C2</p></td>
+<td><p>CFC</p></td>
+<td><p>Prevents inconsistent/incorrect parse results, addressing the scenario condition leading to UCA and hazards H3/H5.</p></td>
+<td><p>JLEX-02</p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS3-A; CL1-3-CS4-D</p></td>
+<td><p>C2; C4</p></td>
+<td><p>CFC; SLC</p></td>
+<td><p>C2 addresses functional correctness/error signalling; C4 addresses the time/resource bounds aspect that makes non-termination hazardous.</p></td>
+<td><p>JLEX-02</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-2-CS2-F; CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P</p></td>
+<td><p>C6 (and C12)</p></td>
+<td><p>CSC; CFC</p></td>
+<td><p>Prevents boundary mis-handling of results/exceptions and supports a correct feedback path interpretation; C12 complements with unambiguous failure signalling expectations.</p></td>
+<td><p>AOU-04; AOU-07</p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-3-CS4-I</p></td>
+<td><p>C4; C8; C9</p></td>
+<td><p>SLC; CSC; CSC</p></td>
+<td><p>Constrains input budgets and AOU-driven input conditions (duplicate keys, numeric forms) to prevent input-driven hazards (availability/ambiguity).</p></td>
+<td><p>AOU-20; AOU-22</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D</p></td>
+<td><p>C11 (and C5)</p></td>
+<td><p>CSC; SLC</p></td>
+<td><p>Prevents governance-loop failures (missed triage, misclassification, late updates, update without adequate evaluation) that keep known issues present or reintroduce hazards via regressions.</p></td>
+<td><p>AOU-27; AOU-28; AOU-29; JLS-11</p></td>
+</tr>
+<tr class="row-even"><td><p>CL2-2-CS2-F; CL2-2-CS2-P</p></td>
+<td><p>C11 (and C5)</p></td>
+<td><p>CSC; SLC</p></td>
+<td><p>Prevents unsafe/missing dependency-status feedback (data and path) from causing missed/late mitigation actions in the governance loop.</p></td>
+<td><p>AOU-28; AOU-29; JLS-11</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL1-1-CS4-I</p></td>
+<td><p>C7</p></td>
+<td><p>CSC</p></td>
+<td><p>Prevents encoding precondition violations (UTF-8/RFC 8259) from becoming parsing/handling hazards at the boundary.</p></td>
+<td><p>AOU-05</p></td>
+</tr>
+<tr class="row-even"><td><p>CL1-1-CS4-D</p></td>
+<td><p>C10</p></td>
+<td><p>CSC</p></td>
+<td><p>Prevents boundary corruption/incompleteness from silently affecting parsing outcomes and downstream behaviour.</p></td>
+<td><p>AOU-23</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="notes-on-constraint-types">
+<h2>8.2 Notes on constraint types<a class="headerlink" href="#notes-on-constraint-types" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Constraints C7–C11 are explicitly recorded as <strong>CSC</strong> because they reflect conditions and responsibilities at the <strong>integration boundary and governance loop</strong>, anchored by existing AOU/JLS statements.</p></li>
+<li><p>Constraints C1–C3 and C12–C16 are recorded as <strong>CFC</strong> because they define functional criteria that must be satisfied to avoid the UCAs around <code class="docutils literal notranslate"><span class="pre">accept</span></code>/<code class="docutils literal notranslate"><span class="pre">parse</span></code> outcomes (CL1) and governance outcomes (CL2).</p></li>
+</ul>
+</section>
+</section>
+<section id="misbehaviours-and-expectations">
+<h1>9. Misbehaviours and Expectations<a class="headerlink" href="#misbehaviours-and-expectations" title="Link to this heading">#</a></h1>
+<section id="misbehaviours">
+<h2>9.1 Misbehaviours<a class="headerlink" href="#misbehaviours" title="Link to this heading">#</a></h2>
+<p>In TSF terms, misbehaviours are <strong>anything that can cause a deviation from Expected Behaviour</strong> (<code class="docutils literal notranslate"><span class="pre">TA-MISBEHAVIOURS_CONTEXT.md</span></code>). In this analysis we derive them in two complementary ways:</p>
+<ul class="simple">
+<li><p><strong>Library misbehaviours (M1–M5)</strong>: the “negative space” of <code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code> / <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code> and their evidence families.</p></li>
+<li><p><strong>Process/integration misbehaviours (M6–M7)</strong>: violations at the boundary of this component that are explicitly anticipated by the TSF tree (e.g. upstream drift/CVE triage duties via <code class="docutils literal notranslate"><span class="pre">AOU-28</span></code>/<code class="docutils literal notranslate"><span class="pre">AOU-29</span></code>) or are typical for parser integration when input is untrusted (resource exhaustion).</p></li>
+</ul>
+<p>Relative to <code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code> and <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>, the following <strong>Misbehaviours (M*)</strong> are prohibited:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Misbehaviour Id</p></th>
+<th class="head"><p>Misbehaviour description</p></th>
+<th class="head"><p>Link to hazard(s)</p></th>
+<th class="head"><p>Links to UCA(s)</p></th>
+<th class="head"><p>Links to CS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>M1</p></td>
+<td><p>Library accepts syntactically ill-formed JSON as well-formed (violation of JLEX-01).</p></td>
+<td><p>H1; H5</p></td>
+<td><p>UCA-I1-PR-UCX1-A</p></td>
+<td><p>CL1-1-CS4-P</p></td>
+</tr>
+<tr class="row-odd"><td><p>M2</p></td>
+<td><p>Library rejects syntactically well-formed JSON that should be accepted (violation of JLEX-01).</p></td>
+<td><p>H2</p></td>
+<td><p>UCA-I1-PR-UCX1-B</p></td>
+<td><p>CL1-1-CS4-O</p></td>
+</tr>
+<tr class="row-even"><td><p>M3</p></td>
+<td><p>Library produces a parsed <code class="docutils literal notranslate"><span class="pre">basic_json</span></code> value that is not semantically equivalent to the input JSON text (violation of JLEX-02).</p></td>
+<td><p>H3; H5</p></td>
+<td><p>UCA-I3-PR-UCX2</p></td>
+<td><p>CL1-3-CS4-P</p></td>
+</tr>
+<tr class="row-odd"><td><p>M4</p></td>
+<td><p>Library hangs or throws for RFC 8259-compliant JSON under practical integration conditions (violation of JLEX-01/02 intent).</p></td>
+<td><p>H2; H4</p></td>
+<td><p>UCA-I3-TL-UCX3</p></td>
+<td><p>CL1-3-CS3-A; CL1-3-CS4-D</p></td>
+</tr>
+<tr class="row-even"><td><p>M5</p></td>
+<td><p>Library behaviour contradicts any specific evidence statement in <code class="docutils literal notranslate"><span class="pre">WFJ-*</span></code>, <code class="docutils literal notranslate"><span class="pre">TIJ-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NJF-*</span></code>, <code class="docutils literal notranslate"><span class="pre">NPF-*</span></code>, or <code class="docutils literal notranslate"><span class="pre">PJD-*</span></code>.</p></td>
+<td><p>H1; H2; H3; H4; H5</p></td>
+<td><p>UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B; UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3</p></td>
+<td><p>CL1-1-CS4-P; CL1-1-CS4-O; CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D</p></td>
+</tr>
+<tr class="row-odd"><td><p>M6</p></td>
+<td><p>Integrator/process misbehaviour: upstream bugs/security advisories are not reviewed and known vulnerabilities are not triaged/handled.</p></td>
+<td><p>H7</p></td>
+<td><p>UCA-I5-NP-UCX4; UCA-I5-PR-UCX4; UCA-I5-TL-UCX4; UCA-I5-SO-UCX4</p></td>
+<td><p>CL2-1-CS1-A; CL2-1-CS1-M; CL2-1-CS1-D; CL2-2-CS2-F; CL2-2-CS2-P</p></td>
+</tr>
+<tr class="row-even"><td><p>M7</p></td>
+<td><p>Integrator/environment misbehaviour: untrusted inputs are processed without adequate resource budgets/limits appropriate for the deployment context, enabling resource-exhaustion/DoS.</p></td>
+<td><p>H6</p></td>
+<td><p>N/A (Hazard-only)</p></td>
+<td><p>CL1-3-CS4-I</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="expectations">
+<h2>9.2 Expectations<a class="headerlink" href="#expectations" title="Link to this heading">#</a></h2>
+<p>Here, expectations are recorded as explicit, change-controlled statements about the SUA where it is responsible for preventing or mitigating a risk (Hazard, UCA, Causal Scenario) or Misbehaviour. The key SUA expectations already exist as TSF Expectations (<code class="docutils literal notranslate"><span class="pre">JLEX-01</span></code>, <code class="docutils literal notranslate"><span class="pre">JLEX-02</span></code>) and are used as a basis for the STPA exception analysis. The table below records the concrete expectations used by this analysis and links them to the STPA artifacts.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Expectation Id</p></th>
+<th class="head"><p>Expectation text</p></th>
+<th class="head"><p>Links to constraint(s)</p></th>
+<th class="head"><p>Links to UCA(s) / CS</p></th>
+<th class="head"><p>Links to TSF</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EXP1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">basic_json::accept</span></code> distinguishes RFC 8259 well-formed JSON from ill-formed JSON for all inputs within the defined scope/integration context.</p></td>
+<td><p>C1</p></td>
+<td><p>UCA-I1-PR-UCX1-A; UCA-I1-PR-UCX1-B / CL1-1-CS4-P; CL1-1-CS4-O</p></td>
+<td><p>JLEX-01</p></td>
+</tr>
+<tr class="row-odd"><td><p>EXP2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">basic_json::parse</span></code> returns a correct representation for well-formed JSON or signals failure clearly under the defined scope/integration context (e.g., via exceptions when enabled, or via a discarded value / non-exception failure signalling mode when exceptions are disabled).</p></td>
+<td><p>C2</p></td>
+<td><p>UCA-I3-PR-UCX2; UCA-I3-TL-UCX3; UCA-I3-PR-UCX3 / CL1-3-CS4-P; CL1-3-CS3-A; CL1-3-CS4-D; CL1-4-CS1-M; CL1-4-CS2-P</p></td>
+<td><p>JLEX-02; JLS-24</p></td>
+</tr>
+<tr class="row-even"><td><p>EXP3</p></td>
+<td><p>For ill-formed JSON, parsing does not silently produce a misleading <code class="docutils literal notranslate"><span class="pre">basic_json</span></code> value; failure is signalled under the defined integration context.</p></td>
+<td><p>C3</p></td>
+<td><p>UCA-I3-PR-UCX2 / CL1-3-CS4-P</p></td>
+<td><p>JLS-24</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="assumptions">
+<h2>9.3 Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading">#</a></h2>
+<p>Assumptions record conditions for integrators and other system elements (outside the SUA) that are responsible for preventing or mitigating a risk or misbehaviour. Again, assumptions are already covered under TSF as Assumptions of Use (<code class="docutils literal notranslate"><span class="pre">AOU-*</span></code>). The table below lists the assumptions that are directly referenced by this analysis and links them to the STPA artifacts.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Assumption (TSF)</p></th>
+<th class="head"><p>Assumption summary (informal)</p></th>
+<th class="head"><p>Links to constraint(s)</p></th>
+<th class="head"><p>Links to CS</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AOU-04</p></td>
+<td><p>Exceptions are properly handled or turned off by the integrator when using the library.</p></td>
+<td><p>C6</p></td>
+<td><p>CL1-4-CS1-A; CL1-4-CS1-M; CL1-4-CS2-P</p></td>
+<td><p>Applies to exception-based failure signalling in CL1.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AOU-07</p></td>
+<td><p>Expected parsing errors for invalid JSON (default parameters) are detected and handled properly by the integrator.</p></td>
+<td><p>C6</p></td>
+<td><p>CL1-2-CS2-F; CL1-4-CS1-M; CL1-4-CS2-P</p></td>
+<td><p>Prevents misinterpretation/ignoring of failure outcomes.</p></td>
+</tr>
+<tr class="row-even"><td><p>AOU-05</p></td>
+<td><p>Input is UTF-8 (RFC 8259), or violations are handled explicitly at the boundary.</p></td>
+<td><p>C7</p></td>
+<td><p>CL1-1-CS4-I</p></td>
+<td><p>Boundary crossing assumption for input encoding.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AOU-20</p></td>
+<td><p>Object keys are unique whenever an object is parsed (or ambiguity is mitigated).</p></td>
+<td><p>C8</p></td>
+<td><p>CL1-3-CS4-I</p></td>
+<td><p>Integration responsibility for ambiguous inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p>AOU-22</p></td>
+<td><p>Numbers are base-10 as required by JSON (or non-decimal forms are handled/mitigated).</p></td>
+<td><p>C9</p></td>
+<td><p>CL1-3-CS4-I</p></td>
+<td><p>Integration responsibility for non-domain inputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AOU-23</p></td>
+<td><p>Data is complete and error-free whenever transmitted to the component (or corruption is detected/handled).</p></td>
+<td><p>C10</p></td>
+<td><p>CL1-1-CS4-D</p></td>
+<td><p>Boundary assumption about transport/storage integrity.</p></td>
+</tr>
+<tr class="row-even"><td><p>AOU-27</p></td>
+<td><p>Release management/update concepts in <code class="docutils literal notranslate"><span class="pre">TSF/README.md</span></code> are followed when changes are done.</p></td>
+<td><p>C11</p></td>
+<td><p>CL2-1-CS1-A; CL2-1-CS1-D</p></td>
+<td><p>Governance loop assumption.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AOU-28</p></td>
+<td><p>Known open bugs in upstream <code class="docutils literal notranslate"><span class="pre">nlohmann/json</span></code> are regularly reviewed for impact.</p></td>
+<td><p>C11</p></td>
+<td><p>CL2-1-CS1-M; CL2-2-CS2-F; CL2-2-CS2-P</p></td>
+<td><p>Governance loop assumption.</p></td>
+</tr>
+<tr class="row-even"><td><p>AOU-29</p></td>
+<td><p>The GitHub security tab is checked regularly and outstanding CVEs are analysed and fixed/dismissed.</p></td>
+<td><p>C11</p></td>
+<td><p>CL2-1-CS1-M; CL2-2-CS2-F; CL2-2-CS2-P</p></td>
+<td><p>Governance loop assumption.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="risk-evaluation">
+<h2>9.4 Risk Evaluation<a class="headerlink" href="#risk-evaluation" title="Link to this heading">#</a></h2>
+<p>While not being an essential part of STPA risk analysis, a basic risk evaluation is employed as a distinct step here to follow RAFIA risk analysis objectives.</p>
+<p>In this step risk evaluation considers:</p>
+<ul class="simple">
+<li><p><strong>Severity (S)</strong>: impact in typical S-CORE deployments if the misbehaviour occurs,</p></li>
+<li><p><strong>Likelihood (L)</strong>: plausibility given the existing test and analysis evidence,</p></li>
+<li><p><strong>Exposure (E)</strong>: how often S-CORE relies on the behaviour in normal operation.</p></li>
+</ul>
+<p>As justification we use a <strong>qualitative</strong> assessment that is consistent with the TSF evidence model: likelihood is judged primarily from test/analysis coverage, process controls, and (where applicable) CI-based indicators (<code class="docutils literal notranslate"><span class="pre">JLS-54</span></code>, <code class="docutils literal notranslate"><span class="pre">JLS-55</span></code>). The purpose of the table below is therefore <em>prioritisation and transparency</em> (“why do we think this is acceptable?”), not a precise probabilistic safety case.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Misbehaviour</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>L</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>Risk Category</p></th>
+<th class="head"><p>Justification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>M1</p></td>
+<td><p>High</p></td>
+<td><p>Very low</p></td>
+<td><p>High</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Would fundamentally break input validation. Extensive WFJ/TIJ/NJF/NPF testing mitigates likelihood.</p></td>
+</tr>
+<tr class="row-odd"><td><p>M2</p></td>
+<td><p>Medium</p></td>
+<td><p>Very low</p></td>
+<td><p>Medium</p></td>
+<td><p>Low–Medium</p></td>
+<td><p>Mainly availability/robustness impact. No such issues observed in the tested domain.</p></td>
+</tr>
+<tr class="row-even"><td><p>M3</p></td>
+<td><p>High</p></td>
+<td><p>Very low</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Data corruption is serious. However, PJD/NPF evidence and regression tests reduce likelihood.</p></td>
+</tr>
+<tr class="row-odd"><td><p>M4</p></td>
+<td><p>Medium</p></td>
+<td><p>Very low</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Medium</p></td>
+<td><p>Hangs/crashes can be disruptive. CI robustness evidence reduces likelihood, and AOUs require explicit exception handling where exceptions are expected.</p></td>
+</tr>
+<tr class="row-even"><td><p>M5</p></td>
+<td><p>Varies</p></td>
+<td><p>Very low</p></td>
+<td><p>Varies</p></td>
+<td><p>Low–Medium</p></td>
+<td><p>Any contradiction to specific statements is expected to be detected by the mapped test evidence (CI test runs). CI gates (e.g. coverage/PR-count) help prevent coverage and process degradation, but they are not themselves semantic checks.</p></td>
+</tr>
+<tr class="row-odd"><td><p>M6</p></td>
+<td><p>High</p></td>
+<td><p>Low–Medium</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Severity is high if a known issue is exploitable. Likelihood depends on the effectiveness of the review/triage cadence required by <code class="docutils literal notranslate"><span class="pre">AOU-28</span></code>/<code class="docutils literal notranslate"><span class="pre">AOU-29</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>M7</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Medium</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Medium–High</p></td>
+<td><p>Resource-exhaustion is a common parser threat on untrusted inputs. This TSF tree does not specify concrete resource budgets, so deployment context must define them if availability/deadlines are critical (see <code class="docutils literal notranslate"><span class="pre">AOU-31</span></code>).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="review-stpa-results">
+<h1>10. Review STPA results<a class="headerlink" href="#review-stpa-results" title="Link to this heading">#</a></h1>
+<p>This section records the minimal review findings for this analysis iteration, in line with the RAFIA STPA procedure.</p>
+<section id="analyst-review">
+<h2>10.1 Analyst review<a class="headerlink" href="#analyst-review" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Step 1 (Scope)</strong>: System context and boundary assumptions are recorded in Section 1 and summarised in the control structure diagram (Section 3.0).</p></li>
+<li><p><strong>Step 2 (Purpose)</strong>: Losses (L1–L6), Hazards (H1–H7), and constraints (C1–C16) are recorded and linked.</p></li>
+<li><p><strong>Step 3 (Control structure)</strong>: Elements (E1–E4), interactions (I1–I6), and a diagram are present; control loops are explicitly identified as CL1/CL2.</p></li>
+<li><p><strong>Step 4 (UCAs)</strong>: UCAs are recorded and linked to hazards and constraints, using combined IDs (e.g. <code class="docutils literal notranslate"><span class="pre">UCA-I1-PR-UCX1-A</span></code>, <code class="docutils literal notranslate"><span class="pre">UCA-I3-TL-UCX3</span></code>, <code class="docutils literal notranslate"><span class="pre">UCA-I5-SO-UCX4</span></code>). CA-Analysis results are recorded in Section 4.2.</p></li>
+<li><p><strong>Step 5 (Controller constraints)</strong>: CFC constraints are identified (C1–C3, C12–C16) and mapped to UCAs; integration/governance constraints are also captured as CSC (C6, C11).</p></li>
+<li><p><strong>Step 6 (Loops/sequences)</strong>: CL1/CL2 and their step sequences are recorded in Section 6.</p></li>
+<li><p><strong>Step 7 (Scenarios)</strong>: A set of representative causal scenarios (Scenario Id format <code class="docutils literal notranslate"><span class="pre">CLx-y-CSType</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">CL1-1-CS4-P</span></code>, <code class="docutils literal notranslate"><span class="pre">CL1-3-CS3-A</span></code>, <code class="docutils literal notranslate"><span class="pre">CL2-1-CS1-M</span></code>) is recorded and linked to UCAs/hazards and constraints.</p></li>
+<li><p><strong>Step 8 (Scenario constraints)</strong>: Constraints addressing each scenario are consolidated and justified in Section 8.</p></li>
+<li><p><strong>Step 9 (Misbehaviours/Expectations)</strong>: Misbehaviours (M1–M7) are recorded and linked to hazards, UCAs, and scenarios; expectations and assumptions are recorded and linked to constraints and scenarios. A qualitative risk evaluation is provided as part of the overall RAFIA risk analysis.</p></li>
+</ul>
+</section>
+<section id="independent-review-records">
+<h2>10.2 Independent review records<a class="headerlink" href="#independent-review-records" title="Link to this heading">#</a></h2>
+<p>The RAFIA STPA procedure expects independent review findings to be documented. The following table provides a place to record them.</p>
+<p><em>A review of both an independent STPA practitioner and independent subject matter expert (SME) still has to be conducted.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Review type</p></th>
+<th class="head"><p>Reviewer</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>Findings (summary)</p></th>
+<th class="head"><p>Resulting actions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Analyst</p></td>
+<td><p>Thomas Clausnitzer</p></td>
+<td><p>20.02.2026</p></td>
+<td><p>All steps of the RAFIA STPA procedure were followed. Correct traceability between L/H/C/UCA/CS/M is explicit using IDs.</p></td>
+<td><p>Prepare for independent review</p></td>
+</tr>
+<tr class="row-odd"><td><p>Independent STPA practitioner</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Independent subject matter expert (SME)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Risk Analysis for nlohmann/json 3.12.0 within eclipse-score/nlohmann_json</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology-rafia-stpa-what-is-being-done-and-why">0. Methodology (RAFIA / STPA) – What is being done and why</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-this-is-instantiated-for-this-repository">How this is instantiated for this repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stpa-procedure-and-schema-conformance">STPA procedure and schema conformance</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-and-system-context">1. Scope and System Context</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-under-analysis">1.1 Software Under Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-context-as-documented-by-tsf-expectations">1.2 Integration Context (as documented by TSF expectations)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-use-and-constraints">1.3 Assumptions of Use and Constraints</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aou-statements-directly-relevant-to-this-analysis-normative">AOU statements directly relevant to this analysis (normative)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-of-the-analysis">2. Purpose of the analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#losses-unacceptable-outcomes">2.1 Losses (Unacceptable Outcomes)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rationale-for-the-chosen-losses">Rationale for the chosen losses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazards-system-level-conditions">2.2 Hazards (System-Level Conditions)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-level-constraints">2.3 System-level Constraints</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structure">3. Control structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structure-diagram-scope-interactions">3.0 Control structure diagram (scope + interactions)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements">3.1 Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactions-control-actions-and-feedback">3.2 Interactions (control actions and feedback)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-loops-and-step-references-used-by-scenarios">3.3 Control loops and step references (used by Scenarios)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#unsafe-control-actions-ucas">4. Unsafe Control Actions (UCAs)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uca-contexts">4.1 UCA-Contexts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ca-analysis">4.2 CA-Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ucas">4.3 UCAs</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#controller-functional-constraints">5. Controller (Functional) Constraints</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cfc-constraints-derived-from-ucas">5.1 CFC constraints derived from UCAs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uca-to-constraint-coverage-note-non-cfc-constraints">5.2 UCA-to-constraint coverage note (non-CFC constraints)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#control-loops-and-sequences">6. Control Loops and Sequences</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-loops">6.1 Control Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cl-sequences-loop-steps">6.2 CL-Sequences (loop steps)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-scenarios">7. Causal Scenarios</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-scenario-constraints">8. Causal Scenario Constraints</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-to-constraint-mapping">8.1 Scenario-to-constraint mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-constraint-types">8.2 Notes on constraint types</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#misbehaviours-and-expectations">9. Misbehaviours and Expectations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#misbehaviours">9.1 Misbehaviours</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">9.2 Expectations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">9.3 Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-evaluation">9.4 Risk Evaluation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-stpa-results">10. Review STPA results</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyst-review">10.1 Analyst review</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-review-records">10.2 Independent review records</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/score-json/nlohmann_json/edit/main/docs/risk_analysis.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/risk_analysis.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
