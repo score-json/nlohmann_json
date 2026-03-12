@@ -5,10 +5,31 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Open issues
 
-### [#5060](https://github.com/nlohmann/json/issues/5060)
-- **Title:** Segfault on x86_64 Android with Chromium libc++ in serializer::~serializer()
+### [#5103](https://github.com/nlohmann/json/issues/5103)
+- **Title:** Build issue when compiling with gcc (any modules-capable version) in a C++ modules project
 - **State:** OPEN
-- **Created At:** 2026-01-24T10:41:51Z
+- **Created At:** 2026-03-09T13:50:59Z
+
+
+
+### [#5074](https://github.com/nlohmann/json/issues/5074)
+- **Title:** Copy constructor changes semantics
+- **State:** OPEN
+- **Created At:** 2026-02-09T10:39:05Z
+
+
+
+### [#5068](https://github.com/nlohmann/json/issues/5068)
+- **Title:** Using json_pointer causes the warning of deprecated declarations
+- **State:** OPEN
+- **Created At:** 2026-02-04T04:05:50Z
+
+
+
+### [#5066](https://github.com/nlohmann/json/issues/5066)
+- **Title:** MSVC: unexpected behaviour converting from json to a rvalue reference of a variant containing a type that can be constructed from a string
+- **State:** OPEN
+- **Created At:** 2026-01-30T13:18:53Z
 
 
 
@@ -40,20 +61,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 
-### [#5005](https://github.com/nlohmann/json/issues/5005)
-- **Title:** Serialization of double type data gets stuck
-- **State:** OPEN
-- **Created At:** 2025-11-20T09:28:12Z
-
-
-
-### [#5002](https://github.com/nlohmann/json/issues/5002)
-- **Title:** VS2026 Insiders, C2678 With C++23 Modules
-- **State:** OPEN
-- **Created At:** 2025-11-18T20:45:50Z
-
-
-
 ### [#4996](https://github.com/nlohmann/json/issues/4996)
 - **Title:** Tests don't build with VS 2026
 - **State:** OPEN
@@ -81,14 +88,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2025-09-11T10:13:26Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Version 3.12.0 of nlohmann::json does not contain a constructor accepting std::views.
-
-
-### [#4901](https://github.com/nlohmann/json/issues/4901)
-- **Title:** stack overflow
-- **State:** OPEN
-- **Created At:** 2025-08-22T01:03:03Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Using json::from_ubjson() (cf. [here](https://json.nlohmann.me/api/basic_json/from_ubjson/)) on long nested inputs can lead to stack overflow.
 
 
 ### [#4864](https://github.com/nlohmann/json/issues/4864)
@@ -238,6 +237,20 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Closed Issues (since version 3.12.0)
 
+### [#5091](https://github.com/nlohmann/json/issues/5091)
+- **Title:** The README section on creating JSON objects from literals contains wording that suggests file I/O but doesn't demonstrate it, and has a minor grammatical error.
+- **State:** CLOSED
+- **Created At:** 2026-03-03T06:24:30Z
+
+
+
+### [#5060](https://github.com/nlohmann/json/issues/5060)
+- **Title:** Segfault on x86_64 Android with Chromium libc++ in serializer::~serializer()
+- **State:** CLOSED
+- **Created At:** 2026-01-24T10:41:51Z
+
+
+
 ### [#5047](https://github.com/nlohmann/json/issues/5047)
 - **Title:** [C++23] Error in json::parse with std::ifstream
 - **State:** CLOSED
@@ -256,6 +269,20 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Title:** An object is used after it's moved
 - **State:** CLOSED
 - **Created At:** 2025-11-24T15:32:02Z
+
+
+
+### [#5005](https://github.com/nlohmann/json/issues/5005)
+- **Title:** Serialization of double type data gets stuck
+- **State:** CLOSED
+- **Created At:** 2025-11-20T09:28:12Z
+
+
+
+### [#5002](https://github.com/nlohmann/json/issues/5002)
+- **Title:** VS2026 Insiders, C2678 With C++23 Modules
+- **State:** CLOSED
+- **Created At:** 2025-11-18T20:45:50Z
 
 
 
@@ -281,6 +308,14 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2025-08-24T08:50:37Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Defining the namespace "nlohmann" multiple times within the same project leads to an error.
+
+
+### [#4901](https://github.com/nlohmann/json/issues/4901)
+- **Title:** stack overflow
+- **State:** CLOSED
+- **Created At:** 2025-08-22T01:03:03Z
+
+- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Using json::from_ubjson() (cf. [here](https://json.nlohmann.me/api/basic_json/from_ubjson/)) on long nested inputs can lead to stack overflow.
 
 
 ### [#4898](https://github.com/nlohmann/json/issues/4898)
