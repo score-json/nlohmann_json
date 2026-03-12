@@ -29,5 +29,5 @@ issue-id | applies to S-CORE | problem | resolution | closed after
 [4284](https://github.com/nlohmann/json/issues/4284) | No | `#pragma pack(push, 1)` was reported to break compilation units and lead to a segfault if packing is not restored. | Was declared not a bug but user error. | within 1 week
 [4299](https://github.com/nlohmann/json/issues/4299) | No | Single-element `std::initializer_list` construction was reported to yield an array for strings (e.g., `json{"hello"}`). | Was declared not a bug but user error. | the same day
 [4332](https://github.com/nlohmann/json/issues/4332) | No | Hex-like git ref string reported as number overflow. | Author realised themselves that it was user error. | the same day
-[4427](https://github.com/nlohmann/json/issues/4427) | No | Misfiled "CVE" report describing a Python `jaraco/zipp` issue for posible DoS Attack. | Was declared not a bug. | the same day
+[4427](https://github.com/nlohmann/json/issues/4427) | No | Misfiled "CVE" report describing a Python `jaraco/zipp` issue for possible DoS Attack. | Was declared not a bug. | the same day
 [4467](https://github.com/nlohmann/json/issues/4467) | No | Error C2440 report with little context given. | Author realised themselves that it was user error. | within 1 week
