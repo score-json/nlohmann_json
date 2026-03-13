@@ -67,8 +67,9 @@ jobs:
   coverage_gate:
     name: Run Coverage Gate Workflow
     needs: [ubuntu]
-    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'main' 
-          || github.event_name == 'schedule' }}
+    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'main'
+        || github.event_name == 'push' && github.ref == 'refs/heads/main'
+        || github.event_name == 'schedule' }}
     uses: ./.github/workflows/coverage_gate.yml
     with:
       artifact_id: "coverage_gate-${{ github.sha }}"
@@ -105,7 +106,7 @@ jobs:
           result="${{ needs[matrix.target].result }}"
           echo "${{ matrix.target }} workflow result: $result"
 
-          if [[ "$result" != "success" ]]; then
+          if [[ "$result" != "success" && "$result" != "skipped" ]]; then
             echo "❌ ${{ matrix.target }} workflow failed! Exiting..."
             exit 1
           fi

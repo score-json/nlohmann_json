@@ -81,7 +81,7 @@ jobs:
       - name: Download trudag report artifact
         uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
         with:
-          name: trudag-report-${{ github.event.pull_request.head.sha || github.sha }}
+          name: trudag-report-${{ github.sha }}
           path: TSF/docs/generated/
 
       - name: Build documentation
