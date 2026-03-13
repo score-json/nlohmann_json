@@ -16,6 +16,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library throws an exception on U+0415 and U+0436 instead of U+0045 or U+0065.
