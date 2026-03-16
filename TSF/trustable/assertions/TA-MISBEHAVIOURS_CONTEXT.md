@@ -89,7 +89,7 @@ established and reusable solutions.
 **Suggested evidence**
 
 - List of identified Misbehaviours
-  - **Answer**: See JLS-11.
+  - **Answer**: A list of Misbehaviours was identified through STPA risk analysis (risk_analysis.md). Upstream bug tracking (JLS-11 and nlohmann_misbehaviours_comments.md) is used as complementary empirical evidence to confirm coverage and update the list where needed.
 - List of Expectations for mitigations addressing identified Misbehaviours
   - **Answer**: Mitigation expectations are expressed implicitly through (a) documented Quality assurance (https://json.nlohmann.me/community/quality_assurance) requirements and (b) concrete mitigation mechanisms captured by existing Statements: JLS-02 (fuzzing), JLS-31 (static analysis), JLS-25 (review/security policy), JLS-24 (defined failure mode via exceptions), and WFJ-06 (input validation via accept()).
 - Risk analysis
@@ -127,9 +127,9 @@ considered against the list of Expectations.
 - Can we identify some new misbehaviours, right now?
   - **Answer**: No, currently no new misbehaviors can be identified.
 - Is every misbehaviour represented by at least one fault induction test?
-  - **Answer**: The expected behaviour of nlohmann/json is described by JLS-24 and its substatements in the trustable graph. For a random subset of 10 of these substatements (TIJ-01.1, TIJ-01.2, TIJ-05.1, TIJ-05.3, NPF-01.2, NPF-01.3, NPF-07.2, TIJ-02.4, TIJ-02.5, TIJ-02.2) we checked whether possible misbehaviours (like wrong inputs) are tested using fault induction tests. For all of these 10 substatements, at least one fault induction test is performed. We therefore conclude that most misbehaviours are represented by at least one fault induction test.
+  - **Answer**: The expected behaviour of nlohmann/json is described by JLS-24 and its substatements in the trustable graph. For every substatement at least one fault induction test is performed. Thus, every misbehaviour is represented by at least one fault induction test.
 - Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?
-  - **Answer**: Yes. The project uses several forms of fault induction (malformed JSON, invalid API usage, simulated allocation failures, and fuzzing). Dedicated tests assert that these induced faults cause the library to fail in a well‑defined, expected way (e.g. by throwing specific exceptions). CI then confirms that these “failure‑expecting” tests keep behaving as specified. See JLS-76.
+  - **Answer**: The project uses several forms of fault induction on the library-behaviour level (malformed JSON, invalid API usage, simulated allocation failures, and fuzzing). Dedicated tests assert that these induced faults cause the library to fail in a well‑defined, expected way (e.g. by throwing specific exceptions). While the test framework itself is not tested by fault induction, there are some statements where positive and negative tests actively show expected failure behaviour of the library under induced faulty input, that pass with well-formed data (e.g., TIJ-04.1, evidence: nst's JSONTestSuite). CI then confirms that these "failure‑expecting" tests keep behaving as specified (JLS-76.). Due to the very comprehensive general fault induction testing employed, we see the instances of explicitly failing tests that usually pass rather as representative evidence than requiring a one-to-one matching to every graph leaf. 
 - Are all the fault induction results actually collected?
   - **Answer**: Partially. For Unit / regression tests: their results are only captured as normal test pass/fail status and CI logs; there is no separate, persistent database of all induced faults and outcomes in the repository. For Fuzz tests (OSS‑Fuzz): the fuzzing infrastructure stores crashing inputs, logs, and statistics on the OSS‑Fuzz side, not in the nlohmann/json repo itself. See JLS-76 for further information.
 - Are the results evaluated?
