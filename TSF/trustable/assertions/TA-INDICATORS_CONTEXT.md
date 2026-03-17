@@ -103,4 +103,8 @@ monitoring mechanisms have been implemented to collect the required data.
   - **Answer**: Yes, the CI data from the AWIs is useful to prevent regressions in the tested behaviour of the library and possible issues introduced due to a large number of open PRs from entering protected branches. 
 - Are indicators from code, component, tool, or data inspections taken into
 consideration? 
-  - **Answer**: Yes, all types of indicator are taken into consideration.
+  - **Answer**: All indicator types are considered in scope and in the analysis rationale, with different level of implementation in this repository.
+For code inspections, we use CI-derived code evidence (JLS-54) and related CI analysis evidence.
+For component inspections, no separate component-inspection AWI is implemented in this repository context because the library has no external components (JLS-34), and component-related runtime/system monitoring is therefore expected at integration level (AOU-19).
+For tool inspections, tools are explicitly assessed (JLS-50), and a monitored CI/process indicator is implemented via the PR-count gate (JLS-55).
+For data inspections, indicator data is collected and traceable for the implemented CI AWIs (JLS-54 and JLS-55), while continuous production/runtime monitoring is not implemented in this repository and is delegated to the integrator (AOU-09 and AOU-19).
