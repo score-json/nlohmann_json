@@ -534,7 +534,15 @@
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -798,7 +806,15 @@ that may indicate problems in development, test, or production.</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -907,17 +923,17 @@ and that the resulting system and tests are validated by appropriate strategies.
 </li>
 <li><p>How comprehensive is the list of tests?</p>
 <ul>
-<li><p><strong>Answer</strong>: Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27. Therefore, we deem the list of tests to be very comprehensive.</p></li>
+<li><p><strong>Answer</strong>: Currently, branch coverage is 93.865% and line coverage is 99.186% (JLS-27). Deviation from 100% branch coverage is expected for this kind of template-heavy library due to known factors such as tooling artifacts, defensive/unreachable paths (e.g., LCOV-excluded branches), and configuration-dependent code paths. Coverage is continuously monitored in CI and reviewed in pull requests and maintainers have documented concrete coverage-artifact cases (e.g., https://github.com/nlohmann/json/pull/4595). In addition to raw percentages, we use statement-level traceability from Expectations JLEX-01/02 to concrete CI tests (JLS-74). Therefore, we deem the test set very comprehensive for the intended scope.</p></li>
 </ul>
 </li>
 <li><p>Is every Expectation covered by at least one implemented test?</p>
 <ul>
-<li><p><strong>Answer</strong>: Yes, both of the Expectations are covered by at least one implemented test.</p></li>
+<li><p><strong>Answer</strong>: Yes, both Expectations (JLEX-01, JLEX-02) are covered by a broad set of implemented tests across their supporting statements (WFJ-, PJD-, NJF-, NPF-, TIJ-). Evidence is assessed through Trustable traceability and SME reviews (JLS-74), with direct CI-test links provided where available. In addition, completeness is assessed against the upstream basic_json API (JLS-72) with evidence of tests of a comprehensive set of arguments (JLS-31).</p></li>
 </ul>
 </li>
 <li><p>Are there any Expectations where we believe more coverage would help?</p>
 <ul>
-<li><p><strong>Answer</strong>: No, the coverage is already on a high level and no further gains are expected by further increasing the coverage.</p></li>
+<li><p><strong>Answer</strong>: No additional top-level Expectation is currently missing. Extra tests would mainly increase confidence for already identified boundary cases (especially around WFJ-06), rather than reveal a gap in the Expectation set.</p></li>
 </ul>
 </li>
 <li><p>How do dependencies affect Expectations, and are their properties verifiable?</p>
@@ -1032,7 +1048,14 @@ and that the resulting system and tests are validated by appropriate strategies.
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -1475,7 +1498,42 @@ scores given to Statements</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -1709,7 +1767,12 @@ notified of any changes?</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -1957,7 +2020,18 @@ monitored deployments.</p>
 <td><p>0.75</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.34</p></td>
+<td><p>1.00</p></td>
+<td><p>1.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.75</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.34</p></td>
 <td><p>1.00</p></td>
 <td><p>1.00</p></td>
@@ -2234,7 +2308,13 @@ lists (e.g. bug bonus or pressure to close).</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -2388,7 +2468,11 @@ monitoring mechanisms have been implemented to collect the required data.</p>
 <li><p>Are indicators from code, component, tool, or data inspections taken into
 consideration?</p>
 <ul>
-<li><p><strong>Answer</strong>: Yes, all types of indicator are taken into consideration.</p></li>
+<li><p><strong>Answer</strong>: All indicator types are considered in scope and in the analysis rationale, with different level of implementation in this repository.
+For code inspections, we use CI-derived code evidence (JLS-54) and related CI analysis evidence.
+For component inspections, no separate component-inspection AWI is implemented in this repository context because the library has no external components (JLS-34), and component-related runtime/system monitoring is therefore expected at integration level (AOU-19).
+For tool inspections, tools are explicitly assessed (JLS-50), and a monitored CI/process indicator is implemented via the PR-count gate (JLS-55).
+For data inspections, indicator data is collected and traceable for the implemented CI AWIs (JLS-54 and JLS-55), while continuous production/runtime monitoring is not implemented in this repository and is delegated to the integrator (AOU-09 and AOU-19).</p></li>
 </ul>
 </li>
 </ul>
@@ -2513,7 +2597,16 @@ consideration?</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.32</p></td>
+<td><p>1.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.90</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.32</p></td>
 <td><p>1.00</p></td>
 <td><p>0.00</p></td>
@@ -2825,7 +2918,14 @@ tool assessments?</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -3073,7 +3173,17 @@ are we about these claims?</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -3315,7 +3425,16 @@ in comparison to the analysed results</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -3409,7 +3528,7 @@ established and reusable solutions.</p>
 <ul class="simple">
 <li><p>List of identified Misbehaviours</p>
 <ul>
-<li><p><strong>Answer</strong>: See JLS-11.</p></li>
+<li><p><strong>Answer</strong>: A list of Misbehaviours was identified through STPA risk analysis (risk_analysis.md). Upstream bug tracking (JLS-11 and nlohmann_misbehaviours_comments.md) is used as complementary empirical evidence to confirm coverage and update the list where needed.</p></li>
 </ul>
 </li>
 <li><p>List of Expectations for mitigations addressing identified Misbehaviours</p>
@@ -3490,12 +3609,12 @@ considered against the list of Expectations.</p>
 </li>
 <li><p>Is every misbehaviour represented by at least one fault induction test?</p>
 <ul>
-<li><p><strong>Answer</strong>: The expected behaviour of nlohmann/json is described by JLS-24 and its substatements in the trustable graph. For a random subset of 10 of these substatements (TIJ-01.1, TIJ-01.2, TIJ-05.1, TIJ-05.3, NPF-01.2, NPF-01.3, NPF-07.2, TIJ-02.4, TIJ-02.5, TIJ-02.2) we checked whether possible misbehaviours (like wrong inputs) are tested using fault induction tests. For all of these 10 substatements, at least one fault induction test is performed. We therefore conclude that most misbehaviours are represented by at least one fault induction test.</p></li>
+<li><p><strong>Answer</strong>: The expected behaviour of nlohmann/json is described by JLS-24 and its substatements in the trustable graph. For every substatement at least one fault induction test is performed. Thus, every misbehaviour is represented by at least one fault induction test.</p></li>
 </ul>
 </li>
 <li><p>Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?</p>
 <ul>
-<li><p><strong>Answer</strong>: Yes. The project uses several forms of fault induction (malformed JSON, invalid API usage, simulated allocation failures, and fuzzing). Dedicated tests assert that these induced faults cause the library to fail in a well‑defined, expected way (e.g. by throwing specific exceptions). CI then confirms that these “failure‑expecting” tests keep behaving as specified. See JLS-76.</p></li>
+<li><p><strong>Answer</strong>: The project uses several forms of fault induction on the library-behaviour level (malformed JSON, invalid API usage, simulated allocation failures, and fuzzing). Dedicated tests assert that these induced faults cause the library to fail in a well‑defined, expected way (e.g. by throwing specific exceptions). While the test framework itself is not tested by fault induction, there are some statements where positive and negative tests actively show expected failure behaviour of the library under induced faulty input, that pass with well-formed data (e.g., TIJ-04.1, evidence: nst’s JSONTestSuite). CI then confirms that these “failure‑expecting” tests keep behaving as specified (JLS-76.). Due to the very comprehensive general fault induction testing employed, we see the instances of explicitly failing tests that usually pass rather as representative evidence than requiring a one-to-one matching to every graph leaf.</p></li>
 </ul>
 </li>
 <li><p>Are all the fault induction results actually collected?</p>
@@ -3635,7 +3754,16 @@ considered against the list of Expectations.</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -3860,7 +3988,15 @@ control?</p>
 <td><p>0.90</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.90</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.18</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -4085,7 +4221,15 @@ compromised.</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
@@ -4292,7 +4436,16 @@ tooling and their build environments are repeatable and reproducible.</p>
 <td><p>0.00</p></td>
 <td><p>0.90</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.65</p></td>
+<td><p>0.00</p></td>
+<td><p>1.00</p></td>
+<td><p>1.00</p></td>
+<td><p>1.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.90</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.65</p></td>
 <td><p>0.00</p></td>
 <td><p>1.00</p></td>
@@ -4459,7 +4612,12 @@ dependencies.</p>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 </tr>
-<tr class="row-even"><td><p>2026-03-13 13:51:39.161448</p></td>
+<tr class="row-even"><td><p>2026-03-17 08:52:18</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2026-03-17 09:42:35.054408</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
 <td><p>0.00</p></td>
