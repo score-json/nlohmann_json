@@ -17,4 +17,4 @@ evidence:
           - "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+is%3Amerged"
 ---
 
-Releases of the nlohmann/json library contain Github pull request approvals.
+Releases of the nlohmann/json library contain GitHub pull request approvals.

@@ -4,7 +4,7 @@ normative: true
 references:
     - type: project_website
       url: "https://github.com/nlohmann/json/issues"
-      description: "Contains the collected Github issues for the nlohmann/json library."
+      description: "Contains the collected GitHub issues for the nlohmann/json library."
     - type: project_website
       url: "https://github.com/nlohmann/json/graphs/commit-activity"
       description: "Presents the commit activity of the past year."

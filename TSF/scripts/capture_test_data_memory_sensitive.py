@@ -195,7 +195,7 @@ if __name__ == "__main__":
         raise RuntimeError("The persistent data storage is too large! Please move persistent data to external storage.")
 
     # fill in metadata
-    # OBSERVE: This script expects the status of the github workflow as argument
+    # OBSERVE: This script expects the status of the GitHub workflow as argument
     repo = environment.get('GITHUB_REPOSITORY')
     run_id = environment.get('GITHUB_RUN_ID')
     run_attempt = environment.get('GITHUB_RUN_ATTEMPT')

@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
     # Due to storage space constraints, only most recent 100 test-results are stored.
     # Heuristic calculations have demonstrated that this should ensure that
-    # the TestResultData.db is below 100MiB, which is github's hard file size limit.
+    # the TestResultData.db is below 100MiB, which is GitHub's hard file size limit.
 
     cursor.execute("SELECT COUNT(*) FROM workflow_info")
     saved_test_data = int(cursor.fetchone()[0])
@@ -166,7 +166,7 @@ if __name__ == "__main__":
         saved_test_data = int(cursor.fetchone()[0])
 
     # fill in metadata
-    # OBSERVE: This script expects the status of the github workflow as argument
+    # OBSERVE: This script expects the status of the GitHub workflow as argument
     repo = environment.get('GITHUB_REPOSITORY')
     run_id = environment.get('GITHUB_RUN_ID')
     run_attempt = environment.get('GITHUB_RUN_ATTEMPT')
@@ -212,7 +212,7 @@ if __name__ == "__main__":
             cursor.execute(command)
             connector.commit()
 
-    # storage space on the github is limited.
+    # storage space on GitHub is limited.
 
     # finally, most recent test data are stored separately
 

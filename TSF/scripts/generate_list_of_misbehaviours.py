@@ -28,7 +28,7 @@ if __name__ == "__main__":
     
     print("# Misbehaviours Report\n")
     print(f"This report lists known misbehaviours or bugs of version {version} of the nlohmann/json repository.")
-    print("The misbehaviours are compiled from github issues of the nlohmann/json repository, and link to each corresponding issue.\n")
+    print("The misbehaviours are compiled from GitHub issues of the nlohmann/json repository, and link to each corresponding issue.\n")
 
 
     print("## Open issues\n")
