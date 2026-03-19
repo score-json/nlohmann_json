@@ -97,7 +97,7 @@ Moreover, some parts of the documentation must be adapted to the new version.
     During the update, it must be ensured, that the custom tests are still being executed.
 
 * ``.github/workflows/parent-workflow.yml``
-    To ensure a specific execution order for the individual github workflows, their execution is orchestrated by the parent-workflow.
+    To ensure a specific execution order for the individual GitHub workflows, their execution is orchestrated by the parent-workflow.
     To guarantee that this order is respected, it must be ensured that every workflow except for ``comment_check_amalgamation.yml``, ``docs-cleanup.yml``, ``parent-workflow.yml``, ``scorecards.yml`` and ``stale.yml`` runs ``on workflow_call``, only.
 
 * ``.github/workflows/ubuntu.yml``
@@ -168,7 +168,7 @@ Based on the above observations, the following steps are recommended for each up
 1. Merge branch master from the original nlohmann/json into an external fork of the eclipse-score/inc_nlohmann_json repository, where steps 2-12 shall be performed.
 2. Confirm the deletion of cifuzz.yml, macos.yml and windows.yml.
 3. Resolve the potential merge conflict in publish-documentation.yml by rejecting the incoming changes.
-4. Update the versions of the github actions, if necessary. 
+4. Update the versions of the GitHub Actions, if necessary. 
 5. Resolve the potential merge conflicts in check_amalgamation.yml, codeql.yml, dependency_review.yml, labeler.yml and test_trudag_extensions.yml to ensure that the artifacts are generated, i.e. the jobs ``Generate XXX artifact`` and ``Upload XXX artifact`` are retained.
 6. Resolve the potential merge conflict in ubuntu.yml following the above instructions.
 7. Resolve the potential merge conflicts in cmake/download_test_data.cmake and cmake/ci.cmake following the above instructions.

@@ -28,27 +28,27 @@ The JSON library by Niels Lohmann was developed with several design goals in min
 
 - **Trivial Integration**: Comprising a single header file `json.hpp`, this library demands no complex build systems or dependencies, facilitating easy integration into any project using vanilla C++11.
 
-- **Serious Testing**: Extensive unit tests ensure 100% coverage of the code, including exceptional behavior. Tools like Valgrind and Clang Sanitizers verify memory safety, while Google OSS-Fuzz performs continuous fuzz testing.
+- **Serious Testing**: Extensive unit tests ensure 100% coverage of the code, including exceptional behaviour. Tools like Valgrind and Clang Sanitizers verify memory safety, while Google OSS-Fuzz performs continuous fuzz testing.
 
 Notably, memory efficiency and speed were not primary focuses, allowing for slight trade-offs in these areas to prioritize ease of integration and reliability.
 
 Baselibs Project Context
 ------------------------
 
-The integration effort is situated within the baselibs project, aimed at qualifying library performance and compliance with internal standards. As part of this project, the TSF process has been embedded into the score repository to generate and analyze evidence regarding software trustability.
+The integration effort is situated within the baselibs project, aimed at qualifying library performance and compliance with internal standards. As part of this project, the TSF process has been embedded into the score repository to generate and analyse evidence regarding software trustability.
 
 Component Classification Strategy
 -----------------------------------
 
-- **Process Overview**: The baselibs project is upholding the TSF to define guidelines and generate reliable evidence of compliance, analyzing specific requirements such as MISRA and functionality consistency.
+- **Process Overview**: The baselibs project is upholding the TSF to define guidelines and generate reliable evidence of compliance, analysing specific requirements such as MISRA and functionality consistency.
 
 - **Challenges and Decisions**:
   - Divergence from the original library code has been discussed to minimize unnecessary interference while adhering to project needs.
   - MISRA compliance is selectively applied, and necessary adaptations are considered at the upstream level where applicable.
 
 - **Strategic Directions**:
-  - Evidence requirements are mapped and analyzed for gaps, leading to possible code amendments or forks.
-  - Questions concerning the library's behavior are systematically answered, providing coverage details and tracing requirements to standards like ISO.
+  - Evidence requirements are mapped and analysed for gaps, leading to possible code amendments or forks.
+  - Questions concerning the library's behaviour are systematically answered, providing coverage details and tracing requirements to standards like ISO.
 
 Find more descriptions on the ongoing process and requirements at `Eclipse Process Description <https://eclipse-score.github.io/process_description/main/trustable/index.html>`_.
 

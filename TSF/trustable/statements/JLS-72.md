@@ -7,7 +7,7 @@ references:
     description: "Design goals describing the intended scope and trade-offs of the library."
   - type: project_website
     url: "https://json.nlohmann.me/api/basic_json/"
-    description: "API reference describing the behavior and requirements of the core JSON type."
+    description: "API reference describing the behaviour and requirements of the core JSON type."
 evidence:
   type: https_response_time
   configuration:
@@ -17,4 +17,4 @@ evidence:
         - "https://json.nlohmann.me/api/basic_json/"
 ---
 
-The nlohmann/json project documents the intended scope and design trade-offs of the library and specifies the documented interface and behavior of its core JSON type via its API reference.
+The nlohmann/json project documents the intended scope and design trade-offs of the library and specifies the documented interface and behaviour of its core JSON type via its API reference.
