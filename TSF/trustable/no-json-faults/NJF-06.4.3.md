@@ -23,7 +23,7 @@ references:
         - "/nst_json_testsuite2/test_parsing/y_object_long_strings.json"
         - "/nst_json_testsuite2/test_parsing/y_object_simple.json"
         - "/nst_json_testsuite2/test_parsing/y_object_string_unicode.json"
-        - "/nst_json_testsuite2/test_parsing/y_object_with_newlines.json"      
+        - "/nst_json_testsuite2/test_parsing/y_object_with_newlines.json"
       description: "Checks that various strings and numbers are accepted values."
     - type: cpp_test
       name: "accept;member separator"
@@ -31,7 +31,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - class_parser_core
           - testsuites
           - objects

@@ -13,8 +13,8 @@ evidence:
     configuration:
       target_seconds: 2
       urls:
-        - "https://json.nlohmann.me/features/parsing/parse_exceptions/"
-        - "https://json.nlohmann.me/home/exceptions/"
+          - "https://json.nlohmann.me/features/parsing/parse_exceptions/"
+          - "https://json.nlohmann.me/home/exceptions/"
 ---
 
 The nlohmann/json library recognizes malformed JSON and returns an exception or a discarded value.

@@ -10,11 +10,11 @@ references:
       path: "tests/src/unit-deserialization.cpp"
     - type: cpp_test
       name: "parser class - core;accept;object;nonempty object"
-      path: "TSF/tests/unit-class_parser_core.cpp"            
+      path: "TSF/tests/unit-class_parser_core.cpp"
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - class_parser_core
           - deserialization
 score:

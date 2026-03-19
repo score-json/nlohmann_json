@@ -15,13 +15,13 @@ references:
       url: "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
       description: "OpenSSF Scorecard report for the nlohmann/json library, where the score for 'Fuzzing' supports this statement."
 evidence:
-  type: https_response_time
-  configuration:
-    target_seconds: 2
-    urls:
-      - "https://introspector.oss-fuzz.com/project-profile?project=json"
-      - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
-      - "https://storage.googleapis.com/oss-fuzz-introspector/json/inspector-report/20250824/fuzz_report.html"
+    type: https_response_time
+    configuration:
+      target_seconds: 2
+      urls:
+          - "https://introspector.oss-fuzz.com/project-profile?project=json"
+          - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
+          - "https://storage.googleapis.com/oss-fuzz-introspector/json/inspector-report/20250824/fuzz_report.html"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

@@ -13,11 +13,10 @@ references:
     - type: cpp_test
       name: "compliance tests from nativejson-benchmark;strings"
       path: "tests/src/unit-testsuites.cpp"
-            
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - class_parser_core
           - testsuites
 score:

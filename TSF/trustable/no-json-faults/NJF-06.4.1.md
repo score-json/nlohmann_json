@@ -33,14 +33,14 @@ references:
       path: "TSF/tests/unit-objects.cpp"
     - type: cpp_test
       name: "accept;names;strings;escaped UTF-16 surrogates"
-      path: "TSF/tests/unit-objects.cpp"        
+      path: "TSF/tests/unit-objects.cpp"
     - type: cpp_test
       name: "accept;member separator"
-      path: "TSF/tests/unit-objects.cpp"  
+      path: "TSF/tests/unit-objects.cpp"
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - class_parser_core
           - testsuites
           - objects

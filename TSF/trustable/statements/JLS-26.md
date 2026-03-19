@@ -12,9 +12,9 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:   
-            - "https://github.com/nlohmann/json/actions?query=branch%3Amaster"
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json/actions?query=branch%3Amaster"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

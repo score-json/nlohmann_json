@@ -6,14 +6,14 @@ references:
       items:
         - JLEX-01
     - type: JSON_testsuite
-      name: "nst's JSONTestSuite (2);test_parsing;n"   
+      name: "nst's JSONTestSuite (2);test_parsing;n"
       path: "tests/src/unit-testsuites.cpp"
       test_suite_paths:
         - "/nst_json_testsuite2/test_parsing/n_object_comma_instead_of_colon.json"
       description: "Checks that comma instead of colon is rejected."
     - type: JSON_testsuite
       name: "nst's JSONTestSuite (2);test_parsing;n"
-      path: "tests/src/unit-testsuites.cpp" 
+      path: "tests/src/unit-testsuites.cpp"
       test_suite_paths:
         - "/nst_json_testsuite2/test_parsing/n_object_double_colon.json"
       description: "Checks that double colon is rejected."
@@ -31,7 +31,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - objects
           - testsuites
 score:

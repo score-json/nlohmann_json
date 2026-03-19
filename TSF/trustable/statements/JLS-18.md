@@ -11,8 +11,8 @@ references:
 evidence:
     type: file_exists
     configuration:
-        files: 
-            - "./artifacts/MemoryEfficientTestResults.db"
+      files:
+          - "./artifacts/MemoryEfficientTestResults.db"
 score:
     Jonas-Kirchhoff: 0.75
 ---

@@ -10,7 +10,7 @@ evidence:
     configuration:
       target_seconds: 2
       urls:
-        - "https://github.com/nlohmann/json/actions?query=event%3Apush+branch%3Adevelop"
+          - "https://github.com/nlohmann/json/actions?query=event%3Apush+branch%3Adevelop"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

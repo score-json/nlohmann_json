@@ -6,8 +6,8 @@ references:
       path: ".github/workflows/dependency-review.yml"
       description: "The workflow scans PRs for dependency changes and vulnerabilities."
 evidence:
-  type: "check_artifact_exists"
-  configuration:
+    type: "check_artifact_exists"
+    configuration:
       ubuntu: exclude
       coverage_gate: exclude
       codeql: exclude

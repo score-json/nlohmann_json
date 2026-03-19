@@ -9,7 +9,7 @@ evidence:
     type: check_test_results
     configuration:
       tests:
-        - class_parser_core    
+          - class_parser_core
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

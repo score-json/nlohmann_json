@@ -35,7 +35,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - unicode2
           - unicode3
           - unicode4

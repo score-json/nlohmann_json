@@ -15,14 +15,14 @@ references:
       url: "https://coveralls.io/github/nlohmann/json"
       description: "Coveralls dashboard for nlohmann/json, including coverage history/statistics (trend view)."
 evidence:
-  type: https_response_time
-  configuration:
-    target_seconds: 2
-    urls:
-      - "https://json.nlohmann.me/community/quality_assurance/"
-      - "https://github.com/nlohmann/json/actions"
-      - "https://app.codacy.com/gh/nlohmann/json/dashboard"
-      - "https://coveralls.io/github/nlohmann/json"
+    type: https_response_time
+    configuration:
+      target_seconds: 2
+      urls:
+          - "https://json.nlohmann.me/community/quality_assurance/"
+          - "https://github.com/nlohmann/json/actions"
+          - "https://app.codacy.com/gh/nlohmann/json/dashboard"
+          - "https://coveralls.io/github/nlohmann/json"
 score:
     Erikhu1: 0.9
 ---

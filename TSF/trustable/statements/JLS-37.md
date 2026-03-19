@@ -13,8 +13,8 @@ evidence:
     configuration:
       target_seconds: 2
       urls:
-        - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/trustable_report_for_Software.html#compliance-for-ta"
-        - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/trustable_graph.html"
+          - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/trustable_report_for_Software.html#compliance-for-ta"
+          - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/trustable_graph.html"
 ---
 
 High-level statements are decomposed into smaller, recursive statements.

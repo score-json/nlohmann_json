@@ -13,8 +13,8 @@ evidence:
     configuration:
       target_seconds: 2
       urls:
-        - "https://github.com/nlohmann/json/discussions/categories/ideas"
-        - "https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS"
+          - "https://github.com/nlohmann/json/discussions/categories/ideas"
+          - "https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS"
 ---
 
 Feature requests for the nlohmann/json repository are raised in the project's GitHub discussions and are actively reviewed and answered by the maintainer.

@@ -12,7 +12,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - strings
 score:
     Jonas-Kirchhoff: 0.9

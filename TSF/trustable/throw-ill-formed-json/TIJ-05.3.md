@@ -14,7 +14,7 @@ references:
         - "/nst_json_testsuite2/test_parsing/n_object_bracket_key.json"
         - "/nst_json_testsuite2/test_parsing/n_object_unquoted_key.json"
       description: "Checks that invalid names throw an exception."
-    - type: JSON_testsuite 
+    - type: JSON_testsuite
       name: "nst's JSONTestSuite (2);test_parsing;i -> n"
       path: "tests/src/unit-testsuites.cpp"
       test_suite_paths:
@@ -23,7 +23,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - testsuites
 score:
     Jonas-Kirchhoff: 1.0

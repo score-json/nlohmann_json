@@ -13,7 +13,7 @@ references:
         - "/nst_json_testsuite2/test_parsing/n_string_1_surrogate_then_escape.json"
         - "/nst_json_testsuite2/test_parsing/n_string_1_surrogate_then_escape_u.json"
         - "/nst_json_testsuite2/test_parsing/n_string_1_surrogate_then_escape_u1.json"
-        - "/nst_json_testsuite2/test_parsing/n_string_1_surrogate_then_escape_u1x.json" 
+        - "/nst_json_testsuite2/test_parsing/n_string_1_surrogate_then_escape_u1x.json"
         - "/nst_json_testsuite2/test_parsing/n_string_accentuated_char_no_quotes.json"
         - "/nst_json_testsuite2/test_parsing/n_string_backslash_00.json"
         - "/nst_json_testsuite2/test_parsing/n_string_escape_x.json"
@@ -35,7 +35,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - strings
           - testsuites
 score:

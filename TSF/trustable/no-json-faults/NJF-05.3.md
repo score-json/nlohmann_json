@@ -29,10 +29,10 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - deserialization
           - testsuites
-score: 
+score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
 ---
