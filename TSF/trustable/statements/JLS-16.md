@@ -10,10 +10,10 @@ references:
       description: "GitHub Actions page showing that eclipse-score/inc_nlohmann_json is using a GitHub-hosted environment."
 evidence:
     type: check_list_of_tests
-    configuration: 
-        sources:
-            - "./tests/src"
-            - "./TSF/tests"
+    configuration:
+      sources:
+          - "./tests/src"
+          - "./TSF/tests"
 ---
 
 A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.

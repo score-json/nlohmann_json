@@ -23,7 +23,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - class_parser_core
           - testsuites
           - strings

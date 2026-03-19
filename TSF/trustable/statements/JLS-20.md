@@ -1,7 +1,7 @@
 ---
 level: 1.1
 normative: true
-references: 
+references:
     - type: verbose_file
       path: ./.github/workflows/parent-workflow.yml
       description: "GitHub workflow running on push to main and triggering the workflow publish_documentation."
@@ -14,9 +14,9 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-            - "https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/data_storage"
+      target_seconds: 2
+      urls:
+          - "https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/data_storage"
 score:
     Jonas-Kirchhoff: 1.0
 ---

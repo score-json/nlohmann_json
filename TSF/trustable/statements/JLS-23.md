@@ -11,10 +11,10 @@ references:
 evidence:
     type: https_response_time
     configuration:
-            target_seconds: 2
-            urls:
-                - "https://github.com/nlohmann/json"
-                - "https://github.com/eclipse-score/inc_nlohmann_json"
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json"
+          - "https://github.com/eclipse-score/inc_nlohmann_json"
 score:
     mishu-dev: 1.0
 ---

@@ -9,8 +9,8 @@ evidence:
     type: https_response_time
     configuration:
       target_seconds: 2
-      urls:   
-        - "https://github.com/nlohmann/json/discussions/4967"
+      urls:
+          - "https://github.com/nlohmann/json/discussions/4967"
 score:
     Erikhu1: 0.0
     aschemmel-tech: 0.0

@@ -13,8 +13,8 @@ evidence:
     configuration:
       target_seconds: 2
       urls:
-        - "https://github.com/nlohmann/json/discussions/4975"
-        - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
+          - "https://github.com/nlohmann/json/discussions/4975"
+          - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
 score:
     Erikhu1: 0.5
     aschemmel-tech: 1.0

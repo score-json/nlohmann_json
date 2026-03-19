@@ -21,7 +21,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - testsuites
 score:
     Jonas-Kirchhoff: 1.0

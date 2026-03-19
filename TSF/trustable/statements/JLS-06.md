@@ -7,9 +7,9 @@ references:
       description: "OpenSSF Scorecard report for the nlohmann/json library, where the score for 'Code-Review' reflects this statement."
 evidence:
     type: https_response_time
-      configuration:
-        target_seconds: 2
-        urls:
+    configuration:
+      target_seconds: 2
+      urls:
           - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
 score:
     Erikhu1: 0.3

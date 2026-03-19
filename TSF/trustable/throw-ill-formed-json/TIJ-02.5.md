@@ -63,11 +63,11 @@ references:
       path: "TSF/tests/unit-numbers.cpp"
     - type: cpp_test
       name: "parse;invalid whitespace"
-      path: "TSF/tests/unit-numbers.cpp"        
+      path: "TSF/tests/unit-numbers.cpp"
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - numbers
           - testsuites
 score:

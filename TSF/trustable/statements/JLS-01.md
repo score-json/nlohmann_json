@@ -6,10 +6,10 @@ references:
       url: "https://github.com/nlohmann/json/blob/develop/.github/workflows/ubuntu.yml#L9"
       description: "The trigger condition for the CI workflow that executes the test suites."
 evidence:
-      type: https_response_time
-      configuration:
-        target_seconds: 2
-        urls:
+    type: https_response_time
+    configuration:
+      target_seconds: 2
+      urls:
           - "https://github.com/nlohmann/json/blob/develop/.github/workflows/ubuntu.yml#L9"
 score:
     Jonas-Kirchhoff: 1.0

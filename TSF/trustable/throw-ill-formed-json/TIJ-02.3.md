@@ -18,7 +18,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - literals
           - testsuites
 score:

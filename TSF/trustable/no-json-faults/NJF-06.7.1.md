@@ -13,7 +13,7 @@ references:
         - "/json.org/2.json"
         - "/json.org/3.json"
         - "/json.org/4.json"
-        - "/json.org/5.json"     
+        - "/json.org/5.json"
         - "/json.org/1.json"
         - "/json.org/2.json"
         - "/json.org/3.json"
@@ -26,7 +26,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - objects
           - testsuites
 score:

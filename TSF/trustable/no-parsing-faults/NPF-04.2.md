@@ -12,7 +12,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - class_parser_core
 score:
     Jonas-Kirchhoff: 1.0

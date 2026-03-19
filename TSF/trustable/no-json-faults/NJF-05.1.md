@@ -28,9 +28,9 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
-        - class_parser_core
-        - testsuites
+      tests:
+          - class_parser_core
+          - testsuites
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

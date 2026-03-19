@@ -32,7 +32,7 @@ references:
         - "/nst_json_testsuite2/test_parsing/n_structure_lone-invalid-utf-8.json"
         - "/nst_json_testsuite2/test_parsing/n_structure_open_array_apostrophe.json"
         - "/nst_json_testsuite2/test_parsing/n_structure_open_array_comma.json"
-        - "/nst_json_testsuite2/test_parsing/n_structure_open_array_open_object.json"   
+        - "/nst_json_testsuite2/test_parsing/n_structure_open_array_open_object.json"
         - "/nst_json_testsuite2/test_parsing/n_structure_open_object_close_array.json"
         - "/nst_json_testsuite2/test_parsing/n_structure_unclosed_array.json"
         - "/nst_json_testsuite2/test_parsing/n_structure_unclosed_array_partial_null.json"
@@ -42,7 +42,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - class_parser_core
           - testsuites
           - arrays

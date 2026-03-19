@@ -15,7 +15,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - regression1
           - numbers
 score:

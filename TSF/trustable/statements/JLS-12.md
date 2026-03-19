@@ -10,7 +10,7 @@ evidence:
     configuration:
       target_seconds: 2
       urls:
-        - "https://github.com/nlohmann/json/community"
+          - "https://github.com/nlohmann/json/community"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

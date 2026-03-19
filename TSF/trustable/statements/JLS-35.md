@@ -9,12 +9,12 @@ references:
       url: "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved"
       description: "All approved pull requests in the nlohmann/json repository, along with the results of the CI pipeline executions."
 evidence:
-        type: https_response_time
-        configuration:
-                target_seconds: 2
-                urls:
-                    - "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved"
-                    - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
+    type: https_response_time
+    configuration:
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved"
+          - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
 score:
     Erikhu1: 0.9
     aschemmel-tech: 1.0

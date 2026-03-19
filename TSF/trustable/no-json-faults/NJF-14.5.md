@@ -11,7 +11,7 @@ references:
 evidence:
     type: check_test_results
     configuration:
-      tests: 
+      tests:
           - byte_order_mark
 score:
     Jonas-Kirchhoff: 1.0
