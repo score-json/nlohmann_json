@@ -125,7 +125,7 @@ considered against the list of Expectations.
 - Can we identify misbehaviours that have been understood but not specified?
   - **Answer**: We currently do not identify any misbehaviours that have been understood but not specified.
 - Can we identify some new misbehaviours, right now?
-  - **Answer**: No, currently no new misbehaviors can be identified.
+  - **Answer**: No, currently no new misbehaviours can be identified.
 - Is every misbehaviour represented by at least one fault induction test?
   - **Answer**: The expected behaviour of nlohmann/json is described by JLS-24 and its substatements in the trustable graph. For every substatement at least one fault induction test is performed. Thus, every misbehaviour is represented by at least one fault induction test.
 - Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?

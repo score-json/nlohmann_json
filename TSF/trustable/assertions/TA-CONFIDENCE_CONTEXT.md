@@ -44,4 +44,4 @@ scores given to Statements
 - What are the trends for each score?
   - **Answer**: At the moment, there are no trends as all statements have the review-status 'unreviewed'. However, the infrastructure for saving history of scores is already in place (see JLS-20).
 - How well do our scores correlate with external feedback signals?
-  - **Answer**: Such correlation can not be measured yet due to missing data.
+  - **Answer**: Such correlation cannot be measured yet due to missing data.
