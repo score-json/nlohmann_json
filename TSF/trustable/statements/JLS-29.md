@@ -22,4 +22,4 @@ score:
 
 Known bugs, misbehaviours and CVEs are analysed and either fixed or mitigated in the nlohmann/json repository.
 
-aschemmel-tech: evidence supports bug and CVE fixing; no mitigation actions are offered.
+aschemmel-tech: evidence supports bugs and CVE fixing, no mitigation actions are offered.
