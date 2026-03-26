@@ -22,4 +22,4 @@ score:
 
 Outstanding CVEs are analysed within eclipse-score/inc_nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE's use cases of the nlohmann/json library.
 
-aschemmel-tech: In my understanding, both pieces of evidence support the statement completely.
+aschemmel-tech: In my understanding bot evidences support the statement completely.
