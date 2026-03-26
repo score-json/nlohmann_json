@@ -61,17 +61,6 @@ The underlying standard, which defines the syntax of JSON data and the necessary
 Therefore, this documentation asserts the trustability of the capabilities of the library to recognize ill-formed JSON data according to RFC8259 and parse well-formed JSON data.
 In particular, the capabilities (and inabilities) according to different JSON formats, e.g. `RFC6902 <https://doi.org/10.17487/RFC6902>`_, `RFC7396 <https://doi.org/10.17487/RFC7396>`_, `RFC7493 <https://doi.org/10.17487/RFC7493>`_, `RFC7049 <https://doi.org/10.17487/RFC7049>`_ and `RFC8949 <https://doi.org/10.17487/RFC8949>`_ are not covered in this documentation.
 
-
-Supporting Documents
--------------------
-
-In addition to the Trustable Compliance Report, the TSF documentation includes the following files that are used to support TSF statements:
-
-- `List of known misbehaviours <../nlohmann_misbehaviours_comments.html>`_ collects open upstream bug reports and comments their relevance for S-CORE use cases.
-- `Sample of closed upstream misbehaviours <../nlohmann_closed_misbehaviours.html>`_ captures a sample of closed upstream bug reports to document how upstream bug reports are typically resolved.
-- `Runtime and memory consumption analysis <../nlohmann_runtime_and_memory_analysis.html>`_ summarizes externally visible performance characteristics and documents that runtime and memory limits remain an integration responsibility.
-
-
 Context Diagram
 -----------------------------------
 
