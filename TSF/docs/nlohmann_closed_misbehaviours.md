@@ -31,3 +31,7 @@ issue-id | applies to S-CORE | problem | resolution | closed after
 [4332](https://github.com/nlohmann/json/issues/4332) | No | Hex-like git ref string reported as number overflow. | Author realised themselves that it was user error. | the same day
 [4427](https://github.com/nlohmann/json/issues/4427) | No | Misfiled "CVE" report describing a Python `jaraco/zipp` issue for possible DoS Attack. | Was declared not a bug. | the same day
 [4467](https://github.com/nlohmann/json/issues/4467) | No | Error C2440 report with little context given. | Author realised themselves that it was user error. | within 1 week
+
+## Conclusion
+
+The analysis of a random sample of 20 closed upstream misbehaviours showed that misbehaviours were addressed appropriately and closed in a reasonable timeframe.
