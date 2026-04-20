@@ -2,14 +2,14 @@
 level: 1.1
 normative: true
 references:
-        - type: project_website
-          url: "https://github.com/nlohmann/json/releases"
-          description: "List of nlohmann/json releases consisting of source code, build instructions, test code and test result summaries."
+    - type: project_website
+      url: "https://github.com/nlohmann/json/releases"
+      description: "List of nlohmann/json releases consisting of source code, build instructions, test code and test result summaries."
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls: 
+      target_seconds: 2
+      urls:
           - "https://github.com/nlohmann/json/releases"
 ---
 

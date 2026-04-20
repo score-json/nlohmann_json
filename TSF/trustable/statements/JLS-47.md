@@ -8,9 +8,9 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-            - "https://github.com/nlohmann/json/blob/develop/single_include/nlohmann/json.hpp"
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json/blob/develop/single_include/nlohmann/json.hpp"
 score:
     Erikhu1: 1.0
 ---

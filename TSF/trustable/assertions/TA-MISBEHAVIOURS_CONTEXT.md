@@ -100,7 +100,7 @@ established and reusable solutions.
   - Exception handling tests
     - **Answer**: The nlohmann/json library contains a set of exception handling tests, along with custom exception types, as described in JLS-24.
   - Stress tests.
-    - **Answer**: Stress tests target system-level behavior under load, while nlohmann/json is a stateless JSON library. There is no long-lived state, connection pool, thread pool, queue or similar in nlohmann/json. Therefore, stress tests are generally not relevant for nlohmann/json.
+    - **Answer**: Stress tests target system-level behaviour under load, while nlohmann/json is a stateless JSON library. There is no long-lived state, connection pool, thread pool, queue or similar in nlohmann/json. Therefore, stress tests are generally not relevant for nlohmann/json.
   - Soak tests
     - **Answer**: Soak tests are used to investigate long-running behaviour, not single operations like a JSON library. Soak tests are therefore not needed for the nlohmann/json library.
 
@@ -113,19 +113,19 @@ considered against the list of Expectations.
 **Checklist**
 
 - How has the list of misbehaviours varied over time?
-  - **Answer**: The list of misbehaviours for nlohmann/json (https://github.com/nlohmann/json/issues), as well as its history and development, is collected using Github. Statistics, e.g. about the number of open issues over time, are currently not tracked.
+  - **Answer**: The list of misbehaviours for nlohmann/json (https://github.com/nlohmann/json/issues), as well as its history and development, is collected using GitHub. Statistics, e.g. about the number of open issues over time, are currently not tracked.
 - How confident can we be that this list is comprehensive?
   - **Answer**: Due to the collaborative nature of the open source community, we deem it quite unlikely, but not impossible, that there are any known misbehaviours which are not reported to the nlohmann/json repository.
 - How well do the misbehaviours map to the expectations?
   - **Answer**: The identified misbehaviours do not necessarily all have a direct impact on the defined expectations. A mapping of any misbehaviour to the expectations has to be done on a case-by-case basis.
 - Could some participants have incentives to manipulate information?
-  - **Answer**:  We can not think of any incentive that any collaborateur could have to manipulate the information.
+  - **Answer**:  We cannot think of any incentive that any collaborator could have to manipulate the information.
 - Could there be whole categories of misbehaviours still undiscovered?
   - **Answer**: Due to the wide use and long-standing development of the library it is quite unlikely that any major misbehaviours, in particular regarding the parsing and validating of JSON data in the sense of RFC-8259, is undiscovered. 
 - Can we identify misbehaviours that have been understood but not specified?
   - **Answer**: We currently do not identify any misbehaviours that have been understood but not specified.
 - Can we identify some new misbehaviours, right now?
-  - **Answer**: No, currently no new misbehaviors can be identified.
+  - **Answer**: No, currently no new misbehaviours can be identified.
 - Is every misbehaviour represented by at least one fault induction test?
   - **Answer**: The expected behaviour of nlohmann/json is described by JLS-24 and its substatements in the trustable graph. For every substatement at least one fault induction test is performed. Thus, every misbehaviour is represented by at least one fault induction test.
 - Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?

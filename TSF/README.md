@@ -75,7 +75,7 @@ For these files, and in particular the workflow files, caution must be exercised
 Moreover, some parts of the documentation must be adapted to the new version.
 
 
-### What can not be updated without further precautions?
+### What cannot be updated without further precautions?
 
 * ``cmake/ci.cmake``
     This file defines, in particular, the various custom cmake targets; in particular, the various configurations for the execution of the unit- and integration-tests are defined.
@@ -83,8 +83,8 @@ Moreover, some parts of the documentation must be adapted to the new version.
     In order to do this efficiently, the ctest command is adapted to automatically generate the junit-logs of each test-run.
     For this, the option ``--output-junit`` is set with output path ``../my_logs/TARGETNAME_junit.xml``, where TARGETNAME is replaced by the name of the respective cmake target; in case that this convention is insufficient to uniquely identify the logs, TARGETNAME is amended by a number.
     When updating, it must be ensured that these adaptations are preserved.
-    Moreover, if the update introduces new cmake targets or new executions of ctest, it must be ensured, that the junit-log is generated and stored with a similar naming convention in the folder "../my_logs/".
-    Otherwise, it can not be ensured that the test data are accurately captured.
+    Moreover, if the update introduces new cmake targets or new executions of ctest, it must be ensured that the junit-log is generated and stored with a similar naming convention in the folder "../my_logs/".
+    Otherwise, it cannot be ensured that the test data are accurately captured.
 
 * ``cmake/download_test_data.cmake``
     This file is modified to ensure that the test-data are not downloaded from the original test-data repository, but instead from the copy of that repository within the Eclipse S-CORE organisation.
@@ -94,16 +94,16 @@ Moreover, some parts of the documentation must be adapted to the new version.
     This file collects, in particular, the files containing the unit- and integration-tests in a list, which is given to cmake. 
     Custom tests were added in TSF/tests to document the fulfillment of the expectations. 
     To ensure that these tests are run, the file tests/CMakeLists.txt has been modified.
-    During the update, it must be ensured, that the custom tests are still being executed.
+    During the update, it must be ensured that the custom tests are still being executed.
 
 * ``.github/workflows/parent-workflow.yml``
-    To ensure a specific execution order for the individual github workflows, their execution is orchestrated by the parent-workflow.
+    To ensure a specific execution order for the individual GitHub workflows, their execution is orchestrated by the parent-workflow.
     To guarantee that this order is respected, it must be ensured that every workflow except for ``comment_check_amalgamation.yml``, ``docs-cleanup.yml``, ``parent-workflow.yml``, ``scorecards.yml`` and ``stale.yml`` runs ``on workflow_call``, only.
 
 * ``.github/workflows/ubuntu.yml``
     The ubuntu workflow orchestrates the parallel execution of various cmake targets with varying configurations running on the latest version of ubuntu.
     The first TSF related adaptation of this workflow is that every step, in which a junit-report is generated, generates an artifact.
-    It must be ensured, that these artifacts are still generated after the update.
+    It must be ensured that these artifacts are still generated after the update.
     The second adaptation is that the test-results are captured, processed and persistently stored or stored in the ubuntu-artifact.
     Therefore, it must be ensured that the jobs ``publish_test_data_success``, ``publish_test_data_failure``, ``publish_test_data_cancellation`` and ``ubuntu_artifact`` are executed.
     Moreover, in case that any further job is added by nlohmann, it must be ensured that this job is added to the list of jobs required before the latter workflows are executed.
@@ -126,7 +126,7 @@ Moreover, some parts of the documentation must be adapted to the new version.
     For every workflow, it must be ensured that the conditions of their execution are unchanged.
     The workflows ``check_amalgamation``, ``codeql``, ``dependency_review``, ``labeler`` and ``test_trudag_extensions`` generate an artifact, which must not be changed.
     New workflows should be carefully reviewed.
-    If it is determined that their execution within the project is beneficial, and that they do not interfere with, then they should be integrated within the parent workflow at an appropriate place and their execution condition should be set to on ``workflow``, or their execution should be scheduled appropriately. 
+    If it is determined that their execution within the project is beneficial, and that they do not interfere, then they should be integrated within the parent workflow at an appropriate place and their execution condition should be set to on ``workflow``, or their execution should be scheduled appropriately. 
     It is strongly recommended that the new workflow produces an artifact on success, and that the validator ``check_artifact_exists`` is adapted accordingly.
     If nlohmann deletes any of the currently executed workflows, in particular ``check_amalgamation.yml``, ``codeql.yml``, ``dependency_review.yml``, ``labeler.yml``, ``test_trudag_extensions.yml`` and ``ubuntu.yml``, then it is strongly recommended to keep the currently executed version, since the automatic validator ``check_artifact_exists`` depends on the existence of these workflows.
     In case that it is determined that these workflows should be deleted also in the documented copy of ``nlohmann/json``, then the validator ``check_artifact_exists`` and all its occurrences must be adapted accordingly.
@@ -144,7 +144,7 @@ The following adaptation is recommended, and has, unfortunately, not been automa
 
 
 The following adaptations to the documentation have been automated; the python-script TSF/scripts/update_helper.py may be used to assist with these changes. 
-For the error-free execution is it necessary, however, to adhere to the naming scheme json_version_X_XX_X, and to not change the structure of the directories.
+For error-free execution, it is, however, necessary to adhere to the naming scheme json_version_X_XX_X, and not to change the structure of the directories.
 
 * ``TSF/Trustable/statements/JLS-11.md``
     It must be ensured that the correct release date is used.
@@ -168,7 +168,7 @@ Based on the above observations, the following steps are recommended for each up
 1. Merge branch master from the original nlohmann/json into an external fork of the eclipse-score/inc_nlohmann_json repository, where steps 2-12 shall be performed.
 2. Confirm the deletion of cifuzz.yml, macos.yml and windows.yml.
 3. Resolve the potential merge conflict in publish-documentation.yml by rejecting the incoming changes.
-4. Update the versions of the github actions, if necessary. 
+4. Update the versions of the GitHub Actions, if necessary. 
 5. Resolve the potential merge conflicts in check_amalgamation.yml, codeql.yml, dependency_review.yml, labeler.yml and test_trudag_extensions.yml to ensure that the artifacts are generated, i.e. the jobs ``Generate XXX artifact`` and ``Upload XXX artifact`` are retained.
 6. Resolve the potential merge conflict in ubuntu.yml following the above instructions.
 7. Resolve the potential merge conflicts in cmake/download_test_data.cmake and cmake/ci.cmake following the above instructions.
@@ -197,7 +197,7 @@ The following should be considered:
 
 * How has the algorithm for the accumulation of the trustable score changed? Ideally, it is not changed, otherwise the necessity for a new review arises.
 * How has the data store interface changed? Ideally, it is not changed, but if it does and the expected schema format changes, data_store.py needs to be updated accordingly.
-* How has the the expected configuration for the TSF items changed? It is known that this configuration changed (at least) once before. What does the potential change mean?
+* How has the expected configuration for the TSF items changed? It is known that this configuration changed (at least) once before. What does the potential change mean?
 * Do all custom references and validators as well as the data store interface work as before?
 * Has the algorithm for the hashing changed, or are there any changes to the trustable scores? If so, investigate carefully!
 

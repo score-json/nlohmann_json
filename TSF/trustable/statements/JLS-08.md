@@ -10,12 +10,12 @@ references:
       description: "Trustable Compliance Report showing scores for statements."
     - type: web_content
       url: "https://codethinklabs.gitlab.io/trustable/trustable/methodology.html#documenting-assumptions"
-      description: "Definition of Assumptions as part of the methodology"
+      description: "Definition of Assumptions as part of the TSF methodology docomentation."
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls: 
+      target_seconds: 2
+      urls:
           - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/trustable_report_for_Software.html"
 ---
 

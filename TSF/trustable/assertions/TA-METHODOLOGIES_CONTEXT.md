@@ -59,7 +59,7 @@ in comparison to the analysed results
 - Is the sequence of procedures documented in an unambiguous manner?
   - **Answer**: Largely yes. Where necessary, examples and templates make the expected sequence explicit.
 - Can improvements to the processes be suggested and implemented?
-  - **Answer**: Improvements are proposed via GitHub issues or pull request.
+  - **Answer**: Improvements are proposed via GitHub issues or pull requests.
 - How frequently are processes changed?
   - **Answer**: Process changes are infrequent and usually happen with a new nlohmann/json release, when a need for improvement is identified. 
 - How are changes to manual processes communicated?

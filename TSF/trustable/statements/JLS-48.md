@@ -8,9 +8,9 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:
-            - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md#used-third-party-tools"
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md#used-third-party-tools"
 score:
     Erikhu1: 1.0
 ---

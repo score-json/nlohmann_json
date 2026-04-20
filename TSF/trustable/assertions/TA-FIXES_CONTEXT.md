@@ -83,7 +83,7 @@ Each iteration, we should improve the algorithm based on measurements
 - How many faults may be unrecorded (or incorrectly closed, or downplayed)?
   - **Answer**: Few or none, considering the wide use of the nlohmann/json library (see JLS-05).
 - How do we collect lists of bugs and known vulnerabilities from components?
-  - **Answer**: We pull the list from the issues reported to nlohmann/json labelled as bug and are currently open or were opened since the last release. This list is then stored using GitHub, thereby enabling a traceability of the list.
+  - **Answer**: We pull the list from the issues reported to nlohmann/json labelled as bug and that are currently open or were opened since the last release. This list is then stored using GitHub, thereby enabling traceability of the list.
 - How (and how often) do we check these lists for relevant bugs and known vulnerabilities?
   - **Answer**: Whenever we generate the documentation, the list is pulled. If there is an issue previously unrecorded, then the maintainer is encouraged by the change of the trustable score to check the relevance of the issue.
 - How confident can we be that the lists are honestly maintained?

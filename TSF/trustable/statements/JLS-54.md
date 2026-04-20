@@ -1,13 +1,13 @@
 ---
 level: 1.1
 normative: true
-references: 
+references:
     - type: verbose_file
       path: "./.github/workflows/coverage_gate.yml"
       description: "GitHub Actions workflow enforcing a minimum coverage threshold."
 evidence:
-  type: "check_artifact_exists"
-  configuration:
+    type: "check_artifact_exists"
+    configuration:
       ubuntu: exclude
       coverage_gate: include
       codeql: exclude

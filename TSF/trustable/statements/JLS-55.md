@@ -1,13 +1,13 @@
 ---
 level: 1.1
 normative: true
-references: 
+references:
     - type: verbose_file
       path: "./.github/workflows/pr_count_gate.yml"
       description: "GitHub Actions workflow enforcing a limit on open PRs."
 evidence:
-  type: "check_artifact_exists"
-  configuration:
+    type: "check_artifact_exists"
+    configuration:
       ubuntu: exclude
       coverage_gate: exclude
       codeql: exclude

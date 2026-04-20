@@ -1,7 +1,7 @@
 ---
 level: 1.1
 normative: true
-references: 
+references:
     - type: verbose_file
       path: "./TSF/scripts/README.md"
       description: "Explanation of how test-result data is stored, how long it is retained, which size limits apply, and which maintenance actions are required for the persistent storage."

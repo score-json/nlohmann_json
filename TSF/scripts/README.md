@@ -4,7 +4,7 @@ The following scripts are used in the automatic compilation of the trustable rep
 
 ## capture_test_data.py
 
-The python-script [capture_test_data.py](capture_test_data.py) is intended to run at the end of the [ubuntu-workflow](../../.github/workflows/ubuntu.yml). It collects and combines the test-results that were collected in the individual jobs, appends the persistent test data storage and generates a database containing the results of the most recent tests only. Since storage space on the github is limited, the storage of test data is limited to two weeks only. It must be noted that this implementation is only intended as a temporary proof of concept!
+The python-script [capture_test_data.py](capture_test_data.py) is intended to run at the end of the [ubuntu-workflow](../../.github/workflows/ubuntu.yml). It collects and combines the test-results that were collected in the individual jobs, appends the persistent test data storage and generates a database containing the results of the most recent tests only. Since storage space on GitHub is limited, the storage of test data is limited to two weeks only. It must be noted that this implementation is only intended as a temporary proof of concept!
 
 ## capture_test_data_memory_sensitive.py
 
@@ -23,7 +23,7 @@ Moreover, a size-check is performed on the persistent storage, using the followi
 * It is expected, that less than 1,000 workflow runs, where a record of the test-result is triggered, happen per year, since these are only triggered once daily and on each push to main.
 * It is expected, that a ten-year-record of test-results is sufficient for documentation purposes.
 
-In view of these assumptions, we limit the storage to approximately 100,000 test-results and 100,000 workflow-metadata, which guarantees *en passant* that github's file size limit of 100MB is respected.
+In view of these assumptions, we limit the storage to approximately 100,000 test-results and 100,000 workflow-metadata, which guarantees *en passant* that GitHub's file size limit of 100MB is respected.
 In the worst case that every recorded test result is detected as a relevant change, this restraint collects test-results from 27 workflows in total.
 Whenever either limit of 100,000 test-results and 100,000 workflow-metadata in the persistent data storage is violated, the script returns the error "The persistent data storage is too large! Please move persistent data to external storage.", thereby failing the workflow, which advises the maintainer to take up action.
 

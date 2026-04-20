@@ -61,7 +61,7 @@ that may indicate problems in development, test, or production.
 - What fraction of Expectations are covered by the test data?
   - **Answer**: The two expectations are JLEX-01 and JLEX-02. Every statement supporting either of these expectations is ultimately supported by a test, except for WFJ-06. WFJ-06 specifies that `basic_json::accept` must accept exactly JSON values for all possible inputs. Since there are infinitely many possible inputs, this cannot be tested exhaustively. Indirect tests are provided by the rejection of ill-formed json data. This traceability is established by requiring each supporting statement under JLEX-01/02 to reference the relevant CI test(s), and the suitability of the referenced tests as evidence is validated during SME review as part of the scoring process (see JLS-74).
 - What fraction of Misbehaviours are covered by the monitored indicator data?
-  - **Answer**: Currently there is no indicators implemented, that focus on runtime behavior. The only indicators implemented are a coverage gate and PR count gate that are both part of the CI. The data therefore is available via the GitHub actions history.
+  - **Answer**: Currently there are no indicators implemented that focus on runtime behaviour. The only indicators implemented are a coverage gate and PR count gate that are both part of the CI. The data is therefore available via the GitHub Actions history.
 - How confident are we that the indicator data are accurate and timely?
   - **Answer**: See the previous question. Since we just implemented a coverage gate and PR count gate as general indicators, that data is produced automatically by the CI and therefore is generated consistently for every run. We are confident that the values are timely, as they are updated on each CI execution, and accurate to the extent that GitHub Actions reflects the executed workflows and their recorded outputs. 
 - How reliable is the monitoring process?
@@ -69,7 +69,7 @@ that may indicate problems in development, test, or production.
 - How well does the production data correlate with our test data?
   - **Answer**: There are no production data.
 - Are we publishing our data analysis?
-  - **Answer**: Analyses of CI tests failure rates are published in the TSF documentation on GitHub (via ci_failure_rate_analysis.md), but there is currently no published analysis of production monitoring data.
+  - **Answer**: Analyses of CI test failure rates are published in the TSF documentation on GitHub (via ci_failure_rate_analysis.md), but there is currently no published analysis of production monitoring data.
 - Are we comparing and analysing production data vs test?
   - **Answer**: There is no production data.
 - Are our results getting better, or worse?
@@ -83,7 +83,7 @@ that may indicate problems in development, test, or production.
 - Are we achieving the targets?
   - **Answer**: For the unit and integration tests, yes. The degree of target achievement for the fuzz-testing is evaluated within the original nlohmann/json repository.
 - Are all underlying assumptions and target conditions for the analysis specified?
-  - **Answer**: For all tests, the underlying assumption and target condition is that they should cover all expectations, and that no test is expected to fail. Any failed tests are analyzed and reasonably justified or fixed.
+  - **Answer**: For all tests, the underlying assumption and target condition is that they should cover all expectations, and that no test is expected to fail. Any failed tests are analysed and reasonably justified or fixed.
 - Have the underlying assumptions been verified using known good data?
   - **Answer**:  The input data from [nlohmann/json_test_data](https://github.com/nlohmann/json_test_data/tree/master) which is used for the tests contain both known good data and known bad data. As each expectation is mapped to a sub-set of tests, it is indeed verified that the underlying assumption is reasonably verified.
 - Has the Misbehaviour identification process been verified using known bad data?

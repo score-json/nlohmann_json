@@ -12,12 +12,12 @@ references:
 evidence:
     type: https_response_time
     configuration:
-        target_seconds: 2
-        urls:   
-            - "https://github.com/nlohmann/json/actions?query=branch%3Amaster"
+      target_seconds: 2
+      urls:
+          - "https://github.com/nlohmann/json/actions?query=branch%3Amaster"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
 ---
 
-Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analyzed and fixed.
+Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analysed and fixed.
