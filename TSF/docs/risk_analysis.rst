@@ -42,6 +42,7 @@ The software under analysis (SUA) is the **header-only C++ JSON library `nlohman
   - provide JSON parsing and validation per **RFC 8259**
 - **Evidence**
   - captured extensively in `WFJ-*`, `TIJ-*`, `NJF-*`, `NPF-*`, and `PJD-*` statements, which are connected in the trustable graph to the expectation `JLEX-02`. See `Trustable Graph (JLEX-02) <https://eclipse-score.github.io/nlohmann_json/main/_images/custom_JLEX-02_graph.svg>`_.
+
     Finding: the trustable graph contains JLEX-01, which is not a S-CORE requirement any more (to be fixed with `Bug #2686 <https://github.com/eclipse-score/score/issues/2686>`_).
 
 1.2 System
