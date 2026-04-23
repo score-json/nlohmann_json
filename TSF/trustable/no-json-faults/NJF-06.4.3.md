@@ -38,6 +38,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 If the service provided by the nlohmann/json library accepts the value-candidate as a singleton, then the value-candidate is accepted.

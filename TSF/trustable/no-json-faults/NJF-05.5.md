@@ -26,6 +26,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 0.9
 ---
 
 The service provided by the nlohmann/json library does not accept arrays with improper values.

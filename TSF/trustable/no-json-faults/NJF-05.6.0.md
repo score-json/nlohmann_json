@@ -19,6 +19,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.975
     Erikhu1: 0.9
+    THomasClausnitzer: 0.95
 ---
 
 The acceptance of nested arrays by the service provided by the nlohmann/json library does not depend on the depth of nesting.
