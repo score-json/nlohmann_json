@@ -39,6 +39,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.95
     Erikhu1: 0.85
+    ThomasClausnizer: 0.95
 ---
 
 The service provided by the nlohmann/json library accepts the non-empty arrays.
