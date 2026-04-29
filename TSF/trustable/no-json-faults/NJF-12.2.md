@@ -17,6 +17,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.6
     Erikhu1: 0.9
+    ThomasClausnitzer: 0.9
 ---
 
 The service provided by the nlohmann/json library rejects "overlong sequences".

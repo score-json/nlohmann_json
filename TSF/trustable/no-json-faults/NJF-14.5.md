@@ -16,6 +16,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input.

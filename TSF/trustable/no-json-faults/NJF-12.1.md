@@ -16,6 +16,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.9
     Erikhu1: 0.95
+    ThomasClausnitzer: 0.9
 ---
 
 The service provided by the nlohmann/json library rejects malformed UTF-8 data.

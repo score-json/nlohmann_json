@@ -17,6 +17,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.95
     Erikhu1: 0.95
+    ThomasClausnitzer: 0.95
 ---
 
 The service provided by the nlohmann/json library accepts JSON data consisting of combinations of the data types.

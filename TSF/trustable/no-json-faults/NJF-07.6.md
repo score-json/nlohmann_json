@@ -63,6 +63,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.95
     Erikhu1: 0.95
+    ThomasClausnitzer: 0.975
 ---
 
 The service provided by the nlohmann/json library does accept non-empty strings.

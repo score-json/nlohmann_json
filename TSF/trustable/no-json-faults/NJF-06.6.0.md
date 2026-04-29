@@ -27,6 +27,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.975
     Erikhu1: 0.95
+    ThomasClausnitzer: 0.85
 ---
 
 The acceptance of nested objects inside the nlohmann/json library does not depend on the depth of nesting.
