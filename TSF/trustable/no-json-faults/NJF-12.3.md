@@ -24,6 +24,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.9
     Erikhu1: 1.0
+    ThomasClausnitzer: 0.9
 ---
 
 The service provided by the nlohmann/json library rejects single escaped and unescaped, and paired unescaped utf-16 surrogates.
