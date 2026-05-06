@@ -56,7 +56,7 @@ register_toolchains("@llvm_toolchain//:all")
 bazel_dep(name = "score_dash_license_checker", version = "0.1.2")
 
 #docs-as-code
-bazel_dep(name = "score_docs_as_code", version = "1.0.2")
+bazel_dep(name = "score_docs_as_code", version = "4.0.3", dev_dependency = True)
 
 # QNX toolchain
 bazel_dep(name = "score_toolchains_qnx", version = "0.0.6", dev_dependency = True)
