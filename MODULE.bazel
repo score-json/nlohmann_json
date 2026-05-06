@@ -17,46 +17,46 @@ module(name = "score_nlohmann_json")
 bazel_dep(name = "rules_license", version = "1.0.0")
 
 
-bazel_dep(name = "rules_python", version = "1.4.1")
+bazel_dep(name = "rules_python", version = "1.8.3", dev_dependency = True)
 
 PYTHON_VERSION = "3.12"
 
-python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python = use_extension("@rules_python//python/extensions:python.bzl", "python", dev_dependency = True)
 python.toolchain(
     is_default = True,
     python_version = PYTHON_VERSION,
 )
-use_repo(python)
+use_repo(python, dev_dependency = True)
 
 # Add GoogleTest dependency
-bazel_dep(name = "googletest", version = "1.14.0")
+bazel_dep(name = "googletest", version = "1.17.0.bcr.2", dev_dependency = True)
 
 # Checker rule for CopyRight checks/fixs
-bazel_dep(name = "score_cr_checker", version = "0.2.2")
-bazel_dep(name = "score_python_basics", version = "0.3.0")
-bazel_dep(name = "score_starpls_lsp", version = "0.1.0")
+bazel_dep(name = "score_cr_checker", version = "0.3.1", dev_dependency = True)
+bazel_dep(name = "score_python_basics", version = "0.3.4", dev_dependency = True)
+bazel_dep(name = "score_starpls_lsp", version = "0.1.0", dev_dependency = True)
 
 # C/C++ rules for Bazel
-bazel_dep(name = "rules_cc", version = "0.1.1")
+bazel_dep(name = "rules_cc", version = "0.2.17")
 
 # LLVM Toolchains Rules - host configuration
-bazel_dep(name = "toolchains_llvm", version = "1.2.0")
+bazel_dep(name = "toolchains_llvm", version = "1.4.0", dev_dependency = True)
 
-llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
+llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm", dev_dependency = True)
 llvm.toolchain(
     cxx_standard = {"": "c++17"},
-    llvm_version = "19.1.0",
+    llvm_version = "19.1.1",
 )
-use_repo(llvm, "llvm_toolchain")
-use_repo(llvm, "llvm_toolchain_llvm")
+use_repo(llvm, "llvm_toolchain", dev_dependency = True)
+use_repo(llvm, "llvm_toolchain_llvm", dev_dependency = True)
 
-register_toolchains("@llvm_toolchain//:all")
+register_toolchains("@llvm_toolchain//:all", dev_dependency = True)
 
 # Dash license checker
-bazel_dep(name = "score_dash_license_checker", version = "0.1.2")
+bazel_dep(name = "score_dash_license_checker", version = "0.1.2", dev_dependency = True)
 
 #docs-as-code
-bazel_dep(name = "score_docs_as_code", version = "4.0.3", dev_dependency = True)
+bazel_dep(name = "score_docs_as_code", version = "4.0.3")
 
 # QNX toolchain
 bazel_dep(name = "score_toolchains_qnx", version = "0.0.6", dev_dependency = True)
@@ -71,11 +71,11 @@ toolchains_qnx.sdp(
     strip_prefix = "installation",
     url = "https://www.qnx.com/download/download/79858/installation.tgz",
 )
-use_repo(toolchains_qnx, "toolchains_qnx_sdp")
-use_repo(toolchains_qnx, "toolchains_qnx_ifs")
-use_repo(toolchains_qnx, "toolchains_qnx_qcc")
+use_repo(toolchains_qnx, "toolchains_qnx_sdp", dev_dependency = True)
+use_repo(toolchains_qnx, "toolchains_qnx_ifs", dev_dependency = True)
+use_repo(toolchains_qnx, "toolchains_qnx_qcc", dev_dependency = True)
 
-bazel_dep(name = "score_bazel_platforms", version = "0.0.3")
+bazel_dep(name = "score_bazel_platforms", version = "0.1.2", dev_dependency = True)
 
 # GCC toolchain
 bazel_dep(name = "score_toolchains_gcc", version = "0.5", dev_dependency = True)
@@ -103,4 +103,4 @@ gcc.warning_flags(
         "-Wpedantic",
     ],
 )
-use_repo(gcc, "gcc_toolchain", "gcc_toolchain_gcc")
+use_repo(gcc, "gcc_toolchain", "gcc_toolchain_gcc", dev_dependency = True)
