@@ -26,7 +26,7 @@ python.toolchain(
     is_default = True,
     python_version = PYTHON_VERSION,
 )
-use_repo(python, dev_dependency = True)
+use_repo(python)
 
 # Add GoogleTest dependency
 bazel_dep(name = "googletest", version = "1.17.0.bcr.2", dev_dependency = True)
@@ -47,8 +47,8 @@ llvm.toolchain(
     cxx_standard = {"": "c++17"},
     llvm_version = "19.1.1",
 )
-use_repo(llvm, "llvm_toolchain", dev_dependency = True)
-use_repo(llvm, "llvm_toolchain_llvm", dev_dependency = True)
+use_repo(llvm, "llvm_toolchain")
+use_repo(llvm, "llvm_toolchain_llvm")
 
 register_toolchains("@llvm_toolchain//:all", dev_dependency = True)
 
@@ -71,9 +71,9 @@ toolchains_qnx.sdp(
     strip_prefix = "installation",
     url = "https://www.qnx.com/download/download/79858/installation.tgz",
 )
-use_repo(toolchains_qnx, "toolchains_qnx_sdp", dev_dependency = True)
-use_repo(toolchains_qnx, "toolchains_qnx_ifs", dev_dependency = True)
-use_repo(toolchains_qnx, "toolchains_qnx_qcc", dev_dependency = True)
+use_repo(toolchains_qnx, "toolchains_qnx_sdp")
+use_repo(toolchains_qnx, "toolchains_qnx_ifs")
+use_repo(toolchains_qnx, "toolchains_qnx_qcc")
 
 bazel_dep(name = "score_bazel_platforms", version = "0.1.2", dev_dependency = True)
 
@@ -103,4 +103,4 @@ gcc.warning_flags(
         "-Wpedantic",
     ],
 )
-use_repo(gcc, "gcc_toolchain", "gcc_toolchain_gcc", dev_dependency = True)
+use_repo(gcc, "gcc_toolchain", "gcc_toolchain_gcc")
