@@ -31,6 +31,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library parses integers without exponent within the precision of int64_t. 

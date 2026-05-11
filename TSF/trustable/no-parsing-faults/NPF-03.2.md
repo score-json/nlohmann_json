@@ -25,6 +25,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.95
     Erikhu1: 1.0
+    ThomasClausnitzer: 0.95
 ---
 
 The service provided by the nlohmann/json library parses escaped characters in the basic multilingual plane.

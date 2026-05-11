@@ -21,6 +21,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library parses floating point values with exponent within the precision of 64-bit double.
