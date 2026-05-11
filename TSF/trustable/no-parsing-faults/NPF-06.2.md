@@ -20,6 +20,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.9
     Erikhu1: 0.95
+    ThomasClausnitzer: 0.8
 ---
 
 The service provided by the nlohmann/json library parses duplicate names without error and reports the last member with that name only.

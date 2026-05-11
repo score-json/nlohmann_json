@@ -20,6 +20,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library ignores the presence of a single UTF-8 byte order mark at the very beginning of the input.
