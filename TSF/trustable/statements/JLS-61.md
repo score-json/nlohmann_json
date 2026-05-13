@@ -11,6 +11,9 @@ evidence:
       target_seconds: 2
       urls:
           - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/.github/workflows/ubuntu.yml"
+score:
+    ThomasClausnitzer: 1.0
+
 ---
 
 Any GitHub Actions used in the testing process are pinned to specific commit SHAs to ensure consistent action behaviour across runs.

@@ -15,6 +15,8 @@ evidence:
       urls:
           - "https://github.com/nlohmann/json/blob/develop/.github/ISSUE_TEMPLATE/bug.yaml"
           - "https://github.com/nlohmann/json/blob/develop/.github/CONTRIBUTING.md#reporting-issues"
+score:
+    ThomasClausnitzer: 1.0
 ---
 
 The manual process for reporting bugs in the nlohmann/json library is well defined and documented in the project's contribution guidelines and bug report template.

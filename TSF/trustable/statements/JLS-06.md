@@ -14,6 +14,7 @@ evidence:
 score:
     Erikhu1: 0.3
     aschemmel-tech: 0.4
+    ThomasClausnitzer: 0.6
 ---
 
 Pull requests in the nlohmann/json repository are merged only after code review.

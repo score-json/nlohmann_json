@@ -15,6 +15,7 @@ evidence:
           - "./artifacts/MemoryEfficientTestResults.db"
 score:
     Jonas-Kirchhoff: 0.75
+    ThomasClausnitzer: 1.0
 ---
 
-Results from automated tests for eclipse-score/inc_nlohmann_json are automatically collected from CI-generated JUnit reports into a persistent test results database together with metadata about the executed tests and workflows.
+Results from automated tests for eclipse-score/nlohmann_json are automatically collected from CI-generated JUnit reports into a persistent test results database together with metadata about the executed tests and workflows.

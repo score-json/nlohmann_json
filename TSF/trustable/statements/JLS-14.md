@@ -13,6 +13,8 @@ evidence:
     configuration:
       binary: "./single_include/nlohmann/json.hpp"
       sha: "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+score:
+    ThomasClausnitzer: 1.0
 ---
 
 The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version.

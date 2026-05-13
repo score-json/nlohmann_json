@@ -8,6 +8,7 @@ references:
 score:
     Erikhu1: 1.0
     aschemmel-tech: 0.8
+    ThomasClausnitzer: 1.0
 ---
 
 The nlohmann/json library has no external components or dependencies besides the C++ standard components.

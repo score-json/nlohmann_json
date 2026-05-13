@@ -5,6 +5,8 @@ references:
     - type: verbose_file
       path: "./TSF/README.md"
       description: "Release management and update process description."
+score:
+    ThomasClausnitzer: 0.8
 ---
 
-Updates of the eclipse-score/inc_nlohmann_json repository are carried out in accordance with the defined and documented update process in TSF/README.md.
+Updates of the eclipse-score/nlohmann_json repository are carried out in accordance with the defined and documented update process in TSF/README.md.

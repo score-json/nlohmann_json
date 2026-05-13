@@ -18,6 +18,8 @@ evidence:
       urls:
           - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md?plain=1#L1862"
           - "https://github.com/nlohmann/json/issues/2324"
+score:
+    ThomasClausnitzer: 0.8
 ---
 
 All tests except the ones which are excluded when using the flag "ctest -LE not_reproducible" are reproducible.

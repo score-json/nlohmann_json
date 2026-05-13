@@ -16,6 +16,7 @@ references:
       description: "Swift Package Manager manifest file of the nlohmann/json library."
 score:
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests.

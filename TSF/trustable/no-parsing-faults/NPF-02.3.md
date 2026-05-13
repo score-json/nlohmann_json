@@ -7,7 +7,7 @@ references:
         - JLEX-02
         - NPF-02
     - type: cpp_test
-      name: "parser class - core;parse;number;integers"
+      name: "parser class - core;parse;number;floating-point"
       path: "TSF/tests/unit-class_parser_core.cpp"
 evidence:
     type: check_test_results
@@ -17,7 +17,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
-    ThomasClausnitzer: 0.5
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library parses floating point values without exponent within the precision of 64-bit double.
