@@ -8,6 +8,7 @@ references:
 score:
     Erikhu1: 1.0
     aschemmel-tech: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (@nlohmann).

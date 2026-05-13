@@ -18,6 +18,7 @@ evidence:
 score:
     Erikhu1: 0.9
     aschemmel-tech: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline.

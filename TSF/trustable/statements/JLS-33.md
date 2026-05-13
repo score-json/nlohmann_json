@@ -8,6 +8,7 @@ references:
 score:
     Erikhu1: 1.0
     aschemmel-tech: 0.5
+    ThomasClausnitzer: 0.5
 ---
 
 Outstanding CVEs are triaged in the nlohmann/json repository.

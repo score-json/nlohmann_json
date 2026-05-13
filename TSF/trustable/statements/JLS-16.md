@@ -6,14 +6,16 @@ references:
       path: "./TSF/docs/list_of_test_environments.md"
       comment: "The list of all test cases together with their execution environments."
     - type: website
-      url: "https://github.com/eclipse-score/inc_nlohmann_json/actions"
-      description: "GitHub Actions page showing that eclipse-score/inc_nlohmann_json is using a GitHub-hosted environment."
+      url: "https://github.com/eclipse-score/nlohmann_json/actions"
+      description: "GitHub Actions page showing that eclipse-score/nlohmann_json is using a GitHub-hosted environment."
 evidence:
     type: check_list_of_tests
     configuration:
       sources:
           - "./tests/src"
           - "./TSF/tests"
+score:
+    ThomasClausnitzer: 1.0
 ---
 
 A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.

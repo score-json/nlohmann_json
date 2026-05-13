@@ -18,6 +18,9 @@ evidence:
       urls:
           - "https://json.nlohmann.me/community/contribution_guidelines/#update-the-documentation"
           - "https://github.com/nlohmann/json/releases"
+score:
+    ThomasClausnitzer: 0.95
+
 ---
 
 For changes that affect the behaviour or public API of the nlohmann/json library, contributors manually update the library documentation and locally rebuild it for verification.

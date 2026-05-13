@@ -1,6 +1,10 @@
 ---
 level: 1.1
 normative: true
+references:
+    - type: verbose_file
+      path: "./TSF/docs/nlohmann_misbehaviours_comments.md"
+      description: "List of known nlohmann/json misbehaviours together with comments on whether they are relevant for S-CORE."
 evidence:
     type: check_issues
     configuration:
@@ -9,6 +13,7 @@ evidence:
 score:
     Erikhu1: 1.0
     aschemmel-tech: 0.8
+    ThomasClausnitzer: 0.9
 ---
 
 Outstanding bugs or misbehaviours are analysed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library.
