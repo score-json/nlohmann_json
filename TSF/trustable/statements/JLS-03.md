@@ -6,7 +6,7 @@ references:
       path: "./TSF/trustable/assertions/TA-ANALYSIS_CONTEXT.md"
       description: "TA-ANALYSIS context explaining that supporting statements under JLEX-01 and JLEX-02 reference CI tests and that the suitability of those tests is validated during SME review."
 score:
-    Thomas Clausnitzer: 0.6
+    ThomasClausnitzer: 0.6
 ---
 
 Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to.

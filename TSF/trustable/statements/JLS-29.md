@@ -8,6 +8,9 @@ references:
     - type: project_website
       url: "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
       description: "OpenSSF Scorecard report for the nlohmann/json library, where the scores for 'Vulnerabilities', 'Pinned-Dependencies' and 'Dangerous-Workflow' support this statement."
+    - type: verbose_file
+      path: "./TSF/docs/nlohmann_closed_misbehaviours.md"
+      description: "Sample analysis of closed upstream bug issues, including how they were resolved and how long they remained open."
 evidence:
     type: https_response_time
     configuration:
