@@ -12,34 +12,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 
-### [#5122](https://github.com/nlohmann/json/issues/5122)
-- **Title:** Compilation error occurs when using nlohmann::ordered_map
-- **State:** OPEN
-- **Created At:** 2026-03-29T05:50:19Z
-
-
-
-### [#5103](https://github.com/nlohmann/json/issues/5103)
-- **Title:** Build issue when compiling with gcc (any modules-capable version) in a C++ modules project
-- **State:** OPEN
-- **Created At:** 2026-03-09T13:50:59Z
-
-
-
-### [#5074](https://github.com/nlohmann/json/issues/5074)
-- **Title:** Copy constructor changes semantics
-- **State:** OPEN
-- **Created At:** 2026-02-09T10:39:05Z
-
-
-
-### [#5068](https://github.com/nlohmann/json/issues/5068)
-- **Title:** Using json_pointer causes the warning of deprecated declarations
-- **State:** OPEN
-- **Created At:** 2026-02-04T04:05:50Z
-
-
-
 ### [#5066](https://github.com/nlohmann/json/issues/5066)
 - **Title:** MSVC: unexpected behaviour converting from json to a rvalue reference of a variant containing a type that can be constructed from a string
 - **State:** OPEN
@@ -47,10 +19,10 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 
-### [#5048](https://github.com/nlohmann/json/issues/5048)
-- **Title:** function argument safety check silently optimized out in release build by clang
+### [#5002](https://github.com/nlohmann/json/issues/5002)
+- **Title:** VS2026 Insiders, C2678 With C++23 Modules
 - **State:** OPEN
-- **Created At:** 2026-01-07T22:27:57Z
+- **Created At:** 2025-11-18T20:45:50Z
 
 
 
@@ -58,20 +30,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Title:** Tests don't build with VS 2026
 - **State:** OPEN
 - **Created At:** 2025-11-14T16:26:05Z
-
-
-
-### [#4974](https://github.com/nlohmann/json/issues/4974)
-- **Title:** [MSVC][build] JSON failed with error C2672: 'nlohmann::json_abi_v3_12_0::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,
-- **State:** OPEN
-- **Created At:** 2025-10-30T10:01:39Z
-
-
-
-### [#4972](https://github.com/nlohmann/json/issues/4972)
-- **Title:** Natvis file for version 3.12.0 does not contain a type definition for detail::json_default_base
-- **State:** OPEN
-- **Created At:** 2025-10-29T16:05:32Z
 
 
 
@@ -115,6 +73,13 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Invalid UTF-8 characters are not ignored when passing  error_handler_t::ignore to dump(); this issue is still open in version 3.12.0.
 
 
+### [#4261](https://github.com/nlohmann/json/issues/4261)
+- **Title:** Cannot use std::format on nholman::json objects
+- **State:** OPEN
+- **Created At:** 2024-01-04T19:24:18Z
+
+
+
 ### [#4041](https://github.com/nlohmann/json/issues/4041)
 - **Title:** NLOHMANN_DEFINE_TYPE_* fails with zero members
 - **State:** OPEN
@@ -153,14 +118,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2022-12-02T12:28:33Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. json.value() with optional fallback value does not compile; this issue is still open in version 3.12.0.
-
-
-### [#3732](https://github.com/nlohmann/json/issues/3732)
-- **Title:** Using iteration_proxy_value with ordered_json fails to compile due to incomplete type
-- **State:** OPEN
-- **Created At:** 2022-09-08T09:39:38Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Using iteration_proxy_value with ordered_json as shown below fails to compile due to an incomplete type error in iterator set_parents(iterator it, typename iterator::difference_type count_set_parents); this issue still exists in version 3.12.0.
 
 
 ### [#3669](https://github.com/nlohmann/json/issues/3669)
@@ -230,6 +187,27 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Closed Issues (since version 3.12.0)
 
+### [#5175](https://github.com/nlohmann/json/issues/5175)
+- **Title:** Test "dump for basic_json with long double number_float_t" fails when run with Valgrind
+- **State:** CLOSED
+- **Created At:** 2026-05-16T08:01:07Z
+
+
+
+### [#5122](https://github.com/nlohmann/json/issues/5122)
+- **Title:** Compilation error occurs when using nlohmann::ordered_map
+- **State:** CLOSED
+- **Created At:** 2026-03-29T05:50:19Z
+
+
+
+### [#5103](https://github.com/nlohmann/json/issues/5103)
+- **Title:** Build issue when compiling with gcc (any modules-capable version) in a C++ modules project
+- **State:** CLOSED
+- **Created At:** 2026-03-09T13:50:59Z
+
+
+
 ### [#5091](https://github.com/nlohmann/json/issues/5091)
 - **Title:** The README section on creating JSON objects from literals contains wording that suggests file I/O but doesn't demonstrate it, and has a minor grammatical error.
 - **State:** CLOSED
@@ -237,10 +215,31 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 
+### [#5074](https://github.com/nlohmann/json/issues/5074)
+- **Title:** Copy constructor changes semantics
+- **State:** CLOSED
+- **Created At:** 2026-02-09T10:39:05Z
+
+
+
+### [#5068](https://github.com/nlohmann/json/issues/5068)
+- **Title:** Using json_pointer causes the warning of deprecated declarations
+- **State:** CLOSED
+- **Created At:** 2026-02-04T04:05:50Z
+
+
+
 ### [#5060](https://github.com/nlohmann/json/issues/5060)
 - **Title:** Segfault on x86_64 Android with Chromium libc++ in serializer::~serializer()
 - **State:** CLOSED
 - **Created At:** 2026-01-24T10:41:51Z
+
+
+
+### [#5048](https://github.com/nlohmann/json/issues/5048)
+- **Title:** function argument safety check silently optimized out in release build by clang
+- **State:** CLOSED
+- **Created At:** 2026-01-07T22:27:57Z
 
 
 
@@ -293,10 +292,17 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 
 
-### [#5002](https://github.com/nlohmann/json/issues/5002)
-- **Title:** VS2026 Insiders, C2678 With C++23 Modules
+### [#4974](https://github.com/nlohmann/json/issues/4974)
+- **Title:** [MSVC][build] JSON failed with error C2672: 'nlohmann::json_abi_v3_12_0::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,
 - **State:** CLOSED
-- **Created At:** 2025-11-18T20:45:50Z
+- **Created At:** 2025-10-30T10:01:39Z
+
+
+
+### [#4972](https://github.com/nlohmann/json/issues/4972)
+- **Title:** Natvis file for version 3.12.0 does not contain a type definition for detail::json_default_base
+- **State:** CLOSED
+- **Created At:** 2025-10-29T16:05:32Z
 
 
 
