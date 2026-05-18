@@ -14,7 +14,6 @@ evidence:
       files:
           - "./artifacts/MemoryEfficientTestResults.db"
 score:
-    Jonas-Kirchhoff: 0.75
     ThomasClausnitzer: 1.0
 ---
 
