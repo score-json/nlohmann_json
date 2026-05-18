@@ -13,7 +13,7 @@ evidence:
       branch: "main"
       line_coverage: 99.186
       branch_coverage: 93.865
-      digits: 3
+      significant_decimal_digits: 3
 score:
     ThomasClausnitzer: 0.95
 ---

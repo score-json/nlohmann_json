@@ -396,9 +396,9 @@ def coveralls_reporter(configuration: dict[str, yaml]) -> tuple[float, list[Exce
         return (0.0, [ValueError("The repository needs to be specified in the configuration for coveralls_reporter.")])
     branch = configuration.get("branch",None)
     if branch is not None:
-        url = f"coveralls.io/github/{owner}/{repo}?branch={branch}.json"
+        url = f"https://coveralls.io/github/{owner}/{repo}.json?branch={branch}"
     else:
-        url = f"coveralls.io/github/{owner}/{repo}.json"
+        url = f"https://coveralls.io/github/{owner}/{repo}.json"
     res = requests.get(url)
     if res.status_code != 200:
         return (0.0, [RuntimeError(f"Can not reach {url} to fetch the code coverage!")])
