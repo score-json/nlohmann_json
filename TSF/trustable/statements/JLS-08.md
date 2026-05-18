@@ -16,7 +16,7 @@ evidence:
     configuration:
       target_seconds: 2
       urls:
-          - "https://eclipse-score.github.io/inc_nlohmann_json/main/generated/trustable_report_for_Software.html"
+          - "https://eclipse-score.github.io/nlohmann_json/main/generated/trustable_report_for_Software.html"
 score:
     ThomasClausnitzer: 0.7
 ---
