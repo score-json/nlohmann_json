@@ -185,13 +185,13 @@ Based on the above observations, the following steps are recommended for each up
 
 ## Assumptions of use
 
-The documentation follows the Trustable Software Framework (TSF), which is documented [here](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html).
-Furthermore, the automatic generation of the TSF report and the tracking of changes to the core functionalities of the library uses _trudag_, which is developed by Codethink and located [here](https://gitlab.com/CodethinkLabs/trustable/trustable).
+The documentation follows the Trustable Software Framework (TSF), which is documented [here](https://pages.eclipse.dev/eclipse/tsf/tsf/).
+Furthermore, the automatic generation of the TSF report and the tracking of changes to the core functionalities of the library uses _trudag_, which is developed as part of TSF and released [here](https://gitlab.eclipse.org/eclipse/tsf/tsf/-/releases).
 
 
 ## Version of trudag
 
-The documentation is currently built using trudag version v2025.10.22
+The documentation is currently built using trudag version v2025.10.22, pinned to the corresponding TSF release wheel in CI and in the local devcontainer bootstrap.
 In case of new releases of trudag in the future, it is recommended to carefully review the introduced changes and rigorously test it before merging it into eclipse-score/inc_nlohmann_json.
 The following should be considered:
 
