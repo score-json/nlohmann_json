@@ -1,11 +1,3 @@
-# Keep Trustable-reviewed inputs byte-stable across Windows and Linux checkouts.
+# Keep Trustable graph and statement files byte-stable across Windows and Linux checkouts.
 .dotstop.dot text eol=lf
-.dotstop_extensions/** text eol=lf
-.github/workflows/*.yml text eol=lf
-.devcontainer/S-CORE/*.sh text eol=lf
-TSF/**/*.md text eol=lf
-TSF/**/*.py text eol=lf
-TSF/**/*.sh text eol=lf
-include/** text eol=lf
-single_include/** text eol=lf
-tests/** text eol=lf
+TSF/trustable/**/*.md text eol=lf
