@@ -20,6 +20,7 @@ evidence:
           - "https://github.com/nlohmann/json/pulls"
 score:
     ThomasClausnitzer: 0.95
+    LucaFue: 0.9
 ---
 
 All manual pull requests to the nlohmann/json repository that introduce non-trivial changes are expected to explain the rationale for the proposed change and to link to an existing issue, in accordance with the project's contribution guidelines.

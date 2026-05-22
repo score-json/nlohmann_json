@@ -17,6 +17,7 @@ evidence:
           - "https://eclipse-score.github.io/nlohmann_json/main/generated/JLEX.html#jlex-02"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Each supporting statement for the Expectations includes references to the CI test evidence that exercises it. The suitability of the referenced tests as evidence for each statement is validated by SME reviewers as part of the scoring process.

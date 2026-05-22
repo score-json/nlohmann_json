@@ -20,6 +20,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 A GitHub workflow of eclipse-score/nlohmann_json saves the history of scores in the trustable graph to derive trends.

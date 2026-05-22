@@ -16,6 +16,7 @@ evidence:
       significant_decimal_digits: 3
 score:
     ThomasClausnitzer: 0.95
+    LucaFue: 1.0
 ---
 
 The test coverage for this version of nlohmann/json is monitored using Coveralls and is not decreasing over time, unless reasonably justified.

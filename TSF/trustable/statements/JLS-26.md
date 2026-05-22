@@ -19,6 +19,7 @@ score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analysed and fixed.

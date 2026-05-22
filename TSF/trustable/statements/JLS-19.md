@@ -17,6 +17,7 @@ references:
 score:
     Erikhu1: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests.

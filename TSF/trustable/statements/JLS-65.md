@@ -21,6 +21,7 @@ evidence:
           - "https://introspector.oss-fuzz.com/project-profile?project=json"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Releases of the nlohmann/json library contain continuous-integration test reports such as coverage reports, fuzzing reports & OpenSSF scorecard reports.

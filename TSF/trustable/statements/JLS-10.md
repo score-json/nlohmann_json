@@ -13,6 +13,7 @@ evidence:
           - "https://github.com/nlohmann/json/releases"
 score:
     ThomasClausnitzer: 0.8
+    LucaFue: 0.7
 ---
 
 Every release of the nlohmann/json library includes source code, build instructions, test code and test results summaries.

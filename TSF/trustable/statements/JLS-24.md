@@ -15,6 +15,8 @@ evidence:
       urls:
           - "https://json.nlohmann.me/features/parsing/parse_exceptions/"
           - "https://json.nlohmann.me/home/exceptions/"
+score:
+    LucaFue: 1.0
 ---
 
 The nlohmann/json library recognizes malformed JSON and returns an exception or a discarded value.

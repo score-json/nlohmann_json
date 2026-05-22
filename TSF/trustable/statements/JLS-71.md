@@ -17,6 +17,7 @@ evidence:
           - "https://json.nlohmann.me/integration/cmake/"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json library provides configuration manuals with worked examples.

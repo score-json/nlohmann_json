@@ -22,6 +22,7 @@ score:
     Erikhu1: 1.0
     aschemmel-tech: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.

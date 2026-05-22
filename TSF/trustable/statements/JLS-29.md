@@ -22,6 +22,7 @@ score:
     Erikhu1: 0.7
     aschemmel-tech: 0.8
     ThomasClausnitzer: 0.8
+    LucaFue: 0.85
 ---
 
 Known bugs, misbehaviours and CVEs are analysed and either fixed or mitigated in the nlohmann/json repository.

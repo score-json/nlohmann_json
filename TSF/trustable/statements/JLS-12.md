@@ -16,6 +16,7 @@ score:
     Erikhu1: 1.0
     aschemmel-tech: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy.

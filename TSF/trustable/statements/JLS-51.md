@@ -25,6 +25,7 @@ evidence:
           - "https://github.com/eclipse-score/inc_nlohmann_json/tree/main/include/nlohmann"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 All source code of the nlohmann/json library is mirrored within eclipse-score/inc_nlohmann_json.

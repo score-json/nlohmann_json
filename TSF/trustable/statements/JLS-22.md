@@ -14,6 +14,7 @@ references:
 score:
     Jonas-Kirchhoff: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 A scheduled GitHub workflow in eclipse-score/inc_nlohmann_json triggers the nlohmann/json unit and integration test at least once per day and records their outcomes as time-stamped entries in the persistent test results database.

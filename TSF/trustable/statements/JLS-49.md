@@ -25,6 +25,7 @@ evidence:
 score:
     Erikhu1: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The eclipse-score/nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity.
