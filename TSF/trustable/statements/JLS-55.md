@@ -19,6 +19,7 @@ evidence:
       pr_count_gate: include
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 In eclipse-score/inc_nlohmann_json, a GitHub Actions workflow checks the number of open pull requests in the main branch. If the number exceeds a defined threshold, the workflow fails and blocks further merges until the number of open pull requests is reduced below that threshold.

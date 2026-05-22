@@ -17,6 +17,7 @@ evidence:
           - "https://eclipse-score.github.io/nlohmann_json/main/generated/JLEX.html#jlex-02"
 score:
     ThomasClausnitzer: 0.9
+    LucaFue: 1.0
 ---
 
 The expected behaviour of the expectations JLEX-01 and JLEX-02 is sufficiently broken-down.

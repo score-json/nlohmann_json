@@ -7,6 +7,7 @@ references:
       description: "Contribution guidelines describing the test policy and requirements to maintain 100% coverage."
 score:
     ThomasClausnitzer: 0.9
+    LucaFue: 0.9
 ---
 
 The manual process for extending the nlohmann/json library's test suite is well-defined and documented, such that code coverage remains at (or close to) 100% when fixes or other non-trivial changes are proposed.

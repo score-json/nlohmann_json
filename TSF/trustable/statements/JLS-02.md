@@ -26,6 +26,7 @@ score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Fuzz testing is used in the nlohmann/json repository to uncover edge cases and failure modes throughout development.

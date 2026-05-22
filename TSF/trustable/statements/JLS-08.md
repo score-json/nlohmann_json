@@ -19,6 +19,7 @@ evidence:
           - "https://eclipse-score.github.io/nlohmann_json/main/generated/trustable_report_for_Software.html"
 score:
     ThomasClausnitzer: 0.7
+    LucaFue: 1.0
 ---
 
 Each leaf node in the Trustable Graph that is not an Assumption-of-Use (AoU) is scored either based on SME review(s) alone or on a combination of SME review(s) and an automatic validator.

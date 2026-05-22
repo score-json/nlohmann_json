@@ -18,6 +18,7 @@ evidence:
 score:
     mishu-dev: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The Eclipse S-CORE organisation mirrors the nlohmann/json project in a GitHub fork.

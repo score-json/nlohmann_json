@@ -20,6 +20,7 @@ evidence:
           - "https://www.bestpractices.dev/en/projects/289?criteria_level=1#section_project_oversight"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Releases of the nlohmann/json library contain commit sign-offs.

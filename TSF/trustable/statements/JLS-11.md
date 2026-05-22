@@ -14,6 +14,7 @@ score:
     Erikhu1: 1.0
     aschemmel-tech: 0.8
     ThomasClausnitzer: 0.9
+    LucaFue: 1.0
 ---
 
 Outstanding bugs or misbehaviours are analysed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library.

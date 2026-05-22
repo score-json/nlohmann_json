@@ -14,6 +14,7 @@ evidence:
 score:
     Erikhu1: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json project transparently lists any third party tools used in building, testing and documenting the project.

@@ -13,6 +13,7 @@ evidence:
           - "https://github.com/eclipse-score/nlohmann_json/actions"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 GitHub-hosted runners are used as the test environment for eclipse-score/nlohmann_json.

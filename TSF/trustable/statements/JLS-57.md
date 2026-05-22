@@ -13,6 +13,7 @@ evidence:
           - "https://github.com/eclipse-score/nlohmann_json/blob/save_historical_data/TSF/misbehaviours.md"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Outstanding bugs or misbehaviours of nlohmann/json are fetched and saved within eclipse-score/nlohmann_json.

@@ -15,6 +15,7 @@ evidence:
           - "./artifacts/MemoryEfficientTestResults.db"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Results from automated tests for eclipse-score/nlohmann_json are automatically collected from CI-generated JUnit reports into a persistent test results database together with metadata about the executed tests and workflows.

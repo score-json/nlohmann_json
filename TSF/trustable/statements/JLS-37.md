@@ -17,6 +17,7 @@ evidence:
           - "https://eclipse-score.github.io/nlohmann_json/main/generated/trustable_graph.html"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 High-level statements are decomposed into smaller, recursive statements.

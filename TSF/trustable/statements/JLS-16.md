@@ -16,6 +16,7 @@ evidence:
           - "./TSF/tests"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.

@@ -16,6 +16,7 @@ score:
     Erikhu1: 1.0
     aschemmel-tech: 1.0
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The develop branch of nlohmann/json is protected, i.e. no direct commits are possible.

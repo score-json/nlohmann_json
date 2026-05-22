@@ -16,6 +16,7 @@ references:
       description: "This test case is included purely as an example to illustrate the fault‑induction style tests used in nlohmann/json."
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 nlohmann/json does use fault‑induction–style techniques (invalid inputs, resource failures, fuzzing) to demonstrate that code paths which usually succeed in normal usage can and do fail in a controlled, specified way.

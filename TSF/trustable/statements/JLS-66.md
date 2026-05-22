@@ -13,6 +13,7 @@ evidence:
           - "https://otterdog.eclipse.org/projects/automotive.score/repos/nlohmann_json#rulesets"
 score:
     ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The mirror of nlohmann/json is configured via infrastructure under direct control, and rejects history rewrites.

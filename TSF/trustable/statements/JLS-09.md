@@ -7,6 +7,7 @@ references:
       description: "Description of the algorithm for how scores are accumulated."
 score:
     ThomasClausnitzer: 0.9
+    LucaFue: 0.8
 ---
 
 Scores within the TSF documentation are reasonably, systematically and repeatably accumulated.

@@ -18,6 +18,7 @@ evidence:
 score:
     Erikhu1: 0.8
     ThomasClausnitzer: 0.85
+    LucaFue: 0.9
 ---
 
 Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json.
