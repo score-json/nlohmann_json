@@ -1,5 +1,5 @@
 
-### TRUSTABLE-SOFTWARE | Reviewed: ✔ | Score: 0.53377 
+### TRUSTABLE-SOFTWARE | Reviewed: ✔ | Score: 0.5925 
 This release of JSON-Library also referred in the documentation as nlohmann/json library is Trustable.
 
 
@@ -12,9 +12,9 @@ _None_
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.66 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.58 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.32 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.81 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.37 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [TT-PROVENANCE](TT.md#tt-provenance)  | All inputs (and attestations for claims) for the nlohmann/json library are provided with known provenance. | 0.64 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [TT-RESULTS](TT.md#tt-results)  | Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do. | 0.43 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
@@ -48,5 +48,6 @@ _None_
 |2026-04-22 08:01:52|0.08 |0.50 |0.00 |0.00 |0.00 |0.25 |0.00 |
 |2026-05-18 15:46:15|0.58 |0.66 |0.74 |0.65 |0.36 |0.64 |0.43 |
 |2026-05-26 07:25:08|0.53 |0.66 |0.57 |0.58 |0.32 |0.64 |0.43 |
-|2026-05-26 08:20:18.879068|0.53 |0.66 |0.57 |0.58 |0.32 |0.64 |0.43 |
+|2026-05-26 14:29:40|0.59 |0.66 |0.81 |0.65 |0.37 |0.64 |0.43 |
+|2026-05-26 15:27:22.316012|0.59 |0.66 |0.81 |0.65 |0.37 |0.64 |0.43 |
 
