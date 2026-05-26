@@ -49,28 +49,12 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Using std::optional with nlohmann::json is broken in version 3.12.0, but shall be fixed in version 3.12.1.
 
 
-### [#4813](https://github.com/nlohmann/json/issues/4813)
-- **Title:** json::update() with merge_objects==true may trigger JSON_ASSERT for some objects
-- **State:** OPEN
-- **Created At:** 2025-06-09T14:01:42Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. This issue is observed under specific circumstances only; in particular, basic_json is not affected.
-
-
 ### [#4714](https://github.com/nlohmann/json/issues/4714)
 - **Title:** Binary formats invalid encoding for <discarded> values in arrays and objects
 - **State:** OPEN
 - **Created At:** 2025-04-01T14:14:30Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Binary formats are creating broken outputs when discarded values are included in arrays/objects.
-
-
-### [#4552](https://github.com/nlohmann/json/issues/4552)
-- **Title:** UTF-8 invalid characters are not always ignored when dumping with error_handler_t::ignore
-- **State:** OPEN
-- **Created At:** 2024-12-17T15:49:31Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. Invalid UTF-8 characters are not ignored when passing  error_handler_t::ignore to dump(); this issue is still open in version 3.12.0.
 
 
 ### [#4261](https://github.com/nlohmann/json/issues/4261)
@@ -110,14 +94,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2022-12-07T08:01:14Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. This issue regards the compatibility with the latest C++ standard.
-
-
-### [#3859](https://github.com/nlohmann/json/issues/3859)
-- **Title:** .value() with optional default value fails to compile
-- **State:** OPEN
-- **Created At:** 2022-12-02T12:28:33Z
-
-- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. json.value() with optional fallback value does not compile; this issue is still open in version 3.12.0.
 
 
 ### [#3669](https://github.com/nlohmann/json/issues/3669)
@@ -455,6 +431,14 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Created At:** 2025-06-16T11:20:55Z
 
 - **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. This is a bug in gcc 14.2, which will not be suppressed by the library.
+
+
+### [#4813](https://github.com/nlohmann/json/issues/4813)
+- **Title:** json::update() with merge_objects==true may trigger JSON_ASSERT for some objects
+- **State:** CLOSED
+- **Created At:** 2025-06-09T14:01:42Z
+
+- **Comment:** This issue does not apply to the use of nlohmann/json in Eclipse S-CORE. This issue is observed under specific circumstances only; in particular, basic_json is not affected.
 
 
 ### [#4812](https://github.com/nlohmann/json/issues/4812)
