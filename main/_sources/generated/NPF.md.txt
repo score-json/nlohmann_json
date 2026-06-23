@@ -50,7 +50,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -161,7 +162,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -237,7 +239,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -316,7 +319,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -397,7 +401,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -611,13 +616,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
 ---
 
-### NPF-02 | Reviewed: ⨯ | Score: 0.0 
+### NPF-02 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library parses numbers according to RFC8259.
 
 
@@ -625,24 +631,24 @@ The service provided by the nlohmann/json library parses numbers according to RF
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.14 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02.1](NPF.md#npf-02.1)  | The service provided by the nlohmann/json library parses integers without exponent within the precision of int64_t. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.2](NPF.md#npf-02.2)  | The service provided by the nlohmann/json library parses integers with exponent within the precision of 64-bit double. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.3](NPF.md#npf-02.3)  | The service provided by the nlohmann/json library parses floating point values without exponent within the precision of 64-bit double. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.4](NPF.md#npf-02.4)  | The service provided by the nlohmann/json library parses floating point values with exponent within the precision of 64-bit double. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.5](NPF.md#npf-02.5)  | The service provided by the nlohmann/json library ignores leading zeroes in the exponent. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.6](NPF.md#npf-02.6)  | The service provided by the nlohmann/json library parses integers within IEEE 754-2008 binary64. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.7](NPF.md#npf-02.7)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.8](NPF.md#npf-02.8)  | The service provided by the nlohmann/json library ignores one singular leading plus of the exponent. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.9](NPF.md#npf-02.9)  | The service provided by the nlohmann/json library parses floating point numbers within IEEE 754-2008 binary64 standard. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.10](NPF.md#npf-02.10)  | The service provided by the nlohmann/json library ignores trailing zeroes after the decimal point. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.11](NPF.md#npf-02.11)  | The service provided by the nlohmann/json library parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-02.12](NPF.md#npf-02.12)  | The service provided by the nlohmann/json library ignores capitalisation of the exponent. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02.1](NPF.md#npf-02.1)  | The service provided by the nlohmann/json library parses integers without exponent within the precision of int64_t. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.2](NPF.md#npf-02.2)  | The service provided by the nlohmann/json library parses integers with exponent within the precision of 64-bit double. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.3](NPF.md#npf-02.3)  | The service provided by the nlohmann/json library parses floating point values without exponent within the precision of 64-bit double. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.4](NPF.md#npf-02.4)  | The service provided by the nlohmann/json library parses floating point values with exponent within the precision of 64-bit double. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.5](NPF.md#npf-02.5)  | The service provided by the nlohmann/json library ignores leading zeroes in the exponent. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.6](NPF.md#npf-02.6)  | The service provided by the nlohmann/json library parses integers within IEEE 754-2008 binary64. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.7](NPF.md#npf-02.7)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.8](NPF.md#npf-02.8)  | The service provided by the nlohmann/json library ignores one singular leading plus of the exponent. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.9](NPF.md#npf-02.9)  | The service provided by the nlohmann/json library parses floating point numbers within IEEE 754-2008 binary64 standard. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.10](NPF.md#npf-02.10)  | The service provided by the nlohmann/json library ignores trailing zeroes after the decimal point. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.11](NPF.md#npf-02.11)  | The service provided by the nlohmann/json library parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-02.12](NPF.md#npf-02.12)  | The service provided by the nlohmann/json library ignores capitalisation of the exponent. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -1012,7 +1018,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1026,7 +1033,7 @@ The service provided by the nlohmann/json library parses integers without expone
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1186,7 +1193,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1200,7 +1208,7 @@ The service provided by the nlohmann/json library ignores trailing zeroes after 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1281,7 +1289,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1295,7 +1304,7 @@ The service provided by the nlohmann/json library parses numbers within the 64-b
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1392,7 +1401,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1411,7 +1421,7 @@ The service provided by the nlohmann/json library ignores capitalisation of the 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1467,7 +1477,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1481,7 +1492,7 @@ The service provided by the nlohmann/json library parses integers with exponent 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1730,7 +1741,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1744,7 +1756,7 @@ The service provided by the nlohmann/json library parses floating point values w
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1814,7 +1826,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1828,7 +1841,7 @@ The service provided by the nlohmann/json library parses floating point values w
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1964,7 +1977,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1978,7 +1992,7 @@ The service provided by the nlohmann/json library ignores leading zeroes in the 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2043,7 +2057,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -2057,7 +2072,7 @@ The service provided by the nlohmann/json library parses integers within IEEE 75
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2147,13 +2162,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
 ---
 
-### NPF-02.7 | Reviewed: ⨯ | Score: 0.0 
+### NPF-02.7 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library ignores leading and trailing whitespace.
 
 
@@ -2161,7 +2177,7 @@ The service provided by the nlohmann/json library ignores leading and trailing w
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2254,7 +2270,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -2268,7 +2285,7 @@ The service provided by the nlohmann/json library ignores one singular leading p
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2327,7 +2344,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -2341,7 +2359,7 @@ The service provided by the nlohmann/json library parses floating point numbers 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2590,13 +2608,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
 ---
 
-### NPF-03 | Reviewed: ⨯ | Score: 0.0 
+### NPF-03 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library parses strings according to RFC8259.
 
 
@@ -2604,19 +2623,19 @@ The service provided by the nlohmann/json library parses strings according to RF
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.14 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03.1](NPF.md#npf-03.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-03.2](NPF.md#npf-03.2)  | The service provided by the nlohmann/json library parses escaped characters in the basic multilingual plane. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-03.3](NPF.md#npf-03.3)  | The service provided by the nlohmann/json library ignores capitalisation in escaped hexadecimal unicode. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-03.4](NPF.md#npf-03.4)  | The service provided by the nlohmann/json library parses all unescaped utf-8 characters except quotation marks, reverse solidus and the control characters. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-03.5](NPF.md#npf-03.5)  | The service provided by the nlohmann/json library parses \\, \\/, \\b,\\f, \\n, \\r, \\t and escaped quotation marks. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-03.6](NPF.md#npf-03.6)  | The service provided by the nlohmann/json library parses the empty string. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-03.7](NPF.md#npf-03.7)  | The service provided by the nlohmann/json library parses non-empty strings. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03.1](NPF.md#npf-03.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-03.2](NPF.md#npf-03.2)  | The service provided by the nlohmann/json library parses escaped characters in the basic multilingual plane. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-03.3](NPF.md#npf-03.3)  | The service provided by the nlohmann/json library ignores capitalisation in escaped hexadecimal unicode. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-03.4](NPF.md#npf-03.4)  | The service provided by the nlohmann/json library parses all unescaped utf-8 characters except quotation marks, reverse solidus and the control characters. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-03.5](NPF.md#npf-03.5)  | The service provided by the nlohmann/json library parses \\, \\/, \\b,\\f, \\n, \\r, \\t and escaped quotation marks. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-03.6](NPF.md#npf-03.6)  | The service provided by the nlohmann/json library parses the empty string. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-03.7](NPF.md#npf-03.7)  | The service provided by the nlohmann/json library parses non-empty strings. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -3245,13 +3264,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
-### NPF-03.1 | Reviewed: ⨯ | Score: 0.0 
+### NPF-03.1 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library ignores leading and trailing whitespace.
 
 
@@ -3259,7 +3279,7 @@ The service provided by the nlohmann/json library ignores leading and trailing w
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3351,7 +3371,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -3365,7 +3386,7 @@ The service provided by the nlohmann/json library parses escaped characters in t
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3537,7 +3558,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -3551,7 +3573,7 @@ The service provided by the nlohmann/json library ignores capitalisation in esca
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3629,7 +3651,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -3643,7 +3666,7 @@ The service provided by the nlohmann/json library parses all unescaped utf-8 cha
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3800,7 +3823,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -3814,7 +3838,7 @@ The service provided by the nlohmann/json library parses \\, \\/, \\b,\\f, \\n, 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3932,7 +3956,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -3946,7 +3971,7 @@ The service provided by the nlohmann/json library parses the empty string.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4101,7 +4126,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -4115,7 +4141,7 @@ The service provided by the nlohmann/json library parses non-empty strings.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4751,13 +4777,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
 ---
 
-### NPF-04 | Reviewed: ⨯ | Score: 0.0 
+### NPF-04 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259.
 
 
@@ -4765,16 +4792,16 @@ The service provided by the nlohmann/json library parses literal names "true", "
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.14 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-04.1](NPF.md#npf-04.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-04.2](NPF.md#npf-04.2)  | The service provided by the nlohmann/json library parses the literal name true. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-04.3](NPF.md#npf-04.3)  | The service provided by the nlohmann/json library parses the literal name false. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [NPF-04.4](NPF.md#npf-04.4)  | The service provided by the nlohmann/json library parses the literal name null. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-04.1](NPF.md#npf-04.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-04.2](NPF.md#npf-04.2)  | The service provided by the nlohmann/json library parses the literal name true. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-04.3](NPF.md#npf-04.3)  | The service provided by the nlohmann/json library parses the literal name false. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NPF-04.4](NPF.md#npf-04.4)  | The service provided by the nlohmann/json library parses the literal name null. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -4832,13 +4859,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
-### NPF-04.1 | Reviewed: ⨯ | Score: 0.0 
+### NPF-04.1 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library ignores leading and trailing whitespace.
 
 
@@ -4846,7 +4874,7 @@ The service provided by the nlohmann/json library ignores leading and trailing w
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4969,7 +4997,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -4983,7 +5012,7 @@ The service provided by the nlohmann/json library parses the literal name true.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5039,7 +5068,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -5053,7 +5083,7 @@ The service provided by the nlohmann/json library parses the literal name false.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5109,7 +5139,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -5123,7 +5154,7 @@ The service provided by the nlohmann/json library parses the literal name null.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5179,7 +5210,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -5193,13 +5225,13 @@ The service provided by the nlohmann/json library parses arrays according to RFC
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.14 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-05.1](NPF.md#npf-05.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-05.1](NPF.md#npf-05.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [NPF-05.2](NPF.md#npf-05.2)  | The service provided by the nlohmann/json library parses empty arrays. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [NPF-05.3](NPF.md#npf-05.3)  | The service provided by the nlohmann/json library parses non-empty arrays. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
@@ -5234,13 +5266,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
-### NPF-05.1 | Reviewed: ⨯ | Score: 0.0 
+### NPF-05.1 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value.
 
 
@@ -5248,7 +5281,7 @@ The service provided by the nlohmann/json library ignores leading and trailing w
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-05](NPF.md#npf-05)  | The service provided by the nlohmann/json library parses arrays according to RFC8259. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-05](NPF.md#npf-05)  | The service provided by the nlohmann/json library parses arrays according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5353,7 +5386,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -5464,7 +5498,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -5674,7 +5709,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -5688,13 +5724,13 @@ The service provided by the nlohmann/json library parses objects according to RF
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.14 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-06.1](NPF.md#npf-06.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-06.1](NPF.md#npf-06.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [NPF-06.2](NPF.md#npf-06.2)  | The service provided by the nlohmann/json library parses duplicate names without error and reports the last member with that name only. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [NPF-06.3](NPF.md#npf-06.3)  | The service provided by the nlohmann/json library parses empty objects. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [NPF-06.4](NPF.md#npf-06.4)  | The service provided by the nlohmann/json library parses non-empty objects. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
@@ -5730,13 +5766,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
-### NPF-06.1 | Reviewed: ⨯ | Score: 0.0 
+### NPF-06.1 | Reviewed: ✔ | Score: 0.0 
 The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member.
 
 
@@ -5744,7 +5781,7 @@ The service provided by the nlohmann/json library ignores leading and trailing w
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NPF-06](NPF.md#npf-06)  | The service provided by the nlohmann/json library parses objects according to RFC8259. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-06](NPF.md#npf-06)  | The service provided by the nlohmann/json library parses objects according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -5841,7 +5878,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -5946,7 +5984,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -6016,7 +6055,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -6085,7 +6125,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -6099,7 +6140,7 @@ The service provided by the nlohmann/json library parses well-formed UTF-8 encod
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.14 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -6139,7 +6180,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |
 
 
 
@@ -6424,7 +6466,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -7395,5 +7438,6 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 

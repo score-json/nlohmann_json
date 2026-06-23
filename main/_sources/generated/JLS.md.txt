@@ -7,7 +7,7 @@ The CI pipeline in the upstream nlohmann/json repository executes the unit and i
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. | 0.50 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -50,7 +50,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -64,8 +65,8 @@ Fuzz testing is used in the nlohmann/json repository to uncover edge cases and f
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.64 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.60 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.78 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -129,13 +130,14 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-03 | Reviewed: ⨯ | Score: 0.0 
+### JLS-03 | Reviewed: ✔ | Score: 0.7 
 Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to.
 
 
@@ -143,7 +145,7 @@ Automated tests within the TSF documentation are reviewed by a Subject Matter Ex
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.39 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -283,13 +285,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.70 |
+|2026-06-23 17:15:17.865434|0.70 |
 
 
 
 ---
 
-### JLS-04 | Reviewed: ⨯ | Score: 0.0 
+### JLS-04 | Reviewed: ✔ | Score: 1.0 
 External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.
 
 
@@ -297,8 +300,8 @@ External dependencies within nlohmann/json are checked for potential security vu
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.49 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -392,7 +395,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -406,7 +410,7 @@ The nlohmann/json library is widely used and actively maintained; bugs and misbe
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -498,7 +502,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -557,7 +562,8 @@ _None_
 |2026-05-18 15:46:15|0.43 |
 |2026-05-26 07:25:08|0.42 |
 |2026-05-26 14:29:40|0.42 |
-|2026-05-26 15:27:22.316012|0.42 |
+|2026-06-23 16:26:12|0.42 |
+|2026-06-23 17:15:17.865434|0.42 |
 
 
 
@@ -616,7 +622,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -630,7 +637,7 @@ Each leaf node in the Trustable Graph that is not an Assumption-of-Use (AoU) is 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.68 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.93 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -687,7 +694,8 @@ _None_
 |2026-05-18 15:46:15|0.70 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.85 |
-|2026-05-26 15:27:22.316012|0.85 |
+|2026-06-23 16:26:12|0.85 |
+|2026-06-23 17:15:17.865434|0.85 |
 
 
 
@@ -701,7 +709,7 @@ Scores within the TSF documentation are reasonably, systematically and repeatabl
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.68 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.93 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -744,7 +752,8 @@ _None_
 |2026-05-18 15:46:15|0.90 |
 |2026-05-26 07:25:08|0.85 |
 |2026-05-26 14:29:40|0.85 |
-|2026-05-26 15:27:22.316012|0.85 |
+|2026-06-23 16:26:12|0.85 |
+|2026-06-23 17:15:17.865434|0.85 |
 
 
 
@@ -759,7 +768,7 @@ Every release of the nlohmann/json library includes source code, build instructi
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.91 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.44 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.94 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -802,13 +811,14 @@ _None_
 |2026-05-18 15:46:15|0.80 |
 |2026-05-26 07:25:08|0.75 |
 |2026-05-26 14:29:40|0.75 |
-|2026-05-26 15:27:22.316012|0.75 |
+|2026-06-23 16:26:12|0.75 |
+|2026-06-23 17:15:17.865434|0.75 |
 
 
 
 ---
 
-### JLS-11 | Reviewed: ⨯ | Score: 0.0 
+### JLS-11 | Reviewed: ✔ | Score: 0.0 
 Outstanding bugs or misbehaviours are analysed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library.
 
 aschemmel-tech: most but not all issues are analysed for impact on S-CORE.
@@ -818,8 +828,8 @@ aschemmel-tech: most but not all issues are analysed for impact on S-CORE.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.64 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -941,7 +951,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -1000,7 +1011,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -1071,13 +1083,14 @@ _None_
 |2026-05-18 15:46:15|0.95 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.97 |
-|2026-05-26 15:27:22.316012|0.97 |
+|2026-06-23 16:26:12|0.97 |
+|2026-06-23 17:15:17.865434|0.97 |
 
 
 
 ---
 
-### JLS-14 | Reviewed: ⨯ | Score: 0.0 
+### JLS-14 | Reviewed: ✔ | Score: 1.0 
 The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version.
 
 
@@ -1085,8 +1098,8 @@ The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohm
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.44 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.94 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1232,13 +1245,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-16 | Reviewed: ⨯ | Score: 0.0 
+### JLS-16 | Reviewed: ✔ | Score: 0.0 
 A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.
 
 
@@ -1246,7 +1260,7 @@ A list of tests, which is extracted from the test execution, is provided, along 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.60 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.78 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -8827,13 +8841,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
 ---
 
-### JLS-17 | Reviewed: ⨯ | Score: 0.0 
+### JLS-17 | Reviewed: ✔ | Score: 1.0 
 Failure rates of CI tests are analysed for both the upstream nlohmann/json and the eclipse-score/nlohmann_json repositories, and any high failure rates are reasonably justified.
 
 
@@ -8841,7 +8856,7 @@ Failure rates of CI tests are analysed for both the upstream nlohmann/json and t
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.79 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9009,13 +9024,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-18 | Reviewed: ⨯ | Score: 0.0 
+### JLS-18 | Reviewed: ✔ | Score: 1.0 
 Results from automated tests for eclipse-score/nlohmann_json are automatically collected from CI-generated JUnit reports into a persistent test results database together with metadata about the executed tests and workflows.
 
 
@@ -9023,7 +9039,7 @@ Results from automated tests for eclipse-score/nlohmann_json are automatically c
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-DATA](TA.md#ta-data)  | Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-DATA](TA.md#ta-data)  | Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10166,7 +10182,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -10181,7 +10198,7 @@ All library components, build dependencies, and build tools in the nlohmann/json
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.91 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.44 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.94 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10245,13 +10262,14 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-20 | Reviewed: ⨯ | Score: 0.0 
+### JLS-20 | Reviewed: ✔ | Score: 1.0 
 A GitHub workflow of eclipse-score/nlohmann_json saves the history of scores in the trustable graph to derive trends.
 
 
@@ -10259,7 +10277,7 @@ A GitHub workflow of eclipse-score/nlohmann_json saves the history of scores in 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.68 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.93 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10524,6 +10542,11 @@ jobs:
           pip install --require-hashes -r .devcontainer/S-CORE/requirements.txt
           pip install https://gitlab.com/api/v4/projects/66600816/packages/generic/trustable/v2025.10.22/trustable-2025.10.22-py3-none-any.whl
 
+      - name: Verify trudag setup
+        run: |
+          trudag --version
+          trudag manage lint
+
       - name: Install tools
         run: |
           sudo apt-get update
@@ -10587,7 +10610,7 @@ jobs:
           git add TSF/misbehaviours.md
           git commit -m "Updated issues list" || echo "No changes to commit"
           git push origin save_historical_data && git pull
-      
+
       - name: Select persistent scoring DB (rotate if near GitHub limit)
         id: select_db
         shell: bash
@@ -10760,13 +10783,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-22 | Reviewed: ⨯ | Score: 0.0 
+### JLS-22 | Reviewed: ✔ | Score: 1.0 
 A scheduled GitHub workflow in eclipse-score/inc_nlohmann_json triggers the nlohmann/json unit and integration test at least once per day and records their outcomes as time-stamped entries in the persistent test results database.
 
 
@@ -10774,7 +10798,7 @@ A scheduled GitHub workflow in eclipse-score/inc_nlohmann_json triggers the nloh
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. | 0.50 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12110,7 +12134,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -12124,7 +12149,7 @@ The Eclipse S-CORE organisation mirrors the nlohmann/json project in a GitHub fo
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12174,7 +12199,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -12188,7 +12214,7 @@ The nlohmann/json library recognizes malformed JSON and returns an exception or 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.64 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12246,13 +12272,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
 ---
 
-### JLS-25 | Reviewed: ✔ | Score: 0.85 
+### JLS-25 | Reviewed: ✔ | Score: 0.425 
 Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json.
 
 
@@ -12260,7 +12287,7 @@ Malicious code changes in nlohmann/json are mitigated by code reviews, adhering 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.64 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12310,7 +12337,8 @@ _None_
 |2026-05-18 15:46:15|0.82 |
 |2026-05-26 07:25:08|0.85 |
 |2026-05-26 14:29:40|0.85 |
-|2026-05-26 15:27:22.316012|0.85 |
+|2026-06-23 16:26:12|0.42 |
+|2026-06-23 17:15:17.865434|0.42 |
 
 
 
@@ -12324,7 +12352,7 @@ Any failed CI pipeline executions in the master branch of the nlohmann/json repo
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12372,7 +12400,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -12386,8 +12415,8 @@ The test coverage for this version of nlohmann/json is monitored using Coveralls
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.39 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12430,7 +12459,8 @@ _None_
 |2026-05-18 15:46:15|0.95 |
 |2026-05-26 07:25:08|0.97 |
 |2026-05-26 14:29:40|0.97 |
-|2026-05-26 15:27:22.316012|0.97 |
+|2026-06-23 16:26:12|0.97 |
+|2026-06-23 17:15:17.865434|0.97 |
 
 
 
@@ -12446,7 +12476,7 @@ aschemmel-tech: no triage done
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12487,13 +12517,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
 ---
 
-### JLS-29 | Reviewed: ⨯ | Score: 0.0 
+### JLS-29 | Reviewed: ✔ | Score: 0.7875 
 Known bugs, misbehaviours and CVEs are analysed and either fixed or mitigated in the nlohmann/json repository.
 
 aschemmel-tech: evidence supports bugs and CVE fixing, no mitigation actions are offered.
@@ -12503,7 +12534,7 @@ aschemmel-tech: evidence supports bugs and CVE fixing, no mitigation actions are
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12599,7 +12630,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.79 |
+|2026-06-23 17:15:17.865434|0.79 |
 
 
 
@@ -12615,7 +12647,7 @@ aschemmel-tech: In my understanding bot evidences support the statement complete
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12663,7 +12695,8 @@ _None_
 |2026-05-18 15:46:15|0.77 |
 |2026-05-26 07:25:08|0.75 |
 |2026-05-26 14:29:40|0.75 |
-|2026-05-26 15:27:22.316012|0.75 |
+|2026-06-23 16:26:12|0.75 |
+|2026-06-23 17:15:17.865434|0.75 |
 
 
 
@@ -12677,8 +12710,8 @@ The nlohmann/json repository uses static code analysis tools and sanitizers.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.64 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12740,7 +12773,8 @@ _None_
 |2026-05-18 15:46:15|0.95 |
 |2026-05-26 07:25:08|0.97 |
 |2026-05-26 14:29:40|0.97 |
-|2026-05-26 15:27:22.316012|0.97 |
+|2026-06-23 16:26:12|0.97 |
+|2026-06-23 17:15:17.865434|0.97 |
 
 
 
@@ -12797,7 +12831,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -12813,7 +12848,7 @@ aschemmel-tech: Security vulnerabilities reporting asks for severities, but this
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -12854,7 +12889,8 @@ _None_
 |2026-05-18 15:46:15|0.67 |
 |2026-05-26 07:25:08|0.65 |
 |2026-05-26 14:29:40|0.65 |
-|2026-05-26 15:27:22.316012|0.65 |
+|2026-06-23 16:26:12|0.65 |
+|2026-06-23 17:15:17.865434|0.65 |
 
 
 
@@ -12870,8 +12906,8 @@ aschemmel-tech: I saw dependency to the "Hedley" header but with fixed version.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.49 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.89 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
@@ -13113,7 +13149,8 @@ _None_
 |2026-05-18 15:46:15|0.93 |
 |2026-05-26 07:25:08|0.95 |
 |2026-05-26 14:29:40|0.95 |
-|2026-05-26 15:27:22.316012|0.95 |
+|2026-06-23 16:26:12|0.95 |
+|2026-06-23 17:15:17.865434|0.95 |
 
 
 
@@ -13177,7 +13214,8 @@ _None_
 |2026-05-18 15:46:15|0.97 |
 |2026-05-26 07:25:08|0.97 |
 |2026-05-26 14:29:40|0.97 |
-|2026-05-26 15:27:22.316012|0.97 |
+|2026-06-23 16:26:12|0.97 |
+|2026-06-23 17:15:17.865434|0.97 |
 
 
 
@@ -13478,7 +13516,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.90 |
-|2026-05-26 15:27:22.316012|0.90 |
+|2026-06-23 16:26:12|0.90 |
+|2026-06-23 17:15:17.865434|0.90 |
 
 
 
@@ -13492,7 +13531,7 @@ High-level statements are decomposed into smaller, recursive statements.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.68 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.93 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13540,7 +13579,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -13554,7 +13594,7 @@ Every release of the nlohmann/json library shall provide configuration managemen
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.44 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.94 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -13602,7 +13642,8 @@ _None_
 |2026-05-18 15:46:15|0.80 |
 |2026-05-26 07:25:08|0.90 |
 |2026-05-26 14:29:40|0.90 |
-|2026-05-26 15:27:22.316012|0.90 |
+|2026-06-23 16:26:12|0.90 |
+|2026-06-23 17:15:17.865434|0.90 |
 
 
 
@@ -13664,7 +13705,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -13719,7 +13761,8 @@ _None_
 |2026-05-18 15:46:15|0.90 |
 |2026-05-26 07:25:08|0.90 |
 |2026-05-26 14:29:40|0.90 |
-|2026-05-26 15:27:22.316012|0.90 |
+|2026-06-23 16:26:12|0.90 |
+|2026-06-23 17:15:17.865434|0.90 |
 
 
 
@@ -13788,7 +13831,8 @@ _None_
 |2026-05-18 15:46:15|0.95 |
 |2026-05-26 07:25:08|0.93 |
 |2026-05-26 14:29:40|0.93 |
-|2026-05-26 15:27:22.316012|0.93 |
+|2026-06-23 16:26:12|0.93 |
+|2026-06-23 17:15:17.865434|0.93 |
 
 
 
@@ -13850,7 +13894,8 @@ _None_
 |2026-05-18 15:46:15|0.95 |
 |2026-05-26 07:25:08|0.93 |
 |2026-05-26 14:29:40|0.93 |
-|2026-05-26 15:27:22.316012|0.93 |
+|2026-06-23 16:26:12|0.93 |
+|2026-06-23 17:15:17.865434|0.93 |
 
 
 
@@ -13912,13 +13957,14 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-45 | Reviewed: ⨯ | Score: 0.0 
+### JLS-45 | Reviewed: ✔ | Score: 1.0 
 The storage location, retention limits, and intended use of captured test result data for eclipse-score/inc_nlohmann_json are documented so that the scope and reproducibility of the available test data can be understood.
 
 
@@ -13926,7 +13972,7 @@ The storage location, retention limits, and intended use of captured test result
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-DATA](TA.md#ta-data)  | Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-DATA](TA.md#ta-data)  | Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14334,7 +14380,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -14348,7 +14395,7 @@ The nlohmann/json library only consists of source code in the form of a single h
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.49 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14389,7 +14436,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -14403,7 +14451,7 @@ The nlohmann/json project transparently lists any third party tools used in buil
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.49 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14444,13 +14492,14 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-49 | Reviewed: ⨯ | Score: 0.0 
+### JLS-49 | Reviewed: ✔ | Score: 1.0 
 The eclipse-score/nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity.
 
 
@@ -14458,9 +14507,9 @@ The eclipse-score/nlohmann_json project mirrors the external nlohmann/json_test_
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.49 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.44 | ✔ Item Reviewed<br>⨯ Link Reviewed |
-| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.79 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.94 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14582,13 +14631,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-50 | Reviewed: ⨯ | Score: 0.0 
+### JLS-50 | Reviewed: ✔ | Score: 1.0 
 All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/nlohmann_json.
 
 
@@ -14596,7 +14646,7 @@ All third party tools used in nlohmann/json for building, testing and documentin
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.49 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -14988,7 +15038,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -15003,7 +15054,7 @@ All source code of the nlohmann/json library is mirrored within eclipse-score/in
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.91 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15065,7 +15116,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -15118,13 +15170,14 @@ _None_
 |2026-05-18 15:46:15|0.87 |1.00 |0.60 |1.00 |
 |2026-05-26 07:25:08|0.88 |1.00 |0.65 |1.00 |
 |2026-05-26 14:29:40|0.88 |1.00 |0.65 |1.00 |
-|2026-05-26 15:27:22.316012|0.88 |1.00 |0.65 |1.00 |
+|2026-06-23 16:26:12|0.88 |1.00 |0.65 |1.00 |
+|2026-06-23 17:15:17.865434|0.88 |1.00 |0.65 |1.00 |
 
 
 
 ---
 
-### JLS-53 | Reviewed: ✔ | Score: 0.0 
+### JLS-53 | Reviewed: ✔ | Score: 1.0 
 Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files.
 
 
@@ -15132,13 +15185,13 @@ Given the same version of the repository, configuration, and documented environm
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.44 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.94 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLS-14](JLS.md#jls-14)  | The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-14](JLS.md#jls-14)  | The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -15169,13 +15222,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |0.00 |
 |2026-05-26 07:25:08|0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |
-|2026-05-26 15:27:22.316012|0.00 |0.00 |
+|2026-06-23 16:26:12|1.00 |1.00 |
+|2026-06-23 17:15:17.865434|1.00 |1.00 |
 
 
 
 ---
 
-### JLS-54 | Reviewed: ⨯ | Score: 0.0 
+### JLS-54 | Reviewed: ✔ | Score: 1.0 
 In the eclipse-score/inc_nlohmann_json repository, code coverage is measured in CI and a minimum threshold is enforced for pull requests into main and pushes to main. If coverage falls below the threshold, the coverage_gate check fails and blocks merging into main until coverage is restored.
 
 
@@ -15183,7 +15237,7 @@ In the eclipse-score/inc_nlohmann_json repository, code coverage is measured in 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.32 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15309,13 +15363,14 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-55 | Reviewed: ⨯ | Score: 0.0 
+### JLS-55 | Reviewed: ✔ | Score: 0.0 
 In eclipse-score/inc_nlohmann_json, a GitHub Actions workflow checks the number of open pull requests in the main branch. If the number exceeds a defined threshold, the workflow fails and blocks further merges until the number of open pull requests is reduced below that threshold.
 
 
@@ -15323,7 +15378,7 @@ In eclipse-score/inc_nlohmann_json, a GitHub Actions workflow checks the number 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.32 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15446,7 +15501,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.00 |
+|2026-06-23 17:15:17.865434|0.00 |
 
 
 
@@ -15460,8 +15516,8 @@ The expected behaviour of the expectations JLEX-01 and JLEX-02 is sufficiently b
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.39 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.32 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15509,7 +15565,8 @@ _None_
 |2026-05-18 15:46:15|0.90 |
 |2026-05-26 07:25:08|0.95 |
 |2026-05-26 14:29:40|0.95 |
-|2026-05-26 15:27:22.316012|0.95 |
+|2026-06-23 16:26:12|0.95 |
+|2026-06-23 17:15:17.865434|0.95 |
 
 
 
@@ -15523,7 +15580,7 @@ Outstanding bugs or misbehaviours of nlohmann/json are fetched and saved within 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15564,7 +15621,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -15578,7 +15636,7 @@ GitHub-hosted runners are used as the test environment for eclipse-score/nlohman
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.60 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.78 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15619,7 +15677,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -15633,7 +15692,7 @@ Any GitHub Actions used in the testing process are pinned to specific commit SHA
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.60 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.78 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15674,13 +15733,14 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-62 | Reviewed: ⨯ | Score: 0.0 
+### JLS-62 | Reviewed: ✔ | Score: 0.9 
 All tests except the ones which are excluded when using the flag "ctest -LE not_reproducible" are reproducible.
 
 
@@ -15688,7 +15748,7 @@ All tests except the ones which are excluded when using the flag "ctest -LE not_
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.60 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.78 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -15867,7 +15927,8 @@ _None_
 |2026-05-18 15:46:15|0.00 |
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
-|2026-05-26 15:27:22.316012|0.00 |
+|2026-06-23 16:26:12|0.90 |
+|2026-06-23 17:15:17.865434|0.90 |
 
 
 
@@ -15936,7 +15997,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -15998,7 +16060,8 @@ _None_
 |2026-05-18 15:46:15|0.60 |
 |2026-05-26 07:25:08|0.65 |
 |2026-05-26 14:29:40|0.65 |
-|2026-05-26 15:27:22.316012|0.65 |
+|2026-06-23 16:26:12|0.65 |
+|2026-06-23 17:15:17.865434|0.65 |
 
 
 
@@ -16067,7 +16130,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -16081,7 +16145,7 @@ The mirror of nlohmann/json is configured via infrastructure under direct contro
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16122,7 +16186,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -16136,7 +16201,7 @@ The nlohmann/json library provides installation manuals with worked examples.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.12 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.11 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16177,7 +16242,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -16191,7 +16257,7 @@ The nlohmann/json library provides configuration manuals with worked examples.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.12 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.11 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16239,7 +16305,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -16253,7 +16320,7 @@ The nlohmann/json project documents the intended scope and design trade-offs of 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.12 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.11 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16301,13 +16368,14 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|0.50 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
 ---
 
-### JLS-73 | Reviewed: ✔ | Score: 1.0 
+### JLS-73 | Reviewed: ✔ | Score: 0.66667 
 The nlohmann/json documentation provides user-facing guidance for extensibility and modular integration, explicitly documenting limitations and constraints of extension interfaces.
 
 
@@ -16315,7 +16383,7 @@ The nlohmann/json documentation provides user-facing guidance for extensibility 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.12 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.11 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16370,7 +16438,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|0.67 |
+|2026-06-23 17:15:17.865434|0.67 |
 
 
 
@@ -16384,7 +16453,7 @@ Each supporting statement for the Expectations includes references to the CI tes
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.79 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.99 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16432,7 +16501,8 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 
 
 
@@ -16446,7 +16516,7 @@ nlohmann/json does use fault‑induction–style techniques (invalid inputs, res
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.64 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16600,5 +16670,6 @@ _None_
 |2026-05-18 15:46:15|1.00 |
 |2026-05-26 07:25:08|1.00 |
 |2026-05-26 14:29:40|1.00 |
-|2026-05-26 15:27:22.316012|1.00 |
+|2026-06-23 16:26:12|1.00 |
+|2026-06-23 17:15:17.865434|1.00 |
 

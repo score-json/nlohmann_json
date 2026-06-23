@@ -60,8 +60,8 @@ This presents the compliance for the _JSON-Library Expectations_ (JLEX) in tabul
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
-| [JLEX-02](JLEX.md#jlex-02)  | The requirement regarding [JSON Deserialization](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__deserialization) is fulfilled. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLEX-02](JLEX.md#jlex-02)  | The requirement regarding [JSON Deserialization](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__deserialization) is fulfilled. | 0.07 | ✔ Item Reviewed<br>✔ All Children Linked |
 
 ## Compliance for JLS 
 This presents the compliance for the _JSON-Library Statements_ (JLS) in tabular form.
@@ -70,31 +70,31 @@ This presents the compliance for the _JSON-Library Statements_ (JLS) in tabular 
 | --- | --- | --- | --- |
 | [JLS-01](JLS.md#jls-01)  | The CI pipeline in the upstream nlohmann/json repository executes the unit and integration test suites on each pull request (opened, reopened, synchronized). | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-02](JLS.md#jls-02)  | Fuzz testing is used in the nlohmann/json repository to uncover edge cases and failure modes throughout development. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-03](JLS.md#jls-03)  | Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-03](JLS.md#jls-03)  | Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to. | 0.70 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-05](JLS.md#jls-05)  | The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-06](JLS.md#jls-06)  | Pull requests in the nlohmann/json repository are merged only after code review. | 0.42 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-07](JLS.md#jls-07)  | The develop branch of nlohmann/json is protected, i.e. no direct commits are possible. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-08](JLS.md#jls-08)  | Each leaf node in the Trustable Graph that is not an Assumption-of-Use (AoU) is scored either based on SME review(s) alone or on a combination of SME review(s) and an automatic validator. | 0.85 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-09](JLS.md#jls-09)  | Scores within the TSF documentation are reasonably, systematically and repeatably accumulated. | 0.85 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-10](JLS.md#jls-10)  | Every release of the nlohmann/json library includes source code, build instructions, test code and test results summaries. | 0.75 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-11](JLS.md#jls-11)  | Outstanding bugs or misbehaviours are analysed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-11](JLS.md#jls-11)  | Outstanding bugs or misbehaviours are analysed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-12](JLS.md#jls-12)  | The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-13](JLS.md#jls-13)  | For changes that affect the behaviour or public API of the nlohmann/json library, contributors manually update the library documentation and locally rebuild it for verification. | 0.97 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-14](JLS.md#jls-14)  | The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [JLS-16](JLS.md#jls-16)  | A list of tests, which is extracted from the test execution, is provided, along with a list of test environments. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [JLS-17](JLS.md#jls-17)  | Failure rates of CI tests are analysed for both the upstream nlohmann/json and the eclipse-score/nlohmann_json repositories, and any high failure rates are reasonably justified. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [JLS-18](JLS.md#jls-18)  | Results from automated tests for eclipse-score/nlohmann_json are automatically collected from CI-generated JUnit reports into a persistent test results database together with metadata about the executed tests and workflows. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-14](JLS.md#jls-14)  | The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-16](JLS.md#jls-16)  | A list of tests, which is extracted from the test execution, is provided, along with a list of test environments. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-17](JLS.md#jls-17)  | Failure rates of CI tests are analysed for both the upstream nlohmann/json and the eclipse-score/nlohmann_json repositories, and any high failure rates are reasonably justified. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-18](JLS.md#jls-18)  | Results from automated tests for eclipse-score/nlohmann_json are automatically collected from CI-generated JUnit reports into a persistent test results database together with metadata about the executed tests and workflows. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-19](JLS.md#jls-19)  | All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-20](JLS.md#jls-20)  | A GitHub workflow of eclipse-score/nlohmann_json saves the history of scores in the trustable graph to derive trends. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [JLS-22](JLS.md#jls-22)  | A scheduled GitHub workflow in eclipse-score/inc_nlohmann_json triggers the nlohmann/json unit and integration test at least once per day and records their outcomes as time-stamped entries in the persistent test results database. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-20](JLS.md#jls-20)  | A GitHub workflow of eclipse-score/nlohmann_json saves the history of scores in the trustable graph to derive trends. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-22](JLS.md#jls-22)  | A scheduled GitHub workflow in eclipse-score/inc_nlohmann_json triggers the nlohmann/json unit and integration test at least once per day and records their outcomes as time-stamped entries in the persistent test results database. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-23](JLS.md#jls-23)  | The Eclipse S-CORE organisation mirrors the nlohmann/json project in a GitHub fork. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception or a discarded value. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-25](JLS.md#jls-25)  | Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json. | 0.85 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-25](JLS.md#jls-25)  | Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json. | 0.42 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-26](JLS.md#jls-26)  | Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analysed and fixed. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-27](JLS.md#jls-27)  | The test coverage for this version of nlohmann/json is monitored using Coveralls and is not decreasing over time, unless reasonably justified. | 0.97 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-28](JLS.md#jls-28)  | Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-29](JLS.md#jls-29)  | Known bugs, misbehaviours and CVEs are analysed and either fixed or mitigated in the nlohmann/json repository. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-29](JLS.md#jls-29)  | Known bugs, misbehaviours and CVEs are analysed and either fixed or mitigated in the nlohmann/json repository. | 0.79 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-30](JLS.md#jls-30)  | Outstanding CVEs are analysed within eclipse-score/nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE's use cases of the nlohmann/json library. | 0.75 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-31](JLS.md#jls-31)  | The nlohmann/json repository uses static code analysis tools and sanitizers. | 0.97 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-32](JLS.md#jls-32)  | All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (@nlohmann). | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -109,21 +109,21 @@ This presents the compliance for the _JSON-Library Statements_ (JLS) in tabular 
 | [JLS-42](JLS.md#jls-42)  | All manual pull requests to the nlohmann/json repository that introduce non-trivial changes are expected to explain the rationale for the proposed change and to link to an existing issue, in accordance with the project's contribution guidelines. | 0.93 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-43](JLS.md#jls-43)  | Feature requests for the nlohmann/json repository are raised in the project's GitHub discussions and are actively reviewed and answered by the maintainer. | 0.93 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-44](JLS.md#jls-44)  | The manual process for reporting bugs in the nlohmann/json library is well defined and documented in the project's contribution guidelines and bug report template. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-45](JLS.md#jls-45)  | The storage location, retention limits, and intended use of captured test result data for eclipse-score/inc_nlohmann_json are documented so that the scope and reproducibility of the available test data can be understood. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-45](JLS.md#jls-45)  | The storage location, retention limits, and intended use of captured test result data for eclipse-score/inc_nlohmann_json are documented so that the scope and reproducibility of the available test data can be understood. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-47](JLS.md#jls-47)  | The nlohmann/json library only consists of source code in the form of a single header file, and has no binary artifacts. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-48](JLS.md#jls-48)  | The nlohmann/json project transparently lists any third party tools used in building, testing and documenting the project. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-49](JLS.md#jls-49)  | The eclipse-score/nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [JLS-50](JLS.md#jls-50)  | All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-49](JLS.md#jls-49)  | The eclipse-score/nlohmann_json project mirrors the external nlohmann/json_test_data repository, containing test data used by the unit tests in nlohmann/json, such that the test suite can be executed without internet connectivity. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-50](JLS.md#jls-50)  | All third party tools used in nlohmann/json for building, testing and documenting the project are assessed within eclipse-score/nlohmann_json. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-51](JLS.md#jls-51)  | All source code of the nlohmann/json library is mirrored within eclipse-score/inc_nlohmann_json. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-52](JLS.md#jls-52)  | Releases of the nlohmann/json library contain a comprehensive set of attestations. | 0.88 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [JLS-54](JLS.md#jls-54)  | In the eclipse-score/inc_nlohmann_json repository, code coverage is measured in CI and a minimum threshold is enforced for pull requests into main and pushes to main. If coverage falls below the threshold, the coverage_gate check fails and blocks merging into main until coverage is restored. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [JLS-55](JLS.md#jls-55)  | In eclipse-score/inc_nlohmann_json, a GitHub Actions workflow checks the number of open pull requests in the main branch. If the number exceeds a defined threshold, the workflow fails and blocks further merges until the number of open pull requests is reduced below that threshold. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-53](JLS.md#jls-53)  | Given the same version of the repository, configuration, and documented environment, the build process shall produce identical single-include header files. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-54](JLS.md#jls-54)  | In the eclipse-score/inc_nlohmann_json repository, code coverage is measured in CI and a minimum threshold is enforced for pull requests into main and pushes to main. If coverage falls below the threshold, the coverage_gate check fails and blocks merging into main until coverage is restored. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-55](JLS.md#jls-55)  | In eclipse-score/inc_nlohmann_json, a GitHub Actions workflow checks the number of open pull requests in the main branch. If the number exceeds a defined threshold, the workflow fails and blocks further merges until the number of open pull requests is reduced below that threshold. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-56](JLS.md#jls-56)  | The expected behaviour of the expectations JLEX-01 and JLEX-02 is sufficiently broken-down. | 0.95 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-57](JLS.md#jls-57)  | Outstanding bugs or misbehaviours of nlohmann/json are fetched and saved within eclipse-score/nlohmann_json. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-58](JLS.md#jls-58)  | GitHub-hosted runners are used as the test environment for eclipse-score/nlohmann_json. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-61](JLS.md#jls-61)  | Any GitHub Actions used in the testing process are pinned to specific commit SHAs to ensure consistent action behaviour across runs. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-62](JLS.md#jls-62)  | All tests except the ones which are excluded when using the flag "ctest -LE not_reproducible" are reproducible. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [JLS-62](JLS.md#jls-62)  | All tests except the ones which are excluded when using the flag "ctest -LE not_reproducible" are reproducible. | 0.90 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-63](JLS.md#jls-63)  | Releases of the nlohmann/json library contain commit sign-offs. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-64](JLS.md#jls-64)  | Releases of the nlohmann/json library contain GitHub pull request approvals. | 0.65 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-65](JLS.md#jls-65)  | Releases of the nlohmann/json library contain continuous-integration test reports such as coverage reports, fuzzing reports & OpenSSF scorecard reports. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -131,7 +131,7 @@ This presents the compliance for the _JSON-Library Statements_ (JLS) in tabular 
 | [JLS-70](JLS.md#jls-70)  | The nlohmann/json library provides installation manuals with worked examples. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-71](JLS.md#jls-71)  | The nlohmann/json library provides configuration manuals with worked examples. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-72](JLS.md#jls-72)  | The nlohmann/json project documents the intended scope and design trade-offs of the library and specifies the documented interface and behaviour of its core JSON type via its API reference. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [JLS-73](JLS.md#jls-73)  | The nlohmann/json documentation provides user-facing guidance for extensibility and modular integration, explicitly documenting limitations and constraints of extension interfaces. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [JLS-73](JLS.md#jls-73)  | The nlohmann/json documentation provides user-facing guidance for extensibility and modular integration, explicitly documenting limitations and constraints of extension interfaces. | 0.67 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-74](JLS.md#jls-74)  | Each supporting statement for the Expectations includes references to the CI test evidence that exercises it. The suitability of the referenced tests as evidence for each statement is validated by SME reviewers as part of the scoring process. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [JLS-76](JLS.md#jls-76)  | nlohmann/json does use fault‑induction–style techniques (invalid inputs, resource failures, fuzzing) to demonstrate that code paths which usually succeed in normal usage can and do fail in a controlled, specified way. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 
@@ -140,12 +140,12 @@ This presents the compliance for the _No JSON Faults_ (NJF) in tabular form.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-01](NJF.md#njf-01)  | The service provided by the nlohmann/json library accepts the literal name null. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [NJF-02](NJF.md#njf-02)  | The service provided by the nlohmann/json library accepts the literal name true. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [NJF-03](NJF.md#njf-03)  | The service provided by the nlohmann/json library accepts the literal name false. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [NJF-04](NJF.md#njf-04)  | The service provided by the nlohmann/json library does not accept any other literal name. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [NJF-05.1](NJF.md#njf-05.1)  | The service provided by the nlohmann/json library accepts the empty array. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NJF-01](NJF.md#njf-01)  | The service provided by the nlohmann/json library accepts the literal name null. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NJF-02](NJF.md#njf-02)  | The service provided by the nlohmann/json library accepts the literal name true. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NJF-03](NJF.md#njf-03)  | The service provided by the nlohmann/json library accepts the literal name false. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NJF-04](NJF.md#njf-04)  | The service provided by the nlohmann/json library does not accept any other literal name. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NJF-05.1](NJF.md#njf-05.1)  | The service provided by the nlohmann/json library accepts the empty array. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-05.2](NJF.md#njf-05.2)  | The service provided by the nlohmann/json library accepts the non-empty arrays. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-05.3](NJF.md#njf-05.3)  | If every value candidate of a properly bounded array is accepted as singleton, then the service provided by the nlohmann/json library accepts the array. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-05.4](NJF.md#njf-05.4)  | The service provided by the nlohmann/json library does not accept any improperly bounded arrays. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -155,8 +155,8 @@ This presents the compliance for the _No JSON Faults_ (NJF) in tabular form.
 | [NJF-05.7](NJF.md#njf-05.7)  | The service provided by the nlohmann/json library does only accept comma as value separator. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-05.7.1](NJF.md#njf-05.7.1)  | The service provided by the nlohmann/json library does accept comma as value separator. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-05.7.2](NJF.md#njf-05.7.2)  | The service provided by the nlohmann/json library does not accept any other value separator. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [NJF-06.1](NJF.md#njf-06.1)  | The service provided by the nlohmann/json library accepts the empty object. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NJF-06.1](NJF.md#njf-06.1)  | The service provided by the nlohmann/json library accepts the empty object. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-06.2](NJF.md#njf-06.2)  | The service provided by the nlohmann/json library does not accept improperly bounded objects. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-06.3](NJF.md#njf-06.3)  | The service provided by the nlohmann/json library accepts the non-empty objects. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-06.4](NJF.md#njf-06.4)  | The admissible members of an object provided to the eclipse-score/inc_nlohmann_json have the form name : value. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -171,7 +171,7 @@ This presents the compliance for the _No JSON Faults_ (NJF) in tabular form.
 | [NJF-06.7](NJF.md#njf-06.7)  | The service provided by the nlohmann/json library does only accept comma as member separator. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-06.7.1](NJF.md#njf-06.7.1)  | The service provided by the nlohmann/json library accepts comma as member separator. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-06.7.2](NJF.md#njf-06.7.2)  | The service provided by the nlohmann/json library does not accept any other member separator. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
+| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-07.1](NJF.md#njf-07.1)  | The service provided by the nlohmann/json library does accept empty strings. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-07.2](NJF.md#njf-07.2)  | The service provided by the nlohmann/json library does not accept the improperly bounded strings. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-07.3](NJF.md#njf-07.3)  | The service provided by the nlohmann/json library does not accept unescaped control characters. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -181,7 +181,7 @@ This presents the compliance for the _No JSON Faults_ (NJF) in tabular form.
 | [NJF-07.7](NJF.md#njf-07.7)  | The service provided by the nlohmann/json library does not accept escaped invalid characters. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-07.8](NJF.md#njf-07.8)  | The service provided by the nlohmann/json library does not accept single unpaired utf-16 surrogates. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-07.9](NJF.md#njf-07.9)  | The service provided by the nlohmann/json library does not accept unescaped UTF-16 surrogate pairs. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
+| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-08.1](NJF.md#njf-08.1)  | The service provided by the nlohmann/json library does accept integers within the limits of 64-bit double. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-08.2](NJF.md#njf-08.2)  | The service provided by the nlohmann/json library does accept integers according to IEEE 754 binary64. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-08.3](NJF.md#njf-08.3)  | The service provided by the nlohmann/json library does not accept NaN and infinity. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -191,9 +191,9 @@ This presents the compliance for the _No JSON Faults_ (NJF) in tabular form.
 | [NJF-08.7](NJF.md#njf-08.7)  | The service provided by the nlohmann/json library does accept decimal points in numbers within the bounds of double. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-08.8](NJF.md#njf-08.8)  | The service provided by the nlohmann/json library does not accept leading zeroes. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-08.9](NJF.md#njf-08.9)  | The service provided by the nlohmann/json library does not accept any other digit symbol than 0-9. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NJF-09](NJF.md#njf-09)  | The service provided by the nlohmann/json library does accept the six structural characters. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NJF-09](NJF.md#njf-09)  | The service provided by the nlohmann/json library does accept the six structural characters. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-10](NJF.md#njf-10)  | The service provided by the nlohmann/json library does not accept any other structural characters. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NJF-11](NJF.md#njf-11)  | The service provided by the nlohmann/json library accepts leading and closing whitespaces. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NJF-11](NJF.md#njf-11)  | The service provided by the nlohmann/json library accepts leading and closing whitespaces. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-12.1](NJF.md#njf-12.1)  | The service provided by the nlohmann/json library rejects malformed UTF-8 data. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-12.2](NJF.md#njf-12.2)  | The service provided by the nlohmann/json library rejects "overlong sequences". | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -201,10 +201,10 @@ This presents the compliance for the _No JSON Faults_ (NJF) in tabular form.
 | [NJF-12.5](NJF.md#njf-12.5)  | The service provided by the nlohmann/json library accepts Non-Characters. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-12.6](NJF.md#njf-12.6)  | The service provided by the nlohmann/json library accepts well-formed UTF-8 data. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-13](NJF.md#njf-13)  | The service provided by the nlohmann/json library accepts JSON data consisting of combinations of the data types. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
+| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.20 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-14.1](NJF.md#njf-14.1)  | If the service provided by the nlohmann/json library accepts an input containing no BOM, then it accepts a single UTF-8 byte order mark followed by that input. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-14.2](NJF.md#njf-14.2)  | The service provided by the nlohmann/json library does not accept multiple UTF-8 byte order marks. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NJF-14.3](NJF.md#njf-14.3)  | The service provided by the nlohmann/json library does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NJF-14.3](NJF.md#njf-14.3)  | The service provided by the nlohmann/json library does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-14.4](NJF.md#njf-14.4)  | The service provided by the nlohmann/json library does not accept UTF-16 and UTF-32 byte order marks instead of the UTF-8 byte order mark. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NJF-14.5](NJF.md#njf-14.5)  | The service provided by the nlohmann/json library does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 
@@ -219,7 +219,7 @@ This presents the compliance for the _No Parsing Faults_ (NPF) in tabular form.
 | [NPF-01.3](NPF.md#npf-01.3)  | The service provided by the nlohmann/json library does not parse UTF-8 byte order marks outside of a string and the first three characters of the input, and throws an exception. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-01.4](NPF.md#npf-01.4)  | The service provided by the nlohmann/json library does not parse UTF-16 and UTF-32 byte order mark instead of an UTF-8 byte order mark, and throws an exception. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-01.5](NPF.md#npf-01.5)  | The service provided by the nlohmann/json library does not parse partial and perturbed UTF-8 byte order marks within the first three characters of the input and throws an exception. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-02.1](NPF.md#npf-02.1)  | The service provided by the nlohmann/json library parses integers without exponent within the precision of int64_t. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-02.10](NPF.md#npf-02.10)  | The service provided by the nlohmann/json library ignores trailing zeroes after the decimal point. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-02.11](NPF.md#npf-02.11)  | The service provided by the nlohmann/json library parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -229,28 +229,28 @@ This presents the compliance for the _No Parsing Faults_ (NPF) in tabular form.
 | [NPF-02.4](NPF.md#npf-02.4)  | The service provided by the nlohmann/json library parses floating point values with exponent within the precision of 64-bit double. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-02.5](NPF.md#npf-02.5)  | The service provided by the nlohmann/json library ignores leading zeroes in the exponent. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-02.6](NPF.md#npf-02.6)  | The service provided by the nlohmann/json library parses integers within IEEE 754-2008 binary64. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NPF-02.7](NPF.md#npf-02.7)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NPF-02.7](NPF.md#npf-02.7)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-02.8](NPF.md#npf-02.8)  | The service provided by the nlohmann/json library ignores one singular leading plus of the exponent. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-02.9](NPF.md#npf-02.9)  | The service provided by the nlohmann/json library parses floating point numbers within IEEE 754-2008 binary64 standard. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
-| [NPF-03.1](NPF.md#npf-03.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NPF-03.1](NPF.md#npf-03.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-03.2](NPF.md#npf-03.2)  | The service provided by the nlohmann/json library parses escaped characters in the basic multilingual plane. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-03.3](NPF.md#npf-03.3)  | The service provided by the nlohmann/json library ignores capitalisation in escaped hexadecimal unicode. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-03.4](NPF.md#npf-03.4)  | The service provided by the nlohmann/json library parses all unescaped utf-8 characters except quotation marks, reverse solidus and the control characters. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-03.5](NPF.md#npf-03.5)  | The service provided by the nlohmann/json library parses \\, \\/, \\b,\\f, \\n, \\r, \\t and escaped quotation marks. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-03.6](NPF.md#npf-03.6)  | The service provided by the nlohmann/json library parses the empty string. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-03.7](NPF.md#npf-03.7)  | The service provided by the nlohmann/json library parses non-empty strings. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ All Children Linked |
-| [NPF-04.1](NPF.md#npf-04.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NPF-04.1](NPF.md#npf-04.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-04.2](NPF.md#npf-04.2)  | The service provided by the nlohmann/json library parses the literal name true. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-04.3](NPF.md#npf-04.3)  | The service provided by the nlohmann/json library parses the literal name false. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-04.4](NPF.md#npf-04.4)  | The service provided by the nlohmann/json library parses the literal name null. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NPF-05](NPF.md#npf-05)  | The service provided by the nlohmann/json library parses arrays according to RFC8259. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [NPF-05.1](NPF.md#npf-05.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NPF-05](NPF.md#npf-05)  | The service provided by the nlohmann/json library parses arrays according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NPF-05.1](NPF.md#npf-05.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-05.2](NPF.md#npf-05.2)  | The service provided by the nlohmann/json library parses empty arrays. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-05.3](NPF.md#npf-05.3)  | The service provided by the nlohmann/json library parses non-empty arrays. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [NPF-06](NPF.md#npf-06)  | The service provided by the nlohmann/json library parses objects according to RFC8259. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [NPF-06.1](NPF.md#npf-06.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [NPF-06](NPF.md#npf-06)  | The service provided by the nlohmann/json library parses objects according to RFC8259. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [NPF-06.1](NPF.md#npf-06.1)  | The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-06.2](NPF.md#npf-06.2)  | The service provided by the nlohmann/json library parses duplicate names without error and reports the last member with that name only. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-06.3](NPF.md#npf-06.3)  | The service provided by the nlohmann/json library parses empty objects. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [NPF-06.4](NPF.md#npf-06.4)  | The service provided by the nlohmann/json library parses non-empty objects. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
@@ -264,8 +264,8 @@ This presents the compliance for the _Parse JSON Data_ (PJD) in tabular form.
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [PJD-01](PJD.md#pjd-01)  | The service provided by the nlohmann/json library provides implementations that parses JSON texts, which ignores the presence of a byte order mark rather than treating it as an error. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [PJD-02](PJD.md#pjd-02)  | The service provided by the nlohmann/json library transforms a JSON text into a C++ representation using C++ containers (for arrays and objects) and primitive datatypes (for strings, numbers, boolean, null). | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
-| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
+| [PJD-02](PJD.md#pjd-02)  | The service provided by the nlohmann/json library transforms a JSON text into a C++ representation using C++ containers (for arrays and objects) and primitive datatypes (for strings, numbers, boolean, null). | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.14 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [PJD-04](PJD.md#pjd-04)  | The service provided by the nlohmann/json library correctly parses 64-bit integers (exceeding the range defined in RFC8259). | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 
 ## Compliance for TA 
@@ -273,22 +273,22 @@ This presents the compliance for the _Trustable Assertions_ (TA) in tabular form
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.79 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.39 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.68 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.12 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TA-DATA](TA.md#ta-data)  | Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.42 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.32 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.49 | ✔ Item Reviewed<br>⨯ All Children Linked |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.99 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.93 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-CONSTRAINTS](TA.md#ta-constraints)  | Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified. | 0.11 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-DATA](TA.md#ta-data)  | Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.65 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-INDICATORS](TA.md#ta-indicators)  | In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.65 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.99 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.91 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [TA-METHODOLOGIES](TA.md#ta-methodologies)  | Manual methodologies applied for the nlohmann/json library by contributors, and their results, are managed according to specified objectives. | 0.95 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.64 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.44 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.79 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.60 | ✔ Item Reviewed<br>⨯ All Children Linked |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.57 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.94 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.99 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.78 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.89 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. | 0.50 | ✔ Item Reviewed<br>⨯ All Children Linked |
+| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 
 ## Compliance for TIJ 
 This presents the compliance for the _Throw Ill-Formed JSON_ (TIJ) in tabular form.
@@ -327,34 +327,34 @@ This presents the ultimate trustability score for nlohmann/json.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TRUSTABLE-SOFTWARE](TRUSTABLE.md#trustable-software)  | This release of JSON-Library also referred in the documentation as nlohmann/json library is Trustable. | 0.59 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TRUSTABLE-SOFTWARE](TRUSTABLE.md#trustable-software)  | This release of JSON-Library also referred in the documentation as nlohmann/json library is Trustable. | 0.84 | ✔ Item Reviewed<br>✔ All Children Linked |
 
 ## Compliance for TT 
 This presents the compliance for the _Trustable Tenets_ (TT) in tabular form.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.66 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.81 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.65 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.37 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TT-PROVENANCE](TT.md#tt-provenance)  | All inputs (and attestations for claims) for the nlohmann/json library are provided with known provenance. | 0.64 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [TT-RESULTS](TT.md#tt-results)  | Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do. | 0.43 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.77 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.94 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.88 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.47 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TT-PROVENANCE](TT.md#tt-provenance)  | All inputs (and attestations for claims) for the nlohmann/json library are provided with known provenance. | 0.99 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [TT-RESULTS](TT.md#tt-results)  | Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 
 ## Compliance for WFJ 
 This presents the compliance for _Well Formed JSON_ (WFJ) in tabular form.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [WFJ-01](WFJ.md#wfj-01)  | The service provided by the nlohmann/json library checks the well-formedness of the literal names. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [WFJ-02](WFJ.md#wfj-02)  | The service provided by the nlohmann/json library checks the well-formedness of strings. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
-| [WFJ-03](WFJ.md#wfj-03)  | The service provided by the nlohmann/json library checks the well-formedness of numbers. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
+| [WFJ-01](WFJ.md#wfj-01)  | The service provided by the nlohmann/json library checks the well-formedness of the literal names. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [WFJ-02](WFJ.md#wfj-02)  | The service provided by the nlohmann/json library checks the well-formedness of strings. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [WFJ-03](WFJ.md#wfj-03)  | The service provided by the nlohmann/json library checks the well-formedness of numbers. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [WFJ-04](WFJ.md#wfj-04)  | The service provided by the nlohmann/json library checks the well-formedness of array. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [WFJ-05](WFJ.md#wfj-05)  | The service provided by the nlohmann/json library checks the well-formedness of objects. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [WFJ-06](WFJ.md#wfj-06)  | The service provided by the nlohmann/json library checks that a JSON value must be an object, array, number, or string, or one of the lowercase literal names false, null, or true. | 0.00 | ⨯ Item Reviewed<br>✔ All Children Linked |
+| [WFJ-06](WFJ.md#wfj-06)  | The service provided by the nlohmann/json library checks that a JSON value must be an object, array, number, or string, or one of the lowercase literal names false, null, or true. | 1.00 | ✔ Item Reviewed<br>✔ All Children Linked |
 | [WFJ-07](WFJ.md#wfj-07)  | The service provided by the nlohmann/json library checks that JSON is only serialized using UTF-8. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [WFJ-08](WFJ.md#wfj-08)  | The service provided by the nlohmann/json library ignores byte order marks. | 0.00 | ✔ Item Reviewed<br>✔ All Children Linked |
-| [WFJ-09](WFJ.md#wfj-09)  | The service provided by the nlohmann/json library accepts exactly the six JSON structural characters and insignificant leading and trailing whitespace permitted by RFC8259. | 0.00 | ✔ Item Reviewed<br>⨯ All Children Linked |
+| [WFJ-08](WFJ.md#wfj-08)  | The service provided by the nlohmann/json library ignores byte order marks. | 0.20 | ✔ Item Reviewed<br>✔ All Children Linked |
+| [WFJ-09](WFJ.md#wfj-09)  | The service provided by the nlohmann/json library accepts exactly the six JSON structural characters and insignificant leading and trailing whitespace permitted by RFC8259. | 0.67 | ✔ Item Reviewed<br>✔ All Children Linked |
 
 
 ---
@@ -362,6 +362,6 @@ This presents the compliance for _Well Formed JSON_ (WFJ) in tabular form.
 _Generated for: Software_
 
 * _Repository root: /home/runner/work/nlohmann_json/nlohmann_json_
-* _Commit SHA: aa366fad73f634120e31ed86e0b37ec2813bbf5e_
-* _Commit date/time: 2026-05-26 14:29:40 UTC_
-* _Commit tag: aa366fa_
+* _Commit SHA: 964fb6b2991ca07a570df14ce355e49879098aff_
+* _Commit date/time: 2026-06-23 16:26:12 UTC_
+* _Commit tag: 964fb6b_
