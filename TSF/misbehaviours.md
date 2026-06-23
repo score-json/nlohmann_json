@@ -5,6 +5,20 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Open issues
 
+### [#5210](https://github.com/nlohmann/json/issues/5210)
+- **Title:** Mixed comparison bug: number_unsigned (INT64_MAX+1~UINT64_MAX) vs number_integer
+- **State:** OPEN
+- **Created At:** 2026-06-17T16:49:21Z
+
+
+
+### [#5198](https://github.com/nlohmann/json/issues/5198)
+- **Title:** TOCTOU race between lexer construction and locale changes causes float truncation
+- **State:** OPEN
+- **Created At:** 2026-05-30T17:11:17Z
+
+
+
 ### [#5135](https://github.com/nlohmann/json/issues/5135)
 - **Title:** basic_json destructor allocates memory, violating noexcept semantics
 - **State:** OPEN
@@ -23,13 +37,6 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Title:** VS2026 Insiders, C2678 With C++23 Modules
 - **State:** OPEN
 - **Created At:** 2025-11-18T20:45:50Z
-
-
-
-### [#4996](https://github.com/nlohmann/json/issues/4996)
-- **Title:** Tests don't build with VS 2026
-- **State:** OPEN
-- **Created At:** 2025-11-14T16:26:05Z
 
 
 
@@ -163,6 +170,13 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 
 ## Closed Issues (since version 3.12.0)
 
+### [#5197](https://github.com/nlohmann/json/issues/5197)
+- **Title:** MSVC std c++23 u8string can not be correctly stored in json
+- **State:** CLOSED
+- **Created At:** 2026-05-30T05:00:23Z
+
+
+
 ### [#5175](https://github.com/nlohmann/json/issues/5175)
 - **Title:** Test "dump for basic_json with long double number_float_t" fails when run with Valgrind
 - **State:** CLOSED
@@ -265,6 +279,13 @@ The misbehaviours are compiled from github issues of the nlohmann/json repositor
 - **Title:** Serialization of double type data gets stuck
 - **State:** CLOSED
 - **Created At:** 2025-11-20T09:28:12Z
+
+
+
+### [#4996](https://github.com/nlohmann/json/issues/4996)
+- **Title:** Tests don't build with VS 2026
+- **State:** CLOSED
+- **Created At:** 2025-11-14T16:26:05Z
 
 
 
