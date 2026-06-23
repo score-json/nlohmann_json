@@ -56,6 +56,11 @@ jobs:
           pip install --require-hashes -r .devcontainer/S-CORE/requirements.txt
           pip install https://gitlab.com/api/v4/projects/66600816/packages/generic/trustable/v2025.10.22/trustable-2025.10.22-py3-none-any.whl
 
+      - name: Verify trudag setup
+        run: |
+          trudag --version
+          trudag manage lint
+
       - name: Install tools
         run: |
           sudo apt-get update
@@ -65,10 +70,6 @@ jobs:
       - name: Authenticate with GitHub CLI
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-
-      - name: Debug trudag state before issue refresh
-        run: |
-          bash TSF/scripts/debug_trudag_state.sh before-fetch-issues
 
       - name: Get current branch name
         id: get_branch
@@ -94,10 +95,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch --all
           git checkout save_historical_data && git pull || git checkout -b save_historical_data
-
-      - name: Debug trudag state on storage branch before issue refresh
-        run: |
-          bash TSF/scripts/debug_trudag_state.sh on-storage-branch-before-fetch-issues
 
       - name: Fetch open issues labelled as bug from nlohmann/json
         id: fetch_issues
@@ -128,10 +125,6 @@ jobs:
           git commit -m "Updated issues list" || echo "No changes to commit"
           git push origin save_historical_data && git pull
 
-      - name: Debug trudag state after issue refresh
-        run: |
-          bash TSF/scripts/debug_trudag_state.sh after-fetch-issues
-      
       - name: Select persistent scoring DB (rotate if near GitHub limit)
         id: select_db
         shell: bash
@@ -203,7 +196,6 @@ jobs:
           set -euo pipefail
           git checkout "$branch_name"
           git checkout save_historical_data -- "$TSF_SCORING_DB" TSF/misbehaviours.md
-          bash TSF/scripts/debug_trudag_state.sh before-generate-report
           echo "[verify] TSF_SCORING_DB='$TSF_SCORING_DB'"
           test -n "$TSF_SCORING_DB"
           test -f "$TSF_SCORING_DB"
@@ -212,12 +204,6 @@ jobs:
           REPO_NAME="${REPO_FULL#*/}"
           OWNER_NAME="${REPO_FULL%%/*}" 
           TSF/scripts/generate_report.sh "https://${OWNER_NAME}.github.io/${REPO_NAME}/main"
-
-      - name: Debug trudag state after report generation
-        env:
-          TSF_SCORING_DB: ${{ steps.select_db.outputs.db_path }}
-        run: |
-          bash TSF/scripts/debug_trudag_state.sh after-generate-report
 
       - name: Checkout data storage branch
         run: |
@@ -249,12 +235,6 @@ jobs:
           set -euo pipefail
           git checkout "$branch_name"
           git stash apply
-
-      - name: Debug trudag state after stash recovery
-        env:
-          TSF_SCORING_DB: ${{ steps.select_db.outputs.db_path }}
-        run: |
-          bash TSF/scripts/debug_trudag_state.sh after-recover-stash
 
       - name: Upload trudag artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
