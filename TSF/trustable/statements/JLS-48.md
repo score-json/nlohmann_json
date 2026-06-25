@@ -13,6 +13,8 @@ evidence:
           - "https://github.com/nlohmann/json/blob/55f93686c01528224f448c19128836e7df245f72/README.md#used-third-party-tools"
 score:
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json project transparently lists any third party tools used in building, testing and documenting the project.

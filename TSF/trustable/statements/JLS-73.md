@@ -19,6 +19,9 @@ evidence:
           - "https://json.nlohmann.me/features/arbitrary_types/"
           - "https://json.nlohmann.me/features/namespace/"
           - "https://json.nlohmann.me/integration/migration_guide/"
+score:
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json documentation provides user-facing guidance for extensibility and modular integration, explicitly documenting limitations and constraints of extension interfaces.

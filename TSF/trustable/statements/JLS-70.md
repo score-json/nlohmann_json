@@ -11,6 +11,9 @@ evidence:
       target_seconds: 2
       urls:
           - "https://github.com/nlohmann/json?tab=readme-ov-file#integration"
+score:
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json library provides installation manuals with worked examples.

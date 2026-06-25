@@ -17,6 +17,8 @@ evidence:
           - "https://github.com/eclipse-score/inc_nlohmann_json"
 score:
     mishu-dev: 1.0
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The Eclipse S-CORE organisation mirrors the nlohmann/json project in a GitHub fork.

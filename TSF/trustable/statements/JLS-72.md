@@ -15,6 +15,9 @@ evidence:
       urls:
           - "https://json.nlohmann.me/home/design_goals/"
           - "https://json.nlohmann.me/api/basic_json/"
+score:
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json project documents the intended scope and design trade-offs of the library and specifies the documented interface and behaviour of its core JSON type via its API reference.

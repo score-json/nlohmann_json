@@ -17,6 +17,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision.

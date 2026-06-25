@@ -15,6 +15,9 @@ evidence:
       urls:
           - "https://json.nlohmann.me/integration/cmake/"
           - "https://json.nlohmann.me/integration/package_managers/"
+score:
+    ThomasClausnitzer: 0.8
+    LucaFue: 1.0
 ---
 
 Every release of the nlohmann/json library shall provide configuration management for build instructions and infrastructure.

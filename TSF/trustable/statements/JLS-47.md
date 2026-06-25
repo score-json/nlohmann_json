@@ -13,6 +13,8 @@ evidence:
           - "https://github.com/nlohmann/json/blob/develop/single_include/nlohmann/json.hpp"
 score:
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json library only consists of source code in the form of a single header file, and has no binary artifacts.

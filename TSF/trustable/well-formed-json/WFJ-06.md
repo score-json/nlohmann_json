@@ -36,6 +36,7 @@ references:
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
-The service provided by the nlohmann/json library checks that a JSON value must be an object, array, number, or string, or one of the lowercase literal names false, null, or true
+The service provided by the nlohmann/json library checks that a JSON value must be an object, array, number, or string, or one of the lowercase literal names false, null, or true.

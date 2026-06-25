@@ -28,6 +28,7 @@ evidence:
 score:
     Jonas-Kirchhoff: 0.95
     Erikhu1: 1.0
+    ThomasClausnitzer: 1.0
 ---
 
 The service provided by the nlohmann/json library parses all unescaped utf-8 characters except quotation marks, reverse solidus and the control characters.

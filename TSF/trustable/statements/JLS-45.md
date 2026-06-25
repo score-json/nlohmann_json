@@ -8,6 +8,9 @@ references:
     - type: file
       path: "./TSF/scripts/capture_test_data_memory_sensitive.py"
       description: "Implementation of memory-sensitive storage with heuristic limits on the number of stored test results and workflow metadata, and explicit failure behaviour when limits are exceeded."
+score:
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The storage location, retention limits, and intended use of captured test result data for eclipse-score/inc_nlohmann_json are documented so that the scope and reproducibility of the available test data can be understood.

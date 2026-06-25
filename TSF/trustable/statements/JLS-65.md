@@ -19,6 +19,9 @@ evidence:
           - "https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson"
           - "https://coveralls.io/github/nlohmann/json"
           - "https://introspector.oss-fuzz.com/project-profile?project=json"
+score:
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 Releases of the nlohmann/json library contain continuous-integration test reports such as coverage reports, fuzzing reports & OpenSSF scorecard reports.

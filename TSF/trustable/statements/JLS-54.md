@@ -17,6 +17,9 @@ evidence:
       check_amalgamation: exclude
       publish_documentation: exclude
       pr_count_gate: exclude
+score:
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 In the eclipse-score/inc_nlohmann_json repository, code coverage is measured in CI and a minimum threshold is enforced for pull requests into main and pushes to main. If coverage falls below the threshold, the coverage_gate check fails and blocks merging into main until coverage is restored.

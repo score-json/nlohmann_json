@@ -15,6 +15,9 @@ evidence:
       urls:
           - "https://github.com/nlohmann/json/discussions/categories/ideas"
           - "https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS"
+score:
+    ThomasClausnitzer: 0.95
+    LucaFue: 0.9
 ---
 
 Feature requests for the nlohmann/json repository are raised in the project's GitHub discussions and are actively reviewed and answered by the maintainer.

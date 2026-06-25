@@ -15,6 +15,9 @@ evidence:
       urls:
           - "https://github.com/nlohmann/json/discussions/5022"
           - "https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+is%3Amerged"
+score:
+    ThomasClausnitzer: 0.6
+    LucaFue: 0.7
 ---
 
 Releases of the nlohmann/json library contain GitHub pull request approvals.

@@ -25,6 +25,8 @@ evidence:
           - "https://coveralls.io/github/nlohmann/json"
 score:
     Erikhu1: 0.9
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
 The nlohmann/json repository uses static code analysis tools and sanitizers.

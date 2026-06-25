@@ -1,0 +1,3 @@
+# Keep Trustable graph and statement files byte-stable across Windows and Linux checkouts.
+.dotstop.dot text eol=lf
+TSF/trustable/**/*.md text eol=lf

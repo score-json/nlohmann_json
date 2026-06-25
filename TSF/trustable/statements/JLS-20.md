@@ -9,16 +9,18 @@ references:
       path: ./.github/workflows/publish_documentation.yml
       description: "GitHub workflow executing calculation and storage of trustable scores."
     - type: website
-      url: "https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/TrustableScoring.db"
+      url: "https://github.com/eclipse-score/nlohmann_json/blob/save_historical_data/TSF/TrustableScoring.db"
       description: "The database containing the trustable scores."
 evidence:
     type: https_response_time
     configuration:
       target_seconds: 2
       urls:
-          - "https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/data_storage"
+          - "https://github.com/eclipse-score/nlohmann_json/blob/save_historical_data/TSF/data_storage"
 score:
     Jonas-Kirchhoff: 1.0
+    ThomasClausnitzer: 1.0
+    LucaFue: 1.0
 ---
 
-A GitHub workflow of eclipse-score/inc_nlohmann_json saves the history of scores in the trustable graph to derive trends.
+A GitHub workflow of eclipse-score/nlohmann_json saves the history of scores in the trustable graph to derive trends.
