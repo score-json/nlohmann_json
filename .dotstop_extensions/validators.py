@@ -119,7 +119,7 @@ def https_response_time(configuration: dict[str, yaml]) -> tuple[float, list[Exc
     for url in urls:
         try:
             # in the reference website, an url comes together with https://
-            response = requests.get(url,timeout=5*target)
+            response = requests.get(url, timeout=6 * target)
         except requests.exceptions.ConnectionError as e:
             print(f"Critical error: target site {url} could not be reached.")
             exceptions.append(e)
@@ -133,8 +133,8 @@ def https_response_time(configuration: dict[str, yaml]) -> tuple[float, list[Exc
         # check whether target site is successfully called
         if response.status_code == 200:
             # if target site is successfully called, check if it is reached within target seconds
-            # recall that target/response.elapsed.microseconds>1/5, so score is accordingly refactored 
-            score = (min(1e6*target/response.elapsed.microseconds, 1.0)-0.2)*1.25
+            elapsed_seconds = max(response.elapsed.total_seconds(), 1e-6)
+            score = (min(target / elapsed_seconds, 1.0) - 0.2) * 1.25
             scores.append(score)
             continue
         scores.append(0)
@@ -185,7 +185,7 @@ def check_test_results(configuration: dict[str, yaml]) -> tuple[float, list[Exce
         for test in tests:
             # check if data for test have been captured
             command = f"SELECT COUNT(*) FROM {table} WHERE name = ?"
-            cnt = cursor.execute(command, (test)).fetchone()[0]
+            cnt = cursor.execute(command, (test,)).fetchone()[0]
             if cnt is None or cnt == 0:
                 # no data found -> assign trustability 0 and inform user
                 warnings.append(Warning(f"Could not find data for test {test}."))
