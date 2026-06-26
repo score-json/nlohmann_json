@@ -1,5 +1,5 @@
 
-### WFJ-01 | Reviewed: ✔ | Score: 0.0 
+### WFJ-01 | Reviewed: ✔ | Score: 0.99167 
 The service provided by the nlohmann/json library checks the well-formedness of the literal names.
 
 
@@ -7,16 +7,16 @@ The service provided by the nlohmann/json library checks the well-formedness of 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-02](NJF.md#njf-02)  | The service provided by the nlohmann/json library accepts the literal name true. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [NJF-03](NJF.md#njf-03)  | The service provided by the nlohmann/json library accepts the literal name false. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [NJF-04](NJF.md#njf-04)  | The service provided by the nlohmann/json library does not accept any other literal name. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [NJF-01](NJF.md#njf-01)  | The service provided by the nlohmann/json library accepts the literal name null. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-02](NJF.md#njf-02)  | The service provided by the nlohmann/json library accepts the literal name true. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-03](NJF.md#njf-03)  | The service provided by the nlohmann/json library accepts the literal name false. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-04](NJF.md#njf-04)  | The service provided by the nlohmann/json library does not accept any other literal name. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-01](NJF.md#njf-01)  | The service provided by the nlohmann/json library accepts the literal name null. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -50,13 +50,14 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |0.00 |
 |2026-06-23 16:26:12|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2026-06-26 11:54:41|0.99 |1.00 |1.00 |0.97 |1.00 |
+|2026-06-26 12:42:46.704575|0.99 |1.00 |1.00 |0.97 |1.00 |
 
 
 
 ---
 
-### WFJ-02 | Reviewed: ✔ | Score: 0.0 
+### WFJ-02 | Reviewed: ✔ | Score: 0.95741 
 The service provided by the nlohmann/json library checks the well-formedness of strings.
 
 
@@ -64,13 +65,13 @@ The service provided by the nlohmann/json library checks the well-formedness of 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-07](NJF.md#njf-07)  | The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7. | 0.96 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -104,13 +105,14 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |
 |2026-06-23 16:26:12|0.00 |0.00 |
-|2026-06-23 17:15:17.865434|0.00 |0.00 |
+|2026-06-26 11:54:41|0.96 |0.96 |
+|2026-06-26 12:42:46.704575|0.96 |0.96 |
 
 
 
 ---
 
-### WFJ-03 | Reviewed: ✔ | Score: 0.0 
+### WFJ-03 | Reviewed: ✔ | Score: 0.99815 
 The service provided by the nlohmann/json library checks the well-formedness of numbers.
 
 
@@ -118,13 +120,13 @@ The service provided by the nlohmann/json library checks the well-formedness of 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-08](NJF.md#njf-08)  | The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -158,13 +160,14 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |
 |2026-06-23 16:26:12|0.00 |0.00 |
-|2026-06-23 17:15:17.865434|0.00 |0.00 |
+|2026-06-26 11:54:41|1.00 |1.00 |
+|2026-06-26 12:42:46.704575|1.00 |1.00 |
 
 
 
 ---
 
-### WFJ-04 | Reviewed: ✔ | Score: 0.0 
+### WFJ-04 | Reviewed: ✔ | Score: 0.96979 
 The service provided by the nlohmann/json library checks the well-formedness of array.
 
 
@@ -172,13 +175,13 @@ The service provided by the nlohmann/json library checks the well-formedness of 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-05](NJF.md#njf-05)  | The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -212,13 +215,14 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |
 |2026-06-23 16:26:12|0.00 |0.00 |
-|2026-06-23 17:15:17.865434|0.00 |0.00 |
+|2026-06-26 11:54:41|0.97 |0.97 |
+|2026-06-26 12:42:46.704575|0.97 |0.97 |
 
 
 
 ---
 
-### WFJ-05 | Reviewed: ✔ | Score: 0.0 
+### WFJ-05 | Reviewed: ✔ | Score: 0.96146 
 The service provided by the nlohmann/json library checks the well-formedness of objects.
 
 
@@ -226,14 +230,14 @@ The service provided by the nlohmann/json library checks the well-formedness of 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [NJF-13](NJF.md#njf-13)  | The service provided by the nlohmann/json library accepts JSON data consisting of combinations of the data types. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-06](NJF.md#njf-06)  | The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-13](NJF.md#njf-13)  | The service provided by the nlohmann/json library accepts JSON data consisting of combinations of the data types. | 0.95 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -267,7 +271,8 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |
 |2026-06-23 16:26:12|0.00 |0.00 |0.00 |
-|2026-06-23 17:15:17.865434|0.00 |0.00 |0.00 |
+|2026-06-26 11:54:41|0.96 |0.97 |0.95 |
+|2026-06-26 12:42:46.704575|0.96 |0.97 |0.95 |
 
 
 
@@ -281,7 +286,7 @@ The service provided by the nlohmann/json library checks that a JSON value must 
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -816,13 +821,14 @@ _None_
 |2026-05-26 07:25:08|0.00 |
 |2026-05-26 14:29:40|0.00 |
 |2026-06-23 16:26:12|1.00 |
-|2026-06-23 17:15:17.865434|1.00 |
+|2026-06-26 11:54:41|1.00 |
+|2026-06-26 12:42:46.704575|1.00 |
 
 
 
 ---
 
-### WFJ-07 | Reviewed: ✔ | Score: 0.0 
+### WFJ-07 | Reviewed: ✔ | Score: 0.9 
 The service provided by the nlohmann/json library checks that JSON is only serialized using UTF-8.
 
 
@@ -830,13 +836,13 @@ The service provided by the nlohmann/json library checks that JSON is only seria
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-12](NJF.md#njf-12)  | The service provided by the nlohmann/json library decodes UTF-8 data. | 0.90 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -870,13 +876,14 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |
 |2026-06-23 16:26:12|0.00 |0.00 |
-|2026-06-23 17:15:17.865434|0.00 |0.00 |
+|2026-06-26 11:54:41|0.90 |0.90 |
+|2026-06-26 12:42:46.704575|0.90 |0.90 |
 
 
 
 ---
 
-### WFJ-08 | Reviewed: ✔ | Score: 0.2 
+### WFJ-08 | Reviewed: ✔ | Score: 1.0 
 The service provided by the nlohmann/json library ignores byte order marks.
 
 
@@ -884,13 +891,13 @@ The service provided by the nlohmann/json library ignores byte order marks.
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.15 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.97 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 0.20 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-14](NJF.md#njf-14)  | The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
 
@@ -924,13 +931,14 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |
 |2026-06-23 16:26:12|0.20 |0.20 |
-|2026-06-23 17:15:17.865434|0.20 |0.20 |
+|2026-06-26 11:54:41|1.00 |1.00 |
+|2026-06-26 12:42:46.704575|1.00 |1.00 |
 
 
 
 ---
 
-### WFJ-09 | Reviewed: ✔ | Score: 0.66667 
+### WFJ-09 | Reviewed: ✔ | Score: 0.99444 
 The service provided by the nlohmann/json library accepts exactly the six JSON structural characters and insignificant leading and trailing whitespace permitted by RFC8259.
 
 
@@ -943,7 +951,7 @@ _None_
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [NJF-09](NJF.md#njf-09)  | The service provided by the nlohmann/json library does accept the six structural characters. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
-| [NJF-10](NJF.md#njf-10)  | The service provided by the nlohmann/json library does not accept any other structural characters. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
+| [NJF-10](NJF.md#njf-10)  | The service provided by the nlohmann/json library does not accept any other structural characters. | 0.98 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [NJF-11](NJF.md#njf-11)  | The service provided by the nlohmann/json library accepts leading and closing whitespaces. | 1.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 
@@ -968,5 +976,6 @@ _None_
 |2026-05-26 07:25:08|0.00 |0.00 |0.00 |0.00 |
 |2026-05-26 14:29:40|0.00 |0.00 |0.00 |0.00 |
 |2026-06-23 16:26:12|0.67 |1.00 |0.00 |1.00 |
-|2026-06-23 17:15:17.865434|0.67 |1.00 |0.00 |1.00 |
+|2026-06-26 11:54:41|0.99 |1.00 |0.98 |1.00 |
+|2026-06-26 12:42:46.704575|0.99 |1.00 |0.98 |1.00 |
 
